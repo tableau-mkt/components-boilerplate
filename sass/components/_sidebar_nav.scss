@@ -1,0 +1,96 @@
+/*
+Navigation
+
+Navigational tools used across the site
+
+Styleguide 5
+*/
+
+
+/*
+Sidebar Nav
+
+Jump-nav used in the sidebars to navigate between sub-sections of a single page
+
+Markup:
+<div class="sidebar--nav grid-3">
+  <span class="sidebar--nav--toggle"><i class="icon-triangle-down"></i></span>
+  <ul>
+    <li class-"active"><a href="#section-1">Section 1</a></li>
+    <li><a href="#section-2">Section 2</a></li>
+    <li><a href="#section-3">Section 3</a></li>
+  </ul>
+</div>
+
+Styleguide 5.2
+*/
+.sidebar--nav {
+  ul {
+    margin: 0;
+    @extend %plain-list;
+  }
+
+  li a {
+    display: block;
+    padding: .5em 0;
+    color: $gray;
+    font-weight: $font-weight-bold;
+    @include transition(color .25s);
+  }
+
+  li a:hover,
+  li.active a {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+
+  .sidebar--nav--toggle {
+    display: none;
+  }
+}
+
+@include breakpoint($mobile) {
+  .sidebar--nav {
+    opacity: 0;
+    position: relative;
+    margin: 0 -10px;
+    background: $teal;
+    @include transition(opacity .25s);
+
+    li {
+      height: 0;
+      overflow: hidden;
+      @include transition(height .25s);
+    }
+
+    li.active,
+    &.open li {
+      height: 41px;
+    }
+
+    li a {
+      padding: .5em;
+      color: $white;
+    }
+
+    .sidebar--nav--toggle {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &.open .sidebar--nav--toggle {
+      @include transform(rotate(180deg));
+    }
+  }
+
+  .sidebar--nav.stuck {
+    opacity: 1;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+}

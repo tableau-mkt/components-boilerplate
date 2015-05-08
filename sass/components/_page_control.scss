@@ -1,0 +1,38 @@
+.block--delta-blocks-tabs {
+  float: left;
+  padding-right: 30px;
+}
+.block--flush-page-cache-link {
+  float: right;
+}
+
+.block--delta-blocks-tabs ul.tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+
+  li {
+    margin: 0;
+  }
+}
+
+.block--delta-blocks-tabs ul.tabs li,
+.block--flush-page-cache-link .block__content {
+  a {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    border-bottom:  3px solid transparent;
+    background-color: transparent;
+    color: $white;
+    @include transition(border .25s);
+  }
+  &.active a,
+  a:hover {
+    border-bottom-color: $light-gray;
+    text-decoration: none;
+  }
+}
+
+.block--delta-blocks-messages {
+  clear: both;
+  padding: 1em 0;
+}

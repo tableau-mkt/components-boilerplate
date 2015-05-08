@@ -1,0 +1,404 @@
+/*
+Typography
+
+Styleguide 1
+*/
+
+/*
+Base Copy
+
+The base copy style across the site. The base typeface is Whitney which is 
+licensed and hosted by typography.com. Base font size is 16px.
+
+Markup:
+<p> 
+  Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
+</p>
+<p>
+  Cumque suscipit primis orci, egestas tempore, voluptatibus? Expedita soluta doloremque laoreet corporis. Earum itaque id per lorem minus est, quaerat dolor consectetur et magnis voluptatem! Quo vulputate? Quisque, magni, interdum tincidunt rutrum, quo, taciti? Porro, hic laudantium laborum? Id labore congue ipsam mauris adipiscing! Itaque! Gravida integer quae rem cras.
+</p>
+
+Styleguide 1.1
+ */
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: $base-font-size;
+  font-family:'Gill Sans W01 Light';
+  color: $base-font-color;
+  line-height: $base-line-height;
+}
+
+/*
+Headings
+
+Used for title and prominent labels of content.
+
+Markup:
+<{$modifiers}>Heading {$modifiers} </{$modifiers}>
+
+h1 - First level heading. Reserved for page titles. 70px
+h2 - Second level heading. Used mostly for section titles. 22px
+h3 - Third level heading. 18px
+h4 - Fourth level heading. 16px
+h5 - Fifth level heading. 14px
+h6 - Sixth level heading. 12px
+
+Styleguide 1.2
+*/
+h1,
+.heading--h1,
+h2,
+.heading--h2,
+h3,
+.heading--h3,
+h4,
+.heading--h4,
+h5,
+.heading--h5,
+h6,
+.heading--h6 {
+  margin: .5em 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h1,
+.heading--h1 {
+  font-size: em(36px);
+  font-weight: 100;
+}
+h2,
+.heading--h2 {
+  font-size: em(24px);
+  font-weight: 100;
+  line-height: 1.2;
+}
+h3,
+.heading--h3 {
+  font-size: em(20px);
+  line-height: 1.4;
+}
+h4,
+.heading--h4 {
+  font-size: em(18px);
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+h5,
+.heading--h5 {
+  font-size: em(14px);
+}
+h6,
+.heading--h6 {
+  font-size: em(12px);
+  line-height: 1.2;
+}
+
+
+/** 
+ * Links
+ */
+a {
+  text-decoration: none;
+  color: $link-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/** 
+ * Paragraphs
+ */
+p {
+
+}
+
+/*
+Formatted Text
+
+Markup:
+<p class="{$modifiers}">
+  This sentence is an example of formatted text.
+</p>
+
+.text-bold - Bold text for emphasis. Same as &lt;strong&gt;
+.text-light - Light text. Default for non-headings
+.text-italic - Italic text for emphasis. Same as &lt;em&gt;
+.text-caps - All caps text
+.text-right - Right justified text
+.text-left - Left justified text
+.text-centered - Center justified text
+.text-justified - Justified text
+.text-huge - Huge text - 48px
+.text-big - Big text - 32px
+.text-base-size - Base size text - 16px
+.text-small - Small text - 12px
+.text-tiny - Tiny text - 10px
+.text-white - Whitetext.
+.text-gray - Gray text.
+.text-dark-blue - Dark blue text.
+.text-teal - Teal text.
+.text-salmon - Salmon text.
+.text-bright-teal - Bright teal text.
+.text-green - Green text.
+.text-navy - Navy text.
+.text-light-gray - Light gray text.
+.text-lineheight-zero - Line height set to zero.
+
+Styleguide 1.3
+*/
+strong,
+.text-bold {
+  font-weight: normal;
+  font-family: "Gill Sans W04 Roman";
+}
+.text-light {
+  font-weight: $font-weight-light;
+}
+em,
+.text-italic {
+  font-style: italic;
+}
+.text-caps {
+  text-transform: uppercase;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-centered {
+  text-align: center;
+}
+.text-justified {
+  text-align: justified;
+}
+.text-huge {
+  font-size: $text-huge;
+}
+.text-big {
+  font-size: $text-big;
+}
+.text-base-size {
+  font-size: $base-font-size;
+}
+.text-small {
+  font-size: $text-small;
+}
+.text-tiny {
+  font-size: $text-tiny;
+}
+/* Create a class for each theme color */
+@each $name, $color in $theme-colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+.text-lineheight-zero {
+  line-height: 0;
+}
+
+/** 
+ * Icon Font
+ */
+
+@font-face {
+  font-family: "tc-icons";
+  src: font-url("tc-icons.eot");
+  src: font-url("tc-icons.eot?#iefix") format("embedded-opentype"),
+       font-url("tc-icons.woff") format("woff"),
+       font-url("tc-icons.ttf") format("truetype"),
+       font-url("tc-icons.svg#tc-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "tc-icons";
+    src: font-url("tc-icons.svg#tc-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-arrow-circle-right:before,
+.icon-arrow-down:before,
+.icon-arrow-left:before,
+.icon-arrow-right:before,
+.icon-arrow-up:before,
+.icon-calendar:before,
+.icon-chat:before,
+.icon-chat-box:before,
+.icon-chevron-down:before,
+.icon-chevron-left:before,
+.icon-chevron-right:before,
+.icon-chevron-up:before,
+.icon-close-circle:before,
+.icon-document-3:before,
+.icon-document-5:before,
+.icon-down-arrow-circle:before,
+.icon-down-arrow-circle-filled:before,
+.icon-down-chevron:before,
+.icon-download:before,
+.icon-flight:before,
+.icon-help-circle:before,
+.icon-hotel:before,
+.icon-laptop:before,
+.icon-left-arrow-circle:before,
+.icon-left-arrow-circle-filled:before,
+.icon-left-chevron:before,
+.icon-link:before,
+.icon-microphone:before,
+.icon-mobile-menu:before,
+.icon-news:before,
+.icon-people:before,
+.icon-people-2:before,
+.icon-play-circle-big:before,
+.icon-play-circle-small:before,
+.icon-refresh:before,
+.icon-right-arrow-circle:before,
+.icon-right-arrow-circle-filled:before,
+.icon-right-chevron:before,
+.icon-search:before,
+.icon-section-collapse-circle:before,
+.icon-section-expand-circle:before,
+.icon-social-facebook:before,
+.icon-social-instagram:before,
+.icon-social-linkedin:before,
+.icon-social-rss:before,
+.icon-social-twitter:before,
+.icon-social-youtube:before,
+.icon-triangle-down:before,
+.icon-triangle-left:before,
+.icon-triangle-right:before,
+.icon-triangle-up:before,
+.icon-up-arrow-circle:before,
+.icon-up-arrow-circle-filled:before,
+.icon-up-chevron:before {
+  display: inline-block;
+  font-family: "tc-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-arrow-circle-right:before { content: "\f100"; }
+.icon-arrow-down:before { content: "\f101"; }
+.icon-arrow-left:before { content: "\f102"; }
+.icon-arrow-right:before { content: "\f103"; }
+.icon-arrow-up:before { content: "\f104"; }
+.icon-calendar:before { content: "\f105"; }
+.icon-chat:before { content: "\f106"; }
+.icon-chat-box:before { content: "\f107"; }
+.icon-chevron-down:before { content: "\f108"; }
+.icon-chevron-left:before { content: "\f109"; }
+.icon-chevron-right:before { content: "\f10a"; }
+.icon-chevron-up:before { content: "\f10b"; }
+.icon-close-circle:before { content: "\f10c"; }
+.icon-document-3:before { content: "\f10d"; }
+.icon-document-5:before { content: "\f10e"; }
+.icon-down-arrow-circle:before { content: "\f10f"; }
+.icon-down-arrow-circle-filled:before { content: "\f110"; }
+.icon-down-chevron:before { content: "\f111"; }
+.icon-download:before { content: "\f112"; }
+.icon-flight:before { content: "\f113"; }
+.icon-help-circle:before { content: "\f114"; }
+.icon-hotel:before { content: "\f115"; }
+.icon-laptop:before { content: "\f116"; }
+.icon-left-arrow-circle:before { content: "\f117"; }
+.icon-left-arrow-circle-filled:before { content: "\f118"; }
+.icon-left-chevron:before { content: "\f119"; }
+.icon-link:before { content: "\f11a"; }
+.icon-microphone:before { content: "\f11b"; }
+.icon-mobile-menu:before { content: "\f11c"; }
+.icon-news:before { content: "\f11d"; }
+.icon-people:before { content: "\f11e"; }
+.icon-people-2:before { content: "\f11f"; }
+.icon-play-circle-big:before { content: "\f120"; }
+.icon-play-circle-small:before { content: "\f121"; }
+.icon-refresh:before { content: "\f122"; }
+.icon-right-arrow-circle:before { content: "\f123"; }
+.icon-right-arrow-circle-filled:before { content: "\f124"; }
+.icon-right-chevron:before { content: "\f125"; }
+.icon-search:before { content: "\f126"; }
+.icon-section-collapse-circle:before { content: "\f127"; }
+.icon-section-expand-circle:before { content: "\f128"; }
+.icon-social-facebook:before { content: "\f129"; }
+.icon-social-instagram:before { content: "\f12a"; }
+.icon-social-linkedin:before { content: "\f12b"; }
+.icon-social-rss:before { content: "\f12c"; }
+.icon-social-twitter:before { content: "\f12d"; }
+.icon-social-youtube:before { content: "\f12e"; }
+.icon-triangle-down:before { content: "\f12f"; }
+.icon-triangle-left:before { content: "\f130"; }
+.icon-triangle-right:before { content: "\f131"; }
+.icon-triangle-up:before { content: "\f132"; }
+.icon-up-arrow-circle:before { content: "\f133"; }
+.icon-up-arrow-circle-filled:before { content: "\f134"; }
+.icon-up-chevron:before { content: "\f135"; }
+
+$font-tc-icons-arrow-circle-right: "\f100";
+$font-tc-icons-arrow-down: "\f101";
+$font-tc-icons-arrow-left: "\f102";
+$font-tc-icons-arrow-right: "\f103";
+$font-tc-icons-arrow-up: "\f104";
+$font-tc-icons-calendar: "\f105";
+$font-tc-icons-chat: "\f106";
+$font-tc-icons-chat-box: "\f107";
+$font-tc-icons-chevron-down: "\f108";
+$font-tc-icons-chevron-left: "\f109";
+$font-tc-icons-chevron-right: "\f10a";
+$font-tc-icons-chevron-up: "\f10b";
+$font-tc-icons-close-circle: "\f10c";
+$font-tc-icons-document-3: "\f10d";
+$font-tc-icons-document-5: "\f10e";
+$font-tc-icons-down-arrow-circle: "\f10f";
+$font-tc-icons-down-arrow-circle-filled: "\f110";
+$font-tc-icons-down-chevron: "\f111";
+$font-tc-icons-download: "\f112";
+$font-tc-icons-flight: "\f113";
+$font-tc-icons-help-circle: "\f114";
+$font-tc-icons-hotel: "\f115";
+$font-tc-icons-laptop: "\f116";
+$font-tc-icons-left-arrow-circle: "\f117";
+$font-tc-icons-left-arrow-circle-filled: "\f118";
+$font-tc-icons-left-chevron: "\f119";
+$font-tc-icons-link: "\f11a";
+$font-tc-icons-microphone: "\f11b";
+$font-tc-icons-mobile-menu: "\f11c";
+$font-tc-icons-news: "\f11d";
+$font-tc-icons-people: "\f11e";
+$font-tc-icons-people-2: "\f11f";
+$font-tc-icons-play-circle-big: "\f120";
+$font-tc-icons-play-circle-small: "\f121";
+$font-tc-icons-refresh: "\f122";
+$font-tc-icons-right-arrow-circle: "\f123";
+$font-tc-icons-right-arrow-circle-filled: "\f124";
+$font-tc-icons-right-chevron: "\f125";
+$font-tc-icons-search: "\f126";
+$font-tc-icons-section-collapse-circle: "\f127";
+$font-tc-icons-section-expand-circle: "\f128";
+$font-tc-icons-social-facebook: "\f129";
+$font-tc-icons-social-instagram: "\f12a";
+$font-tc-icons-social-linkedin: "\f12b";
+$font-tc-icons-social-rss: "\f12c";
+$font-tc-icons-social-twitter: "\f12d";
+$font-tc-icons-social-youtube: "\f12e";
+$font-tc-icons-triangle-down: "\f12f";
+$font-tc-icons-triangle-left: "\f130";
+$font-tc-icons-triangle-right: "\f131";
+$font-tc-icons-triangle-up: "\f132";
+$font-tc-icons-up-arrow-circle: "\f133";
+$font-tc-icons-up-arrow-circle-filled: "\f134";
+$font-tc-icons-up-chevron: "\f135";

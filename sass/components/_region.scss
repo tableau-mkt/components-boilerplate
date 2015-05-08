@@ -1,0 +1,23 @@
+/** 
+ * Content region padding
+ */
+.l-region--content {
+  padding-top: $section-vert-spacing;
+  padding-bottom: $section-vert-spacing;
+}
+
+.l-region--content-sidebar-wrapper {
+  padding-bottom: $section-vert-spacing;
+}
+
+.node-type-page .l-region--content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/** 
+ * Content Top region styles
+ */
+.l-region--content-top {
+  background: $gray;
+}

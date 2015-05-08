@@ -1,0 +1,13 @@
+{
+  "css": [
+    "public/kss.css"
+  ],
+  "js": [
+    "public/kss.js",
+    "public/prettify.js"
+  ],
+  "variables": {
+    "site_name":  "kss-node",
+    "footer":     "Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>."
+  },
+}

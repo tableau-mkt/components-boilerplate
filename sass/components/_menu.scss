@@ -1,0 +1,196 @@
+/*
+Main Menu
+
+The main navigational menu for the site.
+
+Markup:
+<div class="l-menu box--green">
+  <ul class="menu">
+    <li class="first leaf active-trail"><a href="#">About</a></li>
+    <li class="leaf"><a href="#">Content</a></li>
+    <li class="leaf"><a href="#">Expo Hall</a></li>
+    <li class="leaf"><a href="#">FAQ</a></li>
+    <li class="last leaf"><a href="#" class="cta cta-white">Register</a></li>
+  </ul>
+</div>
+
+Styleguide 5.1
+*/
+
+body {
+  padding-top: $menu-height-wide;
+
+  @include breakpoint($mobile) {
+    padding-top: $menu-height-mobile;
+  }
+}
+
+.l-menu {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 1.4em 0;
+  background: $navy;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  @include transition(padding .25s);
+
+  .logo-img {
+    height: 32px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .block--delta-blocks-logo {
+    float: left;
+  }
+
+  .menu {
+    @extend %plain-list;
+    margin: 0;
+    padding-top: 5px;
+    text-align: right;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 6px 0;
+        color: $white;
+        font-size: em(14px);
+        letter-spacing: 1px;
+        border-bottom: 1px solid transparent;
+        @include transition(border .25s);
+      }
+
+      a:hover,
+      &.active-trail a {
+        border-bottom-color: $white;
+        text-decoration: none;
+      }
+
+      @include breakpoint($tablet) {
+        padding: 0 10px;
+      }
+
+      @include breakpoint($desktop) {
+        padding: 0 20px;
+      }
+    }
+
+  }
+  
+  // Mobile Nav styles 
+  // See http://codepen.io/anon/pen/Bydewg for hamburger animation
+  @include breakpoint($mobile) {
+    padding: 12px 0;
+    background: $navy;
+    max-height: $menu-height-mobile;
+    
+    .logo-img {
+      height: 25px;
+    }
+
+    .block--menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+      background-color: $navy-transparent;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: $menu-height-mobile;
+        background: $navy;
+      }
+
+      .menu {
+        height: 100vh;
+        padding-top: $menu-height-mobile;
+        overflow-y: auto;
+        text-align: left;
+      }
+
+      li {
+        display: block;
+
+        a,
+        &.active-trail a,
+        a.cta {
+          margin: 0;
+          padding: .5em;
+          display: block;
+          border: 0;
+          border-bottom: 1px solid $teal;
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .menu--mobile-toggle {
+      position: relative;
+      display: block;
+      float: right;
+      margin: 0 15px;
+      width: 25px;
+      height: 25px;
+
+      span, 
+      span:before, 
+      span:after {
+        height: 3px;
+        width: 25px;
+        background: white;
+        position: absolute;
+        display: block;
+        @include transition(all .5s);
+      }
+
+      span:before, 
+      span:after {
+        content: '';  
+      }
+      span {
+        top: 10px
+      }
+      span:before {
+        top: -10px; 
+      }
+      span:after {
+        top: 10px;
+      }
+
+      &.open span {
+        background-color: transparent;
+      }
+      &.open span:before, 
+      &.open span:after {
+        top: 0;
+      }
+      &.open span:before {
+        @include transform(rotate(45deg));
+      }
+      &.open span:after {
+        @include transform(rotate(-45deg));
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    .menu--mobile-toggle {
+      display: none;
+    }
+  }
+}
+
+.admin-menu .l-menu {
+  margin-top: 29px;
+}

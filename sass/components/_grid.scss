@@ -1,0 +1,39 @@
+// Basic utility, reusable grid classes
+
+// Usage:
+// Component: .grid (like .container)
+// Element/Modifier:
+// .grid-1, .grid-2, .grid-3, etc.
+
+@import "susy";
+
+$susy: (
+  columns: $grid-columns,
+);
+
+@for $i from 1 through $grid-columns {
+  .grid-#{$i} {
+    position: relative;
+    
+    @include breakpoint($tablet) {
+      @include span($i);
+      
+      &.grid-last {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .push-#{$i} {
+    @include breakpoint($tablet) {
+      @include push($i);
+    }
+  }
+  .pull-#{$i} {
+    @include breakpoint($tablet) {
+      @include pull($i);
+    }
+  }
+}

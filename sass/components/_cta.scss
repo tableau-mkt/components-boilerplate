@@ -1,0 +1,75 @@
+/*
+Links
+
+Various link styles for use throughout the site.
+
+Styleguide 2
+ */
+
+/* 
+CTA
+
+A call to action button that links to something important. The default color is
+dark blue.
+
+Markup:
+<p>
+  <a class="cta {$modifiers}" href="#">Register Now</a>
+  <a class="cta {$modifiers}" href="#">▶ Play A Video</a>
+</p>
+
+.cta-dark-blue - A dark blue version of the CTA.
+.cta-teal - A teal version of the CTA.
+.cta-salmon - A lighter salmon version of the CTA.
+.cta-bright-teal - A bright teal version of the CTA.
+.cta-green - A green version of the CTA.
+.cta-navy - A navy version of the CTA.
+.cta-light-gray - A light gray version of the CTA.
+.cta-gray - A gray version of the CTA.
+.cta-dark-gray - A dark gray version of the CTA.
+.cta-white - A white version of the CTA for use on colored backgrounds.
+
+Styleguide 2.1
+*/
+.cta,
+input[type=submit] {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  padding: 8px 22px;
+  background-color: transparent;
+  border: 1px solid $dark-blue;
+  border-radius: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-family:'Gill Sans W04 Roman';
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: $dark-blue;
+  text-transform: uppercase;
+  @include transition(background-color 0.25s, color 0.35s);
+
+  &:hover,
+  &:focus {
+    background-color: $dark-blue;
+    color: $white;
+    text-decoration: none;
+  }
+
+  @each $name, $color in $theme-colors {
+    &.cta-#{$name} {
+      border-color: $color;
+      color: $color;
+      &:hover,
+      &:focus {
+        background-color: $color;
+        color: $white;
+      }
+    }
+  }
+
+  &.cta-white:hover,
+  &.cta-white:focus {
+    color: $teal;
+  }
+}

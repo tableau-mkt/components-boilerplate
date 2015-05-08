@@ -1,0 +1,34 @@
+/*
+Content Reveal
+
+Simple tool to make content hidden and revealed when a trigger is clicked. It 
+doesn't matter where on the page the trigger and target content are, but the
+trigger element must target the content via a <code>data-reveal-target="target-id"</code>
+attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute that matches the <code>data-reveal-target</code>.
+
+Markup:
+<p>
+  <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
+</p>
+<div class="reveal--content" id="content-wrapper">
+  <div class="box--yellow box--padded">
+    <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
+    <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
+  </div>
+</div>
+
+Styleguide 6.3
+*/
+.reveal--content {
+  position: relative;
+  display: none;
+}
+.reveal--close {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 10px;
+  line-height: 0;
+  font-size: em(24px);
+}

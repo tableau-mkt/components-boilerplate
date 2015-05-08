@@ -1,0 +1,124 @@
+/*
+Popups
+
+Used to popup content into a modal box ontop of the page.
+
+Markup:
+<a href="#popup-test" class="cta popup-inline">Popup trigger</a>
+<div id="popup-test" class="popup--content">
+  <p>Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.</p>
+  <p>Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.</p>
+</div>
+
+Styleguide 6.4
+ */
+
+.mfp-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mfp-content{
+  max-width: 800px;
+  z-index: 5;
+  background: $white;
+}
+
+.popup--content {
+  display: none;
+  padding: 2em;
+}
+
+.mfp-content .popup--content {
+  display: inherit;
+}
+
+button.mfp-arrow {
+  position: absolute;
+  top: 50%;
+  height: 80px;
+  width: 40px;
+  margin: -40px 0 0;
+  opacity: 1;
+  z-index: 10;
+  cursor: pointer;
+  @extend %fade-bg;
+
+  &:before,
+  &:after {
+    height: 80px;
+    width: 40px;
+    margin: 0;
+    padding: 15px 0;
+    border: 0;
+    opacity: 1;
+    line-height: 1;
+    font-family: "tc-icons";
+    font-size: 2.25em;
+    color: $white;
+    text-shadow: 0 0 8px #666;
+  }
+
+  &.mfp-arrow-left {
+    left: 10px;
+
+    &:before {
+      content: "<";
+    }
+  }
+  
+  &.mfp-arrow-right {
+    right: 10px;
+
+    &:before {
+      content: ">";
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    margin: -40px 0 0;
+  }
+
+  @include breakpoint($desktop) {
+    &.mfp-arrow-left {
+      left: 5%;
+    }
+    
+    &.mfp-arrow-right {
+      right: 5%;
+    }
+  }
+
+}
+
+
+/* Transitioning the popup in and out */
+.popup--fade {
+  &.mfp-bg {
+    opacity: 0;
+    @include transition(all 0.25s ease-out);
+  }
+  &.mfp-bg.mfp-ready {
+    opacity: 0.8;
+  }
+  &.mfp-bg.mfp-removing {
+    opacity: 0;
+  }
+  &.mfp-wrap .mfp-content,
+  &.mfp-wrap .mfp-arrow {
+    opacity: 0;
+    @include transition(all 0.25s ease-out);
+  }
+  &.mfp-wrap.mfp-ready .mfp-content,
+  &.mfp-wrap.mfp-ready .mfp-arrow {
+    opacity: 1;
+  }
+  &.mfp-wrap.mfp-removing .mfp-content,
+  &.mfp-wrap.mfp-removing .mfp-arrow {
+    opacity: 0;
+  }
+}

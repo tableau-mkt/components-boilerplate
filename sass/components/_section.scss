@@ -1,0 +1,50 @@
+.field--section {
+  position: relative;
+}
+
+$section-padding: (
+  two: 2em,
+  four: 4em,
+  six: 6em
+);
+
+.section-container {
+  
+  @each $size, $value in $section-padding {
+    &.section--top-padding-#{$size} {
+      padding-top: $value;
+    }
+    
+    &.section--bottom-padding-#{$size} {
+      padding-bottom: $value;
+    }
+  }
+
+  &.field--section-title {
+    margin: 0 0 2em;
+  }
+
+  &.section--background-image {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@include breakpoint($mobile) {
+  
+  $section-padding: (
+    two: 1em,
+    four: 2em,
+    six: 3em
+  );  
+  
+  @each $size, $value in $section-padding {
+    .section-container.section--top-padding-#{$size} {
+      padding-top: $value;
+    }
+    
+    .section-container.section--bottom-padding-#{$size} {
+      padding-bottom: $value;
+    }
+  }
+}

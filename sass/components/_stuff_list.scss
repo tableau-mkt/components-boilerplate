@@ -1,0 +1,28 @@
+.node--stuff-list.node--full .field--stuff-item {
+  padding: .5em;
+  border-top: 1px solid $light-gray;
+  
+  &:last-child {
+    border-bottom: 1px solid $light-gray;
+  }
+
+  .field--stuff-item-label {
+    color: $gray;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+  }
+
+  // .field--stuff-item-content {
+  //   display: none;
+  // }
+}
+
+.stuff-list--grid {
+  max-width: 313px;
+  margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    width: 33.333%;
+    float: left;
+  }
+}

@@ -1,0 +1,114 @@
+.l-footer {
+  color: $light-gray;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  
+  /* Social Links */
+  .block--block-1 .social-links {
+    margin: 1.2em 0 0;
+
+    a {
+      display: inline-block;
+      margin-right: 15px;
+      color: $white;
+      @include transition(color .25s);
+
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+
+  /* Footer Nav */
+  .block--menu-menu-footer-menu .menu {
+    @extend %plain-list;
+    margin: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      padding: 0 20px;
+
+      a {
+        color: $light-gray;
+        font-size: $text-small;
+      }
+    }
+  }
+
+  /* Copyright */
+  .block--block-2 {
+    p {
+      margin: .5em 0 0;
+    }
+  }
+
+  /* Tableau Logo */
+  .block--block-3 {
+    margin-top: 1em;
+  }
+
+  @include breakpoint($mobile) {
+    text-align: center;
+
+    .block--block-1 .social-links {
+      max-width: 250px;
+      margin: 0 auto;
+      text-align: center;
+
+      a {
+        margin: .25em;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+
+    .block--menu-menu-footer-menu .menu {
+      margin-top: 1em;
+
+      li {
+        display: block;
+        padding: 0;
+      }
+
+      li a {
+        display: block;
+        padding: .3em;
+        font-size: em(16px);
+      }
+    }
+
+    .block--block-3 img {
+      max-width: 140px;
+    }
+
+  }
+}
+
+// Make sure the footer stays at the bottom of shorter pages
+// Inspired by: http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
+@include breakpoint($tablet) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .l-page {
+    min-height: 100%;
+    position: relative;
+  }
+
+  .l-main {
+    padding-bottom: $footer-height;
+  }
+
+  .l-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+  }
+}

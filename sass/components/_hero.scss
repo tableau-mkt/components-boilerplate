@@ -1,0 +1,12 @@
+.hero-background {
+  height: 450px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@include breakpoint($mobile) {
+  .hero-background {
+    height: 250px;
+  }
+}

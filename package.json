@@ -1,0 +1,22 @@
+{
+  "name": "sass-satchel",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tableau-mkt/sass-satchel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tableau-mkt/sass-satchel/issues"
+  },
+  "homepage": "https://github.com/tableau-mkt/sass-satchel",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-styleguide": "^0.2.17",
+    "kss": "^2.0.2"
+  }
+}

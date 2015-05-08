@@ -1,0 +1,97 @@
+/**
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
+
+%allcaps {
+  text-transform: uppercase;
+  letter-spacing: em(1px);
+}
+
+%plain-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  li {
+    list-style: none;
+  }
+}
+
+%reset-box {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+%cover-absolute {
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+%transition-transform {
+  -webkit-transition: -webkit-transform   150ms;
+     -moz-transition: -moz-transform      150ms;
+       -o-transition: -o-transform        150ms;
+          transition: transform           150ms;
+}
+
+%letter-spacing {
+  letter-spacing: em(1px);
+}
+
+%fade-bg {
+  -webkit-transition: background 0.25s, opacity 0.25s;
+     -moz-transition: background 0.25s, opacity 0.25s;
+       -o-transition: background 0.25s, opacity 0.25s;
+          transition: background 0.25s, opacity 0.25s;
+}
+
+%fade-color {
+  -webkit-transition: color 0.25s, opacity 0.25s;
+     -moz-transition: color 0.25s, opacity 0.25s;
+       -o-transition: color 0.25s, opacity 0.25s;
+          transition: color 0.25s, opacity 0.25s;
+}
+
+%heading {
+  
+}
+
+%heading--h1 {
+}
+
+%heading--h2 {
+}
+
+%heading--h3 {
+}
+
+%heading--small {
+}
+
+%heading--bold {
+}
+
+%no-text-transform {
+  text-transform: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+%element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -1,0 +1,14 @@
+.anchor {
+  position: absolute;
+  top: -$menu-height-wide;
+}
+
+.admin-menu .anchor {
+  top: -$menu-height-wide - 29px;
+}
+
+@include breakpoint($mobile) {
+  .anchor {
+    top: -$menu-height-mobile;
+  }
+}

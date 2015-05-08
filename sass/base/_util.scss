@@ -1,0 +1,46 @@
+/* Proportionately resize iframes. Add class to a wrapper around the iframe */
+.iframe-4-3,
+.iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%; /* 4:3 */ 
+  height: 0;
+}
+.iframe-4-3 iframe,
+.iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.iframe-16-9 {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.relative {
+  position: relative;
+  overflow: hidden;
+}
+
+.absolute {
+  position: absolute;
+  overflow: hidden;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+@include breakpoint($mobile) {
+  .mobile-hide {
+    display: none;
+  }
+}
