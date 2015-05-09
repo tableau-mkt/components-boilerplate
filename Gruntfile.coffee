@@ -22,9 +22,9 @@ module.exports = (grunt) ->
       template:
         files: [
           "kss-template/index.html"
-          "kss-template/public/sass/*.{scss,sass}"
+          "kss-template/public/sass/{,**/}*.{scss,sass}"
         ]
-        tasks: ['shell:kss', 'compass:kss']
+        tasks: ['compass:kss', 'shell:kss']
 
     compass:
       dist:
@@ -46,7 +46,6 @@ module.exports = (grunt) ->
           cssDir: "kss-template/public/css"
           sassDir: "kss-template/public/sass"
           require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
-          relativeAssets: true
           force: true
           sourcemap: true
 

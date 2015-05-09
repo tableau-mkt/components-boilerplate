@@ -10,25 +10,24 @@ Markup:
     <li class="leaf"><a href="#">Content</a></li>
     <li class="leaf"><a href="#">Expo Hall</a></li>
     <li class="leaf"><a href="#">FAQ</a></li>
-    <li class="last leaf"><a href="#" class="cta cta-white">Register</a></li>
   </ul>
 </div>
 
 Styleguide 5.1
 */
 
-body {
-  padding-top: $menu-height-wide;
+// body {
+//   padding-top: $menu-height-wide;
 
-  @include breakpoint($mobile) {
-    padding-top: $menu-height-mobile;
-  }
-}
+//   @include breakpoint($mobile) {
+//     padding-top: $menu-height-mobile;
+//   }
+// }
 
 .l-menu {
-  position: fixed;
-  top: 0;
-  z-index: 10;
+  // position: fixed;
+  // top: 0;
+  // z-index: 10;
   width: 100%;
   padding: 1.4em 0;
   background: $navy;

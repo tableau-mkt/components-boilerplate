@@ -1,0 +1,61 @@
+body.kss {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #444;
+
+  a {
+    text-decoration: none;
+    color: #59879B;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.kss-header {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+
+  .kss-logo {
+    padding: 1em 2em;
+  }
+}
+
+.kss-footer {
+  background: #eee;
+  border-top: 1px solid #ddd;
+  padding: 1em;
+  text-align: center;
+}
+
+.kss-left,
+.kss-right {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 1em;
+}
+.kss-left {
+  width: 24%;
+}
+.kss-right {
+  width: 76%;
+}
+
+.kss-content {
+  max-width: 54em;
+  padding: 1em;
+}
+
+.kss-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

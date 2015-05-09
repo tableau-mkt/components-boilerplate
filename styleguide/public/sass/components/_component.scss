@@ -1,0 +1,32 @@
+.kss-component {
+  margin: 3em 0 4em;
+  padding-left: 2em;
+  border-left: 1px solid #E9762D;
+}
+
+.kss-examples {
+
+  .kss-example-details {
+    @extend .kss-clearfix;
+
+    .kss-example-desc {
+      width: 80%;
+      float: left;
+    }
+
+    .kss-example-name {
+      width: 20%;
+      float: left;
+      text-align: right;
+    }
+  }
+
+  .kss-example-preview {
+    position: relative;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-top: 1px solid #1C447E;
+    background: #eee;
+    @extend .kss-clearfix;
+  }
+}

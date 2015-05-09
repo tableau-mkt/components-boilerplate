@@ -856,7 +856,7 @@ input[type=submit].cta-white:focus {
   .l-footer .block--menu-menu-footer-menu .menu li a {
     display: block;
     padding: .3em;
-    font-size: 0.88889em;
+    font-size: 1em;
   }
   /* line 82, ../sass/components/_footer.scss */
   .l-footer .block--block-3 img {
@@ -1886,28 +1886,13 @@ Markup:
     <li class="leaf"><a href="#">Content</a></li>
     <li class="leaf"><a href="#">Expo Hall</a></li>
     <li class="leaf"><a href="#">FAQ</a></li>
-    <li class="last leaf"><a href="#" class="cta cta-white">Register</a></li>
   </ul>
 </div>
 
 Styleguide 5.1
 */
-/* line 20, ../sass/components/_menu.scss */
-body {
-  padding-top: 78px;
-}
-@media (max-width: 739px) {
-  /* line 20, ../sass/components/_menu.scss */
-  body {
-    padding-top: 49px;
-  }
-}
-
-/* line 28, ../sass/components/_menu.scss */
+/* line 27, ../sass/components/_menu.scss */
 .l-menu {
-  position: fixed;
-  top: 0;
-  z-index: 10;
   width: 100%;
   padding: 1.4em 0;
   background: #283451;
@@ -1917,34 +1902,34 @@ body {
   -o-transition: padding 0.25s;
   transition: padding 0.25s;
 }
-/* line 38, ../sass/components/_menu.scss */
+/* line 37, ../sass/components/_menu.scss */
 .l-menu .logo-img {
   height: 32px;
 }
-/* line 41, ../sass/components/_menu.scss */
+/* line 40, ../sass/components/_menu.scss */
 .l-menu .logo-img img {
   height: 100%;
   width: auto;
 }
-/* line 47, ../sass/components/_menu.scss */
+/* line 46, ../sass/components/_menu.scss */
 .l-menu .block--delta-blocks-logo {
   float: left;
 }
-/* line 51, ../sass/components/_menu.scss */
+/* line 50, ../sass/components/_menu.scss */
 .l-menu .menu {
   margin: 0;
   padding-top: 5px;
   text-align: right;
 }
-/* line 57, ../sass/components/_menu.scss */
+/* line 56, ../sass/components/_menu.scss */
 .l-menu .menu li {
   display: inline-block;
 }
-/* line 60, ../sass/components/_menu.scss */
+/* line 59, ../sass/components/_menu.scss */
 .l-menu .menu li a {
   padding: 6px 0;
   color: #fff;
-  font-size: 0.77778em;
+  font-size: 0.875em;
   letter-spacing: 1px;
   border-bottom: 1px solid transparent;
   -webkit-transition: border 0.25s;
@@ -1952,35 +1937,35 @@ body {
   -o-transition: border 0.25s;
   transition: border 0.25s;
 }
-/* line 69, ../sass/components/_menu.scss */
+/* line 68, ../sass/components/_menu.scss */
 .l-menu .menu li a:hover, .l-menu .menu li.active-trail a {
   border-bottom-color: #fff;
   text-decoration: none;
 }
 @media (min-width: 740px) {
-  /* line 57, ../sass/components/_menu.scss */
+  /* line 56, ../sass/components/_menu.scss */
   .l-menu .menu li {
     padding: 0 10px;
   }
 }
 @media (min-width: 980px) {
-  /* line 57, ../sass/components/_menu.scss */
+  /* line 56, ../sass/components/_menu.scss */
   .l-menu .menu li {
     padding: 0 20px;
   }
 }
 @media (max-width: 739px) {
-  /* line 28, ../sass/components/_menu.scss */
+  /* line 27, ../sass/components/_menu.scss */
   .l-menu {
     padding: 12px 0;
     background: #283451;
     max-height: 49px;
   }
-  /* line 93, ../sass/components/_menu.scss */
+  /* line 92, ../sass/components/_menu.scss */
   .l-menu .logo-img {
     height: 25px;
   }
-  /* line 97, ../sass/components/_menu.scss */
+  /* line 96, ../sass/components/_menu.scss */
   .l-menu .block--menu {
     display: none;
     position: absolute;
@@ -1991,7 +1976,7 @@ body {
     z-index: -1;
     background-color: rgba(40, 52, 81, 0.9);
   }
-  /* line 107, ../sass/components/_menu.scss */
+  /* line 106, ../sass/components/_menu.scss */
   .l-menu .block--menu:before {
     content: "";
     position: absolute;
@@ -1999,18 +1984,18 @@ body {
     height: 49px;
     background: #283451;
   }
-  /* line 115, ../sass/components/_menu.scss */
+  /* line 114, ../sass/components/_menu.scss */
   .l-menu .block--menu .menu {
     height: 100vh;
     padding-top: 49px;
     overflow-y: auto;
     text-align: left;
   }
-  /* line 122, ../sass/components/_menu.scss */
+  /* line 121, ../sass/components/_menu.scss */
   .l-menu .block--menu li {
     display: block;
   }
-  /* line 125, ../sass/components/_menu.scss */
+  /* line 124, ../sass/components/_menu.scss */
   .l-menu .block--menu li a, .l-menu .block--menu li.active-trail a,
   .l-menu .block--menu li a.cta {
     margin: 0;
@@ -2020,7 +2005,7 @@ body {
     border-bottom: 1px solid #7099a6;
     font-size: 1.5em;
   }
-  /* line 138, ../sass/components/_menu.scss */
+  /* line 137, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle {
     position: relative;
     display: block;
@@ -2029,7 +2014,7 @@ body {
     width: 25px;
     height: 25px;
   }
-  /* line 146, ../sass/components/_menu.scss */
+  /* line 145, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle span,
   .l-menu .menu--mobile-toggle span:before,
   .l-menu .menu--mobile-toggle span:after {
@@ -2043,38 +2028,38 @@ body {
     -o-transition: all 0.5s;
     transition: all 0.5s;
   }
-  /* line 157, ../sass/components/_menu.scss */
+  /* line 156, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle span:before,
   .l-menu .menu--mobile-toggle span:after {
     content: '';
   }
-  /* line 161, ../sass/components/_menu.scss */
+  /* line 160, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle span {
     top: 10px;
   }
-  /* line 164, ../sass/components/_menu.scss */
+  /* line 163, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle span:before {
     top: -10px;
   }
-  /* line 167, ../sass/components/_menu.scss */
+  /* line 166, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle span:after {
     top: 10px;
   }
-  /* line 171, ../sass/components/_menu.scss */
+  /* line 170, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle.open span {
     background-color: transparent;
   }
-  /* line 174, ../sass/components/_menu.scss */
+  /* line 173, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle.open span:before, .l-menu .menu--mobile-toggle.open span:after {
     top: 0;
   }
-  /* line 178, ../sass/components/_menu.scss */
+  /* line 177, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle.open span:before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  /* line 181, ../sass/components/_menu.scss */
+  /* line 180, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle.open span:after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -2082,13 +2067,13 @@ body {
   }
 }
 @media (min-width: 740px) {
-  /* line 188, ../sass/components/_menu.scss */
+  /* line 187, ../sass/components/_menu.scss */
   .l-menu .menu--mobile-toggle {
     display: none;
   }
 }
 
-/* line 194, ../sass/components/_menu.scss */
+/* line 193, ../sass/components/_menu.scss */
 .admin-menu .l-menu {
   margin-top: 29px;
 }
@@ -2337,7 +2322,7 @@ Styleguide 6.3
   right: 10px;
   top: 10px;
   line-height: 0;
-  font-size: 1.33333em;
+  font-size: 1.5em;
 }
 
 /* line 1, ../sass/components/_section.scss */
@@ -2961,7 +2946,7 @@ Styleguide 1.1
 body {
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Gill Sans W01 Light';
   color: #333;
   line-height: 1.4;
@@ -3005,14 +2990,14 @@ h6,
 /* line 66, ../sass/components/_typography.scss */
 h1,
 .heading--h1 {
-  font-size: 2em;
+  font-size: 2.25em;
   font-weight: 100;
 }
 
 /* line 71, ../sass/components/_typography.scss */
 h2,
 .heading--h2 {
-  font-size: 1.33333em;
+  font-size: 1.5em;
   font-weight: 100;
   line-height: 1.2;
 }
@@ -3020,14 +3005,14 @@ h2,
 /* line 77, ../sass/components/_typography.scss */
 h3,
 .heading--h3 {
-  font-size: 1.11111em;
+  font-size: 1.25em;
   line-height: 1.4;
 }
 
 /* line 82, ../sass/components/_typography.scss */
 h4,
 .heading--h4 {
-  font-size: 1em;
+  font-size: 1.125em;
   text-transform: uppercase;
   line-height: 1.6;
 }
@@ -3035,13 +3020,13 @@ h4,
 /* line 88, ../sass/components/_typography.scss */
 h5,
 .heading--h5 {
-  font-size: 0.77778em;
+  font-size: 0.875em;
 }
 
 /* line 92, ../sass/components/_typography.scss */
 h6,
 .heading--h6 {
-  font-size: 0.66667em;
+  font-size: 0.75em;
   line-height: 1.2;
 }
 
@@ -3069,9 +3054,9 @@ Markup:
   This sentence is an example of formatted text.
 </p>
 
-.text-bold - Bold text for emphasis. Same as &lt;strong&gt;
+.text-bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
 .text-light - Light text. Default for non-headings
-.text-italic - Italic text for emphasis. Same as &lt;em&gt;
+.text-italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
 .text-caps - All caps text
 .text-right - Right justified text
 .text-left - Left justified text
@@ -3150,7 +3135,7 @@ em,
 
 /* line 184, ../sass/components/_typography.scss */
 .text-base-size {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* line 187, ../sass/components/_typography.scss */
@@ -3270,13 +3255,20 @@ em,
   padding: 0;
 }
 
-/* line 38, ../sass/components/_util.scss */
+/* line 39, ../sass/components/_util.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 46, ../sass/components/_util.scss */
 .hide {
   display: none;
 }
 
 @media (max-width: 739px) {
-  /* line 43, ../sass/components/_util.scss */
+  /* line 51, ../sass/components/_util.scss */
   .mobile-hide {
     display: none;
   }

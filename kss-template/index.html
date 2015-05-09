@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tableau Style Components</title>
+  <title>Tableau SASS Components</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -13,138 +13,132 @@
 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
   <link rel="stylesheet" href="public/css/style.css">
-  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body><div id="kss-wrapper">
-
-<div id="kss-nav">
-  <header id="kss-header">
-    <div class="logo">
-      <a href="http://www.tableau.com" target="_blank">
-        <img src="public/images/logo.png" width="200" title="Tableau Software">
+<body class="kss">
+  <header class="kss-header kss-clearfix">
+    <div class="kss-logo kss-left">
+      <a href="/styleguide">
+        <img src="public/images/logo.png" title="Tableau Software">
       </a>
     </div>
-    <hgroup><h1>Tableau Style Components TEST</h1></hgroup>
+    <div class="kss-right">
+      <h1>SASS Components</h1>
+    </div>
   </header>
-  <aside>
-    <nav><ul>
-      <li><a href="./">0.0: Overview</a></li>
-    {{#eachRoot}}
-      <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a>
+
+  <div class="kss-main kss-clearfix">
+    <aside class="kss-nav kss-left">
+      <nav>
         <ul>
-        {{#eachSection reference}}
-          {{#ifDepth 2}}
-            <li><a href="section-{{../../reference}}.html#{{reference}}">{{reference}}: {{header}}</a></li>
-          {{/ifDepth}}
-        {{/eachSection}}
+          <li><a href="./">Overview</a></li>
+        {{#eachRoot}}
+          <li><a href="section-{{reference}}.html">{{header}}</a>
+            <ul>
+            {{#eachSection reference}}
+              {{#ifDepth 2}}
+                <li><a href="section-{{../../reference}}.html#{{reference}}">{{header}}</a></li>
+              {{/ifDepth}}
+            {{/eachSection}}
+            </ul>
+          </li>
+        {{/eachRoot}}
         </ul>
-      </li>
-    {{/eachRoot}}
-    </ul></nav>
-  </aside>
-</div>
-<div role="main" id="kss-main">
-  <article id="kss-content">
-  {{#if overview}}
-    {{{overview}}}
-  {{else}}
+      </nav>
+    </aside>
 
-    {{!
-      Find each section, in order.
-      If there's no markup or modifiers supplied, use a Markdown-only
-      layout instead.
+    <article class="kss-content kss-right">
+    {{#if overview}}
+      {{{overview}}}
+    {{else}}
 
-      The "root" element comes first in this loop, and can be detected using
-      the "#ifDepth 1" block as seen below.
-    }}
-    {{#eachSection rootNumber}}
-      {{#unlessDepth 1}}
-      <section class="kss-depth-{{ refDepth }}">
-      {{/unlessDepth}}
+      {{!
+        Find each section, in order.
+        If there's no markup or modifiers supplied, use a Markdown-only
+        layout instead.
 
-      <h1 id="{{ reference }}" class="kss-title"><span class="kss-ref">{{ reference }}{{#ifDepth 1}}.0{{/ifDepth}}</span> - {{ header }}</h1>
+        The "root" element comes first in this loop, and can be detected using
+        the "#ifDepth 1" block as seen below.
+      }}
+      {{#eachSection rootNumber}}
+        {{#ifDepth 1}}
+          <h2 class="kss-title">{{ header }} <span class="kss-ref">({{ reference }}.0)</span></h2>
+        {{/ifDepth}}
 
-      {{#if description}}
-        <div class="kss-box">{{{description}}}</div>
-      {{/if}}
+        {{#unlessDepth 1}}
+        <section class="kss-depth-{{ refDepth }} kss-component">
+          <h3 id="{{ reference }}" class="kss-title">{{ header }} <span class="kss-ref">({{ reference }})</span></h3>
+        {{/unlessDepth}}
 
-      {{#if markup}}
-        <table class="kss-mod-list">
-          {{#if modifiers}}
-          <tr class="kss-mod-desc-group">
-            <td class="kss-mod-desc"><p>Default styling</p></td>
-            <td class="kss-mod-name"></td>
-          </tr>
-          {{/if}}
-          <tr class="kss-mod-example">
-            <td colspan="2">{{modifierMarkup}}</td>
-          </tr>
-        {{#eachModifier}}
-          <tr class="kss-mod-desc-group">
-            <td class="kss-mod-desc">{{{description}}}</td>
-            <td class="kss-mod-name"><p>{{name}}</p></td>
-          </tr>
-          <tr class="kss-mod-example">
-            <td colspan="2">{{modifierMarkup}}</td>
-          </tr>
-        {{/eachModifier}}
-        </table>
 
-        <div class="kss-markup">
-          <pre class="prettyprint lang-html">{{markup}}</pre>
-        </div>
-      {{/if}}
+        {{#if description}}
+          <div class="kss-description">{{{description}}}</div>
+        {{/if}}
 
-      {{#unlessDepth 1}}
-      </section>
-      {{/unlessDepth}}
-    {{/eachSection}}
-  {{/if}}
-  </article>
-</div>
+        {{#if markup}}
+          <h4>Examples:</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              {{#if modifiers}}
+              <div class="kss-example-details">
+                <div class="kss-example-desc">
+                  <h6>Default styling</h6>
+                </div>
+              </div>
+              {{/if}}
+              <div class="kss-example-preview">
+                {{modifierMarkup}}
+              </div>
+            </div>
+            {{#eachModifier}}
+              <div class="kss-example">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    {{{description}}}
+                  </div>
+                  <div class="kss-example-name">
+                    <p><code>{{name}}</code></p>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  {{modifierMarkup}}
+                </div>
+              </div>
+            {{/eachModifier}}
+          </div>
 
-{{#if argv.xdemo}}
-<footer>
-  <a href="https://github.com/kss-node/kss-node"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
-</footer>
-{{/if}}
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html">{{markup}}</pre>
+          </div>
+        {{/if}}
 
-<!-- SCRIPTS -->
-<script src="public/kss.js"></script>
-<script src="public/prettify.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-    var sidebarAdjust = function() {
-      // Match footer/body height
-      var height = Math.max($(window).height(), $('#kss-main').height());
+        {{#unlessDepth 1}}
+        </section>
+        {{/unlessDepth}}
+      {{/eachSection}}
+    {{/if}}
+    </article>
+  </div>
 
-      if ($(window).width() <= 768) {
-        $('#kss-main, #kss-nav').height('auto');
-      } else {
-        $('#kss-main, #kss-nav').height(height);
-      }
-    };
+  <footer class="kss-footer kss-clearfix">
+    <p>
+      © <a href="http://www.tableau.com" target="_blank">Tableau Software</a>. All Rights Reserved. <br>
+      Generated by <a href="https://github.com/kss-node/kss-node" target="_blank">kss-node</a>. 
+    </p>
+  </footer>
 
-    $(window).resize(sidebarAdjust);
-    $(window).scroll(sidebarAdjust);
-    sidebarAdjust();
-
-    // Ensure code blocks are highlighted properly...
-    $('pre>code').addClass('prettyprint');
-    prettyPrint();
-  });
-</script>
-
-{{! This won't be included in the demo page }}
-{{#if argv.xdemo}}
-  <script type="text/javascript">
-  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-  (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // Ensure code blocks are highlighted properly...
+      $('pre>code').addClass('prettyprint');
+      prettyPrint();
+    });
   </script>
-{{/if}}
 
-<script src="//localhost:35729/livereload.js"></script>
-
-</div></body>
+  <script src="//localhost:35729/livereload.js"></script>
+</body>
 </html>
