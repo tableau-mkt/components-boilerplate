@@ -1,6 +1,6 @@
 # Tableau SASS Satchel
 
-This repo contains many resuable SASS components that can be utilized on various
-web properties.
+A satchel to keep all our SASS goodies in (toolkit was taken).
 
-Shortly it will have it's very own automates styleguide!
+This repo contains resuable SASS components, mixins, and placeholders that can 
+be utilized on various web properties.
