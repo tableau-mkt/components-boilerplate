@@ -7,7 +7,7 @@ module.exports = (grunt) ->
 
       sass:
         files: ["sass/{,**/}*.{scss,sass}"]
-        tasks: ["compass"]
+        tasks: ["compass:dist"]
 
       css:
         files: ["css/{,**/}*.css"]
@@ -19,8 +19,15 @@ module.exports = (grunt) ->
           "!js/{,**/}*.min.js"
         ]
 
+      template:
+        files: [
+          "kss-template/index.html"
+          "kss-template/public/sass/*.{scss,sass}"
+        ]
+        tasks: ['shell:kss', 'compass:kss']
+
     compass:
-      dev:
+      dist:
         options:
           cssDir: "css"
           sassDir: "sass"
@@ -33,7 +40,15 @@ module.exports = (grunt) ->
           relativeAssets: true
           force: true
           sourcemap: true
-          environment: "development"
+          
+      kss:
+        options:
+          cssDir: "kss-template/public/css"
+          sassDir: "kss-template/public/sass"
+          require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
+          relativeAssets: true
+          force: true
+          sourcemap: true
 
     cmq:
       options:
@@ -55,6 +70,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-shell'
   grunt.registerTask 'build', [
     'compass:dist'
+    'compass:kss'
     'cmq:dist'
     'shell:kss'
   ]

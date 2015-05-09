@@ -12,8 +12,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-  <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body><div id="kss-wrapper">
@@ -22,10 +21,10 @@
   <header id="kss-header">
     <div class="logo">
       <a href="http://www.tableau.com" target="_blank">
-        <img src="public/images/logo.png" title="Tableau Software">
+        <img src="public/images/logo.png" width="200" title="Tableau Software">
       </a>
     </div>
-    <hgroup><h1>Tableau Style Components</h1></hgroup>
+    <hgroup><h1>Tableau Style Components TEST</h1></hgroup>
   </header>
   <aside>
     <nav><ul>
@@ -63,7 +62,7 @@
       <section class="kss-depth-{{ refDepth }}">
       {{/unlessDepth}}
 
-      <h1 class="kss-title"><span class="kss-ref">{{ reference }}{{#ifDepth 1}}.0{{/ifDepth}}</span> - {{ header }}</h1>
+      <h1 id="{{ reference }}" class="kss-title"><span class="kss-ref">{{ reference }}{{#ifDepth 1}}.0{{/ifDepth}}</span> - {{ header }}</h1>
 
       {{#if description}}
         <div class="kss-box">{{{description}}}</div>
@@ -144,6 +143,8 @@
   (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
   </script>
 {{/if}}
+
+<script src="//localhost:35729/livereload.js"></script>
 
 </div></body>
 </html>

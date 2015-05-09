@@ -1,17 +1,16 @@
-@import 'markdown';
 
 #kss-nav {
-	width:20%;
-	background-color:#eee;
+  width:20%;
+  background-color:#eee;
 
-	nav>ul {
-		padding:0;
-		margin:2em;
+  nav>ul {
+    padding:0;
+    margin:2em;
     margin-top:2.5em;
-		list-style-type:none;
-	}
+    list-style-type:none;
+  }
 
-	box-shadow: inset -15px 0px 15px -15px rgba(45, 45, 45, 0.25);
+  box-shadow: inset -15px 0px 15px -15px rgba(45, 45, 45, 0.25);
 }
 
 #kss-header h1 {
@@ -21,16 +20,16 @@
 }
 
 #kss-main, #kss-nav {
-	position:absolute;
-	top:0;
-	left:0;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 #kss-main {
-	padding-left:2.5%;
-	width:77.5%;
-	max-width:48em;
-	left:20%;
+  padding-left:2.5%;
+  width:77.5%;
+  max-width:48em;
+  left:20%;
 }
 
 .kss-mod-list {
