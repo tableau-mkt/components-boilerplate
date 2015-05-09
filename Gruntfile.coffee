@@ -11,7 +11,7 @@ module.exports = (grunt) ->
 
       css:
         files: ["css/{,**/}*.css"]
-        tasks: ["styleguide"]
+        tasks: ["shell:kss"]
 
       js:
         files: [
@@ -43,26 +43,22 @@ module.exports = (grunt) ->
         files:
           "css": ["css/*.css"]
 
-    styleguide:
-      options:
-        template:
-          src: 'assets/vendor/styleguide-template'
-        framework:
-          name: 'kss'
-          options:
-            includeType: 'sass'
-            includePath: 'css/styles.css'
-      all:
-        files: ['/styleguide': 'sass/**/*.scss']
+    shell:
+      kss:
+        command: 'kss-node sass styleguide --template kss-template --css css/style.css'
+
 
   grunt.loadNpmTasks 'grunt-combine-media-queries'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-styleguide'
+  grunt.loadNpmTasks 'grunt-shell'
   grunt.registerTask 'build', [
     'compass:dist'
     'cmq:dist'
-    'styleguide'
+    'shell:kss'
+  ]
+  grunt.registerTask 'styleguide', [
+    'shell:kss'
   ]
   return

@@ -1874,25 +1874,6 @@ Styleguide 7.3
     height: 250px;
   }
 }
-/* line 2, ../sass/components/_logo.scss */
-.logo {
-  padding: 5px 10px;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0.5em;
-}
-/* line 8, ../sass/components/_logo.scss */
-.logo.logo--box {
-  width: 120px;
-  height: 45px;
-  background: #fff;
-  border: 1px solid #aaa;
-}
-/* line 15, ../sass/components/_logo.scss */
-.logo img {
-  vertical-align: middle;
-}
-
 /*
 Main Menu
 
@@ -2953,6 +2934,352 @@ Styleguide 8.2
 /* line 154, ../sass/components/_teaser_list.scss */
 .teaser-list.teaser-list--full-width .teaser-list__title {
   margin: 0 0 0.5em;
+}
+
+/*
+Typography
+
+Styleguide 1
+*/
+/*
+Base Copy
+
+The base copy style across the site. The base typeface is Whitney which is 
+licensed and hosted by typography.com. Base font size is 16px.
+
+Markup:
+<p> 
+  Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
+</p>
+<p>
+  Cumque suscipit primis orci, egestas tempore, voluptatibus? Expedita soluta doloremque laoreet corporis. Earum itaque id per lorem minus est, quaerat dolor consectetur et magnis voluptatem! Quo vulputate? Quisque, magni, interdum tincidunt rutrum, quo, taciti? Porro, hic laudantium laborum? Id labore congue ipsam mauris adipiscing! Itaque! Gravida integer quae rem cras.
+</p>
+
+Styleguide 1.1
+ */
+/* line 23, ../sass/components/_typography.scss */
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  font-family: 'Gill Sans W01 Light';
+  color: #333;
+  line-height: 1.4;
+}
+
+/*
+Headings
+
+Used for title and prominent labels of content.
+
+Markup:
+<{$modifiers}>Heading {$modifiers} </{$modifiers}>
+
+h1 - First level heading. Reserved for page titles. 70px
+h2 - Second level heading. Used mostly for section titles. 22px
+h3 - Third level heading. 18px
+h4 - Fourth level heading. 16px
+h5 - Fifth level heading. 14px
+h6 - Sixth level heading. 12px
+
+Styleguide 1.2
+*/
+/* line 49, ../sass/components/_typography.scss */
+h1,
+.heading--h1,
+h2,
+.heading--h2,
+h3,
+.heading--h3,
+h4,
+.heading--h4,
+h5,
+.heading--h5,
+h6,
+.heading--h6 {
+  margin: .5em 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* line 66, ../sass/components/_typography.scss */
+h1,
+.heading--h1 {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+/* line 71, ../sass/components/_typography.scss */
+h2,
+.heading--h2 {
+  font-size: 1.33333em;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+/* line 77, ../sass/components/_typography.scss */
+h3,
+.heading--h3 {
+  font-size: 1.11111em;
+  line-height: 1.4;
+}
+
+/* line 82, ../sass/components/_typography.scss */
+h4,
+.heading--h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* line 88, ../sass/components/_typography.scss */
+h5,
+.heading--h5 {
+  font-size: 0.77778em;
+}
+
+/* line 92, ../sass/components/_typography.scss */
+h6,
+.heading--h6 {
+  font-size: 0.66667em;
+  line-height: 1.2;
+}
+
+/** 
+ * Links
+ */
+/* line 102, ../sass/components/_typography.scss */
+a {
+  text-decoration: none;
+  color: #7099a6;
+}
+/* line 105, ../sass/components/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/** 
+ * Paragraphs
+ */
+/*
+Formatted Text
+
+Markup:
+<p class="{$modifiers}">
+  This sentence is an example of formatted text.
+</p>
+
+.text-bold - Bold text for emphasis. Same as &lt;strong&gt;
+.text-light - Light text. Default for non-headings
+.text-italic - Italic text for emphasis. Same as &lt;em&gt;
+.text-caps - All caps text
+.text-right - Right justified text
+.text-left - Left justified text
+.text-centered - Center justified text
+.text-justified - Justified text
+.text-huge - Huge text - 48px
+.text-big - Big text - 32px
+.text-base-size - Base size text - 16px
+.text-small - Small text - 12px
+.text-tiny - Tiny text - 10px
+.text-white - Whitetext.
+.text-gray - Gray text.
+.text-dark-blue - Dark blue text.
+.text-teal - Teal text.
+.text-salmon - Salmon text.
+.text-bright-teal - Bright teal text.
+.text-green - Green text.
+.text-navy - Navy text.
+.text-light-gray - Light gray text.
+.text-lineheight-zero - Line height set to zero.
+
+Styleguide 1.3
+*/
+/* line 151, ../sass/components/_typography.scss */
+strong,
+.text-bold {
+  font-weight: normal;
+  font-family: "Gill Sans W04 Roman";
+}
+
+/* line 156, ../sass/components/_typography.scss */
+.text-light {
+  font-weight: 300;
+}
+
+/* line 159, ../sass/components/_typography.scss */
+em,
+.text-italic {
+  font-style: italic;
+}
+
+/* line 163, ../sass/components/_typography.scss */
+.text-caps {
+  text-transform: uppercase;
+}
+
+/* line 166, ../sass/components/_typography.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 169, ../sass/components/_typography.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 172, ../sass/components/_typography.scss */
+.text-centered {
+  text-align: center;
+}
+
+/* line 175, ../sass/components/_typography.scss */
+.text-justified {
+  text-align: justified;
+}
+
+/* line 178, ../sass/components/_typography.scss */
+.text-huge {
+  font-size: 3em;
+}
+
+/* line 181, ../sass/components/_typography.scss */
+.text-big {
+  font-size: 2em;
+}
+
+/* line 184, ../sass/components/_typography.scss */
+.text-base-size {
+  font-size: 18px;
+}
+
+/* line 187, ../sass/components/_typography.scss */
+.text-small {
+  font-size: 0.75em;
+}
+
+/* line 190, ../sass/components/_typography.scss */
+.text-tiny {
+  font-size: 0.63em;
+}
+
+/* Create a class for each theme color */
+/* line 195, ../sass/components/_typography.scss */
+.text-dark-blue {
+  color: #1f447d;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-teal {
+  color: #7099a6;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-salmon {
+  color: #e36e4d;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-bright-teal {
+  color: #7ebac3;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-green {
+  color: #588e3c;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-navy {
+  color: #283451;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-light-gray {
+  color: #f2f2f2;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-gray {
+  color: #999;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-dark-gray {
+  color: #333;
+}
+
+/* line 195, ../sass/components/_typography.scss */
+.text-white {
+  color: #fff;
+}
+
+/* line 199, ../sass/components/_typography.scss */
+.text-lineheight-zero {
+  line-height: 0;
+}
+
+/** 
+ * Icon Font
+ */
+/* Proportionately resize iframes. Add class to a wrapper around the iframe */
+/* line 2, ../sass/components/_util.scss */
+.iframe-4-3,
+.iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:3 */
+  height: 0;
+}
+
+/* line 8, ../sass/components/_util.scss */
+.iframe-4-3 iframe,
+.iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 16, ../sass/components/_util.scss */
+.iframe-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+}
+
+/* line 20, ../sass/components/_util.scss */
+.relative {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 25, ../sass/components/_util.scss */
+.absolute {
+  position: absolute;
+  overflow: hidden;
+}
+
+/* line 30, ../sass/components/_util.scss */
+.margin-zero {
+  margin: 0;
+}
+
+/* line 34, ../sass/components/_util.scss */
+.padding-zero {
+  padding: 0;
+}
+
+/* line 38, ../sass/components/_util.scss */
+.hide {
+  display: none;
+}
+
+@media (max-width: 739px) {
+  /* line 43, ../sass/components/_util.scss */
+  .mobile-hide {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

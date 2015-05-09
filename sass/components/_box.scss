@@ -72,7 +72,7 @@ Styleguide 3.4
 
 /* Create a class for each theme color */
 @each $name, $color in $theme-colors {
-  .box--#{$name} {
+  .box--#{"" + $name} {
     background-color: $color;
     color: $white;
   }

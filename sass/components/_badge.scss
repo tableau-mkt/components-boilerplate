@@ -89,7 +89,7 @@ Styleguide 3.3
   }
 
   @each $name, $color in $theme-colors {
-    &.badge--#{$name} {
+    &.badge--#{"" + $name} {
       background: $color;
       border-color: $color;
 

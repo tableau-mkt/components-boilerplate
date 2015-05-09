@@ -57,7 +57,7 @@ input[type=submit] {
   }
 
   @each $name, $color in $theme-colors {
-    &.cta-#{$name} {
+    &.cta-#{"" + $name} {
       border-color: $color;
       color: $color;
       &:hover,
