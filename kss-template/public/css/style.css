@@ -14,9 +14,9 @@ pre {
 /* line 15, ../sass/components/_code.scss */
 .kss-markup {
   padding: 1em;
-  border-radius: 3px;
   background: #333;
   font-size: 0.88em;
+  border-top: 1px solid #EC912D;
 }
 /* line 21, ../sass/components/_code.scss */
 .kss-markup pre {
