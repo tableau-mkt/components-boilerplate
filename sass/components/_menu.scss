@@ -4,7 +4,7 @@ Main Menu
 The main navigational menu for the site.
 
 Markup:
-<div class="l-menu box--green">
+<div class="l-menu box--dark-blue">
   <ul class="menu">
     <li class="first leaf active-trail"><a href="#">About</a></li>
     <li class="leaf"><a href="#">Content</a></li>
@@ -30,22 +30,9 @@ Styleguide 5.1
   // z-index: 10;
   width: 100%;
   padding: 1.4em 0;
-  background: $navy;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
   @include transition(padding .25s);
 
-  .logo-img {
-    height: 32px;
-
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  .block--delta-blocks-logo {
-    float: left;
-  }
 
   .menu {
     @extend %plain-list;
@@ -188,8 +175,4 @@ Styleguide 5.1
       display: none;
     }
   }
-}
-
-.admin-menu .l-menu {
-  margin-top: 29px;
 }

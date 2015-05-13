@@ -2,38 +2,39 @@
 Vertical Spacer
 
 Used to create vertical spacing between sections of content without just a stack
-of <code>&lt;br&gt;</code> tags. The examples here use an <code>&lt;hr&gt;</code>
-, but you can also use a <code>&lt;div&gt;</code>. The default spacing is 4em, 
-but you can use modifier classes to to 2em or 6em as well.
+of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
+classes to add 4em or 6em of spacingas well. These examples put a spacer between 
+two divs to dempnstrate the amount of space that will be added with each modifier.
 
 Markup:
-<div class="grid-6 box--padded box--green">
+<div class="grid-6 box__padded box--green">
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
 <hr class="spacer {$modifiers}">
-<div class="grid-6 box--padded box--white">
+<div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
 </div>
 
-.spacer--two - Spacer with 2em (32px) of space.
-.spacer--four - Spacer with 4em (64px) of space.
-.spacer--six - Spacer with 6em (96px) of space.
+.spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+.spacer--four - Spacer with 4em of space.
+.spacer--six - Spacer with 6em of space.
 
 Styleguide 3.6
 */
 .spacer {
   clear: both;
-  height: 4em;
+  height: 2em;
   margin: 0;
   padding: 0;
   border: 0;
 
-  &.spacer--two {
-    height: 2em;
+  &.spacer--four {
+    height: 4em;
   }
 
   &.spacer--six {

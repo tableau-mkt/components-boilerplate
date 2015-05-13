@@ -377,6 +377,23 @@ h6 {
    * SASS vars
    */
   /* No files to import found in ../../../sass/abstractions/**\/* */
+  /*
+  CSS Hexagon
+  
+  Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
+  hexagon to be as well as an optional border if you'd like the hexagon to be just
+   an outline rather thna a filled shape.
+  
+  Styleguide 10.5
+  */
+  /*
+  Mixins
+  
+  These mixins allow you to reuse common chunks of styles that woul would 
+  otherwise have to repeat multiple times throughout the SASS.
+  
+  Styleguide 10.0
+  */
   /**
    * Mixins
    *
@@ -397,6 +414,27 @@ h6 {
    * causes issues for keyboard only or voice recognition users. "!important" is
    * used to prevent unintentional overrides.
    */
+  /*
+  EM converter
+  
+  Converts a unit to ems based on either the base font-size or a given context.
+  For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+  base font-size of 16px.
+  
+  Markup:
+  .test {
+    font-size: em(56px, 16px); // results in 3.5em
+  }
+  
+  Styleguide 9.1
+  */
+  /*
+  Functions
+  
+  Helpful functions that can save time and make things easier.
+  
+  Styleguide 9.0
+  */
   /**
    * Convenience functions
    */
@@ -445,26 +483,26 @@ h6 {
   
   Markup:
   <div class="badge {$modifiers}">
-    <div class="badge--content">
+    <div class="badge__content">
       <h2>
-       Tableau<br> 
-        Foundation
+        Example<br> 
+        Badge
       </h2>
-      <h1>2012</h1>
-      <h5>Big Hearts · Great Minds</h5>
-      <h6>Seattle</h6>
+      <h1>Number</h1>
+      <h5>Some details and stuff</h5>
+      <h6>Something Else</h6>
     </div>
   </div>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <div class="badge badge--outlined {$modifiers}">
-    <div class="badge--content">
+    <div class="badge__content">
       <h2>
-       Tableau<br> 
-        Foundation
+        Example<br> 
+        Badge
       </h2>
-      <h1>2012</h1>
-      <h5>Big Hearts · Great Minds</h5>
-      <h6>Seattle</h6>
+      <h1>Number</h1>
+      <h5>Some details and stuff</h5>
+      <h6>Something Else</h6>
     </div>
   </div>
   
@@ -478,7 +516,6 @@ h6 {
   .badge--gray - Gray colored badge
   .badge--dark-gray - Dark gray colored badge
   .badge--white - White colored badge for colored backgrounds
-  .badge--big - Large version of the badge
   
   Styleguide 3.3
    */
@@ -497,16 +534,17 @@ h6 {
   padded box on a container with a background color.
   
   Markup: 
-  <div class="box--padded {$modifiers} box--teal">
-    <h3>A box with some nice padding</h3>
+  <div class="box__padded {$modifiers} box--teal">
+    <h4>A box with some nice padding</h4>
     <p>
       Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
     </p>
   </div>
   
-  .box--padded--one - A box with 1em (16px) of padding
-  .box--padded--two - <strong>(Default)</strong> A box with 2em (32px) of padding
-  .box--padded--three - A box with 3em (48px) of padding
+  .box__padded--one - A box with 1em of padding
+  .box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+  .box__padded--three - A box with 3em of padding
+  .box__padded--four - A box with 4em of padding
   
   Styleguide 3.1
   */
@@ -515,11 +553,11 @@ h6 {
   
   These classes will apply a background to any container div. It does not apply
   any other styles, except the background-color and a text color if needed for 
-  legibility. <code>.grid-6</code> and <code>.box--padded</code> are used here
+  legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
   just to make the examples look better.
   
   Markup:
-  <div class="{$modifiers} grid-6 box--padded">
+  <div class="{$modifiers} grid-6 box__padded">
     <p>
       This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
     </p>
@@ -580,8 +618,7 @@ h6 {
   /* 
   CTA
   
-  A call to action button that links to something important. The default color is
-  dark blue.
+  A call to action button that links to something important.
   
   Markup:
   <p>
@@ -589,16 +626,16 @@ h6 {
     <a class="cta {$modifiers}" href="#">▶ Play A Video</a>
   </p>
   
-  .cta-dark-blue - A dark blue version of the CTA.
-  .cta-teal - A teal version of the CTA.
-  .cta-salmon - A lighter salmon version of the CTA.
-  .cta-bright-teal - A bright teal version of the CTA.
-  .cta-green - A green version of the CTA.
-  .cta-navy - A navy version of the CTA.
-  .cta-light-gray - A light gray version of the CTA.
-  .cta-gray - A gray version of the CTA.
-  .cta-dark-gray - A dark gray version of the CTA.
-  .cta-white - A white version of the CTA for use on colored backgrounds.
+  .cta--dark-blue - <strong>[Default]</strong> A dark blue version of the CTA.
+  .cta--teal - A teal version of the CTA.
+  .cta--salmon - A lighter salmon version of the CTA.
+  .cta--bright-teal - A bright teal version of the CTA.
+  .cta--green - A green version of the CTA.
+  .cta--navy - A navy version of the CTA.
+  .cta--light-gray - A light gray version of the CTA.
+  .cta--gray - A gray version of the CTA.
+  .cta--dark-gray - A dark gray version of the CTA.
+  .cta--white - A white version of the CTA for use on colored backgrounds.
   
   Styleguide 2.1
   */
@@ -679,7 +716,7 @@ h6 {
   The main navigational menu for the site.
   
   Markup:
-  <div class="l-menu box--green">
+  <div class="l-menu box--dark-blue">
     <ul class="menu">
       <li class="first leaf active-trail"><a href="#">About</a></li>
       <li class="leaf"><a href="#">Content</a></li>
@@ -725,7 +762,7 @@ h6 {
     <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
   </p>
   <div class="reveal--content" id="content-wrapper">
-    <div class="box--yellow box--padded">
+    <div class="box--yellow box__padded">
       <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
       <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
     </div>
@@ -761,26 +798,27 @@ h6 {
   Vertical Spacer
   
   Used to create vertical spacing between sections of content without just a stack
-  of <code>&lt;br&gt;</code> tags. The examples here use an <code>&lt;hr&gt;</code>
-  , but you can also use a <code>&lt;div&gt;</code>. The default spacing is 4em, 
-  but you can use modifier classes to to 2em or 6em as well.
+  of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+  (<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
+  classes to add 4em or 6em of spacingas well. These examples put a spacer between 
+  two divs to dempnstrate the amount of space that will be added with each modifier.
   
   Markup:
-  <div class="grid-6 box--padded box--green">
+  <div class="grid-6 box__padded box--green">
     <p>
       Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
     </p>
   </div>
   <hr class="spacer {$modifiers}">
-  <div class="grid-6 box--padded box--white">
+  <div class="grid-6 box__padded box--white">
     <p>
       Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
     </p>
   </div>
   
-  .spacer--two - Spacer with 2em (32px) of space.
-  .spacer--four - Spacer with 4em (64px) of space.
-  .spacer--six - Spacer with 6em (96px) of space.
+  .spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+  .spacer--four - Spacer with 4em of space.
+  .spacer--six - Spacer with 6em of space.
   
   Styleguide 3.6
   */
@@ -793,7 +831,7 @@ h6 {
   Markup:
   <div class="grid-3">
     <div class="sticky {$modifiers}">
-      <div class="box--green box--padded box--padded--one">
+      <div class="box--green box__padded box__padded--one">
         <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
       </div>
     </div>
@@ -942,12 +980,12 @@ h6 {
   Markup:
   <{$modifiers}>Heading {$modifiers} </{$modifiers}>
   
-  h1 - First level heading. Reserved for page titles. 70px
-  h2 - Second level heading. Used mostly for section titles. 22px
-  h3 - Third level heading. 18px
-  h4 - Fourth level heading. 16px
-  h5 - Fifth level heading. 14px
-  h6 - Sixth level heading. 12px
+  h1 - First level heading. Reserved for page titles. 3em
+  h2 - Second level heading. Used mostly for section titles. 2.5em
+  h3 - Third level heading. 2em
+  h4 - Fourth level heading. 1.5em
+  h5 - Fifth level heading. 1.25em
+  h6 - Sixth level heading. 1em
   
   Styleguide 1.2
   */
@@ -965,29 +1003,29 @@ h6 {
     This sentence is an example of formatted text.
   </p>
   
-  .text-bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
-  .text-light - Light text. Default for non-headings
-  .text-italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
-  .text-caps - All caps text
-  .text-right - Right justified text
-  .text-left - Left justified text
-  .text-centered - Center justified text
-  .text-justified - Justified text
-  .text-huge - Huge text - 48px
-  .text-big - Big text - 32px
-  .text-base-size - Base size text - 16px
-  .text-small - Small text - 12px
-  .text-tiny - Tiny text - 10px
-  .text-white - Whitetext.
-  .text-gray - Gray text.
-  .text-dark-blue - Dark blue text.
-  .text-teal - Teal text.
-  .text-salmon - Salmon text.
-  .text-bright-teal - Bright teal text.
-  .text-green - Green text.
-  .text-navy - Navy text.
-  .text-light-gray - Light gray text.
-  .text-lineheight-zero - Line height set to zero.
+  .text--bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
+  .text--light - Light text. Default for non-headings
+  .text--italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
+  .text--caps - All caps text
+  .text--right - Right justified text
+  .text--left - Left justified text
+  .text--centered - Center justified text
+  .text--justified - Justified text
+  .text--huge - Huge text - 48px
+  .text--big - Big text - 32px
+  .text--base-size - Base size text - 16px
+  .text--small - Small text - 12px
+  .text--tiny - Tiny text - 10px
+  .text--white - Whitetext.
+  .text--gray - Gray text.
+  .text--dark-blue - Dark blue text.
+  .text--teal - Teal text.
+  .text--salmon - Salmon text.
+  .text--bright-teal - Bright teal text.
+  .text--green - Green text.
+  .text--navy - Navy text.
+  .text--light-gray - Light gray text.
+  .text--lineheight-zero - Line height set to zero.
   
   Styleguide 1.3
   */
@@ -1081,224 +1119,200 @@ h6 {
     top: -49px;
   }
 }
-/* line 46, ../../../sass/components/_badge.scss */
+/* line 45, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge {
   width: 200px;
   height: 200px;
   display: inline-block;
-  padding: 30px 20px;
+  padding: 20px;
   background: #1f447d;
   border: 3px solid #1f447d;
   color: #fff;
   border-radius: 50%;
   text-align: center;
+  font-size: 0.7em;
 }
-/* line 57, ../../../sass/components/_badge.scss */
-.kss-example-preview .badge h1 {
-  margin: .2em 0;
-  font-weight: 100;
-  opacity: .8;
-}
-/* line 63, ../../../sass/components/_badge.scss */
-.kss-example-preview .badge h2 {
-  margin: .3em 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1em;
-}
-/* line 70, ../../../sass/components/_badge.scss */
-.kss-example-preview .badge h6 {
-  opacity: .8;
-  text-transform: uppercase;
-}
-/* line 75, ../../../sass/components/_badge.scss */
-.kss-example-preview .badge p {
-  color: #999;
-}
-/* line 79, ../../../sass/components/_badge.scss */
-.kss-example-preview .badge.badge--big {
-  width: 250px;
-  height: 250px;
-  padding: 50px;
-  border-width: 4px;
-}
-/* line 86, ../../../sass/components/_badge.scss */
+/* line 58, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--outlined {
   background: none;
   color: #1f447d;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--dark-blue {
   background: #1f447d;
   border-color: #1f447d;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--dark-blue.badge--outlined {
   background: none;
   color: #1f447d;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--teal {
   background: #7099a6;
   border-color: #7099a6;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--teal.badge--outlined {
   background: none;
   color: #7099a6;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--salmon {
   background: #e36e4d;
   border-color: #e36e4d;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--salmon.badge--outlined {
   background: none;
   color: #e36e4d;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--bright-teal {
   background: #7ebac3;
   border-color: #7ebac3;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--bright-teal.badge--outlined {
   background: none;
   color: #7ebac3;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--green {
   background: #588e3c;
   border-color: #588e3c;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--green.badge--outlined {
   background: none;
   color: #588e3c;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--navy {
   background: #283451;
   border-color: #283451;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--navy.badge--outlined {
   background: none;
   color: #283451;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--light-gray {
   background: #f2f2f2;
   border-color: #f2f2f2;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--light-gray.badge--outlined {
   background: none;
   color: #f2f2f2;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--gray {
   background: #999;
   border-color: #999;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--gray.badge--outlined {
   background: none;
   color: #999;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray {
   background: #333;
   border-color: #333;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray.badge--outlined {
   background: none;
   color: #333;
 }
-/* line 92, ../../../sass/components/_badge.scss */
+/* line 64, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--white {
   background: #fff;
   border-color: #fff;
 }
-/* line 96, ../../../sass/components/_badge.scss */
+/* line 68, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--white.badge--outlined {
   background: none;
   color: #fff;
 }
-/* line 103, ../../../sass/components/_badge.scss */
+/* line 75, ../../../sass/components/_badge.scss */
 .kss-example-preview .badge.badge--light-gray, .kss-example-preview .badge.badge--white {
   color: #1f447d;
 }
-/* line 31, ../../../sass/components/_box.scss */
-.kss-example-preview .box--padded {
+/* line 32, ../../../sass/components/_box.scss */
+.kss-example-preview .box__padded {
   padding: 2em;
 }
-/* line 34, ../../../sass/components/_box.scss */
-.kss-example-preview .box--padded.box--padded--one {
+/* line 35, ../../../sass/components/_box.scss */
+.kss-example-preview .box__padded.box__padded--one {
   padding: 1em;
 }
-/* line 38, ../../../sass/components/_box.scss */
-.kss-example-preview .box--padded.box--padded--three {
+/* line 39, ../../../sass/components/_box.scss */
+.kss-example-preview .box__padded.box__padded--three {
   padding: 3em;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 43, ../../../sass/components/_box.scss */
+.kss-example-preview .box__padded.box__padded--four {
+  padding: 3em;
+}
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--dark-blue {
   background-color: #1f447d;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--teal {
   background-color: #7099a6;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--salmon {
   background-color: #e36e4d;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--bright-teal {
   background-color: #7ebac3;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--green {
   background-color: #588e3c;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--navy {
   background-color: #283451;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--light-gray {
   background-color: #f2f2f2;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--gray {
   background-color: #999;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--dark-gray {
   background-color: #333;
   color: #fff;
 }
-/* line 75, ../../../sass/components/_box.scss */
+/* line 80, ../../../sass/components/_box.scss */
 .kss-example-preview .box--white {
   background-color: #fff;
   color: #fff;
 }
-/* line 82, ../../../sass/components/_box.scss */
+/* line 87, ../../../sass/components/_box.scss */
 .kss-example-preview .box--light-gray,
 .kss-example-preview .box--white {
   color: #333;
 }
-/* line 87, ../../../sass/components/_box.scss */
+/* line 92, ../../../sass/components/_box.scss */
 .kss-example-preview .box--teal a,
 .kss-example-preview .box--salmon a,
 .kss-example-preview .box--bright-teal a,
@@ -1306,7 +1320,7 @@ h6 {
 .kss-example-preview .box--gray a {
   color: #1f447d;
 }
-/* line 128, ../../../sass/components/_box.scss */
+/* line 133, ../../../sass/components/_box.scss */
 .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
@@ -1314,34 +1328,34 @@ h6 {
   width: 100%;
 }
 @media (min-width: 740px) {
-  /* line 140, ../../../sass/components/_box.scss */
+  /* line 145, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 148, ../../../sass/components/_box.scss */
+  /* line 153, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  /* line 155, ../../../sass/components/_box.scss */
+  /* line 160, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--thirds {
     width: 33.33333%;
   }
-  /* line 159, ../../../sass/components/_box.scss */
+  /* line 164, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 163, ../../../sass/components/_box.scss */
+  /* line 168, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 167, ../../../sass/components/_box.scss */
+  /* line 172, ../../../sass/components/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 16.66667%;
   }
 }
-/* line 34, ../../../sass/components/_cta.scss */
+/* line 33, ../../../sass/components/_cta.scss */
 .kss-example-preview .cta,
 .kss-example-preview input[type=submit] {
   display: inline-block;
@@ -1353,7 +1367,6 @@ h6 {
   -webkit-appearance: none;
   cursor: pointer;
   font-size: 12px;
-  font-family: 'Gill Sans W04 Roman';
   letter-spacing: 1px;
   line-height: 1.6;
   color: #1f447d;
@@ -1363,7 +1376,7 @@ h6 {
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 52, ../../../sass/components/_cta.scss */
+/* line 50, ../../../sass/components/_cta.scss */
 .kss-example-preview .cta:hover, .kss-example-preview .cta:focus,
 .kss-example-preview input[type=submit]:hover,
 .kss-example-preview input[type=submit]:focus {
@@ -1371,140 +1384,140 @@ h6 {
   color: #fff;
   text-decoration: none;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-dark-blue,
-.kss-example-preview input[type=submit].cta-dark-blue {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--dark-blue,
+.kss-example-preview input[type=submit].cta--dark-blue {
   border-color: #1f447d;
   color: #1f447d;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-dark-blue:hover, .kss-example-preview .cta.cta-dark-blue:focus,
-.kss-example-preview input[type=submit].cta-dark-blue:hover,
-.kss-example-preview input[type=submit].cta-dark-blue:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--dark-blue:hover, .kss-example-preview .cta.cta--dark-blue:focus,
+.kss-example-preview input[type=submit].cta--dark-blue:hover,
+.kss-example-preview input[type=submit].cta--dark-blue:focus {
   background-color: #1f447d;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-teal,
-.kss-example-preview input[type=submit].cta-teal {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--teal,
+.kss-example-preview input[type=submit].cta--teal {
   border-color: #7099a6;
   color: #7099a6;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-teal:hover, .kss-example-preview .cta.cta-teal:focus,
-.kss-example-preview input[type=submit].cta-teal:hover,
-.kss-example-preview input[type=submit].cta-teal:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--teal:hover, .kss-example-preview .cta.cta--teal:focus,
+.kss-example-preview input[type=submit].cta--teal:hover,
+.kss-example-preview input[type=submit].cta--teal:focus {
   background-color: #7099a6;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-salmon,
-.kss-example-preview input[type=submit].cta-salmon {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--salmon,
+.kss-example-preview input[type=submit].cta--salmon {
   border-color: #e36e4d;
   color: #e36e4d;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-salmon:hover, .kss-example-preview .cta.cta-salmon:focus,
-.kss-example-preview input[type=submit].cta-salmon:hover,
-.kss-example-preview input[type=submit].cta-salmon:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--salmon:hover, .kss-example-preview .cta.cta--salmon:focus,
+.kss-example-preview input[type=submit].cta--salmon:hover,
+.kss-example-preview input[type=submit].cta--salmon:focus {
   background-color: #e36e4d;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-bright-teal,
-.kss-example-preview input[type=submit].cta-bright-teal {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--bright-teal,
+.kss-example-preview input[type=submit].cta--bright-teal {
   border-color: #7ebac3;
   color: #7ebac3;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-bright-teal:hover, .kss-example-preview .cta.cta-bright-teal:focus,
-.kss-example-preview input[type=submit].cta-bright-teal:hover,
-.kss-example-preview input[type=submit].cta-bright-teal:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--bright-teal:hover, .kss-example-preview .cta.cta--bright-teal:focus,
+.kss-example-preview input[type=submit].cta--bright-teal:hover,
+.kss-example-preview input[type=submit].cta--bright-teal:focus {
   background-color: #7ebac3;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-green,
-.kss-example-preview input[type=submit].cta-green {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--green,
+.kss-example-preview input[type=submit].cta--green {
   border-color: #588e3c;
   color: #588e3c;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-green:hover, .kss-example-preview .cta.cta-green:focus,
-.kss-example-preview input[type=submit].cta-green:hover,
-.kss-example-preview input[type=submit].cta-green:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--green:hover, .kss-example-preview .cta.cta--green:focus,
+.kss-example-preview input[type=submit].cta--green:hover,
+.kss-example-preview input[type=submit].cta--green:focus {
   background-color: #588e3c;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-navy,
-.kss-example-preview input[type=submit].cta-navy {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--navy,
+.kss-example-preview input[type=submit].cta--navy {
   border-color: #283451;
   color: #283451;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-navy:hover, .kss-example-preview .cta.cta-navy:focus,
-.kss-example-preview input[type=submit].cta-navy:hover,
-.kss-example-preview input[type=submit].cta-navy:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--navy:hover, .kss-example-preview .cta.cta--navy:focus,
+.kss-example-preview input[type=submit].cta--navy:hover,
+.kss-example-preview input[type=submit].cta--navy:focus {
   background-color: #283451;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-light-gray,
-.kss-example-preview input[type=submit].cta-light-gray {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--light-gray,
+.kss-example-preview input[type=submit].cta--light-gray {
   border-color: #f2f2f2;
   color: #f2f2f2;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-light-gray:hover, .kss-example-preview .cta.cta-light-gray:focus,
-.kss-example-preview input[type=submit].cta-light-gray:hover,
-.kss-example-preview input[type=submit].cta-light-gray:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--light-gray:hover, .kss-example-preview .cta.cta--light-gray:focus,
+.kss-example-preview input[type=submit].cta--light-gray:hover,
+.kss-example-preview input[type=submit].cta--light-gray:focus {
   background-color: #f2f2f2;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-gray,
-.kss-example-preview input[type=submit].cta-gray {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--gray,
+.kss-example-preview input[type=submit].cta--gray {
   border-color: #999;
   color: #999;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-gray:hover, .kss-example-preview .cta.cta-gray:focus,
-.kss-example-preview input[type=submit].cta-gray:hover,
-.kss-example-preview input[type=submit].cta-gray:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--gray:hover, .kss-example-preview .cta.cta--gray:focus,
+.kss-example-preview input[type=submit].cta--gray:hover,
+.kss-example-preview input[type=submit].cta--gray:focus {
   background-color: #999;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-dark-gray,
-.kss-example-preview input[type=submit].cta-dark-gray {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--dark-gray,
+.kss-example-preview input[type=submit].cta--dark-gray {
   border-color: #333;
   color: #333;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-dark-gray:hover, .kss-example-preview .cta.cta-dark-gray:focus,
-.kss-example-preview input[type=submit].cta-dark-gray:hover,
-.kss-example-preview input[type=submit].cta-dark-gray:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--dark-gray:hover, .kss-example-preview .cta.cta--dark-gray:focus,
+.kss-example-preview input[type=submit].cta--dark-gray:hover,
+.kss-example-preview input[type=submit].cta--dark-gray:focus {
   background-color: #333;
   color: #fff;
 }
-/* line 60, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-white,
-.kss-example-preview input[type=submit].cta-white {
+/* line 58, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--white,
+.kss-example-preview input[type=submit].cta--white {
   border-color: #fff;
   color: #fff;
 }
-/* line 63, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-white:hover, .kss-example-preview .cta.cta-white:focus,
-.kss-example-preview input[type=submit].cta-white:hover,
-.kss-example-preview input[type=submit].cta-white:focus {
+/* line 61, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--white:hover, .kss-example-preview .cta.cta--white:focus,
+.kss-example-preview input[type=submit].cta--white:hover,
+.kss-example-preview input[type=submit].cta--white:focus {
   background-color: #fff;
   color: #fff;
 }
-/* line 71, ../../../sass/components/_cta.scss */
-.kss-example-preview .cta.cta-white:hover, .kss-example-preview .cta.cta-white:focus,
-.kss-example-preview input[type=submit].cta-white:hover,
-.kss-example-preview input[type=submit].cta-white:focus {
+/* line 69, ../../../sass/components/_cta.scss */
+.kss-example-preview .cta.cta--white:hover, .kss-example-preview .cta.cta--white:focus,
+.kss-example-preview input[type=submit].cta--white:hover,
+.kss-example-preview input[type=submit].cta--white:focus {
   color: #7099a6;
 }
 /* line 1, ../../../sass/components/_footer.scss */
@@ -2432,7 +2445,6 @@ h6 {
 .kss-example-preview .l-menu {
   width: 100%;
   padding: 1.4em 0;
-  background: #283451;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-transition: padding 0.25s;
   -moz-transition: padding 0.25s;
@@ -2440,29 +2452,16 @@ h6 {
   transition: padding 0.25s;
 }
 /* line 37, ../../../sass/components/_menu.scss */
-.kss-example-preview .l-menu .logo-img {
-  height: 32px;
-}
-/* line 40, ../../../sass/components/_menu.scss */
-.kss-example-preview .l-menu .logo-img img {
-  height: 100%;
-  width: auto;
-}
-/* line 46, ../../../sass/components/_menu.scss */
-.kss-example-preview .l-menu .block--delta-blocks-logo {
-  float: left;
-}
-/* line 50, ../../../sass/components/_menu.scss */
 .kss-example-preview .l-menu .menu {
   margin: 0;
   padding-top: 5px;
   text-align: right;
 }
-/* line 56, ../../../sass/components/_menu.scss */
+/* line 43, ../../../sass/components/_menu.scss */
 .kss-example-preview .l-menu .menu li {
   display: inline-block;
 }
-/* line 59, ../../../sass/components/_menu.scss */
+/* line 46, ../../../sass/components/_menu.scss */
 .kss-example-preview .l-menu .menu li a {
   padding: 6px 0;
   color: #fff;
@@ -2474,19 +2473,19 @@ h6 {
   -o-transition: border 0.25s;
   transition: border 0.25s;
 }
-/* line 68, ../../../sass/components/_menu.scss */
+/* line 55, ../../../sass/components/_menu.scss */
 .kss-example-preview .l-menu .menu li a:hover, .kss-example-preview .l-menu .menu li.active-trail a {
   border-bottom-color: #fff;
   text-decoration: none;
 }
 @media (min-width: 740px) {
-  /* line 56, ../../../sass/components/_menu.scss */
+  /* line 43, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu li {
     padding: 0 10px;
   }
 }
 @media (min-width: 980px) {
-  /* line 56, ../../../sass/components/_menu.scss */
+  /* line 43, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu li {
     padding: 0 20px;
   }
@@ -2498,11 +2497,11 @@ h6 {
     background: #283451;
     max-height: 49px;
   }
-  /* line 92, ../../../sass/components/_menu.scss */
+  /* line 79, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .logo-img {
     height: 25px;
   }
-  /* line 96, ../../../sass/components/_menu.scss */
+  /* line 83, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .block--menu {
     display: none;
     position: absolute;
@@ -2513,7 +2512,7 @@ h6 {
     z-index: -1;
     background-color: rgba(40, 52, 81, 0.9);
   }
-  /* line 106, ../../../sass/components/_menu.scss */
+  /* line 93, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .block--menu:before {
     content: "";
     position: absolute;
@@ -2521,18 +2520,18 @@ h6 {
     height: 49px;
     background: #283451;
   }
-  /* line 114, ../../../sass/components/_menu.scss */
+  /* line 101, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .block--menu .menu {
     height: 100vh;
     padding-top: 49px;
     overflow-y: auto;
     text-align: left;
   }
-  /* line 121, ../../../sass/components/_menu.scss */
+  /* line 108, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .block--menu li {
     display: block;
   }
-  /* line 124, ../../../sass/components/_menu.scss */
+  /* line 111, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .block--menu li a, .kss-example-preview .l-menu .block--menu li.active-trail a,
   .kss-example-preview .l-menu .block--menu li a.cta {
     margin: 0;
@@ -2542,7 +2541,7 @@ h6 {
     border-bottom: 1px solid #7099a6;
     font-size: 1.5em;
   }
-  /* line 137, ../../../sass/components/_menu.scss */
+  /* line 124, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle {
     position: relative;
     display: block;
@@ -2551,7 +2550,7 @@ h6 {
     width: 25px;
     height: 25px;
   }
-  /* line 145, ../../../sass/components/_menu.scss */
+  /* line 132, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle span,
   .kss-example-preview .l-menu .menu--mobile-toggle span:before,
   .kss-example-preview .l-menu .menu--mobile-toggle span:after {
@@ -2565,38 +2564,38 @@ h6 {
     -o-transition: all 0.5s;
     transition: all 0.5s;
   }
-  /* line 156, ../../../sass/components/_menu.scss */
+  /* line 143, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle span:before,
   .kss-example-preview .l-menu .menu--mobile-toggle span:after {
     content: '';
   }
-  /* line 160, ../../../sass/components/_menu.scss */
+  /* line 147, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle span {
     top: 10px;
   }
-  /* line 163, ../../../sass/components/_menu.scss */
+  /* line 150, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle span:before {
     top: -10px;
   }
-  /* line 166, ../../../sass/components/_menu.scss */
+  /* line 153, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle span:after {
     top: 10px;
   }
-  /* line 170, ../../../sass/components/_menu.scss */
+  /* line 157, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle.open span {
     background-color: transparent;
   }
-  /* line 173, ../../../sass/components/_menu.scss */
+  /* line 160, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle.open span:before, .kss-example-preview .l-menu .menu--mobile-toggle.open span:after {
     top: 0;
   }
-  /* line 177, ../../../sass/components/_menu.scss */
+  /* line 164, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle.open span:before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  /* line 180, ../../../sass/components/_menu.scss */
+  /* line 167, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle.open span:after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -2604,14 +2603,10 @@ h6 {
   }
 }
 @media (min-width: 740px) {
-  /* line 187, ../../../sass/components/_menu.scss */
+  /* line 174, ../../../sass/components/_menu.scss */
   .kss-example-preview .l-menu .menu--mobile-toggle {
     display: none;
   }
-}
-/* line 193, ../../../sass/components/_menu.scss */
-.kss-example-preview .admin-menu .l-menu {
-  margin-top: 29px;
 }
 /* line 1, ../../../sass/components/_page_control.scss */
 .kss-example-preview .block--delta-blocks-tabs {
@@ -2986,19 +2981,19 @@ h6 {
 .kss-example-preview .slideshow--dots--inset .slick-slider .slick-dots li button:before {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
-/* line 28, ../../../sass/components/_spacer.scss */
+/* line 29, ../../../sass/components/_spacer.scss */
 .kss-example-preview .spacer {
   clear: both;
-  height: 4em;
+  height: 2em;
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 35, ../../../sass/components/_spacer.scss */
-.kss-example-preview .spacer.spacer--two {
-  height: 2em;
+/* line 36, ../../../sass/components/_spacer.scss */
+.kss-example-preview .spacer.spacer--four {
+  height: 4em;
 }
-/* line 39, ../../../sass/components/_spacer.scss */
+/* line 40, ../../../sass/components/_spacer.scss */
 .kss-example-preview .spacer.spacer--six {
   height: 6em;
 }
@@ -3198,14 +3193,14 @@ h6 {
 }
 /* line 23, ../../../sass/components/_typography.scss */
 .kss-example-preview body {
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  font-family: 'Gill Sans W01 Light';
+  font-family: 'Gill Sans W01 Light', Arial, Helvetica, sans-serif;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.6;
 }
-/* line 49, ../../../sass/components/_typography.scss */
+/* line 50, ../../../sass/components/_typography.scss */
 .kss-example-preview h1,
 .kss-example-preview .heading--h1,
 .kss-example-preview h2,
@@ -3222,149 +3217,140 @@ h6 {
   font-weight: 900;
   line-height: 1;
 }
-/* line 66, ../../../sass/components/_typography.scss */
+/* line 67, ../../../sass/components/_typography.scss */
 .kss-example-preview h1,
 .kss-example-preview .heading--h1 {
-  font-size: 2.25em;
-  font-weight: 100;
+  font-size: 3em;
 }
 /* line 71, ../../../sass/components/_typography.scss */
 .kss-example-preview h2,
 .kss-example-preview .heading--h2 {
-  font-size: 1.5em;
-  font-weight: 100;
-  line-height: 1.2;
+  font-size: 2.5em;
 }
-/* line 77, ../../../sass/components/_typography.scss */
+/* line 75, ../../../sass/components/_typography.scss */
 .kss-example-preview h3,
 .kss-example-preview .heading--h3 {
-  font-size: 1.25em;
-  line-height: 1.4;
+  font-size: 2em;
 }
-/* line 82, ../../../sass/components/_typography.scss */
+/* line 79, ../../../sass/components/_typography.scss */
 .kss-example-preview h4,
 .kss-example-preview .heading--h4 {
-  font-size: 1.125em;
-  text-transform: uppercase;
-  line-height: 1.6;
+  font-size: 1.5em;
 }
-/* line 88, ../../../sass/components/_typography.scss */
+/* line 83, ../../../sass/components/_typography.scss */
 .kss-example-preview h5,
 .kss-example-preview .heading--h5 {
-  font-size: 0.875em;
+  font-size: 1.25em;
 }
-/* line 92, ../../../sass/components/_typography.scss */
+/* line 87, ../../../sass/components/_typography.scss */
 .kss-example-preview h6,
 .kss-example-preview .heading--h6 {
-  font-size: 0.75em;
-  line-height: 1.2;
+  font-size: 1em;
 }
-/* line 102, ../../../sass/components/_typography.scss */
+/* line 96, ../../../sass/components/_typography.scss */
 .kss-example-preview a {
   text-decoration: none;
-  color: #7099a6;
 }
-/* line 105, ../../../sass/components/_typography.scss */
+/* line 99, ../../../sass/components/_typography.scss */
 .kss-example-preview a:hover {
   text-decoration: underline;
 }
-/* line 151, ../../../sass/components/_typography.scss */
+/* line 145, ../../../sass/components/_typography.scss */
 .kss-example-preview strong,
-.kss-example-preview .text-bold {
-  font-weight: normal;
-  font-family: "Gill Sans W04 Roman";
+.kss-example-preview .text--bold {
+  font-weight: bold;
 }
-/* line 156, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-light {
-  font-weight: 300;
+/* line 149, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--light {
+  font-weight: 100;
 }
-/* line 159, ../../../sass/components/_typography.scss */
+/* line 152, ../../../sass/components/_typography.scss */
 .kss-example-preview em,
-.kss-example-preview .text-italic {
+.kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 163, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-caps {
+/* line 156, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 166, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-left {
+/* line 159, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--left {
   text-align: left;
 }
-/* line 169, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-right {
+/* line 162, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--right {
   text-align: right;
 }
-/* line 172, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-centered {
+/* line 165, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 175, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-justified {
+/* line 168, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 178, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-huge {
+/* line 171, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--huge {
   font-size: 3em;
 }
-/* line 181, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-big {
+/* line 174, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--big {
   font-size: 2em;
 }
-/* line 184, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-base-size {
+/* line 177, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--base-size {
   font-size: 16px;
 }
-/* line 187, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-small {
+/* line 180, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--small {
   font-size: 0.75em;
 }
-/* line 190, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-tiny {
+/* line 183, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--tiny {
   font-size: 0.63em;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-dark-blue {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--dark-blue {
   color: #1f447d;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-teal {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--teal {
   color: #7099a6;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-salmon {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--salmon {
   color: #e36e4d;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-bright-teal {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--bright-teal {
   color: #7ebac3;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-green {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--green {
   color: #588e3c;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-navy {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--navy {
   color: #283451;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-light-gray {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--light-gray {
   color: #f2f2f2;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-gray {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--gray {
   color: #999;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-dark-gray {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--dark-gray {
   color: #333;
 }
-/* line 195, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-white {
+/* line 188, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--white {
   color: #fff;
 }
-/* line 199, ../../../sass/components/_typography.scss */
-.kss-example-preview .text-lineheight-zero {
+/* line 192, ../../../sass/components/_typography.scss */
+.kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
 /* line 2, ../../../sass/components/_util.scss */

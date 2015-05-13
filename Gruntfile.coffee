@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 module.exports = (grunt) ->
   grunt.initConfig
     watch:
@@ -6,34 +6,38 @@ module.exports = (grunt) ->
         livereload: true
 
       sass:
-        files: ["sass/{,**/}*.{scss,sass}"]
-        tasks: ["compass:dist"]
+        files: ['sass/{,**/}*.{scss,sass}']
+        tasks: ['compass:kss']
+        # tasks: ['compass:dist']
 
       css:
-        files: ["css/{,**/}*.css"]
-        tasks: ["shell:kss"]
+        files: [
+          'css/{,**/}*.css'
+          'kss-template/public/css/{,**/}*.css'
+        ]
+        tasks: ['shell:kss']
 
       js:
         files: [
-          "js/{,**/}*.js"
-          "!js/{,**/}*.min.js"
+          'js/{,**/}*.js'
+          '!js/{,**/}*.min.js'
         ]
 
       template:
         files: [
-          "kss-template/index.html"
-          "kss-template/public/sass/{,**/}*.{scss,sass}"
+          'kss-template/index.html'
+          'kss-template/public/sass/{,**/}*.{scxss,sass}'
         ]
         tasks: ['compass:kss', 'shell:kss']
 
     compass:
       dist:
         options:
-          cssDir: "css"
-          sassDir: "sass"
-          imagesDir: "images"
-          generatedImagesDir: "images/generated"
-          javascriptsDir: "js"
+          cssDir: 'css'
+          sassDir: 'sass'
+          imagesDir: 'images'
+          generatedImagesDir: 'images/generated'
+          javascriptsDir: 'js'
           require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
           outputStyle: 'expanded'
           bundleExec: true
@@ -43,8 +47,8 @@ module.exports = (grunt) ->
           
       kss:
         options:
-          cssDir: "kss-template/public/css"
-          sassDir: "kss-template/public/sass"
+          cssDir: 'kss-template/public/css'
+          sassDir: 'kss-template/public/sass'
           require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
           force: true
           sourcemap: true
@@ -55,7 +59,7 @@ module.exports = (grunt) ->
 
       dist:
         files:
-          "css": ["css/*.css"]
+          'css': ['css/*.css']
 
     shell:
       kss:

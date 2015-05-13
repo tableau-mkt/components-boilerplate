@@ -15,27 +15,32 @@ to differentiate the box from the background. You will usually want to use a
 padded box on a container with a background color.
 
 Markup: 
-<div class="box--padded {$modifiers} box--teal">
-  <h3>A box with some nice padding</h3>
+<div class="box__padded {$modifiers} box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
 </div>
 
-.box--padded--one - A box with 1em (16px) of padding
-.box--padded--two - <strong>(Default)</strong> A box with 2em (32px) of padding
-.box--padded--three - A box with 3em (48px) of padding
+.box__padded--one - A box with 1em of padding
+.box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+.box__padded--three - A box with 3em of padding
+.box__padded--four - A box with 4em of padding
 
 Styleguide 3.1
 */
-.box--padded {
+.box__padded {
   padding: 2em;
   
-  &.box--padded--one {
+  &.box__padded--one {
     padding: 1em;
   }
 
-  &.box--padded--three {
+  &.box__padded--three {
+    padding: 3em;
+  }
+
+  &.box__padded--four {
     padding: 3em;
   }
 }
@@ -46,11 +51,11 @@ Colored Backgrounds
 
 These classes will apply a background to any container div. It does not apply
 any other styles, except the background-color and a text color if needed for 
-legibility. <code>.grid-6</code> and <code>.box--padded</code> are used here
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
 just to make the examples look better.
 
 Markup:
-<div class="{$modifiers} grid-6 box--padded">
+<div class="{$modifiers} grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>

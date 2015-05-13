@@ -85,6 +85,16 @@
                 <li><a href="section-8.html#8.2">Full-width Teaser List</a></li>
             </ul>
           </li>
+          <li><a href="section-9.html">Functions</a>
+            <ul>
+                <li><a href="section-9.html#9.1">EM converter</a></li>
+            </ul>
+          </li>
+          <li><a href="section-10.html">Mixins</a>
+            <ul>
+                <li><a href="section-10.html#10.5">CSS Hexagon</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -118,8 +128,8 @@ padded box on a container with a background color.</p>
                 </div>
               </div>
               <div class="kss-example-preview">
-                <div class="box--padded {$modifiers} box--teal">
-  <h3>A box with some nice padding</h3>
+                <div class="box__padded {$modifiers} box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -129,16 +139,16 @@ padded box on a container with a background color.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>A box with 1em (16px) of padding</p>
+                    <p>A box with 1em of padding</p>
 
                   </div>
                   <div class="kss-example-name">
-                    <p><code>.box--padded--one</code></p>
+                    <p><code>.box__padded--one</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--padded box--padded--one box--teal">
-  <h3>A box with some nice padding</h3>
+                  <div class="box__padded box__padded--one box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -148,16 +158,16 @@ padded box on a container with a background color.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p><strong>(Default)</strong> A box with 2em (32px) of padding</p>
+                    <p><strong>[Default]</strong> A box with 2em of padding</p>
 
                   </div>
                   <div class="kss-example-name">
-                    <p><code>.box--padded--two</code></p>
+                    <p><code>.box__padded--two</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--padded box--padded--two box--teal">
-  <h3>A box with some nice padding</h3>
+                  <div class="box__padded box__padded--two box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -167,16 +177,35 @@ padded box on a container with a background color.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>A box with 3em (48px) of padding</p>
+                    <p>A box with 3em of padding</p>
 
                   </div>
                   <div class="kss-example-name">
-                    <p><code>.box--padded--three</code></p>
+                    <p><code>.box__padded--three</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--padded box--padded--three box--teal">
-  <h3>A box with some nice padding</h3>
+                  <div class="box__padded box__padded--three box--teal">
+  <h4>A box with some nice padding</h4>
+  <p>
+    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
+  </p>
+</div>
+                </div>
+              </div>
+              <div class="kss-example">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <p>A box with 4em of padding</p>
+
+                  </div>
+                  <div class="kss-example-name">
+                    <p><code>.box__padded--four</code></p>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="box__padded box__padded--four box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -187,8 +216,8 @@ padded box on a container with a background color.</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;box--padded {$modifiers} box--teal&quot;&gt;
-  &lt;h3&gt;A box with some nice padding&lt;/h3&gt;
+            <pre class="prettyprint lang-html">&lt;div class=&quot;box__padded {$modifiers} box--teal&quot;&gt;
+  &lt;h4&gt;A box with some nice padding&lt;/h4&gt;
   &lt;p&gt;
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   &lt;/p&gt;
@@ -214,26 +243,26 @@ padded box on a container with a background color.</p>
               </div>
               <div class="kss-example-preview">
                 <div class="badge {$modifiers}">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined {$modifiers}">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
               </div>
@@ -250,26 +279,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--dark-blue">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--dark-blue">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -286,26 +315,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--teal">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--teal">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -322,26 +351,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--salmon">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--salmon">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -358,26 +387,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--bright-teal">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--bright-teal">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -394,26 +423,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--green">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--green">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -430,26 +459,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--navy">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--navy">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -466,26 +495,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--light-gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--light-gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -502,26 +531,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -538,26 +567,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--dark-gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--dark-gray">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -574,62 +603,26 @@ padded box on a container with a background color.</p>
                 </div>
                 <div class="kss-example-preview">
                   <div class="badge badge--white">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <div class="badge badge--outlined badge--white">
-  <div class="badge--content">
+  <div class="badge__content">
     <h2>
-     Tableau<br>
-      Foundation
+      Example<br>
+      Badge
     </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Large version of the badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--big</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--big">
-  <div class="badge--content">
-    <h2>
-     Tableau<br>
-      Foundation
-    </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--big">
-  <div class="badge--content">
-    <h2>
-     Tableau<br>
-      Foundation
-    </h2>
-    <h1>2012</h1>
-    <h5>Big Hearts · Great Minds</h5>
-    <h6>Seattle</h6>
+    <h1>Number</h1>
+    <h5>Some details and stuff</h5>
+    <h6>Something Else</h6>
   </div>
 </div>
                 </div>
@@ -639,26 +632,26 @@ padded box on a container with a background color.</p>
           <h4>Markup:</h4>
           <div class="kss-markup">
             <pre class="prettyprint lang-html">&lt;div class=&quot;badge {$modifiers}&quot;&gt;
-  &lt;div class=&quot;badge--content&quot;&gt;
+  &lt;div class=&quot;badge__content&quot;&gt;
     &lt;h2&gt;
-     Tableau&lt;br&gt;
-      Foundation
+      Example&lt;br&gt;
+      Badge
     &lt;/h2&gt;
-    &lt;h1&gt;2012&lt;/h1&gt;
-    &lt;h5&gt;Big Hearts · Great Minds&lt;/h5&gt;
-    &lt;h6&gt;Seattle&lt;/h6&gt;
+    &lt;h1&gt;Number&lt;/h1&gt;
+    &lt;h5&gt;Some details and stuff&lt;/h5&gt;
+    &lt;h6&gt;Something Else&lt;/h6&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;div class=&quot;badge badge--outlined {$modifiers}&quot;&gt;
-  &lt;div class=&quot;badge--content&quot;&gt;
+  &lt;div class=&quot;badge__content&quot;&gt;
     &lt;h2&gt;
-     Tableau&lt;br&gt;
-      Foundation
+      Example&lt;br&gt;
+      Badge
     &lt;/h2&gt;
-    &lt;h1&gt;2012&lt;/h1&gt;
-    &lt;h5&gt;Big Hearts · Great Minds&lt;/h5&gt;
-    &lt;h6&gt;Seattle&lt;/h6&gt;
+    &lt;h1&gt;Number&lt;/h1&gt;
+    &lt;h5&gt;Some details and stuff&lt;/h5&gt;
+    &lt;h6&gt;Something Else&lt;/h6&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
           </div>
@@ -671,7 +664,7 @@ padded box on a container with a background color.</p>
 
           <div class="kss-description"><p>These classes will apply a background to any container div. It does not apply
 any other styles, except the background-color and a text color if needed for
-legibility. <code>.grid-6</code> and <code>.box--padded</code> are used here
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
 just to make the examples look better.</p>
 </div>
 
@@ -684,7 +677,7 @@ just to make the examples look better.</p>
                 </div>
               </div>
               <div class="kss-example-preview">
-                <div class="{$modifiers} grid-6 box--padded">
+                <div class="{$modifiers} grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -702,7 +695,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--dark-blue grid-6 box--padded">
+                  <div class="box--dark-blue grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -720,7 +713,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--teal grid-6 box--padded">
+                  <div class="box--teal grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -738,7 +731,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--salmon grid-6 box--padded">
+                  <div class="box--salmon grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -756,7 +749,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--bright-teal grid-6 box--padded">
+                  <div class="box--bright-teal grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -774,7 +767,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--green grid-6 box--padded">
+                  <div class="box--green grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -792,7 +785,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--navy grid-6 box--padded">
+                  <div class="box--navy grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -810,7 +803,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--light-gray grid-6 box--padded">
+                  <div class="box--light-gray grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -828,7 +821,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--gray grid-6 box--padded">
+                  <div class="box--gray grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -846,7 +839,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--dark-gray grid-6 box--padded">
+                  <div class="box--dark-gray grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -864,7 +857,7 @@ just to make the examples look better.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="box--white grid-6 box--padded">
+                  <div class="box--white grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -875,7 +868,7 @@ just to make the examples look better.</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers} grid-6 box--padded&quot;&gt;
+            <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers} grid-6 box__padded&quot;&gt;
   &lt;p&gt;
     This sentence demonstrates &lt;a href=&quot;#&quot;&gt;a link in content&lt;/a&gt; to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   &lt;/p&gt;
@@ -946,9 +939,10 @@ boxes and you want to fill the extra blank space.</p>
 
 
           <div class="kss-description"><p>Used to create vertical spacing between sections of content without just a stack
-of <code>&lt;br&gt;</code> tags. The examples here use an <code>&lt;hr&gt;</code>
-, but you can also use a <code>&lt;div&gt;</code>. The default spacing is 4em,
-but you can use modifier classes to to 2em or 6em as well.</p>
+of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier
+classes to add 4em or 6em of spacingas well. These examples put a spacer between
+two divs to dempnstrate the amount of space that will be added with each modifier.</p>
 </div>
 
           <h4>Examples:</h4>
@@ -960,13 +954,13 @@ but you can use modifier classes to to 2em or 6em as well.</p>
                 </div>
               </div>
               <div class="kss-example-preview">
-                <div class="grid-6 box--padded box--green">
+                <div class="grid-6 box__padded box--green">
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
 <hr class="spacer {$modifiers}">
-<div class="grid-6 box--padded box--white">
+<div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -976,7 +970,7 @@ but you can use modifier classes to to 2em or 6em as well.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>Spacer with 2em (32px) of space.</p>
+                    <p><strong>[Default]</strong> Spacer with 2em of space.</p>
 
                   </div>
                   <div class="kss-example-name">
@@ -984,13 +978,13 @@ but you can use modifier classes to to 2em or 6em as well.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="grid-6 box--padded box--green">
+                  <div class="grid-6 box__padded box--green">
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
 <hr class="spacer spacer--two">
-<div class="grid-6 box--padded box--white">
+<div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -1000,7 +994,7 @@ but you can use modifier classes to to 2em or 6em as well.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>Spacer with 4em (64px) of space.</p>
+                    <p>Spacer with 4em of space.</p>
 
                   </div>
                   <div class="kss-example-name">
@@ -1008,13 +1002,13 @@ but you can use modifier classes to to 2em or 6em as well.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="grid-6 box--padded box--green">
+                  <div class="grid-6 box__padded box--green">
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
 <hr class="spacer spacer--four">
-<div class="grid-6 box--padded box--white">
+<div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -1024,7 +1018,7 @@ but you can use modifier classes to to 2em or 6em as well.</p>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>Spacer with 6em (96px) of space.</p>
+                    <p>Spacer with 6em of space.</p>
 
                   </div>
                   <div class="kss-example-name">
@@ -1032,13 +1026,13 @@ but you can use modifier classes to to 2em or 6em as well.</p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="grid-6 box--padded box--green">
+                  <div class="grid-6 box__padded box--green">
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
 <hr class="spacer spacer--six">
-<div class="grid-6 box--padded box--white">
+<div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
@@ -1049,13 +1043,13 @@ but you can use modifier classes to to 2em or 6em as well.</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;grid-6 box--padded box--green&quot;&gt;
+            <pre class="prettyprint lang-html">&lt;div class=&quot;grid-6 box__padded box--green&quot;&gt;
   &lt;p&gt;
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   &lt;/p&gt;
 &lt;/div&gt;
 &lt;hr class=&quot;spacer {$modifiers}&quot;&gt;
-&lt;div class=&quot;grid-6 box--padded box--white&quot;&gt;
+&lt;div class=&quot;grid-6 box__padded box--white&quot;&gt;
   &lt;p&gt;
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   &lt;/p&gt;
@@ -1077,6 +1071,9 @@ but you can use modifier classes to to 2em or 6em as well.</p>
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="public/jquery.min.js"><\/script>')
+  </script>
   <script>
     $(document).ready(function(){
       // Ensure code blocks are highlighted properly...

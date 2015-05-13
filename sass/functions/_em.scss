@@ -1,0 +1,19 @@
+/*
+EM converter
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+
+Markup:
+.test {
+  font-size: em(56px, 16px); // results in 3.5em
+}
+
+Styleguide 9.1
+*/
+
+@function em($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}

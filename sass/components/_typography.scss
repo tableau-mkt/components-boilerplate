@@ -21,12 +21,12 @@ Markup:
 Styleguide 1.1
  */
 body {
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
-  font-size: $base-font-size;
-  font-family:'Gill Sans W01 Light';
-  color: $base-font-color;
-  line-height: $base-line-height;
+  font-size: 16px;
+  font-family: 'Gill Sans W01 Light', Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 /*
@@ -37,15 +37,16 @@ Used for title and prominent labels of content.
 Markup:
 <{$modifiers}>Heading {$modifiers} </{$modifiers}>
 
-h1 - First level heading. Reserved for page titles. 70px
-h2 - Second level heading. Used mostly for section titles. 22px
-h3 - Third level heading. 18px
-h4 - Fourth level heading. 16px
-h5 - Fifth level heading. 14px
-h6 - Sixth level heading. 12px
+h1 - First level heading. Reserved for page titles. 3em
+h2 - Second level heading. Used mostly for section titles. 2.5em
+h3 - Third level heading. 2em
+h4 - Fourth level heading. 1.5em
+h5 - Fifth level heading. 1.25em
+h6 - Sixth level heading. 1em
 
 Styleguide 1.2
 */
+
 h1,
 .heading--h1,
 h2,
@@ -65,34 +66,27 @@ h6,
 
 h1,
 .heading--h1 {
-  font-size: em(36px);
-  font-weight: 100;
+  font-size: 3em;
 }
 h2,
 .heading--h2 {
-  font-size: em(24px);
-  font-weight: 100;
-  line-height: 1.2;
+  font-size: 2.5em;
 }
 h3,
 .heading--h3 {
-  font-size: em(20px);
-  line-height: 1.4;
+  font-size: 2em;
 }
 h4,
 .heading--h4 {
-  font-size: em(18px);
-  text-transform: uppercase;
-  line-height: 1.6;
+  font-size: 1.5em;
 }
 h5,
 .heading--h5 {
-  font-size: em(14px);
+  font-size: 1.25em;
 }
 h6,
 .heading--h6 {
-  font-size: em(12px);
-  line-height: 1.2;
+  font-size: 1em;
 }
 
 
@@ -101,7 +95,7 @@ h6,
  */
 a {
   text-decoration: none;
-  color: $link-color;
+
   &:hover {
     text-decoration: underline;
   }
@@ -122,81 +116,80 @@ Markup:
   This sentence is an example of formatted text.
 </p>
 
-.text-bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
-.text-light - Light text. Default for non-headings
-.text-italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
-.text-caps - All caps text
-.text-right - Right justified text
-.text-left - Left justified text
-.text-centered - Center justified text
-.text-justified - Justified text
-.text-huge - Huge text - 48px
-.text-big - Big text - 32px
-.text-base-size - Base size text - 16px
-.text-small - Small text - 12px
-.text-tiny - Tiny text - 10px
-.text-white - Whitetext.
-.text-gray - Gray text.
-.text-dark-blue - Dark blue text.
-.text-teal - Teal text.
-.text-salmon - Salmon text.
-.text-bright-teal - Bright teal text.
-.text-green - Green text.
-.text-navy - Navy text.
-.text-light-gray - Light gray text.
-.text-lineheight-zero - Line height set to zero.
+.text--bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
+.text--light - Light text. Default for non-headings
+.text--italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
+.text--caps - All caps text
+.text--right - Right justified text
+.text--left - Left justified text
+.text--centered - Center justified text
+.text--justified - Justified text
+.text--huge - Huge text - 48px
+.text--big - Big text - 32px
+.text--base-size - Base size text - 16px
+.text--small - Small text - 12px
+.text--tiny - Tiny text - 10px
+.text--white - Whitetext.
+.text--gray - Gray text.
+.text--dark-blue - Dark blue text.
+.text--teal - Teal text.
+.text--salmon - Salmon text.
+.text--bright-teal - Bright teal text.
+.text--green - Green text.
+.text--navy - Navy text.
+.text--light-gray - Light gray text.
+.text--lineheight-zero - Line height set to zero.
 
 Styleguide 1.3
 */
 strong,
-.text-bold {
-  font-weight: normal;
-  font-family: "Gill Sans W04 Roman";
+.text--bold {
+  font-weight: bold;
 }
-.text-light {
-  font-weight: $font-weight-light;
+.text--light {
+  font-weight: 100;
 }
 em,
-.text-italic {
+.text--italic {
   font-style: italic;
 }
-.text-caps {
+.text--caps {
   text-transform: uppercase;
 }
-.text-left {
+.text--left {
   text-align: left;
 }
-.text-right {
+.text--right {
   text-align: right;
 }
-.text-centered {
+.text--centered {
   text-align: center;
 }
-.text-justified {
+.text--justified {
   text-align: justified;
 }
-.text-huge {
+.text--huge {
   font-size: $text-huge;
 }
-.text-big {
+.text--big {
   font-size: $text-big;
 }
-.text-base-size {
-  font-size: $base-font-size;
+.text--base-size {
+  font-size: 16px;
 }
-.text-small {
+.text--small {
   font-size: $text-small;
 }
-.text-tiny {
+.text--tiny {
   font-size: $text-tiny;
 }
 /* Create a class for each theme color */
 @each $name, $color in $theme-colors {
-  .text-#{"" + $name} {
+  .text--#{"" + $name} {
     color: $color;
   }
 }
-.text-lineheight-zero {
+.text--lineheight-zero {
   line-height: 0;
 }
 

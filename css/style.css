@@ -373,34 +373,39 @@ Styleguide 3
 /*
 Padded box
 
-Adds padding to a container element. The <code>.box--teal</code> class is used
+Adds padding to a container element. The <code>.box__teal</code> class is used
 to differentiate the box from the background. You will usually want to use a
 padded box on a container with a background color.
 
 Markup: 
-<div class="box--padded {$modifiers} box--teal">
-  <h3>A box with some nice padding</h3>
+<div class="box__padded {$modifiers} box--teal">
+  <h4>A box with some nice padding</h4>
   <p>
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   </p>
 </div>
 
-.box--padded--one - A box with 1em (16px) of padding
-.box--padded--two - <strong>(Default)</strong> A box with 2em (32px) of padding
-.box--padded--three - A box with 3em (48px) of padding
+.box__padded--one - A box with 1em of padding
+.box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+.box__padded--three - A box with 3em of padding
+.box__padded--four - A box with 4em of padding
 
 Styleguide 3.1
 */
-/* line 31, ../sass/components/_box.scss */
-.box--padded {
+/* line 32, ../sass/components/_box.scss */
+.box__padded {
   padding: 2em;
 }
-/* line 34, ../sass/components/_box.scss */
-.box--padded.box--padded--one {
+/* line 35, ../sass/components/_box.scss */
+.box__padded.box__padded--one {
   padding: 1em;
 }
-/* line 38, ../sass/components/_box.scss */
-.box--padded.box--padded--three {
+/* line 39, ../sass/components/_box.scss */
+.box__padded.box__padded--three {
+  padding: 3em;
+}
+/* line 43, ../sass/components/_box.scss */
+.box__padded.box__padded--four {
   padding: 3em;
 }
 
@@ -409,11 +414,11 @@ Colored Backgrounds
 
 These classes will apply a background to any container div. It does not apply
 any other styles, except the background-color and a text color if needed for 
-legibility. <code>.grid-6</code> and <code>.box--padded</code> are used here
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
 just to make the examples look better.
 
 Markup:
-<div class="{$modifiers} grid-6 box--padded">
+<div class="{$modifiers} grid-6 box__padded">
   <p>
     This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
   </p>
@@ -433,74 +438,74 @@ Markup:
 Styleguide 3.4
 */
 /* Create a class for each theme color */
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--dark-blue {
   background-color: #1f447d;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--teal {
   background-color: #7099a6;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--salmon {
   background-color: #e36e4d;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--bright-teal {
   background-color: #7ebac3;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--green {
   background-color: #588e3c;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--navy {
   background-color: #283451;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--light-gray {
   background-color: #f2f2f2;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--gray {
   background-color: #999;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--dark-gray {
   background-color: #333;
   color: #fff;
 }
 
-/* line 75, ../sass/components/_box.scss */
+/* line 80, ../sass/components/_box.scss */
 .box--white {
   background-color: #fff;
   color: #fff;
 }
 
 /* Text color overrides for lighter backgrounds */
-/* line 82, ../sass/components/_box.scss */
+/* line 87, ../sass/components/_box.scss */
 .box--light-gray,
 .box--white {
   color: #333;
 }
 
-/* line 87, ../sass/components/_box.scss */
+/* line 92, ../sass/components/_box.scss */
 .box--teal a,
 .box--salmon a,
 .box--bright-teal a,
@@ -539,7 +544,7 @@ Markup:
 
 Styleguide 3.5
 */
-/* line 128, ../sass/components/_box.scss */
+/* line 133, ../sass/components/_box.scss */
 .box__stretchy.box__stretchy--halves, .box__stretchy.box__stretchy--thirds, .box__stretchy.box__stretchy--fourths, .box__stretchy.box__stretchy--fifths, .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
@@ -547,29 +552,29 @@ Styleguide 3.5
   width: 100%;
 }
 @media (min-width: 740px) {
-  /* line 140, ../sass/components/_box.scss */
+  /* line 145, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--halves, .box__stretchy.box__stretchy--thirds, .box__stretchy.box__stretchy--fourths, .box__stretchy.box__stretchy--fifths, .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 148, ../sass/components/_box.scss */
+  /* line 153, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  /* line 155, ../sass/components/_box.scss */
+  /* line 160, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--thirds {
     width: 33.33333%;
   }
-  /* line 159, ../sass/components/_box.scss */
+  /* line 164, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 163, ../sass/components/_box.scss */
+  /* line 168, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 167, ../sass/components/_box.scss */
+  /* line 172, ../sass/components/_box.scss */
   .box__stretchy.box__stretchy--sixths {
     width: 16.66667%;
   }
@@ -585,8 +590,7 @@ Styleguide 2
 /* 
 CTA
 
-A call to action button that links to something important. The default color is
-dark blue.
+A call to action button that links to something important.
 
 Markup:
 <p>
@@ -594,20 +598,20 @@ Markup:
   <a class="cta {$modifiers}" href="#">▶ Play A Video</a>
 </p>
 
-.cta-dark-blue - A dark blue version of the CTA.
-.cta-teal - A teal version of the CTA.
-.cta-salmon - A lighter salmon version of the CTA.
-.cta-bright-teal - A bright teal version of the CTA.
-.cta-green - A green version of the CTA.
-.cta-navy - A navy version of the CTA.
-.cta-light-gray - A light gray version of the CTA.
-.cta-gray - A gray version of the CTA.
-.cta-dark-gray - A dark gray version of the CTA.
-.cta-white - A white version of the CTA for use on colored backgrounds.
+.cta--dark-blue - <strong>[Default]</strong> A dark blue version of the CTA.
+.cta--teal - A teal version of the CTA.
+.cta--salmon - A lighter salmon version of the CTA.
+.cta--bright-teal - A bright teal version of the CTA.
+.cta--green - A green version of the CTA.
+.cta--navy - A navy version of the CTA.
+.cta--light-gray - A light gray version of the CTA.
+.cta--gray - A gray version of the CTA.
+.cta--dark-gray - A dark gray version of the CTA.
+.cta--white - A white version of the CTA for use on colored backgrounds.
 
 Styleguide 2.1
 */
-/* line 34, ../sass/components/_cta.scss */
+/* line 33, ../sass/components/_cta.scss */
 .cta,
 input[type=submit] {
   display: inline-block;
@@ -619,7 +623,6 @@ input[type=submit] {
   -webkit-appearance: none;
   cursor: pointer;
   font-size: 12px;
-  font-family: 'Gill Sans W04 Roman';
   letter-spacing: 1px;
   line-height: 1.6;
   color: #1f447d;
@@ -629,7 +632,7 @@ input[type=submit] {
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 52, ../sass/components/_cta.scss */
+/* line 50, ../sass/components/_cta.scss */
 .cta:hover, .cta:focus,
 input[type=submit]:hover,
 input[type=submit]:focus {
@@ -637,140 +640,140 @@ input[type=submit]:focus {
   color: #fff;
   text-decoration: none;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-dark-blue,
-input[type=submit].cta-dark-blue {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--dark-blue,
+input[type=submit].cta--dark-blue {
   border-color: #1f447d;
   color: #1f447d;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-dark-blue:hover, .cta.cta-dark-blue:focus,
-input[type=submit].cta-dark-blue:hover,
-input[type=submit].cta-dark-blue:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--dark-blue:hover, .cta.cta--dark-blue:focus,
+input[type=submit].cta--dark-blue:hover,
+input[type=submit].cta--dark-blue:focus {
   background-color: #1f447d;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-teal,
-input[type=submit].cta-teal {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--teal,
+input[type=submit].cta--teal {
   border-color: #7099a6;
   color: #7099a6;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-teal:hover, .cta.cta-teal:focus,
-input[type=submit].cta-teal:hover,
-input[type=submit].cta-teal:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--teal:hover, .cta.cta--teal:focus,
+input[type=submit].cta--teal:hover,
+input[type=submit].cta--teal:focus {
   background-color: #7099a6;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-salmon,
-input[type=submit].cta-salmon {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--salmon,
+input[type=submit].cta--salmon {
   border-color: #e36e4d;
   color: #e36e4d;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-salmon:hover, .cta.cta-salmon:focus,
-input[type=submit].cta-salmon:hover,
-input[type=submit].cta-salmon:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--salmon:hover, .cta.cta--salmon:focus,
+input[type=submit].cta--salmon:hover,
+input[type=submit].cta--salmon:focus {
   background-color: #e36e4d;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-bright-teal,
-input[type=submit].cta-bright-teal {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--bright-teal,
+input[type=submit].cta--bright-teal {
   border-color: #7ebac3;
   color: #7ebac3;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-bright-teal:hover, .cta.cta-bright-teal:focus,
-input[type=submit].cta-bright-teal:hover,
-input[type=submit].cta-bright-teal:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--bright-teal:hover, .cta.cta--bright-teal:focus,
+input[type=submit].cta--bright-teal:hover,
+input[type=submit].cta--bright-teal:focus {
   background-color: #7ebac3;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-green,
-input[type=submit].cta-green {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--green,
+input[type=submit].cta--green {
   border-color: #588e3c;
   color: #588e3c;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-green:hover, .cta.cta-green:focus,
-input[type=submit].cta-green:hover,
-input[type=submit].cta-green:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--green:hover, .cta.cta--green:focus,
+input[type=submit].cta--green:hover,
+input[type=submit].cta--green:focus {
   background-color: #588e3c;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-navy,
-input[type=submit].cta-navy {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--navy,
+input[type=submit].cta--navy {
   border-color: #283451;
   color: #283451;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-navy:hover, .cta.cta-navy:focus,
-input[type=submit].cta-navy:hover,
-input[type=submit].cta-navy:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--navy:hover, .cta.cta--navy:focus,
+input[type=submit].cta--navy:hover,
+input[type=submit].cta--navy:focus {
   background-color: #283451;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-light-gray,
-input[type=submit].cta-light-gray {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--light-gray,
+input[type=submit].cta--light-gray {
   border-color: #f2f2f2;
   color: #f2f2f2;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-light-gray:hover, .cta.cta-light-gray:focus,
-input[type=submit].cta-light-gray:hover,
-input[type=submit].cta-light-gray:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--light-gray:hover, .cta.cta--light-gray:focus,
+input[type=submit].cta--light-gray:hover,
+input[type=submit].cta--light-gray:focus {
   background-color: #f2f2f2;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-gray,
-input[type=submit].cta-gray {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--gray,
+input[type=submit].cta--gray {
   border-color: #999;
   color: #999;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-gray:hover, .cta.cta-gray:focus,
-input[type=submit].cta-gray:hover,
-input[type=submit].cta-gray:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--gray:hover, .cta.cta--gray:focus,
+input[type=submit].cta--gray:hover,
+input[type=submit].cta--gray:focus {
   background-color: #999;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-dark-gray,
-input[type=submit].cta-dark-gray {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--dark-gray,
+input[type=submit].cta--dark-gray {
   border-color: #333;
   color: #333;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-dark-gray:hover, .cta.cta-dark-gray:focus,
-input[type=submit].cta-dark-gray:hover,
-input[type=submit].cta-dark-gray:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--dark-gray:hover, .cta.cta--dark-gray:focus,
+input[type=submit].cta--dark-gray:hover,
+input[type=submit].cta--dark-gray:focus {
   background-color: #333;
   color: #fff;
 }
-/* line 60, ../sass/components/_cta.scss */
-.cta.cta-white,
-input[type=submit].cta-white {
+/* line 58, ../sass/components/_cta.scss */
+.cta.cta--white,
+input[type=submit].cta--white {
   border-color: #fff;
   color: #fff;
 }
-/* line 63, ../sass/components/_cta.scss */
-.cta.cta-white:hover, .cta.cta-white:focus,
-input[type=submit].cta-white:hover,
-input[type=submit].cta-white:focus {
+/* line 61, ../sass/components/_cta.scss */
+.cta.cta--white:hover, .cta.cta--white:focus,
+input[type=submit].cta--white:hover,
+input[type=submit].cta--white:focus {
   background-color: #fff;
   color: #fff;
 }
-/* line 71, ../sass/components/_cta.scss */
-.cta.cta-white:hover, .cta.cta-white:focus,
-input[type=submit].cta-white:hover,
-input[type=submit].cta-white:focus {
+/* line 69, ../sass/components/_cta.scss */
+.cta.cta--white:hover, .cta.cta--white:focus,
+input[type=submit].cta--white:hover,
+input[type=submit].cta--white:focus {
   color: #7099a6;
 }
 
@@ -2944,12 +2947,12 @@ Styleguide 1.1
  */
 /* line 23, ../sass/components/_typography.scss */
 body {
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  font-family: 'Gill Sans W01 Light';
+  font-family: 'Gill Sans W01 Light', Arial, Helvetica, sans-serif;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 /*
@@ -2960,16 +2963,16 @@ Used for title and prominent labels of content.
 Markup:
 <{$modifiers}>Heading {$modifiers} </{$modifiers}>
 
-h1 - First level heading. Reserved for page titles. 70px
-h2 - Second level heading. Used mostly for section titles. 22px
-h3 - Third level heading. 18px
-h4 - Fourth level heading. 16px
-h5 - Fifth level heading. 14px
-h6 - Sixth level heading. 12px
+h1 - First level heading. Reserved for page titles. 3em
+h2 - Second level heading. Used mostly for section titles. 2.5em
+h3 - Third level heading. 2em
+h4 - Fourth level heading. 1.5em
+h5 - Fifth level heading. 1.25em
+h6 - Sixth level heading. 1em
 
 Styleguide 1.2
 */
-/* line 49, ../sass/components/_typography.scss */
+/* line 50, ../sass/components/_typography.scss */
 h1,
 .heading--h1,
 h2,
@@ -2987,58 +2990,50 @@ h6,
   line-height: 1;
 }
 
-/* line 66, ../sass/components/_typography.scss */
+/* line 67, ../sass/components/_typography.scss */
 h1,
 .heading--h1 {
-  font-size: 2.25em;
-  font-weight: 100;
+  font-size: 3em;
 }
 
 /* line 71, ../sass/components/_typography.scss */
 h2,
 .heading--h2 {
-  font-size: 1.5em;
-  font-weight: 100;
-  line-height: 1.2;
+  font-size: 2.5em;
 }
 
-/* line 77, ../sass/components/_typography.scss */
+/* line 75, ../sass/components/_typography.scss */
 h3,
 .heading--h3 {
-  font-size: 1.25em;
-  line-height: 1.4;
+  font-size: 2em;
 }
 
-/* line 82, ../sass/components/_typography.scss */
+/* line 79, ../sass/components/_typography.scss */
 h4,
 .heading--h4 {
-  font-size: 1.125em;
-  text-transform: uppercase;
-  line-height: 1.6;
+  font-size: 1.5em;
 }
 
-/* line 88, ../sass/components/_typography.scss */
+/* line 83, ../sass/components/_typography.scss */
 h5,
 .heading--h5 {
-  font-size: 0.875em;
+  font-size: 1.25em;
 }
 
-/* line 92, ../sass/components/_typography.scss */
+/* line 87, ../sass/components/_typography.scss */
 h6,
 .heading--h6 {
-  font-size: 0.75em;
-  line-height: 1.2;
+  font-size: 1em;
 }
 
 /** 
  * Links
  */
-/* line 102, ../sass/components/_typography.scss */
+/* line 96, ../sass/components/_typography.scss */
 a {
   text-decoration: none;
-  color: #7099a6;
 }
-/* line 105, ../sass/components/_typography.scss */
+/* line 99, ../sass/components/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
@@ -3054,153 +3049,152 @@ Markup:
   This sentence is an example of formatted text.
 </p>
 
-.text-bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
-.text-light - Light text. Default for non-headings
-.text-italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
-.text-caps - All caps text
-.text-right - Right justified text
-.text-left - Left justified text
-.text-centered - Center justified text
-.text-justified - Justified text
-.text-huge - Huge text - 48px
-.text-big - Big text - 32px
-.text-base-size - Base size text - 16px
-.text-small - Small text - 12px
-.text-tiny - Tiny text - 10px
-.text-white - Whitetext.
-.text-gray - Gray text.
-.text-dark-blue - Dark blue text.
-.text-teal - Teal text.
-.text-salmon - Salmon text.
-.text-bright-teal - Bright teal text.
-.text-green - Green text.
-.text-navy - Navy text.
-.text-light-gray - Light gray text.
-.text-lineheight-zero - Line height set to zero.
+.text--bold - Bold text for emphasis. Same as <code>&lt;strong&gt;</code>
+.text--light - Light text. Default for non-headings
+.text--italic - Italic text for emphasis. Same as <code>&lt;em&gt;</code>
+.text--caps - All caps text
+.text--right - Right justified text
+.text--left - Left justified text
+.text--centered - Center justified text
+.text--justified - Justified text
+.text--huge - Huge text - 48px
+.text--big - Big text - 32px
+.text--base-size - Base size text - 16px
+.text--small - Small text - 12px
+.text--tiny - Tiny text - 10px
+.text--white - Whitetext.
+.text--gray - Gray text.
+.text--dark-blue - Dark blue text.
+.text--teal - Teal text.
+.text--salmon - Salmon text.
+.text--bright-teal - Bright teal text.
+.text--green - Green text.
+.text--navy - Navy text.
+.text--light-gray - Light gray text.
+.text--lineheight-zero - Line height set to zero.
 
 Styleguide 1.3
 */
-/* line 151, ../sass/components/_typography.scss */
+/* line 145, ../sass/components/_typography.scss */
 strong,
-.text-bold {
-  font-weight: normal;
-  font-family: "Gill Sans W04 Roman";
+.text--bold {
+  font-weight: bold;
 }
 
-/* line 156, ../sass/components/_typography.scss */
-.text-light {
-  font-weight: 300;
+/* line 149, ../sass/components/_typography.scss */
+.text--light {
+  font-weight: 100;
 }
 
-/* line 159, ../sass/components/_typography.scss */
+/* line 152, ../sass/components/_typography.scss */
 em,
-.text-italic {
+.text--italic {
   font-style: italic;
 }
 
-/* line 163, ../sass/components/_typography.scss */
-.text-caps {
+/* line 156, ../sass/components/_typography.scss */
+.text--caps {
   text-transform: uppercase;
 }
 
-/* line 166, ../sass/components/_typography.scss */
-.text-left {
+/* line 159, ../sass/components/_typography.scss */
+.text--left {
   text-align: left;
 }
 
-/* line 169, ../sass/components/_typography.scss */
-.text-right {
+/* line 162, ../sass/components/_typography.scss */
+.text--right {
   text-align: right;
 }
 
-/* line 172, ../sass/components/_typography.scss */
-.text-centered {
+/* line 165, ../sass/components/_typography.scss */
+.text--centered {
   text-align: center;
 }
 
-/* line 175, ../sass/components/_typography.scss */
-.text-justified {
+/* line 168, ../sass/components/_typography.scss */
+.text--justified {
   text-align: justified;
 }
 
-/* line 178, ../sass/components/_typography.scss */
-.text-huge {
+/* line 171, ../sass/components/_typography.scss */
+.text--huge {
   font-size: 3em;
 }
 
-/* line 181, ../sass/components/_typography.scss */
-.text-big {
+/* line 174, ../sass/components/_typography.scss */
+.text--big {
   font-size: 2em;
 }
 
-/* line 184, ../sass/components/_typography.scss */
-.text-base-size {
+/* line 177, ../sass/components/_typography.scss */
+.text--base-size {
   font-size: 16px;
 }
 
-/* line 187, ../sass/components/_typography.scss */
-.text-small {
+/* line 180, ../sass/components/_typography.scss */
+.text--small {
   font-size: 0.75em;
 }
 
-/* line 190, ../sass/components/_typography.scss */
-.text-tiny {
+/* line 183, ../sass/components/_typography.scss */
+.text--tiny {
   font-size: 0.63em;
 }
 
 /* Create a class for each theme color */
-/* line 195, ../sass/components/_typography.scss */
-.text-dark-blue {
+/* line 188, ../sass/components/_typography.scss */
+.text--dark-blue {
   color: #1f447d;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-teal {
+/* line 188, ../sass/components/_typography.scss */
+.text--teal {
   color: #7099a6;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-salmon {
+/* line 188, ../sass/components/_typography.scss */
+.text--salmon {
   color: #e36e4d;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-bright-teal {
+/* line 188, ../sass/components/_typography.scss */
+.text--bright-teal {
   color: #7ebac3;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-green {
+/* line 188, ../sass/components/_typography.scss */
+.text--green {
   color: #588e3c;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-navy {
+/* line 188, ../sass/components/_typography.scss */
+.text--navy {
   color: #283451;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-light-gray {
+/* line 188, ../sass/components/_typography.scss */
+.text--light-gray {
   color: #f2f2f2;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-gray {
+/* line 188, ../sass/components/_typography.scss */
+.text--gray {
   color: #999;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-dark-gray {
+/* line 188, ../sass/components/_typography.scss */
+.text--dark-gray {
   color: #333;
 }
 
-/* line 195, ../sass/components/_typography.scss */
-.text-white {
+/* line 188, ../sass/components/_typography.scss */
+.text--white {
   color: #fff;
 }
 
-/* line 199, ../sass/components/_typography.scss */
-.text-lineheight-zero {
+/* line 192, ../sass/components/_typography.scss */
+.text--lineheight-zero {
   line-height: 0;
 }
 
