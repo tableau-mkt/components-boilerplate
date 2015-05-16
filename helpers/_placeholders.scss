@@ -4,11 +4,13 @@
  * Using placeholders results in CSS rule combining for selectors.
  */
 
+// Set text to be all uppercase
 %allcaps {
   text-transform: uppercase;
   letter-spacing: em(1px);
 }
 
+// Remove default list style and spacing
 %plain-list {
   margin-left: 0;
   padding-left: 0;
@@ -18,12 +20,23 @@
   }
 }
 
+// Clear floating issues within an element
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Remove spacing and borders
 %reset-box {
   border: 0;
   padding: 0;
   margin: 0;
 }
 
+// Stretch an element across the entire relative parent
 %cover-absolute {
   position:  absolute;
   top: 0;
@@ -32,6 +45,7 @@
   right: 0;
 }
 
+// Apply a transsition on transform rules
 %transition-transform {
   -webkit-transition: -webkit-transform   150ms;
      -moz-transition: -moz-transform      150ms;
@@ -39,10 +53,12 @@
           transition: transform           150ms;
 }
 
+// Set letter spacing to 1px
 %letter-spacing {
   letter-spacing: em(1px);
 }
 
+// Set a transition on the background and opacity properties
 %fade-bg {
   -webkit-transition: background 0.25s, opacity 0.25s;
      -moz-transition: background 0.25s, opacity 0.25s;
@@ -50,6 +66,7 @@
           transition: background 0.25s, opacity 0.25s;
 }
 
+// Set a transition on the color and opacity properties
 %fade-color {
   -webkit-transition: color 0.25s, opacity 0.25s;
      -moz-transition: color 0.25s, opacity 0.25s;
@@ -57,25 +74,7 @@
           transition: color 0.25s, opacity 0.25s;
 }
 
-%heading {
-  
-}
-
-%heading--h1 {
-}
-
-%heading--h2 {
-}
-
-%heading--h3 {
-}
-
-%heading--small {
-}
-
-%heading--bold {
-}
-
+// Remove text transforming
 %no-text-transform {
   text-transform: none;
 }

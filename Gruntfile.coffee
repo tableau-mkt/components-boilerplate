@@ -6,28 +6,28 @@ module.exports = (grunt) ->
         livereload: true
 
       sass:
-        files: ['sass/{,**/}*.{scss,sass}']
+        files: ['components/{,**/}*.{scss,sass}']
         tasks: ['compass:dist']
 
       kss:
         files: [
-          'css/{,**/}*.css'
-          'sass/{,**/}*.{hbs,html}'
+          'dist/css/{,**/}*.css'
+          'components/{,**/}*.{hbs,html}'
         ]
         tasks: ['shell:kss']
 
       js:
-        files: ['sass/{,**/}*.js']
+        files: ['components/{,**/}*.js']
         tasks: ['concat:dist']
 
     compass:
       dist:
         options:
-          cssDir: 'css'
+          cssDir: 'dist/css'
           sassDir: 'sass'
           imagesDir: 'images'
           generatedImagesDir: 'images/generated'
-          javascriptsDir: 'js'
+          javascriptsDir: 'dist/js'
           require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
           outputStyle: 'expanded'
           bundleExec: true
@@ -42,9 +42,9 @@ module.exports = (grunt) ->
     concat:
       options:
         separator: ";\n"
-      dist: 
-        src: 'sass/{,**/}*.js'
-        dest: 'js/scripts.js'
+      dist:
+        src: 'components/{,**/}*.js'
+        dest: 'dist/js/scripts.js'
 
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-concat'

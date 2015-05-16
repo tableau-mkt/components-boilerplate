@@ -1,12 +1,3 @@
-@import "susy";
-
-$grid-columns: 12;
-$tablet: 740px;
-$susy: (
-  columns: $grid-columns,
-);
-
-
 /*
 Grids
 
@@ -20,6 +11,12 @@ Markup: grid.hbs
 
 Styleguide grids
 */
+
+$grid-columns: 12;
+$tablet: 740px;
+$susy: (
+  columns: $grid-columns,
+);
 
 @for $i from 1 through $grid-columns {
   .grid-#{$i} {

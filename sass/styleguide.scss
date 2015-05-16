@@ -1,16 +1,5 @@
 // Keep the component styles isolated to the preview container.
 .kss-example-preview {
-  // Import external libraries.
-  @import "compass";
-  @import "susy";
-  @import "breakpoint";
-  @import "toolkit";
+  @import 'style';
 
-  // Import components and such.
-  @import "variables/**/*";
-  @import "abstractions/**/*";
-  @import "mixins/**/*";
-  @import "placeholders/**/*";
-  @import "functions/**/*";
-  @import "components/**/*";
 }

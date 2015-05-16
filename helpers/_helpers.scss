@@ -1,0 +1,67 @@
+/**
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
+
+/*
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/ 
+.iframe-4-3,
+.iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%; /* 4:3 */ 
+  height: 0;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.iframe-16-9 {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+// Relatively position an element
+.relative {
+  position: relative;
+  overflow: hidden;
+}
+
+// Absolutely position an element
+.absolute {
+  position: absolute;
+  overflow: hidden;
+}
+
+// Zero out the margins of an element
+.margin-zero {
+  margin: 0;
+}
+
+// Zero out the padding of an element
+.padding-zero {
+  padding: 0;
+}
+
+// Clear floating of child elements
+.clearfix {
+  @extend %clearfix;
+}
+
+// Hide the element from being displayed
+.hide {
+  display: none;
+}
+
+@include breakpoint($mobile) {
+  // Hide the element from display only on the mobile breakpoint
+  .mobile-hide {
+    display: none;
+  }
+}

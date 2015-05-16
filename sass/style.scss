@@ -4,10 +4,11 @@
 @import "breakpoint";
 @import "toolkit";
 
-// import components
-@import "variables/**/*";
-@import "abstractions/**/*";
-@import "mixins/**/*";
-@import "placeholders/**/*";
-@import "functions/**/*";
-@import "components/**/*";
+// Import helpers
+@import "../helpers/variables/*";
+@import "../helpers/functions/*";
+@import "../helpers/mixins/*";
+@import "../helpers/*";
+
+// Import components
+@import "../components/**/*";

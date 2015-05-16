@@ -1,14 +1,14 @@
 {
   "css": [
     "public/styles.css",
-    "../css/styleguide.css"
+    "../dist/css/styleguide.css"
   ],
   "js": [
-  "../js/jquery.min.js",
-    "../js/scripts.js"
+  "../vendor/jquery.min.js",
+    "../dist/js/scripts.js"
   ],
   "homepage": "../template/homepage.md",
-  "source": "../sass",
+  "source": "../components",
   "destination": "../styleguide",
   "template": "../template"
 }

@@ -1,0 +1,15 @@
+/*
+Transform mixin
+
+Parameters:
+  $properties - The transform properties being used
+
+Returns:
+  Vendor prefixed transform rules
+*/
+
+@mixin transform($properties...) {
+  -webkit-transform: $properties;
+      -ms-transform: $properties;
+          transform: $properties;
+}

@@ -5,7 +5,7 @@ Converts a unit to ems based on either the base font-size or a given context.
 For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
 base font-size of 16px.
 
-Styleguide 9.1
+Styleguide functions.em
 */
 
 @function em($target, $context: $base-font-size) {

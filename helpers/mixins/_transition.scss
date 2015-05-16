@@ -1,0 +1,16 @@
+/*
+Transition mixin
+
+Parameters:
+  $properties - The transition properties being used
+
+Returns:
+  Vendor prefixed transition rules
+*/
+
+@mixin transition($properties...) {
+  -webkit-transition: $properties;
+     -moz-transition: $properties;
+       -o-transition: $properties;
+          transition: $properties;
+}

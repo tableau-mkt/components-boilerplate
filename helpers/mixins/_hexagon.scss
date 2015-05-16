@@ -1,13 +1,11 @@
-// Makes a CSS hexagon! based off of http://csshexagon.com/
-
 /*
 CSS Hexagon
 
 Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
 hexagon to be as well as an optional border if you'd like the hexagon to be just
- an outline rather thna a filled shape.
+an outline rather thna a filled shape.
 
-Styleguide 10.5
+Based off of http://csshexagon.com/
 */
 
 @mixin hexagon($size, $color, $border: 0) {

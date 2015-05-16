@@ -1,23 +1,22 @@
-
 /**
- * TC15 Color Palette 
+ * Color Palette 
  */
 
-// Tableau Foundation Color Pallet
+// Tableau Colors
 $dark-blue: #1f447d;
 $teal: #7099a6;
 $salmon: #e36e4d;
 $bright-teal: #7ebac3;
 $green: #588e3c;
 $navy: #283451;
-$light-gray: #f2f2f2;
-
 
 // Base colors
 $gray: #999;
+$light-gray: #f2f2f2;
 $dark-gray: #333;
 $white: #fff;
 
+// Theme colors map
 $theme-colors: (
   dark-blue: $dark-blue,
   teal: $teal,
@@ -40,14 +39,9 @@ $salmon-dark: #cd5d3d;
 $green-dark: #4D7D34;
 $teal-dark: #557D8A;
 
-/**
- * Theme Colors
- */
+// Typographic colors
 $base-font-color: $dark-gray;
 $link-color: $teal;
 
-
-/** 
- * Misc Colors
- */
- $error: #DD1E06;
+// Misc colors
+$error: #DD1E06;

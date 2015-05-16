@@ -1,0 +1,14 @@
+/*
+Box sizing mixin
+
+Parameters:
+  $value - The value to pass to the box-sizing rule
+
+Returns:
+  Vendor prefixed box-sizing rules
+*/
+
+@mixin box-sizing($value) {
+  -moz-box-sizing: $value;
+       box-sizing: $value;
+}
