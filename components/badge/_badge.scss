@@ -24,8 +24,8 @@ Styleguide boxes.badge
   height: 200px;
   display: inline-block;
   padding: 20px;
-  background: $dark-blue;
-  border: 3px solid $dark-blue;
+  background: $bg-about-featured;
+  border: 3px solid $bg-about-featured;
   color: $white;
   border-radius: 50%;
   text-align: center;
@@ -34,23 +34,18 @@ Styleguide boxes.badge
 
   &.badge--outlined {
     background: none;
-    color: $dark-blue;
   }
 
-  @each $name, $color in $theme-colors {
+  @each $name, $colors in $background-colors {
     &.badge--#{"" + $name} {
-      background: $color;
-      border-color: $color;
+      background: nth($colors, 1);
+      border-color: nth($colors, 1);
+      color: nth($colors, 2);
 
       &.badge--outlined {
         background: none;
-        color: $color;
+        color: nth($colors, 1);
       }
     }
-  }
-
-  &.badge--light-gray,
-  &.badge--white {
-    color: $dark-blue;
   }
 }
