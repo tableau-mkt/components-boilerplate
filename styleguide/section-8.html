@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tableau SASS Components</title>
+  <title>Tableau Styleguide</title>
+  <!-- <title></title> -->
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="public/styles.css">
+<link rel="stylesheet" href="../css/styleguide.css">
+
 </head>
 <body class="kss">
+
   <header class="kss-header kss-clearfix">
     <div class="kss-logo kss-left">
       <a href="./">
@@ -22,102 +27,121 @@
       </a>
     </div>
     <div class="kss-right">
-      <h1>SASS Components</h1>
+      <h1>Styleguide</h1>
+      <!-- <h1></h1> -->
     </div>
   </header>
 
   <div class="kss-main kss-clearfix">
-    <aside class="kss-nav kss-left">
-      <nav>
-        <ul>
-          <li><a href="./">Overview</a></li>
-          <li><a href="section-1.html">Typography</a>
-            <ul>
-                <li><a href="section-1.html#1.1">Base Copy</a></li>
-                <li><a href="section-1.html#1.2">Headings</a></li>
-                <li><a href="section-1.html#1.3">Formatted Text</a></li>
-            </ul>
-          </li>
-          <li><a href="section-2.html">Links</a>
-            <ul>
-                <li><a href="section-2.html#2.1">CTA</a></li>
-            </ul>
-          </li>
-          <li><a href="section-3.html">Boxes &amp; Containers</a>
-            <ul>
-                <li><a href="section-3.html#3.1">Padded box</a></li>
-                <li><a href="section-3.html#3.3">Badges</a></li>
-                <li><a href="section-3.html#3.4">Colored Backgrounds</a></li>
-                <li><a href="section-3.html#3.5">Marginless Stretchy Boxes</a></li>
-                <li><a href="section-3.html#3.6">Vertical Spacer</a></li>
-            </ul>
-          </li>
-          <li><a href="section-4.html">Tables</a>
-            <ul>
-                <li><a href="section-4.html#4.1">Standard Table</a></li>
-            </ul>
-          </li>
-          <li><a href="section-5.html">Navigation</a>
-            <ul>
-                <li><a href="section-5.html#5.1">Main Menu</a></li>
-                <li><a href="section-5.html#5.2">Sidebar Nav</a></li>
-            </ul>
-          </li>
-          <li><a href="section-6.html">Interactive Components</a>
-            <ul>
-                <li><a href="section-6.html#6.1">Accordion</a></li>
-                <li><a href="section-6.html#6.2">Sticky elements</a></li>
-                <li><a href="section-6.html#6.3">Content Reveal</a></li>
-                <li><a href="section-6.html#6.4">Popups</a></li>
-            </ul>
-          </li>
-          <li><a href="section-7.html">Form Styles</a>
-            <ul>
-                <li><a href="section-7.html#7.1">Input Fields</a></li>
-                <li><a href="section-7.html#7.2">Submit Buttons</a></li>
-                <li><a href="section-7.html#7.3">Validation Messages</a></li>
-                <li><a href="section-7.html#7.3">Confirmation Messages</a></li>
-            </ul>
-          </li>
-          <li><a href="section-8.html">Content Lists</a>
-            <ul>
-                <li><a href="section-8.html#8.1">Basic Teaser List</a></li>
-                <li><a href="section-8.html#8.2">Full-width Teaser List</a></li>
-            </ul>
-          </li>
-          <li><a href="section-9.html">Functions</a>
-            <ul>
-                <li><a href="section-9.html#9.1">EM converter</a></li>
-            </ul>
-          </li>
-          <li><a href="section-10.html">Mixins</a>
-            <ul>
-                <li><a href="section-10.html#10.5">CSS Hexagon</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <nav class="kss-nav kss-left">
+      <ul class="kss-nav__menu">
+        <li class="kss-nav__menu-item">
+          <a href="./">
+            Overview
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-1.html">
+            Typography
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-4.html">
+            Tables
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-5.html">
+            Navigation
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-8.html">
+            Content Lists
+          </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-8.html#kssref-8-1">
+                  Basic Teaser List
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-8.html#kssref-8-2">
+                  Full-width Teaser List
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-9.html">
+            Functions
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-10.html">
+            Mixins
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-boxes.html">
+            Boxes &amp; Containers
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-forms.html">
+            Form Styles
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-interactive.html">
+            Interactive Components
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-links.html">
+            Links
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <article class="kss-content kss-right">
+    <article role="main" class="kss-content kss-right">
 
-          <h2 class="kss-title">Content Lists <span class="kss-ref">(8.0)</span></h2>
+          <div id="kssref-8" class="kss-section kss-section--depth-1">
 
-
-
-          <div class="kss-description"><p>Lists of content that generally have a title, thumbnail and/or a description and link through to the full version of the content.</p>
-</div>
-
-
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="8.1" class="kss-title">Basic Teaser List <span class="kss-ref">(8.1)</span></h3>
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-8"> -->
+              Content Lists
+            <!-- </a> -->
+          </h2>
 
 
-          <div class="kss-description"><p>A basic list of teasers, used for things like a list of blog posts.</p>
-</div>
+          <div class="kss-description">
+            <p>Lists of content that generally have a title, thumbnail and/or a description and link through to the full version of the content.</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+
+          </div>
+          <section id="kssref-8-1" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-8-1"> -->
+              Basic Teaser List
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>A basic list of teasers, used for things like a list of blog posts.</p>
+
+          </div>
+        </div>
+
+          <h4>Examples</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-details">
@@ -147,14 +171,13 @@
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>Variation with a colored box around the title</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.teaser-list--colored-title</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <div class="teaser-list grid-4 teaser-list--colored-title">
+                  <div class="teaser-list grid-4 {$modifiers}">
   <a href="#">
     <div class="teaser-list__thumbnail">
       <img src="http://placecage.com/300/200">
@@ -175,7 +198,7 @@
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;teaser-list grid-4 {$modifiers}&quot;&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;teaser-list grid-4 {$modifiers}&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;
     &lt;div class=&quot;teaser-list__thumbnail&quot;&gt;
       &lt;img src=&quot;http://placecage.com/300/200&quot;&gt;
@@ -189,19 +212,27 @@
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/a&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
+          <section id="kssref-8-2" class="kss-section kss-section--depth-2">
 
-        <section class="kss-depth-2 kss-component">
-          <h3 id="8.2" class="kss-title">Full-width Teaser List <span class="kss-ref">(8.2)</span></h3>
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-8-2"> -->
+              Full-width Teaser List
+            <!-- </a> -->
+          </h3>
 
 
-          <div class="kss-description"><p>A full-width list of teasers, used for things like a list of blog posts.</p>
-</div>
+          <div class="kss-description">
+            <p>A full-width list of teasers, used for things like a list of blog posts.</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Example</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
@@ -232,7 +263,7 @@
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;teaser-list teaser-list--full-width&quot;&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;teaser-list teaser-list--full-width&quot;&gt;
   &lt;div class=&quot;teaser-list__thumbnail grid-3&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;
       &lt;img src=&quot;http://placecage.com/223/223&quot;&gt;
@@ -252,35 +283,24 @@
       &lt;a href=&quot;/blog/another-post&quot;&gt;Read More&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
     </article>
   </div>
-
-  <footer class="kss-footer kss-clearfix">
-    <p>
-      © <a href="http://www.tableau.com" target="_blank">Tableau Software</a>. All Rights Reserved. <br>
-      Generated by <a href="https://github.com/kss-node/kss-node" target="_blank">kss-node</a>. 
-    </p>
-  </footer>
 
   <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>
-    window.jQuery || document.write('<script src="public/jquery.min.js"><\/script>')
+    prettyPrint();
   </script>
-  <script>
-    $(document).ready(function(){
-      // Ensure code blocks are highlighted properly...
-      $('pre>code').addClass('prettyprint');
-      prettyPrint();
-    });
-  </script>
+  
+
 
   <script src="//localhost:35729/livereload.js"></script>
+
+  <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

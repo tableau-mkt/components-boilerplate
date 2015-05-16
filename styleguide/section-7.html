@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tableau SASS Components</title>
+  <title></title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body class="kss">
+
   <header class="kss-header kss-clearfix">
     <div class="kss-logo kss-left">
       <a href="./">
@@ -22,94 +25,128 @@
       </a>
     </div>
     <div class="kss-right">
-      <h1>SASS Components</h1>
+      <h1></h1>
     </div>
   </header>
 
   <div class="kss-main kss-clearfix">
-    <aside class="kss-nav kss-left">
-      <nav>
-        <ul>
-          <li><a href="./">Overview</a></li>
-          <li><a href="section-1.html">Typography</a>
-            <ul>
-                <li><a href="section-1.html#1.1">Base Copy</a></li>
-                <li><a href="section-1.html#1.2">Headings</a></li>
-                <li><a href="section-1.html#1.3">Formatted Text</a></li>
-            </ul>
-          </li>
-          <li><a href="section-2.html">Links</a>
-            <ul>
-                <li><a href="section-2.html#2.1">CTA</a></li>
-            </ul>
-          </li>
-          <li><a href="section-3.html">Boxes &amp; Containers</a>
-            <ul>
-                <li><a href="section-3.html#3.1">Padded box</a></li>
-                <li><a href="section-3.html#3.3">Badges</a></li>
-                <li><a href="section-3.html#3.4">Colored Backgrounds</a></li>
-                <li><a href="section-3.html#3.5">Marginless Stretchy Boxes</a></li>
-                <li><a href="section-3.html#3.6">Vertical Spacer</a></li>
-            </ul>
-          </li>
-          <li><a href="section-4.html">Tables</a>
-            <ul>
-                <li><a href="section-4.html#4.1">Standard Table</a></li>
-            </ul>
-          </li>
-          <li><a href="section-5.html">Navigation</a>
-            <ul>
-                <li><a href="section-5.html#5.1">Main Menu</a></li>
-                <li><a href="section-5.html#5.2">Sidebar Nav</a></li>
-            </ul>
-          </li>
-          <li><a href="section-6.html">Interactive Components</a>
-            <ul>
-                <li><a href="section-6.html#6.1">Accordion</a></li>
-                <li><a href="section-6.html#6.2">Sticky elements</a></li>
-                <li><a href="section-6.html#6.3">Content Reveal</a></li>
-                <li><a href="section-6.html#6.4">Popups</a></li>
-            </ul>
-          </li>
-          <li><a href="section-7.html">Form Styles</a>
-            <ul>
-                <li><a href="section-7.html#7.1">Input Fields</a></li>
-                <li><a href="section-7.html#7.2">Submit Buttons</a></li>
-                <li><a href="section-7.html#7.3">Validation Messages</a></li>
-                <li><a href="section-7.html#7.3">Confirmation Messages</a></li>
-            </ul>
-          </li>
-          <li><a href="section-8.html">Content Lists</a>
-            <ul>
-                <li><a href="section-8.html#8.1">Basic Teaser List</a></li>
-                <li><a href="section-8.html#8.2">Full-width Teaser List</a></li>
-            </ul>
-          </li>
-          <li><a href="section-9.html">Functions</a>
-            <ul>
-                <li><a href="section-9.html#9.1">EM converter</a></li>
-            </ul>
-          </li>
-          <li><a href="section-10.html">Mixins</a>
-            <ul>
-                <li><a href="section-10.html#10.5">CSS Hexagon</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <nav class="kss-nav kss-left">
+      <ul class="kss-nav__menu">
+        <li class="kss-nav__menu-item">
+          <a href="./">
+            <!-- <span class="kss-nav__ref">0</span> -->
+            <span class="kss-nav__name">Overview</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-1.html">
+            <!-- <span class="kss-nav__ref">1</span> -->
+            <span class="kss-nav__name">Typography</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-4.html">
+            <!-- <span class="kss-nav__ref">4</span> -->
+            <span class="kss-nav__name">Tables</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-5.html">
+            <!-- <span class="kss-nav__ref">5</span> -->
+            <span class="kss-nav__name">Navigation</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-7.html">
+            <!-- <span class="kss-nav__ref">7</span> -->
+            <span class="kss-nav__name">Form Styles</span>
+          </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-7.html#kssref-7-1">
+                  <!-- <span class="kss-nav__ref">7.1</span> -->
+                  <span class="kss-nav__name">Input Fields</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-7.html#kssref-7-2">
+                  <!-- <span class="kss-nav__ref">7.2</span> -->
+                  <span class="kss-nav__name">Submit Buttons</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-7.html#kssref-7-3">
+                  <!-- <span class="kss-nav__ref">7.3</span> -->
+                  <span class="kss-nav__name">Confirmation Messages</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-7.html#kssref-7-3">
+                  <!-- <span class="kss-nav__ref">7.3</span> -->
+                  <span class="kss-nav__name">Validation Messages</span>
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-8.html">
+            <!-- <span class="kss-nav__ref">8</span> -->
+            <span class="kss-nav__name">Content Lists</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-9.html">
+            <!-- <span class="kss-nav__ref">9</span> -->
+            <span class="kss-nav__name">Functions</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-10.html">
+            <!-- <span class="kss-nav__ref">10</span> -->
+            <span class="kss-nav__name">Mixins</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-boxes.html">
+            <!-- <span class="kss-nav__ref">11</span> -->
+            <span class="kss-nav__name">Boxes &amp; Containers</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-interactive.html">
+            <!-- <span class="kss-nav__ref">12</span> -->
+            <span class="kss-nav__name">Interactive Components</span>
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-links.html">
+            <!-- <span class="kss-nav__ref">13</span> -->
+            <span class="kss-nav__name">Links</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <article class="kss-content kss-right">
+    <article role="main" class="kss-content kss-right">
 
-          <h2 class="kss-title">Form Styles <span class="kss-ref">(7.0)</span></h2>
+          <div id="kssref-7" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h1 class="kss-title kss-title--level-1">
+            <a class="kss-title__permalink" href="#kssref-7">
+              Form Styles
+            </a>
+          </h1>
 
 
-
-          <div class="kss-description"><p>Form elements such as text fields and submit buttons used to make forms that the
+          <div class="kss-description">
+            <p>Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here&#39;s an example form:</p>
-</div>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Example</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
@@ -129,7 +166,7 @@ user can submit information through. Here&#39;s an example form:</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;label for=&quot;first-name&quot;&gt;First Name:&lt;/label&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;label for=&quot;first-name&quot;&gt;First Name:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;first-name&quot; id=&quot;first-name&quot;/&gt;
 &lt;br&gt;
 &lt;label for=&quot;last-name&quot;&gt;Last Name:&lt;/label&gt;
@@ -138,18 +175,27 @@ user can submit information through. Here&#39;s an example form:</p>
 &lt;label for=&quot;email-field&quot;&gt;Email:&lt;/label&gt;
 &lt;input type=&quot;email&quot; name=&quot;email-field&quot; id=&quot;email-field&quot;/&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</pre>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</code></pre>
           </div>
 
+          </div>
+          <section id="kssref-7-1" class="kss-section kss-section--depth-2">
 
-        <section class="kss-depth-2 kss-component">
-          <h3 id="7.1" class="kss-title">Input Fields <span class="kss-ref">(7.1)</span></h3>
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-7-1">
+              Input Fields
+            </a>
+          </h2>
 
 
-          <div class="kss-description"><p>Nothing to see here yet...</p>
-</div>
+          <div class="kss-description">
+            <p>Nothing to see here yet...</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Example</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
@@ -167,26 +213,34 @@ user can submit information through. Here&#39;s an example form:</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;label for=&quot;text-field&quot;&gt;Text Field:&lt;/label&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;label for=&quot;text-field&quot;&gt;Text Field:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;text-field&quot; id=&quot;text-field&quot;/&gt;
 &lt;br&gt;
 &lt;label for=&quot;email-field&quot;&gt;Email Field:&lt;/label&gt;
 &lt;input type=&quot;email&quot; name=&quot;email-field&quot; id=&quot;email-field&quot;/&gt;
 &lt;br&gt;
 &lt;label for=&quot;password-field&quot;&gt;Password Field:&lt;/label&gt;
-&lt;input type=&quot;password&quot; name=&quot;password-field&quot; id=&quot;password-field&quot;/&gt;</pre>
+&lt;input type=&quot;password&quot; name=&quot;password-field&quot; id=&quot;password-field&quot;/&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
+          <section id="kssref-7-2" class="kss-section kss-section--depth-2">
 
-        <section class="kss-depth-2 kss-component">
-          <h3 id="7.2" class="kss-title">Submit Buttons <span class="kss-ref">(7.2)</span></h3>
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-7-2">
+              Submit Buttons
+            </a>
+          </h2>
 
 
-          <div class="kss-description"><p>Nothing to see here yet...</p>
-</div>
+          <div class="kss-description">
+            <p>Nothing to see here yet...</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Examples</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-details">
@@ -202,61 +256,66 @@ user can submit information through. Here&#39;s an example form:</p>
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>In the process of submitting</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.submitting</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <input type="submit" class="cta submitting" value="Submit submitting" />
+                  <input type="submit" class="cta {$modifiers}" value="Submit {$modifiers}" />
                 </div>
               </div>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>Successfully submitted</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.submitted</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <input type="submit" class="cta submitted" value="Submit submitted" />
+                  <input type="submit" class="cta {$modifiers}" value="Submit {$modifiers}" />
                 </div>
               </div>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>Error occured while submitting</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.errored</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
-                  <input type="submit" class="cta errored" value="Submit errored" />
+                  <input type="submit" class="cta {$modifiers}" value="Submit {$modifiers}" />
                 </div>
               </div>
           </div>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;input type=&quot;submit&quot; class=&quot;cta {$modifiers}&quot; value=&quot;Submit {$modifiers}&quot; /&gt;</pre>
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;input type=&quot;submit&quot; class=&quot;cta {$modifiers}&quot; value=&quot;Submit {$modifiers}&quot; /&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
+          <section id="kssref-7-3" class="kss-section kss-section--depth-2">
 
-        <section class="kss-depth-2 kss-component">
-          <h3 id="7.3" class="kss-title">Validation Messages <span class="kss-ref">(7.3)</span></h3>
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-7-3">
+              Confirmation Messages
+            </a>
+          </h2>
 
 
-          <div class="kss-description"><p>Nothing to see here yet...</p>
-</div>
+          <div class="kss-description">
+            <p>Nothing to see here yet...</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Example</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
@@ -267,58 +326,55 @@ user can submit information through. Here&#39;s an example form:</p>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;span class=&quot;invalid&quot;&gt;This is an error message&lt;/span&gt;</pre>
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;span class=&quot;invalid&quot;&gt;This is an error message&lt;/span&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
+          <section id="kssref-7-3" class="kss-section kss-section--depth-2">
 
-        <section class="kss-depth-2 kss-component">
-          <h3 id="7.3" class="kss-title">Confirmation Messages <span class="kss-ref">(7.3)</span></h3>
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-7-3">
+              Validation Messages
+            </a>
+          </h2>
 
 
-          <div class="kss-description"><p>Nothing to see here yet...</p>
-</div>
+          <div class="kss-description">
+            <p>Nothing to see here yet...</p>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Example</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
-                <span class="confirmation">This is a confirmation message</span>
+                <span class="invalid">This is an error message</span>
               </div>
             </div>
           </div>
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;span class=&quot;confirmation&quot;&gt;This is a confirmation message&lt;/span&gt;</pre>
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;span class=&quot;invalid&quot;&gt;This is an error message&lt;/span&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
     </article>
   </div>
-
-  <footer class="kss-footer kss-clearfix">
-    <p>
-      © <a href="http://www.tableau.com" target="_blank">Tableau Software</a>. All Rights Reserved. <br>
-      Generated by <a href="https://github.com/kss-node/kss-node" target="_blank">kss-node</a>. 
-    </p>
-  </footer>
 
   <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>
-    window.jQuery || document.write('<script src="public/jquery.min.js"><\/script>')
+    prettyPrint();
   </script>
-  <script>
-    $(document).ready(function(){
-      // Ensure code blocks are highlighted properly...
-      $('pre>code').addClass('prettyprint');
-      prettyPrint();
-    });
-  </script>
+  
+
 
   <script src="//localhost:35729/livereload.js"></script>
+
+  <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

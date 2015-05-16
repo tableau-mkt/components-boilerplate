@@ -1,0 +1,16 @@
+{
+  "name": "kss-node-template",
+  "version": "2.1.0",
+  "description": "The default template for kss-node.",
+  "main": "template_config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "less": "./node_modules/.bin/lessc --verbose --compress public/kss.less public/kss.css"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^1.1.2",
+  }
+}

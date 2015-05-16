@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tableau SASS Components</title>
+  <title>Tableau Styleguide</title>
+  <!-- <title></title> -->
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="public/styles.css">
+<link rel="stylesheet" href="../css/styleguide.css">
+
 </head>
 <body class="kss">
+
   <header class="kss-header kss-clearfix">
     <div class="kss-logo kss-left">
       <a href="./">
@@ -22,930 +27,95 @@
       </a>
     </div>
     <div class="kss-right">
-      <h1>SASS Components</h1>
+      <h1>Styleguide</h1>
+      <!-- <h1></h1> -->
     </div>
   </header>
 
   <div class="kss-main kss-clearfix">
-    <aside class="kss-nav kss-left">
-      <nav>
-        <ul>
-          <li><a href="./">Overview</a></li>
-          <li><a href="section-1.html">Typography</a>
-            <ul>
-                <li><a href="section-1.html#1.1">Base Copy</a></li>
-                <li><a href="section-1.html#1.2">Headings</a></li>
-                <li><a href="section-1.html#1.3">Formatted Text</a></li>
-            </ul>
-          </li>
-          <li><a href="section-2.html">Links</a>
-            <ul>
-                <li><a href="section-2.html#2.1">CTA</a></li>
-            </ul>
-          </li>
-          <li><a href="section-3.html">Boxes &amp; Containers</a>
-            <ul>
-                <li><a href="section-3.html#3.1">Padded box</a></li>
-                <li><a href="section-3.html#3.3">Badges</a></li>
-                <li><a href="section-3.html#3.4">Colored Backgrounds</a></li>
-                <li><a href="section-3.html#3.5">Marginless Stretchy Boxes</a></li>
-                <li><a href="section-3.html#3.6">Vertical Spacer</a></li>
-            </ul>
-          </li>
-          <li><a href="section-4.html">Tables</a>
-            <ul>
-                <li><a href="section-4.html#4.1">Standard Table</a></li>
-            </ul>
-          </li>
-          <li><a href="section-5.html">Navigation</a>
-            <ul>
-                <li><a href="section-5.html#5.1">Main Menu</a></li>
-                <li><a href="section-5.html#5.2">Sidebar Nav</a></li>
-            </ul>
-          </li>
-          <li><a href="section-6.html">Interactive Components</a>
-            <ul>
-                <li><a href="section-6.html#6.1">Accordion</a></li>
-                <li><a href="section-6.html#6.2">Sticky elements</a></li>
-                <li><a href="section-6.html#6.3">Content Reveal</a></li>
-                <li><a href="section-6.html#6.4">Popups</a></li>
-            </ul>
-          </li>
-          <li><a href="section-7.html">Form Styles</a>
-            <ul>
-                <li><a href="section-7.html#7.1">Input Fields</a></li>
-                <li><a href="section-7.html#7.2">Submit Buttons</a></li>
-                <li><a href="section-7.html#7.3">Validation Messages</a></li>
-                <li><a href="section-7.html#7.3">Confirmation Messages</a></li>
-            </ul>
-          </li>
-          <li><a href="section-8.html">Content Lists</a>
-            <ul>
-                <li><a href="section-8.html#8.1">Basic Teaser List</a></li>
-                <li><a href="section-8.html#8.2">Full-width Teaser List</a></li>
-            </ul>
-          </li>
-          <li><a href="section-9.html">Functions</a>
-            <ul>
-                <li><a href="section-9.html#9.1">EM converter</a></li>
-            </ul>
-          </li>
-          <li><a href="section-10.html">Mixins</a>
-            <ul>
-                <li><a href="section-10.html#10.5">CSS Hexagon</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <nav class="kss-nav kss-left">
+      <ul class="kss-nav__menu">
+        <li class="kss-nav__menu-item">
+          <a href="./">
+            Overview
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-1.html">
+            Typography
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-4.html">
+            Tables
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-5.html">
+            Navigation
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-8.html">
+            Content Lists
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-9.html">
+            Functions
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-10.html">
+            Mixins
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-boxes.html">
+            Boxes &amp; Containers
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-forms.html">
+            Form Styles
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-interactive.html">
+            Interactive Components
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-links.html">
+            Links
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <article class="kss-content kss-right">
+    <article role="main" class="kss-content kss-right">
 
-          <h2 class="kss-title">Boxes &amp; Containers <span class="kss-ref">(3.0)</span></h2>
+          <section id="kssref-3-6" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-3-6"> -->
+              Vertical Spacer
+            <!-- </a> -->
+          </h3>
 
 
-
-          <div class="kss-description"><p>Used as wrappers to apply certain styles around elements.</p>
-</div>
-
-
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="3.1" class="kss-title">Padded box <span class="kss-ref">(3.1)</span></h3>
-
-
-          <div class="kss-description"><p>Adds padding to a container element. The <code>.box--teal</code> class is used
-to differentiate the box from the background. You will usually want to use a
-padded box on a container with a background color.</p>
-</div>
-
-          <h4>Examples:</h4>
-          <div class="kss-examples">
-            <div class="kss-example kss-example__default">
-              <div class="kss-example-details">
-                <div class="kss-example-desc">
-                  <h6>Default styling</h6>
-                </div>
-              </div>
-              <div class="kss-example-preview">
-                <div class="box__padded {$modifiers} box--teal">
-  <h4>A box with some nice padding</h4>
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-              </div>
-            </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>A box with 1em of padding</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box__padded--one</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box__padded box__padded--one box--teal">
-  <h4>A box with some nice padding</h4>
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p><strong>[Default]</strong> A box with 2em of padding</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box__padded--two</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box__padded box__padded--two box--teal">
-  <h4>A box with some nice padding</h4>
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>A box with 3em of padding</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box__padded--three</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box__padded box__padded--three box--teal">
-  <h4>A box with some nice padding</h4>
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>A box with 4em of padding</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box__padded--four</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box__padded box__padded--four box--teal">
-  <h4>A box with some nice padding</h4>
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                </div>
-              </div>
-          </div>
-
-          <h4>Markup:</h4>
-          <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;box__padded {$modifiers} box--teal&quot;&gt;
-  &lt;h4&gt;A box with some nice padding&lt;/h4&gt;
-  &lt;p&gt;
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore! Consectetur minus imperdiet fringilla est, posuere, repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
-          </div>
-
-        </section>
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="3.3" class="kss-title">Badges <span class="kss-ref">(3.3)</span></h3>
-
-
-          <div class="kss-description"><p>The branding system makes use of a location-specific badge, including the dates and associated conference hashtag. As the conference travels, the badge can be updated to reflect the new locations, adding a custom element to the branding system. An outlined badge uses the <code>badge-outlined</code> class.</p>
-</div>
-
-          <h4>Examples:</h4>
-          <div class="kss-examples">
-            <div class="kss-example kss-example__default">
-              <div class="kss-example-details">
-                <div class="kss-example-desc">
-                  <h6>Default styling</h6>
-                </div>
-              </div>
-              <div class="kss-example-preview">
-                <div class="badge {$modifiers}">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined {$modifiers}">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-              </div>
-            </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Dark bluecolored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--dark-blue</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--dark-blue">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--dark-blue">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Blue colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--teal</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--teal">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--teal">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Salmon colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--salmon</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--salmon">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--salmon">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Bright teal colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--bright-teal</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--bright-teal">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--bright-teal">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Green colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--green</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--green">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--green">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Navy colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--navy</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--navy">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--navy">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Light graycolored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--light-gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--light-gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--light-gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Gray colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Dark gray colored badge</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--dark-gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--dark-gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--dark-gray">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>White colored badge for colored backgrounds</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.badge--white</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="badge badge--white">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<div class="badge badge--outlined badge--white">
-  <div class="badge__content">
-    <h2>
-      Example<br>
-      Badge
-    </h2>
-    <h1>Number</h1>
-    <h5>Some details and stuff</h5>
-    <h6>Something Else</h6>
-  </div>
-</div>
-                </div>
-              </div>
-          </div>
-
-          <h4>Markup:</h4>
-          <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;badge {$modifiers}&quot;&gt;
-  &lt;div class=&quot;badge__content&quot;&gt;
-    &lt;h2&gt;
-      Example&lt;br&gt;
-      Badge
-    &lt;/h2&gt;
-    &lt;h1&gt;Number&lt;/h1&gt;
-    &lt;h5&gt;Some details and stuff&lt;/h5&gt;
-    &lt;h6&gt;Something Else&lt;/h6&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&lt;div class=&quot;badge badge--outlined {$modifiers}&quot;&gt;
-  &lt;div class=&quot;badge__content&quot;&gt;
-    &lt;h2&gt;
-      Example&lt;br&gt;
-      Badge
-    &lt;/h2&gt;
-    &lt;h1&gt;Number&lt;/h1&gt;
-    &lt;h5&gt;Some details and stuff&lt;/h5&gt;
-    &lt;h6&gt;Something Else&lt;/h6&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-          </div>
-
-        </section>
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="3.4" class="kss-title">Colored Backgrounds <span class="kss-ref">(3.4)</span></h3>
-
-
-          <div class="kss-description"><p>These classes will apply a background to any container div. It does not apply
-any other styles, except the background-color and a text color if needed for
-legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
-just to make the examples look better.</p>
-</div>
-
-          <h4>Examples:</h4>
-          <div class="kss-examples">
-            <div class="kss-example kss-example__default">
-              <div class="kss-example-details">
-                <div class="kss-example-desc">
-                  <h6>Default styling</h6>
-                </div>
-              </div>
-              <div class="kss-example-preview">
-                <div class="{$modifiers} grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-              </div>
-            </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with dark-blue background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--dark-blue</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--dark-blue grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with teal background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--teal</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--teal grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with salmon background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--salmon</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--salmon grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with bright-teal background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--bright-teal</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--bright-teal grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with green background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--green</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--green grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with navy background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--navy</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--navy grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with light gray background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--light-gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--light-gray grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with gray background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--gray grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with dark-gray background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--dark-gray</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--dark-gray grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Box with white background.</p>
-
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.box--white</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="box--white grid-6 box__padded">
-  <p>
-    This sentence demonstrates <a href="#">a link in content</a> to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  </p>
-</div>
-                </div>
-              </div>
-          </div>
-
-          <h4>Markup:</h4>
-          <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers} grid-6 box__padded&quot;&gt;
-  &lt;p&gt;
-    This sentence demonstrates &lt;a href=&quot;#&quot;&gt;a link in content&lt;/a&gt; to see how links look on this color. Sit sed maecenas ratione molestias qui, bibendum vulputate ut! Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
-          </div>
-
-        </section>
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="3.5" class="kss-title">Marginless Stretchy Boxes <span class="kss-ref">(3.5)</span></h3>
-
-
-          <div class="kss-description"><p>Percentage width boxes that butt up against eachother with no margin. Typically,
-a collored background would be applied with a <code>.box--{color}</code> class.
-In a mobile layout, all stretchy boxes default to stacking one ontop of the other
-and in a tablet layout stretchy boxes default to a 50% split. A
-<code>.box__stretchy--tablet-full</code> class can be applied to a box to force
-it to be full-width on a tablet. This is useful when there are an odd number of
-boxes and you want to fill the extra blank space.</p>
-</div>
-
-          <h4>Examples:</h4>
-          <div class="kss-examples">
-            <div class="kss-example kss-example__default">
-              <div class="kss-example-preview">
-                <div class="box__stretchy box__stretchy--fifths">
-  <p>Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.</p>
-</div>
-<div class="box__stretchy box__stretchy--fifths">
-  <p>Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.</p>
-</div>
-<div class="box__stretchy box__stretchy--fifths">
-  <p>Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.</p>
-</div>
-<div class="box__stretchy box__stretchy--fifths">
-  <p>Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.</p>
-</div>
-<div class="box__stretchy box__stretchy--fifths">
-  <p>Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.</p>
-</div>
-              </div>
-            </div>
-          </div>
-
-          <h4>Markup:</h4>
-          <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;box__stretchy box__stretchy--fifths&quot;&gt;
-  &lt;p&gt;Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;box__stretchy box__stretchy--fifths&quot;&gt;
-  &lt;p&gt;Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;box__stretchy box__stretchy--fifths&quot;&gt;
-  &lt;p&gt;Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;box__stretchy box__stretchy--fifths&quot;&gt;
-  &lt;p&gt;Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;box__stretchy box__stretchy--fifths&quot;&gt;
-  &lt;p&gt;Aspernatur nunc! Qui. Lacus nulla? Sodales curabitur purus blandit quibusdam, molestiae.&lt;/p&gt;
-&lt;/div&gt;</pre>
-          </div>
-
-        </section>
-
-        <section class="kss-depth-2 kss-component">
-          <h3 id="3.6" class="kss-title">Vertical Spacer <span class="kss-ref">(3.6)</span></h3>
-
-
-          <div class="kss-description"><p>Used to create vertical spacing between sections of content without just a stack
+          <div class="kss-description">
+            <p>Used to create vertical spacing between sections of content without just a stack
 of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
 (<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier
 classes to add 4em or 6em of spacingas well. These examples put a spacer between
 two divs to dempnstrate the amount of space that will be added with each modifier.</p>
-</div>
 
-          <h4>Examples:</h4>
+          </div>
+        </div>
+
+          <h4>Examples</h4>
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-details">
@@ -970,8 +140,7 @@ two divs to dempnstrate the amount of space that will be added with each modifie
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p><strong>[Default]</strong> Spacer with 2em of space.</p>
-
+                    <p>&lt;strong&gt;[Default]&lt;/strong&gt; Spacer with 2em of space.</p>
                   </div>
                   <div class="kss-example-name">
                     <p><code>.spacer--two</code></p>
@@ -983,7 +152,7 @@ two divs to dempnstrate the amount of space that will be added with each modifie
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
-<hr class="spacer spacer--two">
+<hr class="spacer {$modifiers}">
 <div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
@@ -995,7 +164,6 @@ two divs to dempnstrate the amount of space that will be added with each modifie
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>Spacer with 4em of space.</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.spacer--four</code></p>
@@ -1007,7 +175,7 @@ two divs to dempnstrate the amount of space that will be added with each modifie
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
-<hr class="spacer spacer--four">
+<hr class="spacer {$modifiers}">
 <div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
@@ -1019,7 +187,6 @@ two divs to dempnstrate the amount of space that will be added with each modifie
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
                     <p>Spacer with 6em of space.</p>
-
                   </div>
                   <div class="kss-example-name">
                     <p><code>.spacer--six</code></p>
@@ -1031,7 +198,7 @@ two divs to dempnstrate the amount of space that will be added with each modifie
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   </p>
 </div>
-<hr class="spacer spacer--six">
+<hr class="spacer {$modifiers}">
 <div class="grid-6 box__padded box--white">
   <p>
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
@@ -1043,7 +210,7 @@ two divs to dempnstrate the amount of space that will be added with each modifie
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html">&lt;div class=&quot;grid-6 box__padded box--green&quot;&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;grid-6 box__padded box--green&quot;&gt;
   &lt;p&gt;
     Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
   &lt;/p&gt;
@@ -1053,35 +220,24 @@ two divs to dempnstrate the amount of space that will be added with each modifie
   &lt;p&gt;
     Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
   &lt;/p&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
           </div>
 
-        </section>
+          </section>
     </article>
   </div>
-
-  <footer class="kss-footer kss-clearfix">
-    <p>
-      © <a href="http://www.tableau.com" target="_blank">Tableau Software</a>. All Rights Reserved. <br>
-      Generated by <a href="https://github.com/kss-node/kss-node" target="_blank">kss-node</a>. 
-    </p>
-  </footer>
 
   <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>
-    window.jQuery || document.write('<script src="public/jquery.min.js"><\/script>')
+    prettyPrint();
   </script>
-  <script>
-    $(document).ready(function(){
-      // Ensure code blocks are highlighted properly...
-      $('pre>code').addClass('prettyprint');
-      prettyPrint();
-    });
-  </script>
+  
+
 
   <script src="//localhost:35729/livereload.js"></script>
+
+  <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

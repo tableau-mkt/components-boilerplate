@@ -1,0 +1,150 @@
+/* 
+Boxes & Containers
+
+Used as wrappers to apply certain styles around elements.
+
+Styleguide boxes 
+*/
+
+
+/*
+Padded box
+
+Adds padding to a container element. The <code>.box--teal</code> class is used
+to differentiate the box from the background. You will usually want to use a
+padded box on a container with a background color.
+
+Markup: box_padded.hbs
+
+.box__padded--one - A box with 1em of padding
+.box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+.box__padded--three - A box with 3em of padding
+.box__padded--four - A box with 4em of padding
+
+Styleguide boxes.padded
+*/
+.box__padded {
+  padding: 2em;
+  
+  &.box__padded--one {
+    padding: 1em;
+  }
+
+  &.box__padded--three {
+    padding: 3em;
+  }
+
+  &.box__padded--four {
+    padding: 3em;
+  }
+}
+
+
+/* 
+Colored Backgrounds
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for 
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
+just to make the examples look better.
+
+Markup: box_colored.hbs
+
+.box--dark-blue - Box with dark-blue background.
+.box--teal - Box with teal background.
+.box--salmon - Box with salmon background.
+.box--bright-teal - Box with bright-teal background.
+.box--green - Box with green background.
+.box--navy - Box with navy background.
+.box--light-gray - Box with light gray background.
+.box--gray - Box with gray background.
+.box--dark-gray - Box with dark-gray background.
+.box--white - Box with white background.
+
+Styleguide box.colored
+*/
+
+/* Create a class for each theme color */
+@each $name, $color in $theme-colors {
+  .box--#{"" + $name} {
+    background-color: $color;
+    color: $white;
+  }
+}
+
+/* Text color overrides for lighter backgrounds */
+.box--light-gray,
+.box--white {
+  color: $base-font-color;
+}
+
+.box--teal a,
+.box--salmon a,
+.box--bright-teal a,
+.box--green a,
+.box--gray a {
+  color: $dark-blue;
+}
+
+/*
+Marginless Stretchy Boxes
+
+Percentage width boxes that butt up against eachother with no margin. Typically,
+a collored background would be applied with a <code>.box--{color}</code> class.
+In a mobile layout, all stretchy boxes default to stacking one ontop of the other
+and in a tablet layout stretchy boxes default to a 50% split. A 
+<code>.box__stretchy--tablet-full</code> class can be applied to a box to force 
+it to be full-width on a tablet. This is useful when there are an odd number of 
+boxes and you want to fill the extra blank space.
+
+Markup: box_stretchy.hbs
+
+Styleguide boxes.stretchy
+*/
+
+.box__stretchy {
+
+  &.box__stretchy--halves,
+  &.box__stretchy--thirds,
+  &.box__stretchy--fourths,
+  &.box__stretchy--fifths,
+  &.box__stretchy--sixths {
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+  }
+
+  @include breakpoint($tablet) {
+    &.box__stretchy--halves,
+    &.box__stretchy--thirds,
+    &.box__stretchy--fourths,
+    &.box__stretchy--fifths,
+    &.box__stretchy--sixths {
+      width: 50%;
+    }
+
+    &.box__stretchy--tablet-full {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint($desktop) {
+
+    &.box__stretchy--thirds {
+      width: 1/3 * 100%;
+    }
+
+    &.box__stretchy--fourths {
+      width: 25%;
+    }
+
+    &.box__stretchy--fifths {
+      width: 20%;
+    }
+
+    &.box__stretchy--sixths {
+      width: 1/6 * 100%;
+    }
+  }
+}

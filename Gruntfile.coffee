@@ -7,13 +7,12 @@ module.exports = (grunt) ->
 
       sass:
         files: ['sass/{,**/}*.{scss,sass}']
-        tasks: ['compass:kss']
-        # tasks: ['compass:dist']
+        tasks: ['compass:dist']
 
-      css:
+      kss:
         files: [
           'css/{,**/}*.css'
-          'kss-template/public/css/{,**/}*.css'
+          'sass/{,**/}*.{hbs,html}'
         ]
         tasks: ['shell:kss']
 
@@ -22,13 +21,6 @@ module.exports = (grunt) ->
           'js/{,**/}*.js'
           '!js/{,**/}*.min.js'
         ]
-
-      template:
-        files: [
-          'kss-template/index.html'
-          'kss-template/public/sass/{,**/}*.{scxss,sass}'
-        ]
-        tasks: ['compass:kss', 'shell:kss']
 
     compass:
       dist:
@@ -44,37 +36,16 @@ module.exports = (grunt) ->
           relativeAssets: true
           force: true
           sourcemap: true
-          
-      kss:
-        options:
-          cssDir: 'kss-template/public/css'
-          sassDir: 'kss-template/public/sass'
-          require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
-          force: true
-          sourcemap: true
-
-    cmq:
-      options:
-        log: true
-
-      dist:
-        files:
-          'css': ['css/*.css']
 
     shell:
       kss:
-        command: 'kss-node sass styleguide --template kss-template --css css/style.css'
+        command: 'kss-node --config template/config.json'
 
-
-  grunt.loadNpmTasks 'grunt-combine-media-queries'
   grunt.loadNpmTasks 'grunt-contrib-compass'
-  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-shell'
   grunt.registerTask 'build', [
     'compass:dist'
-    'compass:kss'
-    'cmq:dist'
     'shell:kss'
   ]
   grunt.registerTask 'styleguide', [

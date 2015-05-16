@@ -1,0 +1,73 @@
+/*
+Interactive Components
+
+This section displays examples of components that have interactivity. Most
+Interactivity is defined via Javascript.
+
+Styleguide interactive
+*/
+
+
+/*
+Accordion
+
+An accordion of content that allows you to expand and collapse sections of 
+content.
+
+Markup: accordion.hbs
+
+Styleguide interactive.accordion
+*/
+.accordion--item {
+  position: relative;
+  padding: 0 1em;
+  border-top: 1px solid $light-gray;
+  @extend %fade-bg;
+  
+  &:last-child {
+    border-bottom: 1px solid $light-gray;
+  }
+  
+  &:hover,
+  &.open {
+    background-color: $gray; 
+  }
+}
+
+.accordion--item--title {
+  margin: 0;
+  padding: 1.3em 40px 1.3em 0;
+  position: relative;
+  cursor: pointer;
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+    content: "+";
+    font-family: 'tc-icons';
+    font-weight: $font-weight-light;
+    line-height: 1;
+  }
+}
+
+.accordion--item.open .accordion--item--title:after {
+  content: "-";
+}
+
+.accordion--item--content {
+  padding-bottom: 1.5em;
+  
+  p:first-child,
+  ul:first-child {
+    margin-top: 0;
+  }
+  
+  p:last-child,
+  ul:last-child {
+    margin-bottom: 0;
+  }
+}

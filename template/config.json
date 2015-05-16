@@ -1,0 +1,11 @@
+{
+  "css": [
+    "public/styles.css",
+    "../css/styleguide.css"
+  ],
+  "js": [],
+  "homepage": "../template/homepage.md",
+  "source": "../sass",
+  "destination": "../styleguide",
+  "template": "../template"
+}

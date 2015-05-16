@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tableau Styleguide</title>
+  <!-- <title>{{options.title}}</title> -->
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/style.css">
+  {{{styles}}}
+</head>
+<body class="kss">
+
+  <header class="kss-header kss-clearfix">
+    <div class="kss-logo kss-left">
+      <a href="./">
+        <img src="public/images/logo.png" title="Tableau Software">
+      </a>
+    </div>
+    <div class="kss-right">
+      <h1>Styleguide</h1>
+      <!-- <h1>{{options.title}}</h1> -->
+    </div>
+  </header>
+
+  <div class="kss-main kss-clearfix">
+    <nav class="kss-nav kss-left">
+      <ul class="kss-nav__menu">
+        <li class="kss-nav__menu-item">
+          <a href="./">
+            Overview
+          </a>
+        </li>
+      {{#eachRoot}}
+        <li class="kss-nav__menu-item">
+          <a href="section-{{referenceURI}}.html">
+            {{header}}
+          </a>
+        {{#ifReference ../rootName}}
+          <ul class="kss-nav__menu-child">
+          {{#eachSection reference}}
+            {{#ifDepth 2}}
+              <li class="kss-nav__menu-item">
+                <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
+                  {{header}}
+                </a>
+              </li>
+            {{/ifDepth}}
+          {{/eachSection}}
+          </ul>
+        {{/ifReference}}
+        </li>
+      {{/eachRoot}}
+      </ul>
+    </nav>
+
+    <article role="main" class="kss-content kss-right">
+    {{#if homepage}}
+      <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+        {{{homepage}}}
+      </div>
+    {{else}}
+
+      {{!
+        Display each section, in order.
+
+        The "root" element comes first in this loop, and can be detected using
+        the "#ifDepth 1" block as seen below.
+      }}
+      {{#eachSection rootName}}
+        {{#ifDepth 1}}
+          <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+        {{else}}
+          <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+        {{/ifDepth}}
+
+        <div class="kss-style">
+          <h{{#ifDepth 1}}2{{else}}3{{/ifDepth}} class="kss-title kss-title--level-{{depth}}">
+            <!-- <a class="kss-title__permalink" href="#kssref-{{referenceURI}}"> -->
+              {{header}}
+            <!-- </a> -->
+          </h{{#ifDepth 1}}2{{else}}3{{/ifDepth}}>
+
+        {{#if parameters}}
+          <ul class="kss-parameters">
+          {{#eachParameter}}
+            <li class="kss-parameters__item">
+              <code class="kss-parameters__name">{{name}}</code>
+              <div class="kss-parameters__description">{{{description}}}</div>
+            </li>
+          {{/eachParameter}}
+          </ul>
+        {{/if}}
+
+        {{#if description}}
+          <div class="kss-description">
+            {{{description}}}
+          </div>
+        {{/if}}
+        </div>
+
+        {{#if markup}}
+          <h4>Example{{#if modifiers}}s{{/if}}</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              {{#if modifiers}}
+              <div class="kss-example-details">
+                <div class="kss-example-desc">
+                  <h6>Default styling</h6>
+                </div>
+              </div>
+              {{/if}}
+              <div class="kss-example-preview">
+                {{{markup}}}
+              </div>
+            </div>
+            {{#eachModifier}}
+              <div class="kss-example">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <p>{{description}}</p>
+                  </div>
+                  <div class="kss-example-name">
+                    <p><code>{{name}}</code></p>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  {{{markup}}}
+                </div>
+              </div>
+            {{/eachModifier}}
+          </div>
+
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
+          </div>
+        {{/if}}
+
+        {{#ifDepth 1}}
+          </div>
+        {{else}}
+          </section>
+        {{/ifDepth}}
+      {{/eachSection}}
+    {{/if}}
+    </article>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script>
+    prettyPrint();
+  </script>
+  {{{scripts}}}
+
+  {{! This will only be included in the demo page. }}
+  {{#if options.xdemo}}
+    <footer class="kss-github">
+      <!-- https://github.com/blog/273-github-ribbons -->
+      <a href="https://github.com/kss-node/kss-node"><img src="public/github-fork--black.png" alt="Fork me on GitHub"></a>
+    </footer>
+  {{/if}}
+
+  <script src="//localhost:35729/livereload.js"></script>
+
+  <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
