@@ -17,10 +17,8 @@ module.exports = (grunt) ->
         tasks: ['shell:kss']
 
       js:
-        files: [
-          'js/{,**/}*.js'
-          '!js/{,**/}*.min.js'
-        ]
+        files: ['sass/{,**/}*.js']
+        tasks: ['concat:dist']
 
     compass:
       dist:
@@ -41,7 +39,15 @@ module.exports = (grunt) ->
       kss:
         command: 'kss-node --config template/config.json'
 
+    concat:
+      options:
+        separator: ";\n"
+      dist: 
+        src: 'sass/{,**/}*.js'
+        dest: 'js/scripts.js'
+
   grunt.loadNpmTasks 'grunt-contrib-compass'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-shell'
   grunt.registerTask 'build', [

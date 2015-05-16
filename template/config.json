@@ -3,7 +3,10 @@
     "public/styles.css",
     "../css/styleguide.css"
   ],
-  "js": [],
+  "js": [
+  "../js/jquery.min.js",
+    "../js/scripts.js"
+  ],
   "homepage": "../template/homepage.md",
   "source": "../sass",
   "destination": "../styleguide",

@@ -20,6 +20,10 @@ Styleguide interactive.reveal
   z-index: 5;
   right: 10px;
   top: 10px;
-  line-height: 0;
   font-size: em(24px);
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
 }

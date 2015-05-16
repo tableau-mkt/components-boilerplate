@@ -285,14 +285,9 @@
   
   Used to popup content into a modal box ontop of the page.
   
-  Markup:
-  <a href="#popup-test" class="cta popup-inline">Popup trigger</a>
-  <div id="popup-test" class="popup--content">
-    <p>Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.</p>
-    <p>Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.</p>
-  </div>
+  Markup: popup.hbs
   
-  Styleguide 6.4
+  Styleguide interactive.popup
    */
   /* Transitioning the popup in and out */
   /** 
@@ -310,18 +305,9 @@
   attribute. The <code>.reveal--content</code> container must have am <code>id</code>
   attribute that matches the <code>data-reveal-target</code>.
   
-  Markup:
-  <p>
-    <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
-  </p>
-  <div class="reveal--content" id="content-wrapper">
-    <div class="box--yellow box__padded">
-      <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
-      <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
-    </div>
-  </div>
+  Markup: reveal.hbs
   
-  Styleguide 6.3
+  Styleguide interactive.reveal
   */
   /*
   Navigation
@@ -335,15 +321,7 @@
   
   Jump-nav used in the sidebars to navigate between sub-sections of a single page
   
-  Markup:
-  <div class="sidebar--nav grid-3">
-    <span class="sidebar--nav--toggle"><i class="icon-triangle-down"></i></span>
-    <ul>
-      <li class-"active"><a href="#section-1">Section 1</a></li>
-      <li><a href="#section-2">Section 2</a></li>
-      <li><a href="#section-3">Section 3</a></li>
-    </ul>
-  </div>
+  Markup: sidebar_nav.hbs
   
   Styleguide navigation.sidebar
   */
@@ -1886,27 +1864,27 @@
   clear: both;
   padding: 1em 0;
 }
-/* line 16, ../sass/components/popup/_popup.scss */
+/* line 11, ../sass/components/popup/_popup.scss */
 .kss-example-preview .mfp-container {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 21, ../sass/components/popup/_popup.scss */
+/* line 16, ../sass/components/popup/_popup.scss */
 .kss-example-preview .mfp-content {
   max-width: 800px;
   z-index: 5;
   background: #fff;
 }
-/* line 27, ../sass/components/popup/_popup.scss */
+/* line 22, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--content {
   display: none;
   padding: 2em;
 }
-/* line 32, ../sass/components/popup/_popup.scss */
+/* line 27, ../sass/components/popup/_popup.scss */
 .kss-example-preview .mfp-content .popup--content {
   display: inherit;
 }
-/* line 36, ../sass/components/popup/_popup.scss */
+/* line 31, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow {
   position: absolute;
   top: 50%;
@@ -1917,7 +1895,7 @@
   z-index: 10;
   cursor: pointer;
 }
-/* line 47, ../sass/components/popup/_popup.scss */
+/* line 42, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow:before, .kss-example-preview button.mfp-arrow:after {
   height: 80px;
   width: 40px;
@@ -1931,41 +1909,41 @@
   color: #fff;
   text-shadow: 0 0 8px #666;
 }
-/* line 62, ../sass/components/popup/_popup.scss */
+/* line 57, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow.mfp-arrow-left {
   left: 10px;
 }
-/* line 65, ../sass/components/popup/_popup.scss */
+/* line 60, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow.mfp-arrow-left:before {
   content: "<";
 }
-/* line 70, ../sass/components/popup/_popup.scss */
+/* line 65, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow.mfp-arrow-right {
   right: 10px;
 }
-/* line 73, ../sass/components/popup/_popup.scss */
+/* line 68, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow.mfp-arrow-right:before {
   content: ">";
 }
-/* line 78, ../sass/components/popup/_popup.scss */
+/* line 73, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow:hover {
   opacity: 0.8;
 }
-/* line 82, ../sass/components/popup/_popup.scss */
+/* line 77, ../sass/components/popup/_popup.scss */
 .kss-example-preview button.mfp-arrow:active {
   margin: -40px 0 0;
 }
 @media (min-width: 980px) {
-  /* line 87, ../sass/components/popup/_popup.scss */
+  /* line 82, ../sass/components/popup/_popup.scss */
   .kss-example-preview button.mfp-arrow.mfp-arrow-left {
     left: 5%;
   }
-  /* line 91, ../sass/components/popup/_popup.scss */
+  /* line 86, ../sass/components/popup/_popup.scss */
   .kss-example-preview button.mfp-arrow.mfp-arrow-right {
     right: 5%;
   }
 }
-/* line 101, ../sass/components/popup/_popup.scss */
+/* line 96, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-bg {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
@@ -1973,15 +1951,15 @@
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* line 105, ../sass/components/popup/_popup.scss */
+/* line 100, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }
-/* line 108, ../sass/components/popup/_popup.scss */
+/* line 103, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
-/* line 111, ../sass/components/popup/_popup.scss */
+/* line 106, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-wrap .mfp-content, .kss-example-preview .popup--fade.mfp-wrap .mfp-arrow {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
@@ -1989,11 +1967,11 @@
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* line 116, ../sass/components/popup/_popup.scss */
+/* line 111, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-content, .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-arrow {
   opacity: 1;
 }
-/* line 120, ../sass/components/popup/_popup.scss */
+/* line 115, ../sass/components/popup/_popup.scss */
 .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-content, .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
   opacity: 0;
 }
@@ -2015,19 +1993,23 @@
 .kss-example-preview .l-region--content-top {
   background: #999;
 }
-/* line 23, ../sass/components/reveal/_reveal.scss */
+/* line 14, ../sass/components/reveal/_reveal.scss */
 .kss-example-preview .reveal--content {
   position: relative;
   display: none;
 }
-/* line 27, ../sass/components/reveal/_reveal.scss */
+/* line 18, ../sass/components/reveal/_reveal.scss */
 .kss-example-preview .reveal--close {
   position: absolute;
   z-index: 5;
   right: 10px;
   top: 10px;
-  line-height: 0;
   font-size: 1.5em;
+  color: #fff;
+}
+/* line 26, ../sass/components/reveal/_reveal.scss */
+.kss-example-preview .reveal--close:hover {
+  text-decoration: none;
 }
 /* line 1, ../sass/components/section/_section.scss */
 .kss-example-preview .field--section {
@@ -2092,11 +2074,11 @@
     padding-bottom: 3em;
   }
 }
-/* line 28, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+/* line 20, ../sass/components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav ul {
   margin: 0;
 }
-/* line 33, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+/* line 25, ../sass/components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav li a {
   display: block;
   padding: .5em 0;
@@ -2107,18 +2089,18 @@
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 41, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+/* line 33, ../sass/components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav li a:hover,
 .kss-example-preview .sidebar--nav li.active a {
   color: #1f447d;
   text-decoration: none;
 }
-/* line 47, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+/* line 39, ../sass/components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
   display: none;
 }
 @media (max-width: 739px) {
-  /* line 53, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 45, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav {
     opacity: 0;
     position: relative;
@@ -2129,7 +2111,7 @@
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
   }
-  /* line 60, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 52, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li {
     height: 0;
     overflow: hidden;
@@ -2138,16 +2120,16 @@
     -o-transition: height 0.25s;
     transition: height 0.25s;
   }
-  /* line 66, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 58, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li.active, .kss-example-preview .sidebar--nav.open li {
     height: 41px;
   }
-  /* line 71, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 63, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li a {
     padding: .5em;
     color: #fff;
   }
-  /* line 76, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 68, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     display: inline-block;
     position: absolute;
@@ -2156,13 +2138,13 @@
     padding: 10px;
     cursor: pointer;
   }
-  /* line 85, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 77, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav.open .sidebar--nav--toggle {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-  /* line 90, ../sass/components/sidebar_nav/_sidebar_nav.scss */
+  /* line 82, ../sass/components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav.stuck {
     opacity: 1;
     width: 100%;
