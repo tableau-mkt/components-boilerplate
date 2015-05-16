@@ -79,6 +79,8 @@
           <a href="section-grids.html">
             Grids
           </a>
+          <ul class="kss-nav__menu-child">
+          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-interactive.html">
@@ -100,18 +102,22 @@
 
     <article role="main" class="kss-content kss-right">
 
-          <section id="kssref-5-1" class="kss-section kss-section--depth-2">
+          <div id="kssref-grids" class="kss-section kss-section--depth-1">
 
         <div class="kss-style">
-          <h3 class="kss-title kss-title--level-2">
-            <!-- <a class="kss-title__permalink" href="#kssref-5-1"> -->
-              Main Menu
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-grids"> -->
+              Grids
             <!-- </a> -->
-          </h3>
+          </h2>
 
 
           <div class="kss-description">
-            <p>The main navigational menu for the site.</p>
+            <p>Used for creating a columned layout. To use these classes, just pick the number
+of columns wide you want your element to be relative to the total number of
+columns. The default is 12 columns. For example, you can use <code>.grid-4</code> to make
+an element 4 columns wide followed by an element with <code>.grid-8</code> to take up the
+remaining eight columns of the container&#39;s width.</p>
 
           </div>
         </div>
@@ -120,13 +126,46 @@
           <div class="kss-examples">
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
-                <div class="l-menu box--dark-blue">
-  <ul class="menu">
-    <li class="first leaf active-trail"><a href="#">About</a></li>
-    <li class="leaf"><a href="#">Content</a></li>
-    <li class="leaf"><a href="#">Expo Hall</a></li>
-    <li class="leaf"><a href="#">FAQ</a></li>
-  </ul>
+                <div class="clearfix">
+  <div class="grid-4 box__padded--one">
+    <p>
+      <strong>.grid-4</strong>
+    </p>
+  </div>
+
+  <div class="grid-4 box__padded--one">
+    <p>
+      <strong>.grid-4</strong>
+    </p>
+  </div>
+
+  <div class="grid-4 box__padded--one">
+    <p>
+      <strong>.grid-4</strong>
+    </p>
+  </div>
+</div>
+
+<hr class="spacer">
+
+<div class="clearfix">
+  <div class="grid-2 box__padded--one">
+    <p>
+      <strong>.grid-2</strong>
+    </p>
+  </div>
+
+  <div class="grid-7 box__padded--one">
+    <p>
+      <strong>.grid-7</strong>
+    </p>
+  </div>
+
+  <div class="grid-3 box__padded--one">
+    <p>
+      <strong>.grid-3</strong>
+    </p>
+  </div>
 </div>
               </div>
             </div>
@@ -134,17 +173,50 @@
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;l-menu box--dark-blue&quot;&gt;
-  &lt;ul class=&quot;menu&quot;&gt;
-    &lt;li class=&quot;first leaf active-trail&quot;&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot;&gt;Expo Hall&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot;&gt;FAQ&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-4&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-4&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-4&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr class=&quot;spacer&quot;&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;grid-2 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-2&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid-7 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-7&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid-3 box__padded--one&quot;&gt;
+    &lt;p&gt;
+      &lt;strong&gt;.grid-3&lt;/strong&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
           </div>
 
-          </section>
+          </div>
     </article>
   </div>
 

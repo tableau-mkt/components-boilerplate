@@ -3,17 +3,9 @@ Main Menu
 
 The main navigational menu for the site.
 
-Markup:
-<div class="l-menu box--dark-blue">
-  <ul class="menu">
-    <li class="first leaf active-trail"><a href="#">About</a></li>
-    <li class="leaf"><a href="#">Content</a></li>
-    <li class="leaf"><a href="#">Expo Hall</a></li>
-    <li class="leaf"><a href="#">FAQ</a></li>
-  </ul>
-</div>
+Markup: menu.hbs
 
-Styleguide 5.1
+Styleguide navigation.main
 */
 
 // body {

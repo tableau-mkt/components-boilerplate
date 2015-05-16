@@ -3,7 +3,7 @@ Navigation
 
 Navigational tools used across the site
 
-Styleguide 5
+Styleguide navigation
 */
 
 
@@ -12,17 +12,9 @@ Sidebar Nav
 
 Jump-nav used in the sidebars to navigate between sub-sections of a single page
 
-Markup:
-<div class="sidebar--nav grid-3">
-  <span class="sidebar--nav--toggle"><i class="icon-triangle-down"></i></span>
-  <ul>
-    <li class-"active"><a href="#section-1">Section 1</a></li>
-    <li><a href="#section-2">Section 2</a></li>
-    <li><a href="#section-3">Section 3</a></li>
-  </ul>
-</div>
+Markup: sidebar_nav.hbs
 
-Styleguide 5.2
+Styleguide navigation.sidebar
 */
 .sidebar--nav {
   ul {

@@ -51,11 +51,6 @@
           </a>
         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-5.html">
-            Navigation
-          </a>
-        </li>
-        <li class="kss-nav__menu-item">
           <a href="section-8.html">
             Content Lists
           </a>
@@ -81,6 +76,11 @@
           </a>
         </li>
         <li class="kss-nav__menu-item">
+          <a href="section-grids.html">
+            Grids
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
           <a href="section-interactive.html">
             Interactive Components
           </a>
@@ -90,11 +90,26 @@
                   Accordion
                 </a>
               </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-interactive.html#kssref-interactive-popup">
+                  Popups
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-interactive.html#kssref-interactive-reveal">
+                  Content Reveal
+                </a>
+              </li>
           </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-links.html">
             Links
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-navigation.html">
+            Navigation
           </a>
         </li>
       </ul>
@@ -144,19 +159,19 @@ content.</p>
               <div class="kss-example-preview">
                 <div class="accordion">
   <div class="accordion--item">
-    <h3 class="accordion--item--title">This is an accordion item</h3>
+    <h3 class="accordion--item--title">This is an example</h3>
     <div class="accordion--item--content">
       <p>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</p>
     </div>
   </div>
   <div class="accordion--item">
-    <h3 class="accordion--item--title">Another accordion item</h3>
+    <h3 class="accordion--item--title">Another Example</h3>
     <div class="accordion--item--content">
       <p>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</p>
     </div>
   </div>
   <div class="accordion--item">
-    <h3 class="accordion--item--title">One more accordion item</h3>
+    <h3 class="accordion--item--title">Testing another</h3>
     <div class="accordion--item--content">
       <p>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</p>
     </div>
@@ -170,24 +185,118 @@ content.</p>
           <div class="kss-markup">
             <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;accordion&quot;&gt;
   &lt;div class=&quot;accordion--item&quot;&gt;
-    &lt;h3 class=&quot;accordion--item--title&quot;&gt;This is an accordion item&lt;/h3&gt;
+    &lt;h3 class=&quot;accordion--item--title&quot;&gt;This is an example&lt;/h3&gt;
     &lt;div class=&quot;accordion--item--content&quot;&gt;
       &lt;p&gt;Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;accordion--item&quot;&gt;
-    &lt;h3 class=&quot;accordion--item--title&quot;&gt;Another accordion item&lt;/h3&gt;
+    &lt;h3 class=&quot;accordion--item--title&quot;&gt;Another Example&lt;/h3&gt;
     &lt;div class=&quot;accordion--item--content&quot;&gt;
       &lt;p&gt;Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;accordion--item&quot;&gt;
-    &lt;h3 class=&quot;accordion--item--title&quot;&gt;One more accordion item&lt;/h3&gt;
+    &lt;h3 class=&quot;accordion--item--title&quot;&gt;Testing another&lt;/h3&gt;
     &lt;div class=&quot;accordion--item--content&quot;&gt;
       &lt;p&gt;Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+          </div>
+
+          </section>
+          <section id="kssref-interactive-popup" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-interactive-popup"> -->
+              Popups
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Used to popup content into a modal box ontop of the page.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <a href="#popup-test" class="cta popup-inline">Popup trigger</a>
+<div id="popup-test" class="popup--content">
+  <p>Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.</p>
+  <p>Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.</p>
+</div>
+
+              </div>
+            </div>
+          </div>
+
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#popup-test&quot; class=&quot;cta popup-inline&quot;&gt;Popup trigger&lt;/a&gt;
+&lt;div id=&quot;popup-test&quot; class=&quot;popup--content&quot;&gt;
+  &lt;p&gt;Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.&lt;/p&gt;
+  &lt;p&gt;Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          </section>
+          <section id="kssref-interactive-reveal" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-interactive-reveal"> -->
+              Content Reveal
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Simple tool to make content hidden and revealed when a trigger is clicked. It
+doesn&#39;t matter where on the page the trigger and target content are, but the
+trigger element must target the content via a <code>data-reveal-target=&quot;target-id&quot;</code>
+attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute that matches the <code>data-reveal-target</code>.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <p>
+  <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
+</p>
+<div class="reveal--content" id="content-wrapper">
+  <div class="box--yellow box__padded">
+    <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
+    <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;p&gt;
+  &lt;a href=&quot;#&quot; class=&quot;cta cta-yellow reveal--trigger&quot; data-reveal-target=&quot;content-wrapper&quot;&gt;Reveal Content&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&quot;reveal--content&quot; id=&quot;content-wrapper&quot;&gt;
+  &lt;div class=&quot;box--yellow box__padded&quot;&gt;
+    &lt;p&gt;Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.&lt;/p&gt;
+    &lt;p&gt;Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
           </div>
 
           </section>
