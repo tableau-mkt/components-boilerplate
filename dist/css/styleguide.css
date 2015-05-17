@@ -131,6 +131,8 @@
   
   Markup: badge.hbs
   
+  Weight: 4
+  
   .badge--white - White BG colored badge.
   .badge--light-gray-1 - Light Gray 1 colored badge.
   .badge--light-gray-2 - Light Gray 2 colored badge.
@@ -154,11 +156,13 @@
   /*
   Padded box
   
-  Adds padding to a container element. The <code>.box--teal</code> class is used
+  Adds padding to a container element. The <code>.box--dark-gray-1</code> class is used
   to differentiate the box from the background. You will usually want to use a
   padded box on a container with a background color.
   
   Markup: box_padded.hbs
+  
+  Weight: 1
   
   .box__padded--one - A box with 1em of padding
   .box__padded--two - <strong>[Default]</strong> A box with 2em of padding
@@ -176,6 +180,8 @@
   just to make the examples look better.
   
   Markup: box_colored.hbs
+  
+  Weight: 2
   
   .box--white - White BG colored box.
   .box--light-gray-1 - Light Gray 1 colored box.
@@ -201,6 +207,8 @@
   boxes and you want to fill the extra blank space.
   
   Markup: box_stretchy.hbs
+  
+  Weight: 3
   
   Styleguide boxes.stretchy
   */
@@ -682,7 +690,7 @@
 }
 /* line 33, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item:hover, .kss-example-preview .accordion--item.open {
-  background-color: #999;
+  background-color: #ebebeb;
 }
 /* line 39, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--title {
@@ -737,7 +745,7 @@
     top: -49px;
   }
 }
-/* line 20, ../../components/badge/_badge.scss */
+/* line 22, ../../components/badge/_badge.scss */
 .kss-example-preview .badge {
   width: 200px;
   height: 200px;
@@ -750,155 +758,155 @@
   text-align: center;
   font-size: 0.7em;
 }
-/* line 33, ../../components/badge/_badge.scss */
+/* line 35, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--outlined {
   background: none;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--white {
   background: #fff;
   border-color: #fff;
   color: #333;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--white.badge--outlined {
   background: none;
   color: #fff;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--light-gray-1 {
   background: #fafafa;
   border-color: #fafafa;
   color: #333;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--light-gray-1.badge--outlined {
   background: none;
   color: #fafafa;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--light-gray-2 {
   background: #ebebeb;
   border-color: #ebebeb;
   color: #333;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--light-gray-2.badge--outlined {
   background: none;
   color: #ebebeb;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-1 {
   background: #464646;
   border-color: #464646;
   color: #bbb;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-1.badge--outlined {
   background: none;
   color: #464646;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-2 {
   background: #333;
   border-color: #333;
   color: #bbb;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-2.badge--outlined {
   background: none;
   color: #333;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-3 {
   background: #1b1b1b;
   border-color: #1b1b1b;
   color: #bbb;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--dark-gray-3.badge--outlined {
   background: none;
   color: #1b1b1b;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--about-featured {
   background: #457387;
   border-color: #457387;
   color: #fff;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--about-featured.badge--outlined {
   background: none;
   color: #457387;
 }
-/* line 38, ../../components/badge/_badge.scss */
+/* line 40, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--data-sources {
   background: #2e4c65;
   border-color: #2e4c65;
   color: #fff;
 }
-/* line 43, ../../components/badge/_badge.scss */
+/* line 45, ../../components/badge/_badge.scss */
 .kss-example-preview .badge.badge--data-sources.badge--outlined {
   background: none;
   color: #2e4c65;
 }
-/* line 28, ../../components/box/_box.scss */
+/* line 30, ../../components/box/_box.scss */
 .kss-example-preview .box__padded {
   padding: 2em;
 }
-/* line 31, ../../components/box/_box.scss */
+/* line 33, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--one {
   padding: 1em;
 }
-/* line 35, ../../components/box/_box.scss */
+/* line 37, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--three {
   padding: 3em;
 }
-/* line 39, ../../components/box/_box.scss */
+/* line 41, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--four {
   padding: 3em;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--white {
   background-color: #fff;
   color: #333;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--light-gray-2 {
   background-color: #ebebeb;
   color: #333;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-2 {
   background-color: #333;
   color: #bbb;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--about-featured {
   background-color: #457387;
   color: #fff;
 }
-/* line 69, ../../components/box/_box.scss */
+/* line 73, ../../components/box/_box.scss */
 .kss-example-preview .box--data-sources {
   background-color: #2e4c65;
   color: #fff;
 }
-/* line 94, ../../components/box/_box.scss */
+/* line 100, ../../components/box/_box.scss */
 .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
@@ -906,29 +914,29 @@
   width: 100%;
 }
 @media (min-width: 740px) {
-  /* line 106, ../../components/box/_box.scss */
+  /* line 112, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 114, ../../components/box/_box.scss */
+  /* line 120, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  /* line 121, ../../components/box/_box.scss */
+  /* line 127, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--thirds {
     width: 33.33333%;
   }
-  /* line 125, ../../components/box/_box.scss */
+  /* line 131, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 129, ../../components/box/_box.scss */
+  /* line 135, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 133, ../../components/box/_box.scss */
+  /* line 139, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 16.66667%;
   }

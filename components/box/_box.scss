@@ -12,11 +12,13 @@ Styleguide boxes
 /*
 Padded box
 
-Adds padding to a container element. The <code>.box--teal</code> class is used
+Adds padding to a container element. The <code>.box--dark-gray-1</code> class is used
 to differentiate the box from the background. You will usually want to use a
 padded box on a container with a background color.
 
 Markup: box_padded.hbs
+
+Weight: 1
 
 .box__padded--one - A box with 1em of padding
 .box__padded--two - <strong>[Default]</strong> A box with 2em of padding
@@ -52,6 +54,8 @@ just to make the examples look better.
 
 Markup: box_colored.hbs
 
+Weight: 2
+
 .box--white - White BG colored box.
 .box--light-gray-1 - Light Gray 1 colored box.
 .box--light-gray-2 - Light Gray 2 colored box.
@@ -85,6 +89,8 @@ it to be full-width on a tablet. This is useful when there are an odd number of
 boxes and you want to fill the extra blank space.
 
 Markup: box_stretchy.hbs
+
+Weight: 3
 
 Styleguide boxes.stretchy
 */
