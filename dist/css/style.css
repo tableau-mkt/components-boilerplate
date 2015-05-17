@@ -193,7 +193,7 @@ Interactivity is defined via Javascript.
 
 Weight: 80
 
-Styleguide interactive
+Style guide: interactive
 */
 /*
 Accordion
@@ -203,7 +203,7 @@ content.
 
 Markup: accordion.hbs
 
-Styleguide interactive.accordion
+Style guide: interactive.accordion
 */
 /* line 23, ../../components/accordion/_accordion.scss */
 .accordion--item {
@@ -296,7 +296,7 @@ Weight: 4
 .badge--about-featured - About/Feat colored badge.
 .badge--data-sources - Data Sources colored badge.
 
-Styleguide boxes.badge
+Style guide: boxes.badge
  */
 /* line 22, ../../components/badge/_badge.scss */
 .badge {
@@ -411,7 +411,7 @@ Used as wrappers to apply certain styles around elements.
 
 Weight: 30
 
-Styleguide boxes 
+Style guide: boxes 
 */
 /*
 Padded box
@@ -429,7 +429,7 @@ Weight: 1
 .box__padded--three - A box with 3em of padding
 .box__padded--four - A box with 4em of padding
 
-Styleguide boxes.padded
+Style guide: boxes.padded
 */
 /* line 30, ../../components/box/_box.scss */
 .box__padded {
@@ -469,7 +469,7 @@ Weight: 2
 .box--about-featured - About/Feat colored box.
 .box--data-sources - Data Sources colored box.
 
-Styleguide boxes.colored
+Style guide: boxes.colored
 */
 /* Create a class for each background color */
 /* line 73, ../../components/box/_box.scss */
@@ -535,7 +535,7 @@ Markup: box_stretchy.hbs
 
 Weight: 3
 
-Styleguide boxes.stretchy
+Style guide: boxes.stretchy
 */
 /* line 100, ../../components/box/_box.scss */
 .box__stretchy.box__stretchy--halves, .box__stretchy.box__stretchy--thirds, .box__stretchy.box__stretchy--fourths, .box__stretchy.box__stretchy--fifths, .box__stretchy.box__stretchy--sixths {
@@ -580,7 +580,7 @@ Various link styles for use throughout the site.
 
 Weight: 20
 
-Styleguide links
+Style guide: links
  */
 /* 
 CTA
@@ -589,7 +589,7 @@ A call to action button that links to something important.
 
 Markup: cta.hbs
 
-Styleguide links.cta
+Style guide: links.cta
 */
 /* line 20, ../../components/cta/_cta.scss */
 .cta,
@@ -756,7 +756,7 @@ Markup: form.hbs
 
 Weight: 50
 
-Styleguide forms
+Style guide: forms
 */
 /* line 14, ../../components/form/_form.scss */
 .form--fields label {
@@ -773,7 +773,7 @@ Markup: form_input.hbs
 
 Weight: 0
 
-Styleguide forms.input
+Style guide: forms.input
 */
 /* line 32, ../../components/form/_form.scss */
 input[type=text],
@@ -818,7 +818,7 @@ Markup: form_button.hbs
 
 Weight: 1
 
-Styleguide forms.buttons
+Style guide: forms.buttons
 */
 /* line 73, ../../components/form/_form.scss */
 input[type=submit].submitting,
@@ -884,7 +884,7 @@ Markup: form_validation.hbs
 
 Weight: 2
 
-Styleguide forms.validation
+Style guide: forms.validation
 */
 /* line 153, ../../components/form/_form.scss */
 .invalid {
@@ -901,7 +901,7 @@ Markup: form_confirmation.hbs
 
 Weight: 3
 
-Styleguide forms.confirmation
+Style guide: forms.confirmation
 */
 /*
 Grids
@@ -916,7 +916,7 @@ Markup: grid.hbs
 
 Weight: 90
 
-Styleguide grids
+Style guide: grids
 */
 /* line 24, ../../components/grid/_grid.scss */
 .grid-1 {
@@ -1372,7 +1372,7 @@ The main navigational menu for the site.
 
 Markup: menu.hbs
 
-Styleguide navigation.main
+Style guide: navigation.main
 */
 /* line 19, ../../components/menu/_menu.scss */
 .l-menu {
@@ -1598,7 +1598,7 @@ Used to popup content into a modal box ontop of the page.
 
 Markup: popup.hbs
 
-Styleguide interactive.popup
+Style guide: interactive.popup
  */
 /* line 11, ../../components/popup/_popup.scss */
 .mfp-container {
@@ -1757,7 +1757,7 @@ attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
 
-Styleguide interactive.reveal
+Style guide: interactive.reveal
 */
 /* line 14, ../../components/reveal/_reveal.scss */
 .reveal--content {
@@ -1856,7 +1856,7 @@ Navigational tools used across the site
 
 Weight: 70
 
-Styleguide navigation
+Style guide: navigation
 */
 /*
 Sidebar Nav
@@ -1865,7 +1865,7 @@ Jump-nav used in the sidebars to navigate between sub-sections of a single page
 
 Markup: sidebar_nav.hbs
 
-Styleguide navigation.sidebar
+Style guide: navigation.sidebar
 */
 /* line 22, ../../components/sidebar_nav/_sidebar_nav.scss */
 .sidebar--nav ul {
@@ -2020,7 +2020,7 @@ Markup:
 .spacer--four - Spacer with 4em of space.
 .spacer--six - Spacer with 6em of space.
 
-Styleguide 3.6
+Style guide: 3.6
 */
 /* line 29, ../../components/spacer/_spacer.scss */
 .spacer {
@@ -2056,7 +2056,7 @@ Markup:
 
 .sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
 
-Styleguide 6.2
+Style guide: 6.2
 */
 /* line 21, ../../components/sticky/_sticky.scss */
 .stuck {
@@ -2122,7 +2122,7 @@ Used for tabular data
 
 Weight: 60
 
-Styleguide 4
+Style guide: 4
 */
 /*
 Standard Table
@@ -2162,7 +2162,7 @@ Markup:
   </tbody>
 </table>
 
-Styleguide 4.1
+Style guide: 4.1
 */
 /* line 53, ../../components/table/_table.scss */
 table {
@@ -2207,7 +2207,7 @@ Lists of content that generally have a title, thumbnail and/or a description and
 
 Weight: 40
 
-Styleguide 8
+Style guide: 8
 */
 /* 
 Basic Teaser List
@@ -2233,7 +2233,7 @@ Markup:
 
 .teaser-list--colored-title - Variation with a colored box around the title
 
-Styleguide 8.1
+Style guide: 8.1
 */
 /* line 13, ../../../../.rvm/gems/ruby-1.9.3-p547/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
 .teaser-list:after {
@@ -2346,7 +2346,7 @@ Markup:
   </div>
 </div>
 
-Styleguide 8.2
+Style guide: 8.2
 */
 /* line 137, ../../components/teaser_list/_teaser_list.scss */
 .teaser-list.teaser-list--full-width {
@@ -2363,7 +2363,7 @@ Typography
 
 Weight: 10
 
-Styleguide typography
+Style guide: typography
 */
 /*
 Base Copy
@@ -2375,7 +2375,7 @@ Markup: base.hbs
 
 Weight: 1
 
-Styleguide typography.base
+Style guide: typography.base
  */
 /* line 21, ../../components/typography/_typography.scss */
 body {
@@ -2403,7 +2403,7 @@ h4 - Fourth level heading. 1.5em
 h5 - Fifth level heading. 1.25em
 h6 - Sixth level heading. 1em
 
-Styleguide typography.headings
+Style guide: typography.headings
 */
 /* line 49, ../../components/typography/_typography.scss */
 h1,
@@ -2510,7 +2510,7 @@ Weight: 3
 .text--mission-2 - Mission 2 colored text.
 .text--mission-3 - Mission 3 colored text.
 
-Styleguide typography.formatted
+Style guide: typography.formatted
 */
 /* line 148, ../../components/typography/_typography.scss */
 strong,

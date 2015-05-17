@@ -112,7 +112,7 @@
   
   Weight: 80
   
-  Styleguide interactive
+  Style guide: interactive
   */
   /*
   Accordion
@@ -122,7 +122,7 @@
   
   Markup: accordion.hbs
   
-  Styleguide interactive.accordion
+  Style guide: interactive.accordion
   */
   /*
   Badges
@@ -142,7 +142,7 @@
   .badge--about-featured - About/Feat colored badge.
   .badge--data-sources - Data Sources colored badge.
   
-  Styleguide boxes.badge
+  Style guide: boxes.badge
    */
   /* 
   Boxes & Containers
@@ -151,7 +151,7 @@
   
   Weight: 30
   
-  Styleguide boxes 
+  Style guide: boxes 
   */
   /*
   Padded box
@@ -169,7 +169,7 @@
   .box__padded--three - A box with 3em of padding
   .box__padded--four - A box with 4em of padding
   
-  Styleguide boxes.padded
+  Style guide: boxes.padded
   */
   /* 
   Colored Backgrounds
@@ -192,7 +192,7 @@
   .box--about-featured - About/Feat colored box.
   .box--data-sources - Data Sources colored box.
   
-  Styleguide boxes.colored
+  Style guide: boxes.colored
   */
   /* Create a class for each background color */
   /*
@@ -210,7 +210,7 @@
   
   Weight: 3
   
-  Styleguide boxes.stretchy
+  Style guide: boxes.stretchy
   */
   /*
   Links
@@ -219,7 +219,7 @@
   
   Weight: 20
   
-  Styleguide links
+  Style guide: links
    */
   /* 
   CTA
@@ -228,7 +228,7 @@
   
   Markup: cta.hbs
   
-  Styleguide links.cta
+  Style guide: links.cta
   */
   /*
   Form Styles
@@ -240,7 +240,7 @@
   
   Weight: 50
   
-  Styleguide forms
+  Style guide: forms
   */
   /*
   Input Fields
@@ -251,7 +251,7 @@
   
   Weight: 0
   
-  Styleguide forms.input
+  Style guide: forms.input
   */
   /*
   Submit Buttons
@@ -266,7 +266,7 @@
   
   Weight: 1
   
-  Styleguide forms.buttons
+  Style guide: forms.buttons
   */
   /*
   Validation Messages
@@ -277,7 +277,7 @@
   
   Weight: 2
   
-  Styleguide forms.validation
+  Style guide: forms.validation
   */
   /*
   Confirmation Messages
@@ -288,7 +288,7 @@
   
   Weight: 3
   
-  Styleguide forms.confirmation
+  Style guide: forms.confirmation
   */
   /*
   Grids
@@ -303,7 +303,7 @@
   
   Weight: 90
   
-  Styleguide grids
+  Style guide: grids
   */
   /*
   Main Menu
@@ -312,7 +312,7 @@
   
   Markup: menu.hbs
   
-  Styleguide navigation.main
+  Style guide: navigation.main
   */
   /*
   Popups
@@ -321,7 +321,7 @@
   
   Markup: popup.hbs
   
-  Styleguide interactive.popup
+  Style guide: interactive.popup
    */
   /* Transitioning the popup in and out */
   /** 
@@ -341,7 +341,7 @@
   
   Markup: reveal.hbs
   
-  Styleguide interactive.reveal
+  Style guide: interactive.reveal
   */
   /*
   Navigation
@@ -350,7 +350,7 @@
   
   Weight: 70
   
-  Styleguide navigation
+  Style guide: navigation
   */
   /*
   Sidebar Nav
@@ -359,7 +359,7 @@
   
   Markup: sidebar_nav.hbs
   
-  Styleguide navigation.sidebar
+  Style guide: navigation.sidebar
   */
   /*
   Vertical Spacer
@@ -387,7 +387,7 @@
   .spacer--four - Spacer with 4em of space.
   .spacer--six - Spacer with 6em of space.
   
-  Styleguide 3.6
+  Style guide: 3.6
   */
   /*
   Sticky elements
@@ -406,7 +406,7 @@
   
   .sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
   
-  Styleguide 6.2
+  Style guide: 6.2
   */
   /*
   Tables
@@ -415,7 +415,7 @@
   
   Weight: 60
   
-  Styleguide 4
+  Style guide: 4
   */
   /*
   Standard Table
@@ -455,7 +455,7 @@
     </tbody>
   </table>
   
-  Styleguide 4.1
+  Style guide: 4.1
   */
   /*
   Content Lists
@@ -464,7 +464,7 @@
   
   Weight: 40
   
-  Styleguide 8
+  Style guide: 8
   */
   /* 
   Basic Teaser List
@@ -490,7 +490,7 @@
   
   .teaser-list--colored-title - Variation with a colored box around the title
   
-  Styleguide 8.1
+  Style guide: 8.1
   */
   /* 
   Full-width Teaser List
@@ -520,14 +520,14 @@
     </div>
   </div>
   
-  Styleguide 8.2
+  Style guide: 8.2
   */
   /*
   Typography
   
   Weight: 10
   
-  Styleguide typography
+  Style guide: typography
   */
   /*
   Base Copy
@@ -539,7 +539,7 @@
   
   Weight: 1
   
-  Styleguide typography.base
+  Style guide: typography.base
    */
   /*
   Headings
@@ -557,7 +557,7 @@
   h5 - Fifth level heading. 1.25em
   h6 - Sixth level heading. 1em
   
-  Styleguide typography.headings
+  Style guide: typography.headings
   */
   /** 
    * Links
@@ -601,7 +601,7 @@
   .text--mission-2 - Mission 2 colored text.
   .text--mission-3 - Mission 3 colored text.
   
-  Styleguide typography.formatted
+  Style guide: typography.formatted
   */
   /* Create a class for each text color */
 }

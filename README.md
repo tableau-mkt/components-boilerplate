@@ -79,4 +79,4 @@ without a compass compile.
 * The style guide generator used in this project is 
 [kss-node](https://github.com/kss-node/kss-node).
 * The template used for kss-node is our custom-built 
-[kss-template](https://github.com/tableau-mkt/kss-template)
+[kss-template](https://github.com/tableau-mkt/kss-template).
