@@ -1,9 +1,8 @@
 # Tableau Components
 
 A place to keep our library of reusable components for various web properties.
-
-Check out these components in the generated style guide 
-[here](http://tableau-mkt.github.io/components/styleguide/).
+ 
+###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/).
 
 ## Defining a Component
 A component is a reusable bundle of styles, markup, javascript, and other static
@@ -24,11 +23,12 @@ of the component and provides example data to populate the handlebars template.
 
 ## Example structure
 ```
-┌ component-name
-├── _component-name.scss
-├── component-name.hbs
-├── component-name.json
-└── component-name.js
+┌ components
+└─┬ component-name
+  ├── _component-name.scss
+  ├── component-name.hbs
+  ├── component-name.json
+  └── component-name.js
 ```
 
 ## KSS comment example
