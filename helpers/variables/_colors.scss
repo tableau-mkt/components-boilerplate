@@ -1,47 +1,84 @@
 /**
- * Color Palette 
+ * Tableau Color Palette 
  */
 
-// Tableau Colors
-$dark-blue: #1f447d;
-$teal: #7099a6;
-$salmon: #e36e4d;
-$bright-teal: #7ebac3;
-$green: #588e3c;
-$navy: #283451;
+// Text Colors
+$text-negative: #fff;         // Negative Text - rgb(255, 255, 255)
+$text-light-body: #bbb;       // Negative/light Body - rgb(187, 187, 187)
+$text-medium-body: #787878;   // Default Med. Body - rgb(120, 120, 120)
+$text-dark-body: #333;        // Default Dark Body - rgb(51, 51, 51)
+$text-link: #eb912c;          // Link Orange - rgb(235, 145, 44)
+$text-headlines: #000;        // Headlines - rgb(0, 0, 0)
+$text-nav-items: #212535;     // Nav Items - rgb(33, 37, 53)
+$text-data-sources: #a3b9cb;  // Data Sources - rgb(163, 185, 203)
+$text-stories: #847094;       // Stories - rgb(132, 112, 148)
+$text-learning: #6f99a5;      // Learning - rgb(111, 153, 165)
+$text-highlight: #53bd92;     // Highlight Text - rgb(83, 189, 146)
+$text-mission-1: #316cc8;     // Mission - rgb(13, 129, 190)
+$text-mission-2: #7dcdf1;     // Mission - rgb(125, 205, 241)
+$text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
 
-// Base colors
+// Accent / Button Colors
+$accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
+$button-orange: #e8762c;      // Button Orange - rgb(232,118, 44)
+$button-final: #c92434;       // Final Progress - rgb(201, 36, 52)
+$gradient-orange-red: #ff9824, #c71f35;
+
+// Background Colors
+$bg-white: #fff;              // White BG - rgb(255, 255, 255)
+$bg-light-gray-1: #fafafa;    // Light Gray 1 - rgb(250, 250, 250)
+$bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
+$bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
+$bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
+$bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
+$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
+$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
+
+// Basic colors
 $gray: #999;
 $light-gray: #f2f2f2;
 $dark-gray: #333;
 $white: #fff;
 
-// Theme colors map
-$theme-colors: (
-  dark-blue: $dark-blue,
-  teal: $teal,
-  salmon: $salmon,
-  bright-teal: $bright-teal,
-  green: $green,
-  navy: $navy,
-  light-gray: $light-gray,
-  gray: $gray,
-  dark-gray: $dark-gray,
-  white: $white
+// Text colors mapping
+$text-colors: (
+  negative: $text-negative,
+  light-body: $text-light-body,
+  medium-body: $text-medium-body,
+  dark-body: $text-dark-body,
+  link: $text-link,
+  headlines: $text-headlines,
+  nav-items: $text-nav-items,
+  data-sources: $text-data-sources,
+  stories: $text-stories,
+  learning: $text-learning,
+  highlight: $text-highlight,
+  mission-1: $text-mission-1,
+  mission-2: $text-mission-2,
+  mission-3: $text-mission-3
 );
 
-// Base color alterations
-$green-transparent: rgba(88, 142, 60, 0.9);
-$blue-transparent: rgba(112, 153, 166, 0.9);
-$dark-blue-transparent: rgba(31, 68, 125, 0.9);
-$navy-transparent: rgba(40, 52, 81, 0.9);
-$salmon-dark: #cd5d3d;
-$green-dark: #4D7D34;
-$teal-dark: #557D8A;
+// Button colors mapping
+$button-colors: (
+  orange: $button-orange,
+  final: $button-final
+);
+
+// Background colors mapping
+$background-colors: (
+  white: ($bg-white, $text-dark-body),
+  light-gray-1: ($bg-light-gray-1, $text-dark-body),
+  light-gray-2: ($bg-light-gray-2, $text-dark-body),
+  dark-gray-1: ($bg-dark-gray-1, $text-light-body),
+  dark-gray-2: ($bg-dark-gray-2, $text-light-body),
+  dark-gray-3: ($bg-dark-gray-3, $text-light-body),
+  about-featured: ($bg-about-featured, $text-negative),
+  data-sources: ($bg-data-sources, $text-negative)
+);
 
 // Typographic colors
-$base-font-color: $dark-gray;
-$link-color: $teal;
+$base-font-color: $text-dark-body;
+$link-color: $text-link;
 
 // Misc colors
 $error: #DD1E06;

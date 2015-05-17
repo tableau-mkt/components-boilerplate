@@ -52,41 +52,26 @@ just to make the examples look better.
 
 Markup: box_colored.hbs
 
-.box--dark-blue - Box with dark-blue background.
-.box--teal - Box with teal background.
-.box--salmon - Box with salmon background.
-.box--bright-teal - Box with bright-teal background.
-.box--green - Box with green background.
-.box--navy - Box with navy background.
-.box--light-gray - Box with light gray background.
-.box--gray - Box with gray background.
-.box--dark-gray - Box with dark-gray background.
-.box--white - Box with white background.
+.box--white - White BG colored box.
+.box--light-gray-1 - Light Gray 1 colored box.
+.box--light-gray-2 - Light Gray 2 colored box.
+.box--dark-gray-1 - Dk Gray 1 colored box.
+.box--dark-gray-2 - Dk Gray 2 colored box.
+.box--dark-gray-3 - Dk Gray 3 colored box.
+.box--about-featured - About/Feat colored box.
+.box--data-sources - Data Sources colored box.
 
-Styleguide box.colored
+Styleguide boxes.colored
 */
 
-/* Create a class for each theme color */
-@each $name, $color in $theme-colors {
+/* Create a class for each background color */
+@each $name, $colors in $background-colors {
   .box--#{"" + $name} {
-    background-color: $color;
-    color: $white;
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
   }
 }
 
-/* Text color overrides for lighter backgrounds */
-.box--light-gray,
-.box--white {
-  color: $base-font-color;
-}
-
-.box--teal a,
-.box--salmon a,
-.box--bright-teal a,
-.box--green a,
-.box--gray a {
-  color: $dark-blue;
-}
 
 /*
 Marginless Stretchy Boxes

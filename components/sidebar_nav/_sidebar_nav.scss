@@ -34,7 +34,7 @@ Styleguide navigation.sidebar
 
   li a:hover,
   li.active a {
-    color: $dark-blue;
+    color: $text-link;
     text-decoration: none;
   }
 
@@ -48,7 +48,7 @@ Styleguide navigation.sidebar
     opacity: 0;
     position: relative;
     margin: 0 -10px;
-    background: $teal;
+    background: $bg-dark-gray-1;
     @include transition(opacity .25s);
 
     li {

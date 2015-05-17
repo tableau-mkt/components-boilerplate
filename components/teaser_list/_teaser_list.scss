@@ -47,7 +47,7 @@ Styleguide 8.1
     @include transition(color .25s);
 
     &:hover {
-      color: $link-color;
+      color: $text-link;
       text-decoration: none;
     }
 
@@ -81,32 +81,17 @@ Styleguide 8.1
     .teaser-list__title {
       margin: -10px 0 0;
       padding: .75em;
-      background: $salmon;
+      background: $bg-dark-gray-3;
       text-align: center;
-      color: $white;
+      color: $text-negative;
       font-weight: 200;
       @include transition(background .25s);
     }
 
     &:hover .teaser-list__title {
-      background: $salmon-dark;
+      background: $bg-dark-gray-2;
     }
 
-    &:nth-child(3n+2) .teaser-list__title {
-      background: $green;
-    }
-
-    &:nth-child(3n+2):hover .teaser-list__title {
-      background: $green-dark;
-    }
-
-    &:nth-child(3n+3) .teaser-list__title {
-      background: $teal;
-    }
-
-    &:nth-child(3n+3):hover .teaser-list__title {
-      background: $teal-dark;
-    }
     @include breakpoint($mobile) {
       margin: 0 auto;
     }

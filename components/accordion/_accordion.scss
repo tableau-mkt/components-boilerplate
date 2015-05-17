@@ -23,11 +23,11 @@ Styleguide interactive.accordion
 .accordion--item {
   position: relative;
   padding: 0 1em;
-  border-top: 1px solid $light-gray;
+  border-top: 1px solid $accent-dividers;
   @extend %fade-bg;
   
   &:last-child {
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid $accent-dividers;
   }
   
   &:hover,

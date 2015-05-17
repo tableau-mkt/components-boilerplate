@@ -1,9 +1,9 @@
 .node--stuff-list.node--full .field--stuff-item {
   padding: .5em;
-  border-top: 1px solid $light-gray;
+  border-top: 1px solid $accent-dividers;
   
   &:last-child {
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid $accent-dividers;
   }
 
   .field--stuff-item-label {

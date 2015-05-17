@@ -39,8 +39,8 @@ input[type=email] {
   padding: 0.7em;
   border: 0;
   border-radius: 0;
-  background: $light-gray;
-  color: $dark-gray;
+  background: $white;
+  color: $base-font-color;
   
   @include breakpoint($mobile) {
     width: 100%;
@@ -81,8 +81,8 @@ input[type=submit].submitting {
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
   background-size: 30px 30px;
-  background-color: $teal;
-  border-color: $teal;
+  background-color: $button-final;
+  border-color: $button-final;
   color: $white;
   background-image: -webkit-gradient(linear, left top, right bottom,
     color-stop(.25, rgba(255, 255, 255, .25)), color-stop(.25, transparent),
@@ -109,8 +109,8 @@ input[type=submit].submitting {
 }
 
 input[type=submit].submitted {
-  background-color: $green;
-  border-color: $green;
+  background-color: $button-final;
+  border-color: $button-final;
   color: $white;
 }
 
