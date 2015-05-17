@@ -5,13 +5,16 @@ A place to keep our library of reusable components for various web properties.
 ###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
 
 ## Defining a Component
+
 A component is a reusable bundle of styles, markup, javascript, and other static
 resources used as the building blocks for a web page. Components have a
 determined structure, but the style and interaction behaviors can potentially 
 vary from site to site. 
 
 ## Anatomy of a Component
+
 A component can consist of the following files:
+
 * **SASS file** - Defines the visual styles of the component including any 
 modifiers as well as meta data about the component following the 
 [KSS](http://warpspire.com/kss/) syntax. See the example KSS comment below.
@@ -21,7 +24,8 @@ up the component.
 of the component and provides example data to populate the handlebars template.
 * **Javascript file** - Defines any interactions required by the component.
 
-## Example structure
+## Example Component Structure:
+
 ```
 ┌ components
 └─┬ component-name
@@ -31,7 +35,8 @@ of the component and provides example data to populate the handlebars template.
   └── component-name.js
 ```
 
-## KSS comment example
+## KSS Comment Example:
+
 ```
 /*
 Component Name
@@ -51,6 +56,7 @@ Style guide: section.component
 ```
 
 ### Notes:
+
 * The weight field is optional and is used solely used for ordering the 
 component within a generated style guide via kss-node.
 * There can be as many modifiers as needed and the placeholder 
@@ -58,3 +64,19 @@ component within a generated style guide via kss-node.
 generated style guide displays each variation properly.
 * The "Style guide" field determines the section and nesting in which the 
 component will be displayed in the generated style guide.
+
+## Adding/Editing Components
+
+1. Clone this repo: 
+`git clone git@github.com:tableau-mkt/components.git components`
+2. Install the dependencies: `bundle install` and `npm install`
+3. Watch for changes and automatically run built processes: `grunt watch`
+4. OR manually build: `grunt build` or `grunt styleguide` for just kss build 
+without a compass compile.
+
+## Other info
+
+* The style guide generator used in this project is 
+[kss-node](https://github.com/kss-node/kss-node).
+* The template used for kss-node is our custom-built 
+[kss-template](https://github.com/tableau-mkt/kss-template)
