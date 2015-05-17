@@ -2,7 +2,7 @@
 
 A place to keep our library of reusable components for various web properties.
  
-###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/).
+###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
 
 ## Defining a Component
 A component is a reusable bundle of styles, markup, javascript, and other static
@@ -48,7 +48,6 @@ Weight: 1
 
 Style guide: section.component
 */
-
 ```
 
 ### Notes:
