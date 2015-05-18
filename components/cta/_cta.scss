@@ -6,44 +6,131 @@ Various link styles for use throughout the site.
 Weight: 20
 
 Style guide: links
- */
+*/
 
 /* 
-CTA
+Primary CTA
 
-A call to action button that links to something important.
+Primary CTA buttons (Solid) should be used when a single or important page 
+action is required.
 
 Markup: cta.hbs
 
+.cta--orange - Orange colored CTA button.
+.cta--desktop - Desktop colored CTA button.
+.cta--server - Server colored CTA button.
+.cta--online - Online colored CTA button.
+.cta--public - Public colored CTA button.
+.cta--reader - Reader colored CTA button.
+.cta--mobile - Mobile colored CTA button.
+
 Style guide: links.cta
 */
-.cta,
-input[type=submit] {
+.cta {
   display: inline-block;
-  margin: 0 1em 1em 0;
-  padding: 8px 22px;
-  background-color: transparent;
-  border: 1px solid $button-orange;
+  margin: 0.5em;
+  padding: 13px 25px;
+  background-color: $button-orange;
   border-radius: 0;
   -webkit-appearance: none;
   cursor: pointer;
   font-size: 12px;
-  letter-spacing: 1px;
-  line-height: 1.6;
-  color: $button-orange;
+  color: $text-negative;
   text-transform: uppercase;
   @include transition(background-color 0.25s, color 0.35s);
 
   &:hover,
   &:focus {
-    background-color: $button-orange;
-    color: $white;
-    text-decoration: none;
+    background-color: $button-orange-hover;
+    text-decoration: underline;
   }
 
   &:active {
     background-color: $button-final;
-    color: $white;
-    text-decoration: none;
+    text-decoration: underline;
+  }
+
+  @each $name, $colors in $button-colors {
+    &.cta--#{"" + $name} {
+      background-color: nth($colors, 1);
+
+      &:hover,
+      &:focus {
+        background-color: nth($colors, 2);
+      }
+    }
+  }
+
+  &.cta--download:after,
+  &.cta--play:after {
+    display: inline-block;
+    padding-left: 1em;
+  }
+
+  &.cta--download:after {
+    content: ">";
+  }
+
+  &.cta--play:after {
+    content: "▶";
+  }
+}
+
+
+/* 
+Secondary CTA
+
+Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
+present, or somewhat important page actions are required.
+
+Markup: cta-secondary.hbs
+
+Style guide: links.cta-secondary
+*/
+
+.cta--secondary {
+  border: 2px solid $text-link;
+  background: transparent;
+  color: $text-link;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+
+  &:active {
+    border-color: $button-final;
+    background: transparent;
+    color: $button-final;
+  }
+}
+
+
+/* 
+Tirtiary CTA
+
+Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
+or an action not directly related to the page is required. When hovering over a 
+Stroked button the copy is underlined.
+
+Markup: cta-tirtiary.hbs
+
+Style guide: links.cta-tirtiary
+*/
+
+.cta--tirtiary {
+  border: 2px solid $button-orange;
+  background: transparent;
+  color: $button-orange;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+
+  &:active {
+    border-color: $button-final;
+    background: transparent;
+    color: $button-final;
   }
 }

@@ -21,6 +21,7 @@ $text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
 // Accent / Button Colors
 $accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
 $button-orange: #e8762c;      // Button Orange - rgb(232,118, 44)
+$button-orange-hover: #ea8442;// Button Orange - rgb(234, 132, 66)
 $button-final: #c92434;       // Final Progress - rgb(201, 36, 52)
 $gradient-orange-red: #ff9824, #c71f35;
 
@@ -33,6 +34,28 @@ $bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
 $bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
 $bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
 $bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
+
+// Product colors
+$product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
+$product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
+$product-online: #58a3b9;     // Online - rgb(88, 163, 185)
+$product-public: #324E7A;     // Public - rgb(37, 88, 133)
+$product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
+$product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
+
+// Product button colors
+$button-desktop: #324e7a;       // Desktop Button - rgb(50, 78, 122)
+$button-desktop-hover: #23529c; // Desktop Button Hover - rgb(35, 82, 156)
+$button-server: #5e899b;        // Server Button - rgb(89, 135, 155)
+$button-server-hover: #7fa9bb;  // Server Button Hover - rgb(127, 169, 187)
+$button-online: #7099a5;        // Online Button - rgb(112, 170, 169)
+$button-online-hover: #58a3b9;  // Online Button Hover - rgb(88, 163, 185)
+$button-public: #2d4b65;        // Public Button - rgb(45, 75, 101)
+$button-public-hover: #324E7A;  // Public Button Hover - rgb(50, 78, 122)
+$button-reader: #9d7eb5;        // Reader Button - rgb(157, 126, 181)
+$button-reader-hover: #B28CCF;  // Reader Button Hover - rgb(178, 140, 207)
+$button-mobile: #c87e5b;        // Mobile Button - rgb(200, 126, 91)
+$button-mobile-hover: #DB8E6A;  // Mobile Button Hover - rgb(219, 142, 106)
 
 // Basic colors
 $gray: #999;
@@ -60,8 +83,13 @@ $text-colors: (
 
 // Button colors mapping
 $button-colors: (
-  orange: $button-orange,
-  final: $button-final
+  orange: ($button-orange, $button-orange-hover),
+  desktop: ($button-desktop, $button-desktop-hover),
+  server: ($button-server, $button-server-hover),
+  online: ($button-online, $button-online-hover),
+  public: ($button-public, $button-public-hover),
+  reader: ($button-reader, $button-reader-hover),
+  mobile: ($button-mobile, $button-mobile-hover)
 );
 
 // Background colors mapping
@@ -73,7 +101,13 @@ $background-colors: (
   dark-gray-2: ($bg-dark-gray-2, $text-light-body),
   dark-gray-3: ($bg-dark-gray-3, $text-light-body),
   about-featured: ($bg-about-featured, $text-negative),
-  data-sources: ($bg-data-sources, $text-negative)
+  data-sources: ($bg-data-sources, $text-negative),
+  desktop: ($product-desktop, $text-negative),
+  server: ($product-server, $text-negative),
+  online: ($product-online, $text-negative),
+  public: ($product-public, $text-negative),
+  reader: ($product-reader, $text-negative),
+  mobile: ($product-mobile, $text-negative)
 );
 
 // Typographic colors

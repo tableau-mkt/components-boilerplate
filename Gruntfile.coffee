@@ -6,7 +6,10 @@ module.exports = (grunt) ->
         livereload: true
 
       sass:
-        files: ['components/{,**/}*.{scss,sass}']
+        files: [
+          'components/{,**/}*.{scss,sass}'
+          'helpers/{,**/}*.{scss,sass}'
+        ]
         tasks: ['compass:dist']
 
       kss:

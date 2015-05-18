@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Tableau Color Palette 
  */
@@ -403,6 +404,72 @@ Style guide: boxes.badge
   background: none;
   color: #2e4c65;
 }
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--desktop {
+  background: #23529c;
+  border-color: #23529c;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--desktop.badge--outlined {
+  background: none;
+  color: #23529c;
+}
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--server {
+  background: #7fa9bb;
+  border-color: #7fa9bb;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--server.badge--outlined {
+  background: none;
+  color: #7fa9bb;
+}
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--online {
+  background: #58a3b9;
+  border-color: #58a3b9;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--online.badge--outlined {
+  background: none;
+  color: #58a3b9;
+}
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--public {
+  background: #324E7A;
+  border-color: #324E7A;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--public.badge--outlined {
+  background: none;
+  color: #324E7A;
+}
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--reader {
+  background: #B28CCF;
+  border-color: #B28CCF;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--reader.badge--outlined {
+  background: none;
+  color: #B28CCF;
+}
+/* line 40, ../../components/badge/_badge.scss */
+.badge.badge--mobile {
+  background: #DB8E6A;
+  border-color: #DB8E6A;
+  color: #fff;
+}
+/* line 45, ../../components/badge/_badge.scss */
+.badge.badge--mobile.badge--outlined {
+  background: none;
+  color: #DB8E6A;
+}
 
 /* 
 Boxes & Containers
@@ -468,55 +535,97 @@ Weight: 2
 .box--dark-gray-3 - Dk Gray 3 colored box.
 .box--about-featured - About/Feat colored box.
 .box--data-sources - Data Sources colored box.
+.box--desktop - Desktop product colored box.
+.box--server - Server product colored box.
+.box--online - Online product colored box.
+.box--public - Public product colored box.
+.box--reader - Reader product colored box.
+.box--mobile - Mobile product colored box.
 
 Style guide: boxes.colored
 */
 /* Create a class for each background color */
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--white {
   background-color: #fff;
   color: #333;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--light-gray-2 {
   background-color: #ebebeb;
   color: #333;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--dark-gray-2 {
   background-color: #333;
   color: #bbb;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--about-featured {
   background-color: #457387;
   color: #fff;
 }
 
-/* line 73, ../../components/box/_box.scss */
+/* line 79, ../../components/box/_box.scss */
 .box--data-sources {
   background-color: #2e4c65;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--desktop {
+  background-color: #23529c;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--server {
+  background-color: #7fa9bb;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--online {
+  background-color: #58a3b9;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--public {
+  background-color: #324E7A;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--reader {
+  background-color: #B28CCF;
+  color: #fff;
+}
+
+/* line 79, ../../components/box/_box.scss */
+.box--mobile {
+  background-color: #DB8E6A;
   color: #fff;
 }
 
@@ -537,7 +646,7 @@ Weight: 3
 
 Style guide: boxes.stretchy
 */
-/* line 100, ../../components/box/_box.scss */
+/* line 106, ../../components/box/_box.scss */
 .box__stretchy.box__stretchy--halves, .box__stretchy.box__stretchy--thirds, .box__stretchy.box__stretchy--fourths, .box__stretchy.box__stretchy--fifths, .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
@@ -545,29 +654,29 @@ Style guide: boxes.stretchy
   width: 100%;
 }
 @media (min-width: 740px) {
-  /* line 112, ../../components/box/_box.scss */
+  /* line 118, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--halves, .box__stretchy.box__stretchy--thirds, .box__stretchy.box__stretchy--fourths, .box__stretchy.box__stretchy--fifths, .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 120, ../../components/box/_box.scss */
+  /* line 126, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  /* line 127, ../../components/box/_box.scss */
+  /* line 133, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--thirds {
     width: 33.33333%;
   }
-  /* line 131, ../../components/box/_box.scss */
+  /* line 137, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 135, ../../components/box/_box.scss */
+  /* line 141, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 139, ../../components/box/_box.scss */
+  /* line 145, ../../components/box/_box.scss */
   .box__stretchy.box__stretchy--sixths {
     width: 16.66667%;
   }
@@ -581,51 +690,175 @@ Various link styles for use throughout the site.
 Weight: 20
 
 Style guide: links
- */
+*/
 /* 
-CTA
+Primary CTA
 
-A call to action button that links to something important.
+Primary CTA buttons (Solid) should be used when a single or important page 
+action is required.
 
 Markup: cta.hbs
 
+.cta--orange - Orange colored CTA button.
+.cta--desktop - Desktop colored CTA button.
+.cta--server - Server colored CTA button.
+.cta--online - Online colored CTA button.
+.cta--public - Public colored CTA button.
+.cta--reader - Reader colored CTA button.
+.cta--mobile - Mobile colored CTA button.
+
 Style guide: links.cta
 */
-/* line 20, ../../components/cta/_cta.scss */
-.cta,
-input[type=submit] {
+/* line 29, ../../components/cta/_cta.scss */
+.cta {
   display: inline-block;
-  margin: 0 1em 1em 0;
-  padding: 8px 22px;
-  background-color: transparent;
-  border: 1px solid #e8762c;
+  margin: 0.5em;
+  padding: 13px 25px;
+  background-color: #e8762c;
   border-radius: 0;
   -webkit-appearance: none;
   cursor: pointer;
   font-size: 12px;
-  letter-spacing: 1px;
-  line-height: 1.6;
-  color: #e8762c;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: background-color 0.25s, color 0.35s;
   -moz-transition: background-color 0.25s, color 0.35s;
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 37, ../../components/cta/_cta.scss */
-.cta:hover, .cta:focus,
-input[type=submit]:hover,
-input[type=submit]:focus {
-  background-color: #e8762c;
-  color: #fff;
-  text-decoration: none;
+/* line 42, ../../components/cta/_cta.scss */
+.cta:hover, .cta:focus {
+  background-color: #ea8442;
+  text-decoration: underline;
 }
-/* line 44, ../../components/cta/_cta.scss */
-.cta:active,
-input[type=submit]:active {
+/* line 48, ../../components/cta/_cta.scss */
+.cta:active {
   background-color: #c92434;
-  color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--orange {
+  background-color: #e8762c;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--orange:hover, .cta.cta--orange:focus {
+  background-color: #ea8442;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--desktop {
+  background-color: #324e7a;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--desktop:hover, .cta.cta--desktop:focus {
+  background-color: #23529c;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--server {
+  background-color: #5e899b;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--server:hover, .cta.cta--server:focus {
+  background-color: #7fa9bb;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--online {
+  background-color: #7099a5;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--online:hover, .cta.cta--online:focus {
+  background-color: #58a3b9;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--public {
+  background-color: #2d4b65;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--public:hover, .cta.cta--public:focus {
+  background-color: #324E7A;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--reader {
+  background-color: #9d7eb5;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--reader:hover, .cta.cta--reader:focus {
+  background-color: #B28CCF;
+}
+/* line 54, ../../components/cta/_cta.scss */
+.cta.cta--mobile {
+  background-color: #c87e5b;
+}
+/* line 57, ../../components/cta/_cta.scss */
+.cta.cta--mobile:hover, .cta.cta--mobile:focus {
+  background-color: #DB8E6A;
+}
+/* line 64, ../../components/cta/_cta.scss */
+.cta.cta--download:after, .cta.cta--play:after {
+  display: inline-block;
+  padding-left: 1em;
+}
+/* line 70, ../../components/cta/_cta.scss */
+.cta.cta--download:after {
+  content: ">";
+}
+/* line 74, ../../components/cta/_cta.scss */
+.cta.cta--play:after {
+  content: "▶";
+}
+
+/* 
+Secondary CTA
+
+Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
+present, or somewhat important page actions are required.
+
+Markup: cta-secondary.hbs
+
+Style guide: links.cta-secondary
+*/
+/* line 91, ../../components/cta/_cta.scss */
+.cta--secondary {
+  border: 2px solid #eb912c;
+  background: transparent;
+  color: #eb912c;
+}
+/* line 96, ../../components/cta/_cta.scss */
+.cta--secondary:hover, .cta--secondary:focus {
+  background: transparent;
+}
+/* line 101, ../../components/cta/_cta.scss */
+.cta--secondary:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
+}
+
+/* 
+Tirtiary CTA
+
+Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
+or an action not directly related to the page is required. When hovering over a 
+Stroked button the copy is underlined.
+
+Markup: cta-tirtiary.hbs
+
+Style guide: links.cta-tirtiary
+*/
+/* line 121, ../../components/cta/_cta.scss */
+.cta--tirtiary {
+  border: 2px solid #e8762c;
+  background: transparent;
+  color: #e8762c;
+}
+/* line 126, ../../components/cta/_cta.scss */
+.cta--tirtiary:hover, .cta--tirtiary:focus {
+  background: transparent;
+}
+/* line 131, ../../components/cta/_cta.scss */
+.cta--tirtiary:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
 }
 
 /* line 1, ../../components/footer/_footer.scss */
