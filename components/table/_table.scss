@@ -76,7 +76,7 @@ table {
   }
   
   th {
-    font-weight: $font-weight-bold;
+    @extend .text--bold;
     text-transform: uppercase;
   }
   tr p:last-child {

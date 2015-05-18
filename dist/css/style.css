@@ -61,9 +61,6 @@ Background colors mapping in the form of:
   mdifier-name: ($bg-color, $text-color)
 */
 /**
- * Base type sizing
- */
-/**
  * SASS vars
  */
 /*
@@ -285,10 +282,9 @@ Style guide: interactive.accordion
   padding: 1.3em 40px 1.3em 0;
   position: relative;
   cursor: pointer;
-  font-weight: 300;
   text-transform: uppercase;
 }
-/* line 47, ../../components/accordion/_accordion.scss */
+/* line 46, ../../components/accordion/_accordion.scss */
 .accordion--item--title:after {
   position: absolute;
   top: 50%;
@@ -296,25 +292,24 @@ Style guide: interactive.accordion
   margin-top: -10px;
   content: "+";
   font-family: 'tc-icons';
-  font-weight: 300;
   line-height: 1;
 }
 
-/* line 59, ../../components/accordion/_accordion.scss */
+/* line 57, ../../components/accordion/_accordion.scss */
 .accordion--item.open .accordion--item--title:after {
   content: "-";
 }
 
-/* line 63, ../../components/accordion/_accordion.scss */
+/* line 61, ../../components/accordion/_accordion.scss */
 .accordion--item--content {
   padding-bottom: 1.5em;
 }
-/* line 66, ../../components/accordion/_accordion.scss */
+/* line 64, ../../components/accordion/_accordion.scss */
 .accordion--item--content p:first-child,
 .accordion--item--content ul:first-child {
   margin-top: 0;
 }
-/* line 71, ../../components/accordion/_accordion.scss */
+/* line 69, ../../components/accordion/_accordion.scss */
 .accordion--item--content p:last-child,
 .accordion--item--content ul:last-child {
   margin-bottom: 0;
@@ -960,13 +955,12 @@ Style guide: links.cta-tirtiary
 /* line 32, ../../components/footer/_footer.scss */
 .l-footer .block--menu-menu-footer-menu .menu li a {
   color: #f2f2f2;
-  font-size: 0.75em;
 }
-/* line 41, ../../components/footer/_footer.scss */
+/* line 40, ../../components/footer/_footer.scss */
 .l-footer .block--block-2 p {
   margin: .5em 0 0;
 }
-/* line 47, ../../components/footer/_footer.scss */
+/* line 46, ../../components/footer/_footer.scss */
 .l-footer .block--block-3 {
   margin-top: 1em;
 }
@@ -975,42 +969,42 @@ Style guide: links.cta-tirtiary
   .l-footer {
     text-align: center;
   }
-  /* line 54, ../../components/footer/_footer.scss */
+  /* line 53, ../../components/footer/_footer.scss */
   .l-footer .block--block-1 .social-links {
     max-width: 250px;
     margin: 0 auto;
     text-align: center;
   }
-  /* line 59, ../../components/footer/_footer.scss */
+  /* line 58, ../../components/footer/_footer.scss */
   .l-footer .block--block-1 .social-links a {
     margin: .25em;
     width: 40px;
     height: 40px;
     line-height: 40px;
   }
-  /* line 67, ../../components/footer/_footer.scss */
+  /* line 66, ../../components/footer/_footer.scss */
   .l-footer .block--menu-menu-footer-menu .menu {
     margin-top: 1em;
   }
-  /* line 70, ../../components/footer/_footer.scss */
+  /* line 69, ../../components/footer/_footer.scss */
   .l-footer .block--menu-menu-footer-menu .menu li {
     display: block;
     padding: 0;
   }
-  /* line 75, ../../components/footer/_footer.scss */
+  /* line 74, ../../components/footer/_footer.scss */
   .l-footer .block--menu-menu-footer-menu .menu li a {
     display: block;
     padding: .3em;
     font-size: 1em;
   }
-  /* line 82, ../../components/footer/_footer.scss */
+  /* line 81, ../../components/footer/_footer.scss */
   .l-footer .block--block-3 img {
     max-width: 140px;
   }
 }
 
 @media (min-width: 740px) {
-  /* line 92, ../../components/footer/_footer.scss */
+  /* line 91, ../../components/footer/_footer.scss */
   html,
   body {
     margin: 0;
@@ -1018,18 +1012,18 @@ Style guide: links.cta-tirtiary
     height: 100%;
   }
 
-  /* line 99, ../../components/footer/_footer.scss */
+  /* line 98, ../../components/footer/_footer.scss */
   .l-page {
     min-height: 100%;
     position: relative;
   }
 
-  /* line 104, ../../components/footer/_footer.scss */
+  /* line 103, ../../components/footer/_footer.scss */
   .l-main {
     padding-bottom: 98px;
   }
 
-  /* line 108, ../../components/footer/_footer.scss */
+  /* line 107, ../../components/footer/_footer.scss */
   .l-footer {
     position: absolute;
     bottom: 0;
@@ -2167,7 +2161,6 @@ Style guide: navigation.sidebar
   display: block;
   padding: .5em 0;
   color: #999;
-  font-weight: 700;
   -webkit-transition: color 0.25s;
   -moz-transition: color 0.25s;
   -o-transition: color 0.25s;
@@ -2389,17 +2382,16 @@ Style guide: 6.2
 /* line 9, ../../components/stuff_list/_stuff_list.scss */
 .node--stuff-list.node--full .field--stuff-item .field--stuff-item-label {
   color: #999;
-  font-weight: 300;
   text-transform: uppercase;
 }
 
-/* line 20, ../../components/stuff_list/_stuff_list.scss */
+/* line 19, ../../components/stuff_list/_stuff_list.scss */
 .stuff-list--grid {
   max-width: 313px;
   margin: 0 auto;
 }
 @media (min-width: 740px) {
-  /* line 20, ../../components/stuff_list/_stuff_list.scss */
+  /* line 19, ../../components/stuff_list/_stuff_list.scss */
   .stuff-list--grid {
     width: 33.333%;
     float: left;
@@ -2483,7 +2475,6 @@ table th {
 }
 /* line 78, ../../components/table/_table.scss */
 table th {
-  font-weight: 700;
   text-transform: uppercase;
 }
 /* line 82, ../../components/table/_table.scss */
@@ -2657,6 +2648,60 @@ Weight: 10
 Style guide: typography
 */
 /*
+Font Families
+
+**BentonSans** is primarily used for section headers and titling in it’s Thin 
+case, but it is also used in it’s Book case in buttons and other scenarios. 
+Occasionally BentonSans Medium is used in article templates.
+
+**Merriweather** is used in it’s Light case mainly for body copy and in the 
+Stories and Articles sections.
+
+Markup: fonts.hbs
+
+Weight: 1
+
+.text--benton-thin - Benton Sans Thin
+.text--benton-light - Benton Sans Light
+.text--benton-book - Benton Sans Book
+.text--benton-medium - Benton Sans Medium
+.text--merriweather-light - Merriweather Light
+
+Style guide: typography.fonts
+*/
+/* line 33, ../../components/typography/_typography.scss */
+.text--benton-thin, .heading--homepage, .heading--product, .heading--download, .heading--medium {
+  font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+}
+
+/* line 37, ../../components/typography/_typography.scss */
+.text--benton-light, .heading--small, .heading--label, .text--large-copy, .text--sub-nav, .text--dropdown {
+  font-family: 'Benton Sans Light', Helvetica, sans-serif;
+}
+
+/* line 41, ../../components/typography/_typography.scss */
+.text--benton-book, .heading--x-small, .text--label {
+  font-family: 'Benton Sans Book', Helvetica, sans-serif;
+}
+
+/* line 45, ../../components/typography/_typography.scss */
+.text--benton-medium {
+  font-family: 'Benton Sans Medium', Helvetica, sans-serif;
+}
+
+/* line 49, ../../components/typography/_typography.scss */
+.text--merriweather-light, body,
+p,
+ul,
+table,
+span,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
+  font-family: 'Merriweather', serif;
+}
+
+/*
 Base Copy
 
 The base copy style across the site. The base typeface is Whitney which is 
@@ -2664,113 +2709,168 @@ licensed and hosted by typography.com. Base font size is 16px.
 
 Markup: base.hbs
 
-Weight: 1
+Weight: 2
+
+.text--body-large - Large body copy.
+.text--body-medium - Medium body copy.
+.text--body-small - Small body copy.
 
 Style guide: typography.base
  */
-/* line 21, ../../components/typography/_typography.scss */
-body {
+/* line 73, ../../components/typography/_typography.scss */
+body,
+p,
+ul,
+table,
+span,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
   font-weight: normal;
   font-style: normal;
-  font-size: 16px;
-  font-family: 'Gill Sans W01 Light', Arial, Helvetica, sans-serif;
+  font-size: 14px;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.86;
+}
+
+/* line 89, ../../components/typography/_typography.scss */
+.text--body-large {
+  font-size: 1.07143em;
+}
+
+/* line 93, ../../components/typography/_typography.scss */
+.text--body-small {
+  font-size: 0.85714em;
+  line-height: 1.66;
 }
 
 /*
-Headings
+Context-specific Headings
 
-Used for title and prominent labels of content.
+These heading classes are used for specific contexts.
 
-Markup: headings.hbs
+Markup: context-headings.hbs
 
-Weight: 2
+Weight: 3
 
-h1 - First level heading. Reserved for page titles. 3em
-h2 - Second level heading. Used mostly for section titles. 2.5em
-h3 - Third level heading. 2em
-h4 - Fourth level heading. 1.5em
-h5 - Fifth level heading. 1.25em
-h6 - Sixth level heading. 1em
+.heading--homepage - Homepage Hero - uses <h1>
+.heading--product - Product Landing/Product Detail Hero - uses <h1>
+.heading--download - Download Success - uses <h1>
+.heading--medium - Medium headers - uses <h2>
+.heading--small - Small Headline/Product labels - uses <h3>
+.heading--x-small - XS Headline - uses <h4>
+.heading--label - HP Hero Eyebrow/News title/Demo - uses <h5>
 
-Style guide: typography.headings
+Styleguide typography.context-headings
 */
-/* line 49, ../../components/typography/_typography.scss */
-h1,
-.heading--h1,
-h2,
-.heading--h2,
-h3,
-.heading--h3,
-h4,
-.heading--h4,
-h5,
-.heading--h5,
-h6,
-.heading--h6 {
-  margin: .5em 0;
-  font-weight: 900;
-  line-height: 1;
+/* line 119, ../../components/typography/_typography.scss */
+.heading--homepage {
+  font-size: 5em;
+  line-height: 1.21;
+  color: #000;
 }
 
-/* line 66, ../../components/typography/_typography.scss */
-h1,
-.heading--h1 {
-  font-size: 3em;
+/* line 127, ../../components/typography/_typography.scss */
+.heading--product {
+  font-size: 3.57143em;
+  color: #000;
 }
 
-/* line 70, ../../components/typography/_typography.scss */
-h2,
-.heading--h2 {
-  font-size: 2.5em;
+/* line 134, ../../components/typography/_typography.scss */
+.heading--download {
+  font-size: 3.42857em;
+  line-height: 1.25;
+  color: #000;
 }
 
-/* line 74, ../../components/typography/_typography.scss */
-h3,
-.heading--h3 {
-  font-size: 2em;
+/* line 142, ../../components/typography/_typography.scss */
+.heading--medium {
+  font-size: 2.57143em;
+  line-height: 1.39;
+  color: #000;
 }
 
-/* line 78, ../../components/typography/_typography.scss */
-h4,
-.heading--h4 {
-  font-size: 1.5em;
+/* line 150, ../../components/typography/_typography.scss */
+.heading--small {
+  font-size: 1.85714em;
+  color: #333;
 }
 
-/* line 82, ../../components/typography/_typography.scss */
-h5,
-.heading--h5 {
-  font-size: 1.25em;
+/* line 157, ../../components/typography/_typography.scss */
+.heading--x-small {
+  font-size: 1.64286em;
+  color: #333;
 }
 
-/* line 86, ../../components/typography/_typography.scss */
-h6,
-.heading--h6 {
-  font-size: 1em;
+/* line 164, ../../components/typography/_typography.scss */
+.heading--label {
+  font-size: 1.57143em;
+  color: #333;
 }
 
-/** 
- * Links
- */
-/* line 95, ../../components/typography/_typography.scss */
+/*
+Other Type Treatments
+
+Other treatments used for text throughout the site
+
+Markup: context-headings.hbs
+
+Weight: 4
+
+.text--large-copy - Large Copy
+.text--sub-nav - Sub Nav Mission
+.text--dropdown - Dropdown Copy
+.text--label - Label/Nav item
+
+Style guide: typography.other
+*/
+/* line 189, ../../components/typography/_typography.scss */
+.text--large-copy {
+  font-size: 1.71429em;
+  color: #333;
+}
+
+/* line 195, ../../components/typography/_typography.scss */
+.text--sub-nav {
+  font-size: 1.57143em;
+  color: #000;
+}
+
+/* line 201, ../../components/typography/_typography.scss */
+.text--dropdown {
+  font-size: 1.14286em;
+  color: #787878;
+  line-height: 1.875;
+}
+
+/* line 208, ../../components/typography/_typography.scss */
+.text--label {
+  font-size: 0.78571em;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/*
+Hyperlinks
+
+
+Style guide: typography.hyperlinks
+*/
+/* line 222, ../../components/typography/_typography.scss */
 a {
   text-decoration: none;
 }
-/* line 98, ../../components/typography/_typography.scss */
+/* line 225, ../../components/typography/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/** 
- * Paragraphs
- */
 /*
 Formatted Text
 
 Markup: formatted.hbs
 
-Weight: 3
+Weight: 5
 
 .text--bold - Bold text for emphasis. Same as <strong>
 .text--light - Light text. Default for non-headings
@@ -2782,7 +2882,7 @@ Weight: 3
 .text--justified - Justified text
 .text--huge - Huge text - 48px
 .text--big - Big text - 32px
-.text--base-size - Base size text - 16px
+.text--base-size - Base size text - 14px
 .text--small - Small text - 12px
 .text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
@@ -2803,147 +2903,224 @@ Weight: 3
 
 Style guide: typography.formatted
 */
-/* line 148, ../../components/typography/_typography.scss */
+/* line 269, ../../components/typography/_typography.scss */
 strong,
-.text--bold {
+.text--bold,
+.sidebar--nav li a,
+table th {
   font-weight: bold;
 }
 
-/* line 152, ../../components/typography/_typography.scss */
+/* line 273, ../../components/typography/_typography.scss */
 .text--light {
   font-weight: 100;
 }
 
-/* line 155, ../../components/typography/_typography.scss */
+/* line 276, ../../components/typography/_typography.scss */
 em,
 .text--italic {
   font-style: italic;
 }
 
-/* line 159, ../../components/typography/_typography.scss */
+/* line 280, ../../components/typography/_typography.scss */
 .text--caps {
   text-transform: uppercase;
 }
 
-/* line 162, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .text--left {
   text-align: left;
 }
 
-/* line 165, ../../components/typography/_typography.scss */
+/* line 286, ../../components/typography/_typography.scss */
 .text--right {
   text-align: right;
 }
 
-/* line 168, ../../components/typography/_typography.scss */
+/* line 289, ../../components/typography/_typography.scss */
 .text--centered {
   text-align: center;
 }
 
-/* line 171, ../../components/typography/_typography.scss */
+/* line 292, ../../components/typography/_typography.scss */
 .text--justified {
   text-align: justified;
 }
 
-/* line 174, ../../components/typography/_typography.scss */
+/* line 295, ../../components/typography/_typography.scss */
 .text--huge {
-  font-size: 3em;
+  font-size: 3.42857em;
 }
 
-/* line 177, ../../components/typography/_typography.scss */
+/* line 298, ../../components/typography/_typography.scss */
 .text--big {
-  font-size: 2em;
+  font-size: 2.28571em;
 }
 
-/* line 180, ../../components/typography/_typography.scss */
+/* line 301, ../../components/typography/_typography.scss */
 .text--base-size {
-  font-size: 16px;
+  font-size: 14px;
 }
 
-/* line 183, ../../components/typography/_typography.scss */
+/* line 304, ../../components/typography/_typography.scss */
 .text--small {
-  font-size: 0.75em;
+  font-size: 0.85714em;
 }
 
-/* line 186, ../../components/typography/_typography.scss */
+/* line 307, ../../components/typography/_typography.scss */
 .text--tiny {
-  font-size: 0.63em;
+  font-size: 0.71429em;
 }
 
-/* line 189, ../../components/typography/_typography.scss */
+/* line 310, ../../components/typography/_typography.scss */
 .text--lineheight-zero {
   line-height: 0;
 }
 
 /* Create a class for each text color */
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--negative {
   color: #fff;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--light-body {
   color: #bbb;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--medium-body {
   color: #787878;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--dark-body {
   color: #333;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--link {
   color: #eb912c;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--headlines {
   color: #000;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--nav-items {
   color: #212535;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--data-sources {
   color: #a3b9cb;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--stories {
   color: #847094;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--learning {
   color: #6f99a5;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--highlight {
   color: #53bd92;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--mission-1 {
   color: #316cc8;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--mission-2 {
   color: #7dcdf1;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .text--mission-3 {
   color: #5facce;
+}
+
+/*
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings.hbs
+
+Weight: 10
+
+h1 - First level heading. Reserved for page titles. 3em
+h2 - Second level heading. Used mostly for section titles. 2.5em
+h3 - Third level heading. 2em
+h4 - Fourth level heading. 1.5em
+h5 - Fifth level heading. 1.25em
+h6 - Sixth level heading. 1em
+
+Style guide: typography.headings
+*/
+/* line 340, ../../components/typography/_typography.scss */
+h1, .heading--homepage, .heading--product, .heading--download,
+.heading--h1,
+h2,
+.heading--medium,
+.heading--h2,
+h3,
+.heading--small,
+.heading--h3,
+h4,
+.heading--x-small,
+.heading--h4,
+h5,
+.heading--label,
+.heading--h5,
+h6,
+.heading--h6 {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+/* line 356, ../../components/typography/_typography.scss */
+h1, .heading--homepage, .heading--product, .heading--download,
+.heading--h1 {
+  font-size: 3em;
+}
+
+/* line 360, ../../components/typography/_typography.scss */
+h2, .heading--medium,
+.heading--h2 {
+  font-size: 2.5em;
+}
+
+/* line 364, ../../components/typography/_typography.scss */
+h3, .heading--small,
+.heading--h3 {
+  font-size: 2em;
+}
+
+/* line 368, ../../components/typography/_typography.scss */
+h4, .heading--x-small,
+.heading--h4 {
+  font-size: 1.5em;
+}
+
+/* line 372, ../../components/typography/_typography.scss */
+h5, .heading--label,
+.heading--h5 {
+  font-size: 1.25em;
+}
+
+/* line 376, ../../components/typography/_typography.scss */
+h6,
+.heading--h6 {
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

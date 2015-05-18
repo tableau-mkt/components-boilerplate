@@ -41,7 +41,6 @@ Style guide: interactive.accordion
   padding: 1.3em 40px 1.3em 0;
   position: relative;
   cursor: pointer;
-  font-weight: $font-weight-light;
   text-transform: uppercase;
 
   &:after {
@@ -51,7 +50,6 @@ Style guide: interactive.accordion
     margin-top: -10px;
     content: "+";
     font-family: 'tc-icons';
-    font-weight: $font-weight-light;
     line-height: 1;
   }
 }

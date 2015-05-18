@@ -6,6 +6,51 @@ Weight: 10
 Style guide: typography
 */
 
+
+/*
+Font Families
+
+**BentonSans** is primarily used for section headers and titling in it’s Thin 
+case, but it is also used in it’s Book case in buttons and other scenarios. 
+Occasionally BentonSans Medium is used in article templates.
+
+**Merriweather** is used in it’s Light case mainly for body copy and in the 
+Stories and Articles sections.
+
+Markup: fonts.hbs
+
+Weight: 1
+
+.text--benton-thin - Benton Sans Thin
+.text--benton-light - Benton Sans Light
+.text--benton-book - Benton Sans Book
+.text--benton-medium - Benton Sans Medium
+.text--merriweather-light - Merriweather Light
+
+Style guide: typography.fonts
+*/
+
+.text--benton-thin {
+  font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+}
+
+.text--benton-light {
+  font-family: 'Benton Sans Light', Helvetica, sans-serif;
+}
+
+.text--benton-book {
+  font-family: 'Benton Sans Book', Helvetica, sans-serif;
+}
+
+.text--benton-medium {
+  font-family: 'Benton Sans Medium', Helvetica, sans-serif;
+}
+
+.text--merriweather-light {
+  font-family: 'Merriweather', serif;
+}
+
+
 /*
 Base Copy
 
@@ -14,84 +59,166 @@ licensed and hosted by typography.com. Base font size is 16px.
 
 Markup: base.hbs
 
-Weight: 1
+Weight: 2
+
+.text--body-large - Large body copy.
+.text--body-medium - Medium body copy.
+.text--body-small - Small body copy.
 
 Style guide: typography.base
  */
-body {
+
+$base-font-size: 14px;
+
+body,
+p,
+ul,
+table,
+span,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
+  @extend .text--merriweather-light;
   font-weight: normal;
   font-style: normal;
-  font-size: 16px;
-  font-family: 'Gill Sans W01 Light', Arial, Helvetica, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  font-size: $base-font-size;
+  color: $text-dark-body;
+  line-height: 1.86;
 }
+
+.text--body-large {
+  font-size: em(15px);
+}
+
+.text--body-small {
+  font-size: em(12px);
+  line-height: 1.66;
+}
+
 
 /*
-Headings
+Context-specific Headings
 
-Used for title and prominent labels of content.
+These heading classes are used for specific contexts.
 
-Markup: headings.hbs
+Markup: context-headings.hbs
 
-Weight: 2
+Weight: 3
 
-h1 - First level heading. Reserved for page titles. 3em
-h2 - Second level heading. Used mostly for section titles. 2.5em
-h3 - Third level heading. 2em
-h4 - Fourth level heading. 1.5em
-h5 - Fifth level heading. 1.25em
-h6 - Sixth level heading. 1em
+.heading--homepage - Homepage Hero - uses <h1>
+.heading--product - Product Landing/Product Detail Hero - uses <h1>
+.heading--download - Download Success - uses <h1>
+.heading--medium - Medium headers - uses <h2>
+.heading--small - Small Headline/Product labels - uses <h3>
+.heading--x-small - XS Headline - uses <h4>
+.heading--label - HP Hero Eyebrow/News title/Demo - uses <h5>
 
-Style guide: typography.headings
+Styleguide typography.context-headings
 */
 
-h1,
-.heading--h1,
-h2,
-.heading--h2,
-h3,
-.heading--h3,
-h4,
-.heading--h4,
-h5,
-.heading--h5,
-h6,
-.heading--h6 {
-  margin: .5em 0;
-  font-weight: 900;
-  line-height: 1;
+.heading--homepage {
+  @extend h1;
+  @extend .text--benton-thin;
+  font-size: em(70px);
+  line-height: 1.21;
+  color: $text-headlines;
 }
 
-h1,
-.heading--h1 {
-  font-size: 3em;
+.heading--product {
+  @extend h1;
+  @extend .text--benton-thin;
+  font-size: em(50px);
+  color: $text-headlines;
 }
-h2,
-.heading--h2 {
-  font-size: 2.5em;
+
+.heading--download {
+  @extend h1;
+  @extend .text--benton-thin;
+  font-size: em(48px);
+  line-height: 1.25;
+  color: $text-headlines;
 }
-h3,
-.heading--h3 {
-  font-size: 2em;
+
+.heading--medium {
+  @extend h2;
+  @extend .text--benton-thin;
+  font-size: em(36px);
+  line-height: 1.39;
+  color: $text-headlines;
 }
-h4,
-.heading--h4 {
-  font-size: 1.5em;
+
+.heading--small {
+  @extend h3;
+  @extend .text--benton-light;
+  font-size: em(26px);
+  color: $text-dark-body;
 }
-h5,
-.heading--h5 {
-  font-size: 1.25em;
+
+.heading--x-small {
+  @extend h4;
+  @extend .text--benton-book;
+  font-size: em(23px);
+  color: $text-dark-body;
 }
-h6,
-.heading--h6 {
-  font-size: 1em;
+
+.heading--label {
+  @extend h5;
+  @extend .text--benton-light;
+  font-size: em(22px);
+  color: $text-dark-body;
 }
 
 
-/** 
- * Links
- */
+/*
+Other Type Treatments
+
+Other treatments used for text throughout the site
+
+Markup: context-headings.hbs
+
+Weight: 4
+
+.text--large-copy - Large Copy
+.text--sub-nav - Sub Nav Mission
+.text--dropdown - Dropdown Copy
+.text--label - Label/Nav item
+
+Style guide: typography.other
+*/
+
+.text--large-copy {
+  @extend .text--benton-light;
+  font-size: em(24px);
+  color: $text-dark-body;
+}
+
+.text--sub-nav {
+  @extend .text--benton-light;
+  font-size: em(22px);
+  color: $text-headlines;
+}
+
+.text--dropdown {
+  @extend .text--benton-light;
+  font-size: em(16px);
+  color: $text-medium-body;
+  line-height: 1.875;
+}
+
+.text--label {
+  @extend .text--benton-book;
+  font-size: em(11px);
+  color: $text-dark-body;
+  text-transform: uppercase;
+}
+
+
+/*
+Hyperlinks
+
+
+Style guide: typography.hyperlinks
+*/
 a {
   text-decoration: none;
 
@@ -100,19 +227,13 @@ a {
   }
 }
 
-/** 
- * Paragraphs
- */
-p {
-
-}
 
 /*
 Formatted Text
 
 Markup: formatted.hbs
 
-Weight: 3
+Weight: 5
 
 .text--bold - Bold text for emphasis. Same as <strong>
 .text--light - Light text. Default for non-headings
@@ -124,7 +245,7 @@ Weight: 3
 .text--justified - Justified text
 .text--huge - Huge text - 48px
 .text--big - Big text - 32px
-.text--base-size - Base size text - 16px
+.text--base-size - Base size text - 14px
 .text--small - Small text - 12px
 .text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
@@ -172,19 +293,19 @@ em,
   text-align: justified;
 }
 .text--huge {
-  font-size: $text-huge;
+  font-size: em(48px);
 }
 .text--big {
-  font-size: $text-big;
+  font-size: em(32px);
 }
 .text--base-size {
-  font-size: 16px;
+  font-size: $base-font-size;
 }
 .text--small {
-  font-size: $text-small;
+  font-size: em(12px);
 }
 .text--tiny {
-  font-size: $text-tiny;
+  font-size: em(10px);
 }
 .text--lineheight-zero {
   line-height: 0;
@@ -194,4 +315,65 @@ em,
   .text--#{"" + $name} {
     color: $color;
   }
+}
+
+
+/*
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings.hbs
+
+Weight: 10
+
+h1 - First level heading. Reserved for page titles. 3em
+h2 - Second level heading. Used mostly for section titles. 2.5em
+h3 - Third level heading. 2em
+h4 - Fourth level heading. 1.5em
+h5 - Fifth level heading. 1.25em
+h6 - Sixth level heading. 1em
+
+Style guide: typography.headings
+*/
+
+h1,
+.heading--h1,
+h2,
+.heading--h2,
+h3,
+.heading--h3,
+h4,
+.heading--h4,
+h5,
+.heading--h5,
+h6,
+.heading--h6 {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+h1,
+.heading--h1 {
+  font-size: 3em;
+}
+h2,
+.heading--h2 {
+  font-size: 2.5em;
+}
+h3,
+.heading--h3 {
+  font-size: 2em;
+}
+h4,
+.heading--h4 {
+  font-size: 1.5em;
+}
+h5,
+.heading--h5 {
+  font-size: 1.25em;
+}
+h6,
+.heading--h6 {
+  font-size: 1em;
 }

@@ -28,7 +28,7 @@ Style guide: navigation.sidebar
     display: block;
     padding: .5em 0;
     color: $gray;
-    font-weight: $font-weight-bold;
+    @extend .text--bold;
     @include transition(color .25s);
   }
 
