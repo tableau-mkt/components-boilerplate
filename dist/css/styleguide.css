@@ -1,9 +1,67 @@
 @charset "UTF-8";
 /* line 2, ../../sass/styleguide.scss */
 .kss-example-preview {
-  /**
-   * Tableau Color Palette 
-   */
+  /*
+  Color Palette 
+  
+  The Tableau brand collor pallet
+  
+  Style guide: colors
+  */
+  /*
+  Text Colors
+  
+  Colors used for typography.
+  
+  Style guide: colors.text
+  */
+  /*
+  Button Colors
+  
+  Colors used for buttons.
+  
+  Style guide: colors.buttons
+  */
+  /*
+  Accent Colors
+  
+  Colors used for accents.
+  
+  Style guide: colors.accent
+  */
+  /*
+  Background Colors
+  
+  Colors used for backgrounds.
+  
+  Style guide: colors.background
+  */
+  /*
+  Product colors
+  
+  Specific brand colors for Tableau products
+  
+  Style guide: colors.product
+  */
+  /*
+  Basic Colors
+  
+  Some basic colors
+  
+  Style guide: colors.basic
+  */
+  /* 
+  Text colors mapping in form of:
+    modifier-name: $text-color
+  */
+  /* 
+  Button colors mapping in the form of:
+    modifier-name: ($base-color, $hover-color)
+  */
+  /* 
+  Background colors mapping in the form of:
+    mdifier-name: ($bg-color, $text-color)
+  */
   /**
    * Base type sizing
    */

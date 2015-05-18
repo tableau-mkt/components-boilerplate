@@ -43,7 +43,7 @@ Style guide: 8.1
 
   & > a {
     display: block;
-    color: $base-font-color;
+    color: $text-dark-body;
     @include transition(color .25s);
 
     &:hover {

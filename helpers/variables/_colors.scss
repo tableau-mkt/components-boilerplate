@@ -1,8 +1,20 @@
-/**
- * Tableau Color Palette 
- */
+/*
+Color Palette 
 
-// Text Colors
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
+
+
+/*
+Text Colors
+
+Colors used for typography.
+
+Style guide: colors.text
+*/
+
 $text-negative: #fff;         // Negative Text - rgb(255, 255, 255)
 $text-light-body: #bbb;       // Negative/light Body - rgb(187, 187, 187)
 $text-medium-body: #787878;   // Default Med. Body - rgb(120, 120, 120)
@@ -18,32 +30,18 @@ $text-mission-1: #316cc8;     // Mission - rgb(13, 129, 190)
 $text-mission-2: #7dcdf1;     // Mission - rgb(125, 205, 241)
 $text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
 
-// Accent / Button Colors
-$accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
-$button-orange: #e8762c;      // Button Orange - rgb(232,118, 44)
-$button-orange-hover: #ea8442;// Button Orange - rgb(234, 132, 66)
-$button-final: #c92434;       // Final Progress - rgb(201, 36, 52)
-$gradient-orange-red: #ff9824, #c71f35;
 
-// Background Colors
-$bg-white: #fff;              // White BG - rgb(255, 255, 255)
-$bg-light-gray-1: #fafafa;    // Light Gray 1 - rgb(250, 250, 250)
-$bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
-$bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
-$bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
-$bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
-$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
-$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
+/*
+Button Colors
 
-// Product colors
-$product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
-$product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
-$product-online: #58a3b9;     // Online - rgb(88, 163, 185)
-$product-public: #324E7A;     // Public - rgb(37, 88, 133)
-$product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
-$product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
+Colors used for buttons.
 
-// Product button colors
+Style guide: colors.buttons
+*/
+
+$button-orange: #e8762c;        // Button Orange - rgb(232,118, 44)
+$button-orange-hover: #ea8442;  // Button Orange - rgb(234, 132, 66)
+$button-final: #c92434;         // Final Progress - rgb(201, 36, 52)
 $button-desktop: #324e7a;       // Desktop Button - rgb(50, 78, 122)
 $button-desktop-hover: #23529c; // Desktop Button Hover - rgb(35, 82, 156)
 $button-server: #5e899b;        // Server Button - rgb(89, 135, 155)
@@ -57,13 +55,72 @@ $button-reader-hover: #B28CCF;  // Reader Button Hover - rgb(178, 140, 207)
 $button-mobile: #c87e5b;        // Mobile Button - rgb(200, 126, 91)
 $button-mobile-hover: #DB8E6A;  // Mobile Button Hover - rgb(219, 142, 106)
 
-// Basic colors
+
+/*
+Accent Colors
+
+Colors used for accents.
+
+Style guide: colors.accent
+*/
+
+$accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
+$gradient-orange-red: #ff9824, #c71f35;
+
+
+/*
+Background Colors
+
+Colors used for backgrounds.
+
+Style guide: colors.background
+*/
+
+$bg-white: #fff;              // White BG - rgb(255, 255, 255)
+$bg-light-gray-1: #fafafa;    // Light Gray 1 - rgb(250, 250, 250)
+$bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
+$bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
+$bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
+$bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
+$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
+$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
+
+
+/*
+Product colors
+
+Specific brand colors for Tableau products
+
+Style guide: colors.product
+*/
+
+$product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
+$product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
+$product-online: #58a3b9;     // Online - rgb(88, 163, 185)
+$product-public: #324E7A;     // Public - rgb(37, 88, 133)
+$product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
+$product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
+
+
+/*
+Basic Colors
+
+Some basic colors
+
+Style guide: colors.basic
+*/
+
 $gray: #999;
 $light-gray: #f2f2f2;
 $dark-gray: #333;
 $white: #fff;
 
-// Text colors mapping
+
+/* 
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+
 $text-colors: (
   negative: $text-negative,
   light-body: $text-light-body,
@@ -81,7 +138,12 @@ $text-colors: (
   mission-3: $text-mission-3
 );
 
-// Button colors mapping
+
+/* 
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+
 $button-colors: (
   orange: ($button-orange, $button-orange-hover),
   desktop: ($button-desktop, $button-desktop-hover),
@@ -92,7 +154,12 @@ $button-colors: (
   mobile: ($button-mobile, $button-mobile-hover)
 );
 
-// Background colors mapping
+
+/* 
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $text-color)
+*/
+
 $background-colors: (
   white: ($bg-white, $text-dark-body),
   light-gray-1: ($bg-light-gray-1, $text-dark-body),
@@ -109,10 +176,6 @@ $background-colors: (
   reader: ($product-reader, $text-negative),
   mobile: ($product-mobile, $text-negative)
 );
-
-// Typographic colors
-$base-font-color: $text-dark-body;
-$link-color: $text-link;
 
 // Misc colors
 $error: #DD1E06;

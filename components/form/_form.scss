@@ -40,7 +40,7 @@ input[type=email] {
   border: 0;
   border-radius: 0;
   background: $white;
-  color: $base-font-color;
+  color: $text-dark-body;
   
   @include breakpoint($mobile) {
     width: 100%;
