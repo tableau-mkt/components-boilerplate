@@ -1,6 +1,6 @@
 {
   "css": [
-    "public/styles.css",
+    "public/style.css",
     "../dist/css/styleguide.css"
   ],
   "js": [
