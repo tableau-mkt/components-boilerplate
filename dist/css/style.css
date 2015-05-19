@@ -766,12 +766,14 @@ Style guide: links.cta
 .cta {
   display: inline-block;
   margin: 0.5em;
-  padding: 13px 25px;
+  padding: 17px 25px;
   background-color: #e8762c;
   border-radius: 0;
   -webkit-appearance: none;
   cursor: pointer;
-  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 11px;
   color: #fff;
   text-transform: uppercase;
   -webkit-transition: background-color 0.25s, color 0.35s;
@@ -779,82 +781,82 @@ Style guide: links.cta
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 42, ../../components/cta/_cta.scss */
+/* line 45, ../../components/cta/_cta.scss */
 .cta:hover, .cta:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
-/* line 48, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta:active {
   background-color: #c92434;
   text-decoration: underline;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--orange {
   background-color: #e8762c;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--orange:hover, .cta.cta--orange:focus {
   background-color: #ea8442;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--desktop {
   background-color: #324e7a;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--desktop:hover, .cta.cta--desktop:focus {
   background-color: #23529c;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--server {
   background-color: #5e899b;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--server:hover, .cta.cta--server:focus {
   background-color: #7fa9bb;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--online {
   background-color: #7099a5;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--online:hover, .cta.cta--online:focus {
   background-color: #58a3b9;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--public {
   background-color: #2d4b65;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--public:hover, .cta.cta--public:focus {
   background-color: #324E7A;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--reader {
   background-color: #9d7eb5;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--reader:hover, .cta.cta--reader:focus {
   background-color: #B28CCF;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .cta.cta--mobile {
   background-color: #c87e5b;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .cta.cta--mobile:hover, .cta.cta--mobile:focus {
   background-color: #DB8E6A;
 }
-/* line 64, ../../components/cta/_cta.scss */
+/* line 67, ../../components/cta/_cta.scss */
 .cta.cta--download:after, .cta.cta--play:after {
   display: inline-block;
   padding-left: 1em;
 }
-/* line 70, ../../components/cta/_cta.scss */
+/* line 73, ../../components/cta/_cta.scss */
 .cta.cta--download:after {
   content: ">";
 }
-/* line 74, ../../components/cta/_cta.scss */
+/* line 77, ../../components/cta/_cta.scss */
 .cta.cta--play:after {
   content: "▶";
 }
@@ -869,17 +871,18 @@ Markup: cta-secondary.hbs
 
 Style guide: links.cta-secondary
 */
-/* line 91, ../../components/cta/_cta.scss */
+/* line 94, ../../components/cta/_cta.scss */
 .cta--secondary {
   border: 2px solid #eb912c;
+  padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
-/* line 96, ../../components/cta/_cta.scss */
+/* line 100, ../../components/cta/_cta.scss */
 .cta--secondary:hover, .cta--secondary:focus {
   background: transparent;
 }
-/* line 101, ../../components/cta/_cta.scss */
+/* line 105, ../../components/cta/_cta.scss */
 .cta--secondary:active {
   border-color: #c92434;
   background: transparent;
@@ -897,17 +900,18 @@ Markup: cta-tirtiary.hbs
 
 Style guide: links.cta-tirtiary
 */
-/* line 121, ../../components/cta/_cta.scss */
+/* line 125, ../../components/cta/_cta.scss */
 .cta--tirtiary {
   border: 2px solid #e8762c;
+  padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
-/* line 126, ../../components/cta/_cta.scss */
+/* line 131, ../../components/cta/_cta.scss */
 .cta--tirtiary:hover, .cta--tirtiary:focus {
   background: transparent;
 }
-/* line 131, ../../components/cta/_cta.scss */
+/* line 136, ../../components/cta/_cta.scss */
 .cta--tirtiary:active {
   border-color: #c92434;
   background: transparent;
@@ -2683,7 +2687,7 @@ Style guide: typography.fonts
 }
 
 /* line 44, ../../components/typography/_typography.scss */
-.text--benton-book, .heading--x-small, .text--label {
+.text--benton-book, .cta, .heading--x-small, .text--label {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 

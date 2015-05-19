@@ -27,14 +27,17 @@ Markup: cta.hbs
 Style guide: links.cta
 */
 .cta {
+  @extend .text--benton-book;
   display: inline-block;
   margin: 0.5em;
-  padding: 13px 25px;
+  padding: 17px 25px;
   background-color: $button-orange;
   border-radius: 0;
   -webkit-appearance: none;
   cursor: pointer;
-  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 11px;
   color: $text-negative;
   text-transform: uppercase;
   @include transition(background-color 0.25s, color 0.35s);
@@ -90,6 +93,7 @@ Style guide: links.cta-secondary
 
 .cta--secondary {
   border: 2px solid $text-link;
+  padding: 15px 23px;
   background: transparent;
   color: $text-link;
 
@@ -120,6 +124,7 @@ Style guide: links.cta-tirtiary
 
 .cta--tirtiary {
   border: 2px solid $button-orange;
+  padding: 15px 23px;
   background: transparent;
   color: $button-orange;
 

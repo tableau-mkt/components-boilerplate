@@ -1196,12 +1196,14 @@
 .kss-example-preview .cta {
   display: inline-block;
   margin: 0.5em;
-  padding: 13px 25px;
+  padding: 17px 25px;
   background-color: #e8762c;
   border-radius: 0;
   -webkit-appearance: none;
   cursor: pointer;
-  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 11px;
   color: #fff;
   text-transform: uppercase;
   -webkit-transition: background-color 0.25s, color 0.35s;
@@ -1209,112 +1211,114 @@
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 42, ../../components/cta/_cta.scss */
+/* line 45, ../../components/cta/_cta.scss */
 .kss-example-preview .cta:hover, .kss-example-preview .cta:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
-/* line 48, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .kss-example-preview .cta:active {
   background-color: #c92434;
   text-decoration: underline;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--orange {
   background-color: #e8762c;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--orange:hover, .kss-example-preview .cta.cta--orange:focus {
   background-color: #ea8442;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--desktop {
   background-color: #324e7a;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--desktop:hover, .kss-example-preview .cta.cta--desktop:focus {
   background-color: #23529c;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--server {
   background-color: #5e899b;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--server:hover, .kss-example-preview .cta.cta--server:focus {
   background-color: #7fa9bb;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--online {
   background-color: #7099a5;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--online:hover, .kss-example-preview .cta.cta--online:focus {
   background-color: #58a3b9;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--public {
   background-color: #2d4b65;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--public:hover, .kss-example-preview .cta.cta--public:focus {
   background-color: #324E7A;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--reader {
   background-color: #9d7eb5;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--reader:hover, .kss-example-preview .cta.cta--reader:focus {
   background-color: #B28CCF;
 }
-/* line 54, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--mobile {
   background-color: #c87e5b;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 60, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--mobile:hover, .kss-example-preview .cta.cta--mobile:focus {
   background-color: #DB8E6A;
 }
-/* line 64, ../../components/cta/_cta.scss */
+/* line 67, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--download:after, .kss-example-preview .cta.cta--play:after {
   display: inline-block;
   padding-left: 1em;
 }
-/* line 70, ../../components/cta/_cta.scss */
+/* line 73, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--download:after {
   content: ">";
 }
-/* line 74, ../../components/cta/_cta.scss */
+/* line 77, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--play:after {
   content: "▶";
 }
-/* line 91, ../../components/cta/_cta.scss */
+/* line 94, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary {
   border: 2px solid #eb912c;
+  padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
-/* line 96, ../../components/cta/_cta.scss */
+/* line 100, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary:hover, .kss-example-preview .cta--secondary:focus {
   background: transparent;
 }
-/* line 101, ../../components/cta/_cta.scss */
+/* line 105, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
-/* line 121, ../../components/cta/_cta.scss */
+/* line 125, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tirtiary {
   border: 2px solid #e8762c;
+  padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
-/* line 126, ../../components/cta/_cta.scss */
+/* line 131, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tirtiary:hover, .kss-example-preview .cta--tirtiary:focus {
   background: transparent;
 }
-/* line 131, ../../components/cta/_cta.scss */
+/* line 136, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tirtiary:active {
   border-color: #c92434;
   background: transparent;
@@ -2665,7 +2669,7 @@
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 /* line 44, ../../components/typography/_typography.scss */
-.kss-example-preview .text--benton-book, .kss-example-preview .heading--x-small, .kss-example-preview .text--label {
+.kss-example-preview .text--benton-book, .kss-example-preview .cta, .kss-example-preview .heading--x-small, .kss-example-preview .text--label {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 /* line 48, ../../components/typography/_typography.scss */
