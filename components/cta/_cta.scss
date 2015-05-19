@@ -111,18 +111,18 @@ Style guide: buttons.cta-secondary
 
 
 /* 
-Tirtiary CTA
+Tertiary CTA
 
 Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
 or an action not directly related to the page is required. When hovering over a 
 Stroked button the copy is underlined.
 
-Markup: cta-tirtiary.hbs
+Markup: cta-tertiary.hbs
 
-Style guide: buttons.cta-tirtiary
+Style guide: buttons.cta-tertiary
 */
 
-.cta--tirtiary {
+.cta--tertiary {
   border: 2px solid $button-orange;
   padding: 15px 23px;
   background: transparent;

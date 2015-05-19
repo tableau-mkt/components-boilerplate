@@ -890,29 +890,29 @@ Style guide: buttons.cta-secondary
 }
 
 /* 
-Tirtiary CTA
+Tertiary CTA
 
 Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
 or an action not directly related to the page is required. When hovering over a 
 Stroked button the copy is underlined.
 
-Markup: cta-tirtiary.hbs
+Markup: cta-tertiary.hbs
 
-Style guide: buttons.cta-tirtiary
+Style guide: buttons.cta-tertiary
 */
 /* line 125, ../../components/cta/_cta.scss */
-.cta--tirtiary {
+.cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
 /* line 131, ../../components/cta/_cta.scss */
-.cta--tirtiary:hover, .cta--tirtiary:focus {
+.cta--tertiary:hover, .cta--tertiary:focus {
   background: transparent;
 }
 /* line 136, ../../components/cta/_cta.scss */
-.cta--tirtiary:active {
+.cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
@@ -2706,12 +2706,11 @@ Style guide: typography.fonts
 }
 
 /*
-Base Copy
+Body Copy
 
-The base copy style across the site. The base typeface is Whitney which is 
-licensed and hosted by typography.com. Base font size is 16px.
+Main body copy for longer chunks of content in the body of a page.
 
-Markup: base.hbs
+Markup: body.hbs
 
 Weight: 2
 
@@ -2721,7 +2720,7 @@ Weight: 2
 
 Style guide: typography.base
  */
-/* line 76, ../../components/typography/_typography.scss */
+/* line 75, ../../components/typography/_typography.scss */
 body,
 .kss-example-preview-wrapper,
 .text--body-large,
@@ -2734,12 +2733,12 @@ body,
   line-height: 1.86;
 }
 
-/* line 89, ../../components/typography/_typography.scss */
+/* line 88, ../../components/typography/_typography.scss */
 .text--body-large {
   font-size: 1.07143em;
 }
 
-/* line 93, ../../components/typography/_typography.scss */
+/* line 92, ../../components/typography/_typography.scss */
 .text--body-small {
   font-size: 0.85714em;
   line-height: 1.66;
@@ -2764,46 +2763,46 @@ Weight: 3
 
 Styleguide typography.context-headings
 */
-/* line 119, ../../components/typography/_typography.scss */
+/* line 118, ../../components/typography/_typography.scss */
 .heading--homepage {
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
 
-/* line 127, ../../components/typography/_typography.scss */
+/* line 126, ../../components/typography/_typography.scss */
 .heading--product {
   font-size: 3.57143em;
   color: #000;
 }
 
-/* line 134, ../../components/typography/_typography.scss */
+/* line 133, ../../components/typography/_typography.scss */
 .heading--download {
   font-size: 3.42857em;
   line-height: 1.25;
   color: #000;
 }
 
-/* line 142, ../../components/typography/_typography.scss */
+/* line 141, ../../components/typography/_typography.scss */
 .heading--medium {
   font-size: 2.57143em;
   line-height: 1.39;
   color: #000;
 }
 
-/* line 150, ../../components/typography/_typography.scss */
+/* line 149, ../../components/typography/_typography.scss */
 .heading--small {
   font-size: 1.85714em;
   color: #333;
 }
 
-/* line 157, ../../components/typography/_typography.scss */
+/* line 156, ../../components/typography/_typography.scss */
 .heading--x-small {
   font-size: 1.64286em;
   color: #333;
 }
 
-/* line 164, ../../components/typography/_typography.scss */
+/* line 163, ../../components/typography/_typography.scss */
 .heading--label {
   font-size: 1.57143em;
   color: #333;
@@ -2825,26 +2824,26 @@ Weight: 4
 
 Style guide: typography.other
 */
-/* line 189, ../../components/typography/_typography.scss */
+/* line 188, ../../components/typography/_typography.scss */
 .text--large-copy {
   font-size: 1.71429em;
   color: #333;
 }
 
-/* line 195, ../../components/typography/_typography.scss */
+/* line 194, ../../components/typography/_typography.scss */
 .text--sub-nav {
   font-size: 1.57143em;
   color: #000;
 }
 
-/* line 201, ../../components/typography/_typography.scss */
+/* line 200, ../../components/typography/_typography.scss */
 .text--dropdown {
   font-size: 1.14286em;
   color: #787878;
   line-height: 1.875;
 }
 
-/* line 208, ../../components/typography/_typography.scss */
+/* line 207, ../../components/typography/_typography.scss */
 .text--label {
   font-size: 0.78571em;
   color: #333;
@@ -2889,7 +2888,7 @@ Weight: 5
 
 Style guide: typography.formatted
 */
-/* line 254, ../../components/typography/_typography.scss */
+/* line 253, ../../components/typography/_typography.scss */
 strong,
 .text--bold,
 .sidebar--nav li a,
@@ -2897,139 +2896,139 @@ table th {
   font-weight: bold;
 }
 
-/* line 258, ../../components/typography/_typography.scss */
+/* line 257, ../../components/typography/_typography.scss */
 .text--light {
   font-weight: 100;
 }
 
-/* line 261, ../../components/typography/_typography.scss */
+/* line 260, ../../components/typography/_typography.scss */
 em,
 .text--italic {
   font-style: italic;
 }
 
-/* line 265, ../../components/typography/_typography.scss */
+/* line 264, ../../components/typography/_typography.scss */
 .text--caps {
   text-transform: uppercase;
 }
 
-/* line 268, ../../components/typography/_typography.scss */
+/* line 267, ../../components/typography/_typography.scss */
 .text--left {
   text-align: left;
 }
 
-/* line 271, ../../components/typography/_typography.scss */
+/* line 270, ../../components/typography/_typography.scss */
 .text--right {
   text-align: right;
 }
 
-/* line 274, ../../components/typography/_typography.scss */
+/* line 273, ../../components/typography/_typography.scss */
 .text--centered {
   text-align: center;
 }
 
-/* line 277, ../../components/typography/_typography.scss */
+/* line 276, ../../components/typography/_typography.scss */
 .text--justified {
   text-align: justified;
 }
 
-/* line 280, ../../components/typography/_typography.scss */
+/* line 279, ../../components/typography/_typography.scss */
 .text--huge {
   font-size: 2.57143em;
 }
 
-/* line 283, ../../components/typography/_typography.scss */
+/* line 282, ../../components/typography/_typography.scss */
 .text--big {
   font-size: 1.71429em;
 }
 
-/* line 286, ../../components/typography/_typography.scss */
+/* line 285, ../../components/typography/_typography.scss */
 .text--base-size {
   font-size: 14px;
 }
 
-/* line 289, ../../components/typography/_typography.scss */
+/* line 288, ../../components/typography/_typography.scss */
 .text--small {
   font-size: 0.85714em;
 }
 
-/* line 292, ../../components/typography/_typography.scss */
+/* line 291, ../../components/typography/_typography.scss */
 .text--tiny {
   font-size: 0.71429em;
 }
 
-/* line 295, ../../components/typography/_typography.scss */
+/* line 294, ../../components/typography/_typography.scss */
 .text--lineheight-zero {
   line-height: 0;
 }
 
 /* Create a class for each text color */
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--negative {
   color: #fff;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--light-body {
   color: #bbb;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--medium-body {
   color: #787878;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--dark-body {
   color: #333;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--link {
   color: #eb912c;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--headlines {
   color: #000;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--nav-items {
   color: #212535;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--data-sources {
   color: #a3b9cb;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--stories {
   color: #847094;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--learning {
   color: #6f99a5;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--highlight {
   color: #53bd92;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--mission-1 {
   color: #316cc8;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--mission-2 {
   color: #7dcdf1;
 }
 
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--mission-3 {
   color: #5facce;
 }
@@ -3052,7 +3051,7 @@ h6 - Sixth level heading. 1em
 
 Style guide: typography.headings
 */
-/* line 325, ../../components/typography/_typography.scss */
+/* line 324, ../../components/typography/_typography.scss */
 h1, .heading--homepage, .heading--product, .heading--download,
 .heading--h1,
 h2,
@@ -3073,37 +3072,37 @@ h6,
   line-height: 1.2;
 }
 
-/* line 341, ../../components/typography/_typography.scss */
+/* line 340, ../../components/typography/_typography.scss */
 h1, .heading--homepage, .heading--product, .heading--download,
 .heading--h1 {
   font-size: 3em;
 }
 
-/* line 345, ../../components/typography/_typography.scss */
+/* line 344, ../../components/typography/_typography.scss */
 h2, .heading--medium,
 .heading--h2 {
   font-size: 2.5em;
 }
 
-/* line 349, ../../components/typography/_typography.scss */
+/* line 348, ../../components/typography/_typography.scss */
 h3, .heading--small,
 .heading--h3 {
   font-size: 2em;
 }
 
-/* line 353, ../../components/typography/_typography.scss */
+/* line 352, ../../components/typography/_typography.scss */
 h4, .heading--x-small,
 .heading--h4 {
   font-size: 1.5em;
 }
 
-/* line 357, ../../components/typography/_typography.scss */
+/* line 356, ../../components/typography/_typography.scss */
 h5, .heading--label,
 .heading--h5 {
   font-size: 1.25em;
 }
 
-/* line 361, ../../components/typography/_typography.scss */
+/* line 360, ../../components/typography/_typography.scss */
 h6,
 .heading--h6 {
   font-size: 1em;
@@ -3116,11 +3115,11 @@ Weight: 12
 
 Style guide: typography.hyperlinks
 */
-/* line 374, ../../components/typography/_typography.scss */
+/* line 373, ../../components/typography/_typography.scss */
 a {
   text-decoration: none;
 }
-/* line 377, ../../components/typography/_typography.scss */
+/* line 376, ../../components/typography/_typography.scss */
 a:hover {
   text-decoration: underline;
 }

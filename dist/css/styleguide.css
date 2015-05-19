@@ -312,15 +312,15 @@
   Style guide: buttons.cta-secondary
   */
   /* 
-  Tirtiary CTA
+  Tertiary CTA
   
   Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
   or an action not directly related to the page is required. When hovering over a 
   Stroked button the copy is underlined.
   
-  Markup: cta-tirtiary.hbs
+  Markup: cta-tertiary.hbs
   
-  Style guide: buttons.cta-tirtiary
+  Style guide: buttons.cta-tertiary
   */
   /*
   Form Styles
@@ -647,12 +647,11 @@
   Style guide: typography.fonts
   */
   /*
-  Base Copy
+  Body Copy
   
-  The base copy style across the site. The base typeface is Whitney which is 
-  licensed and hosted by typography.com. Base font size is 16px.
+  Main body copy for longer chunks of content in the body of a page.
   
-  Markup: base.hbs
+  Markup: body.hbs
   
   Weight: 2
   
@@ -1308,18 +1307,18 @@
   color: #c92434;
 }
 /* line 125, ../../components/cta/_cta.scss */
-.kss-example-preview .cta--tirtiary {
+.kss-example-preview .cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
 /* line 131, ../../components/cta/_cta.scss */
-.kss-example-preview .cta--tirtiary:hover, .kss-example-preview .cta--tirtiary:focus {
+.kss-example-preview .cta--tertiary:hover, .kss-example-preview .cta--tertiary:focus {
   background: transparent;
 }
 /* line 136, ../../components/cta/_cta.scss */
-.kss-example-preview .cta--tirtiary:active {
+.kss-example-preview .cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
@@ -2684,7 +2683,7 @@
 .kss-example-preview .text--body-small {
   font-family: 'Merriweather', serif;
 }
-/* line 76, ../../components/typography/_typography.scss */
+/* line 75, ../../components/typography/_typography.scss */
 .kss-example-preview body,
 .kss-example-preview .kss-example-preview-wrapper,
 .kss-example-preview .text--body-large,
@@ -2696,192 +2695,192 @@
   color: #333;
   line-height: 1.86;
 }
-/* line 89, ../../components/typography/_typography.scss */
+/* line 88, ../../components/typography/_typography.scss */
 .kss-example-preview .text--body-large {
   font-size: 1.07143em;
 }
-/* line 93, ../../components/typography/_typography.scss */
+/* line 92, ../../components/typography/_typography.scss */
 .kss-example-preview .text--body-small {
   font-size: 0.85714em;
   line-height: 1.66;
 }
-/* line 119, ../../components/typography/_typography.scss */
+/* line 118, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--homepage {
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
-/* line 127, ../../components/typography/_typography.scss */
+/* line 126, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--product {
   font-size: 3.57143em;
   color: #000;
 }
-/* line 134, ../../components/typography/_typography.scss */
+/* line 133, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--download {
   font-size: 3.42857em;
   line-height: 1.25;
   color: #000;
 }
-/* line 142, ../../components/typography/_typography.scss */
+/* line 141, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--medium {
   font-size: 2.57143em;
   line-height: 1.39;
   color: #000;
 }
-/* line 150, ../../components/typography/_typography.scss */
+/* line 149, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--small {
   font-size: 1.85714em;
   color: #333;
 }
-/* line 157, ../../components/typography/_typography.scss */
+/* line 156, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--x-small {
   font-size: 1.64286em;
   color: #333;
 }
-/* line 164, ../../components/typography/_typography.scss */
+/* line 163, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--label {
   font-size: 1.57143em;
   color: #333;
 }
-/* line 189, ../../components/typography/_typography.scss */
+/* line 188, ../../components/typography/_typography.scss */
 .kss-example-preview .text--large-copy {
   font-size: 1.71429em;
   color: #333;
 }
-/* line 195, ../../components/typography/_typography.scss */
+/* line 194, ../../components/typography/_typography.scss */
 .kss-example-preview .text--sub-nav {
   font-size: 1.57143em;
   color: #000;
 }
-/* line 201, ../../components/typography/_typography.scss */
+/* line 200, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dropdown {
   font-size: 1.14286em;
   color: #787878;
   line-height: 1.875;
 }
-/* line 208, ../../components/typography/_typography.scss */
+/* line 207, ../../components/typography/_typography.scss */
 .kss-example-preview .text--label {
   font-size: 0.78571em;
   color: #333;
   text-transform: uppercase;
 }
-/* line 254, ../../components/typography/_typography.scss */
+/* line 253, ../../components/typography/_typography.scss */
 .kss-example-preview strong,
 .kss-example-preview .text--bold,
 .kss-example-preview .sidebar--nav li a,
 .kss-example-preview table th {
   font-weight: bold;
 }
-/* line 258, ../../components/typography/_typography.scss */
+/* line 257, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light {
   font-weight: 100;
 }
-/* line 261, ../../components/typography/_typography.scss */
+/* line 260, ../../components/typography/_typography.scss */
 .kss-example-preview em,
 .kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 265, ../../components/typography/_typography.scss */
+/* line 264, ../../components/typography/_typography.scss */
 .kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 268, ../../components/typography/_typography.scss */
+/* line 267, ../../components/typography/_typography.scss */
 .kss-example-preview .text--left {
   text-align: left;
 }
-/* line 271, ../../components/typography/_typography.scss */
+/* line 270, ../../components/typography/_typography.scss */
 .kss-example-preview .text--right {
   text-align: right;
 }
-/* line 274, ../../components/typography/_typography.scss */
+/* line 273, ../../components/typography/_typography.scss */
 .kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 277, ../../components/typography/_typography.scss */
+/* line 276, ../../components/typography/_typography.scss */
 .kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 280, ../../components/typography/_typography.scss */
+/* line 279, ../../components/typography/_typography.scss */
 .kss-example-preview .text--huge {
   font-size: 2.57143em;
 }
-/* line 283, ../../components/typography/_typography.scss */
+/* line 282, ../../components/typography/_typography.scss */
 .kss-example-preview .text--big {
   font-size: 1.71429em;
 }
-/* line 286, ../../components/typography/_typography.scss */
+/* line 285, ../../components/typography/_typography.scss */
 .kss-example-preview .text--base-size {
   font-size: 14px;
 }
-/* line 289, ../../components/typography/_typography.scss */
+/* line 288, ../../components/typography/_typography.scss */
 .kss-example-preview .text--small {
   font-size: 0.85714em;
 }
-/* line 292, ../../components/typography/_typography.scss */
+/* line 291, ../../components/typography/_typography.scss */
 .kss-example-preview .text--tiny {
   font-size: 0.71429em;
 }
-/* line 295, ../../components/typography/_typography.scss */
+/* line 294, ../../components/typography/_typography.scss */
 .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--negative {
   color: #fff;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light-body {
   color: #bbb;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--medium-body {
   color: #787878;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dark-body {
   color: #333;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--link {
   color: #eb912c;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--headlines {
   color: #000;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--nav-items {
   color: #212535;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--data-sources {
   color: #a3b9cb;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--stories {
   color: #847094;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--learning {
   color: #6f99a5;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--highlight {
   color: #53bd92;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-1 {
   color: #316cc8;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-2 {
   color: #7dcdf1;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-3 {
   color: #5facce;
 }
-/* line 325, ../../components/typography/_typography.scss */
+/* line 324, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
 .kss-example-preview .heading--h1,
 .kss-example-preview h2,
@@ -2901,41 +2900,41 @@
   margin: .5em 0;
   line-height: 1.2;
 }
-/* line 341, ../../components/typography/_typography.scss */
+/* line 340, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
 .kss-example-preview .heading--h1 {
   font-size: 3em;
 }
-/* line 345, ../../components/typography/_typography.scss */
+/* line 344, ../../components/typography/_typography.scss */
 .kss-example-preview h2, .kss-example-preview .heading--medium,
 .kss-example-preview .heading--h2 {
   font-size: 2.5em;
 }
-/* line 349, ../../components/typography/_typography.scss */
+/* line 348, ../../components/typography/_typography.scss */
 .kss-example-preview h3, .kss-example-preview .heading--small,
 .kss-example-preview .heading--h3 {
   font-size: 2em;
 }
-/* line 353, ../../components/typography/_typography.scss */
+/* line 352, ../../components/typography/_typography.scss */
 .kss-example-preview h4, .kss-example-preview .heading--x-small,
 .kss-example-preview .heading--h4 {
   font-size: 1.5em;
 }
-/* line 357, ../../components/typography/_typography.scss */
+/* line 356, ../../components/typography/_typography.scss */
 .kss-example-preview h5, .kss-example-preview .heading--label,
 .kss-example-preview .heading--h5 {
   font-size: 1.25em;
 }
-/* line 361, ../../components/typography/_typography.scss */
+/* line 360, ../../components/typography/_typography.scss */
 .kss-example-preview h6,
 .kss-example-preview .heading--h6 {
   font-size: 1em;
 }
-/* line 374, ../../components/typography/_typography.scss */
+/* line 373, ../../components/typography/_typography.scss */
 .kss-example-preview a {
   text-decoration: none;
 }
-/* line 377, ../../components/typography/_typography.scss */
+/* line 376, ../../components/typography/_typography.scss */
 .kss-example-preview a:hover {
   text-decoration: underline;
 }
