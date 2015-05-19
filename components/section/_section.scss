@@ -1,6 +1,20 @@
-.field--section {
-  position: relative;
-}
+/*
+Content Section
+
+Used to wrap a section of content and apply vertical padding between wrappers 
+and content.
+
+Markup: section.hbs
+
+Weight: 3
+
+.section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-four - Section with 4em of vertical padding (2em on mobile)
+.section--padded-six - Section with 6em of vertical padding (3em on mobile)
+
+Style guide layout.section
+*/
+
 
 $section-padding: (
   two: 2em,
@@ -8,43 +22,36 @@ $section-padding: (
   six: 6em
 );
 
-.section-container {
+.section {
+  padding-top: 4em;
+  padding-bottom: 4em;
   
   @each $size, $value in $section-padding {
-    &.section--top-padding-#{$size} {
+    &.section--padded-#{$size} {
       padding-top: $value;
-    }
-    
-    &.section--bottom-padding-#{$size} {
       padding-bottom: $value;
     }
-  }
-
-  &.field--section-title {
-    margin: 0 0 2em;
   }
 
   &.section--background-image {
     background-size: cover;
     background-position: center;
   }
-}
 
-@include breakpoint($mobile) {
-  
-  $section-padding: (
-    two: 1em,
-    four: 2em,
-    six: 3em
-  );  
-  
-  @each $size, $value in $section-padding {
-    .section-container.section--top-padding-#{$size} {
-      padding-top: $value;
-    }
+  @include breakpoint($mobile) {
     
-    .section-container.section--bottom-padding-#{$size} {
-      padding-bottom: $value;
+    $section-padding: (
+      two: 1em,
+      four: 2em,
+      six: 3em
+    );  
+    
+    @each $size, $value in $section-padding {
+      &.section--padded-#{$size} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
     }
   }
 }
+

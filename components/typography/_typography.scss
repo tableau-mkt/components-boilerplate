@@ -1,13 +1,4 @@
 /*
-Typography
-
-Weight: 10
-
-Style guide: typography
-*/
-
-
-/*
 Font Families
 
 All text on tableau.com is set in either Benton Sans or Merriweather. This 
@@ -35,6 +26,7 @@ Style guide: typography.fonts
 
 .text--benton-thin {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+  font-weight: 100;
 }
 
 .text--benton-light {
@@ -83,6 +75,7 @@ body,
   font-size: $base-font-size;
   color: $text-dark-body;
   line-height: 1.86;
+  -webkit-font-smoothing: antialiased;
 }
 
 .text--body-large {
@@ -372,6 +365,7 @@ Style guide: typography.hyperlinks
 */
 a {
   text-decoration: none;
+  color: $text-link;
 
   &:hover {
     text-decoration: underline;

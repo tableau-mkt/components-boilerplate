@@ -60,7 +60,7 @@
   */
   /* 
   Background colors mapping in the form of:
-    mdifier-name: ($bg-color, $text-color)
+    mdifier-name: ($bg-color, $copy-color, $heading-color)
   */
   /**
    * SASS vars
@@ -161,6 +161,69 @@
    * used to prevent unintentional overrides.
    */
   /*
+  Typography
+  
+  Weight: 10
+  
+  Style guide: typography
+  */
+  /*
+  Buttons
+  
+  Buttons and CTAs used to draw more attention than a standard text link.
+  
+  Weight: 20
+  
+  Style guide: buttons
+  */
+  /* 
+  Boxes & Containers
+  
+  Used as wrappers to apply certain styles around elements.
+  
+  Weight: 30
+  
+  Style guide: boxes 
+  */
+  /*
+  Content Lists
+  
+  Lists of content that generally have a title, thumbnail and/or a description and
+  link through to the full version of the content.
+  
+  Weight: 40
+  
+  Style guide: 8
+  */
+  /*
+  Form Styles
+  
+  Form elements such as text fields and submit buttons used to make forms that the
+  user can submit information through. Here's an example form:
+  
+  Weight: 50
+  
+  Style guide: forms
+  */
+  /*
+  Tables
+  
+  Used for tabular data
+  
+  Weight: 60
+  
+  Style guide: 4
+  */
+  /*
+  Navigation
+  
+  Navigational tools used across the site
+  
+  Weight: 70
+  
+  Style guide: navigation
+  */
+  /*
   Interactive Components
   
   This section displays examples of components that have interactivity. Most
@@ -169,6 +232,15 @@
   Weight: 80
   
   Style guide: interactive
+  */
+  /*
+  Layout 
+  
+  Components used for page layout
+  
+  Weight: 90
+  
+  Style guide layout
   */
   /*
   Accordion
@@ -200,15 +272,6 @@
   
   Style guide: boxes.badge
    */
-  /* 
-  Boxes & Containers
-  
-  Used as wrappers to apply certain styles around elements.
-  
-  Weight: 30
-  
-  Style guide: boxes 
-  */
   /*
   Padded box
   
@@ -239,20 +302,20 @@
   
   Weight: 2
   
-  .box--white - White BG colored box.
-  .box--light-gray-1 - Light Gray 1 colored box.
-  .box--light-gray-2 - Light Gray 2 colored box.
-  .box--dark-gray-1 - Dk Gray 1 colored box.
-  .box--dark-gray-2 - Dk Gray 2 colored box.
-  .box--dark-gray-3 - Dk Gray 3 colored box.
-  .box--about-featured - About/Feat colored box.
-  .box--data-sources - Data Sources colored box.
-  .box--desktop - Desktop product colored box.
-  .box--server - Server product colored box.
-  .box--online - Online product colored box.
-  .box--public - Public product colored box.
-  .box--reader - Reader product colored box.
-  .box--mobile - Mobile product colored box.
+  .box--white - White BG colored box - (#fff)
+  .box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
+  .box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
+  .box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
+  .box--dark-gray-2 - Dk Gray 2 colored box - (#333)
+  .box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
+  .box--about-featured - About/Feat colored box - (#457387)
+  .box--data-sources - Data Sources colored box - (#2e4c65)
+  .box--desktop - Desktop product colored box - (#23529c)
+  .box--server - Server product colored box - (#7fa9bb)
+  .box--online - Online product colored box - (#58a3b9)
+  .box--public - Public product colored box - (#324E7A)
+  .box--reader - Reader product colored box - (#B28CCF)
+  .box--mobile - Mobile product colored box - (#DB8E6A)
   
   Style guide: boxes.colored
   */
@@ -275,13 +338,16 @@
   Style guide: boxes.stretchy
   */
   /*
-  Buttons
+  Content Container
   
-  Buttons and CTAs used to draw more attention than a standard text link.
+  A wrapper elemnt to go around content to keep it in a centered column on the 
+  page.
   
-  Weight: 20
+  Markup: content_container.hbs
   
-  Style guide: buttons
+  Weight: 2
+  
+  Style guide: layout.container
   */
   /* 
   Primary CTA
@@ -323,16 +389,14 @@
   Style guide: buttons.cta-tertiary
   */
   /*
-  Form Styles
+  Base Form Styles
   
-  Form elements such as text fields and submit buttons used to make forms that the
-  user can submit information through. Here's an example form:
-  
+  A simple example form.
   Markup: form.hbs
   
-  Weight: 50
+  Weight: 0
   
-  Style guide: forms
+  Style guide: forms.base
   */
   /*
   Input Fields
@@ -341,7 +405,7 @@
   
   Markup: form_input.hbs
   
-  Weight: 0
+  Weight: 1
   
   Style guide: forms.input
   */
@@ -356,7 +420,7 @@
   .submitted - Successfully submitted
   .errored - Error occured while submitting
   
-  Weight: 1
+  Weight: 2
   
   Style guide: forms.buttons
   */
@@ -367,7 +431,7 @@
   
   Markup: form_validation.hbs
   
-  Weight: 2
+  Weight: 3
   
   Style guide: forms.validation
   */
@@ -378,7 +442,7 @@
   
   Markup: form_confirmation.hbs
   
-  Weight: 3
+  Weight: 4
   
   Style guide: forms.confirmation
   */
@@ -387,15 +451,15 @@
   
   Used for creating a columned layout. To use these classes, just pick the number 
   of columns wide you want your element to be relative to the total number of 
-  columns. The default is 12 columns. For example, you can use `.grid-4` to make 
-  an element 4 columns wide followed by an element with `.grid-8` to take up the 
+  columns. The default is 12 columns. For example, you can use `.grid--4` to make 
+  an element 4 columns wide followed by an element with `.grid--8` to take up the 
   remaining eight columns of the container's width.
   
   Markup: grid.hbs
   
-  Weight: 90
+  Weight: 1
   
-  Style guide: grids
+  Style guide: layout.grids
   */
   /*
   Main Menu
@@ -436,13 +500,20 @@
   Style guide: interactive.reveal
   */
   /*
-  Navigation
+  Content Section
   
-  Navigational tools used across the site
+  Used to wrap a section of content and apply vertical padding between wrappers 
+  and content.
   
-  Weight: 70
+  Markup: section.hbs
   
-  Style guide: navigation
+  Weight: 3
+  
+  .section--padded-two - Section with 2em of vertical padding (1em on mobile)
+  .section--padded-four - Section with 4em of vertical padding (2em on mobile)
+  .section--padded-six - Section with 6em of vertical padding (3em on mobile)
+  
+  Style guide layout.section
   */
   /*
   Sidebar Nav
@@ -501,15 +572,6 @@
   Style guide: 6.2
   */
   /*
-  Tables
-  
-  Used for tabular data
-  
-  Weight: 60
-  
-  Style guide: 4
-  */
-  /*
   Standard Table
   
   Basic table used for tabular data
@@ -548,15 +610,6 @@
   </table>
   
   Style guide: 4.1
-  */
-  /*
-  Content Lists
-  
-  Lists of content that generally have a title, thumbnail and/or a description and link through to the full version of the content.
-  
-  Weight: 40
-  
-  Style guide: 8
   */
   /* 
   Basic Teaser List
@@ -613,13 +666,6 @@
   </div>
   
   Style guide: 8.2
-  */
-  /*
-  Typography
-  
-  Weight: 10
-  
-  Style guide: typography
   */
   /*
   Font Families
@@ -808,28 +854,28 @@
 .kss-example-preview .padding-zero {
   padding: 0;
 }
-/* line 58, ../../helpers/_helpers.scss */
+/* line 63, ../../helpers/_helpers.scss */
 .kss-example-preview .hide {
   display: none;
 }
 @media (max-width: 739px) {
-  /* line 64, ../../helpers/_helpers.scss */
+  /* line 69, ../../helpers/_helpers.scss */
   .kss-example-preview .mobile-hide {
     display: none;
   }
 }
 /* line 14, ../../helpers/_placeholders.scss */
-.kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, .kss-example-preview .l-menu .menu, .kss-example-preview .sidebar--nav ul {
+.kss-example-preview .plain-list, .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, .kss-example-preview .l-menu .menu, .kss-example-preview .sidebar--nav ul {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
 }
 /* line 18, ../../helpers/_placeholders.scss */
-.kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, .kss-example-preview .l-menu .menu li, .kss-example-preview .sidebar--nav ul li {
+.kss-example-preview .plain-list li, .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, .kss-example-preview .l-menu .menu li, .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
 /* line 25, ../../helpers/_placeholders.scss */
-.kss-example-preview .clearfix:after {
+.kss-example-preview .clearfix:after, .kss-example-preview .content-container:after {
   content: "";
   display: table;
   clear: both;
@@ -841,21 +887,21 @@
   -o-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
-/* line 23, ../../components/accordion/_accordion.scss */
+/* line 11, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item {
   position: relative;
   padding: 0 1em;
   border-top: 1px solid #dedede;
 }
-/* line 29, ../../components/accordion/_accordion.scss */
+/* line 17, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item:last-child {
   border-bottom: 1px solid #dedede;
 }
-/* line 33, ../../components/accordion/_accordion.scss */
+/* line 21, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item:hover, .kss-example-preview .accordion--item.open {
   background-color: #ebebeb;
 }
-/* line 39, ../../components/accordion/_accordion.scss */
+/* line 27, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--title {
   margin: 0;
   padding: 1.3em 40px 1.3em 0;
@@ -863,7 +909,7 @@
   cursor: pointer;
   text-transform: uppercase;
 }
-/* line 46, ../../components/accordion/_accordion.scss */
+/* line 34, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--title:after {
   position: absolute;
   top: 50%;
@@ -873,20 +919,20 @@
   font-family: 'tc-icons';
   line-height: 1;
 }
-/* line 57, ../../components/accordion/_accordion.scss */
+/* line 45, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item.open .accordion--item--title:after {
   content: "-";
 }
-/* line 61, ../../components/accordion/_accordion.scss */
+/* line 49, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--content {
   padding-bottom: 1.5em;
 }
-/* line 64, ../../components/accordion/_accordion.scss */
+/* line 52, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--content p:first-child,
 .kss-example-preview .accordion--item--content ul:first-child {
   margin-top: 0;
 }
-/* line 69, ../../components/accordion/_accordion.scss */
+/* line 57, ../../components/accordion/_accordion.scss */
 .kss-example-preview .accordion--item--content p:last-child,
 .kss-example-preview .accordion--item--content ul:last-child {
   margin-bottom: 0;
@@ -1077,93 +1123,275 @@
   background: none;
   color: #DB8E6A;
 }
-/* line 30, ../../components/box/_box.scss */
+/* line 19, ../../components/box/_box.scss */
 .kss-example-preview .box__padded {
   padding: 2em;
 }
-/* line 33, ../../components/box/_box.scss */
+/* line 22, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--one {
   padding: 1em;
 }
-/* line 37, ../../components/box/_box.scss */
+/* line 26, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--three {
   padding: 3em;
 }
-/* line 41, ../../components/box/_box.scss */
+/* line 30, ../../components/box/_box.scss */
 .kss-example-preview .box__padded.box__padded--four {
   padding: 3em;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--white {
   background-color: #fff;
   color: #333;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--white h1, .kss-example-preview .box--white .heading--homepage, .kss-example-preview .box--white .heading--product, .kss-example-preview .box--white .heading--download, .kss-example-preview .box--white .heading--h1,
+.kss-example-preview .box--white h2,
+.kss-example-preview .box--white .heading--medium, .kss-example-preview .box--white .heading--h2,
+.kss-example-preview .box--white h3,
+.kss-example-preview .box--white .heading--small, .kss-example-preview .box--white .heading--h3,
+.kss-example-preview .box--white h4,
+.kss-example-preview .box--white .heading--x-small, .kss-example-preview .box--white .heading--h4,
+.kss-example-preview .box--white h5,
+.kss-example-preview .box--white .heading--label, .kss-example-preview .box--white .heading--h5,
+.kss-example-preview .box--white h6, .kss-example-preview .box--white .heading--h6 {
+  color: #000;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--light-gray-1 h1, .kss-example-preview .box--light-gray-1 .heading--homepage, .kss-example-preview .box--light-gray-1 .heading--product, .kss-example-preview .box--light-gray-1 .heading--download, .kss-example-preview .box--light-gray-1 .heading--h1,
+.kss-example-preview .box--light-gray-1 h2,
+.kss-example-preview .box--light-gray-1 .heading--medium, .kss-example-preview .box--light-gray-1 .heading--h2,
+.kss-example-preview .box--light-gray-1 h3,
+.kss-example-preview .box--light-gray-1 .heading--small, .kss-example-preview .box--light-gray-1 .heading--h3,
+.kss-example-preview .box--light-gray-1 h4,
+.kss-example-preview .box--light-gray-1 .heading--x-small, .kss-example-preview .box--light-gray-1 .heading--h4,
+.kss-example-preview .box--light-gray-1 h5,
+.kss-example-preview .box--light-gray-1 .heading--label, .kss-example-preview .box--light-gray-1 .heading--h5,
+.kss-example-preview .box--light-gray-1 h6, .kss-example-preview .box--light-gray-1 .heading--h6 {
+  color: #000;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--light-gray-2 {
   background-color: #ebebeb;
   color: #333;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--light-gray-2 h1, .kss-example-preview .box--light-gray-2 .heading--homepage, .kss-example-preview .box--light-gray-2 .heading--product, .kss-example-preview .box--light-gray-2 .heading--download, .kss-example-preview .box--light-gray-2 .heading--h1,
+.kss-example-preview .box--light-gray-2 h2,
+.kss-example-preview .box--light-gray-2 .heading--medium, .kss-example-preview .box--light-gray-2 .heading--h2,
+.kss-example-preview .box--light-gray-2 h3,
+.kss-example-preview .box--light-gray-2 .heading--small, .kss-example-preview .box--light-gray-2 .heading--h3,
+.kss-example-preview .box--light-gray-2 h4,
+.kss-example-preview .box--light-gray-2 .heading--x-small, .kss-example-preview .box--light-gray-2 .heading--h4,
+.kss-example-preview .box--light-gray-2 h5,
+.kss-example-preview .box--light-gray-2 .heading--label, .kss-example-preview .box--light-gray-2 .heading--h5,
+.kss-example-preview .box--light-gray-2 h6, .kss-example-preview .box--light-gray-2 .heading--h6 {
+  color: #000;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--dark-gray-1 h1, .kss-example-preview .box--dark-gray-1 .heading--homepage, .kss-example-preview .box--dark-gray-1 .heading--product, .kss-example-preview .box--dark-gray-1 .heading--download, .kss-example-preview .box--dark-gray-1 .heading--h1,
+.kss-example-preview .box--dark-gray-1 h2,
+.kss-example-preview .box--dark-gray-1 .heading--medium, .kss-example-preview .box--dark-gray-1 .heading--h2,
+.kss-example-preview .box--dark-gray-1 h3,
+.kss-example-preview .box--dark-gray-1 .heading--small, .kss-example-preview .box--dark-gray-1 .heading--h3,
+.kss-example-preview .box--dark-gray-1 h4,
+.kss-example-preview .box--dark-gray-1 .heading--x-small, .kss-example-preview .box--dark-gray-1 .heading--h4,
+.kss-example-preview .box--dark-gray-1 h5,
+.kss-example-preview .box--dark-gray-1 .heading--label, .kss-example-preview .box--dark-gray-1 .heading--h5,
+.kss-example-preview .box--dark-gray-1 h6, .kss-example-preview .box--dark-gray-1 .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-2 {
   background-color: #333;
   color: #bbb;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--dark-gray-2 h1, .kss-example-preview .box--dark-gray-2 .heading--homepage, .kss-example-preview .box--dark-gray-2 .heading--product, .kss-example-preview .box--dark-gray-2 .heading--download, .kss-example-preview .box--dark-gray-2 .heading--h1,
+.kss-example-preview .box--dark-gray-2 h2,
+.kss-example-preview .box--dark-gray-2 .heading--medium, .kss-example-preview .box--dark-gray-2 .heading--h2,
+.kss-example-preview .box--dark-gray-2 h3,
+.kss-example-preview .box--dark-gray-2 .heading--small, .kss-example-preview .box--dark-gray-2 .heading--h3,
+.kss-example-preview .box--dark-gray-2 h4,
+.kss-example-preview .box--dark-gray-2 .heading--x-small, .kss-example-preview .box--dark-gray-2 .heading--h4,
+.kss-example-preview .box--dark-gray-2 h5,
+.kss-example-preview .box--dark-gray-2 .heading--label, .kss-example-preview .box--dark-gray-2 .heading--h5,
+.kss-example-preview .box--dark-gray-2 h6, .kss-example-preview .box--dark-gray-2 .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--dark-gray-3 h1, .kss-example-preview .box--dark-gray-3 .heading--homepage, .kss-example-preview .box--dark-gray-3 .heading--product, .kss-example-preview .box--dark-gray-3 .heading--download, .kss-example-preview .box--dark-gray-3 .heading--h1,
+.kss-example-preview .box--dark-gray-3 h2,
+.kss-example-preview .box--dark-gray-3 .heading--medium, .kss-example-preview .box--dark-gray-3 .heading--h2,
+.kss-example-preview .box--dark-gray-3 h3,
+.kss-example-preview .box--dark-gray-3 .heading--small, .kss-example-preview .box--dark-gray-3 .heading--h3,
+.kss-example-preview .box--dark-gray-3 h4,
+.kss-example-preview .box--dark-gray-3 .heading--x-small, .kss-example-preview .box--dark-gray-3 .heading--h4,
+.kss-example-preview .box--dark-gray-3 h5,
+.kss-example-preview .box--dark-gray-3 .heading--label, .kss-example-preview .box--dark-gray-3 .heading--h5,
+.kss-example-preview .box--dark-gray-3 h6, .kss-example-preview .box--dark-gray-3 .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--about-featured {
   background-color: #457387;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--about-featured h1, .kss-example-preview .box--about-featured .heading--homepage, .kss-example-preview .box--about-featured .heading--product, .kss-example-preview .box--about-featured .heading--download, .kss-example-preview .box--about-featured .heading--h1,
+.kss-example-preview .box--about-featured h2,
+.kss-example-preview .box--about-featured .heading--medium, .kss-example-preview .box--about-featured .heading--h2,
+.kss-example-preview .box--about-featured h3,
+.kss-example-preview .box--about-featured .heading--small, .kss-example-preview .box--about-featured .heading--h3,
+.kss-example-preview .box--about-featured h4,
+.kss-example-preview .box--about-featured .heading--x-small, .kss-example-preview .box--about-featured .heading--h4,
+.kss-example-preview .box--about-featured h5,
+.kss-example-preview .box--about-featured .heading--label, .kss-example-preview .box--about-featured .heading--h5,
+.kss-example-preview .box--about-featured h6, .kss-example-preview .box--about-featured .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--data-sources {
   background-color: #2e4c65;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--data-sources h1, .kss-example-preview .box--data-sources .heading--homepage, .kss-example-preview .box--data-sources .heading--product, .kss-example-preview .box--data-sources .heading--download, .kss-example-preview .box--data-sources .heading--h1,
+.kss-example-preview .box--data-sources h2,
+.kss-example-preview .box--data-sources .heading--medium, .kss-example-preview .box--data-sources .heading--h2,
+.kss-example-preview .box--data-sources h3,
+.kss-example-preview .box--data-sources .heading--small, .kss-example-preview .box--data-sources .heading--h3,
+.kss-example-preview .box--data-sources h4,
+.kss-example-preview .box--data-sources .heading--x-small, .kss-example-preview .box--data-sources .heading--h4,
+.kss-example-preview .box--data-sources h5,
+.kss-example-preview .box--data-sources .heading--label, .kss-example-preview .box--data-sources .heading--h5,
+.kss-example-preview .box--data-sources h6, .kss-example-preview .box--data-sources .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--desktop {
   background-color: #23529c;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--desktop h1, .kss-example-preview .box--desktop .heading--homepage, .kss-example-preview .box--desktop .heading--product, .kss-example-preview .box--desktop .heading--download, .kss-example-preview .box--desktop .heading--h1,
+.kss-example-preview .box--desktop h2,
+.kss-example-preview .box--desktop .heading--medium, .kss-example-preview .box--desktop .heading--h2,
+.kss-example-preview .box--desktop h3,
+.kss-example-preview .box--desktop .heading--small, .kss-example-preview .box--desktop .heading--h3,
+.kss-example-preview .box--desktop h4,
+.kss-example-preview .box--desktop .heading--x-small, .kss-example-preview .box--desktop .heading--h4,
+.kss-example-preview .box--desktop h5,
+.kss-example-preview .box--desktop .heading--label, .kss-example-preview .box--desktop .heading--h5,
+.kss-example-preview .box--desktop h6, .kss-example-preview .box--desktop .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--server {
   background-color: #7fa9bb;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--server h1, .kss-example-preview .box--server .heading--homepage, .kss-example-preview .box--server .heading--product, .kss-example-preview .box--server .heading--download, .kss-example-preview .box--server .heading--h1,
+.kss-example-preview .box--server h2,
+.kss-example-preview .box--server .heading--medium, .kss-example-preview .box--server .heading--h2,
+.kss-example-preview .box--server h3,
+.kss-example-preview .box--server .heading--small, .kss-example-preview .box--server .heading--h3,
+.kss-example-preview .box--server h4,
+.kss-example-preview .box--server .heading--x-small, .kss-example-preview .box--server .heading--h4,
+.kss-example-preview .box--server h5,
+.kss-example-preview .box--server .heading--label, .kss-example-preview .box--server .heading--h5,
+.kss-example-preview .box--server h6, .kss-example-preview .box--server .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--online {
   background-color: #58a3b9;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--online h1, .kss-example-preview .box--online .heading--homepage, .kss-example-preview .box--online .heading--product, .kss-example-preview .box--online .heading--download, .kss-example-preview .box--online .heading--h1,
+.kss-example-preview .box--online h2,
+.kss-example-preview .box--online .heading--medium, .kss-example-preview .box--online .heading--h2,
+.kss-example-preview .box--online h3,
+.kss-example-preview .box--online .heading--small, .kss-example-preview .box--online .heading--h3,
+.kss-example-preview .box--online h4,
+.kss-example-preview .box--online .heading--x-small, .kss-example-preview .box--online .heading--h4,
+.kss-example-preview .box--online h5,
+.kss-example-preview .box--online .heading--label, .kss-example-preview .box--online .heading--h5,
+.kss-example-preview .box--online h6, .kss-example-preview .box--online .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--public {
   background-color: #324E7A;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--public h1, .kss-example-preview .box--public .heading--homepage, .kss-example-preview .box--public .heading--product, .kss-example-preview .box--public .heading--download, .kss-example-preview .box--public .heading--h1,
+.kss-example-preview .box--public h2,
+.kss-example-preview .box--public .heading--medium, .kss-example-preview .box--public .heading--h2,
+.kss-example-preview .box--public h3,
+.kss-example-preview .box--public .heading--small, .kss-example-preview .box--public .heading--h3,
+.kss-example-preview .box--public h4,
+.kss-example-preview .box--public .heading--x-small, .kss-example-preview .box--public .heading--h4,
+.kss-example-preview .box--public h5,
+.kss-example-preview .box--public .heading--label, .kss-example-preview .box--public .heading--h5,
+.kss-example-preview .box--public h6, .kss-example-preview .box--public .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--reader {
   background-color: #B28CCF;
   color: #fff;
 }
-/* line 79, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--reader h1, .kss-example-preview .box--reader .heading--homepage, .kss-example-preview .box--reader .heading--product, .kss-example-preview .box--reader .heading--download, .kss-example-preview .box--reader .heading--h1,
+.kss-example-preview .box--reader h2,
+.kss-example-preview .box--reader .heading--medium, .kss-example-preview .box--reader .heading--h2,
+.kss-example-preview .box--reader h3,
+.kss-example-preview .box--reader .heading--small, .kss-example-preview .box--reader .heading--h3,
+.kss-example-preview .box--reader h4,
+.kss-example-preview .box--reader .heading--x-small, .kss-example-preview .box--reader .heading--h4,
+.kss-example-preview .box--reader h5,
+.kss-example-preview .box--reader .heading--label, .kss-example-preview .box--reader .heading--h5,
+.kss-example-preview .box--reader h6, .kss-example-preview .box--reader .heading--h6 {
+  color: #fff;
+}
+/* line 68, ../../components/box/_box.scss */
 .kss-example-preview .box--mobile {
   background-color: #DB8E6A;
   color: #fff;
 }
-/* line 106, ../../components/box/_box.scss */
+/* line 72, ../../components/box/_box.scss */
+.kss-example-preview .box--mobile h1, .kss-example-preview .box--mobile .heading--homepage, .kss-example-preview .box--mobile .heading--product, .kss-example-preview .box--mobile .heading--download, .kss-example-preview .box--mobile .heading--h1,
+.kss-example-preview .box--mobile h2,
+.kss-example-preview .box--mobile .heading--medium, .kss-example-preview .box--mobile .heading--h2,
+.kss-example-preview .box--mobile h3,
+.kss-example-preview .box--mobile .heading--small, .kss-example-preview .box--mobile .heading--h3,
+.kss-example-preview .box--mobile h4,
+.kss-example-preview .box--mobile .heading--x-small, .kss-example-preview .box--mobile .heading--h4,
+.kss-example-preview .box--mobile h5,
+.kss-example-preview .box--mobile .heading--label, .kss-example-preview .box--mobile .heading--h5,
+.kss-example-preview .box--mobile h6, .kss-example-preview .box--mobile .heading--h6 {
+  color: #fff;
+}
+/* line 104, ../../components/box/_box.scss */
 .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
@@ -1171,34 +1399,42 @@
   width: 100%;
 }
 @media (min-width: 740px) {
-  /* line 118, ../../components/box/_box.scss */
+  /* line 116, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--halves, .kss-example-preview .box__stretchy.box__stretchy--thirds, .kss-example-preview .box__stretchy.box__stretchy--fourths, .kss-example-preview .box__stretchy.box__stretchy--fifths, .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 126, ../../components/box/_box.scss */
+  /* line 124, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  /* line 133, ../../components/box/_box.scss */
+  /* line 131, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--thirds {
     width: 33.33333%;
   }
-  /* line 137, ../../components/box/_box.scss */
+  /* line 135, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 141, ../../components/box/_box.scss */
+  /* line 139, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 145, ../../components/box/_box.scss */
+  /* line 143, ../../components/box/_box.scss */
   .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 16.66667%;
   }
 }
-/* line 29, ../../components/cta/_cta.scss */
+/* line 14, ../../components/content_container/_content_container.scss */
+.kss-example-preview .content-container {
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 19, ../../components/cta/_cta.scss */
 .kss-example-preview .cta {
   display: inline-block;
   margin: 0.5em;
@@ -1217,114 +1453,114 @@
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 45, ../../components/cta/_cta.scss */
+/* line 35, ../../components/cta/_cta.scss */
 .kss-example-preview .cta:hover, .kss-example-preview .cta:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
-/* line 51, ../../components/cta/_cta.scss */
+/* line 41, ../../components/cta/_cta.scss */
 .kss-example-preview .cta:active {
   background-color: #c92434;
   text-decoration: underline;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--orange {
   background-color: #e8762c;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--orange:hover, .kss-example-preview .cta.cta--orange:focus {
   background-color: #ea8442;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--desktop {
   background-color: #324e7a;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--desktop:hover, .kss-example-preview .cta.cta--desktop:focus {
   background-color: #23529c;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--server {
   background-color: #5e899b;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--server:hover, .kss-example-preview .cta.cta--server:focus {
   background-color: #7fa9bb;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--online {
   background-color: #7099a5;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--online:hover, .kss-example-preview .cta.cta--online:focus {
   background-color: #58a3b9;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--public {
   background-color: #2d4b65;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--public:hover, .kss-example-preview .cta.cta--public:focus {
   background-color: #324E7A;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--reader {
   background-color: #9d7eb5;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--reader:hover, .kss-example-preview .cta.cta--reader:focus {
   background-color: #B28CCF;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 47, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--mobile {
   background-color: #c87e5b;
 }
-/* line 60, ../../components/cta/_cta.scss */
+/* line 50, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--mobile:hover, .kss-example-preview .cta.cta--mobile:focus {
   background-color: #DB8E6A;
 }
-/* line 67, ../../components/cta/_cta.scss */
+/* line 57, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--download:after, .kss-example-preview .cta.cta--play:after {
   display: inline-block;
   padding-left: 1em;
 }
-/* line 73, ../../components/cta/_cta.scss */
+/* line 63, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--download:after {
   content: ">";
 }
-/* line 77, ../../components/cta/_cta.scss */
+/* line 67, ../../components/cta/_cta.scss */
 .kss-example-preview .cta.cta--play:after {
   content: "▶";
 }
-/* line 94, ../../components/cta/_cta.scss */
+/* line 84, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary {
   border: 2px solid #eb912c;
   padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
-/* line 100, ../../components/cta/_cta.scss */
+/* line 90, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary:hover, .kss-example-preview .cta--secondary:focus {
   background: transparent;
 }
-/* line 105, ../../components/cta/_cta.scss */
+/* line 95, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--secondary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
-/* line 125, ../../components/cta/_cta.scss */
+/* line 115, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
-/* line 131, ../../components/cta/_cta.scss */
+/* line 121, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tertiary:hover, .kss-example-preview .cta--tertiary:focus {
   background: transparent;
 }
-/* line 136, ../../components/cta/_cta.scss */
+/* line 126, ../../components/cta/_cta.scss */
 .kss-example-preview .cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
@@ -1532,390 +1768,401 @@
   display: none;
   color: #DD1E06;
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-1 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--1 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-1 {
-    width: 6.77966%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--1 {
+    width: 6.38298%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-1.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--1.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-1:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--1:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-1 {
-    margin-left: 8.47458%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--1 {
+    margin-left: 8.51064%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-1 {
-    margin-left: -8.47458%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--1 {
+    margin-left: -8.51064%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-2 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--2 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-2 {
-    width: 15.25424%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--2 {
+    width: 14.89362%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-2.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--2.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-2:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--2:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-2 {
-    margin-left: 16.94915%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--2 {
+    margin-left: 17.02128%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-2 {
-    margin-left: -16.94915%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--2 {
+    margin-left: -17.02128%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-3 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--3 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-3 {
-    width: 23.72881%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--3 {
+    width: 23.40426%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-3.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--3.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-3:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--3:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-3 {
-    margin-left: 25.42373%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--3 {
+    margin-left: 25.53191%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-3 {
-    margin-left: -25.42373%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--3 {
+    margin-left: -25.53191%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-4 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--4 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-4 {
-    width: 32.20339%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--4 {
+    width: 31.91489%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-4.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--4.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-4:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--4:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-4 {
-    margin-left: 33.89831%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--4 {
+    margin-left: 34.04255%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-4 {
-    margin-left: -33.89831%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--4 {
+    margin-left: -34.04255%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-5 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--5 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-5 {
-    width: 40.67797%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--5 {
+    width: 40.42553%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-5.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--5.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-5:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--5:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-5 {
-    margin-left: 42.37288%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--5 {
+    margin-left: 42.55319%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-5 {
-    margin-left: -42.37288%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--5 {
+    margin-left: -42.55319%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-6 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--6 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-6 {
-    width: 49.15254%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--6 {
+    width: 48.93617%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-6.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--6.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-6:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--6:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-6 {
-    margin-left: 50.84746%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--6 {
+    margin-left: 51.06383%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-6 {
-    margin-left: -50.84746%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--6 {
+    margin-left: -51.06383%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-7 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--7 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-7 {
-    width: 57.62712%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--7 {
+    width: 57.44681%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-7.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--7.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-7:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--7:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-7 {
-    margin-left: 59.32203%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--7 {
+    margin-left: 59.57447%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-7 {
-    margin-left: -59.32203%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--7 {
+    margin-left: -59.57447%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-8 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--8 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-8 {
-    width: 66.10169%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--8 {
+    width: 65.95745%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-8.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--8.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-8:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--8:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-8 {
-    margin-left: 67.79661%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--8 {
+    margin-left: 68.08511%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-8 {
-    margin-left: -67.79661%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--8 {
+    margin-left: -68.08511%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-9 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--9 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-9 {
-    width: 74.57627%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--9 {
+    width: 74.46809%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-9.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--9.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-9:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--9:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-9 {
-    margin-left: 76.27119%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--9 {
+    margin-left: 76.59574%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-9 {
-    margin-left: -76.27119%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--9 {
+    margin-left: -76.59574%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-10 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--10 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-10 {
-    width: 83.05085%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--10 {
+    width: 82.97872%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-10.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--10.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-10:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--10:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-10 {
-    margin-left: 84.74576%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--10 {
+    margin-left: 85.10638%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-10 {
-    margin-left: -84.74576%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--10 {
+    margin-left: -85.10638%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-11 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--11 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-11 {
-    width: 91.52542%;
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--11 {
+    width: 91.48936%;
     float: left;
+    margin-right: 2.12766%;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-11.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--11.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-11:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--11:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-11 {
-    margin-left: 93.22034%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--11 {
+    margin-left: 93.61702%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-11 {
-    margin-left: -93.22034%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--11 {
+    margin-left: -93.61702%;
   }
 }
-/* line 24, ../../components/grid/_grid.scss */
-.kss-example-preview .grid-12 {
+/* line 28, ../../components/grid/_grid.scss */
+.kss-example-preview .grid--12 {
   position: relative;
   box-sizing: border-box;
 }
 @media (min-width: 740px) {
-  /* line 24, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-12 {
+  /* line 28, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 31, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-12.grid-last {
+  /* line 35, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--12.grid--last {
     margin-right: 0;
   }
-  /* line 34, ../../components/grid/_grid.scss */
-  .kss-example-preview .grid-12:last-child {
+  /* line 38, ../../components/grid/_grid.scss */
+  .kss-example-preview .grid--12:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 740px) {
-  /* line 39, ../../components/grid/_grid.scss */
-  .kss-example-preview .push-12 {
-    margin-left: 101.69492%;
+  /* line 43, ../../components/grid/_grid.scss */
+  .kss-example-preview .push--12 {
+    margin-left: 102.12766%;
   }
 }
 @media (min-width: 740px) {
-  /* line 44, ../../components/grid/_grid.scss */
-  .kss-example-preview .pull-12 {
-    margin-left: -101.69492%;
+  /* line 48, ../../components/grid/_grid.scss */
+  .kss-example-preview .pull--12 {
+    margin-left: -102.12766%;
   }
 }
 /* line 1, ../../components/hero/_hero.scss */
@@ -2289,74 +2536,53 @@
 .kss-example-preview .reveal--close:hover {
   text-decoration: none;
 }
-/* line 1, ../../components/section/_section.scss */
-.kss-example-preview .field--section {
-  position: relative;
-}
-/* line 14, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--top-padding-two {
-  padding-top: 2em;
-}
-/* line 18, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--bottom-padding-two {
-  padding-bottom: 2em;
-}
-/* line 14, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--top-padding-four {
+/* line 25, ../../components/section/_section.scss */
+.kss-example-preview .section {
   padding-top: 4em;
-}
-/* line 18, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--bottom-padding-four {
   padding-bottom: 4em;
 }
-/* line 14, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--top-padding-six {
-  padding-top: 6em;
+/* line 30, ../../components/section/_section.scss */
+.kss-example-preview .section.section--padded-two {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-/* line 18, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--bottom-padding-six {
+/* line 30, ../../components/section/_section.scss */
+.kss-example-preview .section.section--padded-four {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+/* line 30, ../../components/section/_section.scss */
+.kss-example-preview .section.section--padded-six {
+  padding-top: 6em;
   padding-bottom: 6em;
 }
-/* line 23, ../../components/section/_section.scss */
-.kss-example-preview .section-container.field--section-title {
-  margin: 0 0 2em;
-}
-/* line 27, ../../components/section/_section.scss */
-.kss-example-preview .section-container.section--background-image {
+/* line 36, ../../components/section/_section.scss */
+.kss-example-preview .section.section--background-image {
   background-size: cover;
   background-position: center;
 }
 @media (max-width: 739px) {
-  /* line 42, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--top-padding-two {
+  /* line 50, ../../components/section/_section.scss */
+  .kss-example-preview .section.section--padded-two {
     padding-top: 1em;
-  }
-  /* line 46, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--bottom-padding-two {
     padding-bottom: 1em;
   }
-  /* line 42, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--top-padding-four {
+  /* line 50, ../../components/section/_section.scss */
+  .kss-example-preview .section.section--padded-four {
     padding-top: 2em;
-  }
-  /* line 46, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--bottom-padding-four {
     padding-bottom: 2em;
   }
-  /* line 42, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--top-padding-six {
+  /* line 50, ../../components/section/_section.scss */
+  .kss-example-preview .section.section--padded-six {
     padding-top: 3em;
-  }
-  /* line 46, ../../components/section/_section.scss */
-  .kss-example-preview .section-container.section--bottom-padding-six {
     padding-bottom: 3em;
   }
 }
-/* line 22, ../../components/sidebar_nav/_sidebar_nav.scss */
+/* line 11, ../../components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav ul {
   margin: 0;
 }
-/* line 27, ../../components/sidebar_nav/_sidebar_nav.scss */
+/* line 16, ../../components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav li a {
   display: block;
   padding: .5em 0;
@@ -2366,18 +2592,18 @@
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 35, ../../components/sidebar_nav/_sidebar_nav.scss */
+/* line 24, ../../components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav li a:hover,
 .kss-example-preview .sidebar--nav li.active a {
   color: #eb912c;
   text-decoration: none;
 }
-/* line 41, ../../components/sidebar_nav/_sidebar_nav.scss */
+/* line 30, ../../components/sidebar_nav/_sidebar_nav.scss */
 .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
   display: none;
 }
 @media (max-width: 739px) {
-  /* line 47, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 36, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav {
     opacity: 0;
     position: relative;
@@ -2388,7 +2614,7 @@
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
   }
-  /* line 54, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 43, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li {
     height: 0;
     overflow: hidden;
@@ -2397,16 +2623,16 @@
     -o-transition: height 0.25s;
     transition: height 0.25s;
   }
-  /* line 60, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 49, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li.active, .kss-example-preview .sidebar--nav.open li {
     height: 41px;
   }
-  /* line 65, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 54, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav li a {
     padding: .5em;
     color: #fff;
   }
-  /* line 70, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 59, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     display: inline-block;
     position: absolute;
@@ -2415,13 +2641,13 @@
     padding: 10px;
     cursor: pointer;
   }
-  /* line 79, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 68, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav.open .sidebar--nav--toggle {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-  /* line 84, ../../components/sidebar_nav/_sidebar_nav.scss */
+  /* line 73, ../../components/sidebar_nav/_sidebar_nav.scss */
   .kss-example-preview .sidebar--nav.stuck {
     opacity: 1;
     width: 100%;
@@ -2542,37 +2768,37 @@
     float: left;
   }
 }
-/* line 53, ../../components/table/_table.scss */
+/* line 41, ../../components/table/_table.scss */
 .kss-example-preview table {
   width: 100%;
 }
-/* line 56, ../../components/table/_table.scss */
+/* line 44, ../../components/table/_table.scss */
 .kss-example-preview table tr.even,
 .kss-example-preview table tr.odd {
   background-color: inherit;
   border: none;
 }
-/* line 62, ../../components/table/_table.scss */
+/* line 50, ../../components/table/_table.scss */
 .kss-example-preview table tr:nth-child(even) {
   background: #eee;
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 67, ../../components/table/_table.scss */
+/* line 55, ../../components/table/_table.scss */
 .kss-example-preview table thead,
 .kss-example-preview table th {
   background: #ddd;
   background: rgba(0, 0, 0, 0.08);
 }
-/* line 73, ../../components/table/_table.scss */
+/* line 61, ../../components/table/_table.scss */
 .kss-example-preview table td,
 .kss-example-preview table th {
   padding: 5px;
 }
-/* line 78, ../../components/table/_table.scss */
+/* line 66, ../../components/table/_table.scss */
 .kss-example-preview table th {
   text-transform: uppercase;
 }
-/* line 82, ../../components/table/_table.scss */
+/* line 70, ../../components/table/_table.scss */
 .kss-example-preview table tr p:last-child {
   margin: 0;
 }
@@ -2582,14 +2808,14 @@
   display: table;
   clear: both;
 }
-/* line 40, ../../components/teaser_list/_teaser_list.scss */
+/* line 30, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list img {
   -webkit-transition: opacity 0.25s;
   -moz-transition: opacity 0.25s;
   -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
-/* line 44, ../../components/teaser_list/_teaser_list.scss */
+/* line 34, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list > a {
   display: block;
   color: #333;
@@ -2598,39 +2824,39 @@
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 49, ../../components/teaser_list/_teaser_list.scss */
+/* line 39, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list > a:hover {
   color: #eb912c;
   text-decoration: none;
 }
-/* line 54, ../../components/teaser_list/_teaser_list.scss */
+/* line 44, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list > a:hover img {
   opacity: 0.85;
 }
-/* line 59, ../../components/teaser_list/_teaser_list.scss */
+/* line 49, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list .teaser-list__thumbnail {
   display: inline-block;
   line-height: 0;
   background: #000;
 }
-/* line 64, ../../components/teaser_list/_teaser_list.scss */
+/* line 54, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list .teaser-list__thumbnail a:hover img {
   opacity: 0.9;
 }
-/* line 69, ../../components/teaser_list/_teaser_list.scss */
+/* line 59, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list .teaser-list__title {
   margin: 0.5em 0;
 }
-/* line 73, ../../components/teaser_list/_teaser_list.scss */
+/* line 63, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list .teaser-list__secondary-label {
   margin: 0.5em 0;
   color: #999;
 }
-/* line 78, ../../components/teaser_list/_teaser_list.scss */
+/* line 68, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list.teaser-list--colored-title {
   max-width: 295px;
 }
-/* line 81, ../../components/teaser_list/_teaser_list.scss */
+/* line 71, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list.teaser-list--colored-title .teaser-list__title {
   margin: -10px 0 0;
   padding: .75em;
@@ -2643,30 +2869,30 @@
   -o-transition: background 0.25s;
   transition: background 0.25s;
 }
-/* line 91, ../../components/teaser_list/_teaser_list.scss */
+/* line 81, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list.teaser-list--colored-title:hover .teaser-list__title {
   background: #333;
 }
 @media (max-width: 739px) {
-  /* line 78, ../../components/teaser_list/_teaser_list.scss */
+  /* line 68, ../../components/teaser_list/_teaser_list.scss */
   .kss-example-preview .teaser-list.teaser-list--colored-title {
     margin: 0 auto;
   }
 }
-/* line 102, ../../components/teaser_list/_teaser_list.scss */
+/* line 92, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list__row {
   margin: 0 0 2em;
 }
-/* line 137, ../../components/teaser_list/_teaser_list.scss */
+/* line 127, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list.teaser-list--full-width {
   padding: 2em 0;
   border-bottom: 1px solid #f2f2f2;
 }
-/* line 141, ../../components/teaser_list/_teaser_list.scss */
+/* line 131, ../../components/teaser_list/_teaser_list.scss */
 .kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
   margin: 0 0 0.5em;
 }
-/* line 36, ../../components/typography/_typography.scss */
+/* line 27, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-thin, .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1,
 .kss-example-preview h2,
 .kss-example-preview .heading--medium, .kss-example-preview .heading--h2,
@@ -2678,20 +2904,21 @@
 .kss-example-preview .heading--label, .kss-example-preview .heading--h5,
 .kss-example-preview h6, .kss-example-preview .heading--h6 {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+  font-weight: 100;
 }
-/* line 40, ../../components/typography/_typography.scss */
+/* line 32, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-light, .kss-example-preview .heading--small, .kss-example-preview .heading--label, .kss-example-preview .text--large-copy, .kss-example-preview .text--sub-nav, .kss-example-preview .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
-/* line 44, ../../components/typography/_typography.scss */
+/* line 36, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-book, .kss-example-preview .cta, .kss-example-preview .heading--x-small, .kss-example-preview .text--label {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
-/* line 48, ../../components/typography/_typography.scss */
+/* line 40, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-medium {
   font-family: 'Benton Sans Medium', Helvetica, sans-serif;
 }
-/* line 52, ../../components/typography/_typography.scss */
+/* line 44, ../../components/typography/_typography.scss */
 .kss-example-preview .text--merriweather-light, .kss-example-preview body,
 .kss-example-preview .kss-example-preview-wrapper,
 .kss-example-preview .text--body-large,
@@ -2699,7 +2926,7 @@
 .kss-example-preview .text--body-small {
   font-family: 'Merriweather', serif;
 }
-/* line 75, ../../components/typography/_typography.scss */
+/* line 67, ../../components/typography/_typography.scss */
 .kss-example-preview body,
 .kss-example-preview .kss-example-preview-wrapper,
 .kss-example-preview .text--body-large,
@@ -2710,17 +2937,18 @@
   font-size: 14px;
   color: #333;
   line-height: 1.86;
+  -webkit-font-smoothing: antialiased;
 }
-/* line 88, ../../components/typography/_typography.scss */
+/* line 81, ../../components/typography/_typography.scss */
 .kss-example-preview .text--body-large {
   font-size: 1.07143em;
 }
-/* line 92, ../../components/typography/_typography.scss */
+/* line 85, ../../components/typography/_typography.scss */
 .kss-example-preview .text--body-small {
   font-size: 0.85714em;
   line-height: 1.66;
 }
-/* line 110, ../../components/typography/_typography.scss */
+/* line 103, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1,
 .kss-example-preview h2,
 .kss-example-preview .heading--medium, .kss-example-preview .heading--h2,
@@ -2734,207 +2962,208 @@
   margin: .5em 0;
   line-height: 1.2;
 }
-/* line 121, ../../components/typography/_typography.scss */
+/* line 114, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1 {
   font-size: 3.57143em;
 }
-/* line 125, ../../components/typography/_typography.scss */
+/* line 118, ../../components/typography/_typography.scss */
 .kss-example-preview h2, .kss-example-preview .heading--medium, .kss-example-preview .heading--h2 {
   font-size: 2.57143em;
 }
-/* line 129, ../../components/typography/_typography.scss */
+/* line 122, ../../components/typography/_typography.scss */
 .kss-example-preview h3, .kss-example-preview .heading--small, .kss-example-preview .heading--h3 {
   font-size: 1.85714em;
 }
-/* line 133, ../../components/typography/_typography.scss */
+/* line 126, ../../components/typography/_typography.scss */
 .kss-example-preview h4, .kss-example-preview .heading--x-small, .kss-example-preview .heading--h4 {
   font-size: 1.64286em;
 }
-/* line 137, ../../components/typography/_typography.scss */
+/* line 130, ../../components/typography/_typography.scss */
 .kss-example-preview h5, .kss-example-preview .heading--label, .kss-example-preview .heading--h5 {
   font-size: 1.25em;
 }
-/* line 141, ../../components/typography/_typography.scss */
+/* line 134, ../../components/typography/_typography.scss */
 .kss-example-preview h6, .kss-example-preview .heading--h6 {
   font-size: 1em;
 }
-/* line 166, ../../components/typography/_typography.scss */
+/* line 159, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--homepage {
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
-/* line 174, ../../components/typography/_typography.scss */
+/* line 167, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--product {
   color: #000;
 }
-/* line 180, ../../components/typography/_typography.scss */
+/* line 173, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--download {
   font-size: 3.42857em;
   line-height: 1.25;
   color: #000;
 }
-/* line 188, ../../components/typography/_typography.scss */
+/* line 181, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--medium {
   line-height: 1.39;
   color: #000;
 }
-/* line 195, ../../components/typography/_typography.scss */
+/* line 188, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--small {
   color: #333;
 }
-/* line 201, ../../components/typography/_typography.scss */
+/* line 194, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--x-small {
   color: #333;
 }
-/* line 207, ../../components/typography/_typography.scss */
+/* line 200, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--label {
   font-size: 1.57143em;
   color: #333;
 }
-/* line 232, ../../components/typography/_typography.scss */
+/* line 225, ../../components/typography/_typography.scss */
 .kss-example-preview .text--large-copy {
   font-size: 1.71429em;
   color: #333;
 }
-/* line 238, ../../components/typography/_typography.scss */
+/* line 231, ../../components/typography/_typography.scss */
 .kss-example-preview .text--sub-nav {
   font-size: 1.57143em;
   color: #000;
 }
-/* line 244, ../../components/typography/_typography.scss */
+/* line 237, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dropdown {
   font-size: 1.14286em;
   color: #787878;
   line-height: 1.875;
 }
-/* line 251, ../../components/typography/_typography.scss */
+/* line 244, ../../components/typography/_typography.scss */
 .kss-example-preview .text--label {
   font-size: 0.78571em;
   color: #333;
   text-transform: uppercase;
 }
-/* line 283, ../../components/typography/_typography.scss */
+/* line 276, ../../components/typography/_typography.scss */
 .kss-example-preview strong,
 .kss-example-preview .text--bold,
 .kss-example-preview .sidebar--nav li a,
 .kss-example-preview table th {
   font-weight: bold;
 }
-/* line 287, ../../components/typography/_typography.scss */
+/* line 280, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light {
   font-weight: 100;
 }
-/* line 290, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .kss-example-preview em,
 .kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 294, ../../components/typography/_typography.scss */
+/* line 287, ../../components/typography/_typography.scss */
 .kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 297, ../../components/typography/_typography.scss */
+/* line 290, ../../components/typography/_typography.scss */
 .kss-example-preview .text--left {
   text-align: left;
 }
-/* line 300, ../../components/typography/_typography.scss */
+/* line 293, ../../components/typography/_typography.scss */
 .kss-example-preview .text--right {
   text-align: right;
 }
-/* line 303, ../../components/typography/_typography.scss */
+/* line 296, ../../components/typography/_typography.scss */
 .kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 306, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 309, ../../components/typography/_typography.scss */
+/* line 302, ../../components/typography/_typography.scss */
 .kss-example-preview .text--huge {
   font-size: 2.57143em;
 }
-/* line 312, ../../components/typography/_typography.scss */
+/* line 305, ../../components/typography/_typography.scss */
 .kss-example-preview .text--big {
   font-size: 1.71429em;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 308, ../../components/typography/_typography.scss */
 .kss-example-preview .text--base-size {
   font-size: 14px;
 }
-/* line 318, ../../components/typography/_typography.scss */
+/* line 311, ../../components/typography/_typography.scss */
 .kss-example-preview .text--small {
   font-size: 0.85714em;
 }
-/* line 321, ../../components/typography/_typography.scss */
+/* line 314, ../../components/typography/_typography.scss */
 .kss-example-preview .text--tiny {
   font-size: 0.71429em;
 }
-/* line 324, ../../components/typography/_typography.scss */
+/* line 317, ../../components/typography/_typography.scss */
 .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--negative {
   color: #fff;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light-body {
   color: #bbb;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--medium-body {
   color: #787878;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dark-body {
   color: #333;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--link {
   color: #eb912c;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--headlines {
   color: #000;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--nav-items {
   color: #212535;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--data-sources {
   color: #a3b9cb;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--stories {
   color: #847094;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--learning {
   color: #6f99a5;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--highlight {
   color: #53bd92;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-1 {
   color: #316cc8;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-2 {
   color: #7dcdf1;
 }
-/* line 358, ../../components/typography/_typography.scss */
+/* line 351, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-3 {
   color: #5facce;
 }
-/* line 373, ../../components/typography/_typography.scss */
+/* line 366, ../../components/typography/_typography.scss */
 .kss-example-preview a {
   text-decoration: none;
+  color: #eb912c;
 }
-/* line 376, ../../components/typography/_typography.scss */
+/* line 370, ../../components/typography/_typography.scss */
 .kss-example-preview a:hover {
   text-decoration: underline;
 }

@@ -157,24 +157,24 @@ $button-colors: (
 
 /* 
 Background colors mapping in the form of:
-  mdifier-name: ($bg-color, $text-color)
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
 
 $background-colors: (
-  white: ($bg-white, $text-dark-body),
-  light-gray-1: ($bg-light-gray-1, $text-dark-body),
-  light-gray-2: ($bg-light-gray-2, $text-dark-body),
-  dark-gray-1: ($bg-dark-gray-1, $text-light-body),
-  dark-gray-2: ($bg-dark-gray-2, $text-light-body),
-  dark-gray-3: ($bg-dark-gray-3, $text-light-body),
-  about-featured: ($bg-about-featured, $text-negative),
-  data-sources: ($bg-data-sources, $text-negative),
-  desktop: ($product-desktop, $text-negative),
-  server: ($product-server, $text-negative),
-  online: ($product-online, $text-negative),
-  public: ($product-public, $text-negative),
-  reader: ($product-reader, $text-negative),
-  mobile: ($product-mobile, $text-negative)
+  white: ($bg-white, $text-dark-body, $text-headlines),
+  light-gray-1: ($bg-light-gray-1, $text-dark-body, $text-headlines),
+  light-gray-2: ($bg-light-gray-2, $text-dark-body, $text-headlines),
+  dark-gray-1: ($bg-dark-gray-1, $text-light-body, $text-negative),
+  dark-gray-2: ($bg-dark-gray-2, $text-light-body, $text-negative),
+  dark-gray-3: ($bg-dark-gray-3, $text-light-body, $text-negative),
+  about-featured: ($bg-about-featured, $text-negative, $text-negative),
+  data-sources: ($bg-data-sources, $text-negative, $text-negative),
+  desktop: ($product-desktop, $text-negative, $text-negative),
+  server: ($product-server, $text-negative, $text-negative),
+  online: ($product-online, $text-negative, $text-negative),
+  public: ($product-public, $text-negative, $text-negative),
+  reader: ($product-reader, $text-negative, $text-negative),
+  mobile: ($product-mobile, $text-negative, $text-negative),
 );
 
 // Misc colors

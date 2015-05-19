@@ -1,15 +1,15 @@
 /*
-Form Styles
+Base Form Styles
 
-Form elements such as text fields and submit buttons used to make forms that the
-user can submit information through. Here's an example form:
-
+A simple example form.
 Markup: form.hbs
 
-Weight: 50
+Weight: 0
 
-Style guide: forms
+Style guide: forms.base
 */
+
+
 .form--fields {
   label {
     display: inline-block;
@@ -25,7 +25,7 @@ Nothing to see here yet...
 
 Markup: form_input.hbs
 
-Weight: 0
+Weight: 1
 
 Style guide: forms.input
 */
@@ -63,7 +63,7 @@ Markup: form_button.hbs
 .submitted - Successfully submitted
 .errored - Error occured while submitting
 
-Weight: 1
+Weight: 2
 
 Style guide: forms.buttons
 */
@@ -146,7 +146,7 @@ Nothing to see here yet...
 
 Markup: form_validation.hbs
 
-Weight: 2
+Weight: 3
 
 Style guide: forms.validation
 */
@@ -163,7 +163,7 @@ Nothing to see here yet...
 
 Markup: form_confirmation.hbs
 
-Weight: 3
+Weight: 4
 
 Style guide: forms.confirmation
 */

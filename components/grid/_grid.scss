@@ -3,32 +3,36 @@ Grids
 
 Used for creating a columned layout. To use these classes, just pick the number 
 of columns wide you want your element to be relative to the total number of 
-columns. The default is 12 columns. For example, you can use `.grid-4` to make 
-an element 4 columns wide followed by an element with `.grid-8` to take up the 
+columns. The default is 12 columns. For example, you can use `.grid--4` to make 
+an element 4 columns wide followed by an element with `.grid--8` to take up the 
 remaining eight columns of the container's width.
 
 Markup: grid.hbs
 
-Weight: 90
+Weight: 1
 
-Style guide: grids
+Style guide: layout.grids
 */
+
+@import "susy";
 
 $grid-columns: 12;
 $tablet: 740px;
 $susy: (
   columns: $grid-columns,
+  gutters: 1/3,
+  gutter-position: after
 );
 
 @for $i from 1 through $grid-columns {
-  .grid-#{$i} {
+  .grid--#{$i} {
     position: relative;
     box-sizing: border-box;
     
     @include breakpoint($tablet) {
       @include span($i);
       
-      &.grid-last {
+      &.grid--last {
         margin-right: 0;
       }
       &:last-child {
@@ -36,12 +40,12 @@ $susy: (
       }
     }
   }
-  .push-#{$i} {
+  .push--#{$i} {
     @include breakpoint($tablet) {
       @include push($i);
     }
   }
-  .pull-#{$i} {
+  .pull--#{$i} {
     @include breakpoint($tablet) {
       @include pull($i);
     }

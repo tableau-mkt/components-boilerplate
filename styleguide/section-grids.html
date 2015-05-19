@@ -89,6 +89,11 @@
           <ul class="kss-nav__menu-child">
           </ul>
         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-layout.html">
+            Layout
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -107,8 +112,8 @@
           <div class="kss-description">
             <p>Used for creating a columned layout. To use these classes, just pick the number
 of columns wide you want your element to be relative to the total number of
-columns. The default is 12 columns. For example, you can use <code>.grid-4</code> to make
-an element 4 columns wide followed by an element with <code>.grid-8</code> to take up the
+columns. The default is 12 columns. For example, you can use <code>.grid--4</code> to make
+an element 4 columns wide followed by an element with <code>.grid--8</code> to take up the
 remaining eight columns of the container&#39;s width.</p>
 
           </div>
@@ -120,44 +125,44 @@ remaining eight columns of the container&#39;s width.</p>
               <div class="kss-example-preview">
                 <div class="kss-example-preview-wrapper">
                   <div class="clearfix">
-  <div class="grid-4 box__padded--one">
-    <p>
-      <strong>.grid-4</strong>
-    </p>
+  <div class="grid--4">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--4</strong>
+    </div>
   </div>
 
-  <div class="grid-4 box__padded--one">
-    <p>
-      <strong>.grid-4</strong>
-    </p>
+  <div class="grid--4">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--4</strong>
+    </div>
   </div>
 
-  <div class="grid-4 box__padded--one">
-    <p>
-      <strong>.grid-4</strong>
-    </p>
+  <div class="grid--4">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--4</strong>
+    </div>
   </div>
 </div>
 
 <hr class="spacer">
 
 <div class="clearfix">
-  <div class="grid-2 box__padded--one">
-    <p>
-      <strong>.grid-2</strong>
-    </p>
+  <div class="grid--2">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--2</strong>
+    </div>
   </div>
 
-  <div class="grid-7 box__padded--one">
-    <p>
-      <strong>.grid-7</strong>
-    </p>
+  <div class="grid--7">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--7</strong>
+    </div>
   </div>
 
-  <div class="grid-3 box__padded--one">
-    <p>
-      <strong>.grid-3</strong>
-    </p>
+  <div class="grid--3">
+    <div class="box--desktop box__padded box__padded--one">
+      <strong>.grid--3</strong>
+    </div>
   </div>
 </div>
                 </div>
@@ -168,44 +173,44 @@ remaining eight columns of the container&#39;s width.</p>
           <h4>Markup:</h4>
           <div class="kss-markup">
             <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
-  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-4&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--4&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--4&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-4&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--4&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--4&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;grid-4 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-4&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--4&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--4&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;hr class=&quot;spacer&quot;&gt;
 
 &lt;div class=&quot;clearfix&quot;&gt;
-  &lt;div class=&quot;grid-2 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-2&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--2&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--2&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;grid-7 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-7&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--7&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--7&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;grid-3 box__padded--one&quot;&gt;
-    &lt;p&gt;
-      &lt;strong&gt;.grid-3&lt;/strong&gt;
-    &lt;/p&gt;
+  &lt;div class=&quot;grid--3&quot;&gt;
+    &lt;div class=&quot;box--desktop box__padded box__padded--one&quot;&gt;
+      &lt;strong&gt;.grid--3&lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
           </div>
@@ -231,7 +236,7 @@ remaining eight columns of the container&#39;s width.</p>
 <script src="../dist/js/scripts.js"></script>
 
 
-  <script src="//localhost:35729/livereload.js"></script>
+  <script src="//localhost:1234/livereload.js"></script>
 
   <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>

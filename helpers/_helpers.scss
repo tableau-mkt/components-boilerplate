@@ -49,6 +49,11 @@ most common proportions for video players.
   padding: 0;
 }
 
+// Plain list styles
+.plain-list {
+  @extend %plain-list;
+}
+
 // Clear floating of child elements
 .clearfix {
   @extend %clearfix;
