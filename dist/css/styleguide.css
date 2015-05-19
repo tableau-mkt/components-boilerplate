@@ -275,13 +275,13 @@
   Style guide: boxes.stretchy
   */
   /*
-  Links
+  Buttons
   
-  Various link styles for use throughout the site.
+  Buttons and CTAs used to draw more attention than a standard text link.
   
   Weight: 20
   
-  Style guide: links
+  Style guide: buttons
   */
   /* 
   Primary CTA
@@ -299,7 +299,7 @@
   .cta--reader - Reader colored CTA button.
   .cta--mobile - Mobile colored CTA button.
   
-  Style guide: links.cta
+  Style guide: buttons.cta
   */
   /* 
   Secondary CTA
@@ -309,7 +309,7 @@
   
   Markup: cta-secondary.hbs
   
-  Style guide: links.cta-secondary
+  Style guide: buttons.cta-secondary
   */
   /* 
   Tirtiary CTA
@@ -320,7 +320,7 @@
   
   Markup: cta-tirtiary.hbs
   
-  Style guide: links.cta-tirtiary
+  Style guide: buttons.cta-tirtiary
   */
   /*
   Form Styles
