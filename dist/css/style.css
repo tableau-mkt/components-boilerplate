@@ -2650,6 +2650,9 @@ Style guide: typography
 /*
 Font Families
 
+All text on tableau.com is set in either Benton Sans or Merriweather. This 
+includes body copy as well as page and section headers.
+
 **BentonSans** is primarily used for section headers and titling in it’s Thin 
 case, but it is also used in it’s Book case in buttons and other scenarios. 
 Occasionally BentonSans Medium is used in article templates.
@@ -2669,32 +2672,29 @@ Weight: 1
 
 Style guide: typography.fonts
 */
-/* line 33, ../../components/typography/_typography.scss */
+/* line 36, ../../components/typography/_typography.scss */
 .text--benton-thin, .heading--homepage, .heading--product, .heading--download, .heading--medium {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
 }
 
-/* line 37, ../../components/typography/_typography.scss */
+/* line 40, ../../components/typography/_typography.scss */
 .text--benton-light, .heading--small, .heading--label, .text--large-copy, .text--sub-nav, .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-/* line 41, ../../components/typography/_typography.scss */
+/* line 44, ../../components/typography/_typography.scss */
 .text--benton-book, .heading--x-small, .text--label {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
-/* line 45, ../../components/typography/_typography.scss */
+/* line 48, ../../components/typography/_typography.scss */
 .text--benton-medium {
   font-family: 'Benton Sans Medium', Helvetica, sans-serif;
 }
 
-/* line 49, ../../components/typography/_typography.scss */
+/* line 52, ../../components/typography/_typography.scss */
 .text--merriweather-light, body,
-p,
-ul,
-table,
-span,
+.kss-example-preview-wrapper,
 .text--body-large,
 .text--body-medium,
 .text--body-small {
@@ -2711,18 +2711,15 @@ Markup: base.hbs
 
 Weight: 2
 
-.text--body-large - Large body copy.
-.text--body-medium - Medium body copy.
-.text--body-small - Small body copy.
+.text--body-large - Large body copy (15px)
+.text--body-medium - Medium body copy (14px)
+.text--body-small - Small body copy (12px)
 
 Style guide: typography.base
  */
-/* line 73, ../../components/typography/_typography.scss */
+/* line 76, ../../components/typography/_typography.scss */
 body,
-p,
-ul,
-table,
-span,
+.kss-example-preview-wrapper,
 .text--body-large,
 .text--body-medium,
 .text--body-small {
@@ -2851,21 +2848,6 @@ Style guide: typography.other
 }
 
 /*
-Hyperlinks
-
-
-Style guide: typography.hyperlinks
-*/
-/* line 222, ../../components/typography/_typography.scss */
-a {
-  text-decoration: none;
-}
-/* line 225, ../../components/typography/_typography.scss */
-a:hover {
-  text-decoration: underline;
-}
-
-/*
 Formatted Text
 
 Markup: formatted.hbs
@@ -2880,10 +2862,10 @@ Weight: 5
 .text--left - Left justified text
 .text--centered - Center justified text
 .text--justified - Justified text
-.text--huge - Huge text - 48px
-.text--big - Big text - 32px
-.text--base-size - Base size text - 14px
-.text--small - Small text - 12px
+.text--huge - Huge text (36px)
+.text--big - Big text (24px)
+.text--base-size - Base size text (14px)
+.text--small - Small text (12px)
 .text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
 .text--negative - Negative Text colored text.
@@ -2903,7 +2885,7 @@ Weight: 5
 
 Style guide: typography.formatted
 */
-/* line 269, ../../components/typography/_typography.scss */
+/* line 254, ../../components/typography/_typography.scss */
 strong,
 .text--bold,
 .sidebar--nav li a,
@@ -2911,139 +2893,139 @@ table th {
   font-weight: bold;
 }
 
-/* line 273, ../../components/typography/_typography.scss */
+/* line 258, ../../components/typography/_typography.scss */
 .text--light {
   font-weight: 100;
 }
 
-/* line 276, ../../components/typography/_typography.scss */
+/* line 261, ../../components/typography/_typography.scss */
 em,
 .text--italic {
   font-style: italic;
 }
 
-/* line 280, ../../components/typography/_typography.scss */
+/* line 265, ../../components/typography/_typography.scss */
 .text--caps {
   text-transform: uppercase;
 }
 
-/* line 283, ../../components/typography/_typography.scss */
+/* line 268, ../../components/typography/_typography.scss */
 .text--left {
   text-align: left;
 }
 
-/* line 286, ../../components/typography/_typography.scss */
+/* line 271, ../../components/typography/_typography.scss */
 .text--right {
   text-align: right;
 }
 
-/* line 289, ../../components/typography/_typography.scss */
+/* line 274, ../../components/typography/_typography.scss */
 .text--centered {
   text-align: center;
 }
 
-/* line 292, ../../components/typography/_typography.scss */
+/* line 277, ../../components/typography/_typography.scss */
 .text--justified {
   text-align: justified;
 }
 
-/* line 295, ../../components/typography/_typography.scss */
+/* line 280, ../../components/typography/_typography.scss */
 .text--huge {
-  font-size: 3.42857em;
+  font-size: 2.57143em;
 }
 
-/* line 298, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .text--big {
-  font-size: 2.28571em;
+  font-size: 1.71429em;
 }
 
-/* line 301, ../../components/typography/_typography.scss */
+/* line 286, ../../components/typography/_typography.scss */
 .text--base-size {
   font-size: 14px;
 }
 
-/* line 304, ../../components/typography/_typography.scss */
+/* line 289, ../../components/typography/_typography.scss */
 .text--small {
   font-size: 0.85714em;
 }
 
-/* line 307, ../../components/typography/_typography.scss */
+/* line 292, ../../components/typography/_typography.scss */
 .text--tiny {
   font-size: 0.71429em;
 }
 
-/* line 310, ../../components/typography/_typography.scss */
+/* line 295, ../../components/typography/_typography.scss */
 .text--lineheight-zero {
   line-height: 0;
 }
 
 /* Create a class for each text color */
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--negative {
   color: #fff;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--light-body {
   color: #bbb;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--medium-body {
   color: #787878;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--dark-body {
   color: #333;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--link {
   color: #eb912c;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--headlines {
   color: #000;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--nav-items {
   color: #212535;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--data-sources {
   color: #a3b9cb;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--stories {
   color: #847094;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--learning {
   color: #6f99a5;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--highlight {
   color: #53bd92;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--mission-1 {
   color: #316cc8;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--mission-2 {
   color: #7dcdf1;
 }
 
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .text--mission-3 {
   color: #5facce;
 }
@@ -3066,7 +3048,7 @@ h6 - Sixth level heading. 1em
 
 Style guide: typography.headings
 */
-/* line 340, ../../components/typography/_typography.scss */
+/* line 325, ../../components/typography/_typography.scss */
 h1, .heading--homepage, .heading--product, .heading--download,
 .heading--h1,
 h2,
@@ -3087,40 +3069,56 @@ h6,
   line-height: 1.2;
 }
 
-/* line 356, ../../components/typography/_typography.scss */
+/* line 341, ../../components/typography/_typography.scss */
 h1, .heading--homepage, .heading--product, .heading--download,
 .heading--h1 {
   font-size: 3em;
 }
 
-/* line 360, ../../components/typography/_typography.scss */
+/* line 345, ../../components/typography/_typography.scss */
 h2, .heading--medium,
 .heading--h2 {
   font-size: 2.5em;
 }
 
-/* line 364, ../../components/typography/_typography.scss */
+/* line 349, ../../components/typography/_typography.scss */
 h3, .heading--small,
 .heading--h3 {
   font-size: 2em;
 }
 
-/* line 368, ../../components/typography/_typography.scss */
+/* line 353, ../../components/typography/_typography.scss */
 h4, .heading--x-small,
 .heading--h4 {
   font-size: 1.5em;
 }
 
-/* line 372, ../../components/typography/_typography.scss */
+/* line 357, ../../components/typography/_typography.scss */
 h5, .heading--label,
 .heading--h5 {
   font-size: 1.25em;
 }
 
-/* line 376, ../../components/typography/_typography.scss */
+/* line 361, ../../components/typography/_typography.scss */
 h6,
 .heading--h6 {
   font-size: 1em;
+}
+
+/*
+Hyperlinks
+
+Weight: 12
+
+Style guide: typography.hyperlinks
+*/
+/* line 374, ../../components/typography/_typography.scss */
+a {
+  text-decoration: none;
+}
+/* line 377, ../../components/typography/_typography.scss */
+a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

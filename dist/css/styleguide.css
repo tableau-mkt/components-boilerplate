@@ -624,6 +624,9 @@
   /*
   Font Families
   
+  All text on tableau.com is set in either Benton Sans or Merriweather. This 
+  includes body copy as well as page and section headers.
+  
   **BentonSans** is primarily used for section headers and titling in it’s Thin 
   case, but it is also used in it’s Book case in buttons and other scenarios. 
   Occasionally BentonSans Medium is used in article templates.
@@ -653,9 +656,9 @@
   
   Weight: 2
   
-  .text--body-large - Large body copy.
-  .text--body-medium - Medium body copy.
-  .text--body-small - Small body copy.
+  .text--body-large - Large body copy (15px)
+  .text--body-medium - Medium body copy (14px)
+  .text--body-small - Small body copy (12px)
   
   Style guide: typography.base
    */
@@ -695,12 +698,6 @@
   Style guide: typography.other
   */
   /*
-  Hyperlinks
-  
-  
-  Style guide: typography.hyperlinks
-  */
-  /*
   Formatted Text
   
   Markup: formatted.hbs
@@ -715,10 +712,10 @@
   .text--left - Left justified text
   .text--centered - Center justified text
   .text--justified - Justified text
-  .text--huge - Huge text - 48px
-  .text--big - Big text - 32px
-  .text--base-size - Base size text - 14px
-  .text--small - Small text - 12px
+  .text--huge - Huge text (36px)
+  .text--big - Big text (24px)
+  .text--base-size - Base size text (14px)
+  .text--small - Small text (12px)
   .text--tiny - Tiny text - 10px
   .text--lineheight-zero - Line height set to zero.
   .text--negative - Negative Text colored text.
@@ -756,6 +753,13 @@
   h6 - Sixth level heading. 1em
   
   Style guide: typography.headings
+  */
+  /*
+  Hyperlinks
+  
+  Weight: 12
+  
+  Style guide: typography.hyperlinks
   */
 }
 /* line 12, ../../helpers/_helpers.scss */
@@ -2652,39 +2656,33 @@
 .kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
   margin: 0 0 0.5em;
 }
-/* line 33, ../../components/typography/_typography.scss */
+/* line 36, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-thin, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--medium {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
 }
-/* line 37, ../../components/typography/_typography.scss */
+/* line 40, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-light, .kss-example-preview .heading--small, .kss-example-preview .heading--label, .kss-example-preview .text--large-copy, .kss-example-preview .text--sub-nav, .kss-example-preview .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
-/* line 41, ../../components/typography/_typography.scss */
+/* line 44, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-book, .kss-example-preview .heading--x-small, .kss-example-preview .text--label {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
-/* line 45, ../../components/typography/_typography.scss */
+/* line 48, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-medium {
   font-family: 'Benton Sans Medium', Helvetica, sans-serif;
 }
-/* line 49, ../../components/typography/_typography.scss */
+/* line 52, ../../components/typography/_typography.scss */
 .kss-example-preview .text--merriweather-light, .kss-example-preview body,
-.kss-example-preview p,
-.kss-example-preview ul,
-.kss-example-preview table,
-.kss-example-preview span,
+.kss-example-preview .kss-example-preview-wrapper,
 .kss-example-preview .text--body-large,
 .kss-example-preview .text--body-medium,
 .kss-example-preview .text--body-small {
   font-family: 'Merriweather', serif;
 }
-/* line 73, ../../components/typography/_typography.scss */
+/* line 76, ../../components/typography/_typography.scss */
 .kss-example-preview body,
-.kss-example-preview p,
-.kss-example-preview ul,
-.kss-example-preview table,
-.kss-example-preview span,
+.kss-example-preview .kss-example-preview-wrapper,
 .kss-example-preview .text--body-large,
 .kss-example-preview .text--body-medium,
 .kss-example-preview .text--body-small {
@@ -2763,131 +2761,123 @@
   color: #333;
   text-transform: uppercase;
 }
-/* line 222, ../../components/typography/_typography.scss */
-.kss-example-preview a {
-  text-decoration: none;
-}
-/* line 225, ../../components/typography/_typography.scss */
-.kss-example-preview a:hover {
-  text-decoration: underline;
-}
-/* line 269, ../../components/typography/_typography.scss */
+/* line 254, ../../components/typography/_typography.scss */
 .kss-example-preview strong,
 .kss-example-preview .text--bold,
 .kss-example-preview .sidebar--nav li a,
 .kss-example-preview table th {
   font-weight: bold;
 }
-/* line 273, ../../components/typography/_typography.scss */
+/* line 258, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light {
   font-weight: 100;
 }
-/* line 276, ../../components/typography/_typography.scss */
+/* line 261, ../../components/typography/_typography.scss */
 .kss-example-preview em,
 .kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 280, ../../components/typography/_typography.scss */
+/* line 265, ../../components/typography/_typography.scss */
 .kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 283, ../../components/typography/_typography.scss */
+/* line 268, ../../components/typography/_typography.scss */
 .kss-example-preview .text--left {
   text-align: left;
 }
-/* line 286, ../../components/typography/_typography.scss */
+/* line 271, ../../components/typography/_typography.scss */
 .kss-example-preview .text--right {
   text-align: right;
 }
-/* line 289, ../../components/typography/_typography.scss */
+/* line 274, ../../components/typography/_typography.scss */
 .kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 292, ../../components/typography/_typography.scss */
+/* line 277, ../../components/typography/_typography.scss */
 .kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 295, ../../components/typography/_typography.scss */
+/* line 280, ../../components/typography/_typography.scss */
 .kss-example-preview .text--huge {
-  font-size: 3.42857em;
+  font-size: 2.57143em;
 }
-/* line 298, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .kss-example-preview .text--big {
-  font-size: 2.28571em;
+  font-size: 1.71429em;
 }
-/* line 301, ../../components/typography/_typography.scss */
+/* line 286, ../../components/typography/_typography.scss */
 .kss-example-preview .text--base-size {
   font-size: 14px;
 }
-/* line 304, ../../components/typography/_typography.scss */
+/* line 289, ../../components/typography/_typography.scss */
 .kss-example-preview .text--small {
   font-size: 0.85714em;
 }
-/* line 307, ../../components/typography/_typography.scss */
+/* line 292, ../../components/typography/_typography.scss */
 .kss-example-preview .text--tiny {
   font-size: 0.71429em;
 }
-/* line 310, ../../components/typography/_typography.scss */
+/* line 295, ../../components/typography/_typography.scss */
 .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--negative {
   color: #fff;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light-body {
   color: #bbb;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--medium-body {
   color: #787878;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dark-body {
   color: #333;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--link {
   color: #eb912c;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--headlines {
   color: #000;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--nav-items {
   color: #212535;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--data-sources {
   color: #a3b9cb;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--stories {
   color: #847094;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--learning {
   color: #6f99a5;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--highlight {
   color: #53bd92;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-1 {
   color: #316cc8;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-2 {
   color: #7dcdf1;
 }
-/* line 315, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-3 {
   color: #5facce;
 }
-/* line 340, ../../components/typography/_typography.scss */
+/* line 325, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
 .kss-example-preview .heading--h1,
 .kss-example-preview h2,
@@ -2907,35 +2897,43 @@
   margin: .5em 0;
   line-height: 1.2;
 }
-/* line 356, ../../components/typography/_typography.scss */
+/* line 341, ../../components/typography/_typography.scss */
 .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
 .kss-example-preview .heading--h1 {
   font-size: 3em;
 }
-/* line 360, ../../components/typography/_typography.scss */
+/* line 345, ../../components/typography/_typography.scss */
 .kss-example-preview h2, .kss-example-preview .heading--medium,
 .kss-example-preview .heading--h2 {
   font-size: 2.5em;
 }
-/* line 364, ../../components/typography/_typography.scss */
+/* line 349, ../../components/typography/_typography.scss */
 .kss-example-preview h3, .kss-example-preview .heading--small,
 .kss-example-preview .heading--h3 {
   font-size: 2em;
 }
-/* line 368, ../../components/typography/_typography.scss */
+/* line 353, ../../components/typography/_typography.scss */
 .kss-example-preview h4, .kss-example-preview .heading--x-small,
 .kss-example-preview .heading--h4 {
   font-size: 1.5em;
 }
-/* line 372, ../../components/typography/_typography.scss */
+/* line 357, ../../components/typography/_typography.scss */
 .kss-example-preview h5, .kss-example-preview .heading--label,
 .kss-example-preview .heading--h5 {
   font-size: 1.25em;
 }
-/* line 376, ../../components/typography/_typography.scss */
+/* line 361, ../../components/typography/_typography.scss */
 .kss-example-preview h6,
 .kss-example-preview .heading--h6 {
   font-size: 1em;
+}
+/* line 374, ../../components/typography/_typography.scss */
+.kss-example-preview a {
+  text-decoration: none;
+}
+/* line 377, ../../components/typography/_typography.scss */
+.kss-example-preview a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styleguide.css.map */

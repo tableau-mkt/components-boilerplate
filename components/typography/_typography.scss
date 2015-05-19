@@ -10,6 +10,9 @@ Style guide: typography
 /*
 Font Families
 
+All text on tableau.com is set in either Benton Sans or Merriweather. This 
+includes body copy as well as page and section headers.
+
 **BentonSans** is primarily used for section headers and titling in it’s Thin 
 case, but it is also used in it’s Book case in buttons and other scenarios. 
 Occasionally BentonSans Medium is used in article templates.
@@ -61,9 +64,9 @@ Markup: base.hbs
 
 Weight: 2
 
-.text--body-large - Large body copy.
-.text--body-medium - Medium body copy.
-.text--body-small - Small body copy.
+.text--body-large - Large body copy (15px)
+.text--body-medium - Medium body copy (14px)
+.text--body-small - Small body copy (12px)
 
 Style guide: typography.base
  */
@@ -71,10 +74,7 @@ Style guide: typography.base
 $base-font-size: 14px;
 
 body,
-p,
-ul,
-table,
-span,
+.kss-example-preview-wrapper,
 .text--body-large,
 .text--body-medium,
 .text--body-small {
@@ -214,21 +214,6 @@ Style guide: typography.other
 
 
 /*
-Hyperlinks
-
-
-Style guide: typography.hyperlinks
-*/
-a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
-/*
 Formatted Text
 
 Markup: formatted.hbs
@@ -243,10 +228,10 @@ Weight: 5
 .text--left - Left justified text
 .text--centered - Center justified text
 .text--justified - Justified text
-.text--huge - Huge text - 48px
-.text--big - Big text - 32px
-.text--base-size - Base size text - 14px
-.text--small - Small text - 12px
+.text--huge - Huge text (36px)
+.text--big - Big text (24px)
+.text--base-size - Base size text (14px)
+.text--small - Small text (12px)
 .text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
 .text--negative - Negative Text colored text.
@@ -293,10 +278,10 @@ em,
   text-align: justified;
 }
 .text--huge {
-  font-size: em(48px);
+  font-size: em(36px);
 }
 .text--big {
-  font-size: em(32px);
+  font-size: em(24px);
 }
 .text--base-size {
   font-size: $base-font-size;
@@ -376,4 +361,20 @@ h5,
 h6,
 .heading--h6 {
   font-size: 1em;
+}
+
+
+/*
+Hyperlinks
+
+Weight: 12
+
+Style guide: typography.hyperlinks
+*/
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
