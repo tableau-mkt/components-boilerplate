@@ -662,13 +662,24 @@
   Style guide: typography.base
    */
   /*
+  Default Headings
+  
+  Used for title and prominent labels of content.
+  
+  Markup: headings.hbs
+  
+  Weight: 3
+  
+  Style guide: typography.headings
+  */
+  /*
   Context-specific Headings
   
   These heading classes are used for specific contexts.
   
   Markup: context-headings.hbs
   
-  Weight: 3
+  Weight: 4
   
   .heading--homepage - Homepage Hero - uses <h1>
   .heading--product - Product Landing/Product Detail Hero - uses <h1>
@@ -687,7 +698,7 @@
   
   Markup: context-headings.hbs
   
-  Weight: 4
+  Weight: 5
   
   .text--large-copy - Large Copy
   .text--sub-nav - Sub Nav Mission
@@ -701,7 +712,7 @@
   
   Markup: formatted.hbs
   
-  Weight: 5
+  Weight: 6
   
   .text--bold - Bold text for emphasis. Same as <strong>
   .text--light - Light text. Default for non-headings
@@ -717,6 +728,18 @@
   .text--small - Small text (12px)
   .text--tiny - Tiny text - 10px
   .text--lineheight-zero - Line height set to zero.
+  
+  Style guide: typography.formatted
+  */
+  /*
+  Text Colors
+  
+  Colors to be used in the text palette.
+  
+  Markup: colors.hbs
+  
+  Weight: 7
+  
   .text--negative - Negative Text colored text.
   .text--light-body - Negative/light Body colored text.
   .text--medium-body - Default Med. Body colored text.
@@ -732,29 +755,13 @@
   .text--mission-2 - Mission 2 colored text.
   .text--mission-3 - Mission 3 colored text.
   
-  Style guide: typography.formatted
+  Style guide: typography.colors
   */
   /* Create a class for each text color */
   /*
-  Default Headings
-  
-  Used for title and prominent labels of content.
-  
-  Markup: headings.hbs
-  
-  Weight: 10
-  
-  h1 - First level heading. Reserved for page titles. 3em
-  h2 - Second level heading. Used mostly for section titles. 2.5em
-  h3 - Third level heading. 2em
-  h4 - Fourth level heading. 1.5em
-  h5 - Fifth level heading. 1.25em
-  h6 - Sixth level heading. 1em
-  
-  Style guide: typography.headings
-  */
-  /*
   Hyperlinks
+  
+  Coming soon....
   
   Weight: 12
   
@@ -2660,7 +2667,16 @@
   margin: 0 0 0.5em;
 }
 /* line 36, ../../components/typography/_typography.scss */
-.kss-example-preview .text--benton-thin, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--medium {
+.kss-example-preview .text--benton-thin, .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1,
+.kss-example-preview h2,
+.kss-example-preview .heading--medium, .kss-example-preview .heading--h2,
+.kss-example-preview h3,
+.kss-example-preview .heading--small, .kss-example-preview .heading--h3,
+.kss-example-preview h4,
+.kss-example-preview .heading--x-small, .kss-example-preview .heading--h4,
+.kss-example-preview h5,
+.kss-example-preview .heading--label, .kss-example-preview .heading--h5,
+.kss-example-preview h6, .kss-example-preview .heading--h6 {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
 }
 /* line 40, ../../components/typography/_typography.scss */
@@ -2704,231 +2720,215 @@
   font-size: 0.85714em;
   line-height: 1.66;
 }
-/* line 118, ../../components/typography/_typography.scss */
+/* line 110, ../../components/typography/_typography.scss */
+.kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1,
+.kss-example-preview h2,
+.kss-example-preview .heading--medium, .kss-example-preview .heading--h2,
+.kss-example-preview h3,
+.kss-example-preview .heading--small, .kss-example-preview .heading--h3,
+.kss-example-preview h4,
+.kss-example-preview .heading--x-small, .kss-example-preview .heading--h4,
+.kss-example-preview h5,
+.kss-example-preview .heading--label, .kss-example-preview .heading--h5,
+.kss-example-preview h6, .kss-example-preview .heading--h6 {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+/* line 121, ../../components/typography/_typography.scss */
+.kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1 {
+  font-size: 3.57143em;
+}
+/* line 125, ../../components/typography/_typography.scss */
+.kss-example-preview h2, .kss-example-preview .heading--medium, .kss-example-preview .heading--h2 {
+  font-size: 2.57143em;
+}
+/* line 129, ../../components/typography/_typography.scss */
+.kss-example-preview h3, .kss-example-preview .heading--small, .kss-example-preview .heading--h3 {
+  font-size: 1.85714em;
+}
+/* line 133, ../../components/typography/_typography.scss */
+.kss-example-preview h4, .kss-example-preview .heading--x-small, .kss-example-preview .heading--h4 {
+  font-size: 1.64286em;
+}
+/* line 137, ../../components/typography/_typography.scss */
+.kss-example-preview h5, .kss-example-preview .heading--label, .kss-example-preview .heading--h5 {
+  font-size: 1.25em;
+}
+/* line 141, ../../components/typography/_typography.scss */
+.kss-example-preview h6, .kss-example-preview .heading--h6 {
+  font-size: 1em;
+}
+/* line 166, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--homepage {
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
-/* line 126, ../../components/typography/_typography.scss */
+/* line 174, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--product {
-  font-size: 3.57143em;
   color: #000;
 }
-/* line 133, ../../components/typography/_typography.scss */
+/* line 180, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--download {
   font-size: 3.42857em;
   line-height: 1.25;
   color: #000;
 }
-/* line 141, ../../components/typography/_typography.scss */
+/* line 188, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--medium {
-  font-size: 2.57143em;
   line-height: 1.39;
   color: #000;
 }
-/* line 149, ../../components/typography/_typography.scss */
+/* line 195, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--small {
-  font-size: 1.85714em;
   color: #333;
 }
-/* line 156, ../../components/typography/_typography.scss */
+/* line 201, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--x-small {
-  font-size: 1.64286em;
   color: #333;
 }
-/* line 163, ../../components/typography/_typography.scss */
+/* line 207, ../../components/typography/_typography.scss */
 .kss-example-preview .heading--label {
   font-size: 1.57143em;
   color: #333;
 }
-/* line 188, ../../components/typography/_typography.scss */
+/* line 232, ../../components/typography/_typography.scss */
 .kss-example-preview .text--large-copy {
   font-size: 1.71429em;
   color: #333;
 }
-/* line 194, ../../components/typography/_typography.scss */
+/* line 238, ../../components/typography/_typography.scss */
 .kss-example-preview .text--sub-nav {
   font-size: 1.57143em;
   color: #000;
 }
-/* line 200, ../../components/typography/_typography.scss */
+/* line 244, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dropdown {
   font-size: 1.14286em;
   color: #787878;
   line-height: 1.875;
 }
-/* line 207, ../../components/typography/_typography.scss */
+/* line 251, ../../components/typography/_typography.scss */
 .kss-example-preview .text--label {
   font-size: 0.78571em;
   color: #333;
   text-transform: uppercase;
 }
-/* line 253, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .kss-example-preview strong,
 .kss-example-preview .text--bold,
 .kss-example-preview .sidebar--nav li a,
 .kss-example-preview table th {
   font-weight: bold;
 }
-/* line 257, ../../components/typography/_typography.scss */
+/* line 287, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light {
   font-weight: 100;
 }
-/* line 260, ../../components/typography/_typography.scss */
+/* line 290, ../../components/typography/_typography.scss */
 .kss-example-preview em,
 .kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 264, ../../components/typography/_typography.scss */
+/* line 294, ../../components/typography/_typography.scss */
 .kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 267, ../../components/typography/_typography.scss */
+/* line 297, ../../components/typography/_typography.scss */
 .kss-example-preview .text--left {
   text-align: left;
 }
-/* line 270, ../../components/typography/_typography.scss */
+/* line 300, ../../components/typography/_typography.scss */
 .kss-example-preview .text--right {
   text-align: right;
 }
-/* line 273, ../../components/typography/_typography.scss */
+/* line 303, ../../components/typography/_typography.scss */
 .kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 276, ../../components/typography/_typography.scss */
+/* line 306, ../../components/typography/_typography.scss */
 .kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 279, ../../components/typography/_typography.scss */
+/* line 309, ../../components/typography/_typography.scss */
 .kss-example-preview .text--huge {
   font-size: 2.57143em;
 }
-/* line 282, ../../components/typography/_typography.scss */
+/* line 312, ../../components/typography/_typography.scss */
 .kss-example-preview .text--big {
   font-size: 1.71429em;
 }
-/* line 285, ../../components/typography/_typography.scss */
+/* line 315, ../../components/typography/_typography.scss */
 .kss-example-preview .text--base-size {
   font-size: 14px;
 }
-/* line 288, ../../components/typography/_typography.scss */
+/* line 318, ../../components/typography/_typography.scss */
 .kss-example-preview .text--small {
   font-size: 0.85714em;
 }
-/* line 291, ../../components/typography/_typography.scss */
+/* line 321, ../../components/typography/_typography.scss */
 .kss-example-preview .text--tiny {
   font-size: 0.71429em;
 }
-/* line 294, ../../components/typography/_typography.scss */
+/* line 324, ../../components/typography/_typography.scss */
 .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--negative {
   color: #fff;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--light-body {
   color: #bbb;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--medium-body {
   color: #787878;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--dark-body {
   color: #333;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--link {
   color: #eb912c;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--headlines {
   color: #000;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--nav-items {
   color: #212535;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--data-sources {
   color: #a3b9cb;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--stories {
   color: #847094;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--learning {
   color: #6f99a5;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--highlight {
   color: #53bd92;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-1 {
   color: #316cc8;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-2 {
   color: #7dcdf1;
 }
-/* line 299, ../../components/typography/_typography.scss */
+/* line 358, ../../components/typography/_typography.scss */
 .kss-example-preview .text--mission-3 {
   color: #5facce;
-}
-/* line 324, ../../components/typography/_typography.scss */
-.kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
-.kss-example-preview .heading--h1,
-.kss-example-preview h2,
-.kss-example-preview .heading--medium,
-.kss-example-preview .heading--h2,
-.kss-example-preview h3,
-.kss-example-preview .heading--small,
-.kss-example-preview .heading--h3,
-.kss-example-preview h4,
-.kss-example-preview .heading--x-small,
-.kss-example-preview .heading--h4,
-.kss-example-preview h5,
-.kss-example-preview .heading--label,
-.kss-example-preview .heading--h5,
-.kss-example-preview h6,
-.kss-example-preview .heading--h6 {
-  margin: .5em 0;
-  line-height: 1.2;
-}
-/* line 340, ../../components/typography/_typography.scss */
-.kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download,
-.kss-example-preview .heading--h1 {
-  font-size: 3em;
-}
-/* line 344, ../../components/typography/_typography.scss */
-.kss-example-preview h2, .kss-example-preview .heading--medium,
-.kss-example-preview .heading--h2 {
-  font-size: 2.5em;
-}
-/* line 348, ../../components/typography/_typography.scss */
-.kss-example-preview h3, .kss-example-preview .heading--small,
-.kss-example-preview .heading--h3 {
-  font-size: 2em;
-}
-/* line 352, ../../components/typography/_typography.scss */
-.kss-example-preview h4, .kss-example-preview .heading--x-small,
-.kss-example-preview .heading--h4 {
-  font-size: 1.5em;
-}
-/* line 356, ../../components/typography/_typography.scss */
-.kss-example-preview h5, .kss-example-preview .heading--label,
-.kss-example-preview .heading--h5 {
-  font-size: 1.25em;
-}
-/* line 360, ../../components/typography/_typography.scss */
-.kss-example-preview h6,
-.kss-example-preview .heading--h6 {
-  font-size: 1em;
 }
 /* line 373, ../../components/typography/_typography.scss */
 .kss-example-preview a {

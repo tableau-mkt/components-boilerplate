@@ -96,13 +96,61 @@ body,
 
 
 /*
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings.hbs
+
+Weight: 3
+
+Style guide: typography.headings
+*/
+
+h1, .heading--h1,
+h2, .heading--h2,
+h3, .heading--h3,
+h4, .heading--h4,
+h5, .heading--h5,
+h6, .heading--h6 {
+  @extend .text--benton-thin;
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+h1, .heading--h1 {
+  font-size: em(50px);
+}
+
+h2, .heading--h2 {
+  font-size: em(36px);
+}
+
+h3, .heading--h3 {
+  font-size: em(26px);
+}
+
+h4, .heading--h4 {
+  font-size: em(23px);
+}
+
+h5, .heading--h5 {
+  font-size: 1.25em;
+}
+
+h6, .heading--h6 {
+  font-size: 1em;
+}
+
+
+/*
 Context-specific Headings
 
 These heading classes are used for specific contexts.
 
 Markup: context-headings.hbs
 
-Weight: 3
+Weight: 4
 
 .heading--homepage - Homepage Hero - uses <h1>
 .heading--product - Product Landing/Product Detail Hero - uses <h1>
@@ -126,7 +174,6 @@ Styleguide typography.context-headings
 .heading--product {
   @extend h1;
   @extend .text--benton-thin;
-  font-size: em(50px);
   color: $text-headlines;
 }
 
@@ -141,7 +188,6 @@ Styleguide typography.context-headings
 .heading--medium {
   @extend h2;
   @extend .text--benton-thin;
-  font-size: em(36px);
   line-height: 1.39;
   color: $text-headlines;
 }
@@ -149,14 +195,12 @@ Styleguide typography.context-headings
 .heading--small {
   @extend h3;
   @extend .text--benton-light;
-  font-size: em(26px);
   color: $text-dark-body;
 }
 
 .heading--x-small {
   @extend h4;
   @extend .text--benton-book;
-  font-size: em(23px);
   color: $text-dark-body;
 }
 
@@ -175,7 +219,7 @@ Other treatments used for text throughout the site
 
 Markup: context-headings.hbs
 
-Weight: 4
+Weight: 5
 
 .text--large-copy - Large Copy
 .text--sub-nav - Sub Nav Mission
@@ -217,7 +261,7 @@ Formatted Text
 
 Markup: formatted.hbs
 
-Weight: 5
+Weight: 6
 
 .text--bold - Bold text for emphasis. Same as <strong>
 .text--light - Light text. Default for non-headings
@@ -233,20 +277,6 @@ Weight: 5
 .text--small - Small text (12px)
 .text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
-.text--negative - Negative Text colored text.
-.text--light-body - Negative/light Body colored text.
-.text--medium-body - Default Med. Body colored text.
-.text--dark-body - Default Dark Body colored text.
-.text--link - Link Orange colored text.
-.text--headlines - Headlines colored text.
-.text--nav-items - Nav Items colored text.
-.text--data-sources - Data Sources colored text.
-.text--stories - Stories colored text.
-.text--learning - Learning colored text.
-.text--highlight - Highlight Text colored text.
-.text--mission-1 - Mission 1 colored text.
-.text--mission-2 - Mission 2 colored text.
-.text--mission-3 - Mission 3 colored text.
 
 Style guide: typography.formatted
 */
@@ -294,6 +324,35 @@ em,
 .text--lineheight-zero {
   line-height: 0;
 }
+
+
+/*
+Text Colors
+
+Colors to be used in the text palette.
+
+Markup: colors.hbs
+
+Weight: 7
+
+.text--negative - Negative Text colored text.
+.text--light-body - Negative/light Body colored text.
+.text--medium-body - Default Med. Body colored text.
+.text--dark-body - Default Dark Body colored text.
+.text--link - Link Orange colored text.
+.text--headlines - Headlines colored text.
+.text--nav-items - Nav Items colored text.
+.text--data-sources - Data Sources colored text.
+.text--stories - Stories colored text.
+.text--learning - Learning colored text.
+.text--highlight - Highlight Text colored text.
+.text--mission-1 - Mission 1 colored text.
+.text--mission-2 - Mission 2 colored text.
+.text--mission-3 - Mission 3 colored text.
+
+Style guide: typography.colors
+*/
+
 /* Create a class for each text color */
 @each $name, $color in $text-colors {
   .text--#{"" + $name} {
@@ -303,68 +362,9 @@ em,
 
 
 /*
-Default Headings
-
-Used for title and prominent labels of content.
-
-Markup: headings.hbs
-
-Weight: 10
-
-h1 - First level heading. Reserved for page titles. 3em
-h2 - Second level heading. Used mostly for section titles. 2.5em
-h3 - Third level heading. 2em
-h4 - Fourth level heading. 1.5em
-h5 - Fifth level heading. 1.25em
-h6 - Sixth level heading. 1em
-
-Style guide: typography.headings
-*/
-
-h1,
-.heading--h1,
-h2,
-.heading--h2,
-h3,
-.heading--h3,
-h4,
-.heading--h4,
-h5,
-.heading--h5,
-h6,
-.heading--h6 {
-  margin: .5em 0;
-  line-height: 1.2;
-}
-
-h1,
-.heading--h1 {
-  font-size: 3em;
-}
-h2,
-.heading--h2 {
-  font-size: 2.5em;
-}
-h3,
-.heading--h3 {
-  font-size: 2em;
-}
-h4,
-.heading--h4 {
-  font-size: 1.5em;
-}
-h5,
-.heading--h5 {
-  font-size: 1.25em;
-}
-h6,
-.heading--h6 {
-  font-size: 1em;
-}
-
-
-/*
 Hyperlinks
+
+Coming soon....
 
 Weight: 12
 
