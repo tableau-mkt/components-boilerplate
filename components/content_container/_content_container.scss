@@ -13,9 +13,15 @@ Style guide: layout.container
 
 .content-container {
   @extend %clearfix;
+  box-sizing: border-box;
   max-width: 1550px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 9%;
+  padding-right: 9%;
+
+  &.content-container--wide {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }

@@ -189,13 +189,13 @@ most common proportions for video players.
   padding: 0;
 }
 
-/* line 63, ../../helpers/_helpers.scss */
+/* line 68, ../../helpers/_helpers.scss */
 .hide {
   display: none;
 }
 
 @media (max-width: 739px) {
-  /* line 69, ../../helpers/_helpers.scss */
+  /* line 74, ../../helpers/_helpers.scss */
   .mobile-hide {
     display: none;
   }
@@ -206,24 +206,29 @@ most common proportions for video players.
  * Using placeholders results in CSS rule combining for selectors.
  */
 /* line 14, ../../helpers/_placeholders.scss */
-.plain-list, .l-footer .block--menu-menu-footer-menu .menu, .l-menu .menu, .sidebar--nav ul {
+.plain-list, .inline-list, .l-footer .block--menu-menu-footer-menu .menu, .l-menu .menu, .sidebar--nav ul {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
 }
-/* line 18, ../../helpers/_placeholders.scss */
-.plain-list li, .l-footer .block--menu-menu-footer-menu .menu li, .l-menu .menu li, .sidebar--nav ul li {
+/* line 19, ../../helpers/_placeholders.scss */
+.plain-list li, .inline-list li, .l-footer .block--menu-menu-footer-menu .menu li, .l-menu .menu li, .sidebar--nav ul li {
   list-style: none;
 }
 
-/* line 25, ../../helpers/_placeholders.scss */
+/* line 28, ../../helpers/_placeholders.scss */
+.inline-list li {
+  display: inline-block;
+}
+
+/* line 35, ../../helpers/_placeholders.scss */
 .clearfix:after, .content-container:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 62, ../../helpers/_placeholders.scss */
+/* line 72, ../../helpers/_placeholders.scss */
 .accordion--item, button.mfp-arrow, .slick--slider .slick-dots li button:before {
   -webkit-transition: background 0.25s, opacity 0.25s;
   -moz-transition: background 0.25s, opacity 0.25s;
@@ -994,11 +999,17 @@ Style guide: layout.container
 */
 /* line 14, ../../components/content_container/_content_container.scss */
 .content-container {
+  box-sizing: border-box;
   max-width: 1550px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+/* line 23, ../../components/content_container/_content_container.scss */
+.content-container.content-container--wide {
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 /* 
@@ -1026,94 +1037,95 @@ Style guide: buttons.cta
   padding: 17px 25px;
   background-color: #e8762c;
   border-radius: 0;
-  -webkit-appearance: none;
   cursor: pointer;
   letter-spacing: 1px;
   line-height: 1;
   font-size: 11px;
   color: #fff;
   text-transform: uppercase;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: auto;
   -webkit-transition: background-color 0.25s, color 0.35s;
   -moz-transition: background-color 0.25s, color 0.35s;
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 35, ../../components/cta/_cta.scss */
+/* line 36, ../../components/cta/_cta.scss */
 .cta:hover, .cta:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
-/* line 41, ../../components/cta/_cta.scss */
+/* line 42, ../../components/cta/_cta.scss */
 .cta:active {
   background-color: #c92434;
   text-decoration: underline;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--orange {
   background-color: #e8762c;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--orange:hover, .cta.cta--orange:focus {
   background-color: #ea8442;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--desktop {
   background-color: #324e7a;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--desktop:hover, .cta.cta--desktop:focus {
   background-color: #23529c;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--server {
   background-color: #5e899b;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--server:hover, .cta.cta--server:focus {
   background-color: #7fa9bb;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--online {
   background-color: #7099a5;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--online:hover, .cta.cta--online:focus {
   background-color: #58a3b9;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--public {
   background-color: #2d4b65;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--public:hover, .cta.cta--public:focus {
   background-color: #324E7A;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--reader {
   background-color: #9d7eb5;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--reader:hover, .cta.cta--reader:focus {
   background-color: #B28CCF;
 }
-/* line 47, ../../components/cta/_cta.scss */
+/* line 48, ../../components/cta/_cta.scss */
 .cta.cta--mobile {
   background-color: #c87e5b;
 }
-/* line 50, ../../components/cta/_cta.scss */
+/* line 51, ../../components/cta/_cta.scss */
 .cta.cta--mobile:hover, .cta.cta--mobile:focus {
   background-color: #DB8E6A;
 }
-/* line 57, ../../components/cta/_cta.scss */
+/* line 58, ../../components/cta/_cta.scss */
 .cta.cta--download:after, .cta.cta--play:after {
   display: inline-block;
   padding-left: 1em;
 }
-/* line 63, ../../components/cta/_cta.scss */
+/* line 64, ../../components/cta/_cta.scss */
 .cta.cta--download:after {
   content: ">";
 }
-/* line 67, ../../components/cta/_cta.scss */
+/* line 68, ../../components/cta/_cta.scss */
 .cta.cta--play:after {
   content: "▶";
 }
@@ -1128,18 +1140,18 @@ Markup: cta-secondary.hbs
 
 Style guide: buttons.cta-secondary
 */
-/* line 84, ../../components/cta/_cta.scss */
+/* line 85, ../../components/cta/_cta.scss */
 .cta--secondary {
   border: 2px solid #eb912c;
   padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
-/* line 90, ../../components/cta/_cta.scss */
+/* line 91, ../../components/cta/_cta.scss */
 .cta--secondary:hover, .cta--secondary:focus {
   background: transparent;
 }
-/* line 95, ../../components/cta/_cta.scss */
+/* line 96, ../../components/cta/_cta.scss */
 .cta--secondary:active {
   border-color: #c92434;
   background: transparent;
@@ -1157,18 +1169,18 @@ Markup: cta-tertiary.hbs
 
 Style guide: buttons.cta-tertiary
 */
-/* line 115, ../../components/cta/_cta.scss */
+/* line 116, ../../components/cta/_cta.scss */
 .cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
-/* line 121, ../../components/cta/_cta.scss */
+/* line 122, ../../components/cta/_cta.scss */
 .cta--tertiary:hover, .cta--tertiary:focus {
   background: transparent;
 }
-/* line 126, ../../components/cta/_cta.scss */
+/* line 127, ../../components/cta/_cta.scss */
 .cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
@@ -3030,13 +3042,13 @@ Markup: context-headings.hbs
 
 Weight: 4
 
-.heading--homepage - Homepage Hero - uses <h1>
-.heading--product - Product Landing/Product Detail Hero - uses <h1>
-.heading--download - Download Success - uses <h1>
-.heading--medium - Medium headers - uses <h2>
-.heading--small - Small Headline/Product labels - uses <h3>
-.heading--x-small - XS Headline - uses <h4>
-.heading--label - HP Hero Eyebrow/News title/Demo - uses <h5>
+.heading--homepage - Homepage Hero (70px) - uses <h1>
+.heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
+.heading--download - Download Success (48px) - uses <h1>
+.heading--medium - Medium headers (36px) - uses <h2>
+.heading--small - Small Headline/Product labels (26px) - uses <h3>
+.heading--x-small - XS Headline (23px) - uses <h4>
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
 
 Styleguide typography.context-headings
 */
@@ -3068,17 +3080,20 @@ Styleguide typography.context-headings
 /* line 188, ../../components/typography/_typography.scss */
 .heading--small {
   color: #333;
+  -webkit-font-smoothing: auto;
 }
 
-/* line 194, ../../components/typography/_typography.scss */
+/* line 195, ../../components/typography/_typography.scss */
 .heading--x-small {
   color: #333;
 }
 
-/* line 200, ../../components/typography/_typography.scss */
+/* line 201, ../../components/typography/_typography.scss */
 .heading--label {
-  font-size: 1.57143em;
+  margin: 0;
+  font-size: 1.42857em;
   color: #333;
+  -webkit-font-smoothing: auto;
 }
 
 /*
@@ -3097,26 +3112,26 @@ Weight: 5
 
 Style guide: typography.other
 */
-/* line 225, ../../components/typography/_typography.scss */
+/* line 228, ../../components/typography/_typography.scss */
 .text--large-copy {
   font-size: 1.71429em;
   color: #333;
 }
 
-/* line 231, ../../components/typography/_typography.scss */
+/* line 234, ../../components/typography/_typography.scss */
 .text--sub-nav {
   font-size: 1.57143em;
   color: #000;
 }
 
-/* line 237, ../../components/typography/_typography.scss */
+/* line 240, ../../components/typography/_typography.scss */
 .text--dropdown {
   font-size: 1.14286em;
   color: #787878;
   line-height: 1.875;
 }
 
-/* line 244, ../../components/typography/_typography.scss */
+/* line 247, ../../components/typography/_typography.scss */
 .text--label {
   font-size: 0.78571em;
   color: #333;
@@ -3147,7 +3162,7 @@ Weight: 6
 
 Style guide: typography.formatted
 */
-/* line 276, ../../components/typography/_typography.scss */
+/* line 279, ../../components/typography/_typography.scss */
 strong,
 .text--bold,
 .sidebar--nav li a,
@@ -3155,68 +3170,68 @@ table th {
   font-weight: bold;
 }
 
-/* line 280, ../../components/typography/_typography.scss */
+/* line 283, ../../components/typography/_typography.scss */
 .text--light {
   font-weight: 100;
 }
 
-/* line 283, ../../components/typography/_typography.scss */
+/* line 286, ../../components/typography/_typography.scss */
 em,
 .text--italic {
   font-style: italic;
 }
 
-/* line 287, ../../components/typography/_typography.scss */
+/* line 290, ../../components/typography/_typography.scss */
 .text--caps {
   text-transform: uppercase;
 }
 
-/* line 290, ../../components/typography/_typography.scss */
+/* line 293, ../../components/typography/_typography.scss */
 .text--left {
   text-align: left;
 }
 
-/* line 293, ../../components/typography/_typography.scss */
+/* line 296, ../../components/typography/_typography.scss */
 .text--right {
   text-align: right;
 }
 
-/* line 296, ../../components/typography/_typography.scss */
+/* line 299, ../../components/typography/_typography.scss */
 .text--centered {
   text-align: center;
 }
 
-/* line 299, ../../components/typography/_typography.scss */
+/* line 302, ../../components/typography/_typography.scss */
 .text--justified {
   text-align: justified;
 }
 
-/* line 302, ../../components/typography/_typography.scss */
+/* line 305, ../../components/typography/_typography.scss */
 .text--huge {
   font-size: 2.57143em;
 }
 
-/* line 305, ../../components/typography/_typography.scss */
+/* line 308, ../../components/typography/_typography.scss */
 .text--big {
   font-size: 1.71429em;
 }
 
-/* line 308, ../../components/typography/_typography.scss */
+/* line 311, ../../components/typography/_typography.scss */
 .text--base-size {
   font-size: 14px;
 }
 
-/* line 311, ../../components/typography/_typography.scss */
+/* line 314, ../../components/typography/_typography.scss */
 .text--small {
   font-size: 0.85714em;
 }
 
-/* line 314, ../../components/typography/_typography.scss */
+/* line 317, ../../components/typography/_typography.scss */
 .text--tiny {
   font-size: 0.71429em;
 }
 
-/* line 317, ../../components/typography/_typography.scss */
+/* line 320, ../../components/typography/_typography.scss */
 .text--lineheight-zero {
   line-height: 0;
 }
@@ -3248,72 +3263,72 @@ Weight: 7
 Style guide: typography.colors
 */
 /* Create a class for each text color */
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--negative {
   color: #fff;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--light-body {
   color: #bbb;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--medium-body {
   color: #787878;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--dark-body {
   color: #333;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--link {
   color: #eb912c;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--headlines {
   color: #000;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--nav-items {
   color: #212535;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--data-sources {
   color: #a3b9cb;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--stories {
   color: #847094;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--learning {
   color: #6f99a5;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--highlight {
   color: #53bd92;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--mission-1 {
   color: #316cc8;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--mission-2 {
   color: #7dcdf1;
 }
 
-/* line 351, ../../components/typography/_typography.scss */
+/* line 354, ../../components/typography/_typography.scss */
 .text--mission-3 {
   color: #5facce;
 }
@@ -3327,12 +3342,12 @@ Weight: 12
 
 Style guide: typography.hyperlinks
 */
-/* line 366, ../../components/typography/_typography.scss */
+/* line 369, ../../components/typography/_typography.scss */
 a {
   text-decoration: none;
   color: #eb912c;
 }
-/* line 370, ../../components/typography/_typography.scss */
+/* line 373, ../../components/typography/_typography.scss */
 a:hover {
   text-decoration: underline;
 }

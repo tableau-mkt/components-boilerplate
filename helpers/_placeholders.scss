@@ -15,8 +15,18 @@
   margin-left: 0;
   padding-left: 0;
   list-style: none;
+  
   li {
     list-style: none;
+  }
+}
+
+// Extends %plain-list and makes list items inline-block.
+%inline-list {
+  @extend %plain-list;
+
+  li {
+    display: inline-block;
   }
 }
 

@@ -49,9 +49,14 @@ most common proportions for video players.
   padding: 0;
 }
 
-// Plain list styles
+// Remove default list style and spacing
 .plain-list {
   @extend %plain-list;
+}
+
+// Same as .plain-list, but also makes list items inline-block.
+.inline-list {
+  @extend %inline-list;
 }
 
 // Clear floating of child elements

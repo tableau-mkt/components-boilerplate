@@ -145,13 +145,13 @@ Markup: context-headings.hbs
 
 Weight: 4
 
-.heading--homepage - Homepage Hero - uses <h1>
-.heading--product - Product Landing/Product Detail Hero - uses <h1>
-.heading--download - Download Success - uses <h1>
-.heading--medium - Medium headers - uses <h2>
-.heading--small - Small Headline/Product labels - uses <h3>
-.heading--x-small - XS Headline - uses <h4>
-.heading--label - HP Hero Eyebrow/News title/Demo - uses <h5>
+.heading--homepage - Homepage Hero (70px) - uses <h1>
+.heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
+.heading--download - Download Success (48px) - uses <h1>
+.heading--medium - Medium headers (36px) - uses <h2>
+.heading--small - Small Headline/Product labels (26px) - uses <h3>
+.heading--x-small - XS Headline (23px) - uses <h4>
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
 
 Styleguide typography.context-headings
 */
@@ -189,6 +189,7 @@ Styleguide typography.context-headings
   @extend h3;
   @extend .text--benton-light;
   color: $text-dark-body;
+  -webkit-font-smoothing: auto;
 }
 
 .heading--x-small {
@@ -200,8 +201,10 @@ Styleguide typography.context-headings
 .heading--label {
   @extend h5;
   @extend .text--benton-light;
-  font-size: em(22px);
+  margin: 0;
+  font-size: em(20px);
   color: $text-dark-body;
+  -webkit-font-smoothing: auto;
 }
 
 
