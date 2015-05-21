@@ -1,0 +1,14 @@
+{
+  "links": [
+    {
+      "url": "#",
+      "text": "Download Trial",
+      "type": "secondary"
+    },
+    {
+      "url": "#",
+      "text": "More Customer Stories",
+      "type": "secondary"
+    }
+  ]
+}

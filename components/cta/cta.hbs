@@ -1,5 +1,5 @@
-<p>
-  <a class="cta cta--play {{modifier_class}}" href="#">See it in Action</a>
-  <br>
-  <a class="cta cta--download {{modifier_class}}" href="#">Get Free Trial</a>
-</p>
+{{#each links }}
+  <a class="cta {{#if type }}cta--{{type}}{{/if}} {{#if icon }}cta--{{icon}}{{/if}} {{modifier_class}}" href="{{ url }}">
+    {{ text }}
+  </a>
+{{/each}}

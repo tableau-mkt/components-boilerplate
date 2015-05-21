@@ -15,7 +15,7 @@ module.exports = (grunt) ->
       kss:
         files: [
           'dist/css/{,**/}*.css'
-          'components/{,**/}*.{hbs,html}'
+          'components/{,**/}*.{hbs,html,json}'
         ]
         tasks: ['shell:kss']
 

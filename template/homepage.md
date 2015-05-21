@@ -15,9 +15,8 @@ left to browse through available components.
 
 ### Class Name Structure
 ```
-.the-component                        # Component
-.the-component--modifier              # Modifier
-.the-component__an-element            # Sub-element
-.the-component--modifier__an-element  # Modifier with sub-element
-.the-component:hover                  # State
+.the-component             # Component
+.the-component--modifier   # Modifier
+.the-component__an-element # Sub-element
+.the-component:hover       # State
 ```
