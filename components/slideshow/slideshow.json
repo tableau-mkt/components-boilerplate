@@ -1,0 +1,31 @@
+{
+  "slides": [
+    {
+      "id": "slide-0",
+      "hover_title": "Desktop, fast analytics for everyone",
+      "hover_class": "highlight-fill-desktop-blue",
+      "img": {
+        "src": "../../images/home/carousel-0.9-new.jpg"
+      },
+      "text": {
+        "sub_title": {
+          "text": "Tableau Desktop",
+          "level": "4"
+        },
+        "headline": {
+          "test": [
+            {
+              "text": "Fast analytics for everyone.",
+              "level": "1"
+            }
+          ]
+        },
+        "cta": {
+          "url": "/products/desktop.html",
+          "text": "See it in action",
+          "icon": "play"
+        }
+      }
+    }  
+  ]
+}

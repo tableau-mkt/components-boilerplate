@@ -1,0 +1,23 @@
+<div class="slideshow__slide" data-title="{{hover_title}}" data-title-class="{{hover_class}}">
+  {{# img }}
+    <div class="slideshow__image">
+      <img src="{{ src }}"/>
+    </div>
+  {{/ img }}
+
+  {{# text }}
+    <div class="slideshow__copy">
+      {{# sub_title }}
+        {{> headings }}
+      {{/ sub_title }}
+      
+      {{# headline }}
+        {{> headings }}
+      {{/ headline }}
+      
+      {{# cta }}
+        {{> cta }}
+      {{/ cta }}
+    </div>
+  {{/ text }}
+</div>

@@ -525,6 +525,24 @@
   Style guide: navigation.sidebar
   */
   /*
+  Slideshow
+  
+  Todo
+  
+  Markup: slideshow.hbs
+  
+  Style guide: interactive.slideshow
+  */
+  /*
+  Slide
+  
+  Todo
+  
+  Markup: slide.hbs
+  
+  Style guide: interactive.slide
+  */
+  /*
   Vertical Spacer
   
   Used to create vertical spacing between sections of content without just a stack
@@ -885,7 +903,7 @@
   clear: both;
 }
 /* line 72, ../../helpers/_placeholders.scss */
-.kss-example-preview .accordion--item, .kss-example-preview button.mfp-arrow, .kss-example-preview .slick--slider .slick-dots li button:before {
+.kss-example-preview .accordion--item, .kss-example-preview button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   -moz-transition: background 0.25s, opacity 0.25s;
   -o-transition: background 0.25s, opacity 0.25s;
@@ -2665,51 +2683,6 @@
     margin: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
-}
-/* line 2, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slick-dots {
-  bottom: -60px;
-}
-/* line 6, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slick-dots li {
-  margin: 0 3px;
-}
-/* line 9, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slick-dots li button:before {
-  opacity: 0.4;
-  color: #fff;
-  font-size: 12px;
-}
-/* line 16, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slick-dots li.slick-active button:before {
-  opacity: 0.9;
-}
-/* line 20, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slick-dots li button:hover:before,
-.kss-example-preview .slick--slider .slick-dots li button:focus:before {
-  opacity: 1;
-}
-/* line 26, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slick--slider .slideshow--copy {
-  padding: 2em 1em 1em 0;
-}
-@media (max-width: 739px) {
-  /* line 26, ../../components/slideshow/_slideshow.scss */
-  .kss-example-preview .slick--slider .slideshow--copy {
-    padding: 1em;
-  }
-}
-/* line 35, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slideshow--dots--inset .slick-slider {
-  margin-bottom: 0;
-}
-/* line 38, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slideshow--dots--inset .slick-slider .slick-dots {
-  bottom: 0px;
-}
-/* line 42, ../../components/slideshow/_slideshow.scss */
-.kss-example-preview .slideshow--dots--inset .slick-slider .slick-dots li button:before {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 /* line 29, ../../components/spacer/_spacer.scss */
 .kss-example-preview .spacer {
