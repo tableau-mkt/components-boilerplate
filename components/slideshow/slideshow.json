@@ -2,30 +2,70 @@
   "slides": [
     {
       "id": "slide-0",
-      "hover_title": "Desktop, fast analytics for everyone",
-      "hover_class": "highlight-fill-desktop-blue",
+      "hover_title": "Hover title for next button",
+      "hover_class": "class-for-next-button",
       "img": {
-        "src": "../../images/home/carousel-0.9-new.jpg"
+        "src": "http://placecage.com/300/200"
       },
       "text": {
         "sub_title": {
-          "text": "Tableau Desktop",
+          "text": "Sub Title",
           "level": "4"
         },
         "headline": {
-          "test": [
-            {
-              "text": "Fast analytics for everyone.",
-              "level": "1"
-            }
-          ]
+          "text": "Big Headline String",
+          "level": "1"
         },
         "cta": {
-          "url": "/products/desktop.html",
-          "text": "See it in action",
+          "url": "http://www/tableau.com",
+          "text": "Call to Action",
           "icon": "play"
         }
       }
-    }  
+    },{
+      "id": "slide-1",
+      "hover_title": "Hover title for next button",
+      "hover_class": "class-for-next-button",
+      "img": {
+        "src": "http://placecage.com/300/200"
+      },
+      "text": {
+        "sub_title": {
+          "text": "Sub Title",
+          "level": "4"
+        },
+        "headline": {
+          "text": "Big Headline String",
+          "level": "1"
+        },
+        "cta": {
+          "url": "http://www/tableau.com",
+          "text": "Call to Action",
+          "icon": "play"
+        }
+      }
+    },{
+      "id": "slide-2",
+      "hover_title": "Hover title for next button",
+      "hover_class": "class-for-next-button",
+      "img": {
+        "src": "http://placecage.com/300/200"
+      },
+      "text": {
+        "sub_title": {
+          "text": "Sub Title",
+          "level": "4"
+        },
+        "headline": {
+          "text": "Big Headline String",
+          "level": "1"
+        },
+        "cta": {
+          "url": "http://www/tableau.com",
+          "text": "Call to Action",
+          "icon": "play"
+        }
+      }
+    },  
   ]
 }

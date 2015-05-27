@@ -1,5 +1,28 @@
 <div class="hero-carousel  {{ slideshow_id }}">
-  {{#each slides}}
-    {{> slide }}
+  {{#each this }}
+    <div class="slideshow__slide" data-title="{{hover_title}}" data-title-class="{{hover_class}}">
+      {{# img }}
+        <div class="slideshow__image">
+          <img src="{{ src }}"/>
+        </div>
+      {{/ img }}
+
+      {{# text }}
+        <div class="slideshow__copy">
+          {{# sub_title }}
+            {{> heading }}
+          {{/ sub_title }}
+          
+          {{# headline }}
+            {{> heading }}
+          {{/ headline }}
+          
+          {{# cta }}
+            {{> cta }}
+          {{/ cta }}
+        </div>
+      {{/ text }}
+    </div>
+    
   {{/each}}
 </div>

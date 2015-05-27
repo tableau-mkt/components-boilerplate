@@ -1,0 +1,5 @@
+{{#each links }}
+  <a class="cta {{#if type }}cta--{{type}}{{/if}} {{#if icon }}cta--{{icon}}{{/if}} {{../modifier_class}}" href="{{ url }}">
+    {{ text }}
+  </a>
+{{/each}}

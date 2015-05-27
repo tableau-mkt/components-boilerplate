@@ -5,10 +5,10 @@
 @import "toolkit";
 
 // Import helpers
-@import "../helpers/variables/*";
-@import "../helpers/functions/*";
-@import "../helpers/mixins/*";
-@import "../helpers/*";
+@import "../components/_helpers/variables/*";
+@import "../components/_helpers/functions/*";
+@import "../components/_helpers/mixins/*";
+@import "../components/_helpers/*";
 
 // Import components
 @import "../components/**/*";
