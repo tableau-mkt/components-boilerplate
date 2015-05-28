@@ -345,6 +345,15 @@
   Style guide: boxes 
   */
   /*
+  Images
+  
+  Image assets displayed as thumbnails or within the content of a page.
+  
+  Weight: 35
+  
+  Style guide: images
+  */
+  /*
   Content Lists
   
   Lists of content that generally have a title, thumbnail and/or a description and
@@ -352,7 +361,7 @@
   
   Weight: 40
   
-  Style guide: 8
+  Style guide: lists
   */
   /*
   Form Styles
@@ -620,6 +629,49 @@
   
   Style guide: layout.grids
   */
+  /* 
+  Basic Teaser List
+  
+  A basic list of teasers, used for things like a list of blog posts.
+  
+  Weight: 0
+  
+  Markup: teaser-list.hbs
+  
+  Style guide: lists.teaser
+  */
+  /* 
+  Full-width Teaser List
+  
+  A full-width list of teasers, used for things like a list of blog posts.
+  
+  Weight: 5
+  
+  Markup:
+  <div class="teaser-list teaser-list--full-width"> 
+    <div class="teaser-list__thumbnail grid-3"> 
+      <a href="#">
+        <img src="http://placecage.com/223/223">
+      </a>
+    </div> 
+    <div class="teaser-list__info grid-9 grid-last">
+      <h2 class="teaser-list__title">
+        <a href="#">Blog Post or something</a>
+      </h2>
+      <div class="teaser-list__secondary-label">
+        <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
+      </div> 
+      <p class="teaser-list__description">
+        Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
+      </p>
+      <div class="class="teaser-list__read-more">
+        <a href="/blog/another-post">Read More</a> 
+      </div>
+    </div>
+  </div>
+  
+  Style guide: lists.full-width
+  */
   /*
   Main Menu
   
@@ -788,61 +840,16 @@
   
   Style guide: 4.1
   */
-  /* 
-  Basic Teaser List
+  /*
+  Thumbnail Image
   
-  A basic list of teasers, used for things like a list of blog posts.
+  A small image that shows a preview of the content that it is linking to.
   
-  Markup:
-  <div class="teaser-list grid-4 {$modifiers}"> 
-    <a href="#">
-      <div class="teaser-list__thumbnail"> 
-        <img src="http://placecage.com/300/200">
-      </div> 
-      <div class="teaser-list__info">
-        <h2 class="teaser-list__title">
-          Listed Item Title
-        </h2>
-        <p class="teaser-list__description">
-          Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? 
-        </p>
-      </div>
-    </a>
-  </div>
+  Markup: thumbnail.hbs
   
-  .teaser-list--colored-title - Variation with a colored box around the title
+  .thumbnail--play - A play button superimposed over the middle of the thumbnail
   
-  Style guide: 8.1
-  */
-  /* 
-  Full-width Teaser List
-  
-  A full-width list of teasers, used for things like a list of blog posts.
-  
-  Markup:
-  <div class="teaser-list teaser-list--full-width"> 
-    <div class="teaser-list__thumbnail grid-3"> 
-      <a href="#">
-        <img src="http://placecage.com/223/223">
-      </a>
-    </div> 
-    <div class="teaser-list__info grid-9 grid-last">
-      <h2 class="teaser-list__title">
-        <a href="#">Blog Post or something</a>
-      </h2>
-      <div class="teaser-list__secondary-label">
-        <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
-      </div> 
-      <p class="teaser-list__description">
-        Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
-      </p>
-      <div class="class="teaser-list__read-more">
-        <a href="/blog/another-post">Read More</a> 
-      </div>
-    </div>
-  </div>
-  
-  Style guide: 8.2
+  Style guide: images.thumbnail
   */
   /*
   Font Families
@@ -2443,6 +2450,43 @@
     height: 250px;
   }
 }
+/* line 13, ../../../../.rvm/gems/ruby-1.9.3-p547/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
+.kss-example-preview .teaser-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 15, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+/* line 20, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list > a:hover {
+  color: #eb912c;
+  text-decoration: none;
+}
+/* line 25, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list > a:hover img {
+  opacity: 0.85;
+}
+/* line 30, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list .teaser-list__title {
+  margin: 0.5em 0;
+}
+/* line 69, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list.teaser-list--full-width {
+  padding: 2em 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+/* line 73, ../../components/lists/_teaser_list.scss */
+.kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
+  margin: 0 0 0.5em;
+}
 /* line 19, ../../components/menu/_menu.scss */
 .kss-example-preview .l-menu {
   width: 100%;
@@ -3022,95 +3066,24 @@
 .kss-example-preview table tr p:last-child {
   margin: 0;
 }
-/* line 13, ../../../../.rvm/gems/ruby-1.9.3-p547/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
-.kss-example-preview .teaser-list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 30, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list img {
-  -webkit-transition: opacity 0.25s;
-  -moz-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s;
-}
-/* line 34, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list > a {
-  display: block;
-  color: #333;
-  -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
-  -o-transition: color 0.25s;
-  transition: color 0.25s;
-}
-/* line 39, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list > a:hover {
-  color: #eb912c;
-  text-decoration: none;
-}
-/* line 44, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list > a:hover img {
-  opacity: 0.85;
-}
-/* line 49, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list .teaser-list__thumbnail {
-  display: inline-block;
+/* line 13, ../../components/thumbnail/_thumbnail.scss */
+.kss-example-preview .thumbnail {
+  overflow: hidden;
   line-height: 0;
-  background: #000;
 }
-/* line 54, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list .teaser-list__thumbnail a:hover img {
-  opacity: 0.9;
+/* line 17, ../../components/thumbnail/_thumbnail.scss */
+.kss-example-preview .thumbnail img {
+  width: 100%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
-/* line 59, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list .teaser-list__title {
-  margin: 0.5em 0;
-}
-/* line 63, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list .teaser-list__secondary-label {
-  margin: 0.5em 0;
-  color: #999;
-}
-/* line 68, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list.teaser-list--colored-title {
-  max-width: 295px;
-}
-/* line 71, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list.teaser-list--colored-title .teaser-list__title {
-  margin: -10px 0 0;
-  padding: .75em;
-  background: #1b1b1b;
-  text-align: center;
-  color: #fff;
-  font-weight: 200;
-  -webkit-transition: background 0.25s;
-  -moz-transition: background 0.25s;
-  -o-transition: background 0.25s;
-  transition: background 0.25s;
-}
-/* line 81, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list.teaser-list--colored-title:hover .teaser-list__title {
-  background: #333;
-}
-@media (max-width: 739px) {
-  /* line 68, ../../components/teaser_list/_teaser_list.scss */
-  .kss-example-preview .teaser-list.teaser-list--colored-title {
-    margin: 0 auto;
-  }
-}
-/* line 92, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list__row {
-  margin: 0 0 2em;
-}
-/* line 127, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list.teaser-list--full-width {
-  padding: 2em 0;
-  border-bottom: 1px solid #f2f2f2;
-}
-/* line 131, ../../components/teaser_list/_teaser_list.scss */
-.kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
-  margin: 0 0 0.5em;
+/* line 22, ../../components/thumbnail/_thumbnail.scss */
+.kss-example-preview .thumbnail img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 /* line 27, ../../components/typography/_typography.scss */
 .kss-example-preview .text--benton-thin, .kss-example-preview h1, .kss-example-preview .heading--homepage, .kss-example-preview .heading--product, .kss-example-preview .heading--download, .kss-example-preview .heading--h1,

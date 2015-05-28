@@ -1,0 +1,25 @@
+/*
+Thumbnail Image
+
+A small image that shows a preview of the content that it is linking to.
+
+Markup: thumbnail.hbs
+
+.thumbnail--play - A play button superimposed over the middle of the thumbnail
+
+Style guide: images.thumbnail
+*/
+
+.thumbnail {
+  overflow: hidden;
+  line-height: 0;
+  
+  img {
+    width: 100%;
+    @include transition(all 1s ease);
+  }
+
+  img:hover {
+    @include transform(scale(1.1));
+  }
+}

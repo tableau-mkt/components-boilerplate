@@ -71,6 +71,18 @@
           <a href="section-lists.html">
             Content Lists
           </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-lists.html#kssref-lists-teaser">
+                  Basic Teaser List
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-lists.html#kssref-lists-full-width">
+                  Full-width Teaser List
+                </a>
+              </li>
+          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-forms.html">
@@ -102,11 +114,175 @@
 
     <article role="main" class="kss-content kss-right">
 
-          <section id="kssref-8-2" class="kss-section kss-section--depth-2">
+          <div id="kssref-lists" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-lists"> -->
+              Content Lists
+            <!-- </a> -->
+          </h2>
+
+
+          <div class="kss-description">
+            <p>Lists of content that generally have a title, thumbnail and/or a description and
+link through to the full version of the content.</p>
+
+          </div>
+        </div>
+
+
+          </div>
+          <section id="kssref-lists-teaser" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h3 class="kss-title kss-title--level-2">
-            <!-- <a class="kss-title__permalink" href="#kssref-8-2"> -->
+            <!-- <a class="kss-title__permalink" href="#kssref-lists-teaser"> -->
+              Basic Teaser List
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>A basic list of teasers, used for things like a list of blog posts.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <div class="teaser-list [modifier class]">
+  <div class="teaser-list__item grid--4">
+      <a href="">
+        <div class="thumbnail">
+          <img src="http://placecage.com/250/250" class="" alt="Nic Cage" />
+        </div>
+      </a>
+    <div class="teaser-list__info">
+      <h3 class="teaser-list__title">
+        This is a Teaser list item
+      </h3>
+      <p class="teaser-list__description">
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      </p>
+        <a class="link--arrow" href="http://www.tableau.com">
+          Learn More
+        </a>
+    </div>
+  </div>
+  <div class="teaser-list__item grid--4">
+      <a href="">
+        <div class="thumbnail">
+          <img src="http://placecage.com/251/251" class="" alt="Nic Cage" />
+        </div>
+      </a>
+    <div class="teaser-list__info">
+      <h3 class="teaser-list__title">
+        Another List Item
+      </h3>
+      <p class="teaser-list__description">
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      </p>
+        <a class="link--arrow" href="http://www.tableau.com">
+          Learn More
+        </a>
+    </div>
+  </div>
+  <div class="teaser-list__item grid--4">
+      <a href="">
+        <div class="thumbnail">
+          <img src="http://placecage.com/252/252" class="" alt="Nic Cage" />
+        </div>
+      </a>
+    <div class="teaser-list__info">
+      <h3 class="teaser-list__title">
+        Third Item Right Here
+      </h3>
+      <p class="teaser-list__description">
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      </p>
+        <a class="link--arrow" href="http://www.tableau.com">
+          Learn More
+        </a>
+    </div>
+  </div>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;teaser-list [modifier class]&quot;&gt;
+  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+          &lt;img src=&quot;http://placecage.com/250/250&quot; class=&quot;&quot; alt=&quot;Nic Cage&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;div class=&quot;teaser-list__info&quot;&gt;
+      &lt;h3 class=&quot;teaser-list__title&quot;&gt;
+        This is a Teaser list item
+      &lt;/h3&gt;
+      &lt;p class=&quot;teaser-list__description&quot;&gt;
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      &lt;/p&gt;
+        &lt;a class=&quot;link--arrow&quot; href=&quot;http://www.tableau.com&quot;&gt;
+          Learn More
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+          &lt;img src=&quot;http://placecage.com/251/251&quot; class=&quot;&quot; alt=&quot;Nic Cage&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;div class=&quot;teaser-list__info&quot;&gt;
+      &lt;h3 class=&quot;teaser-list__title&quot;&gt;
+        Another List Item
+      &lt;/h3&gt;
+      &lt;p class=&quot;teaser-list__description&quot;&gt;
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      &lt;/p&gt;
+        &lt;a class=&quot;link--arrow&quot; href=&quot;http://www.tableau.com&quot;&gt;
+          Learn More
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+          &lt;img src=&quot;http://placecage.com/252/252&quot; class=&quot;&quot; alt=&quot;Nic Cage&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;div class=&quot;teaser-list__info&quot;&gt;
+      &lt;h3 class=&quot;teaser-list__title&quot;&gt;
+        Third Item Right Here
+      &lt;/h3&gt;
+      &lt;p class=&quot;teaser-list__description&quot;&gt;
+        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
+      &lt;/p&gt;
+        &lt;a class=&quot;link--arrow&quot; href=&quot;http://www.tableau.com&quot;&gt;
+          Learn More
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          </section>
+          <section id="kssref-lists-full-width" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-lists-full-width"> -->
               Full-width Teaser List
             <!-- </a> -->
           </h3>

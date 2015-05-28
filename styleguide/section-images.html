@@ -66,6 +66,13 @@
           <a href="section-images.html">
             Images
           </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-images.html#kssref-images-thumbnail">
+                  Thumbnail Image
+                </a>
+              </li>
+          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-lists.html">
@@ -102,22 +109,36 @@
 
     <article role="main" class="kss-content kss-right">
 
-          <section id="kssref-3-6" class="kss-section kss-section--depth-2">
+          <div id="kssref-images" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-images"> -->
+              Images
+            <!-- </a> -->
+          </h2>
+
+
+          <div class="kss-description">
+            <p>Image assets displayed as thumbnails or within the content of a page.</p>
+
+          </div>
+        </div>
+
+
+          </div>
+          <section id="kssref-images-thumbnail" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h3 class="kss-title kss-title--level-2">
-            <!-- <a class="kss-title__permalink" href="#kssref-3-6"> -->
-              Vertical Spacer
+            <!-- <a class="kss-title__permalink" href="#kssref-images-thumbnail"> -->
+              Thumbnail Image
             <!-- </a> -->
           </h3>
 
 
           <div class="kss-description">
-            <p>Used to create vertical spacing between sections of content without just a stack
-of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
-(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier
-classes to add 4em or 6em of spacingas well. These examples put a spacer between
-two divs to dempnstrate the amount of space that will be added with each modifier.</p>
+            <p>A small image that shows a preview of the content that it is linking to.</p>
 
           </div>
         </div>
@@ -132,92 +153,28 @@ two divs to dempnstrate the amount of space that will be added with each modifie
               </div>
               <div class="kss-example-preview">
                 <div class="kss-example-preview-wrapper">
-                  <div class="grid-6 box__padded box--green">
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  </p>
+                  <div class="thumbnail">
+  <img src="http://placecage.com/300/300" class="[modifier class]" alt="Nic Cage" />
 </div>
-<hr class="spacer {$modifiers}">
-<div class="grid-6 box__padded box--white">
-  <p>
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
+
                 </div>
               </div>
             </div>
               <div class="kss-example">
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>&lt;strong&gt;[Default]&lt;/strong&gt; Spacer with 2em of space.</p>
+                    <p>A play button superimposed over the middle of the thumbnail</p>
                   </div>
                   <div class="kss-example-name">
-                    <p><code>.spacer--two</code></p>
+                    <p><code>.thumbnail--play</code></p>
                   </div>
                 </div>
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <div class="grid-6 box__padded box--green">
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  </p>
+                    <div class="thumbnail">
+  <img src="http://placecage.com/300/300" class="thumbnail--play" alt="Nic Cage" />
 </div>
-<hr class="spacer {$modifiers}">
-<div class="grid-6 box__padded box--white">
-  <p>
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                  </div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Spacer with 4em of space.</p>
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.spacer--four</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <div class="grid-6 box__padded box--green">
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  </p>
-</div>
-<hr class="spacer {$modifiers}">
-<div class="grid-6 box__padded box--white">
-  <p>
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
-                  </div>
-                </div>
-              </div>
-              <div class="kss-example">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <p>Spacer with 6em of space.</p>
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>.spacer--six</code></p>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <div class="grid-6 box__padded box--green">
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  </p>
-</div>
-<hr class="spacer {$modifiers}">
-<div class="grid-6 box__padded box--white">
-  <p>
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
+
                   </div>
                 </div>
               </div>
@@ -225,17 +182,10 @@ two divs to dempnstrate the amount of space that will be added with each modifie
 
           <h4>Markup:</h4>
           <div class="kss-markup">
-            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;grid-6 box__padded box--green&quot;&gt;
-  &lt;p&gt;
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  &lt;/p&gt;
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;img src=&quot;http://placecage.com/300/300&quot; class=&quot;[modifier class]&quot; alt=&quot;Nic Cage&quot; /&gt;
 &lt;/div&gt;
-&lt;hr class=&quot;spacer {$modifiers}&quot;&gt;
-&lt;div class=&quot;grid-6 box__padded box--white&quot;&gt;
-  &lt;p&gt;
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  &lt;/p&gt;
-&lt;/div&gt;</code></pre>
+</code></pre>
           </div>
 
           </section>

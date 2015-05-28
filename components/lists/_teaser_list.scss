@@ -3,33 +3,14 @@ Basic Teaser List
 
 A basic list of teasers, used for things like a list of blog posts.
 
-Markup:
-<div class="teaser-list grid-4 {$modifiers}"> 
-  <a href="#">
-    <div class="teaser-list__thumbnail"> 
-      <img src="http://placecage.com/300/200">
-    </div> 
-    <div class="teaser-list__info">
-      <h2 class="teaser-list__title">
-        Listed Item Title
-      </h2>
-      <p class="teaser-list__description">
-        Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? 
-      </p>
-    </div>
-  </a>
-</div>
+Weight: 0
 
-.teaser-list--colored-title - Variation with a colored box around the title
+Markup: teaser-list.hbs
 
-Style guide: 8.1
+Style guide: lists.teaser
 */
 .teaser-list {
   @include clearfix;
-
-  img {
-    @include transition(opacity .25s);
-  }
 
   & > a {
     display: block;
@@ -45,58 +26,19 @@ Style guide: 8.1
       opacity: 0.85;
     }
   }
-
-  .teaser-list__thumbnail {
-    display: inline-block;
-    line-height: 0;
-    background: #000;
-    
-    & a:hover img {
-      opacity: 0.9;
-    }
-  }
   
   .teaser-list__title {
     margin: 0.5em 0;
   }
-
-  .teaser-list__secondary-label {
-    margin: 0.5em 0;
-    color: $gray;
-  }
-
-  &.teaser-list--colored-title {
-      max-width: 295px;
-
-    .teaser-list__title {
-      margin: -10px 0 0;
-      padding: .75em;
-      background: $bg-dark-gray-3;
-      text-align: center;
-      color: $text-negative;
-      font-weight: 200;
-      @include transition(background .25s);
-    }
-
-    &:hover .teaser-list__title {
-      background: $bg-dark-gray-2;
-    }
-
-    @include breakpoint($mobile) {
-      margin: 0 auto;
-    }
-  }
-
 }
 
-.teaser-list__row {
-  margin: 0 0 2em;
-}
 
 /* 
 Full-width Teaser List
 
 A full-width list of teasers, used for things like a list of blog posts.
+
+Weight: 5
 
 Markup:
 <div class="teaser-list teaser-list--full-width"> 
@@ -121,7 +63,7 @@ Markup:
   </div>
 </div>
 
-Style guide: 8.2
+Style guide: lists.full-width
 */
 
 .teaser-list.teaser-list--full-width {
