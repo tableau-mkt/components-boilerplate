@@ -1,0 +1,25 @@
+{
+  "name": "Tableau Corp Components",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tableau-mkt/components",
+  "authors": [
+    "marketing-webteam@tableau.com"
+  ],
+  "description": "Tableau Web Components",
+  "license": "All Rights Reserved.",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1"
+  },
+  "devDependencies": {
+    "sassy-maps": "~0.4.0"
+  }
+}
