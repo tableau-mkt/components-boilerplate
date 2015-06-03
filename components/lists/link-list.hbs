@@ -1,0 +1,7 @@
+<ul class="link-list {{ modifier_class }}">
+  {{#each items}}
+    <li {{#if class}}class="{{ class }}"{{/if}}>
+      <a href="{{ url }}" {{#if target}}target="{{ target }}"{{/if}} {{#if link_class}}class="{{ link_class }}"{{/if}}>{{ text}}</a>
+    </li>
+  {{/each}}
+</ul>

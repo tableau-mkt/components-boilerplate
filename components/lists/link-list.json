@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "url": "http://www.tableau.com",
+      "text": "See it in Action",
+      "class": "active",
+      "link_class": false,
+      "target": false
+    },
+    {
+      "url": "http://www.google.com",
+      "text": "Get Free Trial",
+      "class": "download",
+      "link_class": "cta",
+      "target": "_blank"
+    }
+  ]
+}

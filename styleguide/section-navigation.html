@@ -88,6 +88,11 @@
           </a>
           <ul class="kss-nav__menu-child">
               <li class="kss-nav__menu-item">
+                <a href="section-navigation.html#kssref-navigation-global">
+                  Global Navigation
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
                 <a href="section-navigation.html#kssref-navigation-main">
                   Main Menu
                 </a>
@@ -132,6 +137,272 @@
 
 
           </div>
+          <section id="kssref-navigation-global" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-navigation-global"> -->
+              Global Navigation
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>The global navigation bar that sits at the top of each page. Contains primary,
+secondary, and sub navigation as well as the global search bar.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <header>
+  <div class="global-nav content-container content-container--wide">
+    <div class="relative clearfix">
+        <div class="global-nav__logo">
+          <a href="#">
+            <img src="/styleguide/public/images/logo.png" alt="Tableau Software" />
+          </a>
+        </div>
+
+      <nav class="global-nav__primary-menu">
+          <ul class="link-list link-list--inline">
+              <li class="products">
+                <a href=""  >Products</a>
+              </li>
+              <li >
+                <a href=""  >Stories</a>
+              </li>
+              <li >
+                <a href=""  >Learning</a>
+              </li>
+              <li >
+                <a href=""  >Comunity</a>
+              </li>
+              <li >
+                <a href=""  >Support</a>
+              </li>
+              <li >
+                <a href=""  >About</a>
+              </li>
+          </ul>
+      </nav>
+
+      <nav class="global-nav__secondary-menu">
+          <ul class="link-list link-list--inline">
+              <li >
+                <a href=""  class="link-normal">Buy</a>
+              </li>
+              <li >
+                <a href=""  class="link-normal">Sign In</a>
+              </li>
+              <li >
+                <a href=""  class="cta">Free Trial</a>
+              </li>
+          </ul>
+      </nav>
+
+      <div class="global-nav__search">
+        <input type="search" placeholder="Search" name="q" autocomplete="off">
+        <a href="#" class="global-nav__search__close"></a>
+        <div id="predictive-container">
+          <ul id="predictive-terms"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-nav__drawer box--light-gray-1">
+    <div class="content-container content-container--wide">
+      <div class="sub-navigation grid--8 box__padded box__padded--two">
+        <div class="sub-nav__item grid--4">
+          <h3>
+            <a href="/products/desktop.html">Tableau Desktop</a>
+          </h3>
+          <p>Business analytics anyone can use.</p>
+          <p>
+            <a class="link--arrow" href="/products/desktop.html">Learn More</a>
+          </p>
+        </div>
+        <div class="sub-nav__item grid--4">
+          <h3>
+            <a href="#">Tableau Server</a>
+          </h3>
+          <p>Rapid-fire business intelligence, today.</p>
+          <p>
+            <a class="link--arrow" href="">Learn More</a>
+          </p>
+        </div>
+        <div class="sub-nav__item grid--4 grid--last">
+          <h3>
+            <a href="#">Tableau Online</a>
+          </h3>
+          <p>The power of Tableau, in the cloud.</p>
+          <p>
+            <a class="link--arrow" href="">Learn More</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="sub-navigation-more grid--4 grid--last box__padded box__padded--two">
+        <h3>More Tableau Products</h3>
+        <ul class="plain-list">
+          <li>
+            <a href="#">
+              <h6>Tableau Mobile</h6>
+            </a>
+            <p>Tableau straight from your phone.</p>
+          </li>
+          <li>
+            <a href="#">
+              <h6>Tableau Public</h6>
+            </a>
+            <p>Publish interactive data online.</p>
+          </li>
+          <li>
+            <a href="#">
+              <h6>Tableau Reader</h6>
+            </a>
+            <p>Read saved files from Tableau Desktop.</p>
+          </li>
+        </ul>
+        <div class="sub-navigation-more-bg"></div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Markup:</h4>
+          <div class="kss-markup">
+            <pre class="prettyprint lang-html"><code data-language="html">&lt;header&gt;
+  &lt;div class=&quot;global-nav content-container content-container--wide&quot;&gt;
+    &lt;div class=&quot;relative clearfix&quot;&gt;
+        &lt;div class=&quot;global-nav__logo&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+            &lt;img src=&quot;/styleguide/public/images/logo.png&quot; alt=&quot;Tableau Software&quot; /&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+      &lt;nav class=&quot;global-nav__primary-menu&quot;&gt;
+          &lt;ul class=&quot;link-list link-list--inline&quot;&gt;
+              &lt;li class=&quot;products&quot;&gt;
+                &lt;a href=&quot;&quot;  &gt;Products&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  &gt;Stories&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  &gt;Learning&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  &gt;Comunity&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  &gt;Support&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  &gt;About&lt;/a&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;nav class=&quot;global-nav__secondary-menu&quot;&gt;
+          &lt;ul class=&quot;link-list link-list--inline&quot;&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  class=&quot;link-normal&quot;&gt;Buy&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  class=&quot;link-normal&quot;&gt;Sign In&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li &gt;
+                &lt;a href=&quot;&quot;  class=&quot;cta&quot;&gt;Free Trial&lt;/a&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;div class=&quot;global-nav__search&quot;&gt;
+        &lt;input type=&quot;search&quot; placeholder=&quot;Search&quot; name=&quot;q&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;global-nav__search__close&quot;&gt;&lt;/a&gt;
+        &lt;div id=&quot;predictive-container&quot;&gt;
+          &lt;ul id=&quot;predictive-terms&quot;&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;global-nav__drawer box--light-gray-1&quot;&gt;
+    &lt;div class=&quot;content-container content-container--wide&quot;&gt;
+      &lt;div class=&quot;sub-navigation grid--8 box__padded box__padded--two&quot;&gt;
+        &lt;div class=&quot;sub-nav__item grid--4&quot;&gt;
+          &lt;h3&gt;
+            &lt;a href=&quot;/products/desktop.html&quot;&gt;Tableau Desktop&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;Business analytics anyone can use.&lt;/p&gt;
+          &lt;p&gt;
+            &lt;a class=&quot;link--arrow&quot; href=&quot;/products/desktop.html&quot;&gt;Learn More&lt;/a&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sub-nav__item grid--4&quot;&gt;
+          &lt;h3&gt;
+            &lt;a href=&quot;#&quot;&gt;Tableau Server&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;Rapid-fire business intelligence, today.&lt;/p&gt;
+          &lt;p&gt;
+            &lt;a class=&quot;link--arrow&quot; href=&quot;&quot;&gt;Learn More&lt;/a&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;sub-nav__item grid--4 grid--last&quot;&gt;
+          &lt;h3&gt;
+            &lt;a href=&quot;#&quot;&gt;Tableau Online&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;The power of Tableau, in the cloud.&lt;/p&gt;
+          &lt;p&gt;
+            &lt;a class=&quot;link--arrow&quot; href=&quot;&quot;&gt;Learn More&lt;/a&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;sub-navigation-more grid--4 grid--last box__padded box__padded--two&quot;&gt;
+        &lt;h3&gt;More Tableau Products&lt;/h3&gt;
+        &lt;ul class=&quot;plain-list&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;
+              &lt;h6&gt;Tableau Mobile&lt;/h6&gt;
+            &lt;/a&gt;
+            &lt;p&gt;Tableau straight from your phone.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;
+              &lt;h6&gt;Tableau Public&lt;/h6&gt;
+            &lt;/a&gt;
+            &lt;p&gt;Publish interactive data online.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;
+              &lt;h6&gt;Tableau Reader&lt;/h6&gt;
+            &lt;/a&gt;
+            &lt;p&gt;Read saved files from Tableau Desktop.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;sub-navigation-more-bg&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+          </div>
+
+          </section>
           <section id="kssref-navigation-main" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">

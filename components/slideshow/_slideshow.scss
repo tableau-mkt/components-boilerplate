@@ -9,6 +9,65 @@ Style guide: interactive.slideshow
 */
 
 .slideshow {
+  margin: 0 auto;
+  max-width: 1920px;
+
+  &.slideshow--hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: $black;
+
+    &:before,
+    &:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 200px;
+      height: 100%;
+      @include background-image(linear-gradient(to right, $bg-dark-gray-3, transparent));
+
+      @include at-extra-large-breakpoint {
+        display: block;
+      }
+    }
+
+    &:after {
+      @include background-image(linear-gradient(to left, $bg-dark-gray-3, transparent));
+      left: auto;
+      right: 0;
+    }
+
+
+  }
+
+
+  // Slick dots
+  .slick-dots {
+    height: 20px;
+    bottom: 0;
+
+    li {
+      margin: 0;
+
+      &.slick-active button:before {
+        opacity: .75;
+        color: $button-orange;
+      }
+      
+      button:before {
+        color: $white;
+        font-size: 9px;
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+        @include transition(color .25s);
+      }
+    }
+  }
 
 }
 
@@ -24,5 +83,160 @@ Style guide: interactive.slide
 */
 
 .slideshow__slide {
+  position: relative;
+  
+  .slideshow__image {
+    height: 0;
+    padding-bottom: 33%;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .slideshow__copy {
+    position: absolute;
+    top: 0;
+    color: $text-negative;
+  }
+}
+
+
+
+
+/*******************************************************************************
+HUGE STYLES
+*******************************************************************************/
+
+/* HERO CAROUSEL */
+
+#hero-slide-show {
+
+  // @include at-small-breakpoint {
+  //   // background-color: map_get($color,white);
+  // }
+
+  .hero-slide-show-container {
+    // max-width: $breakpoint-extra-large;
+    margin: 0 auto;
+  }
+
+
+
+  .hero-slide-image {
+    height: 0;
+    padding-bottom: 33%;
+    .fade {
+      background-image: url(../images/global/img-fade-left.png), url(../images/global/img-fade-right.png);
+      background-position: left top, right top;
+      background-repeat: no-repeat, no-repeat;
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      // @include at-extra-large-breakpoint {
+      //   display: block;
+      // }
+    }
+    img {
+      position: absolute;
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+
+  .carousel-arrow {
+    // @include archetype-heading-small;
+    // @include clearfix;
+    // @include font-size(11,auto);
+    position: absolute;
+    z-index: 1;
+    // color: map_get($color,white);
+    margin: 0 0 5px 0;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: visible;
+
+    &:hover {
+      .title {
+        width: auto;
+        padding: 15px 40px 15px 15px;
+        opacity: 1;
+      }
+    }
+
+    &.inverted {
+      &:hover {
+        .icon-hero-carousel-arrow-right {
+          background: url('../images/global/hero-carousel-arrow-right-inverted.png') 0 0 no-repeat;
+        }
+      }
+    }
+
+
+    &.left {
+      &.inverted {
+        &:hover {
+          .icon-hero-carousel-arrow-left {
+            background: url('../images/global/hero-carousel-arrow-left-inverted.png') 0 0 no-repeat;
+          }
+        }
+      }
+
+      &:hover {
+        .title {
+          padding: 15px 15px 15px 40px;
+        }
+      }
+
+      .title {
+        left: -15px;
+        right: auto;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    .square {
+      // background-color: map_get($color,grey-A1);
+      position: relative;
+      width: 2px;
+      height: 30px;
+      margin: 0 20px;
+      float: right;
+    }
+
+    .title {
+      top: -10px;
+      right: -15px;
+      width: 0px;
+      height: 45px;
+      padding: 15px 0px;
+      position: absolute;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 1s ease;
+    }
+
+    .text {
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .inverted {
+      // color: map_get($color, black);
+    }
+
+  }
 
 }

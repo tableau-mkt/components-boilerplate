@@ -1,0 +1,25 @@
+/* 
+Link List
+
+A simple unordered list of links.
+
+Weight: 1
+
+Markup: link-list.hbs
+
+.link-list--plain - Plain list (no bullets)
+.link-list--inline - Inline list items
+
+Style guide: lists.link
+*/
+
+.link-list {
+
+  &.link-list--plain {
+    @extend %plain-list;
+  }
+
+  &.link-list--inline {
+    @extend %inline-list;
+  }
+}

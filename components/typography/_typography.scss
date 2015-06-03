@@ -247,6 +247,7 @@ Style guide: typography.other
 .text--label {
   @extend .text--benton-book;
   font-size: em(11px);
+  letter-spacing: 1px;
   color: $text-dark-body;
   text-transform: uppercase;
 }

@@ -2,6 +2,16 @@
  * SASS vars
  */
 
+// Breakpoints
+// @todo these are from Huge. May need refactoring
+$stop-after-width: 1550px;
+$breakpoint-extra-large: 1920px;
+$breakpoint-large-min: 961px;
+$breakpoint-medium-max: 960px;
+$breakpoint-medium-min: 641px;
+$breakpoint-small-max: 640px;
+
+
 // Device sizes
 $mobile: max-width 739px;
 $tablet: 740px;

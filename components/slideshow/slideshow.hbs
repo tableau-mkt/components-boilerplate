@@ -1,4 +1,4 @@
-<div class="hero-carousel  {{ slideshow_id }}">
+<div class="slideshow slideshow--hero  {{ slideshow_id }}">
   {{#each this }}
     <div class="slideshow__slide" data-title="{{hover_title}}" data-title-class="{{hover_class}}">
       {{# img }}
@@ -8,7 +8,7 @@
       {{/ img }}
 
       {{# text }}
-        <div class="slideshow__copy">
+        <div class="slideshow__copy content-container">
           {{# sub_title }}
             {{> heading }}
           {{/ sub_title }}

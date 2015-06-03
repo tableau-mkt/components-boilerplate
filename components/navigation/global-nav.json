@@ -1,0 +1,88 @@
+{
+  "logo": {
+    "link": "#",
+    "src": "/styleguide/public/images/logo.png"
+  },
+
+  "primary": {
+    "modifier_class": "link-list--inline",
+    "items": [
+      {
+        "href":"/build/products.html",
+        "text": "Products",
+        "class":"products"
+      },
+      {
+        "href":"#",
+        "text": "Stories"
+      },
+      {
+        "href":"#",
+        "text": "Learning"
+      },
+      {
+        "href":"#",
+        "text": "Comunity"
+      },
+      {
+        "href":"#",
+        "text": "Support"
+      },
+      {
+        "href":"#",
+        "text": "About"
+      }
+    ]
+  },
+
+  "secondary": {
+    "modifier_class": "link-list--inline",
+    "items": [
+      {
+        "href": "#",
+        "text": "Buy",
+        "link_class": "link-normal"
+      },
+      {
+        "href":"#",
+        "text": "Sign In",
+        "link_class": "link-normal"
+      },
+      {
+        "href":"#",
+        "text": "Free Trial",
+        "link_class": "cta"
+      }
+    ]
+  },
+
+  "secondarySmall": {
+    "links": [
+      {
+        "link": {
+          "href": "#",
+          "text": "Buy"
+        },
+        "search": false
+      },
+      {
+        "link": {
+          "href":"#",
+          "text": "Sign In"
+        },
+        "search": false
+      }, {
+        "link": false,
+        "search":true
+      }
+    ],
+    "button": {
+      "type": "highlight-orange-light outline",
+      "label": "Free Trial",
+      "url": "#",
+      "icon": {
+        "class":"block-link-arrow-orange"
+      }
+    }
+  }
+}

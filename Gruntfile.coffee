@@ -8,6 +8,7 @@ module.exports = (grunt) ->
       sass:
         files: [
           'components/{,**/}*.{scss,sass}'
+          'sass/{,**/}*.{scss,sass}'
         ]
         tasks: ['compass:dist']
 
