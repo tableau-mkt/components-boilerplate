@@ -28,7 +28,7 @@ Style guide: interactive.slideshow
       z-index: 5;
       width: 200px;
       height: 100%;
-      @include background-image(linear-gradient(to right, $bg-dark-gray-3, transparent));
+      background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
 
       @include at-extra-large-breakpoint {
         display: block;
@@ -36,7 +36,7 @@ Style guide: interactive.slideshow
     }
 
     &:after {
-      @include background-image(linear-gradient(to left, $bg-dark-gray-3, transparent));
+      background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
       left: auto;
       right: 0;
     }
@@ -57,7 +57,7 @@ Style guide: interactive.slideshow
         opacity: .75;
         color: $button-orange;
       }
-      
+
       button:before {
         color: $white;
         font-size: 9px;
@@ -84,7 +84,7 @@ Style guide: interactive.slide
 
 .slideshow__slide {
   position: relative;
-  
+
   .slideshow__image {
     height: 0;
     padding-bottom: 33%;
