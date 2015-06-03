@@ -1,14 +1,13 @@
 // Import external libraries.
-@import "compass";
-@import "susy";
-@import "breakpoint";
-@import "toolkit";
+
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 // Import helpers
-@import "../components/_helpers/variables/*";
-@import "../components/_helpers/functions/*";
-@import "../components/_helpers/mixins/*";
-@import "../components/_helpers/*";
+@import "imports/variablesMap";
+@import "imports/functionsMap";
+@import "imports/mixinsMap";
+@import "imports/helpersMap";
 
 // Import components
-@import "../components/**/*";
+@import "imports/componentsMap";
