@@ -1,1035 +1,1039 @@
 @charset "UTF-8";
-/* line 2, ../../sass/styleguide.scss */
 body.kss .kss-example-preview {
+  /* generated with grunt-sass-globbing */
   /*
-  Color Palette 
-  
-  The Tableau brand collor pallet
-  
-  Style guide: colors
-  */
+Color Palette 
+
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
   /*
-  Text Colors
-  
-  Colors used for typography.
-  
-  Style guide: colors.text
-  */
+Text Colors
+
+Colors used for typography.
+
+Style guide: colors.text
+*/
   /*
-  Button Colors
-  
-  Colors used for buttons.
-  
-  Style guide: colors.buttons
-  */
+Button Colors
+
+Colors used for buttons.
+
+Style guide: colors.buttons
+*/
   /*
-  Accent Colors
-  
-  Colors used for accents.
-  
-  Style guide: colors.accent
-  */
+Accent Colors
+
+Colors used for accents.
+
+Style guide: colors.accent
+*/
   /*
-  Background Colors
-  
-  Colors used for backgrounds.
-  
-  Style guide: colors.background
-  */
+Background Colors
+
+Colors used for backgrounds.
+
+Style guide: colors.background
+*/
   /*
-  Product colors
-  
-  Specific brand colors for Tableau products
-  
-  Style guide: colors.product
-  */
+Product colors
+
+Specific brand colors for Tableau products
+
+Style guide: colors.product
+*/
   /*
-  Basic Colors
-  
-  Some basic colors
-  
-  Style guide: colors.basic
-  */
+Basic Colors
+
+Some basic colors
+
+Style guide: colors.basic
+*/
   /* 
-  Text colors mapping in form of:
-    modifier-name: $text-color
-  */
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
   /* 
-  Button colors mapping in the form of:
-    modifier-name: ($base-color, $hover-color)
-  */
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
   /* 
-  Background colors mapping in the form of:
-    mdifier-name: ($bg-color, $copy-color, $heading-color)
-  */
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
   /**
-   * SASS vars
-   */
+ * SASS vars
+ */
+  /* generated with grunt-sass-globbing */
   /*
-  em($target)
-  
-  Converts a unit to ems based on either the base font-size or a given context.
-  For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
-  base font-size of 16px.
-  
-  Styleguide functions.em
-  */
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+
+Styleguide functions.em
+*/
+  /* generated with grunt-sass-globbing */
   /*
-  Animate mixin
-  
-  Parameters:
-    $keyframes - The @keyframes rule to use for the animation
-    $duration - Length of animation
-    $easing - The easing tunction to use
-    $loop - Number of times to loop over the animation
-  
-  Returns:
-    Vendor prefixed animation rules
-  */
+Animate mixin
+
+Parameters:
+  $keyframes - The @keyframes rule to use for the animation
+  $duration - Length of animation
+  $easing - The easing tunction to use
+  $loop - Number of times to loop over the animation
+
+Returns:
+  Vendor prefixed animation rules
+*/
   /*
-  Box sizing mixin
-  
-  Parameters:
-    $value - The value to pass to the box-sizing rule
-  
-  Returns:
-    Vendor prefixed box-sizing rules
-  */
+Box sizing mixin
+
+Parameters:
+  $value - The value to pass to the box-sizing rule
+
+Returns:
+  Vendor prefixed box-sizing rules
+*/
   /*
-  CSS Hexagon
-  
-  Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
-  hexagon to be as well as an optional border if you'd like the hexagon to be just
-  an outline rather thna a filled shape.
-  
-  Based off of http://csshexagon.com/
-  */
+CSS Hexagon
+
+Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
+hexagon to be as well as an optional border if you'd like the hexagon to be just
+an outline rather thna a filled shape.
+
+Based off of http://csshexagon.com/
+*/
   /*
-  Responsive iframe
-  
-  Proportionately scales an iframe when the container is resized (via viewport).
-  Apply this to a wrapper element around the iframe.
-  
-  Parameters:
-    $width - The default width of the iframe (or reduced aspect ratio)
-    $height - The default height of the iframe (or reduced aspect ratio)
-  
-  Returns:
-    Styles to proportionately scale an iframe
-  */
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
   /*
-  Transform mixin
-  
-  Parameters:
-    $properties - The transform properties being used
-  
-  Returns:
-    Vendor prefixed transform rules
-  */
+Transform mixin
+
+Parameters:
+  $properties - The transform properties being used
+
+Returns:
+  Vendor prefixed transform rules
+*/
   /*
-  Transition mixin
-  
-  Parameters:
-    $properties - The transition properties being used
-  
-  Returns:
-    Vendor prefixed transition rules
-  */
+Transition mixin
+
+Parameters:
+  $properties - The transition properties being used
+
+Returns:
+  Vendor prefixed transition rules
+*/
+  /* generated with grunt-sass-globbing */
   /**
-   * Helpers
-   *
-   * General helper styles that can be used to overcome various common issues.
-   */
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
   /*
-  Proportionately resize iframes. Add class to a wrapper around the iframe. See
-  also the responsive-placeholder mixin for custom sizes. These are just the two
-  most common proportions for video players.
-  */
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
   /**
-   * Placeholders
-   *
-   * Using placeholders results in CSS rule combining for selectors.
-   */
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
   /**
-   * Hide elements visually, but keep them available for screen-readers.
-   *
-   * Used for information required for screen-reader users to understand and use
-   * the site where visual display is undesirable. Information provided in this
-   * manner should be kept concise, to avoid unnecessary burden on the user. Must
-   * not be used for focusable elements (such as links and form elements) as this
-   * causes issues for keyboard only or voice recognition users. "!important" is
-   * used to prevent unintentional overrides.
-   */
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+  /* generated with grunt-sass-globbing */
   /**
-   * Helpers
-   *
-   * General helper styles that can be used to overcome various common issues.
-   */
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
   /*
-  Proportionately resize iframes. Add class to a wrapper around the iframe. See
-  also the responsive-placeholder mixin for custom sizes. These are just the two
-  most common proportions for video players.
-  */
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
   /**
-   * Placeholders
-   *
-   * Using placeholders results in CSS rule combining for selectors.
-   */
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
   /**
-   * Hide elements visually, but keep them available for screen-readers.
-   *
-   * Used for information required for screen-reader users to understand and use
-   * the site where visual display is undesirable. Information provided in this
-   * manner should be kept concise, to avoid unnecessary burden on the user. Must
-   * not be used for focusable elements (such as links and form elements) as this
-   * causes issues for keyboard only or voice recognition users. "!important" is
-   * used to prevent unintentional overrides.
-   */
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
   /*
-  em($target)
-  
-  Converts a unit to ems based on either the base font-size or a given context.
-  For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
-  base font-size of 16px.
-  
-  Styleguide functions.em
-  */
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+
+Styleguide functions.em
+*/
   /*
-  Animate mixin
-  
-  Parameters:
-    $keyframes - The @keyframes rule to use for the animation
-    $duration - Length of animation
-    $easing - The easing tunction to use
-    $loop - Number of times to loop over the animation
-  
-  Returns:
-    Vendor prefixed animation rules
-  */
+Animate mixin
+
+Parameters:
+  $keyframes - The @keyframes rule to use for the animation
+  $duration - Length of animation
+  $easing - The easing tunction to use
+  $loop - Number of times to loop over the animation
+
+Returns:
+  Vendor prefixed animation rules
+*/
   /*
-  Box sizing mixin
-  
-  Parameters:
-    $value - The value to pass to the box-sizing rule
-  
-  Returns:
-    Vendor prefixed box-sizing rules
-  */
+Box sizing mixin
+
+Parameters:
+  $value - The value to pass to the box-sizing rule
+
+Returns:
+  Vendor prefixed box-sizing rules
+*/
   /*
-  CSS Hexagon
-  
-  Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
-  hexagon to be as well as an optional border if you'd like the hexagon to be just
-  an outline rather thna a filled shape.
-  
-  Based off of http://csshexagon.com/
-  */
+CSS Hexagon
+
+Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
+hexagon to be as well as an optional border if you'd like the hexagon to be just
+an outline rather thna a filled shape.
+
+Based off of http://csshexagon.com/
+*/
   /*
-  Responsive iframe
-  
-  Proportionately scales an iframe when the container is resized (via viewport).
-  Apply this to a wrapper element around the iframe.
-  
-  Parameters:
-    $width - The default width of the iframe (or reduced aspect ratio)
-    $height - The default height of the iframe (or reduced aspect ratio)
-  
-  Returns:
-    Styles to proportionately scale an iframe
-  */
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
   /*
-  Transform mixin
-  
-  Parameters:
-    $properties - The transform properties being used
-  
-  Returns:
-    Vendor prefixed transform rules
-  */
+Transform mixin
+
+Parameters:
+  $properties - The transform properties being used
+
+Returns:
+  Vendor prefixed transform rules
+*/
   /*
-  Transition mixin
-  
-  Parameters:
-    $properties - The transition properties being used
-  
-  Returns:
-    Vendor prefixed transition rules
-  */
+Transition mixin
+
+Parameters:
+  $properties - The transition properties being used
+
+Returns:
+  Vendor prefixed transition rules
+*/
   /*
-  Color Palette 
-  
-  The Tableau brand collor pallet
-  
-  Style guide: colors
-  */
+Color Palette 
+
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
   /*
-  Text Colors
-  
-  Colors used for typography.
-  
-  Style guide: colors.text
-  */
+Text Colors
+
+Colors used for typography.
+
+Style guide: colors.text
+*/
   /*
-  Button Colors
-  
-  Colors used for buttons.
-  
-  Style guide: colors.buttons
-  */
+Button Colors
+
+Colors used for buttons.
+
+Style guide: colors.buttons
+*/
   /*
-  Accent Colors
-  
-  Colors used for accents.
-  
-  Style guide: colors.accent
-  */
+Accent Colors
+
+Colors used for accents.
+
+Style guide: colors.accent
+*/
   /*
-  Background Colors
-  
-  Colors used for backgrounds.
-  
-  Style guide: colors.background
-  */
+Background Colors
+
+Colors used for backgrounds.
+
+Style guide: colors.background
+*/
   /*
-  Product colors
-  
-  Specific brand colors for Tableau products
-  
-  Style guide: colors.product
-  */
+Product colors
+
+Specific brand colors for Tableau products
+
+Style guide: colors.product
+*/
   /*
-  Basic Colors
-  
-  Some basic colors
-  
-  Style guide: colors.basic
-  */
+Basic Colors
+
+Some basic colors
+
+Style guide: colors.basic
+*/
   /* 
-  Text colors mapping in form of:
-    modifier-name: $text-color
-  */
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
   /* 
-  Button colors mapping in the form of:
-    modifier-name: ($base-color, $hover-color)
-  */
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
   /* 
-  Background colors mapping in the form of:
-    mdifier-name: ($bg-color, $copy-color, $heading-color)
-  */
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
   /**
-   * SASS vars
-   */
+ * SASS vars
+ */
   /*
-  Typography
-  
-  Weight: 10
-  
-  Style guide: typography
-  */
+Typography
+
+Weight: 10
+
+Style guide: typography
+*/
   /*
-  Buttons
-  
-  Buttons and CTAs used to draw more attention than a standard text link.
-  
-  Weight: 20
-  
-  Style guide: buttons
-  */
+Buttons
+
+Buttons and CTAs used to draw more attention than a standard text link.
+
+Weight: 20
+
+Style guide: buttons
+*/
   /* 
-  Boxes & Containers
-  
-  Used as wrappers to apply certain styles around elements.
-  
-  Weight: 30
-  
-  Style guide: boxes 
-  */
+Boxes & Containers
+
+Used as wrappers to apply certain styles around elements.
+
+Weight: 30
+
+Style guide: boxes 
+*/
   /*
-  Images
-  
-  Image assets displayed as thumbnails or within the content of a page.
-  
-  Weight: 35
-  
-  Style guide: images
-  */
+Images
+
+Image assets displayed as thumbnails or within the content of a page.
+
+Weight: 35
+
+Style guide: images
+*/
   /*
-  Content Lists
-  
-  Lists of content that generally have a title, thumbnail and/or a description and
-  link through to the full version of the content.
-  
-  Weight: 40
-  
-  Style guide: lists
-  */
+Content Lists
+
+Lists of content that generally have a title, thumbnail and/or a description and
+link through to the full version of the content.
+
+Weight: 40
+
+Style guide: lists
+*/
   /*
-  Form Styles
-  
-  Form elements such as text fields and submit buttons used to make forms that the
-  user can submit information through. Here's an example form:
-  
-  Weight: 50
-  
-  Style guide: forms
-  */
+Form Styles
+
+Form elements such as text fields and submit buttons used to make forms that the
+user can submit information through. Here's an example form:
+
+Weight: 50
+
+Style guide: forms
+*/
   /*
-  Tables
-  
-  Used for tabular data
-  
-  Weight: 60
-  
-  Style guide: 4
-  */
+Tables
+
+Used for tabular data
+
+Weight: 60
+
+Style guide: 4
+*/
   /*
-  Navigation
-  
-  Navigational tools used across the site
-  
-  Weight: 70
-  
-  Style guide: navigation
-  */
+Navigation
+
+Navigational tools used across the site
+
+Weight: 70
+
+Style guide: navigation
+*/
   /*
-  Interactive Components
-  
-  This section displays examples of components that have interactivity. Most
-  Interactivity is defined via Javascript.
-  
-  Weight: 80
-  
-  Style guide: interactive
-  */
+Interactive Components
+
+This section displays examples of components that have interactivity. Most
+Interactivity is defined via Javascript.
+
+Weight: 80
+
+Style guide: interactive
+*/
   /*
-  Layout 
-  
-  Components used for page layout
-  
-  Weight: 90
-  
-  Style guide layout
-  */
+Layout 
+
+Components used for page layout
+
+Weight: 90
+
+Style guide layout
+*/
   /*
-  Accordion
-  
-  An accordion of content that allows you to expand and collapse sections of 
-  content.
-  
-  Markup: accordion.hbs
-  
-  Style guide: interactive.accordion
-  */
+Accordion
+
+An accordion of content that allows you to expand and collapse sections of 
+content.
+
+Markup: accordion.hbs
+
+Style guide: interactive.accordion
+*/
   /*
-  Badges
-  
-  The branding system makes use of a location-specific badge, including the dates and associated conference hashtag. As the conference travels, the badge can be updated to reflect the new locations, adding a custom element to the branding system. An outlined badge uses the <code>badge-outlined</code> class.
-  
-  Markup: badge.hbs
-  
-  Weight: 4
-  
-  .badge--white - White BG colored badge.
-  .badge--light-gray-1 - Light Gray 1 colored badge.
-  .badge--light-gray-2 - Light Gray 2 colored badge.
-  .badge--dark-gray-1 - Dk Gray 1 colored badge.
-  .badge--dark-gray-2 - Dk Gray 2 colored badge.
-  .badge--dark-gray-3 - Dk Gray 3 colored badge.
-  .badge--about-featured - About/Feat colored badge.
-  .badge--data-sources - Data Sources colored badge.
-  
-  Style guide: boxes.badge
-   */
+Badges
+
+The branding system makes use of a location-specific badge, including the dates and associated conference hashtag. As the conference travels, the badge can be updated to reflect the new locations, adding a custom element to the branding system. An outlined badge uses the <code>badge-outlined</code> class.
+
+Markup: badge.hbs
+
+Weight: 4
+
+.badge--white - White BG colored badge.
+.badge--light-gray-1 - Light Gray 1 colored badge.
+.badge--light-gray-2 - Light Gray 2 colored badge.
+.badge--dark-gray-1 - Dk Gray 1 colored badge.
+.badge--dark-gray-2 - Dk Gray 2 colored badge.
+.badge--dark-gray-3 - Dk Gray 3 colored badge.
+.badge--about-featured - About/Feat colored badge.
+.badge--data-sources - Data Sources colored badge.
+
+Style guide: boxes.badge
+ */
   /*
-  Padded box
-  
-  Adds padding to a container element. The `.box--dark-gray-1` class is used to 
-  differentiate the box from the background. You will usually want to use a padded
-  box on a container with a background color.
-  
-  Markup: box_padded.hbs
-  
-  Weight: 1
-  
-  .box__padded--one - A box with 1em of padding
-  .box__padded--two - <strong>[Default]</strong> A box with 2em of padding
-  .box__padded--three - A box with 3em of padding
-  .box__padded--four - A box with 4em of padding
-  
-  Style guide: boxes.padded
-  */
+Padded box
+
+Adds padding to a container element. The `.box--dark-gray-1` class is used to 
+differentiate the box from the background. You will usually want to use a padded
+box on a container with a background color.
+
+Markup: box_padded.hbs
+
+Weight: 1
+
+.box__padded--one - A box with 1em of padding
+.box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+.box__padded--three - A box with 3em of padding
+.box__padded--four - A box with 4em of padding
+
+Style guide: boxes.padded
+*/
   /* 
-  Colored Backgrounds
-  
-  These classes will apply a background to any container div. It does not apply
-  any other styles, except the background-color and a text color if needed for 
-  legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
-  just to make the examples look better.
-  
-  Markup: box_colored.hbs
-  
-  Weight: 2
-  
-  .box--white - White BG colored box - (#fff)
-  .box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
-  .box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
-  .box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
-  .box--dark-gray-2 - Dk Gray 2 colored box - (#333)
-  .box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
-  .box--about-featured - About/Feat colored box - (#457387)
-  .box--data-sources - Data Sources colored box - (#2e4c65)
-  .box--desktop - Desktop product colored box - (#23529c)
-  .box--server - Server product colored box - (#7fa9bb)
-  .box--online - Online product colored box - (#58a3b9)
-  .box--public - Public product colored box - (#324E7A)
-  .box--reader - Reader product colored box - (#B28CCF)
-  .box--mobile - Mobile product colored box - (#DB8E6A)
-  
-  Style guide: boxes.colored
-  */
+Colored Backgrounds
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for 
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
+just to make the examples look better.
+
+Markup: box_colored.hbs
+
+Weight: 2
+
+.box--white - White BG colored box - (#fff)
+.box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
+.box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
+.box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
+.box--dark-gray-2 - Dk Gray 2 colored box - (#333)
+.box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
+.box--about-featured - About/Feat colored box - (#457387)
+.box--data-sources - Data Sources colored box - (#2e4c65)
+.box--desktop - Desktop product colored box - (#23529c)
+.box--server - Server product colored box - (#7fa9bb)
+.box--online - Online product colored box - (#58a3b9)
+.box--public - Public product colored box - (#324E7A)
+.box--reader - Reader product colored box - (#B28CCF)
+.box--mobile - Mobile product colored box - (#DB8E6A)
+
+Style guide: boxes.colored
+*/
   /* Create a class for each background color */
   /*
-  Marginless Stretchy Boxes
-  
-  Percentage width boxes that butt up against eachother with no margin. Typically,
-  a collored background would be applied with a <code>.box--{color}</code> class.
-  In a mobile layout, all stretchy boxes default to stacking one ontop of the other
-  and in a tablet layout stretchy boxes default to a 50% split. A 
-  <code>.box__stretchy--tablet-full</code> class can be applied to a box to force 
-  it to be full-width on a tablet. This is useful when there are an odd number of 
-  boxes and you want to fill the extra blank space.
-  
-  Markup: box_stretchy.hbs
-  
-  Weight: 3
-  
-  Style guide: boxes.stretchy
-  */
+Marginless Stretchy Boxes
+
+Percentage width boxes that butt up against eachother with no margin. Typically,
+a collored background would be applied with a <code>.box--{color}</code> class.
+In a mobile layout, all stretchy boxes default to stacking one ontop of the other
+and in a tablet layout stretchy boxes default to a 50% split. A 
+<code>.box__stretchy--tablet-full</code> class can be applied to a box to force 
+it to be full-width on a tablet. This is useful when there are an odd number of 
+boxes and you want to fill the extra blank space.
+
+Markup: box_stretchy.hbs
+
+Weight: 3
+
+Style guide: boxes.stretchy
+*/
   /*
-  Content Container
-  
-  A wrapper elemnt to go around content to keep it in a centered column on the 
-  page.
-  
-  Markup: content_container.hbs
-  
-  Weight: 2
-  
-  Style guide: layout.container
-  */
+Content Container
+
+A wrapper elemnt to go around content to keep it in a centered column on the 
+page.
+
+Markup: content_container.hbs
+
+Weight: 2
+
+Style guide: layout.container
+*/
   /* 
-  Primary CTA
-  
-  Primary CTA buttons (Solid) should be used when a single or important page 
-  action is required.
-  
-  Markup: cta-kss.hbs
-  
-  .cta--orange - Orange colored CTA button.
-  .cta--desktop - Desktop colored CTA button.
-  .cta--server - Server colored CTA button.
-  .cta--online - Online colored CTA button.
-  .cta--public - Public colored CTA button.
-  .cta--reader - Reader colored CTA button.
-  .cta--mobile - Mobile colored CTA button.
-  
-  Style guide: buttons.cta
-  */
+Primary CTA
+
+Primary CTA buttons (Solid) should be used when a single or important page 
+action is required.
+
+Markup: cta-kss.hbs
+
+.cta--orange - Orange colored CTA button.
+.cta--desktop - Desktop colored CTA button.
+.cta--server - Server colored CTA button.
+.cta--online - Online colored CTA button.
+.cta--public - Public colored CTA button.
+.cta--reader - Reader colored CTA button.
+.cta--mobile - Mobile colored CTA button.
+
+Style guide: buttons.cta
+*/
   /* 
-  Secondary CTA
-  
-  Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
-  present, or somewhat important page actions are required.
-  
-  Markup: cta-secondary.hbs
-  
-  Style guide: buttons.cta-secondary
-  */
+Secondary CTA
+
+Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
+present, or somewhat important page actions are required.
+
+Markup: cta-secondary.hbs
+
+Style guide: buttons.cta-secondary
+*/
   /* 
-  Tertiary CTA
-  
-  Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
-  or an action not directly related to the page is required. When hovering over a 
-  Stroked button the copy is underlined.
-  
-  Markup: cta-tertiary.hbs
-  
-  Style guide: buttons.cta-tertiary
-  */
+Tertiary CTA
+
+Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
+or an action not directly related to the page is required. When hovering over a 
+Stroked button the copy is underlined.
+
+Markup: cta-tertiary.hbs
+
+Style guide: buttons.cta-tertiary
+*/
   /*
-  Base Form Styles
-  
-  A simple example form.
-  Markup: form.hbs
-  
-  Weight: 0
-  
-  Style guide: forms.base
-  */
+Base Form Styles
+
+A simple example form.
+Markup: form.hbs
+
+Weight: 0
+
+Style guide: forms.base
+*/
   /*
-  Input Fields
-  
-  Nothing to see here yet...
-  
-  Markup: form_input.hbs
-  
-  Weight: 1
-  
-  Style guide: forms.input
-  */
+Input Fields
+
+Nothing to see here yet...
+
+Markup: form_input.hbs
+
+Weight: 1
+
+Style guide: forms.input
+*/
   /*
-  Submit Buttons
-  
-  Nothing to see here yet...
-  
-  Markup: form_button.hbs
-  
-  .submitting - In the process of submitting
-  .submitted - Successfully submitted
-  .errored - Error occured while submitting
-  
-  Weight: 2
-  
-  Style guide: forms.buttons
-  */
+Submit Buttons
+
+Nothing to see here yet...
+
+Markup: form_button.hbs
+
+.submitting - In the process of submitting
+.submitted - Successfully submitted
+.errored - Error occured while submitting
+
+Weight: 2
+
+Style guide: forms.buttons
+*/
   /*
-  Validation Messages
-  
-  Nothing to see here yet...
-  
-  Markup: form_validation.hbs
-  
-  Weight: 3
-  
-  Style guide: forms.validation
-  */
+Validation Messages
+
+Nothing to see here yet...
+
+Markup: form_validation.hbs
+
+Weight: 3
+
+Style guide: forms.validation
+*/
   /*
-  Confirmation Messages
-  
-  Nothing to see here yet...
-  
-  Markup: form_confirmation.hbs
-  
-  Weight: 4
-  
-  Style guide: forms.confirmation
-  */
+Confirmation Messages
+
+Nothing to see here yet...
+
+Markup: form_confirmation.hbs
+
+Weight: 4
+
+Style guide: forms.confirmation
+*/
   /*
-  Grids
-  
-  Used for creating a columned layout. To use these classes, just pick the number 
-  of columns wide you want your element to be relative to the total number of 
-  columns. The default is 12 columns. For example, you can use `.grid--4` to make 
-  an element 4 columns wide followed by an element with `.grid--8` to take up the 
-  remaining eight columns of the container's width.
-  
-  Markup: grid.hbs
-  
-  Weight: 1
-  
-  Style guide: layout.grids
-  */
+Grids
+
+Used for creating a columned layout. To use these classes, just pick the number
+of columns wide you want your element to be relative to the total number of
+columns. The default is 12 columns. For example, you can use `.grid--4` to make
+an element 4 columns wide followed by an element with `.grid--8` to take up the
+remaining eight columns of the container's width.
+
+Markup: grid.hbs
+
+Weight: 1
+
+Style guide: layout.grids
+*/
   /* 
-  Link List
-  
-  A simple unordered list of links.
-  
-  Weight: 1
-  
-  Markup: link-list.hbs
-  
-  .link-list--plain - Plain list (no bullets)
-  .link-list--inline - Inline list items
-  
-  Style guide: lists.link
-  */
-  /* 
-  Basic Teaser List
-  
-  A basic list of teasers, used for things like a list of blog posts.
-  
-  Weight: 0
-  
-  Markup: teaser-list.hbs
-  
-  Style guide: lists.teaser
-  */
-  /* 
-  Full-width Teaser List
-  
-  A full-width list of teasers, used for things like a list of blog posts.
-  
-  Weight: 5
-  
-  Markup:
-  <div class="teaser-list teaser-list--full-width"> 
-    <div class="teaser-list__thumbnail grid-3"> 
-      <a href="#">
-        <img src="http://placecage.com/223/223">
-      </a>
-    </div> 
-    <div class="teaser-list__info grid-9 grid-last">
-      <h2 class="teaser-list__title">
-        <a href="#">Blog Post or something</a>
-      </h2>
-      <div class="teaser-list__secondary-label">
-        <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
-      </div> 
-      <p class="teaser-list__description">
-        Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
-      </p>
-      <div class="class="teaser-list__read-more">
-        <a href="/blog/another-post">Read More</a> 
-      </div>
+Link List
+
+A simple unordered list of links.
+
+Weight: 1
+
+Markup: link-list.hbs
+
+.link-list--plain - Plain list (no bullets)
+.link-list--inline - Inline list items
+
+Style guide: lists.link
+*/
+  /*
+Basic Teaser List
+
+A basic list of teasers, used for things like a list of blog posts.
+
+Weight: 0
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
+*/
+  /*
+Full-width Teaser List
+
+A full-width list of teasers, used for things like a list of blog posts.
+
+Weight: 5
+
+Markup:
+<div class="teaser-list teaser-list--full-width">
+  <div class="teaser-list__thumbnail grid-3">
+    <a href="#">
+      <img src="http://placecage.com/223/223">
+    </a>
+  </div>
+  <div class="teaser-list__info grid-9 grid-last">
+    <h2 class="teaser-list__title">
+      <a href="#">Blog Post or something</a>
+    </h2>
+    <div class="teaser-list__secondary-label">
+      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
+    </div>
+    <p class="teaser-list__description">
+      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
+    </p>
+    <div class="class="teaser-list__read-more">
+      <a href="/blog/another-post">Read More</a>
     </div>
   </div>
-  
-  Style guide: lists.full-width
-  */
+</div>
+
+Style guide: lists.full-width
+*/
   /*
-  Global Navigation
-  
-  The global navigation bar that sits at the top of each page. Contains primary, 
-  secondary, and sub navigation as well as the global search bar.
-  
-  Markup: global-nav.hbs
-  
-  Style guide: navigation.global
-  */
+Global Navigation
+
+The global navigation bar that sits at the top of each page. Contains primary, 
+secondary, and sub navigation as well as the global search bar.
+
+Markup: global-nav.hbs
+
+Style guide: navigation.global
+*/
   /*******************************************************************************
-  HUGE STYLES 
-  *******************************************************************************/
+HUGE STYLES 
+*******************************************************************************/
   /*
-  Main Menu
-  
-  The main navigational menu for the site.
-  
-  Markup: menu.hbs
-  
-  Style guide: navigation.main
-  */
+Main Menu
+
+The main navigational menu for the site.
+
+Markup: menu.hbs
+
+Style guide: navigation.main
+*/
   /*
-  Popups
-  
-  Used to popup content into a modal box ontop of the page.
-  
-  Markup: popup.hbs
-  
-  Style guide: interactive.popup
-   */
+Popups
+
+Used to popup content into a modal box ontop of the page.
+
+Markup: popup.hbs
+
+Style guide: interactive.popup
+ */
   /* Transitioning the popup in and out */
   /** 
-   * Content region padding
-   */
+ * Content region padding
+ */
   /** 
-   * Content Top region styles
-   */
+ * Content Top region styles
+ */
   /*
-  Content Reveal
-  
-  Simple tool to make content hidden and revealed when a trigger is clicked. It 
-  doesn't matter where on the page the trigger and target content are, but the
-  trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-  attribute. The <code>.reveal--content</code> container must have am <code>id</code>
-  attribute that matches the <code>data-reveal-target</code>.
-  
-  Markup: reveal.hbs
-  
-  Style guide: interactive.reveal
-  */
+Content Reveal
+
+Simple tool to make content hidden and revealed when a trigger is clicked. It 
+doesn't matter where on the page the trigger and target content are, but the
+trigger element must target the content via a <code>data-reveal-target="target-id"</code>
+attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute that matches the <code>data-reveal-target</code>.
+
+Markup: reveal.hbs
+
+Style guide: interactive.reveal
+*/
   /*
-  Content Section
-  
-  Used to wrap a section of content and apply vertical padding between wrappers 
-  and content.
-  
-  Markup: section-kss.hbs
-  
-  Weight: 3
-  
-  .section--padded-two - Section with 2em of vertical padding (1em on mobile)
-  .section--padded-four - Section with 4em of vertical padding (2em on mobile)
-  .section--padded-six - Section with 6em of vertical padding (3em on mobile)
-  
-  Style guide layout.section
-  */
+Content Section
+
+Used to wrap a section of content and apply vertical padding between wrappers 
+and content.
+
+Markup: section-kss.hbs
+
+Weight: 3
+
+.section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-four - Section with 4em of vertical padding (2em on mobile)
+.section--padded-six - Section with 6em of vertical padding (3em on mobile)
+
+Style guide layout.section
+*/
   /*
-  Sidebar Nav
-  
-  Jump-nav used in the sidebars to navigate between sub-sections of a single page
-  
-  Markup: sidebar_nav.hbs
-  
-  Style guide: navigation.sidebar
-  */
+Sidebar Nav
+
+Jump-nav used in the sidebars to navigate between sub-sections of a single page
+
+Markup: sidebar_nav.hbs
+
+Style guide: navigation.sidebar
+*/
   /*
-  Slideshow
-  
-  Todo
-  
-  Markup: slideshow.hbs
-  
-  Style guide: interactive.slideshow
-  */
+Slideshow
+
+Todo
+
+Markup: slideshow.hbs
+
+Style guide: interactive.slideshow
+*/
   /*
-  Slide
-  
-  Todo
-  
-  Markup: slide.hbs
-  
-  Style guide: interactive.slide
-  */
+Slide
+
+Todo
+
+Markup: slide.hbs
+
+Style guide: interactive.slide
+*/
   /*******************************************************************************
-  HUGE STYLES
-  *******************************************************************************/
+HUGE STYLES
+*******************************************************************************/
   /* HERO CAROUSEL */
   /*
-  Vertical Spacer
-  
-  Used to create vertical spacing between sections of content without just a stack
-  of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
-  (<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
-  classes to add 4em or 6em of spacingas well. These examples put a spacer between 
-  two divs to dempnstrate the amount of space that will be added with each modifier.
-  
-  Markup:
-  <div class="grid-6 box__padded box--green">
-    <p>
-      Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-    </p>
-  </div>
-  <hr class="spacer {$modifiers}">
-  <div class="grid-6 box__padded box--white">
-    <p>
-      Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-    </p>
-  </div>
-  
-  .spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
-  .spacer--four - Spacer with 4em of space.
-  .spacer--six - Spacer with 6em of space.
-  
-  Style guide: 3.6
-  */
+Vertical Spacer
+
+Used to create vertical spacing between sections of content without just a stack
+of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
+classes to add 4em or 6em of spacingas well. These examples put a spacer between 
+two divs to dempnstrate the amount of space that will be added with each modifier.
+
+Markup:
+<div class="grid-6 box__padded box--green">
+  <p>
+    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
+  </p>
+</div>
+<hr class="spacer {$modifiers}">
+<div class="grid-6 box__padded box--white">
+  <p>
+    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
+  </p>
+</div>
+
+.spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+.spacer--four - Spacer with 4em of space.
+.spacer--six - Spacer with 6em of space.
+
+Style guide: 3.6
+*/
   /*
-  Sticky elements
-  
-  Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
-  once they get scrolled to and are about to go out of view.
-  
-  Markup:
-  <div class="grid-3">
-    <div class="sticky {$modifiers}">
-      <div class="box--green box__padded box__padded--one">
-        <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
-      </div>
+Sticky elements
+
+Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
+once they get scrolled to and are about to go out of view.
+
+Markup:
+<div class="grid-3">
+  <div class="sticky {$modifiers}">
+    <div class="box--green box__padded box__padded--one">
+      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
     </div>
   </div>
-  
-  .sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
-  
-  Style guide: 6.2
-  */
+</div>
+
+.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
+
+Style guide: 6.2
+*/
   /*
-  Standard Table
-  
-  Basic table used for tabular data
-  
-  Markup:
-  <table>
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>    
-        <th>#</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Jill</td>
-        <td>Smith</td>    
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>    
-        <td>94</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>    
-        <td>80</td>
-      </tr>
-      <tr>
-        <td>...</td>
-        <td>...</td>    
-        <td>...</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  Style guide: 4.1
-  */
+Standard Table
+
+Basic table used for tabular data
+
+Markup:
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>    
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>    
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>    
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>    
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>    
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+
+Style guide: 4.1
+*/
   /*
-  Thumbnail Image
-  
-  A small image that shows a preview of the content that it is linking to.
-  
-  Markup: thumbnail.hbs
-  
-  .thumbnail--play - A play button superimposed over the middle of the thumbnail
-  
-  Style guide: images.thumbnail
-  */
+Thumbnail Image
+
+A small image that shows a preview of the content that it is linking to.
+
+Markup: thumbnail.hbs
+
+.thumbnail--play - A play button superimposed over the middle of the thumbnail
+
+Style guide: images.thumbnail
+*/
   /*
-  Font Families
-  
-  All text on tableau.com is set in either Benton Sans or Merriweather. This 
-  includes body copy as well as page and section headers.
-  
-  **BentonSans** is primarily used for section headers and titling in it’s Thin 
-  case, but it is also used in it’s Book case in buttons and other scenarios. 
-  Occasionally BentonSans Medium is used in article templates.
-  
-  **Merriweather** is used in it’s Light case mainly for body copy and in the 
-  Stories and Articles sections.
-  
-  Markup: fonts.hbs
-  
-  Weight: 1
-  
-  .text--benton-thin - Benton Sans Thin
-  .text--benton-light - Benton Sans Light
-  .text--benton-book - Benton Sans Book
-  .text--benton-medium - Benton Sans Medium
-  .text--merriweather-light - Merriweather Light
-  
-  Style guide: typography.fonts
-  */
+Font Families
+
+All text on tableau.com is set in either Benton Sans or Merriweather. This 
+includes body copy as well as page and section headers.
+
+**BentonSans** is primarily used for section headers and titling in it’s Thin 
+case, but it is also used in it’s Book case in buttons and other scenarios. 
+Occasionally BentonSans Medium is used in article templates.
+
+**Merriweather** is used in it’s Light case mainly for body copy and in the 
+Stories and Articles sections.
+
+Markup: fonts.hbs
+
+Weight: 1
+
+.text--benton-thin - Benton Sans Thin
+.text--benton-light - Benton Sans Light
+.text--benton-book - Benton Sans Book
+.text--benton-medium - Benton Sans Medium
+.text--merriweather-light - Merriweather Light
+
+Style guide: typography.fonts
+*/
   /*
-  Body Copy
-  
-  Main body copy for longer chunks of content in the body of a page.
-  
-  Markup: body.hbs
-  
-  Weight: 2
-  
-  .text--body-large - Large body copy (15px)
-  .text--body-medium - Medium body copy (14px)
-  .text--body-small - Small body copy (12px)
-  
-  Style guide: typography.base
-   */
+Body Copy
+
+Main body copy for longer chunks of content in the body of a page.
+
+Markup: body.hbs
+
+Weight: 2
+
+.text--body-large - Large body copy (15px)
+.text--body-medium - Medium body copy (14px)
+.text--body-small - Small body copy (12px)
+
+Style guide: typography.base
+ */
   /*
-  Default Headings
-  
-  Used for title and prominent labels of content.
-  
-  Markup: headings-kss.hbs
-  
-  Weight: 3
-  
-  Styleguide typography.headings
-  */
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings-kss.hbs
+
+Weight: 3
+
+Styleguide typography.headings
+*/
   /*
-  Context-specific Headings
-  
-  These heading classes are used for specific contexts.
-  
-  Markup: context-headings.hbs
-  
-  Weight: 4
-  
-  .heading--homepage - Homepage Hero (70px) - uses <h1>
-  .heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
-  .heading--download - Download Success (48px) - uses <h1>
-  .heading--medium - Medium headers (36px) - uses <h2>
-  .heading--small - Small Headline/Product labels (26px) - uses <h3>
-  .heading--x-small - XS Headline (23px) - uses <h4>
-  .heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
-  
-  Styleguide typography.context-headings
-  */
+Context-specific Headings
+
+These heading classes are used for specific contexts.
+
+Markup: context-headings.hbs
+
+Weight: 4
+
+.heading--homepage - Homepage Hero (70px) - uses <h1>
+.heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
+.heading--download - Download Success (48px) - uses <h1>
+.heading--medium - Medium headers (36px) - uses <h2>
+.heading--small - Small Headline/Product labels (26px) - uses <h3>
+.heading--x-small - XS Headline (23px) - uses <h4>
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
+
+Styleguide typography.context-headings
+*/
   /*
-  Other Type Treatments
-  
-  Other treatments used for text throughout the site
-  
-  Markup: context-headings.hbs
-  
-  Weight: 5
-  
-  .text--large-copy - Large Copy
-  .text--sub-nav - Sub Nav Mission
-  .text--dropdown - Dropdown Copy
-  .text--label - Label/Nav item
-  
-  Style guide: typography.other
-  */
+Other Type Treatments
+
+Other treatments used for text throughout the site
+
+Markup: context-headings.hbs
+
+Weight: 5
+
+.text--large-copy - Large Copy
+.text--sub-nav - Sub Nav Mission
+.text--dropdown - Dropdown Copy
+.text--label - Label/Nav item
+
+Style guide: typography.other
+*/
   /*
-  Formatted Text
-  
-  Markup: formatted.hbs
-  
-  Weight: 6
-  
-  .text--bold - Bold text for emphasis. Same as <strong>
-  .text--light - Light text. Default for non-headings
-  .text--italic - Italic text for emphasis. Same as <em>
-  .text--caps - All caps text
-  .text--right - Right justified text
-  .text--left - Left justified text
-  .text--centered - Center justified text
-  .text--justified - Justified text
-  .text--huge - Huge text (36px)
-  .text--big - Big text (24px)
-  .text--base-size - Base size text (14px)
-  .text--small - Small text (12px)
-  .text--tiny - Tiny text - 10px
-  .text--lineheight-zero - Line height set to zero.
-  
-  Style guide: typography.formatted
-  */
+Formatted Text
+
+Markup: formatted.hbs
+
+Weight: 6
+
+.text--bold - Bold text for emphasis. Same as <strong>
+.text--light - Light text. Default for non-headings
+.text--italic - Italic text for emphasis. Same as <em>
+.text--caps - All caps text
+.text--right - Right justified text
+.text--left - Left justified text
+.text--centered - Center justified text
+.text--justified - Justified text
+.text--huge - Huge text (36px)
+.text--big - Big text (24px)
+.text--base-size - Base size text (14px)
+.text--small - Small text (12px)
+.text--tiny - Tiny text - 10px
+.text--lineheight-zero - Line height set to zero.
+
+Style guide: typography.formatted
+*/
   /*
-  Text Colors
-  
-  Colors to be used in the text palette.
-  
-  Markup: colors.hbs
-  
-  Weight: 7
-  
-  .text--negative - Negative Text colored text.
-  .text--light-body - Negative/light Body colored text.
-  .text--medium-body - Default Med. Body colored text.
-  .text--dark-body - Default Dark Body colored text.
-  .text--link - Link Orange colored text.
-  .text--headlines - Headlines colored text.
-  .text--nav-items - Nav Items colored text.
-  .text--data-sources - Data Sources colored text.
-  .text--stories - Stories colored text.
-  .text--learning - Learning colored text.
-  .text--highlight - Highlight Text colored text.
-  .text--mission-1 - Mission 1 colored text.
-  .text--mission-2 - Mission 2 colored text.
-  .text--mission-3 - Mission 3 colored text.
-  
-  Style guide: typography.colors
-  */
+Text Colors
+
+Colors to be used in the text palette.
+
+Markup: colors.hbs
+
+Weight: 7
+
+.text--negative - Negative Text colored text.
+.text--light-body - Negative/light Body colored text.
+.text--medium-body - Default Med. Body colored text.
+.text--dark-body - Default Dark Body colored text.
+.text--link - Link Orange colored text.
+.text--headlines - Headlines colored text.
+.text--nav-items - Nav Items colored text.
+.text--data-sources - Data Sources colored text.
+.text--stories - Stories colored text.
+.text--learning - Learning colored text.
+.text--highlight - Highlight Text colored text.
+.text--mission-1 - Mission 1 colored text.
+.text--mission-2 - Mission 2 colored text.
+.text--mission-3 - Mission 3 colored text.
+
+Style guide: typography.colors
+*/
   /* Create a class for each text color */
   /*
-  Hyperlinks
-  
-  Coming soon....
-  
-  Weight: 12
-  
-  Style guide: typography.hyperlinks
-  */
+Hyperlinks
+
+Coming soon....
+
+Weight: 12
+
+Style guide: typography.hyperlinks
+*/
 }
-/* line 12, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-4-3,
 body.kss .kss-example-preview .iframe-16-9 {
   position: relative;
@@ -1037,7 +1041,7 @@ body.kss .kss-example-preview .iframe-16-9 {
   /* 4:3 */
   height: 0;
 }
-/* line 18, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-4-3 iframe,
 body.kss .kss-example-preview .iframe-16-9 iframe {
   position: absolute;
@@ -1046,67 +1050,67 @@ body.kss .kss-example-preview .iframe-16-9 iframe {
   width: 100%;
   height: 100%;
 }
-/* line 26, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-16-9 {
   padding-bottom: 56.25%;
   /* 16:9 */
 }
-/* line 31, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .relative {
   position: relative;
   overflow: hidden;
 }
-/* line 37, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .absolute {
   position: absolute;
   overflow: hidden;
 }
-/* line 43, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .margin-zero {
   margin: 0;
 }
-/* line 48, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .padding-zero {
   padding: 0;
 }
-/* line 68, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .hide {
   display: none;
 }
+
 @media (max-width: 739px) {
-  /* line 74, ../../components/_helpers/_helpers.scss */
   body.kss .kss-example-preview .mobile-hide {
     display: none;
   }
 }
-/* line 14, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 19, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
-/* line 28, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li {
   display: inline-block;
 }
-/* line 35, ../../components/_helpers/_placeholders.scss */
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after {
+
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 72, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   -moz-transition: background 0.25s, opacity 0.25s;
   -o-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
-/* line 12, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-4-3,
 body.kss .kss-example-preview .iframe-16-9 {
   position: relative;
@@ -1114,7 +1118,7 @@ body.kss .kss-example-preview .iframe-16-9 {
   /* 4:3 */
   height: 0;
 }
-/* line 18, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-4-3 iframe,
 body.kss .kss-example-preview .iframe-16-9 iframe {
   position: absolute;
@@ -1123,81 +1127,82 @@ body.kss .kss-example-preview .iframe-16-9 iframe {
   width: 100%;
   height: 100%;
 }
-/* line 26, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .iframe-16-9 {
   padding-bottom: 56.25%;
   /* 16:9 */
 }
-/* line 31, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .relative {
   position: relative;
   overflow: hidden;
 }
-/* line 37, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .absolute {
   position: absolute;
   overflow: hidden;
 }
-/* line 43, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .margin-zero {
   margin: 0;
 }
-/* line 48, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .padding-zero {
   padding: 0;
 }
-/* line 68, ../../components/_helpers/_helpers.scss */
+
 body.kss .kss-example-preview .hide {
   display: none;
 }
+
 @media (max-width: 739px) {
-  /* line 74, ../../components/_helpers/_helpers.scss */
   body.kss .kss-example-preview .mobile-hide {
     display: none;
   }
 }
-/* line 14, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 19, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
-/* line 28, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li {
   display: inline-block;
 }
-/* line 35, ../../components/_helpers/_placeholders.scss */
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after {
+
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 72, ../../components/_helpers/_placeholders.scss */
+
 body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   -moz-transition: background 0.25s, opacity 0.25s;
   -o-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
-/* line 11, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item {
   position: relative;
   padding: 0 1em;
   border-top: 1px solid #dedede;
 }
-/* line 17, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item:last-child {
   border-bottom: 1px solid #dedede;
 }
-/* line 21, ../../components/accordion/_accordion.scss */
-body.kss .kss-example-preview .accordion--item:hover, body.kss .kss-example-preview .accordion--item.open {
+
+body.kss .kss-example-preview .accordion--item:hover,
+body.kss .kss-example-preview .accordion--item.open {
   background-color: #ebebeb;
 }
-/* line 27, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item--title {
   margin: 0;
   padding: 1.3em 40px 1.3em 0;
@@ -1205,7 +1210,7 @@ body.kss .kss-example-preview .accordion--item--title {
   cursor: pointer;
   text-transform: uppercase;
 }
-/* line 34, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item--title:after {
   position: absolute;
   top: 50%;
@@ -1215,40 +1220,40 @@ body.kss .kss-example-preview .accordion--item--title:after {
   font-family: 'tc-icons';
   line-height: 1;
 }
-/* line 45, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item.open .accordion--item--title:after {
   content: "-";
 }
-/* line 49, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item--content {
   padding-bottom: 1.5em;
 }
-/* line 52, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item--content p:first-child,
 body.kss .kss-example-preview .accordion--item--content ul:first-child {
   margin-top: 0;
 }
-/* line 57, ../../components/accordion/_accordion.scss */
+
 body.kss .kss-example-preview .accordion--item--content p:last-child,
 body.kss .kss-example-preview .accordion--item--content ul:last-child {
   margin-bottom: 0;
 }
-/* line 1, ../../components/anchor/_anchor.scss */
+
 body.kss .kss-example-preview .anchor {
   position: absolute;
   top: -78px;
 }
-/* line 6, ../../components/anchor/_anchor.scss */
+
 body.kss .kss-example-preview .admin-menu .anchor {
   top: -107px;
 }
+
 @media (max-width: 739px) {
-  /* line 11, ../../components/anchor/_anchor.scss */
   body.kss .kss-example-preview .anchor {
     top: -49px;
   }
 }
-/* line 22, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge {
   width: 200px;
   height: 200px;
@@ -1261,468 +1266,416 @@ body.kss .kss-example-preview .badge {
   text-align: center;
   font-size: 0.7em;
 }
-/* line 35, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--outlined {
   background: none;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--white {
   background: #fff;
   border-color: #fff;
   color: #333;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--white.badge--outlined {
   background: none;
   color: #fff;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--light-gray-1 {
   background: #fafafa;
   border-color: #fafafa;
   color: #333;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--light-gray-1.badge--outlined {
   background: none;
   color: #fafafa;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--light-gray-2 {
   background: #ebebeb;
   border-color: #ebebeb;
   color: #333;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--light-gray-2.badge--outlined {
   background: none;
   color: #ebebeb;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-1 {
   background: #464646;
   border-color: #464646;
   color: #bbb;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-1.badge--outlined {
   background: none;
   color: #464646;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-2 {
   background: #333;
   border-color: #333;
   color: #bbb;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-2.badge--outlined {
   background: none;
   color: #333;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-3 {
   background: #1b1b1b;
   border-color: #1b1b1b;
   color: #bbb;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--dark-gray-3.badge--outlined {
   background: none;
   color: #1b1b1b;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--about-featured {
   background: #457387;
   border-color: #457387;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--about-featured.badge--outlined {
   background: none;
   color: #457387;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--data-sources {
   background: #2e4c65;
   border-color: #2e4c65;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--data-sources.badge--outlined {
   background: none;
   color: #2e4c65;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--desktop {
   background: #23529c;
   border-color: #23529c;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--desktop.badge--outlined {
   background: none;
   color: #23529c;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--server {
   background: #7fa9bb;
   border-color: #7fa9bb;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--server.badge--outlined {
   background: none;
   color: #7fa9bb;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--online {
   background: #58a3b9;
   border-color: #58a3b9;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--online.badge--outlined {
   background: none;
   color: #58a3b9;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--public {
   background: #324E7A;
   border-color: #324E7A;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--public.badge--outlined {
   background: none;
   color: #324E7A;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--reader {
   background: #B28CCF;
   border-color: #B28CCF;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--reader.badge--outlined {
   background: none;
   color: #B28CCF;
 }
-/* line 40, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--mobile {
   background: #DB8E6A;
   border-color: #DB8E6A;
   color: #fff;
 }
-/* line 45, ../../components/badge/_badge.scss */
+
 body.kss .kss-example-preview .badge.badge--mobile.badge--outlined {
   background: none;
   color: #DB8E6A;
 }
-/* line 19, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box__padded {
   padding: 2em;
 }
-/* line 22, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box__padded.box__padded--one {
   padding: 1em;
 }
-/* line 26, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box__padded.box__padded--three {
   padding: 3em;
 }
-/* line 30, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box__padded.box__padded--four {
   padding: 3em;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--white {
   background-color: #fff;
   color: #333;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--white h1, body.kss .kss-example-preview .box--white .heading--homepage, body.kss .kss-example-preview .box--white .heading--product, body.kss .kss-example-preview .box--white .heading--download, body.kss .kss-example-preview .box--white .heading--h1,
-body.kss .kss-example-preview .box--white h2,
-body.kss .kss-example-preview .box--white .heading--medium, body.kss .kss-example-preview .box--white .heading--h2,
-body.kss .kss-example-preview .box--white h3,
-body.kss .kss-example-preview .box--white .heading--small, body.kss .kss-example-preview .box--white .heading--h3,
-body.kss .kss-example-preview .box--white h4,
-body.kss .kss-example-preview .box--white .heading--x-small, body.kss .kss-example-preview .box--white .heading--h4,
-body.kss .kss-example-preview .box--white h5,
-body.kss .kss-example-preview .box--white .heading--label, body.kss .kss-example-preview .box--white .heading--h5,
+body.kss .kss-example-preview .box--white h2, body.kss .kss-example-preview .box--white .heading--medium, body.kss .kss-example-preview .box--white .heading--h2,
+body.kss .kss-example-preview .box--white h3, body.kss .kss-example-preview .box--white .heading--small, body.kss .kss-example-preview .box--white .heading--h3,
+body.kss .kss-example-preview .box--white h4, body.kss .kss-example-preview .box--white .heading--x-small, body.kss .kss-example-preview .box--white .heading--h4,
+body.kss .kss-example-preview .box--white h5, body.kss .kss-example-preview .box--white .heading--label, body.kss .kss-example-preview .box--white .heading--h5,
 body.kss .kss-example-preview .box--white h6, body.kss .kss-example-preview .box--white .heading--h6 {
   color: #000;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--light-gray-1 h1, body.kss .kss-example-preview .box--light-gray-1 .heading--homepage, body.kss .kss-example-preview .box--light-gray-1 .heading--product, body.kss .kss-example-preview .box--light-gray-1 .heading--download, body.kss .kss-example-preview .box--light-gray-1 .heading--h1,
-body.kss .kss-example-preview .box--light-gray-1 h2,
-body.kss .kss-example-preview .box--light-gray-1 .heading--medium, body.kss .kss-example-preview .box--light-gray-1 .heading--h2,
-body.kss .kss-example-preview .box--light-gray-1 h3,
-body.kss .kss-example-preview .box--light-gray-1 .heading--small, body.kss .kss-example-preview .box--light-gray-1 .heading--h3,
-body.kss .kss-example-preview .box--light-gray-1 h4,
-body.kss .kss-example-preview .box--light-gray-1 .heading--x-small, body.kss .kss-example-preview .box--light-gray-1 .heading--h4,
-body.kss .kss-example-preview .box--light-gray-1 h5,
-body.kss .kss-example-preview .box--light-gray-1 .heading--label, body.kss .kss-example-preview .box--light-gray-1 .heading--h5,
+body.kss .kss-example-preview .box--light-gray-1 h2, body.kss .kss-example-preview .box--light-gray-1 .heading--medium, body.kss .kss-example-preview .box--light-gray-1 .heading--h2,
+body.kss .kss-example-preview .box--light-gray-1 h3, body.kss .kss-example-preview .box--light-gray-1 .heading--small, body.kss .kss-example-preview .box--light-gray-1 .heading--h3,
+body.kss .kss-example-preview .box--light-gray-1 h4, body.kss .kss-example-preview .box--light-gray-1 .heading--x-small, body.kss .kss-example-preview .box--light-gray-1 .heading--h4,
+body.kss .kss-example-preview .box--light-gray-1 h5, body.kss .kss-example-preview .box--light-gray-1 .heading--label, body.kss .kss-example-preview .box--light-gray-1 .heading--h5,
 body.kss .kss-example-preview .box--light-gray-1 h6, body.kss .kss-example-preview .box--light-gray-1 .heading--h6 {
   color: #000;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--light-gray-2 {
   background-color: #ebebeb;
   color: #333;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--light-gray-2 h1, body.kss .kss-example-preview .box--light-gray-2 .heading--homepage, body.kss .kss-example-preview .box--light-gray-2 .heading--product, body.kss .kss-example-preview .box--light-gray-2 .heading--download, body.kss .kss-example-preview .box--light-gray-2 .heading--h1,
-body.kss .kss-example-preview .box--light-gray-2 h2,
-body.kss .kss-example-preview .box--light-gray-2 .heading--medium, body.kss .kss-example-preview .box--light-gray-2 .heading--h2,
-body.kss .kss-example-preview .box--light-gray-2 h3,
-body.kss .kss-example-preview .box--light-gray-2 .heading--small, body.kss .kss-example-preview .box--light-gray-2 .heading--h3,
-body.kss .kss-example-preview .box--light-gray-2 h4,
-body.kss .kss-example-preview .box--light-gray-2 .heading--x-small, body.kss .kss-example-preview .box--light-gray-2 .heading--h4,
-body.kss .kss-example-preview .box--light-gray-2 h5,
-body.kss .kss-example-preview .box--light-gray-2 .heading--label, body.kss .kss-example-preview .box--light-gray-2 .heading--h5,
+body.kss .kss-example-preview .box--light-gray-2 h2, body.kss .kss-example-preview .box--light-gray-2 .heading--medium, body.kss .kss-example-preview .box--light-gray-2 .heading--h2,
+body.kss .kss-example-preview .box--light-gray-2 h3, body.kss .kss-example-preview .box--light-gray-2 .heading--small, body.kss .kss-example-preview .box--light-gray-2 .heading--h3,
+body.kss .kss-example-preview .box--light-gray-2 h4, body.kss .kss-example-preview .box--light-gray-2 .heading--x-small, body.kss .kss-example-preview .box--light-gray-2 .heading--h4,
+body.kss .kss-example-preview .box--light-gray-2 h5, body.kss .kss-example-preview .box--light-gray-2 .heading--label, body.kss .kss-example-preview .box--light-gray-2 .heading--h5,
 body.kss .kss-example-preview .box--light-gray-2 h6, body.kss .kss-example-preview .box--light-gray-2 .heading--h6 {
   color: #000;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-1 h1, body.kss .kss-example-preview .box--dark-gray-1 .heading--homepage, body.kss .kss-example-preview .box--dark-gray-1 .heading--product, body.kss .kss-example-preview .box--dark-gray-1 .heading--download, body.kss .kss-example-preview .box--dark-gray-1 .heading--h1,
-body.kss .kss-example-preview .box--dark-gray-1 h2,
-body.kss .kss-example-preview .box--dark-gray-1 .heading--medium, body.kss .kss-example-preview .box--dark-gray-1 .heading--h2,
-body.kss .kss-example-preview .box--dark-gray-1 h3,
-body.kss .kss-example-preview .box--dark-gray-1 .heading--small, body.kss .kss-example-preview .box--dark-gray-1 .heading--h3,
-body.kss .kss-example-preview .box--dark-gray-1 h4,
-body.kss .kss-example-preview .box--dark-gray-1 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-1 .heading--h4,
-body.kss .kss-example-preview .box--dark-gray-1 h5,
-body.kss .kss-example-preview .box--dark-gray-1 .heading--label, body.kss .kss-example-preview .box--dark-gray-1 .heading--h5,
+body.kss .kss-example-preview .box--dark-gray-1 h2, body.kss .kss-example-preview .box--dark-gray-1 .heading--medium, body.kss .kss-example-preview .box--dark-gray-1 .heading--h2,
+body.kss .kss-example-preview .box--dark-gray-1 h3, body.kss .kss-example-preview .box--dark-gray-1 .heading--small, body.kss .kss-example-preview .box--dark-gray-1 .heading--h3,
+body.kss .kss-example-preview .box--dark-gray-1 h4, body.kss .kss-example-preview .box--dark-gray-1 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-1 .heading--h4,
+body.kss .kss-example-preview .box--dark-gray-1 h5, body.kss .kss-example-preview .box--dark-gray-1 .heading--label, body.kss .kss-example-preview .box--dark-gray-1 .heading--h5,
 body.kss .kss-example-preview .box--dark-gray-1 h6, body.kss .kss-example-preview .box--dark-gray-1 .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-2 {
   background-color: #333;
   color: #bbb;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-2 h1, body.kss .kss-example-preview .box--dark-gray-2 .heading--homepage, body.kss .kss-example-preview .box--dark-gray-2 .heading--product, body.kss .kss-example-preview .box--dark-gray-2 .heading--download, body.kss .kss-example-preview .box--dark-gray-2 .heading--h1,
-body.kss .kss-example-preview .box--dark-gray-2 h2,
-body.kss .kss-example-preview .box--dark-gray-2 .heading--medium, body.kss .kss-example-preview .box--dark-gray-2 .heading--h2,
-body.kss .kss-example-preview .box--dark-gray-2 h3,
-body.kss .kss-example-preview .box--dark-gray-2 .heading--small, body.kss .kss-example-preview .box--dark-gray-2 .heading--h3,
-body.kss .kss-example-preview .box--dark-gray-2 h4,
-body.kss .kss-example-preview .box--dark-gray-2 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-2 .heading--h4,
-body.kss .kss-example-preview .box--dark-gray-2 h5,
-body.kss .kss-example-preview .box--dark-gray-2 .heading--label, body.kss .kss-example-preview .box--dark-gray-2 .heading--h5,
+body.kss .kss-example-preview .box--dark-gray-2 h2, body.kss .kss-example-preview .box--dark-gray-2 .heading--medium, body.kss .kss-example-preview .box--dark-gray-2 .heading--h2,
+body.kss .kss-example-preview .box--dark-gray-2 h3, body.kss .kss-example-preview .box--dark-gray-2 .heading--small, body.kss .kss-example-preview .box--dark-gray-2 .heading--h3,
+body.kss .kss-example-preview .box--dark-gray-2 h4, body.kss .kss-example-preview .box--dark-gray-2 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-2 .heading--h4,
+body.kss .kss-example-preview .box--dark-gray-2 h5, body.kss .kss-example-preview .box--dark-gray-2 .heading--label, body.kss .kss-example-preview .box--dark-gray-2 .heading--h5,
 body.kss .kss-example-preview .box--dark-gray-2 h6, body.kss .kss-example-preview .box--dark-gray-2 .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--dark-gray-3 h1, body.kss .kss-example-preview .box--dark-gray-3 .heading--homepage, body.kss .kss-example-preview .box--dark-gray-3 .heading--product, body.kss .kss-example-preview .box--dark-gray-3 .heading--download, body.kss .kss-example-preview .box--dark-gray-3 .heading--h1,
-body.kss .kss-example-preview .box--dark-gray-3 h2,
-body.kss .kss-example-preview .box--dark-gray-3 .heading--medium, body.kss .kss-example-preview .box--dark-gray-3 .heading--h2,
-body.kss .kss-example-preview .box--dark-gray-3 h3,
-body.kss .kss-example-preview .box--dark-gray-3 .heading--small, body.kss .kss-example-preview .box--dark-gray-3 .heading--h3,
-body.kss .kss-example-preview .box--dark-gray-3 h4,
-body.kss .kss-example-preview .box--dark-gray-3 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-3 .heading--h4,
-body.kss .kss-example-preview .box--dark-gray-3 h5,
-body.kss .kss-example-preview .box--dark-gray-3 .heading--label, body.kss .kss-example-preview .box--dark-gray-3 .heading--h5,
+body.kss .kss-example-preview .box--dark-gray-3 h2, body.kss .kss-example-preview .box--dark-gray-3 .heading--medium, body.kss .kss-example-preview .box--dark-gray-3 .heading--h2,
+body.kss .kss-example-preview .box--dark-gray-3 h3, body.kss .kss-example-preview .box--dark-gray-3 .heading--small, body.kss .kss-example-preview .box--dark-gray-3 .heading--h3,
+body.kss .kss-example-preview .box--dark-gray-3 h4, body.kss .kss-example-preview .box--dark-gray-3 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-3 .heading--h4,
+body.kss .kss-example-preview .box--dark-gray-3 h5, body.kss .kss-example-preview .box--dark-gray-3 .heading--label, body.kss .kss-example-preview .box--dark-gray-3 .heading--h5,
 body.kss .kss-example-preview .box--dark-gray-3 h6, body.kss .kss-example-preview .box--dark-gray-3 .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--about-featured {
   background-color: #457387;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--about-featured h1, body.kss .kss-example-preview .box--about-featured .heading--homepage, body.kss .kss-example-preview .box--about-featured .heading--product, body.kss .kss-example-preview .box--about-featured .heading--download, body.kss .kss-example-preview .box--about-featured .heading--h1,
-body.kss .kss-example-preview .box--about-featured h2,
-body.kss .kss-example-preview .box--about-featured .heading--medium, body.kss .kss-example-preview .box--about-featured .heading--h2,
-body.kss .kss-example-preview .box--about-featured h3,
-body.kss .kss-example-preview .box--about-featured .heading--small, body.kss .kss-example-preview .box--about-featured .heading--h3,
-body.kss .kss-example-preview .box--about-featured h4,
-body.kss .kss-example-preview .box--about-featured .heading--x-small, body.kss .kss-example-preview .box--about-featured .heading--h4,
-body.kss .kss-example-preview .box--about-featured h5,
-body.kss .kss-example-preview .box--about-featured .heading--label, body.kss .kss-example-preview .box--about-featured .heading--h5,
+body.kss .kss-example-preview .box--about-featured h2, body.kss .kss-example-preview .box--about-featured .heading--medium, body.kss .kss-example-preview .box--about-featured .heading--h2,
+body.kss .kss-example-preview .box--about-featured h3, body.kss .kss-example-preview .box--about-featured .heading--small, body.kss .kss-example-preview .box--about-featured .heading--h3,
+body.kss .kss-example-preview .box--about-featured h4, body.kss .kss-example-preview .box--about-featured .heading--x-small, body.kss .kss-example-preview .box--about-featured .heading--h4,
+body.kss .kss-example-preview .box--about-featured h5, body.kss .kss-example-preview .box--about-featured .heading--label, body.kss .kss-example-preview .box--about-featured .heading--h5,
 body.kss .kss-example-preview .box--about-featured h6, body.kss .kss-example-preview .box--about-featured .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--data-sources {
   background-color: #2e4c65;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--data-sources h1, body.kss .kss-example-preview .box--data-sources .heading--homepage, body.kss .kss-example-preview .box--data-sources .heading--product, body.kss .kss-example-preview .box--data-sources .heading--download, body.kss .kss-example-preview .box--data-sources .heading--h1,
-body.kss .kss-example-preview .box--data-sources h2,
-body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
-body.kss .kss-example-preview .box--data-sources h3,
-body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
-body.kss .kss-example-preview .box--data-sources h4,
-body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
-body.kss .kss-example-preview .box--data-sources h5,
-body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
+body.kss .kss-example-preview .box--data-sources h2, body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
+body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
+body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
+body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
 body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .box--data-sources .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--desktop {
   background-color: #23529c;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--desktop h1, body.kss .kss-example-preview .box--desktop .heading--homepage, body.kss .kss-example-preview .box--desktop .heading--product, body.kss .kss-example-preview .box--desktop .heading--download, body.kss .kss-example-preview .box--desktop .heading--h1,
-body.kss .kss-example-preview .box--desktop h2,
-body.kss .kss-example-preview .box--desktop .heading--medium, body.kss .kss-example-preview .box--desktop .heading--h2,
-body.kss .kss-example-preview .box--desktop h3,
-body.kss .kss-example-preview .box--desktop .heading--small, body.kss .kss-example-preview .box--desktop .heading--h3,
-body.kss .kss-example-preview .box--desktop h4,
-body.kss .kss-example-preview .box--desktop .heading--x-small, body.kss .kss-example-preview .box--desktop .heading--h4,
-body.kss .kss-example-preview .box--desktop h5,
-body.kss .kss-example-preview .box--desktop .heading--label, body.kss .kss-example-preview .box--desktop .heading--h5,
+body.kss .kss-example-preview .box--desktop h2, body.kss .kss-example-preview .box--desktop .heading--medium, body.kss .kss-example-preview .box--desktop .heading--h2,
+body.kss .kss-example-preview .box--desktop h3, body.kss .kss-example-preview .box--desktop .heading--small, body.kss .kss-example-preview .box--desktop .heading--h3,
+body.kss .kss-example-preview .box--desktop h4, body.kss .kss-example-preview .box--desktop .heading--x-small, body.kss .kss-example-preview .box--desktop .heading--h4,
+body.kss .kss-example-preview .box--desktop h5, body.kss .kss-example-preview .box--desktop .heading--label, body.kss .kss-example-preview .box--desktop .heading--h5,
 body.kss .kss-example-preview .box--desktop h6, body.kss .kss-example-preview .box--desktop .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--server {
   background-color: #7fa9bb;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--server h1, body.kss .kss-example-preview .box--server .heading--homepage, body.kss .kss-example-preview .box--server .heading--product, body.kss .kss-example-preview .box--server .heading--download, body.kss .kss-example-preview .box--server .heading--h1,
-body.kss .kss-example-preview .box--server h2,
-body.kss .kss-example-preview .box--server .heading--medium, body.kss .kss-example-preview .box--server .heading--h2,
-body.kss .kss-example-preview .box--server h3,
-body.kss .kss-example-preview .box--server .heading--small, body.kss .kss-example-preview .box--server .heading--h3,
-body.kss .kss-example-preview .box--server h4,
-body.kss .kss-example-preview .box--server .heading--x-small, body.kss .kss-example-preview .box--server .heading--h4,
-body.kss .kss-example-preview .box--server h5,
-body.kss .kss-example-preview .box--server .heading--label, body.kss .kss-example-preview .box--server .heading--h5,
+body.kss .kss-example-preview .box--server h2, body.kss .kss-example-preview .box--server .heading--medium, body.kss .kss-example-preview .box--server .heading--h2,
+body.kss .kss-example-preview .box--server h3, body.kss .kss-example-preview .box--server .heading--small, body.kss .kss-example-preview .box--server .heading--h3,
+body.kss .kss-example-preview .box--server h4, body.kss .kss-example-preview .box--server .heading--x-small, body.kss .kss-example-preview .box--server .heading--h4,
+body.kss .kss-example-preview .box--server h5, body.kss .kss-example-preview .box--server .heading--label, body.kss .kss-example-preview .box--server .heading--h5,
 body.kss .kss-example-preview .box--server h6, body.kss .kss-example-preview .box--server .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--online {
   background-color: #58a3b9;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--online h1, body.kss .kss-example-preview .box--online .heading--homepage, body.kss .kss-example-preview .box--online .heading--product, body.kss .kss-example-preview .box--online .heading--download, body.kss .kss-example-preview .box--online .heading--h1,
-body.kss .kss-example-preview .box--online h2,
-body.kss .kss-example-preview .box--online .heading--medium, body.kss .kss-example-preview .box--online .heading--h2,
-body.kss .kss-example-preview .box--online h3,
-body.kss .kss-example-preview .box--online .heading--small, body.kss .kss-example-preview .box--online .heading--h3,
-body.kss .kss-example-preview .box--online h4,
-body.kss .kss-example-preview .box--online .heading--x-small, body.kss .kss-example-preview .box--online .heading--h4,
-body.kss .kss-example-preview .box--online h5,
-body.kss .kss-example-preview .box--online .heading--label, body.kss .kss-example-preview .box--online .heading--h5,
+body.kss .kss-example-preview .box--online h2, body.kss .kss-example-preview .box--online .heading--medium, body.kss .kss-example-preview .box--online .heading--h2,
+body.kss .kss-example-preview .box--online h3, body.kss .kss-example-preview .box--online .heading--small, body.kss .kss-example-preview .box--online .heading--h3,
+body.kss .kss-example-preview .box--online h4, body.kss .kss-example-preview .box--online .heading--x-small, body.kss .kss-example-preview .box--online .heading--h4,
+body.kss .kss-example-preview .box--online h5, body.kss .kss-example-preview .box--online .heading--label, body.kss .kss-example-preview .box--online .heading--h5,
 body.kss .kss-example-preview .box--online h6, body.kss .kss-example-preview .box--online .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--public {
   background-color: #324E7A;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--public h1, body.kss .kss-example-preview .box--public .heading--homepage, body.kss .kss-example-preview .box--public .heading--product, body.kss .kss-example-preview .box--public .heading--download, body.kss .kss-example-preview .box--public .heading--h1,
-body.kss .kss-example-preview .box--public h2,
-body.kss .kss-example-preview .box--public .heading--medium, body.kss .kss-example-preview .box--public .heading--h2,
-body.kss .kss-example-preview .box--public h3,
-body.kss .kss-example-preview .box--public .heading--small, body.kss .kss-example-preview .box--public .heading--h3,
-body.kss .kss-example-preview .box--public h4,
-body.kss .kss-example-preview .box--public .heading--x-small, body.kss .kss-example-preview .box--public .heading--h4,
-body.kss .kss-example-preview .box--public h5,
-body.kss .kss-example-preview .box--public .heading--label, body.kss .kss-example-preview .box--public .heading--h5,
+body.kss .kss-example-preview .box--public h2, body.kss .kss-example-preview .box--public .heading--medium, body.kss .kss-example-preview .box--public .heading--h2,
+body.kss .kss-example-preview .box--public h3, body.kss .kss-example-preview .box--public .heading--small, body.kss .kss-example-preview .box--public .heading--h3,
+body.kss .kss-example-preview .box--public h4, body.kss .kss-example-preview .box--public .heading--x-small, body.kss .kss-example-preview .box--public .heading--h4,
+body.kss .kss-example-preview .box--public h5, body.kss .kss-example-preview .box--public .heading--label, body.kss .kss-example-preview .box--public .heading--h5,
 body.kss .kss-example-preview .box--public h6, body.kss .kss-example-preview .box--public .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--reader {
   background-color: #B28CCF;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--reader h1, body.kss .kss-example-preview .box--reader .heading--homepage, body.kss .kss-example-preview .box--reader .heading--product, body.kss .kss-example-preview .box--reader .heading--download, body.kss .kss-example-preview .box--reader .heading--h1,
-body.kss .kss-example-preview .box--reader h2,
-body.kss .kss-example-preview .box--reader .heading--medium, body.kss .kss-example-preview .box--reader .heading--h2,
-body.kss .kss-example-preview .box--reader h3,
-body.kss .kss-example-preview .box--reader .heading--small, body.kss .kss-example-preview .box--reader .heading--h3,
-body.kss .kss-example-preview .box--reader h4,
-body.kss .kss-example-preview .box--reader .heading--x-small, body.kss .kss-example-preview .box--reader .heading--h4,
-body.kss .kss-example-preview .box--reader h5,
-body.kss .kss-example-preview .box--reader .heading--label, body.kss .kss-example-preview .box--reader .heading--h5,
+body.kss .kss-example-preview .box--reader h2, body.kss .kss-example-preview .box--reader .heading--medium, body.kss .kss-example-preview .box--reader .heading--h2,
+body.kss .kss-example-preview .box--reader h3, body.kss .kss-example-preview .box--reader .heading--small, body.kss .kss-example-preview .box--reader .heading--h3,
+body.kss .kss-example-preview .box--reader h4, body.kss .kss-example-preview .box--reader .heading--x-small, body.kss .kss-example-preview .box--reader .heading--h4,
+body.kss .kss-example-preview .box--reader h5, body.kss .kss-example-preview .box--reader .heading--label, body.kss .kss-example-preview .box--reader .heading--h5,
 body.kss .kss-example-preview .box--reader h6, body.kss .kss-example-preview .box--reader .heading--h6 {
   color: #fff;
 }
-/* line 68, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--mobile {
   background-color: #DB8E6A;
   color: #fff;
 }
-/* line 72, ../../components/box/_box.scss */
+
 body.kss .kss-example-preview .box--mobile h1, body.kss .kss-example-preview .box--mobile .heading--homepage, body.kss .kss-example-preview .box--mobile .heading--product, body.kss .kss-example-preview .box--mobile .heading--download, body.kss .kss-example-preview .box--mobile .heading--h1,
-body.kss .kss-example-preview .box--mobile h2,
-body.kss .kss-example-preview .box--mobile .heading--medium, body.kss .kss-example-preview .box--mobile .heading--h2,
-body.kss .kss-example-preview .box--mobile h3,
-body.kss .kss-example-preview .box--mobile .heading--small, body.kss .kss-example-preview .box--mobile .heading--h3,
-body.kss .kss-example-preview .box--mobile h4,
-body.kss .kss-example-preview .box--mobile .heading--x-small, body.kss .kss-example-preview .box--mobile .heading--h4,
-body.kss .kss-example-preview .box--mobile h5,
-body.kss .kss-example-preview .box--mobile .heading--label, body.kss .kss-example-preview .box--mobile .heading--h5,
+body.kss .kss-example-preview .box--mobile h2, body.kss .kss-example-preview .box--mobile .heading--medium, body.kss .kss-example-preview .box--mobile .heading--h2,
+body.kss .kss-example-preview .box--mobile h3, body.kss .kss-example-preview .box--mobile .heading--small, body.kss .kss-example-preview .box--mobile .heading--h3,
+body.kss .kss-example-preview .box--mobile h4, body.kss .kss-example-preview .box--mobile .heading--x-small, body.kss .kss-example-preview .box--mobile .heading--h4,
+body.kss .kss-example-preview .box--mobile h5, body.kss .kss-example-preview .box--mobile .heading--label, body.kss .kss-example-preview .box--mobile .heading--h5,
 body.kss .kss-example-preview .box--mobile h6, body.kss .kss-example-preview .box--mobile .heading--h6 {
   color: #fff;
 }
-/* line 104, ../../components/box/_box.scss */
-body.kss .kss-example-preview .box__stretchy.box__stretchy--halves, body.kss .kss-example-preview .box__stretchy.box__stretchy--thirds, body.kss .kss-example-preview .box__stretchy.box__stretchy--fourths, body.kss .kss-example-preview .box__stretchy.box__stretchy--fifths, body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
+
+body.kss .kss-example-preview .box__stretchy.box__stretchy--halves,
+body.kss .kss-example-preview .box__stretchy.box__stretchy--thirds,
+body.kss .kss-example-preview .box__stretchy.box__stretchy--fourths,
+body.kss .kss-example-preview .box__stretchy.box__stretchy--fifths,
+body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
   float: left;
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
 }
+
 @media (min-width: 740px) {
-  /* line 116, ../../components/box/_box.scss */
-  body.kss .kss-example-preview .box__stretchy.box__stretchy--halves, body.kss .kss-example-preview .box__stretchy.box__stretchy--thirds, body.kss .kss-example-preview .box__stretchy.box__stretchy--fourths, body.kss .kss-example-preview .box__stretchy.box__stretchy--fifths, body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
+  body.kss .kss-example-preview .box__stretchy.box__stretchy--halves,
+  body.kss .kss-example-preview .box__stretchy.box__stretchy--thirds,
+  body.kss .kss-example-preview .box__stretchy.box__stretchy--fourths,
+  body.kss .kss-example-preview .box__stretchy.box__stretchy--fifths,
+  body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
     width: 50%;
   }
-  /* line 124, ../../components/box/_box.scss */
   body.kss .kss-example-preview .box__stretchy.box__stretchy--tablet-full {
     width: 100%;
   }
 }
+
 @media (min-width: 980px) {
-  /* line 131, ../../components/box/_box.scss */
   body.kss .kss-example-preview .box__stretchy.box__stretchy--thirds {
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
-  /* line 135, ../../components/box/_box.scss */
   body.kss .kss-example-preview .box__stretchy.box__stretchy--fourths {
     width: 25%;
   }
-  /* line 139, ../../components/box/_box.scss */
   body.kss .kss-example-preview .box__stretchy.box__stretchy--fifths {
     width: 20%;
   }
-  /* line 143, ../../components/box/_box.scss */
   body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 }
-/* line 14, ../../components/content_container/_content_container.scss */
+
 body.kss .kss-example-preview .content-container {
   box-sizing: border-box;
   max-width: 1550px;
@@ -1731,12 +1684,12 @@ body.kss .kss-example-preview .content-container {
   padding-left: 9%;
   padding-right: 9%;
 }
-/* line 23, ../../components/content_container/_content_container.scss */
+
 body.kss .kss-example-preview .content-container.content-container--wide {
   padding-left: 3%;
   padding-right: 3%;
 }
-/* line 19, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta {
   display: inline-block;
   margin: 0.5em;
@@ -1756,120 +1709,131 @@ body.kss .kss-example-preview .cta {
   -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
-/* line 36, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta:hover, body.kss .kss-example-preview .cta:focus {
+
+body.kss .kss-example-preview .cta:hover,
+body.kss .kss-example-preview .cta:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
-/* line 42, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta:active {
   background-color: #c92434;
   text-decoration: underline;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--orange {
   background-color: #e8762c;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--orange:hover, body.kss .kss-example-preview .cta.cta--orange:focus {
+
+body.kss .kss-example-preview .cta.cta--orange:hover,
+body.kss .kss-example-preview .cta.cta--orange:focus {
   background-color: #ea8442;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--desktop {
   background-color: #324e7a;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--desktop:hover, body.kss .kss-example-preview .cta.cta--desktop:focus {
+
+body.kss .kss-example-preview .cta.cta--desktop:hover,
+body.kss .kss-example-preview .cta.cta--desktop:focus {
   background-color: #23529c;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--server {
   background-color: #5e899b;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--server:hover, body.kss .kss-example-preview .cta.cta--server:focus {
+
+body.kss .kss-example-preview .cta.cta--server:hover,
+body.kss .kss-example-preview .cta.cta--server:focus {
   background-color: #7fa9bb;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--online {
   background-color: #7099a5;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--online:hover, body.kss .kss-example-preview .cta.cta--online:focus {
+
+body.kss .kss-example-preview .cta.cta--online:hover,
+body.kss .kss-example-preview .cta.cta--online:focus {
   background-color: #58a3b9;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--public {
   background-color: #2d4b65;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--public:hover, body.kss .kss-example-preview .cta.cta--public:focus {
+
+body.kss .kss-example-preview .cta.cta--public:hover,
+body.kss .kss-example-preview .cta.cta--public:focus {
   background-color: #324E7A;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--reader {
   background-color: #9d7eb5;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--reader:hover, body.kss .kss-example-preview .cta.cta--reader:focus {
+
+body.kss .kss-example-preview .cta.cta--reader:hover,
+body.kss .kss-example-preview .cta.cta--reader:focus {
   background-color: #B28CCF;
 }
-/* line 48, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--mobile {
   background-color: #c87e5b;
 }
-/* line 51, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--mobile:hover, body.kss .kss-example-preview .cta.cta--mobile:focus {
+
+body.kss .kss-example-preview .cta.cta--mobile:hover,
+body.kss .kss-example-preview .cta.cta--mobile:focus {
   background-color: #DB8E6A;
 }
-/* line 58, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta.cta--download:after, body.kss .kss-example-preview .cta.cta--play:after {
+
+body.kss .kss-example-preview .cta.cta--download:after,
+body.kss .kss-example-preview .cta.cta--play:after {
   display: inline-block;
   padding-left: 1em;
 }
-/* line 64, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--download:after {
   content: ">";
 }
-/* line 68, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta.cta--play:after {
   content: "▶";
 }
-/* line 85, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta--secondary {
   border: 2px solid #eb912c;
   padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
-/* line 91, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta--secondary:hover, body.kss .kss-example-preview .cta--secondary:focus {
+
+body.kss .kss-example-preview .cta--secondary:hover,
+body.kss .kss-example-preview .cta--secondary:focus {
   background: transparent;
 }
-/* line 96, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta--secondary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
-/* line 116, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
-/* line 122, ../../components/cta/_cta.scss */
-body.kss .kss-example-preview .cta--tertiary:hover, body.kss .kss-example-preview .cta--tertiary:focus {
+
+body.kss .kss-example-preview .cta--tertiary:hover,
+body.kss .kss-example-preview .cta--tertiary:focus {
   background: transparent;
 }
-/* line 127, ../../components/cta/_cta.scss */
+
 body.kss .kss-example-preview .cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
-/* line 1, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer {
   color: #f2f2f2;
   padding-top: 1em;
@@ -1879,11 +1843,11 @@ body.kss .kss-example-preview .l-footer {
   /* Copyright */
   /* Tableau Logo */
 }
-/* line 7, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--block-1 .social-links {
   margin: 1.2em 0 0;
 }
-/* line 10, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--block-1 .social-links a {
   display: inline-block;
   margin-right: 15px;
@@ -1893,88 +1857,79 @@ body.kss .kss-example-preview .l-footer .block--block-1 .social-links a {
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 16, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--block-1 .social-links a:hover {
   color: #f2f2f2;
 }
-/* line 23, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu {
   margin: 0;
   text-align: center;
 }
-/* line 28, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li {
   display: inline-block;
   padding: 0 20px;
 }
-/* line 32, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li a {
   color: #f2f2f2;
 }
-/* line 40, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--block-2 p {
   margin: .5em 0 0;
 }
-/* line 46, ../../components/footer/_footer.scss */
+
 body.kss .kss-example-preview .l-footer .block--block-3 {
   margin-top: 1em;
 }
+
 @media (max-width: 739px) {
-  /* line 1, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer {
     text-align: center;
   }
-  /* line 53, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--block-1 .social-links {
     max-width: 250px;
     margin: 0 auto;
     text-align: center;
   }
-  /* line 58, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--block-1 .social-links a {
     margin: .25em;
     width: 40px;
     height: 40px;
     line-height: 40px;
   }
-  /* line 66, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu {
     margin-top: 1em;
   }
-  /* line 69, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li {
     display: block;
     padding: 0;
   }
-  /* line 74, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li a {
     display: block;
     padding: .3em;
-    font-size: 1em;
+    font-size: 1.1428571429em;
   }
-  /* line 81, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer .block--block-3 img {
     max-width: 140px;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 91, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview html,
   body.kss .kss-example-preview body {
     margin: 0;
     padding: 0;
     height: 100%;
   }
-  /* line 98, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-page {
     min-height: 100%;
     position: relative;
   }
-  /* line 103, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-main {
     padding-bottom: 98px;
   }
-  /* line 107, ../../components/footer/_footer.scss */
   body.kss .kss-example-preview .l-footer {
     position: absolute;
     bottom: 0;
@@ -1982,12 +1937,12 @@ body.kss .kss-example-preview .l-footer .block--block-3 {
     height: 98px;
   }
 }
-/* line 14, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview .form--fields label {
   display: inline-block;
   min-width: 110px;
 }
-/* line 32, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input[type=text],
 body.kss .kss-example-preview input[type=tel],
 body.kss .kss-example-preview input[type=password],
@@ -2001,8 +1956,8 @@ body.kss .kss-example-preview input[type=email] {
   background: #fff;
   color: #333;
 }
+
 @media (max-width: 739px) {
-  /* line 32, ../../components/form/_form.scss */
   body.kss .kss-example-preview input[type=text],
   body.kss .kss-example-preview input[type=tel],
   body.kss .kss-example-preview input[type=password],
@@ -2011,17 +1966,17 @@ body.kss .kss-example-preview input[type=email] {
     width: 100%;
   }
 }
-/* line 50, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input::-webkit-input-placeholder {
   color: #eee;
 }
-/* line 73, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input[type=submit].submitting,
 body.kss .kss-example-preview input[type=submit].submitted,
 body.kss .kss-example-preview input[type=submit].errored {
   cursor: inherit;
 }
-/* line 80, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input[type=submit].submitting {
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
@@ -2034,22 +1989,23 @@ body.kss .kss-example-preview input[type=submit].submitting {
   background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   -webkit-animation: animate-stripes 3s linear infinite;
   -moz-animation: animate-stripes 3s linear infinite;
 }
-/* line 111, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input[type=submit].submitted {
   background-color: #c92434;
   border-color: #c92434;
   color: #fff;
 }
-/* line 117, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview input[type=submit].errored {
   background-color: #DD1E06;
   border-color: #DD1E06;
   color: #fff;
 }
+
 @-webkit-keyframes animate-stripes {
   0% {
     background-position: 0 0;
@@ -2058,6 +2014,7 @@ body.kss .kss-example-preview input[type=submit].errored {
     background-position: 60px 0;
   }
 }
+
 @-moz-keyframes animate-stripes {
   0% {
     background-position: 0 0;
@@ -2066,428 +2023,398 @@ body.kss .kss-example-preview input[type=submit].errored {
     background-position: 60px 0;
   }
 }
-/* line 153, ../../components/form/_form.scss */
+
 body.kss .kss-example-preview .invalid {
   display: none;
   color: #DD1E06;
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--1 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--1 {
-    width: 6.38298%;
+    width: 6.3829787234%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--1.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--1:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--1 {
-    margin-left: 8.51064%;
+    margin-left: 8.5106382979%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--1 {
-    margin-left: -8.51064%;
+    margin-left: -8.5106382979%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--2 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--2 {
-    width: 14.89362%;
+    width: 14.8936170213%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--2.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--2:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--2 {
-    margin-left: 17.02128%;
+    margin-left: 17.0212765957%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--2 {
-    margin-left: -17.02128%;
+    margin-left: -17.0212765957%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--3 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--3 {
-    width: 23.40426%;
+    width: 23.4042553191%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--3.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--3:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--3 {
-    margin-left: 25.53191%;
+    margin-left: 25.5319148936%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--3 {
-    margin-left: -25.53191%;
+    margin-left: -25.5319148936%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--4 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--4 {
-    width: 31.91489%;
+    width: 31.914893617%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--4.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--4:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--4 {
-    margin-left: 34.04255%;
+    margin-left: 34.0425531915%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--4 {
-    margin-left: -34.04255%;
+    margin-left: -34.0425531915%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--5 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--5 {
-    width: 40.42553%;
+    width: 40.4255319149%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--5.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--5:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--5 {
-    margin-left: 42.55319%;
+    margin-left: 42.5531914894%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--5 {
-    margin-left: -42.55319%;
+    margin-left: -42.5531914894%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--6 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--6 {
-    width: 48.93617%;
+    width: 48.9361702128%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--6.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--6:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--6 {
-    margin-left: 51.06383%;
+    margin-left: 51.0638297872%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--6 {
-    margin-left: -51.06383%;
+    margin-left: -51.0638297872%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--7 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--7 {
-    width: 57.44681%;
+    width: 57.4468085106%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--7.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--7:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--7 {
-    margin-left: 59.57447%;
+    margin-left: 59.5744680851%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--7 {
-    margin-left: -59.57447%;
+    margin-left: -59.5744680851%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--8 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--8 {
-    width: 65.95745%;
+    width: 65.9574468085%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--8.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--8:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--8 {
-    margin-left: 68.08511%;
+    margin-left: 68.085106383%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--8 {
-    margin-left: -68.08511%;
+    margin-left: -68.085106383%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--9 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--9 {
-    width: 74.46809%;
+    width: 74.4680851064%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--9.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--9:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--9 {
-    margin-left: 76.59574%;
+    margin-left: 76.5957446809%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--9 {
-    margin-left: -76.59574%;
+    margin-left: -76.5957446809%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--10 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--10 {
-    width: 82.97872%;
+    width: 82.9787234043%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--10.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--10:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--10 {
-    margin-left: 85.10638%;
+    margin-left: 85.1063829787%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--10 {
-    margin-left: -85.10638%;
+    margin-left: -85.1063829787%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--11 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--11 {
-    width: 91.48936%;
+    width: 91.4893617021%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.1276595745%;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--11.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--11:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--11 {
-    margin-left: 93.61702%;
+    margin-left: 93.6170212766%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--11 {
-    margin-left: -93.61702%;
+    margin-left: -93.6170212766%;
   }
 }
-/* line 28, ../../components/grid/_grid.scss */
+
 body.kss .kss-example-preview .grid--12 {
   position: relative;
   box-sizing: border-box;
 }
+
 @media (min-width: 740px) {
-  /* line 28, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 35, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--12.grid--last {
     margin-right: 0;
   }
-  /* line 38, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .grid--12:last-child {
     margin-right: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 43, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .push--12 {
-    margin-left: 102.12766%;
+    margin-left: 102.127659574%;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 48, ../../components/grid/_grid.scss */
   body.kss .kss-example-preview .pull--12 {
-    margin-left: -102.12766%;
+    margin-left: -102.127659574%;
   }
 }
-/* line 1, ../../components/hero/_hero.scss */
+
 body.kss .kss-example-preview .hero-background {
   height: 450px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
+
 @media (max-width: 739px) {
-  /* line 9, ../../components/hero/_hero.scss */
   body.kss .kss-example-preview .hero-background {
     height: 250px;
   }
 }
-/* line 13, ../../../../.rvm/gems/ruby-1.9.3-p547/gems/toolkit-2.9.0/stylesheets/toolkit/_clearfix.scss */
-body.kss .kss-example-preview .teaser-list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 15, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list > a {
   display: block;
   color: #333;
@@ -2496,36 +2423,36 @@ body.kss .kss-example-preview .teaser-list > a {
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 20, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list > a:hover {
   color: #eb912c;
   text-decoration: none;
 }
-/* line 25, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list > a:hover img {
   opacity: 0.85;
 }
-/* line 30, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list .teaser-list__title {
   margin: 0.5em 0;
 }
-/* line 69, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list.teaser-list--full-width {
   padding: 2em 0;
   border-bottom: 1px solid #f2f2f2;
 }
-/* line 73, ../../components/lists/_teaser_list.scss */
+
 body.kss .kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
   margin: 0 0 0.5em;
 }
-/* line 12, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav {
   position: relative;
   height: 100px;
   padding: 2em 0;
   background: #fff;
 }
-/* line 18, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__logo,
 body.kss .kss-example-preview .global-nav .global-nav__primary-menu,
 body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
@@ -2536,26 +2463,26 @@ body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
-/* line 26, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
   float: right;
 }
-/* line 31, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__logo a {
   display: block;
   line-height: 0;
 }
-/* line 39, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__primary-menu ul {
   margin: 0.8em 0 0 3em;
 }
-/* line 43, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
   position: relative;
   padding: 10px;
   color: #212535;
 }
-/* line 49, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a:after {
   content: "";
   opacity: 0;
@@ -2573,25 +2500,25 @@ body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a:after {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 63, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a:hover:after {
   opacity: 1;
 }
-/* line 69, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
   padding-right: 45px;
   text-align: right;
 }
-/* line 73, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal {
   padding: 10px;
   color: #000;
 }
-/* line 79, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
   margin: 0 0 0 10px;
 }
-/* line 85, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__search {
   position: absolute;
   right: 0;
@@ -2602,7 +2529,7 @@ body.kss .kss-example-preview .global-nav .global-nav__search {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 93, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] {
   position: absolute;
   right: 0;
@@ -2621,22 +2548,25 @@ body.kss .kss-example-preview .global-nav .global-nav__search input[type='search
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 109, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']:focus {
   outline: none;
 }
-/* line 113, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-webkit-input-placeholder,
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-moz-placeholder,
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-moz-placeholder,
 body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-ms-input-placeholder {
   color: #787878;
 }
-/* line 120, ../../components/navigation/_global_nav.scss */
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-decoration, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-cancel-button, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-button, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-decoration {
+
+body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-decoration,
+body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-cancel-button,
+body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-button,
+body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
-/* line 128, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav .global-nav__search .global-nav__search__close {
   position: absolute;
   opacity: 0;
@@ -2652,23 +2582,23 @@ body.kss .kss-example-preview .global-nav .global-nav__search .global-nav__searc
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 145, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__search {
   width: 100%;
 }
-/* line 148, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__search input[type='search'] {
   width: 100%;
   padding-left: 2em;
   cursor: inherit;
 }
-/* line 154, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__search .global-nav__search__close {
   opacity: 1;
   width: 45px;
   height: 45px;
 }
-/* line 161, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__logo,
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__primary-menu,
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__secondary-menu {
@@ -2678,14 +2608,14 @@ body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 172, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .global-nav__drawer {
   display: none;
   position: absolute;
   width: 100%;
   z-index: 10;
 }
-/* line 180, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .ui-autocomplete {
   display: block;
   z-index: 20;
@@ -2695,97 +2625,97 @@ body.kss .kss-example-preview .ui-autocomplete {
   background: #fefefe;
   outline: none;
 }
-/* line 207, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small {
   display: none;
   padding: 0;
 }
-/* line 211, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .content {
   position: relative;
   overflow: visible;
 }
-/* line 216, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-primary {
   flex-direction: column;
   float: none;
   height: auto;
 }
-/* line 220, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-primary li {
   width: 100%;
 }
-/* line 222, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-primary li a {
   display: flex;
 }
-/* line 228, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-secondary {
   justify-content: center;
   float: none;
   height: auto;
 }
-/* line 232, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-secondary li {
   width: auto;
 }
-/* line 234, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-secondary li a {
   display: flex;
 }
-/* line 241, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small a:hover {
   text-decoration: none;
 }
-/* line 246, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global.small .navigation-global-secondary {
   margin: 1% 0 0 0;
 }
-/* line 258, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global li {
   position: relative;
 }
-/* line 262, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global li:last-child a {
   margin: 0;
 }
-/* line 276, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global a:hover {
   text-decoration: underline;
 }
-/* line 282, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .logo a {
   display: inline-block;
   margin: 0 50px 0 0;
   width: 200px;
 }
-/* line 296, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .global-search {
   position: absolute;
   right: 0;
   width: 18px;
 }
-/* line 300, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .global-search input {
   transition: width 0.5s ease;
 }
-/* line 310, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-header {
   display: flex;
   align-items: center;
   width: 100%;
 }
-/* line 316, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-header li.hamburger {
   float: right;
   padding: 0;
   margin-left: auto;
 }
-/* line 320, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-header li.hamburger a {
   padding: 10px;
 }
-/* line 327, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown {
   padding: 0;
   position: absolute;
@@ -2793,40 +2723,40 @@ body.kss .kss-example-preview .navigation-global .navigation-global-dropdown {
   width: 100%;
   z-index: 10;
 }
-/* line 335, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .navigation-global-container {
   position: relative;
 }
-/* line 342, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .navigation-global-primary li:last-child {
   border-bottom: none;
 }
-/* line 346, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .navigation-global-primary a {
   display: flex;
   align-items: center;
   padding: 15px 0;
 }
-/* line 355, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .navigation-global-secondary {
   margin: 0;
 }
-/* line 357, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .navigation-global-secondary li {
   margin: 0 0 10px 0;
 }
-/* line 362, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .icon-target {
   margin-left: auto;
   padding: 5px 10px;
 }
-/* line 367, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .global-search {
   position: relative;
   width: auto;
   margin-bottom: 0;
 }
-/* line 375, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .global-search .close-search {
   display: none;
   line-height: normal;
@@ -2837,7 +2767,7 @@ body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .gl
   margin: 0;
   width: auto;
 }
-/* line 387, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown input[type='search'] {
   background-color: transparent;
   padding-left: 20px;
@@ -2845,29 +2775,29 @@ body.kss .kss-example-preview .navigation-global .navigation-global-dropdown inp
   right: 0;
   top: 0;
 }
-/* line 395, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .button-container {
   display: table;
   margin: 0 auto;
 }
-/* line 402, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .button {
   margin-bottom: 40px;
 }
-/* line 409, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .button .button-label {
   justify-content: center;
 }
-/* line 412, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .navigation-global-dropdown .button a {
   margin: 0;
 }
-/* line 420, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .hamburger {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 423, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .hamburger a {
   background: url(../images/global/hamburger.png);
   background-size: 100%;
@@ -2876,7 +2806,7 @@ body.kss .kss-example-preview .navigation-global .hamburger a {
   display: block;
   width: 25px;
 }
-/* line 433, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .hamburger-close {
   display: none;
   position: absolute;
@@ -2884,7 +2814,7 @@ body.kss .kss-example-preview .navigation-global .hamburger-close {
   height: 100%;
   padding: 4.2%;
 }
-/* line 441, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .navigation-global .hamburger-close a {
   display: block;
   background-image: url(../images/global/x-close-nav.png);
@@ -2895,7 +2825,7 @@ body.kss .kss-example-preview .navigation-global .hamburger-close a {
   width: 15px;
   height: 15px;
 }
-/* line 457, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer {
   display: none;
   position: absolute;
@@ -2903,27 +2833,27 @@ body.kss .kss-example-preview .sub-navigation-global-drawer {
   width: 100%;
   z-index: 10;
 }
-/* line 465, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small {
   display: block;
   left: 100%;
   top: 0;
   height: 100%;
 }
-/* line 472, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-global-container {
   display: block;
   position: relative;
   height: 100%;
 }
-/* line 478, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation {
   width: 100%;
   float: none;
   margin-right: 0;
   padding: 0;
 }
-/* line 485, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-more {
   width: 100%;
   height: auto;
@@ -2931,141 +2861,141 @@ body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigatio
   margin-right: 0;
   padding: 0;
 }
-/* line 499, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-more-bg {
   width: 100%;
 }
-/* line 503, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small ul {
   flex-direction: column;
 }
-/* line 505, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small ul li {
   margin-right: 0;
   margin-bottom: 0;
 }
-/* line 509, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small ul li:last-child {
   border-bottom: none;
 }
-/* line 512, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small ul li .title {
   line-height: normal;
   padding: 10px 0;
   margin-bottom: 0;
   margin-top: 0;
 }
-/* line 520, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small ul a {
   margin: 0;
   display: block;
 }
-/* line 528, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .title {
   padding-top: 19px;
 }
-/* line 535, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-header .block-link {
   margin: 0;
   padding: 16px 0;
 }
-/* line 539, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-header .block-link:first-child {
   float: left;
 }
-/* line 542, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .sub-navigation-header .block-link:last-child {
   float: right;
 }
-/* line 548, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .block-link {
   padding: 16px 0 0;
 }
-/* line 552, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .title-line,
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .description,
 body.kss .kss-example-preview .sub-navigation-global-drawer.small .block-link-container {
   display: none;
 }
-/* line 559, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-drawer .content {
   overflow: visible;
 }
-/* line 564, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-global-container {
   display: flex;
   justify-content: stretch;
 }
-/* line 572, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation {
   padding: 80px 0;
 }
-/* line 576, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation ul {
   display: flex;
   justify-content: space-between;
 }
-/* line 581, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation ul li:last-child {
   margin-right: 0;
 }
-/* line 588, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation .title:hover {
   text-decoration: underline;
 }
-/* line 593, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation a {
   text-decoration: none;
 }
-/* line 597, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation .title {
   margin: 0 0 10px 0;
 }
-/* line 600, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation .title .description {
   display: none;
   margin: 0 0 0 50px;
 }
-/* line 612, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation .description {
   margin: 0 0 15px 0;
 }
-/* line 617, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more {
   margin-right: 0;
   padding: 3% 0 3% 3%;
   position: relative;
 }
-/* line 623, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more a {
   text-decoration: none;
 }
-/* line 625, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more a:hover {
   text-decoration: underline;
 }
-/* line 630, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more .title {
   margin: 0 0 15px 0;
 }
-/* line 633, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more .title .description {
   display: none;
   margin: 0 0 0 50px;
 }
-/* line 646, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more li {
   margin: 0 0 15px 0;
 }
-/* line 648, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more li:last-child {
   margin: 0;
 }
-/* line 651, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more li .title {
   margin: 0;
 }
-/* line 662, ../../components/navigation/_global_nav.scss */
+
 body.kss .kss-example-preview .sub-navigation-more-bg {
   width: 41vw;
   position: absolute;
@@ -3074,7 +3004,7 @@ body.kss .kss-example-preview .sub-navigation-more-bg {
   left: 0;
   z-index: -1;
 }
-/* line 19, ../../components/navigation/_menu.scss */
+
 body.kss .kss-example-preview .l-menu {
   width: 100%;
   padding: 1.4em 0;
@@ -3084,21 +3014,21 @@ body.kss .kss-example-preview .l-menu {
   -o-transition: padding 0.25s;
   transition: padding 0.25s;
 }
-/* line 29, ../../components/navigation/_menu.scss */
+
 body.kss .kss-example-preview .l-menu .menu {
   margin: 0;
   padding-top: 5px;
   text-align: right;
 }
-/* line 35, ../../components/navigation/_menu.scss */
+
 body.kss .kss-example-preview .l-menu .menu li {
   display: inline-block;
 }
-/* line 38, ../../components/navigation/_menu.scss */
+
 body.kss .kss-example-preview .l-menu .menu li a {
   padding: 6px 0;
   color: #fff;
-  font-size: 0.875em;
+  font-size: 1em;
   letter-spacing: 1px;
   border-bottom: 1px solid transparent;
   -webkit-transition: border 0.25s;
@@ -3106,35 +3036,34 @@ body.kss .kss-example-preview .l-menu .menu li a {
   -o-transition: border 0.25s;
   transition: border 0.25s;
 }
-/* line 47, ../../components/navigation/_menu.scss */
-body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-preview .l-menu .menu li.active-trail a {
+
+body.kss .kss-example-preview .l-menu .menu li a:hover,
+body.kss .kss-example-preview .l-menu .menu li.active-trail a {
   border-bottom-color: #fff;
   text-decoration: none;
 }
+
 @media (min-width: 740px) {
-  /* line 35, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu li {
     padding: 0 10px;
   }
 }
+
 @media (min-width: 980px) {
-  /* line 35, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu li {
     padding: 0 20px;
   }
 }
+
 @media (max-width: 739px) {
-  /* line 19, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu {
     padding: 12px 0;
     background: #464646;
     max-height: 49px;
   }
-  /* line 71, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .logo-img {
     height: 25px;
   }
-  /* line 75, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .block--menu {
     display: none;
     position: absolute;
@@ -3145,7 +3074,6 @@ body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-pr
     z-index: -1;
     background-color: rgba(70, 70, 70, 0.85);
   }
-  /* line 85, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .block--menu:before {
     content: "";
     position: absolute;
@@ -3153,19 +3081,17 @@ body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-pr
     height: 49px;
     background: #464646;
   }
-  /* line 93, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .block--menu .menu {
     height: 100vh;
     padding-top: 49px;
     overflow-y: auto;
     text-align: left;
   }
-  /* line 100, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .block--menu li {
     display: block;
   }
-  /* line 103, ../../components/navigation/_menu.scss */
-  body.kss .kss-example-preview .l-menu .block--menu li a, body.kss .kss-example-preview .l-menu .block--menu li.active-trail a,
+  body.kss .kss-example-preview .l-menu .block--menu li a,
+  body.kss .kss-example-preview .l-menu .block--menu li.active-trail a,
   body.kss .kss-example-preview .l-menu .block--menu li a.cta {
     margin: 0;
     padding: .5em;
@@ -3174,7 +3100,6 @@ body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-pr
     border-bottom: 1px solid #464646;
     font-size: 1.5em;
   }
-  /* line 116, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle {
     position: relative;
     display: block;
@@ -3183,7 +3108,6 @@ body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-pr
     width: 25px;
     height: 25px;
   }
-  /* line 124, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span,
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:before,
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:after {
@@ -3197,69 +3121,62 @@ body.kss .kss-example-preview .l-menu .menu li a:hover, body.kss .kss-example-pr
     -o-transition: all 0.5s;
     transition: all 0.5s;
   }
-  /* line 135, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:before,
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:after {
     content: '';
   }
-  /* line 139, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span {
     top: 10px;
   }
-  /* line 142, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:before {
     top: -10px;
   }
-  /* line 145, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle span:after {
     top: 10px;
   }
-  /* line 149, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span {
     background-color: transparent;
   }
-  /* line 152, ../../components/navigation/_menu.scss */
-  body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:before, body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:after {
+  body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:before,
+  body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:after {
     top: 0;
   }
-  /* line 156, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  /* line 159, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle.open span:after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 }
+
 @media (min-width: 740px) {
-  /* line 166, ../../components/navigation/_menu.scss */
   body.kss .kss-example-preview .l-menu .menu--mobile-toggle {
     display: none;
   }
 }
-/* line 1, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-tabs {
   float: left;
   padding-right: 30px;
 }
-/* line 5, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--flush-page-cache-link {
   float: right;
 }
-/* line 9, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-tabs ul.tabs {
   border-bottom: none;
   margin-bottom: 0;
 }
-/* line 13, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-tabs ul.tabs li {
   margin: 0;
 }
-/* line 20, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-tabs ul.tabs li a,
 body.kss .kss-example-preview .block--flush-page-cache-link .block__content a {
   display: inline-block;
@@ -3272,7 +3189,7 @@ body.kss .kss-example-preview .block--flush-page-cache-link .block__content a {
   -o-transition: border 0.25s;
   transition: border 0.25s;
 }
-/* line 28, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-tabs ul.tabs li.active a,
 body.kss .kss-example-preview .block--delta-blocks-tabs ul.tabs li a:hover,
 body.kss .kss-example-preview .block--flush-page-cache-link .block__content.active a,
@@ -3280,32 +3197,32 @@ body.kss .kss-example-preview .block--flush-page-cache-link .block__content a:ho
   border-bottom-color: #f2f2f2;
   text-decoration: none;
 }
-/* line 35, ../../components/page_controls/_page_control.scss */
+
 body.kss .kss-example-preview .block--delta-blocks-messages {
   clear: both;
   padding: 1em 0;
 }
-/* line 11, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .mfp-container {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 16, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .mfp-content {
   max-width: 800px;
   z-index: 5;
   background: #fff;
 }
-/* line 22, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .popup--content {
   display: none;
   padding: 2em;
 }
-/* line 27, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .mfp-content .popup--content {
   display: inherit;
 }
-/* line 31, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow {
   position: absolute;
   top: 50%;
@@ -3316,8 +3233,9 @@ body.kss .kss-example-preview button.mfp-arrow {
   z-index: 10;
   cursor: pointer;
 }
-/* line 42, ../../components/popup/_popup.scss */
-body.kss .kss-example-preview button.mfp-arrow:before, body.kss .kss-example-preview button.mfp-arrow:after {
+
+body.kss .kss-example-preview button.mfp-arrow:before,
+body.kss .kss-example-preview button.mfp-arrow:after {
   height: 80px;
   width: 40px;
   margin: 0;
@@ -3330,41 +3248,40 @@ body.kss .kss-example-preview button.mfp-arrow:before, body.kss .kss-example-pre
   color: #fff;
   text-shadow: 0 0 8px #666;
 }
-/* line 57, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-left {
   left: 10px;
 }
-/* line 60, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-left:before {
   content: "<";
 }
-/* line 65, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-right {
   right: 10px;
 }
-/* line 68, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-right:before {
   content: ">";
 }
-/* line 73, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow:hover {
   opacity: 0.8;
 }
-/* line 77, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview button.mfp-arrow:active {
   margin: -40px 0 0;
 }
+
 @media (min-width: 980px) {
-  /* line 82, ../../components/popup/_popup.scss */
   body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-left {
     left: 5%;
   }
-  /* line 86, ../../components/popup/_popup.scss */
   body.kss .kss-example-preview button.mfp-arrow.mfp-arrow-right {
     right: 5%;
   }
 }
-/* line 96, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .popup--fade.mfp-bg {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
@@ -3372,113 +3289,114 @@ body.kss .kss-example-preview .popup--fade.mfp-bg {
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* line 100, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .popup--fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }
-/* line 103, ../../components/popup/_popup.scss */
+
 body.kss .kss-example-preview .popup--fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
-/* line 106, ../../components/popup/_popup.scss */
-body.kss .kss-example-preview .popup--fade.mfp-wrap .mfp-content, body.kss .kss-example-preview .popup--fade.mfp-wrap .mfp-arrow {
+
+body.kss .kss-example-preview .popup--fade.mfp-wrap .mfp-content,
+body.kss .kss-example-preview .popup--fade.mfp-wrap .mfp-arrow {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* line 111, ../../components/popup/_popup.scss */
-body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-content, body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-arrow {
+
+body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-content,
+body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-ready .mfp-arrow {
   opacity: 1;
 }
-/* line 115, ../../components/popup/_popup.scss */
-body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-content, body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
+
+body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-content,
+body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
   opacity: 0;
 }
-/* line 4, ../../components/region/_region.scss */
+
 body.kss .kss-example-preview .l-region--content {
   padding-top: 3em;
   padding-bottom: 3em;
 }
-/* line 9, ../../components/region/_region.scss */
+
 body.kss .kss-example-preview .l-region--content-sidebar-wrapper {
   padding-bottom: 3em;
 }
-/* line 13, ../../components/region/_region.scss */
+
 body.kss .kss-example-preview .node-type-page .l-region--content {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 21, ../../components/region/_region.scss */
+
 body.kss .kss-example-preview .l-region--content-top {
   background: #999;
 }
-/* line 14, ../../components/reveal/_reveal.scss */
+
 body.kss .kss-example-preview .reveal--content {
   position: relative;
   display: none;
 }
-/* line 18, ../../components/reveal/_reveal.scss */
+
 body.kss .kss-example-preview .reveal--close {
   position: absolute;
   z-index: 5;
   right: 10px;
   top: 10px;
-  font-size: 1.5em;
+  font-size: 1.7142857143em;
   color: #fff;
 }
-/* line 26, ../../components/reveal/_reveal.scss */
+
 body.kss .kss-example-preview .reveal--close:hover {
   text-decoration: none;
 }
-/* line 25, ../../components/section/_section.scss */
+
 body.kss .kss-example-preview .section {
   padding-top: 4em;
   padding-bottom: 4em;
 }
-/* line 30, ../../components/section/_section.scss */
+
 body.kss .kss-example-preview .section.section--padded-two {
   padding-top: 2em;
   padding-bottom: 2em;
 }
-/* line 30, ../../components/section/_section.scss */
+
 body.kss .kss-example-preview .section.section--padded-four {
   padding-top: 4em;
   padding-bottom: 4em;
 }
-/* line 30, ../../components/section/_section.scss */
+
 body.kss .kss-example-preview .section.section--padded-six {
   padding-top: 6em;
   padding-bottom: 6em;
 }
-/* line 36, ../../components/section/_section.scss */
+
 body.kss .kss-example-preview .section.section--background-image {
   background-size: cover;
   background-position: center;
 }
+
 @media (max-width: 739px) {
-  /* line 50, ../../components/section/_section.scss */
   body.kss .kss-example-preview .section.section--padded-two {
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  /* line 50, ../../components/section/_section.scss */
   body.kss .kss-example-preview .section.section--padded-four {
     padding-top: 2em;
     padding-bottom: 2em;
   }
-  /* line 50, ../../components/section/_section.scss */
   body.kss .kss-example-preview .section.section--padded-six {
     padding-top: 3em;
     padding-bottom: 3em;
   }
 }
-/* line 11, ../../components/sidebar_nav/_sidebar_nav.scss */
+
 body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
 }
-/* line 16, ../../components/sidebar_nav/_sidebar_nav.scss */
+
 body.kss .kss-example-preview .sidebar--nav li a {
   display: block;
   padding: .5em 0;
@@ -3488,18 +3406,18 @@ body.kss .kss-example-preview .sidebar--nav li a {
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 24, ../../components/sidebar_nav/_sidebar_nav.scss */
+
 body.kss .kss-example-preview .sidebar--nav li a:hover,
 body.kss .kss-example-preview .sidebar--nav li.active a {
   color: #eb912c;
   text-decoration: none;
 }
-/* line 30, ../../components/sidebar_nav/_sidebar_nav.scss */
+
 body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
   display: none;
 }
+
 @media (max-width: 739px) {
-  /* line 36, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav {
     opacity: 0;
     position: relative;
@@ -3510,7 +3428,6 @@ body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
   }
-  /* line 43, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav li {
     height: 0;
     overflow: hidden;
@@ -3519,16 +3436,14 @@ body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     -o-transition: height 0.25s;
     transition: height 0.25s;
   }
-  /* line 49, ../../components/sidebar_nav/_sidebar_nav.scss */
-  body.kss .kss-example-preview .sidebar--nav li.active, body.kss .kss-example-preview .sidebar--nav.open li {
+  body.kss .kss-example-preview .sidebar--nav li.active,
+  body.kss .kss-example-preview .sidebar--nav.open li {
     height: 41px;
   }
-  /* line 54, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav li a {
     padding: .5em;
     color: #fff;
   }
-  /* line 59, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     display: inline-block;
     position: absolute;
@@ -3537,13 +3452,11 @@ body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     padding: 10px;
     cursor: pointer;
   }
-  /* line 68, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav.open .sidebar--nav--toggle {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-  /* line 73, ../../components/sidebar_nav/_sidebar_nav.scss */
   body.kss .kss-example-preview .sidebar--nav.stuck {
     opacity: 1;
     width: 100%;
@@ -3551,20 +3464,21 @@ body.kss .kss-example-preview .sidebar--nav .sidebar--nav--toggle {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
 }
-/* line 11, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow {
   margin: 0 auto;
   max-width: 1920px;
 }
-/* line 15, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow.slideshow--hero {
   position: relative;
   width: 100%;
   overflow: hidden;
   background: #000;
 }
-/* line 21, ../../components/slideshow/_slideshow.scss */
-body.kss .kss-example-preview .slideshow.slideshow--hero:before, body.kss .kss-example-preview .slideshow.slideshow--hero:after {
+
+body.kss .kss-example-preview .slideshow.slideshow--hero:before,
+body.kss .kss-example-preview .slideshow.slideshow--hero:after {
   display: none;
   content: " ";
   position: absolute;
@@ -3573,43 +3487,36 @@ body.kss .kss-example-preview .slideshow.slideshow--hero:before, body.kss .kss-e
   z-index: 5;
   width: 200px;
   height: 100%;
-  background-image: linear-gradient(to right, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to right, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to right, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to right, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to right, #1b1b1b, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
 }
+
 @media (min-width: 1550px) {
-  /* line 21, ../../components/slideshow/_slideshow.scss */
-  body.kss .kss-example-preview .slideshow.slideshow--hero:before, body.kss .kss-example-preview .slideshow.slideshow--hero:after {
+  body.kss .kss-example-preview .slideshow.slideshow--hero:before,
+  body.kss .kss-example-preview .slideshow.slideshow--hero:after {
     display: block;
   }
 }
-/* line 38, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow.slideshow--hero:after {
-  background-image: linear-gradient(to left, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to left, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to left, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to left, #1b1b1b, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to left, #1b1b1b, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
   left: auto;
   right: 0;
 }
-/* line 49, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow .slick-dots {
   height: 20px;
   bottom: 0;
 }
-/* line 53, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow .slick-dots li {
   margin: 0;
 }
-/* line 56, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow .slick-dots li.slick-active button:before {
   opacity: .75;
   color: #e8762c;
 }
-/* line 61, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow .slick-dots li button:before {
   color: #fff;
   font-size: 9px;
@@ -3621,21 +3528,21 @@ body.kss .kss-example-preview .slideshow .slick-dots li button:before {
   -o-transition: color 0.25s;
   transition: color 0.25s;
 }
-/* line 85, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow__slide {
   position: relative;
 }
-/* line 88, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow__slide .slideshow__image {
   height: 0;
   padding-bottom: 33%;
 }
-/* line 92, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow__slide .slideshow__image img {
   position: absolute;
   width: 100%;
 }
-/* line 98, ../../components/slideshow/_slideshow.scss */
+
 body.kss .kss-example-preview .slideshow__slide .slideshow__copy {
   position: absolute;
   top: 0;
@@ -3644,6 +3551,13 @@ body.kss .kss-example-preview .slideshow__slide .slideshow__copy {
   align-items: center;
   color: #fff;
 }
+<<<<<<< HEAD
+
+body.kss .kss-example-preview #hero-slide-show .hero-slide-show-container {
+  margin: 0 auto;
+}
+
+=======
 /* line 106, ../../components/slideshow/_slideshow.scss */
 body.kss .kss-example-preview .slideshow__slide .slideshow__copy h1, body.kss .kss-example-preview .slideshow__slide .slideshow__copy .heading--homepage, body.kss .kss-example-preview .slideshow__slide .slideshow__copy .heading--product, body.kss .kss-example-preview .slideshow__slide .slideshow__copy .heading--download {
   margin: 0;
@@ -3653,11 +3567,16 @@ body.kss .kss-example-preview #hero-slide-show .hero-slide-show-container {
   margin: 0 auto;
 }
 /* line 134, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .hero-slide-image {
   height: 0;
   padding-bottom: 33%;
 }
+<<<<<<< HEAD
+
+=======
 /* line 137, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .hero-slide-image .fade {
   background-image: url(../images/global/img-fade-left.png), url(../images/global/img-fade-right.png);
   background-position: left top, right top;
@@ -3670,6 +3589,17 @@ body.kss .kss-example-preview #hero-slide-show .hero-slide-image .fade {
   height: 100%;
   z-index: 1;
 }
+<<<<<<< HEAD
+
+body.kss .kss-example-preview #hero-slide-show .hero-slide-image img {
+  position: absolute;
+}
+
+body.kss .kss-example-preview #hero-slide-show img {
+  margin: 0;
+}
+
+=======
 /* line 153, ../../components/slideshow/_slideshow.scss */
 body.kss .kss-example-preview #hero-slide-show .hero-slide-image img {
   position: absolute;
@@ -3679,6 +3609,7 @@ body.kss .kss-example-preview #hero-slide-show img {
   margin: 0;
 }
 /* line 162, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow {
   position: absolute;
   z-index: 1;
@@ -3688,12 +3619,31 @@ body.kss .kss-example-preview #hero-slide-show .carousel-arrow {
   text-transform: uppercase;
   overflow: visible;
 }
+<<<<<<< HEAD
+
+=======
 /* line 176, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow:hover .title {
   width: auto;
   padding: 15px 40px 15px 15px;
   opacity: 1;
 }
+<<<<<<< HEAD
+
+body.kss .kss-example-preview #hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
+  background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+}
+
+body.kss .kss-example-preview #hero-slide-show .carousel-arrow.left.inverted:hover .icon-hero-carousel-arrow-left {
+  background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+}
+
+body.kss .kss-example-preview #hero-slide-show .carousel-arrow.left:hover .title {
+  padding: 15px 15px 15px 40px;
+}
+
+=======
 /* line 185, ../../components/slideshow/_slideshow.scss */
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
   background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
@@ -3707,15 +3657,24 @@ body.kss .kss-example-preview #hero-slide-show .carousel-arrow.left:hover .title
   padding: 15px 15px 15px 40px;
 }
 /* line 207, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow.left .title {
   left: -15px;
   right: auto;
 }
+<<<<<<< HEAD
+
+body.kss .kss-example-preview #hero-slide-show .carousel-arrow span {
+  display: block;
+}
+
+=======
 /* line 213, ../../components/slideshow/_slideshow.scss */
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow span {
   display: block;
 }
 /* line 217, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow .square {
   position: relative;
   width: 2px;
@@ -3723,7 +3682,11 @@ body.kss .kss-example-preview #hero-slide-show .carousel-arrow .square {
   margin: 0 20px;
   float: right;
 }
+<<<<<<< HEAD
+
+=======
 /* line 226, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow .title {
   top: -10px;
   right: -15px;
@@ -3735,12 +3698,16 @@ body.kss .kss-example-preview #hero-slide-show .carousel-arrow .title {
   overflow: hidden;
   transition: all 1s ease;
 }
+<<<<<<< HEAD
+
+=======
 /* line 238, ../../components/slideshow/_slideshow.scss */
+>>>>>>> gh-pages
 body.kss .kss-example-preview #hero-slide-show .carousel-arrow .text {
   position: relative;
   white-space: nowrap;
 }
-/* line 29, ../../components/spacer/_spacer.scss */
+
 body.kss .kss-example-preview .spacer {
   clear: both;
   height: 2em;
@@ -3748,106 +3715,106 @@ body.kss .kss-example-preview .spacer {
   padding: 0;
   border: 0;
 }
-/* line 36, ../../components/spacer/_spacer.scss */
+
 body.kss .kss-example-preview .spacer.spacer--four {
   height: 4em;
 }
-/* line 40, ../../components/spacer/_spacer.scss */
+
 body.kss .kss-example-preview .spacer.spacer--six {
   height: 6em;
 }
-/* line 21, ../../components/sticky/_sticky.scss */
+
 body.kss .kss-example-preview .stuck {
   position: fixed;
   z-index: 7;
   top: 0;
 }
+
 @media (max-width: 739px) {
-  /* line 31, ../../components/sticky/_sticky.scss */
   body.kss .kss-example-preview .grid-3 .stuck {
     width: 100%;
     left: 0;
   }
 }
+
 @media (min-width: 740px) {
-  /* line 31, ../../components/sticky/_sticky.scss */
   body.kss .kss-example-preview .grid-3 .stuck {
     max-width: 223px;
     margin-right: 10px;
   }
 }
+
 @media (min-width: 980px) {
-  /* line 31, ../../components/sticky/_sticky.scss */
   body.kss .kss-example-preview .grid-3 .stuck {
     min-width: 223px;
   }
 }
-/* line 1, ../../components/stuff_list/_stuff_list.scss */
+
 body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item {
   padding: .5em;
   border-top: 1px solid #dedede;
 }
-/* line 5, ../../components/stuff_list/_stuff_list.scss */
+
 body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item:last-child {
   border-bottom: 1px solid #dedede;
 }
-/* line 9, ../../components/stuff_list/_stuff_list.scss */
+
 body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item .field--stuff-item-label {
   color: #999;
   text-transform: uppercase;
 }
-/* line 19, ../../components/stuff_list/_stuff_list.scss */
+
 body.kss .kss-example-preview .stuff-list--grid {
   max-width: 313px;
   margin: 0 auto;
 }
+
 @media (min-width: 740px) {
-  /* line 19, ../../components/stuff_list/_stuff_list.scss */
   body.kss .kss-example-preview .stuff-list--grid {
     width: 33.333%;
     float: left;
   }
 }
-/* line 41, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table {
   width: 100%;
 }
-/* line 44, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table tr.even,
 body.kss .kss-example-preview table tr.odd {
   background-color: inherit;
   border: none;
 }
-/* line 50, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table tr:nth-child(even) {
   background: #eee;
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 55, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table thead,
 body.kss .kss-example-preview table th {
   background: #ddd;
   background: rgba(0, 0, 0, 0.08);
 }
-/* line 61, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table td,
 body.kss .kss-example-preview table th {
   padding: 5px;
 }
-/* line 66, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table th {
   text-transform: uppercase;
 }
-/* line 70, ../../components/table/_table.scss */
+
 body.kss .kss-example-preview table tr p:last-child {
   margin: 0;
 }
-/* line 13, ../../components/thumbnail/_thumbnail.scss */
+
 body.kss .kss-example-preview .thumbnail {
   overflow: hidden;
   line-height: 0;
 }
-/* line 17, ../../components/thumbnail/_thumbnail.scss */
+
 body.kss .kss-example-preview .thumbnail img {
   width: 100%;
   -webkit-transition: all 1s ease;
@@ -3855,39 +3822,35 @@ body.kss .kss-example-preview .thumbnail img {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-/* line 22, ../../components/thumbnail/_thumbnail.scss */
+
 body.kss .kss-example-preview .thumbnail img:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-/* line 27, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
-body.kss .kss-example-preview h2,
-body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
-body.kss .kss-example-preview h3,
-body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
-body.kss .kss-example-preview h4,
-body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
-body.kss .kss-example-preview h5,
-body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
+body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
+body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
+body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
+body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
 body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
   font-family: 'Benton Sans Thin', Helvetica, sans-serif;
   font-weight: 100;
 }
-/* line 32, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete, body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
-/* line 36, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
-/* line 40, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--benton-medium {
   font-family: 'Benton Sans Medium', Helvetica, sans-serif;
 }
-/* line 44, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview body,
 body.kss .kss-example-preview .kss-example-preview-wrapper,
 body.kss .kss-example-preview .text--body-large,
@@ -3895,7 +3858,7 @@ body.kss .kss-example-preview .text--body-medium,
 body.kss .kss-example-preview .text--body-small {
   font-family: 'Merriweather', serif;
 }
-/* line 67, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview body,
 body.kss .kss-example-preview .kss-example-preview-wrapper,
 body.kss .kss-example-preview .text--body-large,
@@ -3908,235 +3871,229 @@ body.kss .kss-example-preview .text--body-small {
   line-height: 1.86;
   -webkit-font-smoothing: antialiased;
 }
-/* line 81, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--body-large {
-  font-size: 1.07143em;
+  font-size: 1.0714285714em;
 }
-/* line 85, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--body-small {
-  font-size: 0.85714em;
+  font-size: 0.8571428571em;
   line-height: 1.66;
 }
-/* line 103, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
-body.kss .kss-example-preview h2,
-body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
-body.kss .kss-example-preview h3,
-body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
-body.kss .kss-example-preview h4,
-body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
-body.kss .kss-example-preview h5,
-body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
+body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
+body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
+body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
+body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
 body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
   margin: .5em 0;
   line-height: 1.2;
 }
-/* line 114, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1 {
-  font-size: 3.57143em;
+  font-size: 3.5714285714em;
 }
-/* line 118, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2 {
-  font-size: 2.57143em;
+  font-size: 2.5714285714em;
 }
-/* line 122, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3 {
-  font-size: 1.85714em;
+  font-size: 1.8571428571em;
 }
-/* line 126, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4 {
-  font-size: 1.64286em;
+  font-size: 1.6428571429em;
 }
-/* line 130, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5 {
   font-size: 1.25em;
 }
-/* line 134, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
   font-size: 1em;
 }
-/* line 159, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--homepage {
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
-/* line 167, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--product {
   color: #000;
 }
-/* line 173, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--download {
-  font-size: 3.42857em;
+  font-size: 3.4285714286em;
   line-height: 1.25;
   color: #000;
 }
-/* line 181, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--medium {
   line-height: 1.39;
   color: #000;
 }
-/* line 188, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--small {
   color: #333;
   -webkit-font-smoothing: auto;
 }
-/* line 195, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--x-small {
   color: #333;
 }
-/* line 201, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .heading--label {
   margin: 0;
-  font-size: 1.42857em;
+  font-size: 1.4285714286em;
   color: #333;
   -webkit-font-smoothing: auto;
 }
-/* line 228, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete {
-  font-size: 1.71429em;
+  font-size: 1.7142857143em;
   color: #333;
 }
-/* line 234, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--sub-nav {
-  font-size: 1.57143em;
+  font-size: 1.5714285714em;
   color: #000;
 }
-/* line 240, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--dropdown {
-  font-size: 1.14286em;
+  font-size: 1.1428571429em;
   color: #787878;
   line-height: 1.875;
 }
-/* line 247, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal {
-  font-size: 0.78571em;
+  font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #333;
   text-transform: uppercase;
 }
-/* line 280, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview strong,
-body.kss .kss-example-preview .text--bold,
-body.kss .kss-example-preview .sidebar--nav li a,
-body.kss .kss-example-preview table th {
+body.kss .kss-example-preview .text--bold, body.kss .kss-example-preview .sidebar--nav li a, body.kss .kss-example-preview table th {
   font-weight: bold;
 }
-/* line 284, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--light {
   font-weight: 100;
 }
-/* line 287, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview em,
 body.kss .kss-example-preview .text--italic {
   font-style: italic;
 }
-/* line 291, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--caps {
   text-transform: uppercase;
 }
-/* line 294, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--left {
   text-align: left;
 }
-/* line 297, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--right {
   text-align: right;
 }
-/* line 300, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--centered {
   text-align: center;
 }
-/* line 303, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--justified {
   text-align: justified;
 }
-/* line 306, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--huge {
-  font-size: 2.57143em;
+  font-size: 2.5714285714em;
 }
-/* line 309, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--big {
-  font-size: 1.71429em;
+  font-size: 1.7142857143em;
 }
-/* line 312, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--base-size {
   font-size: 14px;
 }
-/* line 315, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--small {
-  font-size: 0.85714em;
+  font-size: 0.8571428571em;
 }
-/* line 318, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--tiny {
-  font-size: 0.71429em;
+  font-size: 0.7142857143em;
 }
-/* line 321, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--negative {
   color: #fff;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--light-body {
   color: #bbb;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--medium-body {
   color: #787878;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--dark-body {
   color: #333;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--link {
   color: #eb912c;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--headlines {
   color: #000;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--nav-items {
   color: #212535;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--data-sources {
   color: #a3b9cb;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--stories {
   color: #847094;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--learning {
   color: #6f99a5;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--highlight {
   color: #53bd92;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--mission-1 {
   color: #316cc8;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--mission-2 {
   color: #7dcdf1;
 }
-/* line 355, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview .text--mission-3 {
   color: #5facce;
 }
-/* line 370, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview a {
   text-decoration: none;
   color: #eb912c;
 }
-/* line 374, ../../components/typography/_typography.scss */
+
 body.kss .kss-example-preview a:hover {
   text-decoration: underline;
 }

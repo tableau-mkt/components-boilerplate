@@ -10,11 +10,11 @@ module.exports = (grunt) ->
           'components/{,**/}*.{scss,sass}'
           'sass/{,**/}*.{scss,sass}'
         ]
-        tasks: ['compass:dist']
+        tasks: ['sass_globbing','sass:dev']
 
       kss:
         files: [
-          'dist/css/{,**/}*.css'
+          'dist/css/*.css'
           'components/{,**/}*.{hbs,html,json}'
         ]
         tasks: ['shell:kss']
@@ -23,20 +23,52 @@ module.exports = (grunt) ->
         files: ['components/{,**/}*.js']
         tasks: ['concat:dist']
 
-    compass:
+    sass_globbing:
+      all:
+        files:
+          'sass/imports/_variablesMap.scss': 'components/_helpers/variables/*.scss'
+          'sass/imports/_functionsMap.scss': 'components/_helpers/functions/*.scss'
+          'sass/imports/_mixinsMap.scss': 'components/_helpers/mixins/*.scss'
+          'sass/imports/_helpersMap.scss': 'components/_helpers/*.scss'
+          'sass/imports/_componentsMap.scss': 'components/**/*.scss'
+
+    sass:
       dist:
         options:
-          cssDir: 'dist/css'
-          sassDir: 'sass'
-          imagesDir: 'images'
-          generatedImagesDir: 'images/generated'
-          javascriptsDir: 'dist/js'
-          require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
-          outputStyle: 'expanded'
-          bundleExec: true
-          relativeAssets: true
-          force: true
-          sourcemap: true
+           sourceMap: true
+           outputStyle: 'expanded'
+        files: [
+          {
+            expand:true
+            cwd: 'sass'
+            src: ['*.scss', '*.sass']
+            dest: 'dist/css'
+            ext: '.css'
+          }
+        ]
+      dev:
+        options:
+           sourceMap: true
+           outputStyle: 'expanded'
+        files: [
+          {
+            expand:true
+            cwd: 'sass'
+            src: ['*.scss', '*.sass']
+            dest: 'dist/css'
+            ext: '.css'
+          }
+        ]
+
+    postcss:
+      options:
+        processors: [
+          require('autoprefixer-core')({ browers: ['> 2%', 'last 2 versions', 'IE8'] })
+        ]
+      dist:
+        src: 'dist/css/*.css'
+
+
 
     shell:
       kss:
@@ -49,15 +81,24 @@ module.exports = (grunt) ->
         src: 'components/{,**/}*.js'
         dest: 'dist/js/scripts.js'
 
-  grunt.loadNpmTasks 'grunt-contrib-compass'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
-  grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-shell'
+  # Load all grunt tasks as defined in package.json devDependencies
+  require('load-grunt-tasks')(grunt)
+
+  grunt.registerTask 'default', [
+    'watch'
+  ]
   grunt.registerTask 'build', [
-    'compass:dist'
+    'sass_globbing'
+    'sass:dist'
     'shell:kss'
+    'postcss:dist'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
+  ]
+
+  grunt.registerTask 'style', [
+    'sass_globbing'
+    'sass:dev'
   ]
   return
