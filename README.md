@@ -5,15 +5,18 @@ A place to keep our library of reusable components for various web properties.
 ###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
 
 ## Getting started
+Install your local dependencies: we add susy and breakpoint-sass via bower and take care of sass-globbing via a grunt-task. This enables up to strip out all Compass and Ruby based dependencies.
 ```
 $ npm install
 $ bower install
 ```
 
 ### Develop
+Starts up a grunt watch task by default.
 ```$ grunt```
 
 ### Finish
+Produce the full style.css file, run it through css prefixer, and generate the kss-node based styleguide.
 ```$ grunt build```
 
 ## Defining a Component
