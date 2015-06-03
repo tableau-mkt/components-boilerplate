@@ -60,20 +60,15 @@ module.exports = (grunt) ->
           }
         ]
 
-    compass:
+    postcss:
+      options:
+        processors: [
+          require('autoprefixer-core')({ browers: ['> 2%', 'last 2 versions', 'IE8'] })
+        ]
       dist:
-        options:
-          cssDir: 'dist/css'
-          sassDir: 'sass'
-          imagesDir: 'images'
-          generatedImagesDir: 'images/generated'
-          javascriptsDir: 'dist/js'
-          require: ['toolkit', 'breakpoint', 'susy', 'sass-globbing']
-          outputStyle: 'expanded'
-          bundleExec: true
-          relativeAssets: true
-          force: true
-          sourcemap: true
+        src: 'dist/css/*.css'
+
+
 
     shell:
       kss:
@@ -89,9 +84,14 @@ module.exports = (grunt) ->
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
 
+  grunt.registerTask 'default', [
+    'watch'
+  ]
   grunt.registerTask 'build', [
+    'sass_globbing'
     'sass:dist'
     'shell:kss'
+    'postcss:dist'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
