@@ -3521,23 +3521,30 @@ Style guide: interactive.slide
 .slideshow__slide .slideshow__copy {
   position: absolute;
   top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
   color: #fff;
+}
+/* line 106, ../../components/slideshow/_slideshow.scss */
+.slideshow__slide .slideshow__copy h1, .slideshow__slide .slideshow__copy .heading--homepage, .slideshow__slide .slideshow__copy .heading--product, .slideshow__slide .slideshow__copy .heading--download {
+  margin: 0;
 }
 
 /*******************************************************************************
 HUGE STYLES
 *******************************************************************************/
 /* HERO CAROUSEL */
-/* line 120, ../../components/slideshow/_slideshow.scss */
+/* line 127, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .hero-slide-show-container {
   margin: 0 auto;
 }
-/* line 127, ../../components/slideshow/_slideshow.scss */
+/* line 134, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .hero-slide-image {
   height: 0;
   padding-bottom: 33%;
 }
-/* line 130, ../../components/slideshow/_slideshow.scss */
+/* line 137, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .hero-slide-image .fade {
   background-image: url(../images/global/img-fade-left.png), url(../images/global/img-fade-right.png);
   background-position: left top, right top;
@@ -3550,15 +3557,15 @@ HUGE STYLES
   height: 100%;
   z-index: 1;
 }
-/* line 146, ../../components/slideshow/_slideshow.scss */
+/* line 153, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .hero-slide-image img {
   position: absolute;
 }
-/* line 151, ../../components/slideshow/_slideshow.scss */
+/* line 158, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show img {
   margin: 0;
 }
-/* line 155, ../../components/slideshow/_slideshow.scss */
+/* line 162, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow {
   position: absolute;
   z-index: 1;
@@ -3568,34 +3575,34 @@ HUGE STYLES
   text-transform: uppercase;
   overflow: visible;
 }
-/* line 169, ../../components/slideshow/_slideshow.scss */
+/* line 176, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow:hover .title {
   width: auto;
   padding: 15px 40px 15px 15px;
   opacity: 1;
 }
-/* line 178, ../../components/slideshow/_slideshow.scss */
+/* line 185, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
   background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
 }
-/* line 188, ../../components/slideshow/_slideshow.scss */
+/* line 195, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow.left.inverted:hover .icon-hero-carousel-arrow-left {
   background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
 }
-/* line 195, ../../components/slideshow/_slideshow.scss */
+/* line 202, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow.left:hover .title {
   padding: 15px 15px 15px 40px;
 }
-/* line 200, ../../components/slideshow/_slideshow.scss */
+/* line 207, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow.left .title {
   left: -15px;
   right: auto;
 }
-/* line 206, ../../components/slideshow/_slideshow.scss */
+/* line 213, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow span {
   display: block;
 }
-/* line 210, ../../components/slideshow/_slideshow.scss */
+/* line 217, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow .square {
   position: relative;
   width: 2px;
@@ -3603,7 +3610,7 @@ HUGE STYLES
   margin: 0 20px;
   float: right;
 }
-/* line 219, ../../components/slideshow/_slideshow.scss */
+/* line 226, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow .title {
   top: -10px;
   right: -15px;
@@ -3615,7 +3622,7 @@ HUGE STYLES
   overflow: hidden;
   transition: all 1s ease;
 }
-/* line 231, ../../components/slideshow/_slideshow.scss */
+/* line 238, ../../components/slideshow/_slideshow.scss */
 #hero-slide-show .carousel-arrow .text {
   position: relative;
   white-space: nowrap;
