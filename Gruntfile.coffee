@@ -35,7 +35,7 @@ module.exports = (grunt) ->
     sass:
       dist:
         options:
-           sourceMap: true,
+           sourceMap: true
            outputStyle: 'expanded'
         files: [
           {
@@ -48,7 +48,7 @@ module.exports = (grunt) ->
         ]
       dev:
         options:
-           sourceMap: true,
+           sourceMap: true
            outputStyle: 'expanded'
         files: [
           {
@@ -87,7 +87,7 @@ module.exports = (grunt) ->
         dest: 'dist/js/scripts.js'
 
   # Load all grunt tasks as defined in package.json devDependencies
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   grunt.registerTask 'build', [
     'sass:dist'
