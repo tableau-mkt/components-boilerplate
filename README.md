@@ -50,6 +50,23 @@ of the component and provides example data to populate the handlebars template.
   └── component-name.js
 ```
 
+### Scaffold a component
+If you haven't already done so, install [grunt-init](http://gruntjs.com/project-scaffolding).
+
+Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
+
+```
+git clone https://github.com/tableau-mkt/spawn-component.git ~/.grunt-init/component
+```
+
+#### Usage
+At the command-line, cd into your local www7 components directory, run this command and follow the prompts.
+
+```
+$ cd [PATH-TO-YOUR-LOCAL-WWW7-COMPONENTS-REPO]
+$ grunt-init component
+```
+
 ## KSS Comment Example:
 
 ```
