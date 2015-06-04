@@ -4,7 +4,7 @@ Primary CTA
 Primary CTA buttons (Solid) should be used when a single or important page 
 action is required.
 
-Markup: cta-kss.hbs
+Markup: cta.hbs
 
 .cta--orange - Orange colored CTA button.
 .cta--desktop - Desktop colored CTA button.
@@ -13,6 +13,10 @@ Markup: cta-kss.hbs
 .cta--public - Public colored CTA button.
 .cta--reader - Reader colored CTA button.
 .cta--mobile - Mobile colored CTA button.
+.cta--download - CTA button with download icon.
+.cta--play - CTA button with play icon.
+.cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
+.cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
 
 Style guide: buttons.cta
 */
@@ -68,65 +72,40 @@ Style guide: buttons.cta
   &.cta--play:after {
     content: "▶";
   }
-}
-
-
-/* 
-Secondary CTA
-
-Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
-present, or somewhat important page actions are required.
-
-Markup: cta-secondary.hbs
-
-Style guide: buttons.cta-secondary
-*/
-
-.cta--secondary {
-  border: 2px solid $text-link;
-  padding: 15px 23px;
-  background: transparent;
-  color: $text-link;
-
-  &:hover,
-  &:focus {
+  
+  &.cta--secondary {
+    border: 2px solid $text-link;
+    padding: 15px 23px;
     background: transparent;
+    color: $text-link;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+
+    &:active {
+      border-color: $button-final;
+      background: transparent;
+      color: $button-final;
+    }
   }
 
-  &:active {
-    border-color: $button-final;
+  &.cta--tertiary {
+    border: 2px solid $button-orange;
+    padding: 15px 23px;
     background: transparent;
-    color: $button-final;
-  }
-}
+    color: $button-orange;
 
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
 
-/* 
-Tertiary CTA
-
-Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
-or an action not directly related to the page is required. When hovering over a 
-Stroked button the copy is underlined.
-
-Markup: cta-tertiary.hbs
-
-Style guide: buttons.cta-tertiary
-*/
-
-.cta--tertiary {
-  border: 2px solid $button-orange;
-  padding: 15px 23px;
-  background: transparent;
-  color: $button-orange;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-  }
-
-  &:active {
-    border-color: $button-final;
-    background: transparent;
-    color: $button-final;
+    &:active {
+      border-color: $button-final;
+      background: transparent;
+      color: $button-final;
+    }
   }
 }
