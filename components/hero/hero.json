@@ -1,0 +1,20 @@
+{
+  "img": {
+    "src": "http://placecage.com/1366/540"
+  },
+  "text": {
+    "sub_title": {
+      "text": "Sub Title",
+      "level": "4"
+    },
+    "headline": {
+      "text": "Big Headline String",
+      "level": "1"
+    },
+    "cta": {
+      "url": "http://www/tableau.com",
+      "text": "Call to Action",
+      "icon": "play"
+    }
+  }
+}

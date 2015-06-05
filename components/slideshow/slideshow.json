@@ -23,7 +23,7 @@
         }
       }
     },{
-      "id": "slide-1",
+      "id": "slide-0",
       "hover_title": "Hover title for next button",
       "hover_class": "class-for-next-button",
       "img": {
@@ -45,7 +45,7 @@
         }
       }
     },{
-      "id": "slide-2",
+      "id": "slide-0",
       "hover_title": "Hover title for next button",
       "hover_class": "class-for-next-button",
       "img": {
@@ -66,6 +66,6 @@
           "icon": "play"
         }
       }
-    },  
+    }
   ]
 }

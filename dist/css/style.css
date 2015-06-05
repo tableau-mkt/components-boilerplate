@@ -224,8 +224,6 @@ most common proportions for video players.
 
 .accordion--item, button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
-  -moz-transition: background 0.25s, opacity 0.25s;
-  -o-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
 
@@ -327,8 +325,6 @@ most common proportions for video players.
 
 .accordion--item, button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
-  -moz-transition: background 0.25s, opacity 0.25s;
-  -o-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
 
@@ -1167,8 +1163,8 @@ Style guide: layout.container
   max-width: 1550px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 9%;
-  padding-right: 9%;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
 .content-container.content-container--wide {
@@ -1182,7 +1178,7 @@ Primary CTA
 Primary CTA buttons (Solid) should be used when a single or important page 
 action is required.
 
-Markup: cta-kss.hbs
+Markup: cta.hbs
 
 .cta--orange - Orange colored CTA button.
 .cta--desktop - Desktop colored CTA button.
@@ -1191,6 +1187,10 @@ Markup: cta-kss.hbs
 .cta--public - Public colored CTA button.
 .cta--reader - Reader colored CTA button.
 .cta--mobile - Mobile colored CTA button.
+.cta--download - CTA button with download icon.
+.cta--play - CTA button with play icon.
+.cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
+.cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
 
 Style guide: buttons.cta
 */
@@ -1209,8 +1209,6 @@ Style guide: buttons.cta
   -webkit-appearance: none;
   -webkit-font-smoothing: auto;
   -webkit-transition: background-color 0.25s, color 0.35s;
-  -moz-transition: background-color 0.25s, color 0.35s;
-  -o-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
 }
 
@@ -1288,6 +1286,10 @@ Style guide: buttons.cta
   background-color: #DB8E6A;
 }
 
+.cta.cta--arrow:after {
+  content: url(/assets/images/icons/icon-arrow.png);
+}
+
 .cta.cta--download:after,
 .cta.cta--play:after {
   display: inline-block;
@@ -1299,61 +1301,47 @@ Style guide: buttons.cta
 }
 
 .cta.cta--play:after {
-  content: "▶";
+  content: url(/assets/images/icons/icon-play.png);
+  height: 0px;
+  margin-top: -23px;
+  vertical-align: middle;
 }
 
-/* 
-Secondary CTA
-
-Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are
-present, or somewhat important page actions are required.
-
-Markup: cta-secondary.hbs
-
-Style guide: buttons.cta-secondary
-*/
-.cta--secondary {
+.cta.cta--secondary {
   border: 2px solid #eb912c;
   padding: 15px 23px;
   background: transparent;
   color: #eb912c;
 }
 
-.cta--secondary:hover,
-.cta--secondary:focus {
+.cta.cta--secondary:hover,
+.cta.cta--secondary:focus {
   background: transparent;
 }
 
-.cta--secondary:active {
+.cta.cta--secondary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
 
-/* 
-Tertiary CTA
+.cta.cta--secondary.cta--arrow:after {
+  content: url(/assets/images/icons/icon-arrow-orange.png);
+}
 
-Tertiary CTA buttons (Stroked alternate) should be used when a utility action, 
-or an action not directly related to the page is required. When hovering over a 
-Stroked button the copy is underlined.
-
-Markup: cta-tertiary.hbs
-
-Style guide: buttons.cta-tertiary
-*/
-.cta--tertiary {
+.cta.cta--tertiary {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
   color: #e8762c;
 }
 
-.cta--tertiary:hover,
-.cta--tertiary:focus {
+.cta.cta--tertiary:hover,
+.cta.cta--tertiary:focus {
   background: transparent;
 }
 
-.cta--tertiary:active {
+.cta.cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
@@ -1378,8 +1366,6 @@ Style guide: buttons.cta-tertiary
   margin-right: 15px;
   color: #fff;
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
-  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
@@ -1539,17 +1525,13 @@ input[type=submit].errored {
 }
 
 input[type=submit].submitting {
-  -webkit-background-size: 30px 30px;
-  -moz-background-size: 30px 30px;
   background-size: 30px 30px;
   background-color: #c92434;
   border-color: #c92434;
   color: #fff;
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), right);
   background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(315deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   -webkit-animation: animate-stripes 3s linear infinite;
   -moz-animation: animate-stripes 3s linear infinite;
@@ -1568,15 +1550,6 @@ input[type=submit].errored {
 }
 
 @-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
   0% {
     background-position: 0 0;
   }
@@ -2000,17 +1973,77 @@ Style guide: layout.grids
   }
 }
 
-.hero-background {
-  height: 450px;
+/*
+Page Hero
+
+@todo description
+
+Markup: hero.hbs
+
+Style guide: layout.hero
+*/
+.hero {
+  position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  background: #000;
 }
 
-@media (max-width: 739px) {
-  .hero-background {
-    height: 250px;
+.hero .hero__image {
+  height: 0;
+  padding-bottom: 33%;
+}
+
+.hero .hero__image img {
+  position: absolute;
+  width: 100%;
+}
+
+.hero .hero__copy {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.hero .hero__copy h1, .hero .hero__copy .heading--homepage, .hero .hero__copy .heading--product, .hero .hero__copy .heading--download {
+  margin: 0;
+}
+
+.hero:before,
+.hero:after {
+  display: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 200px;
+  height: 100%;
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+}
+
+@media (min-width: 1550px) {
+  .hero:before,
+  .hero:after {
+    display: block;
   }
+}
+
+.hero:after {
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+  left: auto;
+  right: 0;
 }
 
 /* 
@@ -2042,8 +2075,6 @@ Style guide: lists.teaser
   display: block;
   color: #333;
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
-  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
@@ -2124,8 +2155,6 @@ Style guide: navigation.global
   float: left;
   opacity: 1;
   -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 
@@ -2161,8 +2190,6 @@ Style guide: navigation.global
   border-right: 30px solid transparent;
   border-bottom: 30px solid #fafafa;
   -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -2190,8 +2217,6 @@ Style guide: navigation.global
   width: 45px;
   height: 100%;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -2209,8 +2234,6 @@ Style guide: navigation.global
   background-position: 15px center;
   text-align: left;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -2243,8 +2266,6 @@ Style guide: navigation.global
   top: 0;
   right: 0;
   -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -2269,8 +2290,6 @@ Style guide: navigation.global
 .global-nav.global-nav--search-shown .global-nav__secondary-menu {
   opacity: 0;
   -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -2305,7 +2324,11 @@ HUGE STYLES
 }
 
 .navigation-global.small .navigation-global-primary {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   float: none;
   height: auto;
 }
@@ -2315,11 +2338,17 @@ HUGE STYLES
 }
 
 .navigation-global.small .navigation-global-primary li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .navigation-global.small .navigation-global-secondary {
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   float: none;
   height: auto;
 }
@@ -2329,6 +2358,9 @@ HUGE STYLES
 }
 
 .navigation-global.small .navigation-global-secondary li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2365,12 +2397,19 @@ HUGE STYLES
 }
 
 .navigation-global .global-search input {
-  transition: width 0.5s ease;
+  -webkit-transition: width 0.5s ease;
+          transition: width 0.5s ease;
 }
 
 .navigation-global .navigation-global-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -2401,8 +2440,14 @@ HUGE STYLES
 }
 
 .navigation-global .navigation-global-dropdown .navigation-global-primary a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 0;
 }
 
@@ -2454,7 +2499,10 @@ HUGE STYLES
 }
 
 .navigation-global .navigation-global-dropdown .button .button-label {
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navigation-global .navigation-global-dropdown .button a {
@@ -2535,7 +2583,11 @@ HUGE STYLES
 }
 
 .sub-navigation-global-drawer.small ul {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sub-navigation-global-drawer.small ul li {
@@ -2591,8 +2643,14 @@ HUGE STYLES
 }
 
 .sub-navigation-global-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: stretch;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .sub-navigation {
@@ -2600,8 +2658,14 @@ HUGE STYLES
 }
 
 .sub-navigation ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sub-navigation ul li:last-child {
@@ -2687,8 +2751,6 @@ Style guide: navigation.main
   padding: 1.4em 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-transition: padding 0.25s;
-  -moz-transition: padding 0.25s;
-  -o-transition: padding 0.25s;
   transition: padding 0.25s;
 }
 
@@ -2709,8 +2771,6 @@ Style guide: navigation.main
   letter-spacing: 1px;
   border-bottom: 1px solid transparent;
   -webkit-transition: border 0.25s;
-  -moz-transition: border 0.25s;
-  -o-transition: border 0.25s;
   transition: border 0.25s;
 }
 
@@ -2794,8 +2854,6 @@ Style guide: navigation.main
     position: absolute;
     display: block;
     -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
   }
   .l-menu .menu--mobile-toggle span:before,
@@ -2862,8 +2920,6 @@ Style guide: navigation.main
   background-color: transparent;
   color: #fff;
   -webkit-transition: border 0.25s;
-  -moz-transition: border 0.25s;
-  -o-transition: border 0.25s;
   transition: border 0.25s;
 }
 
@@ -2972,8 +3028,6 @@ button.mfp-arrow:active {
 .popup--fade.mfp-bg {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
 
@@ -2989,8 +3043,6 @@ button.mfp-arrow:active {
 .popup--fade.mfp-wrap .mfp-arrow {
   opacity: 0;
   -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
 
@@ -3133,8 +3185,6 @@ Style guide: navigation.sidebar
   padding: .5em 0;
   color: #999;
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
-  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
@@ -3155,16 +3205,12 @@ Style guide: navigation.sidebar
     margin: 0 -10px;
     background: #464646;
     -webkit-transition: opacity 0.25s;
-    -moz-transition: opacity 0.25s;
-    -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
   }
   .sidebar--nav li {
     height: 0;
     overflow: hidden;
     -webkit-transition: height 0.25s;
-    -moz-transition: height 0.25s;
-    -o-transition: height 0.25s;
     transition: height 0.25s;
   }
   .sidebar--nav li.active,
@@ -3199,7 +3245,7 @@ Style guide: navigation.sidebar
 /*
 Slideshow
 
-Todo
+@todo description
 
 Markup: slideshow.hbs
 
@@ -3210,37 +3256,8 @@ Style guide: interactive.slideshow
   max-width: 1920px;
 }
 
-.slideshow.slideshow--hero {
+.slideshow.slideshow--hero .slideshow__slide {
   position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: #000;
-}
-
-.slideshow.slideshow--hero:before,
-.slideshow.slideshow--hero:after {
-  display: none;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 200px;
-  height: 100%;
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
-}
-
-@media (min-width: 1550px) {
-  .slideshow.slideshow--hero:before,
-  .slideshow.slideshow--hero:after {
-    display: block;
-  }
-}
-
-.slideshow.slideshow--hero:after {
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
-  left: auto;
-  right: 0;
 }
 
 .slideshow .slick-dots {
@@ -3264,72 +3281,92 @@ Style guide: interactive.slideshow
   width: 30px;
   height: 30px;
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
-  -o-transition: color 0.25s;
-  transition: color 0.25s;
+          transition: color 0.25s;
 }
 
-/*
-Slide
-
-Todo
-
-Markup: slide.hbs
-
-Style guide: interactive.slide
-*/
-.slideshow__slide {
-  position: relative;
-}
-
-.slideshow__slide .slideshow__image {
-  height: 0;
-  padding-bottom: 33%;
-}
-
-.slideshow__slide .slideshow__image img {
+.slideshow .slideshow__arrow {
   position: absolute;
-  width: 100%;
-}
-
-.slideshow__slide .slideshow__copy {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  top: 50%;
+  left: 5%;
+  z-index: 1;
+  margin-top: -12px;
+  line-height: 18px;
+  text-decoration: none;
+  overflow: visible;
   color: #fff;
 }
-/* line 106, ../../components/slideshow/_slideshow.scss */
-.slideshow__slide .slideshow__copy h1, .slideshow__slide .slideshow__copy .heading--homepage, .slideshow__slide .slideshow__copy .heading--product, .slideshow__slide .slideshow__copy .heading--download {
+
+.slideshow .slideshow__arrow .slideshow__arrow__title {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 0px;
+  padding: 15px 0px;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  white-space: nowrap;
+}
+
+.slideshow .slideshow__arrow:hover .slideshow__arrow__title {
+  width: auto;
+  padding: 15px 15px 15px 40px;
+  opacity: 1;
+}
+
+.slideshow .slideshow__arrow .icon-slideshow-arrow-left,
+.slideshow .slideshow__arrow .icon-slideshow-arrow-right {
+  position: relative;
+  display: block;
   margin: 0;
+  z-index: 1;
+  width: 13px;
+  height: 25px;
+  background: url("/assets/images/global/hero-carousel-arrow-left.png") 0 0 no-repeat;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.slideshow .slideshow__arrow .icon-slideshow-arrow-right {
+  background: url("/assets/images/global/hero-carousel-arrow-right.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
+  background: url("/assets/images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--left .slideshow__arrow__title {
+  left: -15px;
+  right: auto;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right {
+  right: 5%;
+  left: auto;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
+  background: url("/assets/images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {
+  padding: 15px 40px 15px 15px;
 }
 
 /*******************************************************************************
 HUGE STYLES
 *******************************************************************************/
 /* HERO CAROUSEL */
-<<<<<<< HEAD
 #hero-slide-show .hero-slide-show-container {
   margin: 0 auto;
 }
 
-=======
-/* line 127, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .hero-slide-show-container {
-  margin: 0 auto;
-}
-/* line 134, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .hero-slide-image {
   height: 0;
   padding-bottom: 33%;
 }
-<<<<<<< HEAD
 
-=======
-/* line 137, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .hero-slide-image .fade {
   background-image: url(../images/global/img-fade-left.png), url(../images/global/img-fade-right.png);
   background-position: left top, right top;
@@ -3342,7 +3379,6 @@ HUGE STYLES
   height: 100%;
   z-index: 1;
 }
-<<<<<<< HEAD
 
 #hero-slide-show .hero-slide-image img {
   position: absolute;
@@ -3352,17 +3388,6 @@ HUGE STYLES
   margin: 0;
 }
 
-=======
-/* line 153, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .hero-slide-image img {
-  position: absolute;
-}
-/* line 158, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show img {
-  margin: 0;
-}
-/* line 162, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow {
   position: absolute;
   z-index: 1;
@@ -3372,17 +3397,12 @@ HUGE STYLES
   text-transform: uppercase;
   overflow: visible;
 }
-<<<<<<< HEAD
 
-=======
-/* line 176, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow:hover .title {
   width: auto;
   padding: 15px 40px 15px 15px;
   opacity: 1;
 }
-<<<<<<< HEAD
 
 #hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
   background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
@@ -3396,38 +3416,15 @@ HUGE STYLES
   padding: 15px 15px 15px 40px;
 }
 
-=======
-/* line 185, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
-  background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
-}
-/* line 195, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .carousel-arrow.left.inverted:hover .icon-hero-carousel-arrow-left {
-  background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
-}
-/* line 202, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .carousel-arrow.left:hover .title {
-  padding: 15px 15px 15px 40px;
-}
-/* line 207, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow.left .title {
   left: -15px;
   right: auto;
 }
-<<<<<<< HEAD
 
 #hero-slide-show .carousel-arrow span {
   display: block;
 }
 
-=======
-/* line 213, ../../components/slideshow/_slideshow.scss */
-#hero-slide-show .carousel-arrow span {
-  display: block;
-}
-/* line 217, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow .square {
   position: relative;
   width: 2px;
@@ -3435,11 +3432,7 @@ HUGE STYLES
   margin: 0 20px;
   float: right;
 }
-<<<<<<< HEAD
 
-=======
-/* line 226, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow .title {
   top: -10px;
   right: -15px;
@@ -3449,13 +3442,10 @@ HUGE STYLES
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
 }
-<<<<<<< HEAD
 
-=======
-/* line 238, ../../components/slideshow/_slideshow.scss */
->>>>>>> gh-pages
 #hero-slide-show .carousel-arrow .text {
   position: relative;
   white-space: nowrap;
@@ -3669,8 +3659,6 @@ Style guide: images.thumbnail
 .thumbnail img {
   width: 100%;
   -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3678,6 +3666,38 @@ Style guide: images.thumbnail
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+/*
+Text Links
+
+Text-based links, unlike CTA buttons, don't have a colored box around them, 
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.
+
+Markup: link.hbs
+
+Weight: 20
+
+Style guide: typography.links
+*/
+a,
+.link {
+  font-size: 0.7857142857em;
+  letter-spacing: 1px;
+  color: #eb912c;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover,
+.link:hover {
+  text-decoration: underline;
+}
+
+a.link--arrow:after,
+.link.link--arrow:after {
+  content: url(/assets/images/icons/icon-arrow-orange.png);
 }
 
 /*
@@ -3719,7 +3739,8 @@ h6, .heading--h6 {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .global-nav .global-nav__primary-menu li a, .heading--x-small, .text--label, .global-nav .global-nav__secondary-menu li a.link-normal {
+.text--benton-book, .cta, .global-nav .global-nav__primary-menu li a, a,
+.link, .heading--x-small, .text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -3818,6 +3839,17 @@ h6, .heading--h6 {
 }
 
 /*
+Headings Template
+
+@todo remove this once #11 is resolved
+
+Markup: heading.hbs
+
+Weight: 100
+
+Styleguide typography.heading-template
+*/
+/*
 Context-specific Headings
 
 These heading classes are used for specific contexts.
@@ -3905,7 +3937,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .global-nav .global-nav__secondary-menu li a.link-normal {
+.text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .slideshow .slideshow__arrow {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #333;
@@ -4076,23 +4108,3 @@ Style guide: typography.colors
 .text--mission-3 {
   color: #5facce;
 }
-
-/*
-Hyperlinks
-
-Coming soon....
-
-Weight: 12
-
-Style guide: typography.hyperlinks
-*/
-a {
-  text-decoration: none;
-  color: #eb912c;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/*# sourceMappingURL=style.css.map */

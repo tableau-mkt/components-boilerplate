@@ -1,12 +1,66 @@
-.hero-background {
-  height: 450px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
+/*
+Page Hero
 
-@include breakpoint($mobile) {
-  .hero-background {
-    height: 250px;
+@todo description
+
+Markup: hero.hbs
+
+Style guide: layout.hero
+*/
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: $black;
+  
+  
+  .hero__image {
+    height: 0;
+    padding-bottom: 33%;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .hero__copy {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    // @todo add fallback for older browsers
+    display: flex;
+    align-items: center;
+    color: $text-negative;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+
+  // Gradients to transition hero image to dark background on wider screens
+  &:before,
+  &:after {
+    display: none;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 200px;
+    height: 100%;
+    background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
+
+    @include at-extra-large-breakpoint {
+      display: block;
+    }
+  }
+
+  &:after {
+    background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
+    left: auto;
+    right: 0;
   }
 }

@@ -10,7 +10,7 @@ module.exports = (grunt) ->
           'components/{,**/}*.{scss,sass}'
           'sass/{,**/}*.{scss,sass}'
         ]
-        tasks: ['sass_globbing','sass:dev']
+        tasks: ['sass_globbing','sass:dev', 'postcss:dist']
 
       kss:
         files: [
@@ -63,7 +63,7 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require('autoprefixer-core')({ browers: ['> 2%', 'last 2 versions', 'IE8'] })
+          require('autoprefixer-core')({ browers: ['IE8', 'iOS', 'Opera'] })
         ]
       dist:
         src: 'dist/css/*.css'

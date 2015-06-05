@@ -135,6 +135,18 @@ h6, .heading--h6 {
   font-size: 1em;
 }
 
+/*
+Headings Template
+
+@todo remove this once #11 is resolved
+
+Markup: heading.hbs
+
+Weight: 100
+
+Styleguide typography.heading-template
+*/
+
 
 /*
 Context-specific Headings
@@ -354,24 +366,5 @@ Style guide: typography.colors
 @each $name, $color in $text-colors {
   .text--#{"" + $name} {
     color: $color;
-  }
-}
-
-
-/*
-Hyperlinks
-
-Coming soon....
-
-Weight: 12
-
-Style guide: typography.hyperlinks
-*/
-a {
-  text-decoration: none;
-  color: $text-link;
-
-  &:hover {
-    text-decoration: underline;
   }
 }

@@ -1,4 +1,7 @@
 {
   "url": "http://www.tableau.com",
-  "text": "Call to Action"
+  "text": "Call to Action",
+  "type": false,
+  "icon": false,
+  "color": false
 }

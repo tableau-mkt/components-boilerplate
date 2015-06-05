@@ -1,0 +1,32 @@
+/*
+Text Links
+
+Text-based links, unlike CTA buttons, don't have a colored box around them, 
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.
+
+Markup: link.hbs
+
+Weight: 20
+
+Style guide: typography.links
+*/
+
+a,
+.link {
+  @extend .text--benton-book;
+  font-size: em(11px);
+  letter-spacing: 1px;
+  color: $text-link;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.link--arrow:after {
+    content: url(/assets/images/icons/icon-arrow-orange.png);
+  }
+}
+

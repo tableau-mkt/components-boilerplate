@@ -14,11 +14,9 @@
       </a>
     {{/ thumbnail}}
     <div class="teaser-list__info">
-      {{#if title}}
-      <h3 class="teaser-list__title">
-        {{ title }}
-      </h3>
-      {{/if}}
+      {{# title}}
+        {{> heading }}
+      {{/ title}}
       {{#if description}}
       <p class="teaser-list__description">
         {{ description }} 

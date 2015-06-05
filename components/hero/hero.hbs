@@ -1,0 +1,29 @@
+<div class="hero {{ modifier_class }}">
+  {{# img }}
+    <div class="hero__image">
+      <img src="{{ src }}"/>
+    </div>
+  {{/ img }}
+
+  {{# text }}
+    <div class="hero__copy content-container">
+      <div class="hero__copy__inner">
+        {{# sub_title }}
+          {{> heading }}
+        {{/ sub_title }}
+        
+        {{# headline }}
+          {{> heading }}
+        {{/ headline }}
+        
+        {{# cta }}
+          {{> cta }}
+        {{/ cta }}
+
+        {{# link }}
+          {{!-- @todo add support for a secondary link --}}
+        {{/ link }}
+      </div>
+    </div>
+  {{/ text }}
+</div>

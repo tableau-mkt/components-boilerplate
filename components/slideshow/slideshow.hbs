@@ -1,30 +1,18 @@
 <div class="slideshow slideshow--hero  {{ slideshow_id }}">
-  {{#each this }}
+  {{#each slides }}
     <div class="slideshow__slide" data-title="{{hover_title}}" data-title-class="{{hover_class}}">
-      {{# img }}
-        <div class="slideshow__image">
-          <img src="{{ src }}"/>
-        </div>
-      {{/ img }}
+      {{> hero }}
+      
+      <a href="#" class="slideshow__arrow slideshow__arrow--left">
+        <span class="slideshow__arrow__title"></span>
+        <span class="icon-slideshow-arrow-left"></span>
+      </a>
 
-      {{# text }}
-        <div class="slideshow__copy content-container">
-          <div class="slideshow__copy__inner">
-            {{# sub_title }}
-              {{> heading }}
-            {{/ sub_title }}
-            
-            {{# headline }}
-              {{> heading }}
-            {{/ headline }}
-            
-            {{# cta }}
-              {{> cta }}
-            {{/ cta }}
-          </div>
-        </div>
-      {{/ text }}
+      <a href="#" class="slideshow__arrow slideshow__arrow--right">
+        <span class="icon-slideshow-arrow-right"></span>
+        <span class="slideshow__arrow__title"></span>
+      </a>
+
     </div>
-    
   {{/each}}
 </div>

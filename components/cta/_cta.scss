@@ -59,6 +59,10 @@ Style guide: buttons.cta
     }
   }
 
+  &.cta--arrow:after {
+    content: url(/assets/images/icons/icon-arrow.png);
+  }
+
   &.cta--download:after,
   &.cta--play:after {
     display: inline-block;
@@ -70,7 +74,10 @@ Style guide: buttons.cta
   }
 
   &.cta--play:after {
-    content: "▶";
+    content: url(/assets/images/icons/icon-play.png);
+    height: 0px;
+    margin-top: -23px;
+    vertical-align: middle;
   }
   
   &.cta--secondary {
@@ -89,6 +96,11 @@ Style guide: buttons.cta
       background: transparent;
       color: $button-final;
     }
+
+    &.cta--arrow:after {
+      content: url(/assets/images/icons/icon-arrow-orange.png);
+    }
+
   }
 
   &.cta--tertiary {
