@@ -544,6 +544,16 @@ Markup: cta.hbs
 Style guide: buttons.cta
 */
   /*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, the language selector, social buttons, and a copyright line
+
+Markup: global-footer.hbs
+
+Style Guide: layout.footer
+*/
+  /*
 Base Form Styles
 
 A simple example form.
@@ -1082,13 +1092,13 @@ body.kss .kss-example-preview .hide {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -1157,13 +1167,13 @@ body.kss .kss-example-preview .hide {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .l-menu .menu, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .l-menu .menu li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -1837,106 +1847,14 @@ body.kss .kss-example-preview .cta.cta--tertiary:active {
   color: #c92434;
 }
 
-body.kss .kss-example-preview .l-footer {
-  color: #f2f2f2;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  /* Social Links */
-  /* Footer Nav */
-  /* Copyright */
-  /* Tableau Logo */
+body.kss .kss-example-preview .global-footer a {
+  text-transform: none;
+  color: #bbb;
+  font-size: 14px;
 }
 
-body.kss .kss-example-preview .l-footer .block--block-1 .social-links {
-  margin: 1.2em 0 0;
-}
-
-body.kss .kss-example-preview .l-footer .block--block-1 .social-links a {
-  display: inline-block;
-  margin-right: 15px;
-  color: #fff;
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-body.kss .kss-example-preview .l-footer .block--block-1 .social-links a:hover {
-  color: #f2f2f2;
-}
-
-body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu {
-  margin: 0;
-  text-align: center;
-}
-
-body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li a {
-  color: #f2f2f2;
-}
-
-body.kss .kss-example-preview .l-footer .block--block-2 p {
-  margin: .5em 0 0;
-}
-
-body.kss .kss-example-preview .l-footer .block--block-3 {
-  margin-top: 1em;
-}
-
-@media (max-width: 739px) {
-  body.kss .kss-example-preview .l-footer {
-    text-align: center;
-  }
-  body.kss .kss-example-preview .l-footer .block--block-1 .social-links {
-    max-width: 250px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  body.kss .kss-example-preview .l-footer .block--block-1 .social-links a {
-    margin: .25em;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-  body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu {
-    margin-top: 1em;
-  }
-  body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li {
-    display: block;
-    padding: 0;
-  }
-  body.kss .kss-example-preview .l-footer .block--menu-menu-footer-menu .menu li a {
-    display: block;
-    padding: .3em;
-    font-size: 1.1428571429em;
-  }
-  body.kss .kss-example-preview .l-footer .block--block-3 img {
-    max-width: 140px;
-  }
-}
-
-@media (min-width: 740px) {
-  body.kss .kss-example-preview html,
-  body.kss .kss-example-preview body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  body.kss .kss-example-preview .l-page {
-    min-height: 100%;
-    position: relative;
-  }
-  body.kss .kss-example-preview .l-main {
-    padding-bottom: 98px;
-  }
-  body.kss .kss-example-preview .l-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 98px;
-  }
+body.kss .kss-example-preview .global-footer .global-footer__menu li {
+  padding: 0 1em;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -3994,7 +3912,6 @@ body.kss .kss-example-preview .text--dropdown {
 body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal, body.kss .kss-example-preview .slideshow .slideshow__arrow {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
-  color: #333;
   text-transform: uppercase;
 }
 

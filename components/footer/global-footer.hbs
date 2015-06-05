@@ -1,0 +1,37 @@
+<footer class="global-footer section section--padded-two box--dark-gray-3">
+  <nav class="content-container content-container--wide">
+    <div class="grid--6">
+      {{#if languages}}
+      <div class="language-dropdown">
+        <span class="selected">English</span>
+        <ul class="hide">
+          {{#each languages}}
+            <li{{#if selected}} class="selected"{{/if}}><a href="#">{{ language }}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+
+      <div class="global-footer__menu">
+        {{# menu}}
+          {{> link-list}}
+        {{/ menu}}
+      </div>
+      
+    </div>
+
+    <div class="grid--6 grid--last text--right">
+      <div class="social">
+        <a href="/">
+          Social Icons
+        </a>
+      </div>
+      <div class="copy-right text--label">
+        <p>
+          {{{ copyright }}}
+        </p>
+      </div>
+    </div>
+
+  </nav>
+</footer>

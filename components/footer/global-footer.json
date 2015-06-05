@@ -1,0 +1,75 @@
+{
+  "languages": [
+    {
+      "language": "English",
+      "code": false,
+      "selected": true
+    },
+    {
+      "language": "Español",
+      "code": "es-es"
+    },
+    {
+      "language": "Português",
+      "code": "pt-br"
+    },
+    {
+      "language": "日本語",
+      "code": "zh-cn"
+    },
+    {
+      "language": "Deutsch",
+      "code": "de-de"
+    },
+    {
+      "language": "Français",
+      "code": "fr-fr"
+    },
+    {
+      "language": "简体中文",
+      "code": "ja-jp"
+    },
+    {
+      "language": "한국어",
+      "code": "ko-kr"
+    }
+  ],
+
+  "menu": {
+    "modifier_class": "link-list--inline",
+    "items": [
+      {
+        "text": "Blog",
+        "url": "#"
+      },
+      {
+        "text": "Partners",
+        "url": "#"
+      },
+      {
+        "text": "Contact Us",
+        "url": "#"
+      },
+      {
+        "text": "Legal & Privacy",
+        "url": "#"
+      }
+    ]
+  },
+  
+  "social": {
+    "items": [
+      {
+        "name": "linkedin"
+      },
+      {
+        "name": "facebook"
+      },
+      {
+        "name": "twitter"
+      }
+    ]
+  },
+
+  "copyright": "© 2003-2015 Tableau Software. All Rights Reserved"
+}

@@ -1,0 +1,24 @@
+/*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, the language selector, social buttons, and a copyright line
+
+Markup: global-footer.hbs
+
+Style Guide: layout.footer
+*/
+
+.global-footer {
+  a {
+    text-transform: none;
+    color: $text-light-body;
+    font-size: $base-font-size;
+  }
+
+  .global-footer__menu {
+    li {
+      padding: 0 1em;
+    }
+  }
+}
