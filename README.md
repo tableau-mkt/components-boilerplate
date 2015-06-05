@@ -96,6 +96,8 @@ component within a generated style guide via kss-node.
 generated style guide displays each variation properly.
 * The "Style guide" field determines the section and nesting in which the
 component will be displayed in the generated style guide.
+* To prevent the code exmaple from rendering for a component, add a 
+`Nocode: true` tag to the KSS comment.
 
 ## Adding/Editing Components
 
