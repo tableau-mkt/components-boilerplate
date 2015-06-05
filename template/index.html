@@ -143,11 +143,13 @@
               </div>
             {{/eachModifier}}
           </div>
-
-          <h4>Markup:</h4>
-          <div class="kss-markup">
-            <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
-          </div>
+          
+          {{#unless nocode}}
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
+            </div>
+          {{/unless}}
         {{/if}}
 
         {{#ifDepth 1}}
