@@ -11,15 +11,26 @@ Style guide: images.thumbnail
 */
 
 .thumbnail {
+  position: relative;
+  display: inline-block;
   overflow: hidden;
   line-height: 0;
   
   img {
-    width: 100%;
+    max-width: 100%;
     @include transition(all 1s ease);
   }
 
   img:hover {
     @include transform(scale(1.1));
+  }
+
+  &.thumbnail--play:after {
+    content: url(/assets/images/icons/icon-play-xlarge.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -36px 0 0 -36px;
+    pointer-events: none;
   }
 }

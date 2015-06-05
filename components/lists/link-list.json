@@ -11,7 +11,7 @@
       "url": "http://www.google.com",
       "text": "Get Free Trial",
       "class": "download",
-      "link_class": "cta",
+      "link_class": false,
       "target": "_blank"
     }
   ]

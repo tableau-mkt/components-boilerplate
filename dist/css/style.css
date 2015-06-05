@@ -10,35 +10,45 @@ Style guide: colors
 /*
 Text Colors
 
-Colors used for typography.
+Colors used for typography. *Coming Soon*
+
+Weight: 1
 
 Style guide: colors.text
 */
 /*
 Button Colors
 
-Colors used for buttons.
+Colors used for buttons. *Coming Soon*
+
+Weight: 2
 
 Style guide: colors.buttons
 */
 /*
 Accent Colors
 
-Colors used for accents.
+Colors used for accents. *Coming Soon*
+
+Weight: 3
 
 Style guide: colors.accent
 */
 /*
 Background Colors
 
-Colors used for backgrounds.
+Colors used for backgrounds. *Coming Soon*
+
+Weight: 4
 
 Style guide: colors.background
 */
 /*
 Product colors
 
-Specific brand colors for Tableau products
+Specific brand colors for Tableau products. *Coming Soon*
+
+Weight: 5
 
 Style guide: colors.product
 */
@@ -47,7 +57,7 @@ Basic Colors
 
 Some basic colors
 
-Style guide: colors.basic
+#Style guide: colors.basic
 */
 /* 
 Text colors mapping in form of:
@@ -202,13 +212,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .l-menu .menu, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .l-menu .menu li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -303,13 +313,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .l-menu .menu, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .l-menu .menu li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -418,35 +428,45 @@ Style guide: colors
 /*
 Text Colors
 
-Colors used for typography.
+Colors used for typography. *Coming Soon*
+
+Weight: 1
 
 Style guide: colors.text
 */
 /*
 Button Colors
 
-Colors used for buttons.
+Colors used for buttons. *Coming Soon*
+
+Weight: 2
 
 Style guide: colors.buttons
 */
 /*
 Accent Colors
 
-Colors used for accents.
+Colors used for accents. *Coming Soon*
+
+Weight: 3
 
 Style guide: colors.accent
 */
 /*
 Background Colors
 
-Colors used for backgrounds.
+Colors used for backgrounds. *Coming Soon*
+
+Weight: 4
 
 Style guide: colors.background
 */
 /*
 Product colors
 
-Specific brand colors for Tableau products
+Specific brand colors for Tableau products. *Coming Soon*
+
+Weight: 5
 
 Style guide: colors.product
 */
@@ -455,7 +475,7 @@ Basic Colors
 
 Some basic colors
 
-Style guide: colors.basic
+#Style guide: colors.basic
 */
 /* 
 Text colors mapping in form of:
@@ -524,7 +544,9 @@ user can submit information through. Here's an example form:
 
 Weight: 50
 
-Style guide: forms
+################################################################################
+# Style guide: forms ###########################################################
+################################################################################
 */
 /*
 Tables
@@ -533,7 +555,9 @@ Used for tabular data
 
 Weight: 60
 
-Style guide: 4
+################################################################################
+# Style guide: tables ##########################################################
+################################################################################
 */
 /*
 Navigation
@@ -842,7 +866,7 @@ Markup: box_padded.hbs
 Weight: 1
 
 .box__padded--one - A box with 1em of padding
-.box__padded--two - <strong>[Default]</strong> A box with 2em of padding
+.box__padded--two - A box with 2em of padding (Default)
 .box__padded--three - A box with 3em of padding
 .box__padded--four - A box with 4em of padding
 
@@ -1187,7 +1211,7 @@ Markup: cta.hbs
 .cta--public - Public colored CTA button.
 .cta--reader - Reader colored CTA button.
 .cta--mobile - Mobile colored CTA button.
-.cta--download - CTA button with download icon.
+.cta--arrow - CTA button with arrow icon.
 .cta--play - CTA button with play icon.
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
@@ -1288,22 +1312,15 @@ Style guide: buttons.cta
 
 .cta.cta--arrow:after {
   content: url(/assets/images/icons/icon-arrow.png);
-}
-
-.cta.cta--download:after,
-.cta.cta--play:after {
-  display: inline-block;
-  padding-left: 1em;
-}
-
-.cta.cta--download:after {
-  content: ">";
+  padding-left: .5em;
 }
 
 .cta.cta--play:after {
   content: url(/assets/images/icons/icon-play.png);
+  display: inline-block;
   height: 0px;
   margin-top: -23px;
+  padding-left: 1em;
   vertical-align: middle;
 }
 
@@ -1504,553 +1521,6 @@ Weight: 4
 Style guide: forms.confirmation
 */
 /*
-Grids
-
-Used for creating a columned layout. To use these classes, just pick the number
-of columns wide you want your element to be relative to the total number of
-columns. The default is 12 columns. For example, you can use `.grid--4` to make
-an element 4 columns wide followed by an element with `.grid--8` to take up the
-remaining eight columns of the container's width.
-
-Markup: grid.hbs
-
-Weight: 1
-
-Style guide: layout.grids
-*/
-.grid--1 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--1 {
-    width: 6.3829787234%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--1.grid--last {
-    margin-right: 0;
-  }
-  .grid--1:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--1 {
-    margin-left: 8.5106382979%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--1 {
-    margin-left: -8.5106382979%;
-  }
-}
-
-.grid--2 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--2 {
-    width: 14.8936170213%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--2.grid--last {
-    margin-right: 0;
-  }
-  .grid--2:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--2 {
-    margin-left: 17.0212765957%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--2 {
-    margin-left: -17.0212765957%;
-  }
-}
-
-.grid--3 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--3 {
-    width: 23.4042553191%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--3.grid--last {
-    margin-right: 0;
-  }
-  .grid--3:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--3 {
-    margin-left: 25.5319148936%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--3 {
-    margin-left: -25.5319148936%;
-  }
-}
-
-.grid--4 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--4 {
-    width: 31.914893617%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--4.grid--last {
-    margin-right: 0;
-  }
-  .grid--4:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--4 {
-    margin-left: 34.0425531915%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--4 {
-    margin-left: -34.0425531915%;
-  }
-}
-
-.grid--5 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--5 {
-    width: 40.4255319149%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--5.grid--last {
-    margin-right: 0;
-  }
-  .grid--5:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--5 {
-    margin-left: 42.5531914894%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--5 {
-    margin-left: -42.5531914894%;
-  }
-}
-
-.grid--6 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--6 {
-    width: 48.9361702128%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--6.grid--last {
-    margin-right: 0;
-  }
-  .grid--6:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--6 {
-    margin-left: 51.0638297872%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--6 {
-    margin-left: -51.0638297872%;
-  }
-}
-
-.grid--7 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--7 {
-    width: 57.4468085106%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--7.grid--last {
-    margin-right: 0;
-  }
-  .grid--7:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--7 {
-    margin-left: 59.5744680851%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--7 {
-    margin-left: -59.5744680851%;
-  }
-}
-
-.grid--8 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--8 {
-    width: 65.9574468085%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--8.grid--last {
-    margin-right: 0;
-  }
-  .grid--8:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--8 {
-    margin-left: 68.085106383%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--8 {
-    margin-left: -68.085106383%;
-  }
-}
-
-.grid--9 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--9 {
-    width: 74.4680851064%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--9.grid--last {
-    margin-right: 0;
-  }
-  .grid--9:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--9 {
-    margin-left: 76.5957446809%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--9 {
-    margin-left: -76.5957446809%;
-  }
-}
-
-.grid--10 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--10 {
-    width: 82.9787234043%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--10.grid--last {
-    margin-right: 0;
-  }
-  .grid--10:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--10 {
-    margin-left: 85.1063829787%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--10 {
-    margin-left: -85.1063829787%;
-  }
-}
-
-.grid--11 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--11 {
-    width: 91.4893617021%;
-    float: left;
-    margin-right: 2.1276595745%;
-  }
-  .grid--11.grid--last {
-    margin-right: 0;
-  }
-  .grid--11:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--11 {
-    margin-left: 93.6170212766%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--11 {
-    margin-left: -93.6170212766%;
-  }
-}
-
-.grid--12 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-@media (min-width: 740px) {
-  .grid--12 {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .grid--12.grid--last {
-    margin-right: 0;
-  }
-  .grid--12:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 740px) {
-  .push--12 {
-    margin-left: 102.127659574%;
-  }
-}
-
-@media (min-width: 740px) {
-  .pull--12 {
-    margin-left: -102.127659574%;
-  }
-}
-
-/*
-Page Hero
-
-@todo description
-
-Markup: hero.hbs
-
-Style guide: layout.hero
-*/
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: #000;
-}
-
-.hero .hero__image {
-  height: 0;
-  padding-bottom: 33%;
-}
-
-.hero .hero__image img {
-  position: absolute;
-  width: 100%;
-}
-
-.hero .hero__copy {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-}
-
-.hero .hero__copy h1, .hero .hero__copy .heading--homepage, .hero .hero__copy .heading--product, .hero .hero__copy .heading--download {
-  margin: 0;
-}
-
-.hero:before,
-.hero:after {
-  display: none;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 200px;
-  height: 100%;
-  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
-}
-
-@media (min-width: 1550px) {
-  .hero:before,
-  .hero:after {
-    display: block;
-  }
-}
-
-.hero:after {
-  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
-  left: auto;
-  right: 0;
-}
-
-/* 
-Link List
-
-A simple unordered list of links.
-
-Weight: 1
-
-Markup: link-list.hbs
-
-.link-list--plain - Plain list (no bullets)
-.link-list--inline - Inline list items
-
-Style guide: lists.link
-*/
-/*
-Basic Teaser List
-
-A basic list of teasers, used for things like a list of blog posts.
-
-Weight: 0
-
-Markup: teaser-list.hbs
-
-Style guide: lists.teaser
-*/
-.teaser-list > a {
-  display: block;
-  color: #333;
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-.teaser-list > a:hover {
-  color: #eb912c;
-  text-decoration: none;
-}
-
-.teaser-list > a:hover img {
-  opacity: 0.85;
-}
-
-.teaser-list .teaser-list__title {
-  margin: 0.5em 0;
-}
-
-/*
-Full-width Teaser List
-
-A full-width list of teasers, used for things like a list of blog posts.
-
-Weight: 5
-
-Markup:
-<div class="teaser-list teaser-list--full-width">
-  <div class="teaser-list__thumbnail grid-3">
-    <a href="#">
-      <img src="http://placecage.com/223/223">
-    </a>
-  </div>
-  <div class="teaser-list__info grid-9 grid-last">
-    <h2 class="teaser-list__title">
-      <a href="#">Blog Post or something</a>
-    </h2>
-    <div class="teaser-list__secondary-label">
-      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
-    </div>
-    <p class="teaser-list__description">
-      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
-    </p>
-    <div class="class="teaser-list__read-more">
-      <a href="/blog/another-post">Read More</a>
-    </div>
-  </div>
-</div>
-
-Style guide: lists.full-width
-*/
-.teaser-list.teaser-list--full-width {
-  padding: 2em 0;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.teaser-list.teaser-list--full-width .teaser-list__title {
-  margin: 0 0 0.5em;
-}
-
-/*
 Global Navigation
 
 The global navigation bar that sits at the top of each page. Contains primary, 
@@ -2078,6 +1548,10 @@ Style guide: navigation.global
 
 .global-nav .global-nav__secondary-menu {
   float: right;
+}
+
+.global-nav .global-nav__logo {
+  max-width: 200px;
 }
 
 .global-nav .global-nav__logo a {
@@ -2656,160 +2130,562 @@ HUGE STYLES
 }
 
 /*
-Main Menu
+Grids
 
-The main navigational menu for the site.
+Used for creating a columned layout. To use these classes, just pick the number
+of columns wide you want your element to be relative to the total number of
+columns. The default is 12 columns. For example, you can use `.grid--4` to make
+an element 4 columns wide followed by an element with `.grid--8` to take up the
+remaining eight columns of the container's width.
 
-Markup: menu.hbs
+Markup: grid.hbs
 
-Style guide: navigation.main
+Weight: 1
+
+Style guide: layout.grids
 */
-.l-menu {
+.grid--1 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--1 {
+    width: 6.3829787234%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--1.grid--last {
+    margin-right: 0;
+  }
+  .grid--1:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--1 {
+    margin-left: 8.5106382979%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--1 {
+    margin-left: -8.5106382979%;
+  }
+}
+
+.grid--2 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--2 {
+    width: 14.8936170213%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--2.grid--last {
+    margin-right: 0;
+  }
+  .grid--2:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--2 {
+    margin-left: 17.0212765957%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--2 {
+    margin-left: -17.0212765957%;
+  }
+}
+
+.grid--3 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--3 {
+    width: 23.4042553191%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--3.grid--last {
+    margin-right: 0;
+  }
+  .grid--3:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--3 {
+    margin-left: 25.5319148936%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--3 {
+    margin-left: -25.5319148936%;
+  }
+}
+
+.grid--4 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--4 {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--4.grid--last {
+    margin-right: 0;
+  }
+  .grid--4:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--4 {
+    margin-left: 34.0425531915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--4 {
+    margin-left: -34.0425531915%;
+  }
+}
+
+.grid--5 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--5 {
+    width: 40.4255319149%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--5.grid--last {
+    margin-right: 0;
+  }
+  .grid--5:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--5 {
+    margin-left: 42.5531914894%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--5 {
+    margin-left: -42.5531914894%;
+  }
+}
+
+.grid--6 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--6 {
+    width: 48.9361702128%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--6.grid--last {
+    margin-right: 0;
+  }
+  .grid--6:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--6 {
+    margin-left: 51.0638297872%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--6 {
+    margin-left: -51.0638297872%;
+  }
+}
+
+.grid--7 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--7 {
+    width: 57.4468085106%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--7.grid--last {
+    margin-right: 0;
+  }
+  .grid--7:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--7 {
+    margin-left: 59.5744680851%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--7 {
+    margin-left: -59.5744680851%;
+  }
+}
+
+.grid--8 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--8 {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--8.grid--last {
+    margin-right: 0;
+  }
+  .grid--8:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--8 {
+    margin-left: 68.085106383%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--8 {
+    margin-left: -68.085106383%;
+  }
+}
+
+.grid--9 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--9 {
+    width: 74.4680851064%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--9.grid--last {
+    margin-right: 0;
+  }
+  .grid--9:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--9 {
+    margin-left: 76.5957446809%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--9 {
+    margin-left: -76.5957446809%;
+  }
+}
+
+.grid--10 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--10 {
+    width: 82.9787234043%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--10.grid--last {
+    margin-right: 0;
+  }
+  .grid--10:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--10 {
+    margin-left: 85.1063829787%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--10 {
+    margin-left: -85.1063829787%;
+  }
+}
+
+.grid--11 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--11 {
+    width: 91.4893617021%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--11.grid--last {
+    margin-right: 0;
+  }
+  .grid--11:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--11 {
+    margin-left: 93.6170212766%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--11 {
+    margin-left: -93.6170212766%;
+  }
+}
+
+.grid--12 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .grid--12.grid--last {
+    margin-right: 0;
+  }
+  .grid--12:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--12 {
+    margin-left: 102.127659574%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--12 {
+    margin-left: -102.127659574%;
+  }
+}
+
+/*
+Page Hero
+
+Heroes on need to accomplish two main tasks. First, they need to convey a 
+specific story as simply and beautifully as they can in order to drive traffic. 
+Secondly, they need to set the tone for the page they are setting up.
+
+Very simple type and imagery treatments can create different feels for pages 
+that need to stand on their own.
+
+Markup: hero.hbs
+
+Style guide: layout.hero
+*/
+.hero {
+  position: relative;
   width: 100%;
-  padding: 1.4em 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  -webkit-transition: padding 0.25s;
-  transition: padding 0.25s;
+  overflow: hidden;
+  background: #000;
 }
 
-.l-menu .menu {
-  margin: 0;
-  padding-top: 5px;
-  text-align: right;
+.hero .hero__image {
+  height: 0;
+  padding-bottom: 33%;
 }
 
-.l-menu .menu li {
-  display: inline-block;
+.hero .hero__image img {
+  position: absolute;
+  width: 100%;
 }
 
-.l-menu .menu li a {
-  padding: 6px 0;
+.hero .hero__copy {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
-  font-size: 1em;
-  letter-spacing: 1px;
-  border-bottom: 1px solid transparent;
-  -webkit-transition: border 0.25s;
-  transition: border 0.25s;
 }
 
-.l-menu .menu li a:hover,
-.l-menu .menu li.active-trail a {
-  border-bottom-color: #fff;
+.hero .hero__copy h1, .hero .hero__copy .heading--homepage, .hero .hero__copy .heading--product, .hero .hero__copy .heading--download {
+  margin: 0;
+}
+
+.hero:before,
+.hero:after {
+  display: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 200px;
+  height: 100%;
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+}
+
+@media (min-width: 1550px) {
+  .hero:before,
+  .hero:after {
+    display: block;
+  }
+}
+
+.hero:after {
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+  left: auto;
+  right: 0;
+}
+
+/* 
+Link List
+
+A simple unordered list of links.
+
+Weight: 1
+
+Markup: link-list.hbs
+
+.link-list--plain - Plain list (no bullets)
+.link-list--inline - Inline list items
+
+Style guide: lists.link
+*/
+.link-list.link-list--inline li {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+/*
+Basic Teaser List
+
+A basic list of teasers, used for things like a list of blog posts.
+
+Weight: 0
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
+*/
+.teaser-list > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.teaser-list > a:hover {
+  color: #eb912c;
   text-decoration: none;
 }
 
-@media (min-width: 740px) {
-  .l-menu .menu li {
-    padding: 0 10px;
-  }
+.teaser-list > a:hover img {
+  opacity: 0.85;
 }
 
-@media (min-width: 980px) {
-  .l-menu .menu li {
-    padding: 0 20px;
-  }
+.teaser-list .teaser-list__title {
+  margin: 0.5em 0;
 }
 
-@media (max-width: 739px) {
-  .l-menu {
-    padding: 12px 0;
-    background: #464646;
-    max-height: 49px;
-  }
-  .l-menu .logo-img {
-    height: 25px;
-  }
-  .l-menu .block--menu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-    background-color: rgba(70, 70, 70, 0.85);
-  }
-  .l-menu .block--menu:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 49px;
-    background: #464646;
-  }
-  .l-menu .block--menu .menu {
-    height: 100vh;
-    padding-top: 49px;
-    overflow-y: auto;
-    text-align: left;
-  }
-  .l-menu .block--menu li {
-    display: block;
-  }
-  .l-menu .block--menu li a,
-  .l-menu .block--menu li.active-trail a,
-  .l-menu .block--menu li a.cta {
-    margin: 0;
-    padding: .5em;
-    display: block;
-    border: 0;
-    border-bottom: 1px solid #464646;
-    font-size: 1.5em;
-  }
-  .l-menu .menu--mobile-toggle {
-    position: relative;
-    display: block;
-    float: right;
-    margin: 0 15px;
-    width: 25px;
-    height: 25px;
-  }
-  .l-menu .menu--mobile-toggle span,
-  .l-menu .menu--mobile-toggle span:before,
-  .l-menu .menu--mobile-toggle span:after {
-    height: 3px;
-    width: 25px;
-    background: white;
-    position: absolute;
-    display: block;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .l-menu .menu--mobile-toggle span:before,
-  .l-menu .menu--mobile-toggle span:after {
-    content: '';
-  }
-  .l-menu .menu--mobile-toggle span {
-    top: 10px;
-  }
-  .l-menu .menu--mobile-toggle span:before {
-    top: -10px;
-  }
-  .l-menu .menu--mobile-toggle span:after {
-    top: 10px;
-  }
-  .l-menu .menu--mobile-toggle.open span {
-    background-color: transparent;
-  }
-  .l-menu .menu--mobile-toggle.open span:before,
-  .l-menu .menu--mobile-toggle.open span:after {
-    top: 0;
-  }
-  .l-menu .menu--mobile-toggle.open span:before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  .l-menu .menu--mobile-toggle.open span:after {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+/*
+Full-width Teaser List
+
+A full-width list of teasers, used for things like a list of blog posts.
+
+Weight: 5
+
+Markup:
+<div class="teaser-list teaser-list--full-width">
+  <div class="teaser-list__thumbnail grid-3">
+    <a href="#">
+      <img src="http://placecage.com/223/223">
+    </a>
+  </div>
+  <div class="teaser-list__info grid-9 grid-last">
+    <h2 class="teaser-list__title">
+      <a href="#">Blog Post or something</a>
+    </h2>
+    <div class="teaser-list__secondary-label">
+      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
+    </div>
+    <p class="teaser-list__description">
+      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
+    </p>
+    <div class="class="teaser-list__read-more">
+      <a href="/blog/another-post">Read More</a>
+    </div>
+  </div>
+</div>
+
+################################################################################
+# Style guide: lists.full-width ################################################
+################################################################################
+*/
+.teaser-list.teaser-list--full-width {
+  padding: 2em 0;
+  border-bottom: 1px solid #f2f2f2;
 }
 
-@media (min-width: 740px) {
-  .l-menu .menu--mobile-toggle {
-    display: none;
-  }
+.teaser-list.teaser-list--full-width .teaser-list__title {
+  margin: 0 0 0.5em;
 }
 
 .block--delta-blocks-tabs {
@@ -3570,12 +3446,14 @@ Markup: thumbnail.hbs
 Style guide: images.thumbnail
 */
 .thumbnail {
+  position: relative;
+  display: inline-block;
   overflow: hidden;
   line-height: 0;
 }
 
 .thumbnail img {
-  width: 100%;
+  max-width: 100%;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -3584,6 +3462,15 @@ Style guide: images.thumbnail
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.thumbnail.thumbnail--play:after {
+  content: url(/assets/images/icons/icon-play-xlarge.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -36px 0 0 -36px;
+  pointer-events: none;
 }
 
 /*

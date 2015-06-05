@@ -13,7 +13,7 @@ Markup: cta.hbs
 .cta--public - Public colored CTA button.
 .cta--reader - Reader colored CTA button.
 .cta--mobile - Mobile colored CTA button.
-.cta--download - CTA button with download icon.
+.cta--arrow - CTA button with arrow icon.
 .cta--play - CTA button with play icon.
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
@@ -61,22 +61,15 @@ Style guide: buttons.cta
 
   &.cta--arrow:after {
     content: url(/assets/images/icons/icon-arrow.png);
-  }
-
-  &.cta--download:after,
-  &.cta--play:after {
-    display: inline-block;
-    padding-left: 1em;
-  }
-
-  &.cta--download:after {
-    content: ">";
+    padding-left: .5em;
   }
 
   &.cta--play:after {
     content: url(/assets/images/icons/icon-play.png);
+    display: inline-block;
     height: 0px;
     margin-top: -23px;
+    padding-left: 1em;
     vertical-align: middle;
   }
   
