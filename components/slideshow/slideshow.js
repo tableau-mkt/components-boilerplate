@@ -37,10 +37,12 @@
 
       // Update slide navigation dom
       for(var i=0; i < count; i++) {
-        $arrowLeft = $slides.eq(i).find('.slideshow__arrow--left'),
-        $arrowRight = $slides.eq(i).find('.slideshow__arrow--right'),
+        $arrowLeft = $slides.eq(i).find('.slideshow__arrow--left');
+        $arrowRight = $slides.eq(i).find('.slideshow__arrow--right');
         next = i+1;
         prev = i-1;
+        arrowLeftInverted = '';
+        arrowRightInverted = '';
 
         // Account for looping
         if(prev === -1) {
