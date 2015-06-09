@@ -355,6 +355,12 @@ Weight: 7
 .text--stories - Stories colored text.
 .text--learning - Learning colored text.
 .text--highlight - Highlight Text colored text.
+.text--desktop - Desktop colored text.
+.text--server - Server colored text.
+.text--online - Online colored text.
+.text--public - Public colored text.
+.text--reader - Reader colored text.
+.text--mobile - Mobile colored text.
 .text--mission-1 - Mission 1 colored text.
 .text--mission-2 - Mission 2 colored text.
 .text--mission-3 - Mission 3 colored text.
@@ -365,6 +371,6 @@ Style guide: typography.colors
 /* Create a class for each text color */
 @each $name, $color in $text-colors {
   .text--#{"" + $name} {
-    color: $color;
+    color: $color !important;
   }
 }

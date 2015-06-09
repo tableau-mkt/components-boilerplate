@@ -21,10 +21,5 @@ Style guide: lists.link
 
   &.link-list--inline {
     @extend %inline-list;
-
-    li {
-      padding-left: .5em;
-      padding-right: .5em;
-    }
   }
 }

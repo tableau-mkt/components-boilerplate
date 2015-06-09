@@ -1,5 +1,6 @@
 /* generated with grunt-sass-globbing */
 
+@import "../../components/_helpers/base";
 @import "../../components/_helpers/helpers";
 @import "../../components/_helpers/placeholders";
 @import "../../components/_helpers/functions/em";
@@ -38,5 +39,6 @@
 @import "../../components/stuff_list/stuff_list";
 @import "../../components/table/table";
 @import "../../components/thumbnail/thumbnail";
+@import "../../components/typography/heading_highlight";
 @import "../../components/typography/link";
 @import "../../components/typography/typography";

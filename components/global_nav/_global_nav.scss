@@ -47,24 +47,26 @@ Style guide: navigation.global
       padding: 10px;
       color: $text-nav-items;
       @extend .text--benton-book;
-      
-      &:after {
-        content: "";
-        opacity: 0;
-        width: 0;
-        height: 0;
-        top: 40px;
-        left: 50%;
-        margin-left: -30px;
-        position: absolute;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 30px solid $bg-light-gray-1;
-        @include transition(opacity .5s);
-      }
-      &:hover:after {
-        opacity: 1;
-      }
+    }
+
+    li.expandable a:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      top: 40px;
+      left: 50%;
+      margin-left: -30px;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid $bg-light-gray-1;
+      pointer-events: none;
+      @include transition(opacity .5s);
+    }
+
+    li.expanded a:after {
+      opacity: 1;
     }
   }
 

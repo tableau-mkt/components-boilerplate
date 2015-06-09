@@ -72,6 +72,10 @@ Button colors mapping in the form of:
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
+  /* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
   /**
  * SASS vars
  */
@@ -148,6 +152,7 @@ Returns:
   Vendor prefixed transition rules
 */
   /* generated with grunt-sass-globbing */
+  /* Base styles for general page setup */
   /**
  * Helpers
  *
@@ -174,6 +179,7 @@ most common proportions for video players.
  * used to prevent unintentional overrides.
  */
   /* generated with grunt-sass-globbing */
+  /* Base styles for general page setup */
   /**
  * Helpers
  *
@@ -339,6 +345,10 @@ Button colors mapping in the form of:
   /* 
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+  /* 
+Product colors mapping in the form of:
+  mdifier-name: $color
 */
   /**
  * SASS vars
@@ -902,6 +912,22 @@ Markup: thumbnail.hbs
 Style guide: images.thumbnail
 */
   /*
+Product Heading Highlight
+
+Highlight style for headings related to a particular product.
+
+Markup: heading-highlight.hbs
+
+.heading-highlight--desktop - Desktop colored highlight
+.heading-highlight--server - Server colored highlight
+.heading-highlight--online - Online colored highlight
+.heading-highlight--public - Public colored highlight
+.heading-highlight--reader - Reader colored highlight
+.heading-highlight--mobile - Mobile colored highlight
+
+Style guide: typography.heading-highlight
+*/
+  /*
 Text Links
 
 Text-based links, unlike CTA buttons, don't have a colored box around them, 
@@ -1055,6 +1081,12 @@ Weight: 7
 .text--stories - Stories colored text.
 .text--learning - Learning colored text.
 .text--highlight - Highlight Text colored text.
+.text--desktop - Desktop colored text.
+.text--server - Server colored text.
+.text--online - Online colored text.
+.text--public - Public colored text.
+.text--reader - Reader colored text.
+.text--mobile - Mobile colored text.
 .text--mission-1 - Mission 1 colored text.
 .text--mission-2 - Mission 2 colored text.
 .text--mission-3 - Mission 3 colored text.
@@ -1062,6 +1094,10 @@ Weight: 7
 Style guide: typography.colors
 */
   /* Create a class for each text color */
+}
+
+body.kss .kss-example-preview body {
+  margin: 0;
 }
 
 body.kss .kss-example-preview .iframe-4-3,
@@ -1088,12 +1124,10 @@ body.kss .kss-example-preview .iframe-16-9 {
 
 body.kss .kss-example-preview .relative {
   position: relative;
-  overflow: hidden;
 }
 
 body.kss .kss-example-preview .absolute {
   position: absolute;
-  overflow: hidden;
 }
 
 body.kss .kss-example-preview .margin-zero {
@@ -1139,6 +1173,10 @@ body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview bu
   transition: background 0.25s, opacity 0.25s;
 }
 
+body.kss .kss-example-preview body {
+  margin: 0;
+}
+
 body.kss .kss-example-preview .iframe-4-3,
 body.kss .kss-example-preview .iframe-16-9 {
   position: relative;
@@ -1163,12 +1201,10 @@ body.kss .kss-example-preview .iframe-16-9 {
 
 body.kss .kss-example-preview .relative {
   position: relative;
-  overflow: hidden;
 }
 
 body.kss .kss-example-preview .absolute {
   position: absolute;
-  overflow: hidden;
 }
 
 body.kss .kss-example-preview .margin-zero {
@@ -1989,23 +2025,24 @@ body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
   color: #212535;
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a:after {
+body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expandable a:after {
   content: "";
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
   top: 40px;
   left: 50%;
   margin-left: -30px;
-  position: absolute;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid #fafafa;
+  pointer-events: none;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a:hover:after {
+body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expanded a:after {
   opacity: 1;
 }
 
@@ -2983,11 +3020,6 @@ body.kss .kss-example-preview .hero:after {
   right: 0;
 }
 
-body.kss .kss-example-preview .link-list.link-list--inline li {
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
 body.kss .kss-example-preview .teaser-list > a {
   display: block;
   color: #333;
@@ -3637,6 +3669,44 @@ body.kss .kss-example-preview .thumbnail.thumbnail--play:after {
   pointer-events: none;
 }
 
+body.kss .kss-example-preview .heading-highlight {
+  position: relative;
+  /* Create a class for each product color */
+}
+
+body.kss .kss-example-preview .heading-highlight:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 3px;
+  top: -0.75em;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--desktop:before {
+  background: #23529c;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--server:before {
+  background: #7fa9bb;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--online:before {
+  background: #58a3b9;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--public:before {
+  background: #324E7A;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--reader:before {
+  background: #B28CCF;
+}
+
+body.kss .kss-example-preview .heading-highlight.heading-highlight--mobile:before {
+  background: #DB8E6A;
+}
+
 body.kss .kss-example-preview a,
 body.kss .kss-example-preview .link {
   font-size: 0.7857142857em;
@@ -3861,57 +3931,81 @@ body.kss .kss-example-preview .text--lineheight-zero {
 }
 
 body.kss .kss-example-preview .text--negative {
-  color: #fff;
+  color: #fff !important;
 }
 
 body.kss .kss-example-preview .text--light-body {
-  color: #bbb;
+  color: #bbb !important;
 }
 
 body.kss .kss-example-preview .text--medium-body {
-  color: #787878;
+  color: #787878 !important;
 }
 
 body.kss .kss-example-preview .text--dark-body {
-  color: #333;
+  color: #333 !important;
 }
 
 body.kss .kss-example-preview .text--link {
-  color: #eb912c;
+  color: #eb912c !important;
 }
 
 body.kss .kss-example-preview .text--headlines {
-  color: #000;
+  color: #000 !important;
 }
 
 body.kss .kss-example-preview .text--nav-items {
-  color: #212535;
+  color: #212535 !important;
 }
 
 body.kss .kss-example-preview .text--data-sources {
-  color: #a3b9cb;
+  color: #a3b9cb !important;
 }
 
 body.kss .kss-example-preview .text--stories {
-  color: #847094;
+  color: #847094 !important;
 }
 
 body.kss .kss-example-preview .text--learning {
-  color: #6f99a5;
+  color: #6f99a5 !important;
 }
 
 body.kss .kss-example-preview .text--highlight {
-  color: #53bd92;
+  color: #53bd92 !important;
+}
+
+body.kss .kss-example-preview .text--desktop {
+  color: #23529c !important;
+}
+
+body.kss .kss-example-preview .text--server {
+  color: #7fa9bb !important;
+}
+
+body.kss .kss-example-preview .text--online {
+  color: #58a3b9 !important;
+}
+
+body.kss .kss-example-preview .text--public {
+  color: #324E7A !important;
+}
+
+body.kss .kss-example-preview .text--reader {
+  color: #B28CCF !important;
+}
+
+body.kss .kss-example-preview .text--mobile {
+  color: #DB8E6A !important;
 }
 
 body.kss .kss-example-preview .text--mission-1 {
-  color: #316cc8;
+  color: #316cc8 !important;
 }
 
 body.kss .kss-example-preview .text--mission-2 {
-  color: #7dcdf1;
+  color: #7dcdf1 !important;
 }
 
 body.kss .kss-example-preview .text--mission-3 {
-  color: #5facce;
+  color: #5facce !important;
 }

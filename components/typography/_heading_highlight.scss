@@ -1,0 +1,36 @@
+/*
+Product Heading Highlight
+
+Highlight style for headings related to a particular product.
+
+Markup: heading-highlight.hbs
+
+.heading-highlight--desktop - Desktop colored highlight
+.heading-highlight--server - Server colored highlight
+.heading-highlight--online - Online colored highlight
+.heading-highlight--public - Public colored highlight
+.heading-highlight--reader - Reader colored highlight
+.heading-highlight--mobile - Mobile colored highlight
+
+Style guide: typography.heading-highlight
+*/
+
+.heading-highlight {
+  position: relative;
+  
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width:45px;
+    height: 3px;
+    top: -0.75em;
+  }
+
+  /* Create a class for each product color */
+  @each $name, $color in $product-colors {
+    &.heading-highlight--#{"" + $name}:before {
+      background: $color;
+    }
+  }
+}

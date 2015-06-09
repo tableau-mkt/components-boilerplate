@@ -144,6 +144,12 @@ $text-colors: (
   stories: $text-stories,
   learning: $text-learning,
   highlight: $text-highlight,
+  desktop: $product-desktop,
+  server: $product-server,
+  online: $product-online,
+  public: $product-public,
+  reader: $product-reader,
+  mobile: $product-mobile,
   mission-1: $text-mission-1,
   mission-2: $text-mission-2,
   mission-3: $text-mission-3
@@ -186,6 +192,21 @@ $background-colors: (
   public: ($product-public, $text-negative, $text-negative),
   reader: ($product-reader, $text-negative, $text-negative),
   mobile: ($product-mobile, $text-negative, $text-negative),
+);
+
+
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
+
+$product-colors: (
+  desktop: $product-desktop,
+  server: $product-server,
+  online: $product-online,
+  public: $product-public,
+  reader: $product-reader,
+  mobile: $product-mobile,
 );
 
 // Misc colors

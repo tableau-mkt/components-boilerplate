@@ -71,6 +71,10 @@ Button colors mapping in the form of:
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
 /**
  * SASS vars
  */
@@ -147,6 +151,11 @@ Returns:
   Vendor prefixed transition rules
 */
 /* generated with grunt-sass-globbing */
+/* Base styles for general page setup */
+body {
+  margin: 0;
+}
+
 /**
  * Helpers
  *
@@ -181,12 +190,10 @@ most common proportions for video players.
 
 .relative {
   position: relative;
-  overflow: hidden;
 }
 
 .absolute {
   position: absolute;
-  overflow: hidden;
 }
 
 .margin-zero {
@@ -248,6 +255,11 @@ most common proportions for video players.
  * used to prevent unintentional overrides.
  */
 /* generated with grunt-sass-globbing */
+/* Base styles for general page setup */
+body {
+  margin: 0;
+}
+
 /**
  * Helpers
  *
@@ -282,12 +294,10 @@ most common proportions for video players.
 
 .relative {
   position: relative;
-  overflow: hidden;
 }
 
 .absolute {
   position: absolute;
-  overflow: hidden;
 }
 
 .margin-zero {
@@ -488,6 +498,10 @@ Button colors mapping in the form of:
 /* 
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
 */
 /**
  * SASS vars
@@ -1569,23 +1583,24 @@ Style guide: navigation.global
   color: #212535;
 }
 
-.global-nav .global-nav__primary-menu li a:after {
+.global-nav .global-nav__primary-menu li.expandable a:after {
   content: "";
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
   top: 40px;
   left: 50%;
   margin-left: -30px;
-  position: absolute;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid #fafafa;
+  pointer-events: none;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.global-nav .global-nav__primary-menu li a:hover:after {
+.global-nav .global-nav__primary-menu li.expanded a:after {
   opacity: 1;
 }
 
@@ -2609,11 +2624,6 @@ Markup: link-list.hbs
 
 Style guide: lists.link
 */
-.link-list.link-list--inline li {
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
 /*
 Basic Teaser List
 
@@ -3474,6 +3484,60 @@ Style guide: images.thumbnail
 }
 
 /*
+Product Heading Highlight
+
+Highlight style for headings related to a particular product.
+
+Markup: heading-highlight.hbs
+
+.heading-highlight--desktop - Desktop colored highlight
+.heading-highlight--server - Server colored highlight
+.heading-highlight--online - Online colored highlight
+.heading-highlight--public - Public colored highlight
+.heading-highlight--reader - Reader colored highlight
+.heading-highlight--mobile - Mobile colored highlight
+
+Style guide: typography.heading-highlight
+*/
+.heading-highlight {
+  position: relative;
+  /* Create a class for each product color */
+}
+
+.heading-highlight:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 3px;
+  top: -0.75em;
+}
+
+.heading-highlight.heading-highlight--desktop:before {
+  background: #23529c;
+}
+
+.heading-highlight.heading-highlight--server:before {
+  background: #7fa9bb;
+}
+
+.heading-highlight.heading-highlight--online:before {
+  background: #58a3b9;
+}
+
+.heading-highlight.heading-highlight--public:before {
+  background: #324E7A;
+}
+
+.heading-highlight.heading-highlight--reader:before {
+  background: #B28CCF;
+}
+
+.heading-highlight.heading-highlight--mobile:before {
+  background: #DB8E6A;
+}
+
+/*
 Text Links
 
 Text-based links, unlike CTA buttons, don't have a colored box around them, 
@@ -3850,6 +3914,12 @@ Weight: 7
 .text--stories - Stories colored text.
 .text--learning - Learning colored text.
 .text--highlight - Highlight Text colored text.
+.text--desktop - Desktop colored text.
+.text--server - Server colored text.
+.text--online - Online colored text.
+.text--public - Public colored text.
+.text--reader - Reader colored text.
+.text--mobile - Mobile colored text.
 .text--mission-1 - Mission 1 colored text.
 .text--mission-2 - Mission 2 colored text.
 .text--mission-3 - Mission 3 colored text.
@@ -3858,57 +3928,81 @@ Style guide: typography.colors
 */
 /* Create a class for each text color */
 .text--negative {
-  color: #fff;
+  color: #fff !important;
 }
 
 .text--light-body {
-  color: #bbb;
+  color: #bbb !important;
 }
 
 .text--medium-body {
-  color: #787878;
+  color: #787878 !important;
 }
 
 .text--dark-body {
-  color: #333;
+  color: #333 !important;
 }
 
 .text--link {
-  color: #eb912c;
+  color: #eb912c !important;
 }
 
 .text--headlines {
-  color: #000;
+  color: #000 !important;
 }
 
 .text--nav-items {
-  color: #212535;
+  color: #212535 !important;
 }
 
 .text--data-sources {
-  color: #a3b9cb;
+  color: #a3b9cb !important;
 }
 
 .text--stories {
-  color: #847094;
+  color: #847094 !important;
 }
 
 .text--learning {
-  color: #6f99a5;
+  color: #6f99a5 !important;
 }
 
 .text--highlight {
-  color: #53bd92;
+  color: #53bd92 !important;
+}
+
+.text--desktop {
+  color: #23529c !important;
+}
+
+.text--server {
+  color: #7fa9bb !important;
+}
+
+.text--online {
+  color: #58a3b9 !important;
+}
+
+.text--public {
+  color: #324E7A !important;
+}
+
+.text--reader {
+  color: #B28CCF !important;
+}
+
+.text--mobile {
+  color: #DB8E6A !important;
 }
 
 .text--mission-1 {
-  color: #316cc8;
+  color: #316cc8 !important;
 }
 
 .text--mission-2 {
-  color: #7dcdf1;
+  color: #7dcdf1 !important;
 }
 
 .text--mission-3 {
-  color: #5facce;
+  color: #5facce !important;
 }

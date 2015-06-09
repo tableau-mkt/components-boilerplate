@@ -34,59 +34,35 @@
   <div class="global-nav__drawer box--light-gray-1">
     <div class="content-container content-container--wide">
       <div class="sub-navigation grid--8 box__padded box__padded--two">
-        <div class="sub-nav__item grid--4">
-          <h3>
-            <a href="/products/desktop.html">Tableau Desktop</a>
-          </h3>
-          <p>Business analytics anyone can use.</p>
-          <p>
-            <a class="link--arrow" href="/products/desktop.html">Learn More</a>
-          </p>
-        </div>
-        <div class="sub-nav__item grid--4">
-          <h3>
-            <a href="#">Tableau Server</a>
-          </h3>
-          <p>Rapid-fire business intelligence, today.</p>
-          <p>
-            <a class="link--arrow" href="">Learn More</a>
-          </p>
-        </div>
-        <div class="sub-nav__item grid--4 grid--last">
-          <h3>
-            <a href="#">Tableau Online</a>
-          </h3>
-          <p>The power of Tableau, in the cloud.</p>
-          <p>
-            <a class="link--arrow" href="">Learn More</a>
-          </p>
-        </div>
+
+        {{# drawer.primaryItems}}
+          <div class="sub-nav__item grid--4">  
+            {{# title}}
+              {{> heading}}
+            {{/ title}}
+            
+            <p>{{ description }}</p>
+            <p>
+              <a class="link--arrow" href="{{ url }}">{{ linkText }}</a>
+            </p>
+          </div>
+        {{/ drawer.primaryItems}}
       </div>
 
-      <div class="sub-navigation-more grid--4 grid--last box__padded box__padded--two">
-        <h3>More Tableau Products</h3>
+      {{# secondaryItems}}
+      <div class="sub-navigation-more grid--4 grid--last box__padded box__padded--two box--light-gray-2">
+        <h3 class="text--label">{{ title }}</h3>
         <ul class="plain-list">
-          <li>
-            <a href="#">
-              <h6>Tableau Mobile</h6>
-            </a>
-            <p>Tableau straight from your phone.</p>
-          </li>
-          <li>
-            <a href="#">
-              <h6>Tableau Public</h6>
-            </a>
-            <p>Publish interactive data online.</p>
-          </li>
-          <li>
-            <a href="#">
-              <h6>Tableau Reader</h6>
-            </a>
-            <p>Read saved files from Tableau Desktop.</p>
-          </li>
+          {{# items}}
+            <li>
+              <a class="text--bold" href="{{ url }}">{{ title }}</a>
+              <p>{{ description }}</p>
+            </li>
+          {{/ items}}
         </ul>
         <div class="sub-navigation-more-bg"></div>
       </div>
+      {{/ secondaryItems}}
 
     </div>
   </div>

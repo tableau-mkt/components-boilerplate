@@ -16,10 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.5",
-    "breakpoint-sass": "~2.6.1"
+    "slick.js": "~1.5.5",
+    "jquery": "~2.1.4",
+    "hoverintent": "briancherne/jquery-hoverIntent"
   },
   "devDependencies": {
-    "sassy-maps": "~0.4.0"
+    "breakpoint-sass": "~2.6.1",
+    "sassy-maps": "~0.4.0",
+    "susy": "~2.2.5"
   }
 }
