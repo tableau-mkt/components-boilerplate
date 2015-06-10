@@ -1,36 +1,53 @@
 {
   "logo": {
-    "link": "#",
-    "src": "/styleguide/public/images/logo.png"
+    "link": "/build/",
+    "src": "/assets/images/global/logo.png"
   },
 
   "primary": {
     "modifier_class": "link-list--inline",
     "items": [
       {
-        "href":"/build/products.html",
-        "text": "Products",
-        "class":"products"
+        "class":"expandable",
+        "link": {
+          "url":"/build/products.html",
+          "text": "Products"
+        }
       },
       {
-        "href":"#",
-        "text": "Stories"
+        "class": false,
+        "link": {
+          "url":"#",
+          "text": "Stories"
+        }
       },
       {
-        "href":"#",
-        "text": "Learning"
+        "class": false,
+        "link": {
+          "url":"#",
+          "text": "Learning"
+        }
       },
       {
-        "href":"#",
-        "text": "Comunity"
+        "class": false,
+        "link": {
+          "url":"#",
+          "text": "Comunity"
+        }
       },
       {
-        "href":"#",
-        "text": "Support"
+        "class": false,
+        "link": {
+          "url":"#",
+          "text": "Support"
+        }
       },
       {
-        "href":"#",
-        "text": "About"
+        "class": false,
+        "link": {
+          "url":"#",
+          "text": "About"
+        }
       }
     ]
   },
@@ -39,50 +56,82 @@
     "modifier_class": "link-list--inline",
     "items": [
       {
-        "href": "#",
-        "text": "Buy",
-        "link_class": "link-normal"
+        "link": {
+          "url": "#",
+          "text": "Buy",
+          "class": "link-normal"
+        }
       },
       {
-        "href":"#",
-        "text": "Sign In",
-        "link_class": "link-normal"
+        "link": {
+          "url":"#",
+          "text": "Sign In",
+          "class": "link-normal"
+        }
       },
       {
-        "href":"#",
-        "text": "Free Trial",
-        "link_class": "cta"
+        "link": {
+          "url":"#",
+          "text": "Free Trial",
+          "class": "cta"
+        }
+      }
+    ]
+  },
+  
+  "drawer": {
+    "primaryItems": [
+      {
+        "title": {
+          "text": "Tableau Desktop",
+          "level": "3",
+          "classes": "heading-highlight heading--small heading-highlight--desktop text--desktop"
+        },
+        "url": "/build/desktop.html",
+        "description": "Business analytics anyone can use.",
+        "linkText": "Learn More"
+      },
+      {
+        "title": {
+          "text": "Tableau Server",
+          "level": "3",
+          "classes": "heading-highlight heading--small heading-highlight--server text--server"
+        },
+        "url": "/build/server.html",
+        "description": "Rapid-fire business intelligence, today.",
+        "linkText": "Learn More"
+      },
+      {
+        "title": {
+          "text": "Tableau Online",
+          "level": "3",
+          "classes": "heading-highlight heading--small heading-highlight--online text--online"
+        },
+        "url": "/build/online.html",
+        "description": "The power of Tableau, in the cloud.",
+        "linkText": "Learn More"
       }
     ]
   },
 
-  "secondarySmall": {
-    "links": [
+  "secondaryItems": {
+    "title": "More Tableau Products",
+    "items": [
       {
-        "link": {
-          "href": "#",
-          "text": "Buy"
-        },
-        "search": false
+        "title": "Tableau Mobile",
+        "description": "Tableau straight from your phone.",
+        "url": "#"
       },
       {
-        "link": {
-          "href":"#",
-          "text": "Sign In"
-        },
-        "search": false
-      }, {
-        "link": false,
-        "search":true
+        "title": "Tableau Public",
+        "description": "Publish interactive data online.",
+        "url": "#"
+      },
+      {
+        "title": "Tableau Reader",
+        "description": "Read saved files from Tableau Desktop.",
+        "url": "#"
       }
-    ],
-    "button": {
-      "type": "highlight-orange-light outline",
-      "label": "Free Trial",
-      "url": "#",
-      "icon": {
-        "class":"block-link-arrow-orange"
-      }
-    }
+    ]
   }
 }

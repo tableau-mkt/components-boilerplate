@@ -22,6 +22,11 @@
         {{ description }} 
       </p>
       {{/if}}
+      {{#if tags}}
+        {{# tags}}
+          {{> tags-list}}
+        {{/ tags}}
+      {{/ if}}
       {{#if link}}
         <a class="link--arrow" href="{{url}}">
           {{ link }}

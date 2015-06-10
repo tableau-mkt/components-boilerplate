@@ -1,0 +1,7 @@
+<ul class="{{ modifier_class }} {{#if classes}}{{ classes }}{{/if}}">
+  {{#each items}}
+    <li {{#if class}}class="{{ class }}"{{/if}}>
+      {{{ text }}}
+    </li>
+  {{/each}}
+</ul>

@@ -16,9 +16,7 @@ Style guide: layout.hero
 .hero {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  background: $black;
-  
+  overflow: hidden;  
   
   .hero__image {
     height: 0;
@@ -53,7 +51,7 @@ Style guide: layout.hero
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 1;
     width: 200px;
     height: 100%;
     background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
@@ -64,7 +62,7 @@ Style guide: layout.hero
   }
 
   &:after {
-    background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
+    background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
     left: auto;
     right: 0;
   }

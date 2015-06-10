@@ -1,0 +1,30 @@
+/*
+Tags List
+
+A list of tags such as categories or topics related to a piece of content
+
+Markup: tags-list.hbs
+
+Style guide: lists.tags
+*/
+
+.tags-list {
+  @extend %plain-list;
+  @extend %inline-list;
+  @extend .text--label;
+
+  .tags-list__tag {
+    a {
+      font-size: 1em;
+      color: $text-learning;
+    }
+    
+    &:after {
+      content: ", ";
+    }
+    
+    &:last-child:after {
+      content: "";
+    }
+  }
+}

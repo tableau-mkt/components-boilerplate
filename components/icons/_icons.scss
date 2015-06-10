@@ -1,0 +1,217 @@
+
+
+/*
+Misc fonts for prototype
+@todo icon-font these!
+*/
+
+.icon--product-mobile,
+.icon--product-public,
+.icon--product-reader {
+  display: inline-block;
+}
+
+.icon--product-mobile:before {
+  content: url(/assets/images/icons/icon-product-mobile.png);
+}
+.icon--product-public:before {
+  content: url(/assets/images/icons/icon-product-public.png);
+}
+.icon--product-reader:before {
+  content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// Icon Font: tableau-icons
+//
+
+@font-face {
+  font-family: "tableau-icons";
+  src: url("/assets/fonts/tableau-icons.eot");
+  src: url("/assets/fonts/tableau-icons.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/tableau-icons.woff") format("woff"),
+       url("/assets/fonts/tableau-icons.ttf") format("truetype"),
+       url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "tableau-icons";
+    src: url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon--app-browser:before,
+.icon--apple:before,
+.icon--area-chart:before,
+.icon--arrow-circle-right:before,
+.icon--arrow-down:before,
+.icon--arrow-heavy-up:before,
+.icon--arrow-up:before,
+.icon--bar-chart:before,
+.icon--book-isometric:before,
+.icon--book-open:before,
+.icon--broadcast:before,
+.icon--calendar:before,
+.icon--chat-bubble:before,
+.icon--chat-bubbles-solid:before,
+.icon--chevron-down:before,
+.icon--chevron-left:before,
+.icon--chevron-right:before,
+.icon--chevron-up:before,
+.icon--close-circle:before,
+.icon--cloud:before,
+.icon--cursor-cloud:before,
+.icon--cursor-hand:before,
+.icon--cursor:before,
+.icon--dashboard:before,
+.icon--database-storage:before,
+.icon--document-3:before,
+.icon--document-5:before,
+.icon--download:before,
+.icon--email:before,
+.icon--embed:before,
+.icon--enterprise:before,
+.icon--gears:before,
+.icon--globe:before,
+.icon--grid-9x9:before,
+.icon--laptop:before,
+.icon--line-plot:before,
+.icon--link:before,
+.icon--list-blog-view:before,
+.icon--lock:before,
+.icon--logo-apple:before,
+.icon--logo-windows:before,
+.icon--mail-speed:before,
+.icon--memory:before,
+.icon--microphone:before,
+.icon--mobile-menu:before,
+.icon--news:before,
+.icon--people-2:before,
+.icon--people:before,
+.icon--play-circle-big:before,
+.icon--play-circle-small:before,
+.icon--question:before,
+.icon--quote-double-start:before,
+.icon--refresh:before,
+.icon--search:before,
+.icon--share:before,
+.icon--social-facebook:before,
+.icon--social-gplus:before,
+.icon--social-instagram:before,
+.icon--social-linkedin:before,
+.icon--social-rss:before,
+.icon--social-twitter:before,
+.icon--social-youtube:before,
+.icon--table-join:before,
+.icon--tableau-logo:before,
+.icon--tablet:before,
+.icon--timer-60:before,
+.icon--triangle-down:before,
+.icon--triangle-left:before,
+.icon--triangle-right:before,
+.icon--triangle-up:before,
+.icon--vizql:before {
+  display: inline-block;
+  font-family: "tableau-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon--app-browser:before { content: "\f100"; }
+.icon--apple:before { content: "\f101"; }
+.icon--area-chart:before { content: "\f102"; }
+.icon--arrow-circle-right:before { content: "\f103"; }
+.icon--arrow-down:before { content: "\f104"; }
+.icon--arrow-heavy-up:before { content: "\f105"; }
+.icon--arrow-up:before { content: "\f106"; }
+.icon--bar-chart:before { content: "\f138"; }
+.icon--book-isometric:before { content: "\f107"; }
+.icon--book-open:before { content: "\f108"; }
+.icon--broadcast:before { content: "\f109"; }
+.icon--calendar:before { content: "\f10a"; }
+.icon--chat-bubble:before { content: "\f10b"; }
+.icon--chat-bubbles-solid:before { content: "\f10c"; }
+.icon--chevron-down:before { content: "\f10d"; }
+.icon--chevron-left:before { content: "\f10e"; }
+.icon--chevron-right:before { content: "\f10f"; }
+.icon--chevron-up:before { content: "\f110"; }
+.icon--close-circle:before { content: "\f111"; }
+.icon--cloud:before { content: "\f139"; }
+.icon--cursor-cloud:before { content: "\f112"; }
+.icon--cursor-hand:before { content: "\f113"; }
+.icon--cursor:before { content: "\f13a"; }
+.icon--dashboard:before { content: "\f114"; }
+.icon--database-storage:before { content: "\f115"; }
+.icon--document-3:before { content: "\f116"; }
+.icon--document-5:before { content: "\f117"; }
+.icon--download:before { content: "\f118"; }
+.icon--email:before { content: "\f119"; }
+.icon--embed:before { content: "\f13b"; }
+.icon--enterprise:before { content: "\f13c"; }
+.icon--gears:before { content: "\f11a"; }
+.icon--globe:before { content: "\f11b"; }
+.icon--grid-9x9:before { content: "\f11c"; }
+.icon--laptop:before { content: "\f11d"; }
+.icon--line-plot:before { content: "\f13d"; }
+.icon--link:before { content: "\f150"; }
+.icon--list-blog-view:before { content: "\f11e"; }
+.icon--lock:before { content: "\f13e"; }
+.icon--logo-apple:before { content: "\f14f"; }
+.icon--logo-windows:before { content: "\f145"; }
+.icon--mail-speed:before { content: "\f13f"; }
+.icon--memory:before { content: "\f140"; }
+.icon--microphone:before { content: "\f11f"; }
+.icon--mobile-menu:before { content: "\f141"; }
+.icon--news:before { content: "\f120"; }
+.icon--people-2:before { content: "\f122"; }
+.icon--people:before { content: "\f121"; }
+.icon--play-circle-big:before { content: "\f123"; }
+.icon--play-circle-small:before { content: "\f124"; }
+.icon--question:before { content: "\f125"; }
+.icon--quote-double-start:before { content: "\f137"; }
+.icon--refresh:before { content: "\f126"; }
+.icon--search:before { content: "\f127"; }
+.icon--share:before { content: "\f128"; }
+.icon--social-facebook:before { content: "\f129"; }
+.icon--social-gplus:before { content: "\f12a"; }
+.icon--social-instagram:before { content: "\f12b"; }
+.icon--social-linkedin:before { content: "\f12c"; }
+.icon--social-rss:before { content: "\f12d"; }
+.icon--social-twitter:before { content: "\f12e"; }
+.icon--social-youtube:before { content: "\f12f"; }
+.icon--table-join:before { content: "\f142"; }
+.icon--tableau-logo:before { content: "\f130"; }
+.icon--tablet:before { content: "\f143"; }
+.icon--timer-60:before { content: "\f131"; }
+.icon--triangle-down:before { content: "\f132"; }
+.icon--triangle-left:before { content: "\f133"; }
+.icon--triangle-right:before { content: "\f134"; }
+.icon--triangle-up:before { content: "\f135"; }
+.icon--vizql:before { content: "\f144"; }

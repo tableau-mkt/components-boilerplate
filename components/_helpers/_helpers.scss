@@ -67,6 +67,12 @@ most common proportions for video players.
   display: none;
 }
 
+// Apply styles for a background image to cover the container
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
 @include breakpoint($mobile) {
   // Hide the element from display only on the mobile breakpoint
   .mobile-hide {

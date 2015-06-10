@@ -39,34 +39,52 @@
     "modifier_class": "link-list--inline",
     "items": [
       {
-        "text": "Blog",
-        "url": "#"
+        "link": {
+          "text": "Blog",
+          "url": "#"
+        }
       },
       {
-        "text": "Partners",
-        "url": "#"
+        "link": {
+          "text": "Partners",
+          "url": "#"
+        }
       },
       {
-        "text": "Contact Us",
-        "url": "#"
+        "link": {
+          "text": "Contact Us",
+          "url": "#"
+        }
       },
       {
-        "text": "Legal & Privacy",
-        "url": "#"
+        "link": {
+          "text": "Legal & Privacy",
+          "url": "#"
+        }
       }
     ]
   },
   
   "social": {
+    "modifier_class": "link-list--inline",
     "items": [
       {
-        "name": "linkedin"
+        "link": {
+          "text": "<i class=\"icon--social-linkedin\"></i>",
+          "url": "http://www.linkedin.com/company/tableau-software"
+        }
       },
       {
-        "name": "facebook"
+        "link": {
+          "text": "<i class=\"icon--social-facebook\"></i>",
+          "url": "http://www.facebook.com/tableausw"
+        }
       },
       {
-        "name": "twitter"
+        "link": {
+          "text": "<i class=\"icon--social-twitter\"></i>",
+          "url": "http://www.twitter.com/tableau"
+        }
       }
     ]
   },

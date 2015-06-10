@@ -1,10 +1,10 @@
-<footer class="global-footer section section--padded-two box--dark-gray-3">
+<footer class="global-footer section section--padded-one box--dark-gray-3">
   <nav class="content-container content-container--wide">
-    <div class="grid--6">
+    <div class="global-footer__first grid--7">
       {{#if languages}}
-      <div class="language-dropdown">
+      <div class="global-footer__language">
         <span class="selected">English</span>
-        <ul class="hide">
+        <ul class="global-footer__language__options plain-list">
           {{#each languages}}
             <li{{#if selected}} class="selected"{{/if}}><a href="#">{{ language }}</a></li>
           {{/each}}
@@ -17,19 +17,16 @@
           {{> link-list}}
         {{/ menu}}
       </div>
-      
     </div>
 
-    <div class="grid--6 grid--last text--right">
-      <div class="social">
-        <a href="/">
-          Social Icons
-        </a>
+    <div class="global-footer__second grid--5 grid--last text--right">
+      <div class="global-footer__social">
+        {{# social}}
+          {{> link-list}}
+        {{/ social}}
       </div>
-      <div class="copy-right text--label">
-        <p>
-          {{{ copyright }}}
-        </p>
+      <div class="copy-right text--label text--medium-body">
+        <p>{{{ copyright }}}</p>
       </div>
     </div>
 

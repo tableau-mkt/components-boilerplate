@@ -10,15 +10,86 @@ Style Guide: layout.footer
 */
 
 .global-footer {
-  a {
-    text-transform: none;
-    color: $text-light-body;
-    font-size: $base-font-size;
+  
+  .global-footer__language,
+  .global-footer__menu {
+    float: left;
   }
 
-  .global-footer__menu {
-    li {
-      padding: 0 1em;
+  .global-footer__first {
+    padding-top: 22px;
+  }
+
+  .global-footer__language {
+    position: relative;
+    margin-right: 1em;
+    padding: 2px 16px;
+    cursor: pointer;
+    background: $bg-dark-gray-2;
+    @extend .text--benton-book;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 5px;
+      border-top: 5px solid $white;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      transition: transform 0.5s;
     }
+
+    .global-footer__language__options {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+      background: $bg-dark-gray-2;
+      transition: max-height 0.5s ease-out;
+
+      .selected {
+        display: none;
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2px 16px;
+        text-transform: none;
+        color: $text-light-body;
+        font-size: $base-font-size;
+      }
+    }
+
+    &:hover {
+      &:after {
+        transform: rotate(180deg);
+      }
+
+      .global-footer__language__options {
+        max-height: 240px
+      }
+    }
+
+  }
+
+  .global-footer__menu li {
+    padding: 0 1em;
+    line-height: 30px;
+    
+    a {
+      text-transform: none;
+      color: $text-light-body;
+      font-size: $base-font-size;
+    }
+  }
+
+  .global-footer__social li a {
+    color: $text-light-body;
+    font-size: 1.2em;
+    margin-left: 1em;
   }
 }

@@ -1,0 +1,11 @@
+<ul class="tags-list {{ modifier_class }} {{#if classes}}{{ classes }}{{/if}}">
+  {{#if label}}<li class="tags-list__lable">{{{ label }}}</li>{{/ if}}
+
+  {{#each tags}}
+    <li class="tags-list__tag {{#if class}}{{ class }}{{/if}}">
+      {{# link}}
+        {{> link}}
+      {{/ link}}
+    </li>
+  {{/each}}
+</ul>

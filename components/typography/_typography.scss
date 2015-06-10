@@ -157,13 +157,13 @@ Markup: context-headings.hbs
 
 Weight: 4
 
-.heading--homepage - Homepage Hero (70px) - uses <h1>
-.heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
-.heading--download - Download Success (48px) - uses <h1>
-.heading--medium - Medium headers (36px) - uses <h2>
-.heading--small - Small Headline/Product labels (26px) - uses <h3>
-.heading--x-small - XS Headline (23px) - uses <h4>
-.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
+.heading--homepage - Homepage Hero (70px) - uses `<h1>`
+.heading--product - Product Landing/Product Detail Hero (50px) - uses `<h1>`
+.heading--download - Download Success (48px) - uses `<h1>`
+.heading--medium - Medium headers (36px) - uses `<h2>`
+.heading--small - Small Headline/Product labels (26px) - uses `<h3>`
+.heading--x-small - XS Headline (23px) - uses `<h4>`
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses `<h5>`
 
 Styleguide typography.context-headings
 */
@@ -272,9 +272,9 @@ Markup: formatted.hbs
 
 Weight: 6
 
-.text--bold - Bold text for emphasis. Same as <strong>
+.text--bold - Bold text for emphasis. Same as `<strong>`
 .text--light - Light text. Default for non-headings
-.text--italic - Italic text for emphasis. Same as <em>
+.text--italic - Italic text for emphasis. Same as `<em>`
 .text--caps - All caps text
 .text--right - Right justified text
 .text--left - Left justified text
@@ -344,26 +344,26 @@ Markup: colors.hbs
 
 Weight: 7
 
-.text--negative - Negative Text colored text.
-.text--light-body - Negative/light Body colored text.
-.text--medium-body - Default Med. Body colored text.
-.text--dark-body - Default Dark Body colored text.
-.text--link - Link Orange colored text.
-.text--headlines - Headlines colored text.
-.text--nav-items - Nav Items colored text.
-.text--data-sources - Data Sources colored text.
-.text--stories - Stories colored text.
-.text--learning - Learning colored text.
-.text--highlight - Highlight Text colored text.
-.text--desktop - Desktop colored text.
-.text--server - Server colored text.
-.text--online - Online colored text.
-.text--public - Public colored text.
-.text--reader - Reader colored text.
-.text--mobile - Mobile colored text.
-.text--mission-1 - Mission 1 colored text.
-.text--mission-2 - Mission 2 colored text.
-.text--mission-3 - Mission 3 colored text.
+.text--negative - Negative Text colored text. `#fff;`
+.text--light-body - Negative/light Body colored text. `#bbb`
+.text--medium-body - Default Med. Body colored text. `#787878`
+.text--dark-body - Default Dark Body colored text. `#333`
+.text--link - Link Orange colored text. `#eb912c`
+.text--headlines - Headlines colored text. `#000`
+.text--nav-items - Nav Items colored text. `#212535`
+.text--data-sources - Data Sources colored text. `#a3b9cb`
+.text--stories - Stories colored text. `#847094`
+.text--learning - Learning colored text. `#6f99a5`
+.text--highlight - Highlight Text colored text. `#53bd92`
+.text--desktop - Desktop colored text. `#23529c`
+.text--server - Server colored text. `#7fa9bb`
+.text--online - Online colored text. `#58a3b9`
+.text--public - Public colored text. `#324E7A`
+.text--reader - Reader colored text. `#B28CCF`
+.text--mobile - Mobile colored text. `#DB8E6A`
+.text--mission-1 - Mission 1 colored text. `#316cc8`
+.text--mission-2 - Mission 2 colored text. `#7dcdf1`
+.text--mission-3 - Mission 3 colored text. `#5facce`
 
 Style guide: typography.colors
 */

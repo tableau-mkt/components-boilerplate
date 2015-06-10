@@ -208,6 +208,11 @@ most common proportions for video players.
   display: none;
 }
 
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
 @media (max-width: 739px) {
   .mobile-hide {
     display: none;
@@ -219,17 +224,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
-.inline-list li, .link-list.link-list--inline li {
+.inline-list li, .link-list.link-list--inline li, .tags-list li {
   display: inline-block;
 }
 
@@ -312,6 +317,11 @@ most common proportions for video players.
   display: none;
 }
 
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
 @media (max-width: 739px) {
   .mobile-hide {
     display: none;
@@ -323,17 +333,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
-.inline-list li, .link-list.link-list--inline li {
+.inline-list li, .link-list.link-list--inline li, .tags-list li {
   display: inline-block;
 }
 
@@ -1388,14 +1398,86 @@ Markup: global-footer.hbs
 
 Style Guide: layout.footer
 */
-.global-footer a {
+.global-footer .global-footer__language,
+.global-footer .global-footer__menu {
+  float: left;
+}
+
+.global-footer .global-footer__first {
+  padding-top: 22px;
+}
+
+.global-footer .global-footer__language {
+  position: relative;
+  margin-right: 1em;
+  padding: 2px 16px;
+  cursor: pointer;
+  background: #333;
+}
+
+.global-footer .global-footer__language:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 5px solid #fff;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+.global-footer .global-footer__language .global-footer__language__options {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition: max-height 0.5s ease-out;
+          transition: max-height 0.5s ease-out;
+}
+
+.global-footer .global-footer__language .global-footer__language__options .selected {
+  display: none;
+}
+
+.global-footer .global-footer__language .global-footer__language__options a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 16px;
   text-transform: none;
   color: #bbb;
   font-size: 14px;
 }
 
+.global-footer .global-footer__language:hover:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.global-footer .global-footer__language:hover .global-footer__language__options {
+  max-height: 240px;
+}
+
 .global-footer .global-footer__menu li {
   padding: 0 1em;
+  line-height: 30px;
+}
+
+.global-footer .global-footer__menu li a {
+  text-transform: none;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.global-footer .global-footer__social li a {
+  color: #bbb;
+  font-size: 1.2em;
+  margin-left: 1em;
 }
 
 /*
@@ -2550,7 +2632,6 @@ Style guide: layout.hero
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #000;
 }
 
 .hero .hero__image {
@@ -2589,7 +2670,7 @@ Style guide: layout.hero
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1;
   width: 200px;
   height: 100%;
   background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
@@ -2604,10 +2685,421 @@ Style guide: layout.hero
 }
 
 .hero:after {
-  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
+  background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
+  background-image: linear-gradient(to left, #1b1b1b, transparent);
   left: auto;
   right: 0;
+}
+
+/*
+Misc fonts for prototype
+@todo icon-font these!
+*/
+.icon--product-mobile,
+.icon--product-public,
+.icon--product-reader {
+  display: inline-block;
+}
+
+.icon--product-mobile:before {
+  content: url(/assets/images/icons/icon-product-mobile.png);
+}
+
+.icon--product-public:before {
+  content: url(/assets/images/icons/icon-product-public.png);
+}
+
+.icon--product-reader:before {
+  content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+@font-face {
+  font-family: "tableau-icons";
+  src: url("/assets/fonts/tableau-icons.eot");
+  src: url("/assets/fonts/tableau-icons.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/tableau-icons.woff") format("woff"), url("/assets/fonts/tableau-icons.ttf") format("truetype"), url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "tableau-icons";
+    src: url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+  }
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+[data-icon]:before,
+.icon--app-browser:before,
+.icon--apple:before,
+.icon--area-chart:before,
+.icon--arrow-circle-right:before,
+.icon--arrow-down:before,
+.icon--arrow-heavy-up:before,
+.icon--arrow-up:before,
+.icon--bar-chart:before,
+.icon--book-isometric:before,
+.icon--book-open:before,
+.icon--broadcast:before,
+.icon--calendar:before,
+.icon--chat-bubble:before,
+.icon--chat-bubbles-solid:before,
+.icon--chevron-down:before,
+.icon--chevron-left:before,
+.icon--chevron-right:before,
+.icon--chevron-up:before,
+.icon--close-circle:before,
+.icon--cloud:before,
+.icon--cursor-cloud:before,
+.icon--cursor-hand:before,
+.icon--cursor:before,
+.icon--dashboard:before,
+.icon--database-storage:before,
+.icon--document-3:before,
+.icon--document-5:before,
+.icon--download:before,
+.icon--email:before,
+.icon--embed:before,
+.icon--enterprise:before,
+.icon--gears:before,
+.icon--globe:before,
+.icon--grid-9x9:before,
+.icon--laptop:before,
+.icon--line-plot:before,
+.icon--link:before,
+.icon--list-blog-view:before,
+.icon--lock:before,
+.icon--logo-apple:before,
+.icon--logo-windows:before,
+.icon--mail-speed:before,
+.icon--memory:before,
+.icon--microphone:before,
+.icon--mobile-menu:before,
+.icon--news:before,
+.icon--people-2:before,
+.icon--people:before,
+.icon--play-circle-big:before,
+.icon--play-circle-small:before,
+.icon--question:before,
+.icon--quote-double-start:before,
+.icon--refresh:before,
+.icon--search:before,
+.icon--share:before,
+.icon--social-facebook:before,
+.icon--social-gplus:before,
+.icon--social-instagram:before,
+.icon--social-linkedin:before,
+.icon--social-rss:before,
+.icon--social-twitter:before,
+.icon--social-youtube:before,
+.icon--table-join:before,
+.icon--tableau-logo:before,
+.icon--tablet:before,
+.icon--timer-60:before,
+.icon--triangle-down:before,
+.icon--triangle-left:before,
+.icon--triangle-right:before,
+.icon--triangle-up:before,
+.icon--vizql:before {
+  display: inline-block;
+  font-family: "tableau-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon--app-browser:before {
+  content: "\f100";
+}
+
+.icon--apple:before {
+  content: "\f101";
+}
+
+.icon--area-chart:before {
+  content: "\f102";
+}
+
+.icon--arrow-circle-right:before {
+  content: "\f103";
+}
+
+.icon--arrow-down:before {
+  content: "\f104";
+}
+
+.icon--arrow-heavy-up:before {
+  content: "\f105";
+}
+
+.icon--arrow-up:before {
+  content: "\f106";
+}
+
+.icon--bar-chart:before {
+  content: "\f138";
+}
+
+.icon--book-isometric:before {
+  content: "\f107";
+}
+
+.icon--book-open:before {
+  content: "\f108";
+}
+
+.icon--broadcast:before {
+  content: "\f109";
+}
+
+.icon--calendar:before {
+  content: "\f10a";
+}
+
+.icon--chat-bubble:before {
+  content: "\f10b";
+}
+
+.icon--chat-bubbles-solid:before {
+  content: "\f10c";
+}
+
+.icon--chevron-down:before {
+  content: "\f10d";
+}
+
+.icon--chevron-left:before {
+  content: "\f10e";
+}
+
+.icon--chevron-right:before {
+  content: "\f10f";
+}
+
+.icon--chevron-up:before {
+  content: "\f110";
+}
+
+.icon--close-circle:before {
+  content: "\f111";
+}
+
+.icon--cloud:before {
+  content: "\f139";
+}
+
+.icon--cursor-cloud:before {
+  content: "\f112";
+}
+
+.icon--cursor-hand:before {
+  content: "\f113";
+}
+
+.icon--cursor:before {
+  content: "\f13a";
+}
+
+.icon--dashboard:before {
+  content: "\f114";
+}
+
+.icon--database-storage:before {
+  content: "\f115";
+}
+
+.icon--document-3:before {
+  content: "\f116";
+}
+
+.icon--document-5:before {
+  content: "\f117";
+}
+
+.icon--download:before {
+  content: "\f118";
+}
+
+.icon--email:before {
+  content: "\f119";
+}
+
+.icon--embed:before {
+  content: "\f13b";
+}
+
+.icon--enterprise:before {
+  content: "\f13c";
+}
+
+.icon--gears:before {
+  content: "\f11a";
+}
+
+.icon--globe:before {
+  content: "\f11b";
+}
+
+.icon--grid-9x9:before {
+  content: "\f11c";
+}
+
+.icon--laptop:before {
+  content: "\f11d";
+}
+
+.icon--line-plot:before {
+  content: "\f13d";
+}
+
+.icon--link:before {
+  content: "\f150";
+}
+
+.icon--list-blog-view:before {
+  content: "\f11e";
+}
+
+.icon--lock:before {
+  content: "\f13e";
+}
+
+.icon--logo-apple:before {
+  content: "\f14f";
+}
+
+.icon--logo-windows:before {
+  content: "\f145";
+}
+
+.icon--mail-speed:before {
+  content: "\f13f";
+}
+
+.icon--memory:before {
+  content: "\f140";
+}
+
+.icon--microphone:before {
+  content: "\f11f";
+}
+
+.icon--mobile-menu:before {
+  content: "\f141";
+}
+
+.icon--news:before {
+  content: "\f120";
+}
+
+.icon--people-2:before {
+  content: "\f122";
+}
+
+.icon--people:before {
+  content: "\f121";
+}
+
+.icon--play-circle-big:before {
+  content: "\f123";
+}
+
+.icon--play-circle-small:before {
+  content: "\f124";
+}
+
+.icon--question:before {
+  content: "\f125";
+}
+
+.icon--quote-double-start:before {
+  content: "\f137";
+}
+
+.icon--refresh:before {
+  content: "\f126";
+}
+
+.icon--search:before {
+  content: "\f127";
+}
+
+.icon--share:before {
+  content: "\f128";
+}
+
+.icon--social-facebook:before {
+  content: "\f129";
+}
+
+.icon--social-gplus:before {
+  content: "\f12a";
+}
+
+.icon--social-instagram:before {
+  content: "\f12b";
+}
+
+.icon--social-linkedin:before {
+  content: "\f12c";
+}
+
+.icon--social-rss:before {
+  content: "\f12d";
+}
+
+.icon--social-twitter:before {
+  content: "\f12e";
+}
+
+.icon--social-youtube:before {
+  content: "\f12f";
+}
+
+.icon--table-join:before {
+  content: "\f142";
+}
+
+.icon--tableau-logo:before {
+  content: "\f130";
+}
+
+.icon--tablet:before {
+  content: "\f143";
+}
+
+.icon--timer-60:before {
+  content: "\f131";
+}
+
+.icon--triangle-down:before {
+  content: "\f132";
+}
+
+.icon--triangle-left:before {
+  content: "\f133";
+}
+
+.icon--triangle-right:before {
+  content: "\f134";
+}
+
+.icon--triangle-up:before {
+  content: "\f135";
+}
+
+.icon--vizql:before {
+  content: "\f144";
 }
 
 /* 
@@ -2624,6 +3116,28 @@ Markup: link-list.hbs
 
 Style guide: lists.link
 */
+/*
+Tags List
+
+A list of tags such as categories or topics related to a piece of content
+
+Markup: tags-list.hbs
+
+Style guide: lists.tags
+*/
+.tags-list .tags-list__tag a {
+  font-size: 1em;
+  color: #6f99a5;
+}
+
+.tags-list .tags-list__tag:after {
+  content: ", ";
+}
+
+.tags-list .tags-list__tag:last-child:after {
+  content: "";
+}
+
 /*
 Basic Teaser List
 
@@ -2925,6 +3439,7 @@ Markup: section-kss.hbs
 
 Weight: 3
 
+.section--padded-one - Section with 2em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
@@ -2934,6 +3449,11 @@ Style guide layout.section
 .section {
   padding-top: 4em;
   padding-bottom: 4em;
+}
+
+.section.section--padded-one {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .section.section--padded-two {
@@ -2957,6 +3477,10 @@ Style guide layout.section
 }
 
 @media (max-width: 739px) {
+  .section.section--padded-one {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
   .section.section--padded-two {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -3511,6 +4035,7 @@ Style guide: typography.heading-highlight
   width: 45px;
   height: 3px;
   top: -0.75em;
+  background: #7D9DAB;
 }
 
 .heading-highlight.heading-highlight--desktop:before {
@@ -3608,8 +4133,8 @@ h6, .heading--h6 {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .global-nav .global-nav__primary-menu li a, a,
-.link, .heading--x-small, .text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .slideshow .slideshow__arrow {
+.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, a,
+.link, .heading--x-small, .text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .tags-list, .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -3727,13 +4252,13 @@ Markup: context-headings.hbs
 
 Weight: 4
 
-.heading--homepage - Homepage Hero (70px) - uses <h1>
-.heading--product - Product Landing/Product Detail Hero (50px) - uses <h1>
-.heading--download - Download Success (48px) - uses <h1>
-.heading--medium - Medium headers (36px) - uses <h2>
-.heading--small - Small Headline/Product labels (26px) - uses <h3>
-.heading--x-small - XS Headline (23px) - uses <h4>
-.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses <h5>
+.heading--homepage - Homepage Hero (70px) - uses `<h1>`
+.heading--product - Product Landing/Product Detail Hero (50px) - uses `<h1>`
+.heading--download - Download Success (48px) - uses `<h1>`
+.heading--medium - Medium headers (36px) - uses `<h2>`
+.heading--small - Small Headline/Product labels (26px) - uses `<h3>`
+.heading--x-small - XS Headline (23px) - uses `<h4>`
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses `<h5>`
 
 Styleguide typography.context-headings
 */
@@ -3806,7 +4331,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .slideshow .slideshow__arrow {
+.text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .tags-list, .slideshow .slideshow__arrow {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3819,9 +4344,9 @@ Markup: formatted.hbs
 
 Weight: 6
 
-.text--bold - Bold text for emphasis. Same as <strong>
+.text--bold - Bold text for emphasis. Same as `<strong>`
 .text--light - Light text. Default for non-headings
-.text--italic - Italic text for emphasis. Same as <em>
+.text--italic - Italic text for emphasis. Same as `<em>`
 .text--caps - All caps text
 .text--right - Right justified text
 .text--left - Left justified text
@@ -3903,26 +4428,26 @@ Markup: colors.hbs
 
 Weight: 7
 
-.text--negative - Negative Text colored text.
-.text--light-body - Negative/light Body colored text.
-.text--medium-body - Default Med. Body colored text.
-.text--dark-body - Default Dark Body colored text.
-.text--link - Link Orange colored text.
-.text--headlines - Headlines colored text.
-.text--nav-items - Nav Items colored text.
-.text--data-sources - Data Sources colored text.
-.text--stories - Stories colored text.
-.text--learning - Learning colored text.
-.text--highlight - Highlight Text colored text.
-.text--desktop - Desktop colored text.
-.text--server - Server colored text.
-.text--online - Online colored text.
-.text--public - Public colored text.
-.text--reader - Reader colored text.
-.text--mobile - Mobile colored text.
-.text--mission-1 - Mission 1 colored text.
-.text--mission-2 - Mission 2 colored text.
-.text--mission-3 - Mission 3 colored text.
+.text--negative - Negative Text colored text. `#fff;`
+.text--light-body - Negative/light Body colored text. `#bbb`
+.text--medium-body - Default Med. Body colored text. `#787878`
+.text--dark-body - Default Dark Body colored text. `#333`
+.text--link - Link Orange colored text. `#eb912c`
+.text--headlines - Headlines colored text. `#000`
+.text--nav-items - Nav Items colored text. `#212535`
+.text--data-sources - Data Sources colored text. `#a3b9cb`
+.text--stories - Stories colored text. `#847094`
+.text--learning - Learning colored text. `#6f99a5`
+.text--highlight - Highlight Text colored text. `#53bd92`
+.text--desktop - Desktop colored text. `#23529c`
+.text--server - Server colored text. `#7fa9bb`
+.text--online - Online colored text. `#58a3b9`
+.text--public - Public colored text. `#324E7A`
+.text--reader - Reader colored text. `#B28CCF`
+.text--mobile - Mobile colored text. `#DB8E6A`
+.text--mission-1 - Mission 1 colored text. `#316cc8`
+.text--mission-2 - Mission 2 colored text. `#7dcdf1`
+.text--mission-3 - Mission 3 colored text. `#5facce`
 
 Style guide: typography.colors
 */
