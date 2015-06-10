@@ -802,6 +802,8 @@ Weight: 3
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
+.section--padding-top-none - Cancels out all top padding
+.section--padding-bottom-none - Cancels all bottom padding
 
 Style guide layout.section
 */
@@ -1114,6 +1116,11 @@ body.kss .kss-example-preview body {
   margin: 0;
 }
 
+body.kss .kss-example-preview img {
+  max-width: 100%;
+  height: auto;
+}
+
 body.kss .kss-example-preview .iframe-4-3,
 body.kss .kss-example-preview .iframe-16-9 {
   position: relative;
@@ -1194,6 +1201,11 @@ body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview bu
 
 body.kss .kss-example-preview body {
   margin: 0;
+}
+
+body.kss .kss-example-preview img {
+  max-width: 100%;
+  height: auto;
 }
 
 body.kss .kss-example-preview .iframe-4-3,
@@ -1778,7 +1790,7 @@ body.kss .kss-example-preview .content-container.content-container--wide {
 
 body.kss .kss-example-preview .cta {
   display: inline-block;
-  margin: 0.5em;
+  margin: .5em 0;
   padding: 17px 25px;
   background-color: #e8762c;
   border-radius: 0;
@@ -1792,6 +1804,10 @@ body.kss .kss-example-preview .cta {
   -webkit-font-smoothing: auto;
   -webkit-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
+}
+
+body.kss .kss-example-preview .cta:nth-child(n+2) {
+  margin-left: 1em;
 }
 
 body.kss .kss-example-preview .cta:hover,
@@ -3803,6 +3819,14 @@ body.kss .kss-example-preview .section.section--background-image {
     padding-top: 3em;
     padding-bottom: 3em;
   }
+}
+
+body.kss .kss-example-preview .section.section--padding-top-none {
+  padding-top: 0;
+}
+
+body.kss .kss-example-preview .section.section--padding-bottom-none {
+  padding-bottom: 0;
 }
 
 body.kss .kss-example-preview .sidebar--nav ul {

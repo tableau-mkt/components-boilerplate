@@ -156,6 +156,11 @@ body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /**
  * Helpers
  *
@@ -263,6 +268,11 @@ most common proportions for video players.
 /* Base styles for general page setup */
 body {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /**
@@ -1244,7 +1254,7 @@ Style guide: buttons.cta
 */
 .cta {
   display: inline-block;
-  margin: 0.5em;
+  margin: .5em 0;
   padding: 17px 25px;
   background-color: #e8762c;
   border-radius: 0;
@@ -1258,6 +1268,10 @@ Style guide: buttons.cta
   -webkit-font-smoothing: auto;
   -webkit-transition: background-color 0.25s, color 0.35s;
   transition: background-color 0.25s, color 0.35s;
+}
+
+.cta:nth-child(n+2) {
+  margin-left: 1em;
 }
 
 .cta:hover,
@@ -3443,6 +3457,8 @@ Weight: 3
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
+.section--padding-top-none - Cancels out all top padding
+.section--padding-bottom-none - Cancels all bottom padding
 
 Style guide layout.section
 */
@@ -3493,6 +3509,14 @@ Style guide layout.section
     padding-top: 3em;
     padding-bottom: 3em;
   }
+}
+
+.section.section--padding-top-none {
+  padding-top: 0;
+}
+
+.section.section--padding-bottom-none {
+  padding-bottom: 0;
 }
 
 /*

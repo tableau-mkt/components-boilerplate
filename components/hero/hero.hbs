@@ -12,16 +12,20 @@
           {{> heading }}
         {{/ sub_title }}
         
-        {{# headline }}
-          {{> heading }}
-        {{/ headline }}
+        <div class="hero__copy__headline clearfix">
+          {{# headline }}
+            {{> heading }}
+          {{/ headline }}
+        </div>
         
-        {{# cta }}
-          {{> cta }}
-        {{/ cta }}
+        <div class="hero__copy__cta clearfix">
+          {{# cta }}
+            {{> cta }}
+          {{/ cta }}
+        </div>
 
         {{# link }}
-          {{!-- @todo add support for a secondary link --}}
+          {{> link}}
         {{/ link }}
       </div>
     </div>

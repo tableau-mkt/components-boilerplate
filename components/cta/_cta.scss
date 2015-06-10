@@ -23,7 +23,7 @@ Style guide: buttons.cta
 .cta {
   @extend .text--benton-book;
   display: inline-block;
-  margin: 0.5em;
+  margin: .5em 0;
   padding: 17px 25px;
   background-color: $button-orange;
   border-radius: 0;
@@ -36,6 +36,10 @@ Style guide: buttons.cta
   -webkit-appearance: none;
   -webkit-font-smoothing: auto;
   @include transition(background-color 0.25s, color 0.35s);
+
+  &:nth-child(n+2) {
+    margin-left: 1em;
+  }
 
   &:hover,
   &:focus {
