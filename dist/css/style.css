@@ -209,6 +209,10 @@ most common proportions for video players.
   padding: 0;
 }
 
+.line-height-zero {
+  line-height: 0;
+}
+
 .hide {
   display: none;
 }
@@ -321,6 +325,10 @@ most common proportions for video players.
 
 .padding-zero {
   padding: 0;
+}
+
+.line-height-zero {
+  line-height: 0;
 }
 
 .hide {
@@ -1212,7 +1220,7 @@ page.
 
 Markup: content_container.hbs
 
-Weight: 2
+Weight: 30
 
 Style guide: layout.container
 */
@@ -1403,95 +1411,40 @@ Style guide: buttons.cta
 }
 
 /*
-Global Footer
+Dividers
 
-The global footer that is displayed at the bottom of each page. Contains several
-navigation links, the language selector, social buttons, and a copyright line
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
 
-Markup: global-footer.hbs
+Markup: divider.hbs
 
-Style Guide: layout.footer
+Weight: 0
+
+.divider--solid - A solid hairline divider. [Default]
+.divider--gradient - A divider that fades out to transparent on either end. 
+.divider--dashed - A dashed divider.
+
+Style guide: layout.divider
 */
-.global-footer .global-footer__language,
-.global-footer .global-footer__menu {
-  float: left;
-}
-
-.global-footer .global-footer__first {
-  padding-top: 22px;
-}
-
-.global-footer .global-footer__language {
-  position: relative;
-  margin-right: 1em;
-  padding: 2px 16px;
-  cursor: pointer;
-  background: #333;
-}
-
-.global-footer .global-footer__language:after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  border-top: 5px solid #fff;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  -webkit-transition: -webkit-transform 0.5s;
-          transition: transform 0.5s;
-}
-
-.global-footer .global-footer__language .global-footer__language__options {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  max-height: 0;
-  overflow: hidden;
-  background: #333;
-  -webkit-transition: max-height 0.5s ease-out;
-          transition: max-height 0.5s ease-out;
-}
-
-.global-footer .global-footer__language .global-footer__language__options .selected {
-  display: none;
-}
-
-.global-footer .global-footer__language .global-footer__language__options a {
-  display: inline-block;
+.divider {
   width: 100%;
-  box-sizing: border-box;
-  padding: 2px 16px;
-  text-transform: none;
-  color: #bbb;
-  font-size: 14px;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dedede;
 }
 
-.global-footer .global-footer__language:hover:after {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+.divider.divider--gradient {
+  border-top: 0;
+  height: 1px;
+  background: #dedede;
+  background: -webkit-linear-gradient(left, transparent, #dedede, transparent);
+  background: linear-gradient(to right, transparent, #dedede, transparent);
 }
 
-.global-footer .global-footer__language:hover .global-footer__language__options {
-  max-height: 240px;
-}
-
-.global-footer .global-footer__menu li {
-  padding: 0 1em;
-  line-height: 30px;
-}
-
-.global-footer .global-footer__menu li a {
-  text-transform: none;
-  color: #bbb;
-  font-size: 14px;
-}
-
-.global-footer .global-footer__social li a {
-  color: #bbb;
-  font-size: 1.2em;
-  margin-left: 1em;
+.divider.divider--dashed {
+  border-top-style: dotted;
 }
 
 /*
@@ -1631,6 +1584,96 @@ Weight: 4
 Style guide: forms.confirmation
 */
 /*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, the language selector, social buttons, and a copyright line
+
+Markup: global-footer.hbs
+
+Weight: 50
+
+Style Guide: navigation.footer
+*/
+.global-footer .global-footer__language,
+.global-footer .global-footer__menu {
+  float: left;
+}
+
+.global-footer .global-footer__first {
+  padding-top: 22px;
+}
+
+.global-footer .global-footer__language {
+  position: relative;
+  margin-right: 1em;
+  padding: 2px 16px;
+  cursor: pointer;
+  background: #333;
+}
+
+.global-footer .global-footer__language:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 5px solid #fff;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+.global-footer .global-footer__language .global-footer__language__options {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition: max-height 0.5s ease-out;
+          transition: max-height 0.5s ease-out;
+}
+
+.global-footer .global-footer__language .global-footer__language__options .selected {
+  display: none;
+}
+
+.global-footer .global-footer__language .global-footer__language__options a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 16px;
+  color: #bbb;
+}
+
+.global-footer .global-footer__language:hover:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.global-footer .global-footer__language:hover .global-footer__language__options {
+  max-height: 240px;
+}
+
+.global-footer .global-footer__menu li {
+  padding: 0 1em;
+  line-height: 30px;
+}
+
+.global-footer .global-footer__menu li a {
+  color: #bbb;
+}
+
+.global-footer .global-footer__social li a {
+  color: #bbb;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+/*
 Global Navigation
 
 The global navigation bar that sits at the top of each page. Contains primary, 
@@ -1705,7 +1748,7 @@ Style guide: navigation.global
   text-align: right;
 }
 
-.global-nav .global-nav__secondary-menu li a.link-normal {
+.global-nav .global-nav__secondary-menu li a.link {
   padding: 10px;
   color: #000;
 }
@@ -2251,7 +2294,7 @@ remaining eight columns of the container's width.
 
 Markup: grid.hbs
 
-Weight: 1
+Weight: 20
 
 Style guide: layout.grids
 */
@@ -2640,6 +2683,8 @@ that need to stand on their own.
 
 Markup: hero.hbs
 
+Weight: 10
+
 Style guide: layout.hero
 */
 .hero {
@@ -2711,7 +2756,11 @@ Misc fonts for prototype
 */
 .icon--product-mobile,
 .icon--product-public,
-.icon--product-reader {
+.icon--product-reader,
+.icon--database,
+.icon--diagram,
+.icon--management,
+.icon--statistics {
   display: inline-block;
 }
 
@@ -2725,6 +2774,22 @@ Misc fonts for prototype
 
 .icon--product-reader:before {
   content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+.icon--database:before {
+  content: url(/assets/images/icons/database.png);
+}
+
+.icon--diagram:before {
+  content: url(/assets/images/icons/diagram.png);
+}
+
+.icon--management:before {
+  content: url(/assets/images/icons/management.png);
+}
+
+.icon--statistics:before {
+  content: url(/assets/images/icons/statistics.png);
 }
 
 @font-face {
@@ -3451,7 +3516,7 @@ and content.
 
 Markup: section-kss.hbs
 
-Weight: 3
+Weight: 40
 
 .section--padded-one - Section with 2em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
@@ -4087,7 +4152,26 @@ Style guide: typography.heading-highlight
 }
 
 /*
-Text Links
+Base Text Link
+
+The base styles common to all text links across the site
+
+Markup: link-base.hbs
+
+Weight: 15
+
+Style guide: typography.link-base
+*/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+Formatted Text Links
 
 Text-based links, unlike CTA buttons, don't have a colored box around them, 
 although they can have an accompanying icon similar to CTAs. All links underline
@@ -4097,23 +4181,17 @@ Markup: link.hbs
 
 Weight: 20
 
-Style guide: typography.links
+.link--arrow - Link with an arrow icon
+
+Style guide: typography.link-formatted
 */
-a,
 .link {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-a:hover,
-.link:hover {
-  text-decoration: underline;
-}
-
-a.link--arrow:after,
 .link.link--arrow:after {
   content: url(/assets/images/icons/icon-arrow-orange.png);
 }
@@ -4157,8 +4235,7 @@ h6, .heading--h6 {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, a,
-.link, .heading--x-small, .text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .tags-list, .slideshow .slideshow__arrow {
+.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -4355,7 +4432,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .global-nav .global-nav__secondary-menu li a.link-normal, .tags-list, .slideshow .slideshow__arrow {
+.text--label, .tags-list, .slideshow .slideshow__arrow {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;

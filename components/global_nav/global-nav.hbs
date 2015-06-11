@@ -39,12 +39,12 @@
         {{# drawer.primaryItems}}
           <div class="sub-nav__item grid--4">  
             {{# title}}
-              <a href="{{ ../url }}">{{> heading}}</a>
+              <a href="{{ ../url }}" class="text--{{ color  }}">{{> heading}}</a>
             {{/ title}}
             
             <p>{{ description }}</p>
             <p>
-              <a class="link--arrow" href="{{ url }}">{{ linkText }}</a>
+              <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
             </p>
           </div>
         {{/ drawer.primaryItems}}

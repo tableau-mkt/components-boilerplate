@@ -74,8 +74,7 @@ Style guide: navigation.global
     padding-right: 45px;
     text-align: right;
 
-    li a.link-normal {
-      @extend .text--label;     
+    li a.link {
       padding: 10px;
       color: $text-headlines;
     }

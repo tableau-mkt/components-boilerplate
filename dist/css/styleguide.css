@@ -551,7 +551,7 @@ page.
 
 Markup: content_container.hbs
 
-Weight: 2
+Weight: 30
 
 Style guide: layout.container
 */
@@ -578,14 +578,20 @@ Markup: cta.hbs
 Style guide: buttons.cta
 */
   /*
-Global Footer
+Dividers
 
-The global footer that is displayed at the bottom of each page. Contains several
-navigation links, the language selector, social buttons, and a copyright line
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
 
-Markup: global-footer.hbs
+Markup: divider.hbs
 
-Style Guide: layout.footer
+Weight: 0
+
+.divider--solid - A solid hairline divider. [Default]
+.divider--gradient - A divider that fades out to transparent on either end. 
+.divider--dashed - A dashed divider.
+
+Style guide: layout.divider
 */
   /*
 Base Form Styles
@@ -646,6 +652,18 @@ Weight: 4
 Style guide: forms.confirmation
 */
   /*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, the language selector, social buttons, and a copyright line
+
+Markup: global-footer.hbs
+
+Weight: 50
+
+Style Guide: navigation.footer
+*/
+  /*
 Global Navigation
 
 The global navigation bar that sits at the top of each page. Contains primary, 
@@ -669,7 +687,7 @@ remaining eight columns of the container's width.
 
 Markup: grid.hbs
 
-Weight: 1
+Weight: 20
 
 Style guide: layout.grids
 */
@@ -684,6 +702,8 @@ Very simple type and imagery treatments can create different feels for pages
 that need to stand on their own.
 
 Markup: hero.hbs
+
+Weight: 10
 
 Style guide: layout.hero
 */
@@ -796,7 +816,7 @@ and content.
 
 Markup: section-kss.hbs
 
-Weight: 3
+Weight: 40
 
 .section--padded-one - Section with 2em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
@@ -944,7 +964,18 @@ Markup: heading-highlight.hbs
 Style guide: typography.heading-highlight
 */
   /*
-Text Links
+Base Text Link
+
+The base styles common to all text links across the site
+
+Markup: link-base.hbs
+
+Weight: 15
+
+Style guide: typography.link-base
+*/
+  /*
+Formatted Text Links
 
 Text-based links, unlike CTA buttons, don't have a colored box around them, 
 although they can have an accompanying icon similar to CTAs. All links underline
@@ -954,7 +985,9 @@ Markup: link.hbs
 
 Weight: 20
 
-Style guide: typography.links
+.link--arrow - Link with an arrow icon
+
+Style guide: typography.link-formatted
 */
   /*
 Font Families
@@ -1159,6 +1192,10 @@ body.kss .kss-example-preview .padding-zero {
   padding: 0;
 }
 
+body.kss .kss-example-preview .line-height-zero {
+  line-height: 0;
+}
+
 body.kss .kss-example-preview .hide {
   display: none;
 }
@@ -1244,6 +1281,10 @@ body.kss .kss-example-preview .margin-zero {
 
 body.kss .kss-example-preview .padding-zero {
   padding: 0;
+}
+
+body.kss .kss-example-preview .line-height-zero {
+  line-height: 0;
 }
 
 body.kss .kss-example-preview .hide {
@@ -1938,86 +1979,25 @@ body.kss .kss-example-preview .cta.cta--tertiary:active {
   color: #c92434;
 }
 
-body.kss .kss-example-preview .global-footer .global-footer__language,
-body.kss .kss-example-preview .global-footer .global-footer__menu {
-  float: left;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__first {
-  padding-top: 22px;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__language {
-  position: relative;
-  margin-right: 1em;
-  padding: 2px 16px;
-  cursor: pointer;
-  background: #333;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__language:after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  border-top: 5px solid #fff;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  -webkit-transition: -webkit-transform 0.5s;
-          transition: transform 0.5s;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  max-height: 0;
-  overflow: hidden;
-  background: #333;
-  -webkit-transition: max-height 0.5s ease-out;
-          transition: max-height 0.5s ease-out;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options .selected {
-  display: none;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options a {
-  display: inline-block;
+body.kss .kss-example-preview .divider {
   width: 100%;
-  box-sizing: border-box;
-  padding: 2px 16px;
-  text-transform: none;
-  color: #bbb;
-  font-size: 14px;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dedede;
 }
 
-body.kss .kss-example-preview .global-footer .global-footer__language:hover:after {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+body.kss .kss-example-preview .divider.divider--gradient {
+  border-top: 0;
+  height: 1px;
+  background: #dedede;
+  background: -webkit-linear-gradient(left, transparent, #dedede, transparent);
+  background: linear-gradient(to right, transparent, #dedede, transparent);
 }
 
-body.kss .kss-example-preview .global-footer .global-footer__language:hover .global-footer__language__options {
-  max-height: 240px;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__menu li {
-  padding: 0 1em;
-  line-height: 30px;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__menu li a {
-  text-transform: none;
-  color: #bbb;
-  font-size: 14px;
-}
-
-body.kss .kss-example-preview .global-footer .global-footer__social li a {
-  color: #bbb;
-  font-size: 1.2em;
-  margin-left: 1em;
+body.kss .kss-example-preview .divider.divider--dashed {
+  border-top-style: dotted;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -2098,6 +2078,84 @@ body.kss .kss-example-preview .invalid {
   color: #DD1E06;
 }
 
+body.kss .kss-example-preview .global-footer .global-footer__language,
+body.kss .kss-example-preview .global-footer .global-footer__menu {
+  float: left;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__first {
+  padding-top: 22px;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language {
+  position: relative;
+  margin-right: 1em;
+  padding: 2px 16px;
+  cursor: pointer;
+  background: #333;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 5px solid #fff;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition: max-height 0.5s ease-out;
+          transition: max-height 0.5s ease-out;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options .selected {
+  display: none;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 16px;
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language:hover:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__language:hover .global-footer__language__options {
+  max-height: 240px;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__menu li {
+  padding: 0 1em;
+  line-height: 30px;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__menu li a {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__social li a {
+  color: #bbb;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
 body.kss .kss-example-preview .global-nav {
   position: relative;
   height: 100px;
@@ -2163,7 +2221,7 @@ body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
   text-align: right;
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal {
+body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link {
   padding: 10px;
   color: #000;
 }
@@ -3133,7 +3191,11 @@ body.kss .kss-example-preview .hero:after {
 
 body.kss .kss-example-preview .icon--product-mobile,
 body.kss .kss-example-preview .icon--product-public,
-body.kss .kss-example-preview .icon--product-reader {
+body.kss .kss-example-preview .icon--product-reader,
+body.kss .kss-example-preview .icon--database,
+body.kss .kss-example-preview .icon--diagram,
+body.kss .kss-example-preview .icon--management,
+body.kss .kss-example-preview .icon--statistics {
   display: inline-block;
 }
 
@@ -3147,6 +3209,22 @@ body.kss .kss-example-preview .icon--product-public:before {
 
 body.kss .kss-example-preview .icon--product-reader:before {
   content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+body.kss .kss-example-preview .icon--database:before {
+  content: url(/assets/images/icons/database.png);
+}
+
+body.kss .kss-example-preview .icon--diagram:before {
+  content: url(/assets/images/icons/diagram.png);
+}
+
+body.kss .kss-example-preview .icon--management:before {
+  content: url(/assets/images/icons/management.png);
+}
+
+body.kss .kss-example-preview .icon--statistics:before {
+  content: url(/assets/images/icons/statistics.png);
 }
 
 @font-face {
@@ -4260,21 +4338,21 @@ body.kss .kss-example-preview .heading-highlight.heading-highlight--mobile:befor
   background: #DB8E6A;
 }
 
-body.kss .kss-example-preview a,
+body.kss .kss-example-preview a {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview a:hover {
+  text-decoration: underline;
+}
+
 body.kss .kss-example-preview .link {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-body.kss .kss-example-preview a:hover,
-body.kss .kss-example-preview .link:hover {
-  text-decoration: underline;
-}
-
-body.kss .kss-example-preview a.link--arrow:after,
 body.kss .kss-example-preview .link.link--arrow:after {
   content: url(/assets/images/icons/icon-arrow-orange.png);
 }
@@ -4293,8 +4371,7 @@ body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview a,
-body.kss .kss-example-preview .link, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -4419,7 +4496,7 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link-normal, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;

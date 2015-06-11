@@ -47,6 +47,11 @@ most common proportions for video players.
   padding: 0;
 }
 
+// Zero out the lineheight of an element
+.line-height-zero {
+  line-height: 0;
+}
+
 // Remove default list style and spacing
 .plain-list {
   @extend %plain-list;

@@ -6,7 +6,9 @@ navigation links, the language selector, social buttons, and a copyright line
 
 Markup: global-footer.hbs
 
-Style Guide: layout.footer
+Weight: 50
+
+Style Guide: navigation.footer
 */
 
 .global-footer {
@@ -58,9 +60,7 @@ Style Guide: layout.footer
         width: 100%;
         box-sizing: border-box;
         padding: 2px 16px;
-        text-transform: none;
         color: $text-light-body;
-        font-size: $base-font-size;
       }
     }
 
@@ -81,9 +81,7 @@ Style Guide: layout.footer
     line-height: 30px;
     
     a {
-      text-transform: none;
       color: $text-light-body;
-      font-size: $base-font-size;
     }
   }
 

@@ -7,7 +7,11 @@ Misc fonts for prototype
 
 .icon--product-mobile,
 .icon--product-public,
-.icon--product-reader {
+.icon--product-reader,
+.icon--database,
+.icon--diagram,
+.icon--management,
+.icon--statistics {
   display: inline-block;
 }
 
@@ -19,6 +23,19 @@ Misc fonts for prototype
 }
 .icon--product-reader:before {
   content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+.icon--database:before {
+  content: url(/assets/images/icons/database.png);
+}
+.icon--diagram:before {
+  content: url(/assets/images/icons/diagram.png);
+}
+.icon--management:before {
+  content: url(/assets/images/icons/management.png);
+}
+.icon--statistics:before {
+  content: url(/assets/images/icons/statistics.png);
 }
 
 

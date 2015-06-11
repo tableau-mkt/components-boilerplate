@@ -93,8 +93,13 @@
                 </a>
               </li>
               <li class="kss-nav__menu-item">
-                <a href="section-typography.html#kssref-typography-links">
-                  Text Links
+                <a href="section-typography.html#kssref-typography-link-base">
+                  Base Text Link
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-typography.html#kssref-typography-link-formatted">
+                  Formatted Text Links
                 </a>
               </li>
               <li class="kss-nav__menu-item">
@@ -1499,20 +1504,18 @@ Stories and Articles sections.</p>
             </div>
 
           </section>
-          <section id="kssref-typography-links" class="kss-section kss-section--depth-2">
+          <section id="kssref-typography-link-base" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h3 class="kss-title kss-title--level-2">
-            <!-- <a class="kss-title__permalink" href="#kssref-typography-links"> -->
-              Text Links
+            <!-- <a class="kss-title__permalink" href="#kssref-typography-link-base"> -->
+              Base Text Link
             <!-- </a> -->
           </h3>
 
 
           <div class="kss-description">
-            <p>Text-based links, unlike CTA buttons, don&#39;t have a colored box around them,
-although they can have an accompanying icon similar to CTAs. All links underline
-on hover.</p>
+            <p>The base styles common to all text links across the site</p>
 
           </div>
         </div>
@@ -1532,6 +1535,64 @@ on hover.</p>
             <h4>Markup:</h4>
             <div class="kss-markup">
               <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#&quot;  class=&quot;[modifier class]&quot;&gt;Text Link&lt;/a&gt;
+</code></pre>
+            </div>
+
+          </section>
+          <section id="kssref-typography-link-formatted" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-typography-link-formatted"> -->
+              Formatted Text Links
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Text-based links, unlike CTA buttons, don&#39;t have a colored box around them,
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.</p>
+
+          </div>
+        </div>
+
+          <h4>Examples</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-details">
+                <div class="kss-example-desc">
+                  <h6>Default styling</h6>
+                </div>
+              </div>
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <a href="#"  class="link [modifier class]">Text Link</a>
+
+                </div>
+              </div>
+            </div>
+              <div class="kss-example">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <p>Link with an arrow icon</p>
+                  </div>
+                  <div class="kss-example-name">
+                    <p><code>.link--arrow</code></p>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <a href="#"  class="link link--arrow">Text Link</a>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#&quot;  class=&quot;link [modifier class]&quot;&gt;Text Link&lt;/a&gt;
 </code></pre>
             </div>
 

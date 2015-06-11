@@ -1,0 +1,37 @@
+/*
+Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider.hbs
+
+Weight: 0
+
+.divider--solid - A solid hairline divider. [Default]
+.divider--gradient - A divider that fades out to transparent on either end. 
+.divider--dashed - A dashed divider.
+
+Style guide: layout.divider
+*/
+
+.divider {
+  width: 100%;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $accent-dividers;
+
+  &.divider--gradient {
+    border-top: 0;
+    height: 1px;
+    background: $accent-dividers;
+    background: linear-gradient(to right, transparent, $accent-dividers, transparent);
+  }
+
+  &.divider--dashed {
+    border-top-style: dotted;
+  }
+  
+}
