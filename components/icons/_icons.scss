@@ -24,6 +24,12 @@ Misc fonts for prototype
 .icon--product-reader:before {
   content: url(/assets/images/icons/icon-product-reader.png);
 }
+.icon--product-mobile:before,
+.icon--product-public:before,
+.icon--product-reader:before {
+  display: inline-block;
+  height: 40px;
+}
 
 .icon--database:before {
   content: url(/assets/images/icons/database.png);
@@ -37,14 +43,6 @@ Misc fonts for prototype
 .icon--statistics:before {
   content: url(/assets/images/icons/statistics.png);
 }
-
-
-
-
-
-
-
-
 
 
 

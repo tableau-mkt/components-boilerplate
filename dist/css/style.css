@@ -896,6 +896,28 @@ Style guide: boxes.badge
   color: #DB8E6A;
 }
 
+.badge.badge--nav-drawer-gray-1 {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #333;
+}
+
+.badge.badge--nav-drawer-gray-1.badge--outlined {
+  background: none;
+  color: #f0f0f0;
+}
+
+.badge.badge--nav-drawer-gray-2 {
+  background: #ddd;
+  border-color: #ddd;
+  color: #333;
+}
+
+.badge.badge--nav-drawer-gray-2.badge--outlined {
+  background: none;
+  color: #ddd;
+}
+
 /*
 Padded box
 
@@ -956,6 +978,8 @@ Weight: 2
 .box--public - Public product colored box - (#324E7A)
 .box--reader - Reader product colored box - (#B28CCF)
 .box--mobile - Mobile product colored box - (#DB8E6A)
+.box--nav-drawer-gray-1 - Global nav drawer primary colored box - (#f0f0f0)
+.box--nav-drawer-gray-2 - Global nav drawer secondary colored box - (#ddd)
 
 Style guide: boxes.colored
 */
@@ -1154,6 +1178,34 @@ Style guide: boxes.colored
 .box--mobile h5, .box--mobile .heading--label, .box--mobile .heading--h5,
 .box--mobile h6, .box--mobile .heading--h6 {
   color: #fff;
+}
+
+.box--nav-drawer-gray-1 {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.box--nav-drawer-gray-1 h1, .box--nav-drawer-gray-1 .heading--homepage, .box--nav-drawer-gray-1 .heading--product, .box--nav-drawer-gray-1 .heading--download, .box--nav-drawer-gray-1 .heading--h1,
+.box--nav-drawer-gray-1 h2, .box--nav-drawer-gray-1 .heading--medium, .box--nav-drawer-gray-1 .heading--h2,
+.box--nav-drawer-gray-1 h3, .box--nav-drawer-gray-1 .heading--small, .box--nav-drawer-gray-1 .heading--h3,
+.box--nav-drawer-gray-1 h4, .box--nav-drawer-gray-1 .heading--x-small, .box--nav-drawer-gray-1 .heading--h4,
+.box--nav-drawer-gray-1 h5, .box--nav-drawer-gray-1 .heading--label, .box--nav-drawer-gray-1 .heading--h5,
+.box--nav-drawer-gray-1 h6, .box--nav-drawer-gray-1 .heading--h6 {
+  color: #000;
+}
+
+.box--nav-drawer-gray-2 {
+  background-color: #ddd;
+  color: #333;
+}
+
+.box--nav-drawer-gray-2 h1, .box--nav-drawer-gray-2 .heading--homepage, .box--nav-drawer-gray-2 .heading--product, .box--nav-drawer-gray-2 .heading--download, .box--nav-drawer-gray-2 .heading--h1,
+.box--nav-drawer-gray-2 h2, .box--nav-drawer-gray-2 .heading--medium, .box--nav-drawer-gray-2 .heading--h2,
+.box--nav-drawer-gray-2 h3, .box--nav-drawer-gray-2 .heading--small, .box--nav-drawer-gray-2 .heading--h3,
+.box--nav-drawer-gray-2 h4, .box--nav-drawer-gray-2 .heading--x-small, .box--nav-drawer-gray-2 .heading--h4,
+.box--nav-drawer-gray-2 h5, .box--nav-drawer-gray-2 .heading--label, .box--nav-drawer-gray-2 .heading--h5,
+.box--nav-drawer-gray-2 h6, .box--nav-drawer-gray-2 .heading--h6 {
+  color: #000;
 }
 
 /*
@@ -1733,7 +1785,7 @@ Style guide: navigation.global
   margin-left: -30px;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-bottom: 30px solid #fafafa;
+  border-bottom: 30px solid #f0f0f0;
   pointer-events: none;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -2672,6 +2724,301 @@ Style guide: layout.grids
 }
 
 /*
+Half-column Push/Pull
+
+This is just a utility to allow for pushing and pulling by half-column units 
+rather than needing to push by a full unit. This should only be used if you need
+to center content in an uneven number of columns
+ */
+@media (min-width: 740px) {
+  .push-half--1 {
+    margin-left: 4.2372881356%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--1 {
+    margin-left: -4.2372881356%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--2 {
+    margin-left: 8.4745762712%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--2 {
+    margin-left: -8.4745762712%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--3 {
+    margin-left: 12.7118644068%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--3 {
+    margin-left: -12.7118644068%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--4 {
+    margin-left: 16.9491525424%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--4 {
+    margin-left: -16.9491525424%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--5 {
+    margin-left: 21.186440678%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--5 {
+    margin-left: -21.186440678%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--6 {
+    margin-left: 25.4237288136%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--6 {
+    margin-left: -25.4237288136%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--7 {
+    margin-left: 29.6610169492%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--7 {
+    margin-left: -29.6610169492%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--8 {
+    margin-left: 33.8983050847%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--8 {
+    margin-left: -33.8983050847%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--9 {
+    margin-left: 38.1355932203%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--9 {
+    margin-left: -38.1355932203%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--10 {
+    margin-left: 42.3728813559%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--10 {
+    margin-left: -42.3728813559%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--11 {
+    margin-left: 46.6101694915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--11 {
+    margin-left: -46.6101694915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--12 {
+    margin-left: 50.8474576271%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--12 {
+    margin-left: -50.8474576271%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--13 {
+    margin-left: 55.0847457627%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--13 {
+    margin-left: -55.0847457627%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--14 {
+    margin-left: 59.3220338983%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--14 {
+    margin-left: -59.3220338983%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--15 {
+    margin-left: 63.5593220339%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--15 {
+    margin-left: -63.5593220339%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--16 {
+    margin-left: 67.7966101695%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--16 {
+    margin-left: -67.7966101695%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--17 {
+    margin-left: 72.0338983051%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--17 {
+    margin-left: -72.0338983051%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--18 {
+    margin-left: 76.2711864407%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--18 {
+    margin-left: -76.2711864407%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--19 {
+    margin-left: 80.5084745763%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--19 {
+    margin-left: -80.5084745763%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--20 {
+    margin-left: 84.7457627119%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--20 {
+    margin-left: -84.7457627119%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--21 {
+    margin-left: 88.9830508475%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--21 {
+    margin-left: -88.9830508475%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--22 {
+    margin-left: 93.2203389831%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--22 {
+    margin-left: -93.2203389831%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--23 {
+    margin-left: 97.4576271186%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--23 {
+    margin-left: -97.4576271186%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--24 {
+    margin-left: 101.694915254%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--24 {
+    margin-left: -101.694915254%;
+  }
+}
+
+/*
 Page Hero
 
 Heroes on need to accomplish two main tasks. First, they need to convey a 
@@ -2774,6 +3121,13 @@ Misc fonts for prototype
 
 .icon--product-reader:before {
   content: url(/assets/images/icons/icon-product-reader.png);
+}
+
+.icon--product-mobile:before,
+.icon--product-public:before,
+.icon--product-reader:before {
+  display: inline-block;
+  height: 40px;
 }
 
 .icon--database:before {
@@ -3186,7 +3540,7 @@ Link List
 
 A simple unordered list of links.
 
-Weight: 1
+Weight: 10
 
 Markup: link-list.hbs
 
@@ -3195,12 +3549,30 @@ Markup: link-list.hbs
 
 Style guide: lists.link
 */
+/* 
+Standard Unordered List
+
+A standard unordered list with bullets.
+
+Weight: 1
+
+Markup: list.hbs
+
+Style guide: lists.standard
+*/
+ul {
+  list-style-image: url(/assets/images/icons/bullet.png);
+  padding-left: 1em;
+}
+
 /*
 Tags List
 
 A list of tags such as categories or topics related to a piece of content
 
 Markup: tags-list.hbs
+
+Weight: 30
 
 Style guide: lists.tags
 */
@@ -3222,7 +3594,7 @@ Basic Teaser List
 
 A basic list of teasers, used for things like a list of blog posts.
 
-Weight: 0
+Weight: 20
 
 Markup: teaser-list.hbs
 
@@ -4121,9 +4493,9 @@ Style guide: typography.heading-highlight
   content: "";
   display: block;
   position: absolute;
-  width: 45px;
+  width: 50px;
   height: 3px;
-  top: -0.75em;
+  top: -1.3em;
   background: #7D9DAB;
 }
 
@@ -4194,6 +4566,7 @@ Style guide: typography.link-formatted
 
 .link.link--arrow:after {
   content: url(/assets/images/icons/icon-arrow-orange.png);
+  padding-left: 1em;
 }
 
 /*
@@ -4397,6 +4770,7 @@ Styleguide typography.context-headings
   margin: 0;
   font-size: 1.4285714286em;
   color: #333;
+  line-height: 1.5;
   -webkit-font-smoothing: auto;
 }
 

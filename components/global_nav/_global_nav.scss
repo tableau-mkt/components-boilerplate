@@ -60,7 +60,7 @@ Style guide: navigation.global
       margin-left: -30px;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
-      border-bottom: 30px solid $bg-light-gray-1;
+      border-bottom: 30px solid $nav-drawer-gray-1;
       pointer-events: none;
       @include transition(opacity .5s);
     }

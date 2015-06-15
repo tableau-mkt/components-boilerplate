@@ -27,11 +27,9 @@
           {{> tags-list}}
         {{/ tags}}
       {{/ if}}
-      {{#if link}}
-        <a class="link link--arrow" href="{{url}}">
-          {{ link }}
-        </a>
-      {{/ if}}
+      {{# link}}
+        {{> link }}
+      {{/ link}}
     </div>
   </div>
   {{/each}}

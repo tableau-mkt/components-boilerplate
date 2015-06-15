@@ -50,3 +50,30 @@ $susy: (
     }
   }
 }
+
+/*
+Half-column Push/Pull
+
+This is just a utility to allow for pushing and pulling by half-column units 
+rather than needing to push by a full unit. This should only be used if you need
+to center content in an uneven number of columns
+ */
+
+$susy: (
+  columns: 24,
+  gutters: 2/3,
+  gutter-position: after
+);
+
+@for $i from 1 through 24 {
+  .push-half--#{$i} {
+    @include breakpoint($tablet) {
+      @include push($i);
+    }
+  }
+  .pull-half--#{$i} {
+    @include breakpoint($tablet) {
+      @include pull($i);
+    }
+  }
+}

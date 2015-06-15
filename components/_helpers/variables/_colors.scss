@@ -72,6 +72,8 @@ Style guide: colors.accent
 
 $accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
 $gradient-orange-red: #ff9824, #c71f35;
+$nav-drawer-gray-1: #f0f0f0;
+$nav-drawer-gray-2: #ddd;
 
 
 /*
@@ -192,6 +194,8 @@ $background-colors: (
   public: ($product-public, $text-negative, $text-negative),
   reader: ($product-reader, $text-negative, $text-negative),
   mobile: ($product-mobile, $text-negative, $text-negative),
+  nav-drawer-gray-1: ($nav-drawer-gray-1, $text-dark-body, $text-headlines),
+  nav-drawer-gray-2: ($nav-drawer-gray-2, $text-dark-body, $text-headlines),
 );
 
 

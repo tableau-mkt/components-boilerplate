@@ -13,7 +13,11 @@
         "classes": "heading--label teaser-list__title"
       },
       "description": "Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni",
-      "link": "Learn More"
+      "link": {
+        "text": "Learn More",
+        "href": "#",
+        "class": "link link--arrow"
+      }
     },
     {
       "width": "4",
@@ -28,7 +32,11 @@
         "classes": "heading--label teaser-list__title"
       },
       "description": "Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni",
-      "link": "Learn More"
+      "link": {
+        "text": "Learn More",
+        "href": "#",
+        "class": "link link--arrow"
+      }
     },
     {
       "width": "4",
@@ -43,7 +51,11 @@
         "classes": "heading--label teaser-list__title"
       },
       "description": "Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni",
-      "link": "Learn More"
+      "link": {
+        "text": "Learn More",
+        "href": "#",
+        "class": "link link--arrow"
+      }
     }  
   ]
 }
