@@ -18,7 +18,7 @@ Markup: cta.hbs
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
 
-Style guide: buttons.cta
+Style guide: buttons-links.cta
 */
 .cta {
   @extend .text--benton-book;

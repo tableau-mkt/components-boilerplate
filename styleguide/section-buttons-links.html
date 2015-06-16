@@ -56,6 +56,23 @@
           <a href="section-buttons-links.html">
             Buttons &amp; Links
           </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-buttons-links.html#kssref-buttons-links-cta">
+                  Primary CTA
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-buttons-links.html#kssref-buttons-links-link-base">
+                  Base Text Link
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-buttons-links.html#kssref-buttons-links-link-formatted">
+                  Formatted Text Links
+                </a>
+              </li>
+          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-boxes.html">
@@ -92,11 +109,29 @@
 
     <article role="main" class="kss-content kss-right">
 
-          <section id="kssref-buttons-cta" class="kss-section kss-section--depth-2">
+          <div id="kssref-buttons-links" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-buttons-links"> -->
+              Buttons &amp; Links
+            <!-- </a> -->
+          </h2>
+
+
+          <div class="kss-description">
+            <p>Buttons and text links used to link to different pages ro trigger on-page interactions.</p>
+
+          </div>
+        </div>
+
+
+          </div>
+          <section id="kssref-buttons-links-cta" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h3 class="kss-title kss-title--level-2">
-            <!-- <a class="kss-title__permalink" href="#kssref-buttons-cta"> -->
+            <!-- <a class="kss-title__permalink" href="#kssref-buttons-links-cta"> -->
               Primary CTA
             <!-- </a> -->
           </h3>
@@ -331,6 +366,99 @@ action is required.</p>
               <pre class="prettyprint lang-html"><code data-language="html">&lt;a class=&quot;cta [modifier class]&quot; href=&quot;http://www.tableau.com&quot;&gt;
   Call to Action
 &lt;/a&gt;
+</code></pre>
+            </div>
+
+          </section>
+          <section id="kssref-buttons-links-link-base" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-buttons-links-link-base"> -->
+              Base Text Link
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>The base styles common to all text links across the site</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <a href="#"  class="[modifier class]">Text Link</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#&quot;  class=&quot;[modifier class]&quot;&gt;Text Link&lt;/a&gt;
+</code></pre>
+            </div>
+
+          </section>
+          <section id="kssref-buttons-links-link-formatted" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-buttons-links-link-formatted"> -->
+              Formatted Text Links
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Text-based links, unlike CTA buttons, don&#39;t have a colored box around them,
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.</p>
+
+          </div>
+        </div>
+
+          <h4>Examples</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-details">
+                <div class="kss-example-desc">
+                  <h6>Default styling</h6>
+                </div>
+              </div>
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <a href="#"  class="link [modifier class]">Text Link</a>
+
+                </div>
+              </div>
+            </div>
+              <div class="kss-example">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <p>Link with an arrow icon</p>
+                  </div>
+                  <div class="kss-example-name">
+                    <p><code>.link--arrow</code></p>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <a href="#"  class="link link--arrow">Text Link</a>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#&quot;  class=&quot;link [modifier class]&quot;&gt;Text Link&lt;/a&gt;
 </code></pre>
             </div>
 

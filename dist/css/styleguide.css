@@ -361,13 +361,13 @@ Weight: 10
 Style guide: typography
 */
   /*
-Buttons
+Buttons & Links
 
-Buttons and CTAs used to draw more attention than a standard text link.
+Buttons and text links used to link to different pages ro trigger on-page interactions.
 
 Weight: 20
 
-Style guide: buttons
+Style guide: buttons-links
 */
   /* 
 Boxes & Containers
@@ -476,7 +476,9 @@ Weight: 4
 .badge--about-featured - About/Feat colored badge.
 .badge--data-sources - Data Sources colored badge.
 
-Style guide: boxes.badge
+################################################################################
+# Style guide: boxes.badge #####################################################
+################################################################################
  */
   /*
 Padded box
@@ -577,7 +579,7 @@ Markup: cta.hbs
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
 
-Style guide: buttons.cta
+Style guide: buttons-links.cta
 */
   /*
 Dividers
@@ -720,6 +722,32 @@ Style guide: layout.hero
 Misc fonts for prototype
 @todo icon-font these!
 */
+  /*
+Base Text Link
+
+The base styles common to all text links across the site
+
+Markup: link-base.hbs
+
+Weight: 15
+
+Style guide: buttons-links.link-base
+*/
+  /*
+Formatted Text Links
+
+Text-based links, unlike CTA buttons, don't have a colored box around them, 
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.
+
+Markup: link.hbs
+
+Weight: 20
+
+.link--arrow - Link with an arrow icon
+
+Style guide: buttons-links.link-formatted
+*/
   /* 
 Link List
 
@@ -856,7 +884,9 @@ Jump-nav used in the sidebars to navigate between sub-sections of a single page
 
 Markup: sidebar_nav.hbs
 
-Style guide: navigation.sidebar
+################################################################################
+# Style guide: navigation.sidebar ##############################################
+################################################################################
 */
   /*
 Slideshow
@@ -970,11 +1000,14 @@ Markup: thumbnail.hbs
 Style guide: images.thumbnail
 */
   /*
-Product Heading Highlight
+Heading Highlight
 
-Highlight style for headings related to a particular product.
+Highlight style for headings. Modifiers can be used to color the highlight 
+related to a particular product.
 
 Markup: heading-highlight.hbs
+
+Weight: 5
 
 .heading-highlight--desktop - Desktop colored highlight
 .heading-highlight--server - Server colored highlight
@@ -984,32 +1017,6 @@ Markup: heading-highlight.hbs
 .heading-highlight--mobile - Mobile colored highlight
 
 Style guide: typography.heading-highlight
-*/
-  /*
-Base Text Link
-
-The base styles common to all text links across the site
-
-Markup: link-base.hbs
-
-Weight: 15
-
-Style guide: typography.link-base
-*/
-  /*
-Formatted Text Links
-
-Text-based links, unlike CTA buttons, don't have a colored box around them, 
-although they can have an accompanying icon similar to CTAs. All links underline
-on hover.
-
-Markup: link.hbs
-
-Weight: 20
-
-.link--arrow - Link with an arrow icon
-
-Style guide: typography.link-formatted
 */
   /*
 Font Families
@@ -2273,12 +2280,12 @@ body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expandabl
   opacity: 0;
   width: 0;
   height: 0;
-  top: 40px;
+  top: 47px;
   left: 50%;
-  margin-left: -30px;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid #f0f0f0;
+  margin-left: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #f0f0f0;
   pointer-events: none;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -2387,8 +2394,22 @@ body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__
 body.kss .kss-example-preview .global-nav__drawer {
   display: none;
   position: absolute;
+  overflow: hidden;
   width: 100%;
   z-index: 10;
+}
+
+body.kss .kss-example-preview .global-nav__drawer .global-nav__drawer__secondary {
+  position: relative;
+}
+
+body.kss .kss-example-preview .global-nav__drawer .global-nav__drawer__secondary .global-nav__drawer__secondary__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
 }
 
 body.kss .kss-example-preview .ui-autocomplete {
@@ -3987,6 +4008,26 @@ body.kss .kss-example-preview .icon--vizql:before {
   content: "\f144";
 }
 
+body.kss .kss-example-preview a {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview a:hover {
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .link {
+  font-size: 0.7857142857em;
+  letter-spacing: 1px;
+  color: #eb912c;
+  text-transform: uppercase;
+}
+
+body.kss .kss-example-preview .link.link--arrow:after {
+  content: url(/assets/images/icons/icon-arrow-orange.png);
+  padding-left: 1em;
+}
+
 body.kss .kss-example-preview ul {
   list-style-image: url(/assets/images/icons/bullet.png);
   padding-left: 1em;
@@ -4583,32 +4624,6 @@ body.kss .kss-example-preview .stuck {
   }
 }
 
-body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item {
-  padding: .5em;
-  border-top: 1px solid #dedede;
-}
-
-body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item:last-child {
-  border-bottom: 1px solid #dedede;
-}
-
-body.kss .kss-example-preview .node--stuff-list.node--full .field--stuff-item .field--stuff-item-label {
-  color: #999;
-  text-transform: uppercase;
-}
-
-body.kss .kss-example-preview .stuff-list--grid {
-  max-width: 313px;
-  margin: 0 auto;
-}
-
-@media (min-width: 740px) {
-  body.kss .kss-example-preview .stuff-list--grid {
-    width: 33.333%;
-    float: left;
-  }
-}
-
 body.kss .kss-example-preview table {
   width: 100%;
 }
@@ -4673,6 +4688,7 @@ body.kss .kss-example-preview .thumbnail.thumbnail--play:after {
 
 body.kss .kss-example-preview .heading-highlight {
   position: relative;
+  padding-top: 1.3em;
   /* Create a class for each product color */
 }
 
@@ -4682,8 +4698,8 @@ body.kss .kss-example-preview .heading-highlight:before {
   position: absolute;
   width: 50px;
   height: 3px;
-  top: -1.3em;
-  background: #7D9DAB;
+  top: 0;
+  background: #cdcdcd;
 }
 
 body.kss .kss-example-preview .heading-highlight.heading-highlight--desktop:before {
@@ -4708,26 +4724,6 @@ body.kss .kss-example-preview .heading-highlight.heading-highlight--reader:befor
 
 body.kss .kss-example-preview .heading-highlight.heading-highlight--mobile:before {
   background: #DB8E6A;
-}
-
-body.kss .kss-example-preview a {
-  text-decoration: none;
-}
-
-body.kss .kss-example-preview a:hover {
-  text-decoration: underline;
-}
-
-body.kss .kss-example-preview .link {
-  font-size: 0.7857142857em;
-  letter-spacing: 1px;
-  color: #eb912c;
-  text-transform: uppercase;
-}
-
-body.kss .kss-example-preview .link.link--arrow:after {
-  content: url(/assets/images/icons/icon-arrow-orange.png);
-  padding-left: 1em;
 }
 
 body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,

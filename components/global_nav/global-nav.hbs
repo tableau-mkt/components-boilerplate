@@ -34,7 +34,7 @@
   <div class="global-nav__drawer box--nav-drawer-gray-1">
     <div class="content-container content-container--wide">
       <div class="global-nav__drawer__primary grid--8">
-        <hr class="spacer spacer--six">
+        <hr class="spacer spacer--four">
 
         {{# drawer.primaryItems}}
           <div class="sub-nav__item grid--4">  
@@ -51,18 +51,17 @@
       </div>
 
       {{# secondaryItems}}
-      <div class="global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2">
-        <hr class="spacer spacer--two">
+      <div class="global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2 box__padded box__padded--three">
         <h3 class="text--label">{{ title }}</h3>
         <ul class="plain-list">
           {{# items}}
             <li>
-              <span><a class="text--bold text--dark-body" href="{{ url }}">{{ title }}</a></span><br>
+              <span><a class="text--bold text--dark-body text--dropdown" href="{{ url }}">{{ title }}</a></span><br>
               <span>{{ description }}</span>
             </li>
           {{/ items}}
         </ul>
-        <hr class="spacer spacer--two">
+        <div class="global-nav__drawer__secondary__background box--nav-drawer-gray-2"></div>
       </div>
       {{/ secondaryItems}}
 

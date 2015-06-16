@@ -1,9 +1,12 @@
 /*
-Product Heading Highlight
+Heading Highlight
 
-Highlight style for headings related to a particular product.
+Highlight style for headings. Modifiers can be used to color the highlight 
+related to a particular product.
 
 Markup: heading-highlight.hbs
+
+Weight: 5
 
 .heading-highlight--desktop - Desktop colored highlight
 .heading-highlight--server - Server colored highlight
@@ -17,6 +20,7 @@ Style guide: typography.heading-highlight
 
 .heading-highlight {
   position: relative;
+  padding-top: 1.3em;
   
   &:before {
     content: "";
@@ -24,8 +28,8 @@ Style guide: typography.heading-highlight
     position: absolute;
     width:50px;
     height: 3px;
-    top: -1.3em;
-    background: #7D9DAB;
+    top: 0;
+    background: #cdcdcd;
   }
 
   /* Create a class for each product color */
