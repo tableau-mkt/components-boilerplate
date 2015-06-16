@@ -1,0 +1,5004 @@
+@charset "UTF-8";
+/* generated with grunt-sass-globbing */
+/*
+Color Palette 
+
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
+/*
+Text Colors
+
+Colors used for typography. *Coming Soon*
+
+Weight: 1
+
+Style guide: colors.text
+*/
+/*
+Button Colors
+
+Colors used for buttons. *Coming Soon*
+
+Weight: 2
+
+Style guide: colors.buttons
+*/
+/*
+Accent Colors
+
+Colors used for accents. *Coming Soon*
+
+Weight: 3
+
+Style guide: colors.accent
+*/
+/*
+Background Colors
+
+Colors used for backgrounds. *Coming Soon*
+
+Weight: 4
+
+Style guide: colors.background
+*/
+/*
+Product colors
+
+Specific brand colors for Tableau products. *Coming Soon*
+
+Weight: 5
+
+Style guide: colors.product
+*/
+/*
+Basic Colors
+
+Some basic colors
+
+#Style guide: colors.basic
+*/
+/* 
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+/* 
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+/* 
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
+/**
+ * SASS vars
+ */
+/* generated with grunt-sass-globbing */
+/*
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+
+Styleguide functions.em
+*/
+/* generated with grunt-sass-globbing */
+/*
+Animate mixin
+
+Parameters:
+  $keyframes - The @keyframes rule to use for the animation
+  $duration - Length of animation
+  $easing - The easing tunction to use
+  $loop - Number of times to loop over the animation
+
+Returns:
+  Vendor prefixed animation rules
+*/
+/*
+Box sizing mixin
+
+Parameters:
+  $value - The value to pass to the box-sizing rule
+
+Returns:
+  Vendor prefixed box-sizing rules
+*/
+/*
+CSS Hexagon
+
+Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
+hexagon to be as well as an optional border if you'd like the hexagon to be just
+an outline rather thna a filled shape.
+
+Based off of http://csshexagon.com/
+*/
+/*
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
+/*
+Transform mixin
+
+Parameters:
+  $properties - The transform properties being used
+
+Returns:
+  Vendor prefixed transform rules
+*/
+/*
+Transition mixin
+
+Parameters:
+  $properties - The transition properties being used
+
+Returns:
+  Vendor prefixed transition rules
+*/
+/* generated with grunt-sass-globbing */
+/* Base styles for general page setup */
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
+/*
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
+.iframe-4-3,
+.iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:3 */
+  height: 0;
+}
+
+.iframe-4-3 iframe,
+.iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.line-height-zero {
+  line-height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 739px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+/**
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
+  list-style: none;
+}
+
+.inline-list li, .link-list.link-list--inline li, .tags-list li {
+  display: inline-block;
+}
+
+.clearfix:after, .content-container:after, .teaser-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.accordion--item, button.mfp-arrow {
+  -webkit-transition: background 0.25s, opacity 0.25s;
+  transition: background 0.25s, opacity 0.25s;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+/* generated with grunt-sass-globbing */
+/* Base styles for general page setup */
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
+/*
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
+.iframe-4-3,
+.iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:3 */
+  height: 0;
+}
+
+.iframe-4-3 iframe,
+.iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.line-height-zero {
+  line-height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 739px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+/**
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
+  list-style: none;
+}
+
+.inline-list li, .link-list.link-list--inline li, .tags-list li {
+  display: inline-block;
+}
+
+.clearfix:after, .content-container:after, .teaser-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.accordion--item, button.mfp-arrow {
+  -webkit-transition: background 0.25s, opacity 0.25s;
+  transition: background 0.25s, opacity 0.25s;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+/*
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+
+Styleguide functions.em
+*/
+/*
+Animate mixin
+
+Parameters:
+  $keyframes - The @keyframes rule to use for the animation
+  $duration - Length of animation
+  $easing - The easing tunction to use
+  $loop - Number of times to loop over the animation
+
+Returns:
+  Vendor prefixed animation rules
+*/
+/*
+Box sizing mixin
+
+Parameters:
+  $value - The value to pass to the box-sizing rule
+
+Returns:
+  Vendor prefixed box-sizing rules
+*/
+/*
+CSS Hexagon
+
+Create a CSS-based hexagon shape! Just pass in a size and color you'd like the 
+hexagon to be as well as an optional border if you'd like the hexagon to be just
+an outline rather thna a filled shape.
+
+Based off of http://csshexagon.com/
+*/
+/*
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
+/*
+Transform mixin
+
+Parameters:
+  $properties - The transform properties being used
+
+Returns:
+  Vendor prefixed transform rules
+*/
+/*
+Transition mixin
+
+Parameters:
+  $properties - The transition properties being used
+
+Returns:
+  Vendor prefixed transition rules
+*/
+/*
+Color Palette 
+
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
+/*
+Text Colors
+
+Colors used for typography. *Coming Soon*
+
+Weight: 1
+
+Style guide: colors.text
+*/
+/*
+Button Colors
+
+Colors used for buttons. *Coming Soon*
+
+Weight: 2
+
+Style guide: colors.buttons
+*/
+/*
+Accent Colors
+
+Colors used for accents. *Coming Soon*
+
+Weight: 3
+
+Style guide: colors.accent
+*/
+/*
+Background Colors
+
+Colors used for backgrounds. *Coming Soon*
+
+Weight: 4
+
+Style guide: colors.background
+*/
+/*
+Product colors
+
+Specific brand colors for Tableau products. *Coming Soon*
+
+Weight: 5
+
+Style guide: colors.product
+*/
+/*
+Basic Colors
+
+Some basic colors
+
+#Style guide: colors.basic
+*/
+/* 
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+/* 
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+/* 
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
+/**
+ * SASS vars
+ */
+/*
+Typography
+
+Weight: 10
+
+Style guide: typography
+*/
+/*
+Buttons & Links
+
+Buttons and text links used to link to different pages ro trigger on-page interactions.
+
+Weight: 20
+
+Style guide: buttons-links
+*/
+/* 
+Boxes & Containers
+
+Used as wrappers to apply certain styles around elements.
+
+Weight: 30
+
+Style guide: boxes 
+*/
+/*
+Images
+
+Image assets displayed as thumbnails or within the content of a page.
+
+Weight: 35
+
+Style guide: images
+*/
+/*
+Content Lists
+
+Lists of content that generally have a title, thumbnail and/or a description and
+link through to the full version of the content.
+
+Weight: 40
+
+Style guide: lists
+*/
+/*
+Form Styles
+
+Form elements such as text fields and submit buttons used to make forms that the
+user can submit information through. Here's an example form:
+
+Weight: 50
+
+################################################################################
+# Style guide: forms ###########################################################
+################################################################################
+*/
+/*
+Tables
+
+Used for tabular data
+
+Weight: 60
+
+################################################################################
+# Style guide: tables ##########################################################
+################################################################################
+*/
+/*
+Navigation
+
+Navigational tools used across the site
+
+Weight: 70
+
+Style guide: navigation
+*/
+/*
+Interactive Components
+
+This section displays examples of components that have interactivity. Most
+Interactivity is defined via Javascript.
+
+Weight: 80
+
+Style guide: interactive
+*/
+/*
+Layout 
+
+Components used for page layout
+
+Weight: 90
+
+Style guide layout
+*/
+/*
+Accordion
+
+An accordion of content that allows you to expand and collapse sections of 
+content.
+
+Markup: accordion.hbs
+
+Style guide: interactive.accordion
+*/
+.accordion--item {
+  position: relative;
+  padding: 0 1em;
+  border-top: 1px solid #dedede;
+}
+
+.accordion--item:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.accordion--item:hover,
+.accordion--item.open {
+  background-color: #ebebeb;
+}
+
+.accordion--item--title {
+  margin: 0;
+  padding: 1.3em 40px 1.3em 0;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.accordion--item--title:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+  content: "+";
+  font-family: 'tc-icons';
+  line-height: 1;
+}
+
+.accordion--item.open .accordion--item--title:after {
+  content: "-";
+}
+
+.accordion--item--content {
+  padding-bottom: 1.5em;
+}
+
+.accordion--item--content p:first-child,
+.accordion--item--content ul:first-child {
+  margin-top: 0;
+}
+
+.accordion--item--content p:last-child,
+.accordion--item--content ul:last-child {
+  margin-bottom: 0;
+}
+
+.anchor {
+  position: absolute;
+  top: -78px;
+}
+
+.admin-menu .anchor {
+  top: -107px;
+}
+
+@media (max-width: 739px) {
+  .anchor {
+    top: -49px;
+  }
+}
+
+/*
+Badges
+
+The branding system makes use of a location-specific badge, including the dates and associated conference hashtag. As the conference travels, the badge can be updated to reflect the new locations, adding a custom element to the branding system. An outlined badge uses the <code>badge-outlined</code> class.
+
+Markup: badge.hbs
+
+Weight: 4
+
+.badge--white - White BG colored badge.
+.badge--light-gray-1 - Light Gray 1 colored badge.
+.badge--light-gray-2 - Light Gray 2 colored badge.
+.badge--dark-gray-1 - Dk Gray 1 colored badge.
+.badge--dark-gray-2 - Dk Gray 2 colored badge.
+.badge--dark-gray-3 - Dk Gray 3 colored badge.
+.badge--about-featured - About/Feat colored badge.
+.badge--data-sources - Data Sources colored badge.
+
+################################################################################
+# Style guide: boxes.badge #####################################################
+################################################################################
+ */
+.badge {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  padding: 20px;
+  background: #457387;
+  border: 3px solid #457387;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.badge.badge--outlined {
+  background: none;
+}
+
+.badge.badge--white {
+  background: #fff;
+  border-color: #fff;
+  color: #333;
+}
+
+.badge.badge--white.badge--outlined {
+  background: none;
+  color: #fff;
+}
+
+.badge.badge--light-gray-1 {
+  background: #fafafa;
+  border-color: #fafafa;
+  color: #333;
+}
+
+.badge.badge--light-gray-1.badge--outlined {
+  background: none;
+  color: #fafafa;
+}
+
+.badge.badge--light-gray-2 {
+  background: #ebebeb;
+  border-color: #ebebeb;
+  color: #333;
+}
+
+.badge.badge--light-gray-2.badge--outlined {
+  background: none;
+  color: #ebebeb;
+}
+
+.badge.badge--dark-gray-1 {
+  background: #464646;
+  border-color: #464646;
+  color: #bbb;
+}
+
+.badge.badge--dark-gray-1.badge--outlined {
+  background: none;
+  color: #464646;
+}
+
+.badge.badge--dark-gray-2 {
+  background: #333;
+  border-color: #333;
+  color: #bbb;
+}
+
+.badge.badge--dark-gray-2.badge--outlined {
+  background: none;
+  color: #333;
+}
+
+.badge.badge--dark-gray-3 {
+  background: #1b1b1b;
+  border-color: #1b1b1b;
+  color: #bbb;
+}
+
+.badge.badge--dark-gray-3.badge--outlined {
+  background: none;
+  color: #1b1b1b;
+}
+
+.badge.badge--about-featured {
+  background: #457387;
+  border-color: #457387;
+  color: #fff;
+}
+
+.badge.badge--about-featured.badge--outlined {
+  background: none;
+  color: #457387;
+}
+
+.badge.badge--data-sources {
+  background: #2e4c65;
+  border-color: #2e4c65;
+  color: #fff;
+}
+
+.badge.badge--data-sources.badge--outlined {
+  background: none;
+  color: #2e4c65;
+}
+
+.badge.badge--desktop {
+  background: #23529c;
+  border-color: #23529c;
+  color: #fff;
+}
+
+.badge.badge--desktop.badge--outlined {
+  background: none;
+  color: #23529c;
+}
+
+.badge.badge--server {
+  background: #7fa9bb;
+  border-color: #7fa9bb;
+  color: #fff;
+}
+
+.badge.badge--server.badge--outlined {
+  background: none;
+  color: #7fa9bb;
+}
+
+.badge.badge--online {
+  background: #58a3b9;
+  border-color: #58a3b9;
+  color: #fff;
+}
+
+.badge.badge--online.badge--outlined {
+  background: none;
+  color: #58a3b9;
+}
+
+.badge.badge--public {
+  background: #324E7A;
+  border-color: #324E7A;
+  color: #fff;
+}
+
+.badge.badge--public.badge--outlined {
+  background: none;
+  color: #324E7A;
+}
+
+.badge.badge--reader {
+  background: #B28CCF;
+  border-color: #B28CCF;
+  color: #fff;
+}
+
+.badge.badge--reader.badge--outlined {
+  background: none;
+  color: #B28CCF;
+}
+
+.badge.badge--mobile {
+  background: #DB8E6A;
+  border-color: #DB8E6A;
+  color: #fff;
+}
+
+.badge.badge--mobile.badge--outlined {
+  background: none;
+  color: #DB8E6A;
+}
+
+.badge.badge--nav-drawer-gray-1 {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #333;
+}
+
+.badge.badge--nav-drawer-gray-1.badge--outlined {
+  background: none;
+  color: #f0f0f0;
+}
+
+.badge.badge--nav-drawer-gray-2 {
+  background: #ddd;
+  border-color: #ddd;
+  color: #333;
+}
+
+.badge.badge--nav-drawer-gray-2.badge--outlined {
+  background: none;
+  color: #ddd;
+}
+
+/*
+Padded box
+
+Adds padding to a container element. The `.box--dark-gray-1` class is used to 
+differentiate the box from the background. You will usually want to use a padded
+box on a container with a background color.
+
+Markup: box_padded.hbs
+
+Weight: 1
+
+.box__padded--one - A box with 1em of padding
+.box__padded--two - A box with 2em of padding (Default)
+.box__padded--three - A box with 3em of padding
+.box__padded--four - A box with 4em of padding
+
+Style guide: boxes.padded
+*/
+.box__padded {
+  padding: 2em;
+}
+
+.box__padded.box__padded--one {
+  padding: 1em;
+}
+
+.box__padded.box__padded--three {
+  padding: 3em;
+}
+
+.box__padded.box__padded--four {
+  padding: 3em;
+}
+
+/* 
+Colored Backgrounds
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for 
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
+just to make the examples look better.
+
+Markup: box_colored.hbs
+
+Weight: 2
+
+.box--white - White BG colored box - (#fff)
+.box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
+.box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
+.box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
+.box--dark-gray-2 - Dk Gray 2 colored box - (#333)
+.box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
+.box--about-featured - About/Feat colored box - (#457387)
+.box--data-sources - Data Sources colored box - (#2e4c65)
+.box--desktop - Desktop product colored box - (#23529c)
+.box--server - Server product colored box - (#7fa9bb)
+.box--online - Online product colored box - (#58a3b9)
+.box--public - Public product colored box - (#324E7A)
+.box--reader - Reader product colored box - (#B28CCF)
+.box--mobile - Mobile product colored box - (#DB8E6A)
+.box--nav-drawer-gray-1 - Global nav drawer primary colored box - (#f0f0f0)
+.box--nav-drawer-gray-2 - Global nav drawer secondary colored box - (#ddd)
+
+Style guide: boxes.colored
+*/
+/* Create a class for each background color */
+.box--white {
+  background-color: #fff;
+  color: #333;
+}
+
+.box--white h1, .box--white .heading--homepage, .box--white .heading--product, .box--white .heading--download, .box--white .heading--h1,
+.box--white h2, .box--white .heading--medium, .box--white .heading--h2,
+.box--white h3, .box--white .heading--small, .box--white .heading--h3,
+.box--white h4, .box--white .heading--x-small, .box--white .heading--h4,
+.box--white h5, .box--white .heading--label, .box--white .heading--h5,
+.box--white h6, .box--white .heading--h6 {
+  color: #000;
+}
+
+.box--light-gray-1 {
+  background-color: #fafafa;
+  color: #333;
+}
+
+.box--light-gray-1 h1, .box--light-gray-1 .heading--homepage, .box--light-gray-1 .heading--product, .box--light-gray-1 .heading--download, .box--light-gray-1 .heading--h1,
+.box--light-gray-1 h2, .box--light-gray-1 .heading--medium, .box--light-gray-1 .heading--h2,
+.box--light-gray-1 h3, .box--light-gray-1 .heading--small, .box--light-gray-1 .heading--h3,
+.box--light-gray-1 h4, .box--light-gray-1 .heading--x-small, .box--light-gray-1 .heading--h4,
+.box--light-gray-1 h5, .box--light-gray-1 .heading--label, .box--light-gray-1 .heading--h5,
+.box--light-gray-1 h6, .box--light-gray-1 .heading--h6 {
+  color: #000;
+}
+
+.box--light-gray-2 {
+  background-color: #ebebeb;
+  color: #333;
+}
+
+.box--light-gray-2 h1, .box--light-gray-2 .heading--homepage, .box--light-gray-2 .heading--product, .box--light-gray-2 .heading--download, .box--light-gray-2 .heading--h1,
+.box--light-gray-2 h2, .box--light-gray-2 .heading--medium, .box--light-gray-2 .heading--h2,
+.box--light-gray-2 h3, .box--light-gray-2 .heading--small, .box--light-gray-2 .heading--h3,
+.box--light-gray-2 h4, .box--light-gray-2 .heading--x-small, .box--light-gray-2 .heading--h4,
+.box--light-gray-2 h5, .box--light-gray-2 .heading--label, .box--light-gray-2 .heading--h5,
+.box--light-gray-2 h6, .box--light-gray-2 .heading--h6 {
+  color: #000;
+}
+
+.box--dark-gray-1 {
+  background-color: #464646;
+  color: #bbb;
+}
+
+.box--dark-gray-1 h1, .box--dark-gray-1 .heading--homepage, .box--dark-gray-1 .heading--product, .box--dark-gray-1 .heading--download, .box--dark-gray-1 .heading--h1,
+.box--dark-gray-1 h2, .box--dark-gray-1 .heading--medium, .box--dark-gray-1 .heading--h2,
+.box--dark-gray-1 h3, .box--dark-gray-1 .heading--small, .box--dark-gray-1 .heading--h3,
+.box--dark-gray-1 h4, .box--dark-gray-1 .heading--x-small, .box--dark-gray-1 .heading--h4,
+.box--dark-gray-1 h5, .box--dark-gray-1 .heading--label, .box--dark-gray-1 .heading--h5,
+.box--dark-gray-1 h6, .box--dark-gray-1 .heading--h6 {
+  color: #fff;
+}
+
+.box--dark-gray-2 {
+  background-color: #333;
+  color: #bbb;
+}
+
+.box--dark-gray-2 h1, .box--dark-gray-2 .heading--homepage, .box--dark-gray-2 .heading--product, .box--dark-gray-2 .heading--download, .box--dark-gray-2 .heading--h1,
+.box--dark-gray-2 h2, .box--dark-gray-2 .heading--medium, .box--dark-gray-2 .heading--h2,
+.box--dark-gray-2 h3, .box--dark-gray-2 .heading--small, .box--dark-gray-2 .heading--h3,
+.box--dark-gray-2 h4, .box--dark-gray-2 .heading--x-small, .box--dark-gray-2 .heading--h4,
+.box--dark-gray-2 h5, .box--dark-gray-2 .heading--label, .box--dark-gray-2 .heading--h5,
+.box--dark-gray-2 h6, .box--dark-gray-2 .heading--h6 {
+  color: #fff;
+}
+
+.box--dark-gray-3 {
+  background-color: #1b1b1b;
+  color: #bbb;
+}
+
+.box--dark-gray-3 h1, .box--dark-gray-3 .heading--homepage, .box--dark-gray-3 .heading--product, .box--dark-gray-3 .heading--download, .box--dark-gray-3 .heading--h1,
+.box--dark-gray-3 h2, .box--dark-gray-3 .heading--medium, .box--dark-gray-3 .heading--h2,
+.box--dark-gray-3 h3, .box--dark-gray-3 .heading--small, .box--dark-gray-3 .heading--h3,
+.box--dark-gray-3 h4, .box--dark-gray-3 .heading--x-small, .box--dark-gray-3 .heading--h4,
+.box--dark-gray-3 h5, .box--dark-gray-3 .heading--label, .box--dark-gray-3 .heading--h5,
+.box--dark-gray-3 h6, .box--dark-gray-3 .heading--h6 {
+  color: #fff;
+}
+
+.box--about-featured {
+  background-color: #457387;
+  color: #fff;
+}
+
+.box--about-featured h1, .box--about-featured .heading--homepage, .box--about-featured .heading--product, .box--about-featured .heading--download, .box--about-featured .heading--h1,
+.box--about-featured h2, .box--about-featured .heading--medium, .box--about-featured .heading--h2,
+.box--about-featured h3, .box--about-featured .heading--small, .box--about-featured .heading--h3,
+.box--about-featured h4, .box--about-featured .heading--x-small, .box--about-featured .heading--h4,
+.box--about-featured h5, .box--about-featured .heading--label, .box--about-featured .heading--h5,
+.box--about-featured h6, .box--about-featured .heading--h6 {
+  color: #fff;
+}
+
+.box--data-sources {
+  background-color: #2e4c65;
+  color: #fff;
+}
+
+.box--data-sources h1, .box--data-sources .heading--homepage, .box--data-sources .heading--product, .box--data-sources .heading--download, .box--data-sources .heading--h1,
+.box--data-sources h2, .box--data-sources .heading--medium, .box--data-sources .heading--h2,
+.box--data-sources h3, .box--data-sources .heading--small, .box--data-sources .heading--h3,
+.box--data-sources h4, .box--data-sources .heading--x-small, .box--data-sources .heading--h4,
+.box--data-sources h5, .box--data-sources .heading--label, .box--data-sources .heading--h5,
+.box--data-sources h6, .box--data-sources .heading--h6 {
+  color: #fff;
+}
+
+.box--desktop {
+  background-color: #23529c;
+  color: #fff;
+}
+
+.box--desktop h1, .box--desktop .heading--homepage, .box--desktop .heading--product, .box--desktop .heading--download, .box--desktop .heading--h1,
+.box--desktop h2, .box--desktop .heading--medium, .box--desktop .heading--h2,
+.box--desktop h3, .box--desktop .heading--small, .box--desktop .heading--h3,
+.box--desktop h4, .box--desktop .heading--x-small, .box--desktop .heading--h4,
+.box--desktop h5, .box--desktop .heading--label, .box--desktop .heading--h5,
+.box--desktop h6, .box--desktop .heading--h6 {
+  color: #fff;
+}
+
+.box--server {
+  background-color: #7fa9bb;
+  color: #fff;
+}
+
+.box--server h1, .box--server .heading--homepage, .box--server .heading--product, .box--server .heading--download, .box--server .heading--h1,
+.box--server h2, .box--server .heading--medium, .box--server .heading--h2,
+.box--server h3, .box--server .heading--small, .box--server .heading--h3,
+.box--server h4, .box--server .heading--x-small, .box--server .heading--h4,
+.box--server h5, .box--server .heading--label, .box--server .heading--h5,
+.box--server h6, .box--server .heading--h6 {
+  color: #fff;
+}
+
+.box--online {
+  background-color: #58a3b9;
+  color: #fff;
+}
+
+.box--online h1, .box--online .heading--homepage, .box--online .heading--product, .box--online .heading--download, .box--online .heading--h1,
+.box--online h2, .box--online .heading--medium, .box--online .heading--h2,
+.box--online h3, .box--online .heading--small, .box--online .heading--h3,
+.box--online h4, .box--online .heading--x-small, .box--online .heading--h4,
+.box--online h5, .box--online .heading--label, .box--online .heading--h5,
+.box--online h6, .box--online .heading--h6 {
+  color: #fff;
+}
+
+.box--public {
+  background-color: #324E7A;
+  color: #fff;
+}
+
+.box--public h1, .box--public .heading--homepage, .box--public .heading--product, .box--public .heading--download, .box--public .heading--h1,
+.box--public h2, .box--public .heading--medium, .box--public .heading--h2,
+.box--public h3, .box--public .heading--small, .box--public .heading--h3,
+.box--public h4, .box--public .heading--x-small, .box--public .heading--h4,
+.box--public h5, .box--public .heading--label, .box--public .heading--h5,
+.box--public h6, .box--public .heading--h6 {
+  color: #fff;
+}
+
+.box--reader {
+  background-color: #B28CCF;
+  color: #fff;
+}
+
+.box--reader h1, .box--reader .heading--homepage, .box--reader .heading--product, .box--reader .heading--download, .box--reader .heading--h1,
+.box--reader h2, .box--reader .heading--medium, .box--reader .heading--h2,
+.box--reader h3, .box--reader .heading--small, .box--reader .heading--h3,
+.box--reader h4, .box--reader .heading--x-small, .box--reader .heading--h4,
+.box--reader h5, .box--reader .heading--label, .box--reader .heading--h5,
+.box--reader h6, .box--reader .heading--h6 {
+  color: #fff;
+}
+
+.box--mobile {
+  background-color: #DB8E6A;
+  color: #fff;
+}
+
+.box--mobile h1, .box--mobile .heading--homepage, .box--mobile .heading--product, .box--mobile .heading--download, .box--mobile .heading--h1,
+.box--mobile h2, .box--mobile .heading--medium, .box--mobile .heading--h2,
+.box--mobile h3, .box--mobile .heading--small, .box--mobile .heading--h3,
+.box--mobile h4, .box--mobile .heading--x-small, .box--mobile .heading--h4,
+.box--mobile h5, .box--mobile .heading--label, .box--mobile .heading--h5,
+.box--mobile h6, .box--mobile .heading--h6 {
+  color: #fff;
+}
+
+.box--nav-drawer-gray-1 {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.box--nav-drawer-gray-1 h1, .box--nav-drawer-gray-1 .heading--homepage, .box--nav-drawer-gray-1 .heading--product, .box--nav-drawer-gray-1 .heading--download, .box--nav-drawer-gray-1 .heading--h1,
+.box--nav-drawer-gray-1 h2, .box--nav-drawer-gray-1 .heading--medium, .box--nav-drawer-gray-1 .heading--h2,
+.box--nav-drawer-gray-1 h3, .box--nav-drawer-gray-1 .heading--small, .box--nav-drawer-gray-1 .heading--h3,
+.box--nav-drawer-gray-1 h4, .box--nav-drawer-gray-1 .heading--x-small, .box--nav-drawer-gray-1 .heading--h4,
+.box--nav-drawer-gray-1 h5, .box--nav-drawer-gray-1 .heading--label, .box--nav-drawer-gray-1 .heading--h5,
+.box--nav-drawer-gray-1 h6, .box--nav-drawer-gray-1 .heading--h6 {
+  color: #000;
+}
+
+.box--nav-drawer-gray-2 {
+  background-color: #ddd;
+  color: #333;
+}
+
+.box--nav-drawer-gray-2 h1, .box--nav-drawer-gray-2 .heading--homepage, .box--nav-drawer-gray-2 .heading--product, .box--nav-drawer-gray-2 .heading--download, .box--nav-drawer-gray-2 .heading--h1,
+.box--nav-drawer-gray-2 h2, .box--nav-drawer-gray-2 .heading--medium, .box--nav-drawer-gray-2 .heading--h2,
+.box--nav-drawer-gray-2 h3, .box--nav-drawer-gray-2 .heading--small, .box--nav-drawer-gray-2 .heading--h3,
+.box--nav-drawer-gray-2 h4, .box--nav-drawer-gray-2 .heading--x-small, .box--nav-drawer-gray-2 .heading--h4,
+.box--nav-drawer-gray-2 h5, .box--nav-drawer-gray-2 .heading--label, .box--nav-drawer-gray-2 .heading--h5,
+.box--nav-drawer-gray-2 h6, .box--nav-drawer-gray-2 .heading--h6 {
+  color: #000;
+}
+
+/*
+Marginless Stretchy Boxes
+
+Percentage width boxes that butt up against eachother with no margin. Typically,
+a collored background would be applied with a <code>.box--{color}</code> class.
+In a mobile layout, all stretchy boxes default to stacking one ontop of the other
+and in a tablet layout stretchy boxes default to a 50% split. A 
+<code>.box__stretchy--tablet-full</code> class can be applied to a box to force 
+it to be full-width on a tablet. This is useful when there are an odd number of 
+boxes and you want to fill the extra blank space.
+
+Markup: box_stretchy.hbs
+
+Weight: 3
+
+Style guide: boxes.stretchy
+*/
+.box__stretchy.box__stretchy--halves,
+.box__stretchy.box__stretchy--thirds,
+.box__stretchy.box__stretchy--fourths,
+.box__stretchy.box__stretchy--fifths,
+.box__stretchy.box__stretchy--sixths {
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+@media (min-width: 740px) {
+  .box__stretchy.box__stretchy--halves,
+  .box__stretchy.box__stretchy--thirds,
+  .box__stretchy.box__stretchy--fourths,
+  .box__stretchy.box__stretchy--fifths,
+  .box__stretchy.box__stretchy--sixths {
+    width: 50%;
+  }
+  .box__stretchy.box__stretchy--tablet-full {
+    width: 100%;
+  }
+}
+
+@media (min-width: 980px) {
+  .box__stretchy.box__stretchy--thirds {
+    width: 33.3333333333%;
+  }
+  .box__stretchy.box__stretchy--fourths {
+    width: 25%;
+  }
+  .box__stretchy.box__stretchy--fifths {
+    width: 20%;
+  }
+  .box__stretchy.box__stretchy--sixths {
+    width: 16.6666666667%;
+  }
+}
+
+/*
+Content Container
+
+A wrapper elemnt to go around content to keep it in a centered column on the 
+page.
+
+Markup: content_container.hbs
+
+Weight: 30
+
+Style guide: layout.container
+*/
+.content-container {
+  box-sizing: border-box;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+.content-container.content-container--wide {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* 
+Primary CTA
+
+Primary CTA buttons (Solid) should be used when a single or important page 
+action is required.
+
+Markup: cta.hbs
+
+.cta--orange - Orange colored CTA button.
+.cta--desktop - Desktop colored CTA button.
+.cta--server - Server colored CTA button.
+.cta--online - Online colored CTA button.
+.cta--public - Public colored CTA button.
+.cta--reader - Reader colored CTA button.
+.cta--mobile - Mobile colored CTA button.
+.cta--arrow - CTA button with arrow icon.
+.cta--play - CTA button with play icon.
+.cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
+.cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
+
+Style guide: buttons-links.cta
+*/
+.cta {
+  display: inline-block;
+  margin: .5em 0;
+  padding: 17px 25px;
+  background-color: #e8762c;
+  border-radius: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: auto;
+  -webkit-transition: background-color 0.25s, color 0.35s;
+  transition: background-color 0.25s, color 0.35s;
+}
+
+.cta:nth-child(n+2) {
+  margin-left: 1em;
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: #ea8442;
+  text-decoration: underline;
+}
+
+.cta:active {
+  background-color: #c92434;
+  text-decoration: underline;
+}
+
+.cta.cta--orange {
+  background-color: #e8762c;
+}
+
+.cta.cta--orange:hover,
+.cta.cta--orange:focus {
+  background-color: #ea8442;
+}
+
+.cta.cta--desktop {
+  background-color: #324e7a;
+}
+
+.cta.cta--desktop:hover,
+.cta.cta--desktop:focus {
+  background-color: #23529c;
+}
+
+.cta.cta--server {
+  background-color: #5e899b;
+}
+
+.cta.cta--server:hover,
+.cta.cta--server:focus {
+  background-color: #7fa9bb;
+}
+
+.cta.cta--online {
+  background-color: #7099a5;
+}
+
+.cta.cta--online:hover,
+.cta.cta--online:focus {
+  background-color: #58a3b9;
+}
+
+.cta.cta--public {
+  background-color: #2d4b65;
+}
+
+.cta.cta--public:hover,
+.cta.cta--public:focus {
+  background-color: #324E7A;
+}
+
+.cta.cta--reader {
+  background-color: #9d7eb5;
+}
+
+.cta.cta--reader:hover,
+.cta.cta--reader:focus {
+  background-color: #B28CCF;
+}
+
+.cta.cta--mobile {
+  background-color: #c87e5b;
+}
+
+.cta.cta--mobile:hover,
+.cta.cta--mobile:focus {
+  background-color: #DB8E6A;
+}
+
+.cta.cta--arrow:after {
+  content: url(../images/icons/icon-arrow.png);
+  padding-left: .5em;
+}
+
+.cta.cta--play:after {
+  content: url(../images/icons/icon-play.png);
+  display: inline-block;
+  height: 0px;
+  margin-top: -23px;
+  padding-left: 1em;
+  vertical-align: middle;
+}
+
+.cta.cta--secondary {
+  border: 2px solid #eb912c;
+  padding: 15px 23px;
+  background: transparent;
+  color: #eb912c;
+}
+
+.cta.cta--secondary:hover,
+.cta.cta--secondary:focus {
+  background: transparent;
+}
+
+.cta.cta--secondary:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
+}
+
+.cta.cta--secondary.cta--arrow:after {
+  content: url(../images/icons/icon-arrow-orange.png);
+}
+
+.cta.cta--tertiary {
+  border: 2px solid #e8762c;
+  padding: 15px 23px;
+  background: transparent;
+  color: #e8762c;
+}
+
+.cta.cta--tertiary:hover,
+.cta.cta--tertiary:focus {
+  background: transparent;
+}
+
+.cta.cta--tertiary:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
+}
+
+/*
+Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider.hbs
+
+Weight: 0
+
+.divider--solid - A solid hairline divider. [Default]
+.divider--gradient - A divider that fades out to transparent on either end. 
+.divider--dashed - A dashed divider.
+
+Style guide: layout.divider
+*/
+.divider {
+  width: 100%;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dedede;
+}
+
+.divider.divider--gradient {
+  border-top: 0;
+  height: 1px;
+  background: #dedede;
+  background: -webkit-linear-gradient(left, transparent, #dedede, transparent);
+  background: linear-gradient(to right, transparent, #dedede, transparent);
+}
+
+.divider.divider--dashed {
+  border-top-style: dotted;
+}
+
+/*
+Base Form Styles
+
+A simple example form.
+Markup: form.hbs
+
+Weight: 0
+
+Style guide: forms.base
+*/
+.form--fields label {
+  display: inline-block;
+  min-width: 110px;
+}
+
+/*
+Input Fields
+
+Nothing to see here yet...
+
+Markup: form_input.hbs
+
+Weight: 1
+
+Style guide: forms.input
+*/
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=number],
+input[type=email] {
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 0.7em;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #333;
+}
+
+@media (max-width: 739px) {
+  input[type=text],
+  input[type=tel],
+  input[type=password],
+  input[type=number],
+  input[type=email] {
+    width: 100%;
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: #eee;
+}
+
+/*
+Submit Buttons
+
+Nothing to see here yet...
+
+Markup: form_button.hbs
+
+.submitting - In the process of submitting
+.submitted - Successfully submitted
+.errored - Error occured while submitting
+
+Weight: 2
+
+Style guide: forms.buttons
+*/
+input[type=submit].submitting,
+input[type=submit].submitted,
+input[type=submit].errored {
+  cursor: inherit;
+}
+
+input[type=submit].submitting {
+  background-size: 30px 30px;
+  background-color: #c92434;
+  border-color: #c92434;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), right);
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(315deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+}
+
+input[type=submit].submitted {
+  background-color: #c92434;
+  border-color: #c92434;
+  color: #fff;
+}
+
+input[type=submit].errored {
+  background-color: #DD1E06;
+  border-color: #DD1E06;
+  color: #fff;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+/*
+Validation Messages
+
+Nothing to see here yet...
+
+Markup: form_validation.hbs
+
+Weight: 3
+
+Style guide: forms.validation
+*/
+.invalid {
+  display: none;
+  color: #DD1E06;
+}
+
+/*
+Confirmation Messages
+
+Nothing to see here yet...
+
+Markup: form_confirmation.hbs
+
+Weight: 4
+
+Style guide: forms.confirmation
+*/
+/*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, the language selector, social buttons, and a copyright line
+
+Markup: global-footer.hbs
+
+Weight: 50
+
+Style Guide: navigation.footer
+*/
+.global-footer .global-footer__language,
+.global-footer .global-footer__menu {
+  float: left;
+}
+
+.global-footer .global-footer__first {
+  padding-top: 22px;
+}
+
+.global-footer .global-footer__language {
+  position: relative;
+  margin-right: 1em;
+  padding: 2px 16px;
+  cursor: pointer;
+  background: #333;
+}
+
+.global-footer .global-footer__language:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 5px solid #fff;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+.global-footer .global-footer__language .global-footer__language__options {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition: max-height 0.5s ease-out;
+          transition: max-height 0.5s ease-out;
+}
+
+.global-footer .global-footer__language .global-footer__language__options .selected {
+  display: none;
+}
+
+.global-footer .global-footer__language .global-footer__language__options a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 16px;
+  color: #bbb;
+}
+
+.global-footer .global-footer__language:hover:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.global-footer .global-footer__language:hover .global-footer__language__options {
+  max-height: 240px;
+}
+
+.global-footer .global-footer__menu li {
+  padding: 0 1em;
+  line-height: 30px;
+}
+
+.global-footer .global-footer__menu li a {
+  color: #bbb;
+}
+
+.global-footer .global-footer__social li a {
+  color: #bbb;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+/*
+Global Navigation
+
+The global navigation bar that sits at the top of each page. Contains primary, 
+secondary, and sub navigation as well as the global search bar.
+
+Markup: global-nav.hbs
+
+Style guide: navigation.global
+*/
+.global-nav {
+  position: relative;
+  height: 100px;
+  padding: 2em 0;
+  background: #fff;
+}
+
+.global-nav .global-nav__logo,
+.global-nav .global-nav__primary-menu,
+.global-nav .global-nav__secondary-menu {
+  float: left;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.global-nav .global-nav__secondary-menu {
+  float: right;
+}
+
+.global-nav .global-nav__logo {
+  max-width: 200px;
+}
+
+.global-nav .global-nav__logo a {
+  display: block;
+  line-height: 0;
+}
+
+.global-nav .global-nav__primary-menu ul {
+  margin: 0.8em 0 0 3em;
+}
+
+.global-nav .global-nav__primary-menu li a {
+  position: relative;
+  padding: 10px;
+  color: #212535;
+}
+
+.global-nav .global-nav__primary-menu li.expandable a:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  top: 47px;
+  left: 50%;
+  margin-left: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #f0f0f0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.global-nav .global-nav__primary-menu li.expanded a:after {
+  opacity: 1;
+}
+
+.global-nav .global-nav__secondary-menu {
+  padding-right: 45px;
+  text-align: right;
+}
+
+.global-nav .global-nav__secondary-menu li a.link {
+  padding: 10px;
+  color: #000;
+}
+
+.global-nav .global-nav__secondary-menu li a.cta {
+  margin: 0 0 0 10px;
+}
+
+.global-nav .global-nav__search {
+  position: absolute;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.global-nav .global-nav__search input[type='search'] {
+  position: absolute;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0 0 0 45px;
+  background-image: url("../images/icons/icon-magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 15px center;
+  text-align: left;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.global-nav .global-nav__search input[type='search']:focus {
+  outline: none;
+}
+
+.global-nav .global-nav__search input[type='search'] ::-webkit-input-placeholder,
+.global-nav .global-nav__search input[type='search'] :-moz-placeholder,
+.global-nav .global-nav__search input[type='search'] ::-moz-placeholder,
+.global-nav .global-nav__search input[type='search'] :-ms-input-placeholder {
+  color: #787878;
+}
+
+.global-nav .global-nav__search input[type='search']::-webkit-search-decoration,
+.global-nav .global-nav__search input[type='search']::-webkit-search-cancel-button,
+.global-nav .global-nav__search input[type='search']::-webkit-search-results-button,
+.global-nav .global-nav__search input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+.global-nav .global-nav__search .global-nav__search__close {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  background-image: url("../images/global/x-close-nav.png");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center center;
+  top: 0;
+  right: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.global-nav.global-nav--search-shown .global-nav__search {
+  width: 100%;
+}
+
+.global-nav.global-nav--search-shown .global-nav__search input[type='search'] {
+  width: 100%;
+  padding-left: 2em;
+  cursor: inherit;
+}
+
+.global-nav.global-nav--search-shown .global-nav__search .global-nav__search__close {
+  opacity: 1;
+  width: 45px;
+  height: 45px;
+}
+
+.global-nav.global-nav--search-shown .global-nav__logo,
+.global-nav.global-nav--search-shown .global-nav__primary-menu,
+.global-nav.global-nav--search-shown .global-nav__secondary-menu {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.global-nav__drawer {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  z-index: 10;
+}
+
+.global-nav__drawer .global-nav__drawer__secondary {
+  position: relative;
+}
+
+.global-nav__drawer .global-nav__drawer__secondary .global-nav__drawer__secondary__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+}
+
+.ui-autocomplete {
+  display: block;
+  z-index: 20;
+  padding: 10px 45px;
+  list-style: none;
+  border-top: 27px solid #fff;
+  background: #fefefe;
+  outline: none;
+}
+
+/*******************************************************************************
+HUGE STYLES 
+*******************************************************************************/
+.navigation-global.small {
+  display: none;
+  padding: 0;
+}
+
+.navigation-global.small .content {
+  position: relative;
+  overflow: visible;
+}
+
+.navigation-global.small .navigation-global-primary {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: none;
+  height: auto;
+}
+
+.navigation-global.small .navigation-global-primary li {
+  width: 100%;
+}
+
+.navigation-global.small .navigation-global-primary li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-global.small .navigation-global-secondary {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: none;
+  height: auto;
+}
+
+.navigation-global.small .navigation-global-secondary li {
+  width: auto;
+}
+
+.navigation-global.small .navigation-global-secondary li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-global.small a:hover {
+  text-decoration: none;
+}
+
+.navigation-global.small .navigation-global-secondary {
+  margin: 1% 0 0 0;
+}
+
+.navigation-global li {
+  position: relative;
+}
+
+.navigation-global li:last-child a {
+  margin: 0;
+}
+
+.navigation-global a:hover {
+  text-decoration: underline;
+}
+
+.navigation-global .logo a {
+  display: inline-block;
+  margin: 0 50px 0 0;
+  width: 200px;
+}
+
+.navigation-global .global-search {
+  position: absolute;
+  right: 0;
+  width: 18px;
+}
+
+.navigation-global .global-search input {
+  -webkit-transition: width 0.5s ease;
+          transition: width 0.5s ease;
+}
+
+.navigation-global .navigation-global-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navigation-global .navigation-global-header li.hamburger {
+  float: right;
+  padding: 0;
+  margin-left: auto;
+}
+
+.navigation-global .navigation-global-header li.hamburger a {
+  padding: 10px;
+}
+
+.navigation-global .navigation-global-dropdown {
+  padding: 0;
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 10;
+}
+
+.navigation-global .navigation-global-dropdown .navigation-global-container {
+  position: relative;
+}
+
+.navigation-global .navigation-global-dropdown .navigation-global-primary li:last-child {
+  border-bottom: none;
+}
+
+.navigation-global .navigation-global-dropdown .navigation-global-primary a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.navigation-global .navigation-global-dropdown .navigation-global-secondary {
+  margin: 0;
+}
+
+.navigation-global .navigation-global-dropdown .navigation-global-secondary li {
+  margin: 0 0 10px 0;
+}
+
+.navigation-global .navigation-global-dropdown .icon-target {
+  margin-left: auto;
+  padding: 5px 10px;
+}
+
+.navigation-global .navigation-global-dropdown .global-search {
+  position: relative;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.navigation-global .navigation-global-dropdown .global-search .close-search {
+  display: none;
+  line-height: normal;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.navigation-global .navigation-global-dropdown input[type='search'] {
+  background-color: transparent;
+  padding-left: 20px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.navigation-global .navigation-global-dropdown .button-container {
+  display: table;
+  margin: 0 auto;
+}
+
+.navigation-global .navigation-global-dropdown .button {
+  margin-bottom: 40px;
+}
+
+.navigation-global .navigation-global-dropdown .button .button-label {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation-global .navigation-global-dropdown .button a {
+  margin: 0;
+}
+
+.navigation-global .hamburger {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navigation-global .hamburger a {
+  background: url(../images/global/hamburger.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 25px;
+}
+
+.navigation-global .hamburger-close {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 4.2%;
+}
+
+.navigation-global .hamburger-close a {
+  display: block;
+  background-image: url(../images/global/x-close-nav.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.sub-navigation-global-drawer {
+  display: none;
+  position: absolute;
+  top: 95px;
+  width: 100%;
+  z-index: 10;
+}
+
+.sub-navigation-global-drawer.small {
+  display: block;
+  left: 100%;
+  top: 0;
+  height: 100%;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-global-container {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation {
+  width: 100%;
+  float: none;
+  margin-right: 0;
+  padding: 0;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-more {
+  width: 100%;
+  height: auto;
+  float: none;
+  margin-right: 0;
+  padding: 0;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-more-bg {
+  width: 100%;
+}
+
+.sub-navigation-global-drawer.small ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sub-navigation-global-drawer.small ul li {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.sub-navigation-global-drawer.small ul li:last-child {
+  border-bottom: none;
+}
+
+.sub-navigation-global-drawer.small ul li .title {
+  line-height: normal;
+  padding: 10px 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.sub-navigation-global-drawer.small ul a {
+  margin: 0;
+  display: block;
+}
+
+.sub-navigation-global-drawer.small .title {
+  padding-top: 19px;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-header .block-link {
+  margin: 0;
+  padding: 16px 0;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-header .block-link:first-child {
+  float: left;
+}
+
+.sub-navigation-global-drawer.small .sub-navigation-header .block-link:last-child {
+  float: right;
+}
+
+.sub-navigation-global-drawer.small .block-link {
+  padding: 16px 0 0;
+}
+
+.sub-navigation-global-drawer.small .title-line,
+.sub-navigation-global-drawer.small .description,
+.sub-navigation-global-drawer.small .block-link-container {
+  display: none;
+}
+
+.sub-navigation-global-drawer .content {
+  overflow: visible;
+}
+
+.sub-navigation-global-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.sub-navigation {
+  padding: 80px 0;
+}
+
+.sub-navigation ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sub-navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.sub-navigation .title:hover {
+  text-decoration: underline;
+}
+
+.sub-navigation a {
+  text-decoration: none;
+}
+
+.sub-navigation .title {
+  margin: 0 0 10px 0;
+}
+
+.sub-navigation .title .description {
+  display: none;
+  margin: 0 0 0 50px;
+}
+
+.sub-navigation .description {
+  margin: 0 0 15px 0;
+}
+
+.sub-navigation-more {
+  margin-right: 0;
+  padding: 3% 0 3% 3%;
+  position: relative;
+}
+
+.sub-navigation-more a {
+  text-decoration: none;
+}
+
+.sub-navigation-more a:hover {
+  text-decoration: underline;
+}
+
+.sub-navigation-more .title {
+  margin: 0 0 15px 0;
+}
+
+.sub-navigation-more .title .description {
+  display: none;
+  margin: 0 0 0 50px;
+}
+
+.sub-navigation-more li {
+  margin: 0 0 15px 0;
+}
+
+.sub-navigation-more li:last-child {
+  margin: 0;
+}
+
+.sub-navigation-more li .title {
+  margin: 0;
+}
+
+.sub-navigation-more-bg {
+  width: 41vw;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*
+Grids
+
+Used for creating a columned layout. To use these classes, just pick the number
+of columns wide you want your element to be relative to the total number of
+columns. The default is 12 columns. For example, you can use `.grid--4` to make
+an element 4 columns wide followed by an element with `.grid--8` to take up the
+remaining eight columns of the container's width.
+
+Markup: grid.hbs
+
+Weight: 20
+
+Style guide: layout.grids
+*/
+.grid--1 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--1 {
+    width: 6.3829787234%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--1.grid--last {
+    margin-right: 0;
+  }
+  .grid--1:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--1 {
+    margin-left: 8.5106382979%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--1 {
+    margin-left: -8.5106382979%;
+  }
+}
+
+.grid--2 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--2 {
+    width: 14.8936170213%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--2.grid--last {
+    margin-right: 0;
+  }
+  .grid--2:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--2 {
+    margin-left: 17.0212765957%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--2 {
+    margin-left: -17.0212765957%;
+  }
+}
+
+.grid--3 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--3 {
+    width: 23.4042553191%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--3.grid--last {
+    margin-right: 0;
+  }
+  .grid--3:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--3 {
+    margin-left: 25.5319148936%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--3 {
+    margin-left: -25.5319148936%;
+  }
+}
+
+.grid--4 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--4 {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--4.grid--last {
+    margin-right: 0;
+  }
+  .grid--4:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--4 {
+    margin-left: 34.0425531915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--4 {
+    margin-left: -34.0425531915%;
+  }
+}
+
+.grid--5 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--5 {
+    width: 40.4255319149%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--5.grid--last {
+    margin-right: 0;
+  }
+  .grid--5:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--5 {
+    margin-left: 42.5531914894%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--5 {
+    margin-left: -42.5531914894%;
+  }
+}
+
+.grid--6 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--6 {
+    width: 48.9361702128%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--6.grid--last {
+    margin-right: 0;
+  }
+  .grid--6:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--6 {
+    margin-left: 51.0638297872%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--6 {
+    margin-left: -51.0638297872%;
+  }
+}
+
+.grid--7 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--7 {
+    width: 57.4468085106%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--7.grid--last {
+    margin-right: 0;
+  }
+  .grid--7:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--7 {
+    margin-left: 59.5744680851%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--7 {
+    margin-left: -59.5744680851%;
+  }
+}
+
+.grid--8 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--8 {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--8.grid--last {
+    margin-right: 0;
+  }
+  .grid--8:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--8 {
+    margin-left: 68.085106383%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--8 {
+    margin-left: -68.085106383%;
+  }
+}
+
+.grid--9 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--9 {
+    width: 74.4680851064%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--9.grid--last {
+    margin-right: 0;
+  }
+  .grid--9:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--9 {
+    margin-left: 76.5957446809%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--9 {
+    margin-left: -76.5957446809%;
+  }
+}
+
+.grid--10 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--10 {
+    width: 82.9787234043%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--10.grid--last {
+    margin-right: 0;
+  }
+  .grid--10:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--10 {
+    margin-left: 85.1063829787%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--10 {
+    margin-left: -85.1063829787%;
+  }
+}
+
+.grid--11 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--11 {
+    width: 91.4893617021%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--11.grid--last {
+    margin-right: 0;
+  }
+  .grid--11:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--11 {
+    margin-left: 93.6170212766%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--11 {
+    margin-left: -93.6170212766%;
+  }
+}
+
+.grid--12 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 740px) {
+  .grid--12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .grid--12.grid--last {
+    margin-right: 0;
+  }
+  .grid--12:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .push--12 {
+    margin-left: 102.127659574%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull--12 {
+    margin-left: -102.127659574%;
+  }
+}
+
+/*
+Half-column Push/Pull
+
+This is just a utility to allow for pushing and pulling by half-column units 
+rather than needing to push by a full unit. This should only be used if you need
+to center content in an uneven number of columns
+ */
+@media (min-width: 740px) {
+  .push-half--1 {
+    margin-left: 4.2372881356%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--1 {
+    margin-left: -4.2372881356%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--2 {
+    margin-left: 8.4745762712%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--2 {
+    margin-left: -8.4745762712%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--3 {
+    margin-left: 12.7118644068%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--3 {
+    margin-left: -12.7118644068%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--4 {
+    margin-left: 16.9491525424%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--4 {
+    margin-left: -16.9491525424%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--5 {
+    margin-left: 21.186440678%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--5 {
+    margin-left: -21.186440678%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--6 {
+    margin-left: 25.4237288136%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--6 {
+    margin-left: -25.4237288136%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--7 {
+    margin-left: 29.6610169492%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--7 {
+    margin-left: -29.6610169492%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--8 {
+    margin-left: 33.8983050847%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--8 {
+    margin-left: -33.8983050847%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--9 {
+    margin-left: 38.1355932203%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--9 {
+    margin-left: -38.1355932203%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--10 {
+    margin-left: 42.3728813559%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--10 {
+    margin-left: -42.3728813559%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--11 {
+    margin-left: 46.6101694915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--11 {
+    margin-left: -46.6101694915%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--12 {
+    margin-left: 50.8474576271%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--12 {
+    margin-left: -50.8474576271%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--13 {
+    margin-left: 55.0847457627%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--13 {
+    margin-left: -55.0847457627%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--14 {
+    margin-left: 59.3220338983%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--14 {
+    margin-left: -59.3220338983%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--15 {
+    margin-left: 63.5593220339%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--15 {
+    margin-left: -63.5593220339%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--16 {
+    margin-left: 67.7966101695%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--16 {
+    margin-left: -67.7966101695%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--17 {
+    margin-left: 72.0338983051%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--17 {
+    margin-left: -72.0338983051%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--18 {
+    margin-left: 76.2711864407%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--18 {
+    margin-left: -76.2711864407%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--19 {
+    margin-left: 80.5084745763%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--19 {
+    margin-left: -80.5084745763%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--20 {
+    margin-left: 84.7457627119%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--20 {
+    margin-left: -84.7457627119%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--21 {
+    margin-left: 88.9830508475%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--21 {
+    margin-left: -88.9830508475%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--22 {
+    margin-left: 93.2203389831%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--22 {
+    margin-left: -93.2203389831%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--23 {
+    margin-left: 97.4576271186%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--23 {
+    margin-left: -97.4576271186%;
+  }
+}
+
+@media (min-width: 740px) {
+  .push-half--24 {
+    margin-left: 101.694915254%;
+  }
+}
+
+@media (min-width: 740px) {
+  .pull-half--24 {
+    margin-left: -101.694915254%;
+  }
+}
+
+/*
+Page Hero
+
+Heroes on need to accomplish two main tasks. First, they need to convey a 
+specific story as simply and beautifully as they can in order to drive traffic. 
+Secondly, they need to set the tone for the page they are setting up.
+
+Very simple type and imagery treatments can create different feels for pages 
+that need to stand on their own.
+
+Markup: hero.hbs
+
+Weight: 10
+
+Style guide: layout.hero
+*/
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero .hero__image {
+  height: 0;
+  padding-bottom: 33%;
+}
+
+.hero .hero__image img {
+  position: absolute;
+  width: 100%;
+}
+
+.hero .hero__copy {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.hero .hero__copy h1, .hero .hero__copy .heading--homepage, .hero .hero__copy .heading--product, .hero .hero__copy .heading--download {
+  margin: 0;
+}
+
+.hero:before,
+.hero:after {
+  display: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 200px;
+  height: 100%;
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+}
+
+@media (min-width: 1550px) {
+  .hero:before,
+  .hero:after {
+    display: block;
+  }
+}
+
+.hero:after {
+  background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
+  background-image: linear-gradient(to left, #1b1b1b, transparent);
+  left: auto;
+  right: 0;
+}
+
+/*
+Misc fonts for prototype
+@todo icon-font these!
+*/
+.icon--product-mobile,
+.icon--product-public,
+.icon--product-reader,
+.icon--database,
+.icon--diagram,
+.icon--management,
+.icon--statistics {
+  display: inline-block;
+}
+
+.icon--product-mobile:before {
+  content: url(../images/icons/icon-product-mobile.png);
+}
+
+.icon--product-public:before {
+  content: url(../images/icons/icon-product-public.png);
+}
+
+.icon--product-reader:before {
+  content: url(../images/icons/icon-product-reader.png);
+}
+
+.icon--product-mobile:before,
+.icon--product-public:before,
+.icon--product-reader:before {
+  display: inline-block;
+  height: 40px;
+}
+
+.icon--database:before {
+  content: url(../images/icons/database.png);
+}
+
+.icon--diagram:before {
+  content: url(../images/icons/diagram.png);
+}
+
+.icon--management:before {
+  content: url(../images/icons/management.png);
+}
+
+.icon--statistics:before {
+  content: url(../images/icons/statistics.png);
+}
+
+@font-face {
+  font-family: "tableau-icons";
+  src: url("../fonts/tableau-icons.eot");
+  src: url("../fonts/tableau-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons.woff") format("woff"), url("../fonts/tableau-icons.ttf") format("truetype"), url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "tableau-icons";
+    src: url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
+  }
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+[data-icon]:before,
+.icon--app-browser:before,
+.icon--apple:before,
+.icon--area-chart:before,
+.icon--arrow-circle-right:before,
+.icon--arrow-down:before,
+.icon--arrow-heavy-up:before,
+.icon--arrow-up:before,
+.icon--bar-chart:before,
+.icon--book-isometric:before,
+.icon--book-open:before,
+.icon--broadcast:before,
+.icon--calendar:before,
+.icon--chat-bubble:before,
+.icon--chat-bubbles-solid:before,
+.icon--chevron-down:before,
+.icon--chevron-left:before,
+.icon--chevron-right:before,
+.icon--chevron-up:before,
+.icon--close-circle:before,
+.icon--cloud:before,
+.icon--cursor-cloud:before,
+.icon--cursor-hand:before,
+.icon--cursor:before,
+.icon--dashboard:before,
+.icon--database-storage:before,
+.icon--document-3:before,
+.icon--document-5:before,
+.icon--download:before,
+.icon--email:before,
+.icon--embed:before,
+.icon--enterprise:before,
+.icon--gears:before,
+.icon--globe:before,
+.icon--grid-9x9:before,
+.icon--laptop:before,
+.icon--line-plot:before,
+.icon--link:before,
+.icon--list-blog-view:before,
+.icon--lock:before,
+.icon--logo-apple:before,
+.icon--logo-windows:before,
+.icon--mail-speed:before,
+.icon--memory:before,
+.icon--microphone:before,
+.icon--mobile-menu:before,
+.icon--news:before,
+.icon--people-2:before,
+.icon--people:before,
+.icon--play-circle-big:before,
+.icon--play-circle-small:before,
+.icon--question:before,
+.icon--quote-double-start:before,
+.icon--refresh:before,
+.icon--search:before,
+.icon--share:before,
+.icon--social-facebook:before,
+.icon--social-gplus:before,
+.icon--social-instagram:before,
+.icon--social-linkedin:before,
+.icon--social-rss:before,
+.icon--social-twitter:before,
+.icon--social-youtube:before,
+.icon--table-join:before,
+.icon--tableau-logo:before,
+.icon--tablet:before,
+.icon--timer-60:before,
+.icon--triangle-down:before,
+.icon--triangle-left:before,
+.icon--triangle-right:before,
+.icon--triangle-up:before,
+.icon--vizql:before {
+  display: inline-block;
+  font-family: "tableau-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon--app-browser:before {
+  content: "\f100";
+}
+
+.icon--apple:before {
+  content: "\f101";
+}
+
+.icon--area-chart:before {
+  content: "\f102";
+}
+
+.icon--arrow-circle-right:before {
+  content: "\f103";
+}
+
+.icon--arrow-down:before {
+  content: "\f104";
+}
+
+.icon--arrow-heavy-up:before {
+  content: "\f105";
+}
+
+.icon--arrow-up:before {
+  content: "\f106";
+}
+
+.icon--bar-chart:before {
+  content: "\f138";
+}
+
+.icon--book-isometric:before {
+  content: "\f107";
+}
+
+.icon--book-open:before {
+  content: "\f108";
+}
+
+.icon--broadcast:before {
+  content: "\f109";
+}
+
+.icon--calendar:before {
+  content: "\f10a";
+}
+
+.icon--chat-bubble:before {
+  content: "\f10b";
+}
+
+.icon--chat-bubbles-solid:before {
+  content: "\f10c";
+}
+
+.icon--chevron-down:before {
+  content: "\f10d";
+}
+
+.icon--chevron-left:before {
+  content: "\f10e";
+}
+
+.icon--chevron-right:before {
+  content: "\f10f";
+}
+
+.icon--chevron-up:before {
+  content: "\f110";
+}
+
+.icon--close-circle:before {
+  content: "\f111";
+}
+
+.icon--cloud:before {
+  content: "\f139";
+}
+
+.icon--cursor-cloud:before {
+  content: "\f112";
+}
+
+.icon--cursor-hand:before {
+  content: "\f113";
+}
+
+.icon--cursor:before {
+  content: "\f13a";
+}
+
+.icon--dashboard:before {
+  content: "\f114";
+}
+
+.icon--database-storage:before {
+  content: "\f115";
+}
+
+.icon--document-3:before {
+  content: "\f116";
+}
+
+.icon--document-5:before {
+  content: "\f117";
+}
+
+.icon--download:before {
+  content: "\f118";
+}
+
+.icon--email:before {
+  content: "\f119";
+}
+
+.icon--embed:before {
+  content: "\f13b";
+}
+
+.icon--enterprise:before {
+  content: "\f13c";
+}
+
+.icon--gears:before {
+  content: "\f11a";
+}
+
+.icon--globe:before {
+  content: "\f11b";
+}
+
+.icon--grid-9x9:before {
+  content: "\f11c";
+}
+
+.icon--laptop:before {
+  content: "\f11d";
+}
+
+.icon--line-plot:before {
+  content: "\f13d";
+}
+
+.icon--link:before {
+  content: "\f150";
+}
+
+.icon--list-blog-view:before {
+  content: "\f11e";
+}
+
+.icon--lock:before {
+  content: "\f13e";
+}
+
+.icon--logo-apple:before {
+  content: "\f14f";
+}
+
+.icon--logo-windows:before {
+  content: "\f145";
+}
+
+.icon--mail-speed:before {
+  content: "\f13f";
+}
+
+.icon--memory:before {
+  content: "\f140";
+}
+
+.icon--microphone:before {
+  content: "\f11f";
+}
+
+.icon--mobile-menu:before {
+  content: "\f141";
+}
+
+.icon--news:before {
+  content: "\f120";
+}
+
+.icon--people-2:before {
+  content: "\f122";
+}
+
+.icon--people:before {
+  content: "\f121";
+}
+
+.icon--play-circle-big:before {
+  content: "\f123";
+}
+
+.icon--play-circle-small:before {
+  content: "\f124";
+}
+
+.icon--question:before {
+  content: "\f125";
+}
+
+.icon--quote-double-start:before {
+  content: "\f137";
+}
+
+.icon--refresh:before {
+  content: "\f126";
+}
+
+.icon--search:before {
+  content: "\f127";
+}
+
+.icon--share:before {
+  content: "\f128";
+}
+
+.icon--social-facebook:before {
+  content: "\f129";
+}
+
+.icon--social-gplus:before {
+  content: "\f12a";
+}
+
+.icon--social-instagram:before {
+  content: "\f12b";
+}
+
+.icon--social-linkedin:before {
+  content: "\f12c";
+}
+
+.icon--social-rss:before {
+  content: "\f12d";
+}
+
+.icon--social-twitter:before {
+  content: "\f12e";
+}
+
+.icon--social-youtube:before {
+  content: "\f12f";
+}
+
+.icon--table-join:before {
+  content: "\f142";
+}
+
+.icon--tableau-logo:before {
+  content: "\f130";
+}
+
+.icon--tablet:before {
+  content: "\f143";
+}
+
+.icon--timer-60:before {
+  content: "\f131";
+}
+
+.icon--triangle-down:before {
+  content: "\f132";
+}
+
+.icon--triangle-left:before {
+  content: "\f133";
+}
+
+.icon--triangle-right:before {
+  content: "\f134";
+}
+
+.icon--triangle-up:before {
+  content: "\f135";
+}
+
+.icon--vizql:before {
+  content: "\f144";
+}
+
+/*
+Base Text Link
+
+The base styles common to all text links across the site
+
+Markup: link-base.hbs
+
+Weight: 15
+
+Style guide: buttons-links.link-base
+*/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+Formatted Text Links
+
+Text-based links, unlike CTA buttons, don't have a colored box around them, 
+although they can have an accompanying icon similar to CTAs. All links underline
+on hover.
+
+Markup: link.hbs
+
+Weight: 20
+
+.link--arrow - Link with an arrow icon
+
+Style guide: buttons-links.link-formatted
+*/
+.link {
+  font-size: 0.7857142857em;
+  letter-spacing: 1px;
+  color: #eb912c;
+  text-transform: uppercase;
+}
+
+.link.link--arrow:after {
+  content: url(../images/icons/icon-arrow-orange.png);
+  padding-left: 1em;
+}
+
+/* 
+Link List
+
+A simple unordered list of links.
+
+Weight: 10
+
+Markup: link-list.hbs
+
+.link-list--plain - Plain list (no bullets)
+.link-list--inline - Inline list items
+
+Style guide: lists.link
+*/
+/* 
+Standard Unordered List
+
+A standard unordered list with bullets.
+
+Weight: 1
+
+Markup: list.hbs
+
+Style guide: lists.standard
+*/
+ul {
+  list-style-image: url(../images/icons/bullet.png);
+  padding-left: 1em;
+}
+
+/*
+Tags List
+
+A list of tags such as categories or topics related to a piece of content
+
+Markup: tags-list.hbs
+
+Weight: 30
+
+Style guide: lists.tags
+*/
+.tags-list .tags-list__tag a {
+  font-size: 1em;
+  color: #6f99a5;
+}
+
+.tags-list .tags-list__tag:after {
+  content: ", ";
+}
+
+.tags-list .tags-list__tag:last-child:after {
+  content: "";
+}
+
+/*
+Basic Teaser List
+
+A basic list of teasers, used for things like a list of blog posts.
+
+Weight: 20
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
+*/
+.teaser-list > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.teaser-list > a:hover {
+  color: #eb912c;
+  text-decoration: none;
+}
+
+.teaser-list > a:hover img {
+  opacity: 0.85;
+}
+
+.teaser-list .teaser-list__title {
+  margin: 0.5em 0;
+}
+
+/*
+Full-width Teaser List
+
+A full-width list of teasers, used for things like a list of blog posts.
+
+Weight: 5
+
+Markup:
+<div class="teaser-list teaser-list--full-width">
+  <div class="teaser-list__thumbnail grid-3">
+    <a href="#">
+      <img src="http://placecage.com/223/223">
+    </a>
+  </div>
+  <div class="teaser-list__info grid-9 grid-last">
+    <h2 class="teaser-list__title">
+      <a href="#">Blog Post or something</a>
+    </h2>
+    <div class="teaser-list__secondary-label">
+      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
+    </div>
+    <p class="teaser-list__description">
+      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
+    </p>
+    <div class="class="teaser-list__read-more">
+      <a href="/blog/another-post">Read More</a>
+    </div>
+  </div>
+</div>
+
+################################################################################
+# Style guide: lists.full-width ################################################
+################################################################################
+*/
+.teaser-list.teaser-list--full-width {
+  padding: 2em 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.teaser-list.teaser-list--full-width .teaser-list__title {
+  margin: 0 0 0.5em;
+}
+
+.block--delta-blocks-tabs {
+  float: left;
+  padding-right: 30px;
+}
+
+.block--flush-page-cache-link {
+  float: right;
+}
+
+.block--delta-blocks-tabs ul.tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.block--delta-blocks-tabs ul.tabs li {
+  margin: 0;
+}
+
+.block--delta-blocks-tabs ul.tabs li a,
+.block--flush-page-cache-link .block__content a {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  color: #fff;
+  -webkit-transition: border 0.25s;
+  transition: border 0.25s;
+}
+
+.block--delta-blocks-tabs ul.tabs li.active a,
+.block--delta-blocks-tabs ul.tabs li a:hover,
+.block--flush-page-cache-link .block__content.active a,
+.block--flush-page-cache-link .block__content a:hover {
+  border-bottom-color: #f2f2f2;
+  text-decoration: none;
+}
+
+.block--delta-blocks-messages {
+  clear: both;
+  padding: 1em 0;
+}
+
+/*
+Popups
+
+Used to popup content into a modal box ontop of the page.
+
+Markup: popup.hbs
+
+Style guide: interactive.popup
+ */
+.mfp-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mfp-content {
+  max-width: 800px;
+  z-index: 5;
+  background: #fff;
+}
+
+.popup--content {
+  display: none;
+  padding: 2em;
+}
+
+.mfp-content .popup--content {
+  display: inherit;
+}
+
+button.mfp-arrow {
+  position: absolute;
+  top: 50%;
+  height: 80px;
+  width: 40px;
+  margin: -40px 0 0;
+  opacity: 1;
+  z-index: 10;
+  cursor: pointer;
+}
+
+button.mfp-arrow:before,
+button.mfp-arrow:after {
+  height: 80px;
+  width: 40px;
+  margin: 0;
+  padding: 15px 0;
+  border: 0;
+  opacity: 1;
+  line-height: 1;
+  font-family: "tc-icons";
+  font-size: 2.25em;
+  color: #fff;
+  text-shadow: 0 0 8px #666;
+}
+
+button.mfp-arrow.mfp-arrow-left {
+  left: 10px;
+}
+
+button.mfp-arrow.mfp-arrow-left:before {
+  content: "<";
+}
+
+button.mfp-arrow.mfp-arrow-right {
+  right: 10px;
+}
+
+button.mfp-arrow.mfp-arrow-right:before {
+  content: ">";
+}
+
+button.mfp-arrow:hover {
+  opacity: 0.8;
+}
+
+button.mfp-arrow:active {
+  margin: -40px 0 0;
+}
+
+@media (min-width: 980px) {
+  button.mfp-arrow.mfp-arrow-left {
+    left: 5%;
+  }
+  button.mfp-arrow.mfp-arrow-right {
+    right: 5%;
+  }
+}
+
+/* Transitioning the popup in and out */
+.popup--fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.popup--fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.popup--fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.popup--fade.mfp-wrap .mfp-content,
+.popup--fade.mfp-wrap .mfp-arrow {
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.popup--fade.mfp-wrap.mfp-ready .mfp-content,
+.popup--fade.mfp-wrap.mfp-ready .mfp-arrow {
+  opacity: 1;
+}
+
+.popup--fade.mfp-wrap.mfp-removing .mfp-content,
+.popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
+  opacity: 0;
+}
+
+/** 
+ * Content region padding
+ */
+.l-region--content {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.l-region--content-sidebar-wrapper {
+  padding-bottom: 3em;
+}
+
+.node-type-page .l-region--content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/** 
+ * Content Top region styles
+ */
+.l-region--content-top {
+  background: #999;
+}
+
+/*
+Content Reveal
+
+Simple tool to make content hidden and revealed when a trigger is clicked. It 
+doesn't matter where on the page the trigger and target content are, but the
+trigger element must target the content via a <code>data-reveal-target="target-id"</code>
+attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute that matches the <code>data-reveal-target</code>.
+
+Markup: reveal.hbs
+
+Style guide: interactive.reveal
+*/
+.reveal--content {
+  position: relative;
+  display: none;
+}
+
+.reveal--close {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 10px;
+  font-size: 1.7142857143em;
+  color: #fff;
+}
+
+.reveal--close:hover {
+  text-decoration: none;
+}
+
+/*
+Content Section
+
+Used to wrap a section of content and apply vertical padding between wrappers 
+and content.
+
+Markup: section-kss.hbs
+
+Weight: 40
+
+.section--padded-one - Section with 2em of vertical padding
+.section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-four - Section with 4em of vertical padding (2em on mobile)
+.section--padded-six - Section with 6em of vertical padding (3em on mobile)
+.section--padding-top-none - Cancels out all top padding
+.section--padding-bottom-none - Cancels all bottom padding
+
+Style guide layout.section
+*/
+.section {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.section.section--padded-one {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.section.section--padded-two {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.section.section--padded-four {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.section.section--padded-six {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.section.section--background-image {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 739px) {
+  .section.section--padded-one {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .section.section--padded-two {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .section.section--padded-four {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .section.section--padded-six {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
+.section.section--padding-top-none {
+  padding-top: 0;
+}
+
+.section.section--padding-bottom-none {
+  padding-bottom: 0;
+}
+
+/*
+Sidebar Nav
+
+Jump-nav used in the sidebars to navigate between sub-sections of a single page
+
+Markup: sidebar_nav.hbs
+
+################################################################################
+# Style guide: navigation.sidebar ##############################################
+################################################################################
+*/
+.sidebar--nav ul {
+  margin: 0;
+}
+
+.sidebar--nav li a {
+  display: block;
+  padding: .5em 0;
+  color: #999;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.sidebar--nav li a:hover,
+.sidebar--nav li.active a {
+  color: #eb912c;
+  text-decoration: none;
+}
+
+.sidebar--nav .sidebar--nav--toggle {
+  display: none;
+}
+
+@media (max-width: 739px) {
+  .sidebar--nav {
+    opacity: 0;
+    position: relative;
+    margin: 0 -10px;
+    background: #464646;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+  }
+  .sidebar--nav li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.25s;
+    transition: height 0.25s;
+  }
+  .sidebar--nav li.active,
+  .sidebar--nav.open li {
+    height: 41px;
+  }
+  .sidebar--nav li a {
+    padding: .5em;
+    color: #fff;
+  }
+  .sidebar--nav .sidebar--nav--toggle {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .sidebar--nav.open .sidebar--nav--toggle {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .sidebar--nav.stuck {
+    opacity: 1;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/*
+Slideshow
+
+@todo description
+
+Markup: slideshow.hbs
+
+Style guide: interactive.slideshow
+*/
+.slideshow {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.slideshow.slideshow--hero .slideshow__slide {
+  position: relative;
+}
+
+.slideshow .slick-dots {
+  height: 20px;
+  bottom: 0;
+}
+
+.slideshow .slick-dots li {
+  margin: 0;
+}
+
+.slideshow .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #e8762c;
+}
+
+.slideshow .slick-dots li button:before {
+  color: #fff;
+  font-size: 9px;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.slideshow .slideshow__arrow {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 1;
+  margin-top: -12px;
+  line-height: 18px;
+  text-decoration: none;
+  overflow: visible;
+  color: #fff;
+}
+
+.slideshow .slideshow__arrow .slideshow__arrow__title {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 0px;
+  padding: 15px 0px;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  white-space: nowrap;
+}
+
+.slideshow .slideshow__arrow:hover .slideshow__arrow__title {
+  width: auto;
+  padding: 15px 15px 15px 40px;
+  opacity: 1;
+}
+
+.slideshow .slideshow__arrow .icon-slideshow-arrow-left,
+.slideshow .slideshow__arrow .icon-slideshow-arrow-right {
+  position: relative;
+  display: block;
+  margin: 0;
+  z-index: 1;
+  width: 13px;
+  height: 25px;
+  background: url("../images/global/hero-carousel-arrow-left.png") 0 0 no-repeat;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.slideshow .slideshow__arrow .icon-slideshow-arrow-right {
+  background: url("../images/global/hero-carousel-arrow-right.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
+  background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--left .slideshow__arrow__title {
+  left: -15px;
+  right: auto;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right {
+  right: 5%;
+  left: auto;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
+  background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+}
+
+.slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {
+  padding: 15px 40px 15px 15px;
+}
+
+/*******************************************************************************
+HUGE STYLES
+*******************************************************************************/
+/* HERO CAROUSEL */
+#hero-slide-show .hero-slide-show-container {
+  margin: 0 auto;
+}
+
+#hero-slide-show .hero-slide-image {
+  height: 0;
+  padding-bottom: 33%;
+}
+
+#hero-slide-show .hero-slide-image .fade {
+  background-image: url(../images/global/img-fade-left.png), url(../images/global/img-fade-right.png);
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#hero-slide-show .hero-slide-image img {
+  position: absolute;
+}
+
+#hero-slide-show img {
+  margin: 0;
+}
+
+#hero-slide-show .carousel-arrow {
+  position: absolute;
+  z-index: 1;
+  margin: 0 0 5px 0;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: visible;
+}
+
+#hero-slide-show .carousel-arrow:hover .title {
+  width: auto;
+  padding: 15px 40px 15px 15px;
+  opacity: 1;
+}
+
+#hero-slide-show .carousel-arrow.inverted:hover .icon-hero-carousel-arrow-right {
+  background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+}
+
+#hero-slide-show .carousel-arrow.left.inverted:hover .icon-hero-carousel-arrow-left {
+  background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+}
+
+#hero-slide-show .carousel-arrow.left:hover .title {
+  padding: 15px 15px 15px 40px;
+}
+
+#hero-slide-show .carousel-arrow.left .title {
+  left: -15px;
+  right: auto;
+}
+
+#hero-slide-show .carousel-arrow span {
+  display: block;
+}
+
+#hero-slide-show .carousel-arrow .square {
+  position: relative;
+  width: 2px;
+  height: 30px;
+  margin: 0 20px;
+  float: right;
+}
+
+#hero-slide-show .carousel-arrow .title {
+  top: -10px;
+  right: -15px;
+  width: 0px;
+  height: 45px;
+  padding: 15px 0px;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+#hero-slide-show .carousel-arrow .text {
+  position: relative;
+  white-space: nowrap;
+}
+
+/*
+Vertical Spacer
+
+Used to create vertical spacing between sections of content without just a stack
+of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
+classes to add 4em or 6em of spacingas well. These examples put a spacer between 
+two divs to dempnstrate the amount of space that will be added with each modifier.
+
+Markup:
+<div class="grid-6 box__padded box--green">
+  <p>
+    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
+  </p>
+</div>
+<hr class="spacer {$modifiers}">
+<div class="grid-6 box__padded box--white">
+  <p>
+    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
+  </p>
+</div>
+
+.spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+.spacer--four - Spacer with 4em of space.
+.spacer--six - Spacer with 6em of space.
+
+Style guide: 3.6
+*/
+.spacer {
+  clear: both;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.spacer.spacer--four {
+  height: 4em;
+}
+
+.spacer.spacer--six {
+  height: 6em;
+}
+
+/*
+Sticky elements
+
+Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
+once they get scrolled to and are about to go out of view.
+
+Markup:
+<div class="grid-3">
+  <div class="sticky {$modifiers}">
+    <div class="box--green box__padded box__padded--one">
+      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
+    </div>
+  </div>
+</div>
+
+.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
+
+Style guide: 6.2
+*/
+.stuck {
+  position: fixed;
+  z-index: 7;
+  top: 0;
+}
+
+@media (max-width: 739px) {
+  .grid-3 .stuck {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .grid-3 .stuck {
+    max-width: 223px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 980px) {
+  .grid-3 .stuck {
+    min-width: 223px;
+  }
+}
+
+/*
+Standard Table
+
+Basic table used for tabular data
+
+Markup:
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>    
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>    
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>    
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>    
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>    
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+
+Style guide: 4.1
+*/
+table {
+  width: 100%;
+}
+
+table tr.even,
+table tr.odd {
+  background-color: inherit;
+  border: none;
+}
+
+table tr:nth-child(even) {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+table thead,
+table th {
+  background: #ddd;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+table td,
+table th {
+  padding: 5px;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+table tr p:last-child {
+  margin: 0;
+}
+
+/*
+Thumbnail Image
+
+A small image that shows a preview of the content that it is linking to.
+
+Markup: thumbnail.hbs
+
+.thumbnail--play - A play button superimposed over the middle of the thumbnail
+
+Style guide: images.thumbnail
+*/
+.thumbnail {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.thumbnail img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.thumbnail.thumbnail--play:after {
+  content: url(../images/icons/icon-play-xlarge.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -36px 0 0 -36px;
+  pointer-events: none;
+}
+
+/*
+Heading Highlight
+
+Highlight style for headings. Modifiers can be used to color the highlight 
+related to a particular product.
+
+Markup: heading-highlight.hbs
+
+Weight: 5
+
+.heading-highlight--desktop - Desktop colored highlight
+.heading-highlight--server - Server colored highlight
+.heading-highlight--online - Online colored highlight
+.heading-highlight--public - Public colored highlight
+.heading-highlight--reader - Reader colored highlight
+.heading-highlight--mobile - Mobile colored highlight
+
+Style guide: typography.heading-highlight
+*/
+.heading-highlight {
+  position: relative;
+  padding-top: 1.3em;
+  /* Create a class for each product color */
+}
+
+.heading-highlight:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  top: 0;
+  background: #cdcdcd;
+}
+
+.heading-highlight.heading-highlight--desktop:before {
+  background: #23529c;
+}
+
+.heading-highlight.heading-highlight--server:before {
+  background: #7fa9bb;
+}
+
+.heading-highlight.heading-highlight--online:before {
+  background: #58a3b9;
+}
+
+.heading-highlight.heading-highlight--public:before {
+  background: #324E7A;
+}
+
+.heading-highlight.heading-highlight--reader:before {
+  background: #B28CCF;
+}
+
+.heading-highlight.heading-highlight--mobile:before {
+  background: #DB8E6A;
+}
+
+/*
+Font Families
+
+All text on tableau.com is set in either Benton Sans or Merriweather. This 
+includes body copy as well as page and section headers.
+
+**BentonSans** is primarily used for section headers and titling in it’s Thin 
+case, but it is also used in it’s Book case in buttons and other scenarios. 
+Occasionally BentonSans Medium is used in article templates.
+
+**Merriweather** is used in it’s Light case mainly for body copy and in the 
+Stories and Articles sections.
+
+Markup: fonts.hbs
+
+Weight: 1
+
+.text--benton-thin - Benton Sans Thin
+.text--benton-light - Benton Sans Light
+.text--benton-book - Benton Sans Book
+.text--benton-medium - Benton Sans Medium
+.text--merriweather-light - Merriweather Light
+
+Style guide: typography.fonts
+*/
+.text--benton-thin, h1, .heading--homepage, .heading--product, .heading--download, .heading--h1,
+h2, .heading--medium, .heading--h2,
+h3, .heading--small, .heading--h3,
+h4, .heading--x-small, .heading--h4,
+h5, .heading--label, .heading--h5,
+h6, .heading--h6 {
+  font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.text--benton-light, .heading--small, .heading--label, .text--large-copy, .global-nav .global-nav__search input[type='search'], .ui-autocomplete, .text--sub-nav, .text--dropdown {
+  font-family: 'Benton Sans Light', Helvetica, sans-serif;
+}
+
+.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow {
+  font-family: 'Benton Sans Book', Helvetica, sans-serif;
+}
+
+.text--benton-medium {
+  font-family: 'Benton Sans Medium', Helvetica, sans-serif;
+}
+
+.text--merriweather-light, body,
+.kss-example-preview-wrapper,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
+  font-family: 'Merriweather', serif;
+}
+
+/*
+Body Copy
+
+Main body copy for longer chunks of content in the body of a page.
+
+Markup: body.hbs
+
+Weight: 2
+
+.text--body-large - Large body copy (15px)
+.text--body-medium - Medium body copy (14px)
+.text--body-small - Small body copy (12px)
+
+Style guide: typography.base
+ */
+body,
+.kss-example-preview-wrapper,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.86;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text--body-large {
+  font-size: 1.0714285714em;
+}
+
+.text--body-small {
+  font-size: 0.8571428571em;
+  line-height: 1.66;
+}
+
+/*
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings-kss.hbs
+
+Weight: 3
+
+Styleguide typography.headings
+*/
+h1, .heading--homepage, .heading--product, .heading--download, .heading--h1,
+h2, .heading--medium, .heading--h2,
+h3, .heading--small, .heading--h3,
+h4, .heading--x-small, .heading--h4,
+h5, .heading--label, .heading--h5,
+h6, .heading--h6 {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
+  font-size: 3.5714285714em;
+}
+
+h2, .heading--medium, .heading--h2 {
+  font-size: 2.5714285714em;
+}
+
+h3, .heading--small, .heading--h3 {
+  font-size: 1.8571428571em;
+}
+
+h4, .heading--x-small, .heading--h4 {
+  font-size: 1.6428571429em;
+}
+
+h5, .heading--label, .heading--h5 {
+  font-size: 1.25em;
+}
+
+h6, .heading--h6 {
+  font-size: 1em;
+}
+
+/*
+Headings Template
+
+@todo remove this once #11 is resolved
+
+Markup: heading.hbs
+
+Weight: 100
+
+Styleguide typography.heading-template
+*/
+/*
+Context-specific Headings
+
+These heading classes are used for specific contexts.
+
+Markup: context-headings.hbs
+
+Weight: 4
+
+.heading--homepage - Homepage Hero (70px) - uses `<h1>`
+.heading--product - Product Landing/Product Detail Hero (50px) - uses `<h1>`
+.heading--download - Download Success (48px) - uses `<h1>`
+.heading--medium - Medium headers (36px) - uses `<h2>`
+.heading--small - Small Headline/Product labels (26px) - uses `<h3>`
+.heading--x-small - XS Headline (23px) - uses `<h4>`
+.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses `<h5>`
+
+Styleguide typography.context-headings
+*/
+.heading--homepage {
+  font-size: 5em;
+  line-height: 1.21;
+  color: #000;
+}
+
+.heading--product {
+  color: #000;
+}
+
+.heading--download {
+  font-size: 3.4285714286em;
+  line-height: 1.25;
+  color: #000;
+}
+
+.heading--medium {
+  line-height: 1.39;
+  color: #000;
+}
+
+.heading--small {
+  color: #333;
+  -webkit-font-smoothing: auto;
+}
+
+.heading--x-small {
+  color: #333;
+}
+
+.heading--label {
+  margin: 0;
+  font-size: 1.4285714286em;
+  color: #333;
+  line-height: 1.5;
+  -webkit-font-smoothing: auto;
+}
+
+/*
+Other Type Treatments
+
+Other treatments used for text throughout the site
+
+Markup: context-headings.hbs
+
+Weight: 5
+
+.text--large-copy - Large Copy
+.text--sub-nav - Sub Nav Mission
+.text--dropdown - Dropdown Copy
+.text--label - Label/Nav item
+
+Style guide: typography.other
+*/
+.text--large-copy, .global-nav .global-nav__search input[type='search'], .ui-autocomplete {
+  font-size: 1.7142857143em;
+  color: #333;
+}
+
+.text--sub-nav {
+  font-size: 1.5714285714em;
+  color: #000;
+}
+
+.text--dropdown {
+  font-size: 1.1428571429em;
+  color: #787878;
+  line-height: 1.875;
+}
+
+.text--label, .tags-list, .slideshow .slideshow__arrow {
+  font-size: 0.7857142857em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*
+Formatted Text
+
+Markup: formatted.hbs
+
+Weight: 6
+
+.text--bold - Bold text for emphasis. Same as `<strong>`
+.text--light - Light text. Default for non-headings
+.text--italic - Italic text for emphasis. Same as `<em>`
+.text--caps - All caps text
+.text--right - Right justified text
+.text--left - Left justified text
+.text--centered - Center justified text
+.text--justified - Justified text
+.text--huge - Huge text (36px)
+.text--big - Big text (24px)
+.text--base-size - Base size text (14px)
+.text--small - Small text (12px)
+.text--tiny - Tiny text - 10px
+.text--lineheight-zero - Line height set to zero.
+
+Style guide: typography.formatted
+*/
+strong,
+.text--bold, .sidebar--nav li a, table th {
+  font-weight: bold;
+}
+
+.text--light {
+  font-weight: 100;
+}
+
+em,
+.text--italic {
+  font-style: italic;
+}
+
+.text--caps {
+  text-transform: uppercase;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--centered {
+  text-align: center;
+}
+
+.text--justified {
+  text-align: justified;
+}
+
+.text--huge {
+  font-size: 2.5714285714em;
+}
+
+.text--big {
+  font-size: 1.7142857143em;
+}
+
+.text--base-size {
+  font-size: 14px;
+}
+
+.text--small {
+  font-size: 0.8571428571em;
+}
+
+.text--tiny {
+  font-size: 0.7142857143em;
+}
+
+.text--lineheight-zero {
+  line-height: 0;
+}
+
+/*
+Text Colors
+
+Colors to be used in the text palette.
+
+Markup: colors.hbs
+
+Weight: 7
+
+.text--negative - Negative Text colored text. `#fff;`
+.text--light-body - Negative/light Body colored text. `#bbb`
+.text--medium-body - Default Med. Body colored text. `#787878`
+.text--dark-body - Default Dark Body colored text. `#333`
+.text--link - Link Orange colored text. `#eb912c`
+.text--headlines - Headlines colored text. `#000`
+.text--nav-items - Nav Items colored text. `#212535`
+.text--data-sources - Data Sources colored text. `#a3b9cb`
+.text--stories - Stories colored text. `#847094`
+.text--learning - Learning colored text. `#6f99a5`
+.text--highlight - Highlight Text colored text. `#53bd92`
+.text--desktop - Desktop colored text. `#23529c`
+.text--server - Server colored text. `#7fa9bb`
+.text--online - Online colored text. `#58a3b9`
+.text--public - Public colored text. `#324E7A`
+.text--reader - Reader colored text. `#B28CCF`
+.text--mobile - Mobile colored text. `#DB8E6A`
+.text--mission-1 - Mission 1 colored text. `#316cc8`
+.text--mission-2 - Mission 2 colored text. `#7dcdf1`
+.text--mission-3 - Mission 3 colored text. `#5facce`
+
+Style guide: typography.colors
+*/
+/* Create a class for each text color */
+.text--negative {
+  color: #fff !important;
+}
+
+.text--light-body {
+  color: #bbb !important;
+}
+
+.text--medium-body {
+  color: #787878 !important;
+}
+
+.text--dark-body {
+  color: #333 !important;
+}
+
+.text--link {
+  color: #eb912c !important;
+}
+
+.text--headlines {
+  color: #000 !important;
+}
+
+.text--nav-items {
+  color: #212535 !important;
+}
+
+.text--data-sources {
+  color: #a3b9cb !important;
+}
+
+.text--stories {
+  color: #847094 !important;
+}
+
+.text--learning {
+  color: #6f99a5 !important;
+}
+
+.text--highlight {
+  color: #53bd92 !important;
+}
+
+.text--desktop {
+  color: #23529c !important;
+}
+
+.text--server {
+  color: #7fa9bb !important;
+}
+
+.text--online {
+  color: #58a3b9 !important;
+}
+
+.text--public {
+  color: #324E7A !important;
+}
+
+.text--reader {
+  color: #B28CCF !important;
+}
+
+.text--mobile {
+  color: #DB8E6A !important;
+}
+
+.text--mission-1 {
+  color: #316cc8 !important;
+}
+
+.text--mission-2 {
+  color: #7dcdf1 !important;
+}
+
+.text--mission-3 {
+  color: #5facce !important;
+}

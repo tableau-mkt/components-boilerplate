@@ -14,7 +14,7 @@ module.exports = (grunt) ->
 
       kss:
         files: [
-          'dist/css/*.css'
+          'build/css/*.css'
           'components/{,**/}*.{hbs,html,json}'
         ]
         tasks: ['shell:kss']
@@ -39,10 +39,10 @@ module.exports = (grunt) ->
            outputStyle: 'expanded'
         files: [
           {
-            expand:true
+            expand: true
             cwd: 'sass'
             src: ['*.scss', '*.sass']
-            dest: 'dist/css'
+            dest: 'build/css'
             ext: '.css'
           }
         ]
@@ -52,10 +52,10 @@ module.exports = (grunt) ->
            outputStyle: 'expanded'
         files: [
           {
-            expand:true
+            expand: true
             cwd: 'sass'
             src: ['*.scss', '*.sass']
-            dest: 'dist/css'
+            dest: 'build/css'
             ext: '.css'
           }
         ]
@@ -66,7 +66,7 @@ module.exports = (grunt) ->
           require('autoprefixer-core')({ browers: ['IE8', 'iOS', 'Opera'] })
         ]
       dist:
-        src: 'dist/css/*.css'
+        src: 'build/css/*.css'
 
 
 
@@ -79,7 +79,7 @@ module.exports = (grunt) ->
         separator: ";\n"
       dist:
         src: 'components/{,**/}*.js'
-        dest: 'dist/js/scripts.js'
+        dest: 'build/js/scripts.js'
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
@@ -92,6 +92,7 @@ module.exports = (grunt) ->
     'sass:dist'
     'shell:kss'
     'postcss:dist'
+    'concat:dist'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'

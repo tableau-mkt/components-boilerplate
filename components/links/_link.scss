@@ -42,7 +42,7 @@ Style guide: buttons-links.link-formatted
   text-transform: uppercase;
 
   &.link--arrow:after {
-    content: url(/assets/images/icons/icon-arrow-orange.png);
+    content: url(../images/icons/icon-arrow-orange.png);
     padding-left: 1em;
   }
 }

@@ -64,12 +64,12 @@ Style guide: buttons-links.cta
   }
 
   &.cta--arrow:after {
-    content: url(/assets/images/icons/icon-arrow.png);
+    content: url(../images/icons/icon-arrow.png);
     padding-left: .5em;
   }
 
   &.cta--play:after {
-    content: url(/assets/images/icons/icon-play.png);
+    content: url(../images/icons/icon-play.png);
     display: inline-block;
     height: 0px;
     margin-top: -23px;
@@ -95,7 +95,7 @@ Style guide: buttons-links.cta
     }
 
     &.cta--arrow:after {
-      content: url(/assets/images/icons/icon-arrow-orange.png);
+      content: url(../images/icons/icon-arrow-orange.png);
     }
 
   }

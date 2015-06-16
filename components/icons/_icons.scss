@@ -16,13 +16,13 @@ Misc fonts for prototype
 }
 
 .icon--product-mobile:before {
-  content: url(/assets/images/icons/icon-product-mobile.png);
+  content: url(../images/icons/icon-product-mobile.png);
 }
 .icon--product-public:before {
-  content: url(/assets/images/icons/icon-product-public.png);
+  content: url(../images/icons/icon-product-public.png);
 }
 .icon--product-reader:before {
-  content: url(/assets/images/icons/icon-product-reader.png);
+  content: url(../images/icons/icon-product-reader.png);
 }
 .icon--product-mobile:before,
 .icon--product-public:before,
@@ -32,16 +32,16 @@ Misc fonts for prototype
 }
 
 .icon--database:before {
-  content: url(/assets/images/icons/database.png);
+  content: url(../images/icons/database.png);
 }
 .icon--diagram:before {
-  content: url(/assets/images/icons/diagram.png);
+  content: url(../images/icons/diagram.png);
 }
 .icon--management:before {
-  content: url(/assets/images/icons/management.png);
+  content: url(../images/icons/management.png);
 }
 .icon--statistics:before {
-  content: url(/assets/images/icons/statistics.png);
+  content: url(../images/icons/statistics.png);
 }
 
 
@@ -55,11 +55,11 @@ Misc fonts for prototype
 
 @font-face {
   font-family: "tableau-icons";
-  src: url("/assets/fonts/tableau-icons.eot");
-  src: url("/assets/fonts/tableau-icons.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/tableau-icons.woff") format("woff"),
-       url("/assets/fonts/tableau-icons.ttf") format("truetype"),
-       url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+  src: url("../fonts/tableau-icons.eot");
+  src: url("../fonts/tableau-icons.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/tableau-icons.woff") format("woff"),
+       url("../fonts/tableau-icons.ttf") format("truetype"),
+       url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,7 +67,7 @@ Misc fonts for prototype
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "tableau-icons";
-    src: url("/assets/fonts/tableau-icons.svg#tableau-icons") format("svg");
+    src: url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
   }
 }
 

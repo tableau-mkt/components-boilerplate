@@ -84,16 +84,16 @@ Style guide: interactive.slideshow
       z-index: 1;
       width: 13px;
       height: 25px;
-      background: url('/assets/images/global/hero-carousel-arrow-left.png') 0 0 no-repeat;
+      background: url('../images/global/hero-carousel-arrow-left.png') 0 0 no-repeat;
       transition: all 1s ease;
     }
 
     .icon-slideshow-arrow-right {
-      background: url('/assets/images/global/hero-carousel-arrow-right.png') 0 0 no-repeat;
+      background: url('../images/global/hero-carousel-arrow-right.png') 0 0 no-repeat;
     }
 
     &.inverted:hover .icon-slideshow-arrow-left {
-      background: url('/assets/images/global/hero-carousel-arrow-left-inverted.png') 0 0 no-repeat;
+      background: url('../images/global/hero-carousel-arrow-left-inverted.png') 0 0 no-repeat;
     }
 
     &.slideshow__arrow--left .slideshow__arrow__title {
@@ -106,7 +106,7 @@ Style guide: interactive.slideshow
       left: auto;
 
       &.inverted:hover .icon-slideshow-arrow-right {
-        background: url('/assets/images/global/hero-carousel-arrow-right-inverted.png') 0 0 no-repeat;
+        background: url('../images/global/hero-carousel-arrow-right-inverted.png') 0 0 no-repeat;
       }
 
       &:hover .slideshow__arrow__title {

@@ -1,11 +1,11 @@
 {
   "css": [
     "public/style.css",
-    "../dist/css/styleguide.css"
+    "../build/css/styleguide.css"
   ],
   "js": [
   "../vendor/jquery.min.js",
-    "../dist/js/scripts.js"
+    "../build/js/scripts.js"
   ],
   "custom": "nocode",
   "homepage": "../template/homepage.md",
