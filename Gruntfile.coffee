@@ -23,6 +23,10 @@ module.exports = (grunt) ->
         files: ['components/{,**/}*.js']
         tasks: ['concat:dist']
 
+      bower:
+        files: ['bower_components/**.*']
+        tasks: ['copy:bower']
+
     sass_globbing:
       all:
         files:
@@ -80,6 +84,19 @@ module.exports = (grunt) ->
       dist:
         src: 'components/{,**/}*.js'
         dest: 'build/js/scripts.js'
+
+    copy:
+      bower:
+        expand: true
+        cwd: 'bower_components'
+        src: [
+          'jquery/**/*.*'
+          'jquery-ui/**/*.*'
+          'hoverintent/**/*.*'
+          'slick.js/**/*.*'
+          'waypoints/**/*.*'
+        ]
+        dest: 'build/bower'
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
