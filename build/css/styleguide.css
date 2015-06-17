@@ -582,7 +582,7 @@ Markup: cta.hbs
 Style guide: buttons-links.cta
 */
   /*
-Dividers
+HorizontalDividers
 
 Hairline divider used to separate sections of content. Dividers are used when a
 page needs to be broken up vertically or horizontally.
@@ -596,6 +596,23 @@ Weight: 0
 .divider--dashed - A dashed divider.
 
 Style guide: layout.divider
+*/
+  /*
+Vertical Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider-vertical.hbs
+
+Weight: 10
+
+.vertical-divider--dashed - A dashed divider.
+.vertical-divider--right - A divider on the right side of the element.
+.vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
+.vertical-divider--or - A divider with the word "Or" in the middle.
+
+Style guide: layout.divider-vertical
 */
   /*
 Base Form Styles
@@ -745,6 +762,8 @@ Markup: link.hbs
 Weight: 20
 
 .link--arrow - Link with an arrow icon
+.link--expand - Link with an expand icon
+.link--collapse - Link with an collapse icon
 
 Style guide: buttons-links.link-formatted
 */
@@ -1213,6 +1232,10 @@ body.kss .kss-example-preview .absolute {
   position: absolute;
 }
 
+body.kss .kss-example-preview .display-inline {
+  display: inline;
+}
+
 body.kss .kss-example-preview .margin-zero {
   margin: 0;
 }
@@ -1302,6 +1325,10 @@ body.kss .kss-example-preview .relative {
 
 body.kss .kss-example-preview .absolute {
   position: absolute;
+}
+
+body.kss .kss-example-preview .display-inline {
+  display: inline;
 }
 
 body.kss .kss-example-preview .margin-zero {
@@ -2077,6 +2104,24 @@ body.kss .kss-example-preview .divider.divider--gradient {
 
 body.kss .kss-example-preview .divider.divider--dashed {
   border-top-style: dotted;
+}
+
+body.kss .kss-example-preview .vertical-divider {
+  min-height: 100px;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--dashed {
+  border-left-style: dotted;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
+  border-left: 0;
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--right.vertical-divider--dashed {
+  border-right-style: dotted;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -3576,7 +3621,10 @@ body.kss .kss-example-preview .icon--product-reader,
 body.kss .kss-example-preview .icon--database,
 body.kss .kss-example-preview .icon--diagram,
 body.kss .kss-example-preview .icon--management,
-body.kss .kss-example-preview .icon--statistics {
+body.kss .kss-example-preview .icon--statistics,
+body.kss .kss-example-preview .icon--arrow-long,
+body.kss .kss-example-preview .icon--expand,
+body.kss .kss-example-preview .icon--collapse {
   display: inline-block;
 }
 
@@ -3613,6 +3661,18 @@ body.kss .kss-example-preview .icon--management:before {
 
 body.kss .kss-example-preview .icon--statistics:before {
   content: url(../images/icons/statistics.png);
+}
+
+body.kss .kss-example-preview .icon--arrow-long {
+  content: url(../images/icons/icon-arrow-long.png);
+}
+
+body.kss .kss-example-preview .icon--expand {
+  content: url(../images/icons/expans.png);
+}
+
+body.kss .kss-example-preview .icon--collapse {
+  content: url(../images/icons/collapse.png);
 }
 
 @font-face {
@@ -4026,6 +4086,21 @@ body.kss .kss-example-preview .link {
 body.kss .kss-example-preview .link.link--arrow:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
+}
+
+body.kss .kss-example-preview .link.link--expand:before,
+body.kss .kss-example-preview .link.link--collapse:before {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 1em;
+}
+
+body.kss .kss-example-preview .link.link--expand:before {
+  content: url(../images/icons/expand.png);
+}
+
+body.kss .kss-example-preview .link.link--collapse:before {
+  content: url(../images/icons/collapse.png);
 }
 
 body.kss .kss-example-preview ul {

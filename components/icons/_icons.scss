@@ -11,7 +11,10 @@ Misc fonts for prototype
 .icon--database,
 .icon--diagram,
 .icon--management,
-.icon--statistics {
+.icon--statistics,
+.icon--arrow-long,
+.icon--expand,
+.icon--collapse {
   display: inline-block;
 }
 
@@ -44,7 +47,16 @@ Misc fonts for prototype
   content: url(../images/icons/statistics.png);
 }
 
+.icon--arrow-long {
+  content: url(../images/icons/icon-arrow-long.png);
+}
 
+.icon--expand {
+  content: url(../images/icons/expans.png);
+}
+.icon--collapse {
+  content: url(../images/icons/collapse.png);
+}
 
 
 

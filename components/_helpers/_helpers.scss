@@ -37,6 +37,11 @@ most common proportions for video players.
   position: absolute;
 }
 
+// Display an element as an inline-block
+.display-inline {
+  display: inline;
+}
+
 // Zero out the margins of an element
 .margin-zero {
   margin: 0;

@@ -1,5 +1,5 @@
 /*
-Dividers
+HorizontalDividers
 
 Hairline divider used to separate sections of content. Dividers are used when a
 page needs to be broken up vertically or horizontally.
@@ -32,6 +32,45 @@ Style guide: layout.divider
 
   &.divider--dashed {
     border-top-style: dotted;
+  }  
+}
+
+
+/*
+Vertical Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider-vertical.hbs
+
+Weight: 10
+
+.vertical-divider--dashed - A dashed divider.
+.vertical-divider--right - A divider on the right side of the element.
+.vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
+.vertical-divider--or - A divider with the word "Or" in the middle.
+
+Style guide: layout.divider-vertical
+*/
+.vertical-divider {
+  min-height: 100px;
+  border-left: 1px solid $accent-dividers;
+
+  &.vertical-divider--dashed {
+    border-left-style: dotted;
+  } 
+  &.vertical-divider--right {
+    border-left: 0;
+    border-right: 1px solid $accent-dividers;
+
+    &.vertical-divider--dashed {
+      border-right-style: dotted;
+    } 
   }
-  
+
+  // @TODO make this work. Example in ecosystem section of Products Family
+  &.vertical-divider--or {
+    
+  }
 }
