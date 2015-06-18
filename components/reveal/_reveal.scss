@@ -4,26 +4,38 @@ Content Reveal
 Simple tool to make content hidden and revealed when a trigger is clicked. It 
 doesn't matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have am <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
 
 Style guide: interactive.reveal
 */
-.reveal--content {
+.reveal__content {
   position: relative;
   display: none;
+
+  video {
+    width: 100%;
+  }
 }
-.reveal--close {
+.reveal__close {
   position: absolute;
   z-index: 5;
   right: 10px;
   top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
   font-size: em(24px);
   color: #fff;
+  text-align: center;
+  font-weight: bold;
+  transition: background .25s;
 
   &:hover {
     text-decoration: none;
+    background: rgba(0, 0, 0, 0.4);
   }
 }

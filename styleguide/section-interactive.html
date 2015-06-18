@@ -262,7 +262,7 @@ content.</p>
             <p>Simple tool to make content hidden and revealed when a trigger is clicked. It
 doesn&#39;t matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target=&quot;target-id&quot;</code>
-attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have am <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.</p>
 
           </div>
@@ -273,14 +273,14 @@ attribute that matches the <code>data-reveal-target</code>.</p>
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
                 <div class="kss-example-preview-wrapper">
-                  <p>
-  <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
-</p>
-<div class="reveal--content" id="content-wrapper">
-  <div class="box--green box__padded">
-    <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
-    <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
-  </div>
+                  <div id="curtain">
+  <p>
+      <a href="#" class="reveal__trigger cta" data-reveal-target="content-container" data-reveal-type="markup" data-reveal-curtain="curtain">Reveal Content</a>
+  </p>
+</div>
+
+<div class="reveal__content" id="content-container">
+  <img src='http://placecage.com/600/400'>
 </div>
 
                 </div>
@@ -290,14 +290,14 @@ attribute that matches the <code>data-reveal-target</code>.</p>
           
             <h4>Markup:</h4>
             <div class="kss-markup">
-              <pre class="prettyprint lang-html"><code data-language="html">&lt;p&gt;
-  &lt;a href=&quot;#&quot; class=&quot;cta cta-yellow reveal--trigger&quot; data-reveal-target=&quot;content-wrapper&quot;&gt;Reveal Content&lt;/a&gt;
-&lt;/p&gt;
-&lt;div class=&quot;reveal--content&quot; id=&quot;content-wrapper&quot;&gt;
-  &lt;div class=&quot;box--green box__padded&quot;&gt;
-    &lt;p&gt;Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.&lt;/p&gt;
-    &lt;p&gt;Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.&lt;/p&gt;
-  &lt;/div&gt;
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;div id=&quot;curtain&quot;&gt;
+  &lt;p&gt;
+      &lt;a href=&quot;#&quot; class=&quot;reveal__trigger cta&quot; data-reveal-target=&quot;content-container&quot; data-reveal-type=&quot;markup&quot; data-reveal-curtain=&quot;curtain&quot;&gt;Reveal Content&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;reveal__content&quot; id=&quot;content-container&quot;&gt;
+  &lt;img src=&#x27;http://placecage.com/600/400&#x27;&gt;
 &lt;/div&gt;
 </code></pre>
             </div>
@@ -566,7 +566,12 @@ attribute that matches the <code>data-reveal-target</code>.</p>
   <script>
     prettyPrint();
   </script>
-  <script src="../vendor/jquery.min.js"></script>
+  <script src="../build/bower/jquery/dist/jquery.min.js"></script>
+<script src="../build/bower/jquery-ui/jquery-ui.min.js"></script>
+<script src="../build/bower/slick.js/slick/slick.min.js"></script>
+<script src="../build/bower/hoverintent/jquery.hoverIntent.js"></script>
+<script src="../build/bower/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../build/bower/waypoints/lib/shortcuts/sticky.min.js"></script>
 <script src="../build/js/scripts.js"></script>
 
 

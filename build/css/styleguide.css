@@ -870,7 +870,7 @@ Content Reveal
 Simple tool to make content hidden and revealed when a trigger is clicked. It 
 doesn't matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal--content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have am <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
@@ -4320,22 +4320,35 @@ body.kss .kss-example-preview .l-region--content-top {
   background: #999;
 }
 
-body.kss .kss-example-preview .reveal--content {
+body.kss .kss-example-preview .reveal__content {
   position: relative;
   display: none;
 }
 
-body.kss .kss-example-preview .reveal--close {
+body.kss .kss-example-preview .reveal__content video {
+  width: 100%;
+}
+
+body.kss .kss-example-preview .reveal__close {
   position: absolute;
   z-index: 5;
   right: 10px;
   top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
   font-size: 1.7142857143em;
   color: #fff;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: background 0.25s;
+          transition: background 0.25s;
 }
 
-body.kss .kss-example-preview .reveal--close:hover {
+body.kss .kss-example-preview .reveal__close:hover {
   text-decoration: none;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 body.kss .kss-example-preview .section {
@@ -4533,17 +4546,17 @@ body.kss .kss-example-preview .slideshow .slideshow__arrow .icon-slideshow-arrow
   z-index: 1;
   width: 13px;
   height: 25px;
-  background: url("../images/global/hero-carousel-arrow-left.png") 0 0 no-repeat;
+  background: url("../images/icons/hero-carousel-arrow-left.png") 0 0 no-repeat;
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow .icon-slideshow-arrow-right {
-  background: url("../images/global/hero-carousel-arrow-right.png") 0 0 no-repeat;
+  background: url("../images/icons/hero-carousel-arrow-right.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
-  background: url("../images/global/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--left .slideshow__arrow__title {
@@ -4557,7 +4570,7 @@ body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--rig
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
-  background: url("../images/global/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {

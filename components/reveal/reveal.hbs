@@ -1,9 +1,11 @@
-<p>
-  <a href="#" class="cta cta-yellow reveal--trigger" data-reveal-target="content-wrapper">Reveal Content</a>
-</p>
-<div class="reveal--content" id="content-wrapper">
-  <div class="box--green box__padded">
-    <p>Congue at magnis convallis aute natoque? Eos nulla incidunt consequat cubilia eget ipsa dolor error luctus curabitur iusto congue per, sapiente molestiae enim ullamcorper, illum feugiat sagittis consectetur imperdiet iaculis, hendrerit curae accusamus ut, mus delectus fringilla conubia debitis ducimus irure dis accumsan ornare lobortis laoreet doloremque, neque, euismod suspendisse.</p>
-    <p>Ea ornare rem, mollis, purus eos libero totam. Pharetra ea eum quos explicabo labore nesciunt massa tempus facilisi lacus facilis commodo venenatis, nobis accusamus. Ab similique. Tenetur ratione voluptas eget repellendus vivamus nulla eu consequat nam. Odio taciti, odio. Quisque lobortis aliquid quis sociosqu, corporis, harum itaque malesuada, ducimus ligula.</p>
-  </div>
+<div id="{{ curtainId }}">
+  <p>
+    {{# trigger}}
+      <a href="#" class="reveal__trigger {{ classes }}" data-reveal-target="{{ ../contentId }}" data-reveal-type="{{ ../type }}" data-reveal-curtain="{{ ../curtainId }}">{{ text }}</a>
+    {{/ trigger}}
+  </p>
+</div>
+
+<div class="reveal__content" id="{{ contentId }}">
+  {{{ revealContent }}}
 </div>
