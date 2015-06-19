@@ -1,0 +1,17 @@
+<div class="subnav box--dark-gray-1 sticky">
+  <div class="content-container content-container--wide">
+    <h2 class="subnav__title">{{ title }}</h2>
+
+    {{# anchors}}
+      <ul class="subnav__links">
+        {{> link-list}}
+      </ul>
+    {{/anchors}}
+
+    {{# cta}}
+      <div class="subnav__cta">
+        {{> cta}}
+      </div>
+    {{/ cta}}
+  </div>
+</div>

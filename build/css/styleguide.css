@@ -968,6 +968,16 @@ Markup:
 Style guide: 6.2
 */
   /*
+Subnavigation
+
+Each Product page on TableauSoftware.com uses a simplified navigation. It is has
+main categories throughout the page as jump links.
+
+Markup: subnav.hbs
+
+Style guide: navigation.subnav
+*/
+  /*
 Standard Table
 
 Basic table used for tabular data
@@ -1432,21 +1442,6 @@ body.kss .kss-example-preview .accordion--item--content ul:first-child {
 body.kss .kss-example-preview .accordion--item--content p:last-child,
 body.kss .kss-example-preview .accordion--item--content ul:last-child {
   margin-bottom: 0;
-}
-
-body.kss .kss-example-preview .anchor {
-  position: absolute;
-  top: -78px;
-}
-
-body.kss .kss-example-preview .admin-menu .anchor {
-  top: -107px;
-}
-
-@media (max-width: 739px) {
-  body.kss .kss-example-preview .anchor {
-    top: -49px;
-  }
 }
 
 body.kss .kss-example-preview .badge {
@@ -4690,26 +4685,62 @@ body.kss .kss-example-preview .stuck {
   position: fixed;
   z-index: 7;
   top: 0;
+  width: 100%;
 }
 
-@media (max-width: 739px) {
-  body.kss .kss-example-preview .grid-3 .stuck {
-    width: 100%;
-    left: 0;
-  }
+body.kss .kss-example-preview .subnav {
+  padding: .5em 0;
 }
 
-@media (min-width: 740px) {
-  body.kss .kss-example-preview .grid-3 .stuck {
-    max-width: 223px;
-    margin-right: 10px;
-  }
+body.kss .kss-example-preview .subnav .subnav__title,
+body.kss .kss-example-preview .subnav .subnav__links,
+body.kss .kss-example-preview .subnav .subnav__cta {
+  float: left;
 }
 
-@media (min-width: 980px) {
-  body.kss .kss-example-preview .grid-3 .stuck {
-    min-width: 223px;
-  }
+body.kss .kss-example-preview .subnav .subnav__cta {
+  opacity: 0;
+  height: 0;
+  float: right;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+
+body.kss .kss-example-preview .subnav .subnav__cta .cta {
+  margin: 0;
+}
+
+body.kss .kss-example-preview .subnav.stuck .subnav__cta {
+  opacity: 1;
+  height: auto;
+}
+
+body.kss .kss-example-preview .subnav .subnav__links {
+  margin: 0.8em 0 0 2em;
+  padding: 0;
+}
+
+body.kss .kss-example-preview .subnav .subnav__links li {
+  padding: 0 10px;
+}
+
+body.kss .kss-example-preview .subnav .subnav__links li a {
+  position: relative;
+  padding: 2px;
+  border-bottom: 2px solid transparent;
+  color: #bbb;
+  text-decoration: none;
+  -webkit-transition: color 0.5s, border 0.5s;
+          transition: color 0.5s, border 0.5s;
+}
+
+body.kss .kss-example-preview .subnav .subnav__links li a:hover {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .subnav .subnav__links li.active a {
+  border-bottom: 2px solid #23529c;
+  color: #fff;
 }
 
 body.kss .kss-example-preview table {
@@ -4824,11 +4855,11 @@ body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
   font-weight: 100;
 }
 
-body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete, body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .text--dropdown {
+body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete, body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .subnav .subnav__title, body.kss .kss-example-preview .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .subnav .subnav__links li a, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -4943,7 +4974,7 @@ body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .
   color: #333;
 }
 
-body.kss .kss-example-preview .text--sub-nav {
+body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .subnav .subnav__title {
   font-size: 1.5714285714em;
   color: #000;
 }
@@ -5018,7 +5049,7 @@ body.kss .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
 
-body.kss .kss-example-preview .text--negative {
+body.kss .kss-example-preview .text--negative, body.kss .kss-example-preview .subnav .subnav__title {
   color: #fff !important;
 }
 

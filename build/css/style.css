@@ -698,21 +698,6 @@ Style guide: interactive.accordion
   margin-bottom: 0;
 }
 
-.anchor {
-  position: absolute;
-  top: -78px;
-}
-
-.admin-menu .anchor {
-  top: -107px;
-}
-
-@media (max-width: 739px) {
-  .anchor {
-    top: -49px;
-  }
-}
-
 /*
 Badges
 
@@ -4459,26 +4444,72 @@ Style guide: 6.2
   position: fixed;
   z-index: 7;
   top: 0;
+  width: 100%;
 }
 
-@media (max-width: 739px) {
-  .grid-3 .stuck {
-    width: 100%;
-    left: 0;
-  }
+/*
+Subnavigation
+
+Each Product page on TableauSoftware.com uses a simplified navigation. It is has
+main categories throughout the page as jump links.
+
+Markup: subnav.hbs
+
+Style guide: navigation.subnav
+*/
+.subnav {
+  padding: .5em 0;
 }
 
-@media (min-width: 740px) {
-  .grid-3 .stuck {
-    max-width: 223px;
-    margin-right: 10px;
-  }
+.subnav .subnav__title,
+.subnav .subnav__links,
+.subnav .subnav__cta {
+  float: left;
 }
 
-@media (min-width: 980px) {
-  .grid-3 .stuck {
-    min-width: 223px;
-  }
+.subnav .subnav__cta {
+  opacity: 0;
+  height: 0;
+  float: right;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+
+.subnav .subnav__cta .cta {
+  margin: 0;
+}
+
+.subnav.stuck .subnav__cta {
+  opacity: 1;
+  height: auto;
+}
+
+.subnav .subnav__links {
+  margin: 0.8em 0 0 2em;
+  padding: 0;
+}
+
+.subnav .subnav__links li {
+  padding: 0 10px;
+}
+
+.subnav .subnav__links li a {
+  position: relative;
+  padding: 2px;
+  border-bottom: 2px solid transparent;
+  color: #bbb;
+  text-decoration: none;
+  -webkit-transition: color 0.5s, border 0.5s;
+          transition: color 0.5s, border 0.5s;
+}
+
+.subnav .subnav__links li a:hover {
+  color: #fff;
+}
+
+.subnav .subnav__links li.active a {
+  border-bottom: 2px solid #23529c;
+  color: #fff;
 }
 
 /*
@@ -4688,11 +4719,11 @@ h6, .heading--h6 {
   font-weight: 100;
 }
 
-.text--benton-light, .heading--small, .heading--label, .text--large-copy, .global-nav .global-nav__search input[type='search'], .ui-autocomplete, .text--sub-nav, .text--dropdown {
+.text--benton-light, .heading--small, .heading--label, .text--large-copy, .global-nav .global-nav__search input[type='search'], .ui-autocomplete, .text--sub-nav, .subnav .subnav__title, .text--dropdown {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow {
+.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .subnav .subnav__links li a, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -4879,7 +4910,7 @@ Style guide: typography.other
   color: #333;
 }
 
-.text--sub-nav {
+.text--sub-nav, .subnav .subnav__title {
   font-size: 1.5714285714em;
   color: #000;
 }
@@ -5011,7 +5042,7 @@ Weight: 7
 Style guide: typography.colors
 */
 /* Create a class for each text color */
-.text--negative {
+.text--negative, .subnav .subnav__title {
   color: #fff !important;
 }
 

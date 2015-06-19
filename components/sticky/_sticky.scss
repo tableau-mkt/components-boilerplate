@@ -22,24 +22,5 @@ Style guide: 6.2
   position: fixed;
   z-index: 7;
   top: 0;
-
-  &.sticky--nospacing {
-
-  }
-}
-
-.grid-3 .stuck {
-  @include breakpoint($mobile) {
-    width: 100%;
-    left: 0;
-  }
-
-  @include breakpoint($tablet) {
-    max-width: 223px;
-    margin-right: 10px;
-  }
-
-  @include breakpoint($desktop) {
-    min-width: 223px;    
-  }
+  width: 100%;
 }

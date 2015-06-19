@@ -1,0 +1,39 @@
+{
+  "title": "Tableau Desktop",
+
+  "anchors": {
+    "modifier_class": "link-list--inline",
+    "items": [
+      {
+        "link": {
+          "href": "#overview",
+          "text": "Overview"
+        }
+      },
+      {
+        "link": {
+          "href":"#features",
+          "text": "Features"
+        }
+      },
+      {
+        "link": {
+          "href":"#gallery",
+          "text": "Gallery"
+        }
+      },
+      {
+        "link": {
+          "href":"#pricing",
+          "text": "Pricing & Specs"
+        }
+      }
+    ]
+  },
+
+  "cta": {
+    "url": "#",
+    "text": "Start a Free Trial",
+    "icon": "arrow"
+  }
+}
