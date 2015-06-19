@@ -557,6 +557,8 @@ Markup: content_container.hbs
 
 Weight: 30
 
+.content-container--wide - An extra wide content container
+
 Style guide: layout.container
 */
   /* 
@@ -1201,6 +1203,15 @@ Weight: 7
 Style guide: typography.colors
 */
   /* Create a class for each text color */
+  /*
+Viz Slideshow
+
+A slideshow of vizzes
+
+Markup: viz-slideshow.hbs
+
+Style guide: interactive.viz-slideshow
+*/
 }
 
 body.kss .kss-example-preview body {
@@ -2102,8 +2113,9 @@ body.kss .kss-example-preview .divider.divider--dashed {
 }
 
 body.kss .kss-example-preview .vertical-divider {
-  min-height: 100px;
+  min-height: 50px;
   border-left: 1px solid #dedede;
+  padding-left: 2em;
 }
 
 body.kss .kss-example-preview .vertical-divider.vertical-divider--dashed {
@@ -2117,6 +2129,14 @@ body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
 
 body.kss .kss-example-preview .vertical-divider.vertical-divider--right.vertical-divider--dashed {
   border-right-style: dotted;
+}
+
+body.kss .kss-example-preview .vertical-divider p:first-child {
+  margin-top: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider p:last-child {
+  margin-bottom: 0;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -3619,7 +3639,11 @@ body.kss .kss-example-preview .icon--management,
 body.kss .kss-example-preview .icon--statistics,
 body.kss .kss-example-preview .icon--arrow-long,
 body.kss .kss-example-preview .icon--expand,
-body.kss .kss-example-preview .icon--collapse {
+body.kss .kss-example-preview .icon--collapse,
+body.kss .kss-example-preview .icon--slideshow-prev-light,
+body.kss .kss-example-preview .icon--slideshow-next-light,
+body.kss .kss-example-preview .icon--slideshow-prev-dark,
+body.kss .kss-example-preview .icon--slideshow-next-dark {
   display: inline-block;
 }
 
@@ -3668,6 +3692,22 @@ body.kss .kss-example-preview .icon--expand {
 
 body.kss .kss-example-preview .icon--collapse {
   content: url(../images/icons/collapse.png);
+}
+
+body.kss .kss-example-preview .icon--slideshow-prev-light {
+  content: url("../images/icons/slideshow-prev-light.png");
+}
+
+body.kss .kss-example-preview .icon--slideshow-next-light {
+  content: url("../images/icons/slideshow-next-light.png");
+}
+
+body.kss .kss-example-preview .icon--slideshow-prev-dark {
+  content: url("../images/icons/slideshow-prev-dark.png");
+}
+
+body.kss .kss-example-preview .icon--slideshow-next-dark {
+  content: url("../images/icons/slideshow-next-dark.png");
 }
 
 @font-face {
@@ -4541,17 +4581,17 @@ body.kss .kss-example-preview .slideshow .slideshow__arrow .icon-slideshow-arrow
   z-index: 1;
   width: 13px;
   height: 25px;
-  background: url("../images/icons/hero-carousel-arrow-left.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-prev-light.png") 0 0 no-repeat;
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow .icon-slideshow-arrow-right {
-  background: url("../images/icons/hero-carousel-arrow-right.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-next-light.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
-  background: url("../images/icons/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-prev-dark.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--left .slideshow__arrow__title {
@@ -4565,7 +4605,7 @@ body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--rig
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
-  background: url("../images/icons/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-next-dark.png") 0 0 no-repeat;
 }
 
 body.kss .kss-example-preview .slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {
@@ -5127,4 +5167,45 @@ body.kss .kss-example-preview .text--mission-2 {
 
 body.kss .kss-example-preview .text--mission-3 {
   color: #5facce !important;
+}
+
+body.kss .kss-example-preview .viz-slideshow {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1520px;
+}
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__slide {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow {
+  position: absolute;
+  display: block;
+  height: 26px;
+  width: 26px;
+  top: 42%;
+  z-index: 5;
+  margin-top: -13px;
+  padding: 0;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow i {
+  vertical-align: middle;
+}
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+  left: 187px;
+}
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--next {
+  right: 187px;
 }

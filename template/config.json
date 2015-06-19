@@ -1,5 +1,7 @@
 {
   "css": [
+    "../build/bower/slick.js/slick/slick.css",
+    "../build/bower/slick.js/slick/slick-theme.css",
     "public/style.css",
     "../build/css/styleguide.css"
   ],

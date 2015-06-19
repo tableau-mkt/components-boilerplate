@@ -14,7 +14,11 @@ Misc fonts for prototype
 .icon--statistics,
 .icon--arrow-long,
 .icon--expand,
-.icon--collapse {
+.icon--collapse,
+.icon--slideshow-prev-light,
+.icon--slideshow-next-light,
+.icon--slideshow-prev-dark,
+.icon--slideshow-next-dark {
   display: inline-block;
 }
 
@@ -56,6 +60,19 @@ Misc fonts for prototype
 }
 .icon--collapse {
   content: url(../images/icons/collapse.png);
+}
+
+.icon--slideshow-prev-light {
+  content: url('../images/icons/slideshow-prev-light.png');
+}
+.icon--slideshow-next-light {
+  content: url('../images/icons/slideshow-next-light.png');
+}
+.icon--slideshow-prev-dark {
+  content: url('../images/icons/slideshow-prev-dark.png');
+}
+.icon--slideshow-next-dark {
+  content: url('../images/icons/slideshow-next-dark.png');
 }
 
 

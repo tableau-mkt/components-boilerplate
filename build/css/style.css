@@ -1269,6 +1269,8 @@ Markup: content_container.hbs
 
 Weight: 30
 
+.content-container--wide - An extra wide content container
+
 Style guide: layout.container
 */
 .content-container {
@@ -1512,8 +1514,9 @@ Weight: 10
 Style guide: layout.divider-vertical
 */
 .vertical-divider {
-  min-height: 100px;
+  min-height: 50px;
   border-left: 1px solid #dedede;
+  padding-left: 2em;
 }
 
 .vertical-divider.vertical-divider--dashed {
@@ -1527,6 +1530,14 @@ Style guide: layout.divider-vertical
 
 .vertical-divider.vertical-divider--right.vertical-divider--dashed {
   border-right-style: dotted;
+}
+
+.vertical-divider p:first-child {
+  margin-top: 0;
+}
+
+.vertical-divider p:last-child {
+  margin-bottom: 0;
 }
 
 /*
@@ -3154,7 +3165,11 @@ Misc fonts for prototype
 .icon--statistics,
 .icon--arrow-long,
 .icon--expand,
-.icon--collapse {
+.icon--collapse,
+.icon--slideshow-prev-light,
+.icon--slideshow-next-light,
+.icon--slideshow-prev-dark,
+.icon--slideshow-next-dark {
   display: inline-block;
 }
 
@@ -3203,6 +3218,22 @@ Misc fonts for prototype
 
 .icon--collapse {
   content: url(../images/icons/collapse.png);
+}
+
+.icon--slideshow-prev-light {
+  content: url("../images/icons/slideshow-prev-light.png");
+}
+
+.icon--slideshow-next-light {
+  content: url("../images/icons/slideshow-next-light.png");
+}
+
+.icon--slideshow-prev-dark {
+  content: url("../images/icons/slideshow-prev-dark.png");
+}
+
+.icon--slideshow-next-dark {
+  content: url("../images/icons/slideshow-next-dark.png");
 }
 
 @font-face {
@@ -4249,17 +4280,17 @@ Style guide: interactive.slideshow
   z-index: 1;
   width: 13px;
   height: 25px;
-  background: url("../images/icons/hero-carousel-arrow-left.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-prev-light.png") 0 0 no-repeat;
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
 }
 
 .slideshow .slideshow__arrow .icon-slideshow-arrow-right {
-  background: url("../images/icons/hero-carousel-arrow-right.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-next-light.png") 0 0 no-repeat;
 }
 
 .slideshow .slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
-  background: url("../images/icons/hero-carousel-arrow-left-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-prev-dark.png") 0 0 no-repeat;
 }
 
 .slideshow .slideshow__arrow.slideshow__arrow--left .slideshow__arrow__title {
@@ -4273,7 +4304,7 @@ Style guide: interactive.slideshow
 }
 
 .slideshow .slideshow__arrow.slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
-  background: url("../images/icons/hero-carousel-arrow-right-inverted.png") 0 0 no-repeat;
+  background: url("../images/icons/slideshow-next-dark.png") 0 0 no-repeat;
 }
 
 .slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {
@@ -5120,4 +5151,54 @@ Style guide: typography.colors
 
 .text--mission-3 {
   color: #5facce !important;
+}
+
+/*
+Viz Slideshow
+
+A slideshow of vizzes
+
+Markup: viz-slideshow.hbs
+
+Style guide: interactive.viz-slideshow
+*/
+.viz-slideshow {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1520px;
+}
+
+.viz-slideshow .viz-slideshow__slide {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.viz-slideshow .viz-slideshow__arrow {
+  position: absolute;
+  display: block;
+  height: 26px;
+  width: 26px;
+  top: 42%;
+  z-index: 5;
+  margin-top: -13px;
+  padding: 0;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+.viz-slideshow .viz-slideshow__arrow i {
+  vertical-align: middle;
+}
+
+.viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+  left: 187px;
+}
+
+.viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--next {
+  right: 187px;
 }

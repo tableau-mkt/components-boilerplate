@@ -1,0 +1,52 @@
+/*
+Viz Slideshow
+
+A slideshow of vizzes
+
+Markup: viz-slideshow.hbs
+
+Style guide: interactive.viz-slideshow
+*/
+
+.viz-slideshow {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1520px;
+
+  .viz-slideshow__slide {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+
+  // Arrow Controls
+  .viz-slideshow__arrow {
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 26px;
+    top: 42%;
+    z-index: 5;
+    margin-top: -13px;
+    padding: 0;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+
+    i {
+      vertical-align: middle;
+    }
+
+    &.viz-slideshow__arrow--prev {
+      left: 187px;
+    }
+
+    &.viz-slideshow__arrow--next {
+      right: 187px;
+    }
+  }
+}
