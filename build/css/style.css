@@ -1459,6 +1459,139 @@ Style guide: buttons-links.cta
   color: #c92434;
 }
 
+/* 
+Data Source Link
+
+A large CTA-style link specifically for linking to data sources.
+
+Markup: data-source-link.hbs
+
+
+.data-source-link--desktop - Desktop colored Data Source Link.
+.data-source-link--server - Server colored Data Source Link.
+.data-source-link--online - Online colored Data Source Link.
+.data-source-link--public - Public colored Data Source Link.
+.data-source-link--reader - Reader colored Data Source Link.
+.data-source-link--mobile - Mobile colored Data Source Link.
+
+Style guide: buttons-links.data-source
+*/
+.data-source-link {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  padding: 15px;
+  border: 2px solid #e8762c;
+  background: transparent;
+  color: #e8762c;
+  text-align: center;
+  -webkit-transition: color 0.5s, border 0.5s;
+          transition: color 0.5s, border 0.5s;
+}
+
+.data-source-link:hover,
+.data-source-link:focus {
+  background: transparent;
+  text-decoration: none;
+}
+
+.data-source-link .data-source-link__number {
+  font-size: 3.5714285714em;
+  line-height: 66px;
+}
+
+.data-source-link .data-source-link__label {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: .5em;
+}
+
+.data-source-link:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
+}
+
+.data-source-link.data-source-link--orange {
+  border-color: #e8762c;
+  color: #e8762c;
+}
+
+.data-source-link.data-source-link--orange:hover,
+.data-source-link.data-source-link--orange:focus {
+  border-color: #ea8442;
+  color: #ea8442;
+}
+
+.data-source-link.data-source-link--desktop {
+  border-color: #324e7a;
+  color: #324e7a;
+}
+
+.data-source-link.data-source-link--desktop:hover,
+.data-source-link.data-source-link--desktop:focus {
+  border-color: #23529c;
+  color: #23529c;
+}
+
+.data-source-link.data-source-link--server {
+  border-color: #5e899b;
+  color: #5e899b;
+}
+
+.data-source-link.data-source-link--server:hover,
+.data-source-link.data-source-link--server:focus {
+  border-color: #7fa9bb;
+  color: #7fa9bb;
+}
+
+.data-source-link.data-source-link--online {
+  border-color: #7099a5;
+  color: #7099a5;
+}
+
+.data-source-link.data-source-link--online:hover,
+.data-source-link.data-source-link--online:focus {
+  border-color: #58a3b9;
+  color: #58a3b9;
+}
+
+.data-source-link.data-source-link--public {
+  border-color: #2d4b65;
+  color: #2d4b65;
+}
+
+.data-source-link.data-source-link--public:hover,
+.data-source-link.data-source-link--public:focus {
+  border-color: #324E7A;
+  color: #324E7A;
+}
+
+.data-source-link.data-source-link--reader {
+  border-color: #9d7eb5;
+  color: #9d7eb5;
+}
+
+.data-source-link.data-source-link--reader:hover,
+.data-source-link.data-source-link--reader:focus {
+  border-color: #B28CCF;
+  color: #B28CCF;
+}
+
+.data-source-link.data-source-link--mobile {
+  border-color: #c87e5b;
+  color: #c87e5b;
+}
+
+.data-source-link.data-source-link--mobile:hover,
+.data-source-link.data-source-link--mobile:focus {
+  border-color: #DB8E6A;
+  color: #DB8E6A;
+}
+
 /*
 HorizontalDividers
 
@@ -4740,7 +4873,7 @@ Weight: 1
 
 Style guide: typography.fonts
 */
-.text--benton-thin, h1, .heading--homepage, .heading--product, .heading--download, .heading--h1,
+.text--benton-thin, .data-source-link .data-source-link__number, h1, .heading--homepage, .heading--product, .heading--download, .heading--h1,
 h2, .heading--medium, .heading--h2,
 h3, .heading--small, .heading--h3,
 h4, .heading--x-small, .heading--h4,

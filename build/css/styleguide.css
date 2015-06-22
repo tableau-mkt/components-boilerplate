@@ -583,6 +583,23 @@ Markup: cta.hbs
 
 Style guide: buttons-links.cta
 */
+  /* 
+Data Source Link
+
+A large CTA-style link specifically for linking to data sources.
+
+Markup: data-source-link.hbs
+
+
+.data-source-link--desktop - Desktop colored Data Source Link.
+.data-source-link--server - Server colored Data Source Link.
+.data-source-link--online - Online colored Data Source Link.
+.data-source-link--public - Public colored Data Source Link.
+.data-source-link--reader - Reader colored Data Source Link.
+.data-source-link--mobile - Mobile colored Data Source Link.
+
+Style guide: buttons-links.data-source
+*/
   /*
 HorizontalDividers
 
@@ -2089,6 +2106,122 @@ body.kss .kss-example-preview .cta.cta--tertiary:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
+}
+
+body.kss .kss-example-preview .data-source-link {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  padding: 15px;
+  border: 2px solid #e8762c;
+  background: transparent;
+  color: #e8762c;
+  text-align: center;
+  -webkit-transition: color 0.5s, border 0.5s;
+          transition: color 0.5s, border 0.5s;
+}
+
+body.kss .kss-example-preview .data-source-link:hover,
+body.kss .kss-example-preview .data-source-link:focus {
+  background: transparent;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .data-source-link .data-source-link__number {
+  font-size: 3.5714285714em;
+  line-height: 66px;
+}
+
+body.kss .kss-example-preview .data-source-link .data-source-link__label {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: .5em;
+}
+
+body.kss .kss-example-preview .data-source-link:active {
+  border-color: #c92434;
+  background: transparent;
+  color: #c92434;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--orange {
+  border-color: #e8762c;
+  color: #e8762c;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--orange:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--orange:focus {
+  border-color: #ea8442;
+  color: #ea8442;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--desktop {
+  border-color: #324e7a;
+  color: #324e7a;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--desktop:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--desktop:focus {
+  border-color: #23529c;
+  color: #23529c;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--server {
+  border-color: #5e899b;
+  color: #5e899b;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--server:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--server:focus {
+  border-color: #7fa9bb;
+  color: #7fa9bb;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--online {
+  border-color: #7099a5;
+  color: #7099a5;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--online:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--online:focus {
+  border-color: #58a3b9;
+  color: #58a3b9;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--public {
+  border-color: #2d4b65;
+  color: #2d4b65;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--public:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--public:focus {
+  border-color: #324E7A;
+  color: #324E7A;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--reader {
+  border-color: #9d7eb5;
+  color: #9d7eb5;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--reader:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--reader:focus {
+  border-color: #B28CCF;
+  color: #B28CCF;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--mobile {
+  border-color: #c87e5b;
+  color: #c87e5b;
+}
+
+body.kss .kss-example-preview .data-source-link.data-source-link--mobile:hover,
+body.kss .kss-example-preview .data-source-link.data-source-link--mobile:focus {
+  border-color: #DB8E6A;
+  color: #DB8E6A;
 }
 
 body.kss .kss-example-preview .divider {
@@ -4885,7 +5018,7 @@ body.kss .kss-example-preview .heading-highlight.heading-highlight--mobile:befor
   background: #DB8E6A;
 }
 
-body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
+body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview .data-source-link .data-source-link__number, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
 body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
 body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
 body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
