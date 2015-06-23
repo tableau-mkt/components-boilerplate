@@ -634,6 +634,15 @@ Weight: 10
 Style guide: layout.divider-vertical
 */
   /*
+Content Flyout
+
+Simple tool to make content hidden and flyout when a trigger is clicked.
+
+Markup: flyout.hbs
+
+Style guide: interactive.flyout
+*/
+  /*
 Base Form Styles
 
 A simple example form.
@@ -1037,6 +1046,15 @@ Markup:
 Style guide: 4.1
 */
   /*
+Content Tabs
+
+Tabbed content sections where one section is visible at a time.
+
+Markup: tabs.hbs
+
+Style guide: interactive.tabs
+*/
+  /*
 Thumbnail Image
 
 A small image that shows a preview of the content that it is linking to.
@@ -1301,17 +1319,17 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .sidebar--nav ul {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .sidebar--nav ul li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .tabs__tabs li {
   display: inline-block;
 }
 
@@ -1396,17 +1414,17 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .sidebar--nav ul {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .sidebar--nav ul li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .sidebar--nav ul li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .tabs__tabs li {
   display: inline-block;
 }
 
@@ -2270,6 +2288,21 @@ body.kss .kss-example-preview .vertical-divider p:first-child {
 
 body.kss .kss-example-preview .vertical-divider p:last-child {
   margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .flyout__content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+body.kss .kss-example-preview .flyout__close {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 10px;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -3716,6 +3749,17 @@ body.kss .kss-example-preview .hero .hero__image img {
   width: 100%;
 }
 
+body.kss .kss-example-preview .hero .hero__video {
+  position: relative;
+  line-height: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body.kss .kss-example-preview .hero .hero__video video {
+  width: 100%;
+}
+
 body.kss .kss-example-preview .hero .hero__copy {
   position: absolute;
   top: 0;
@@ -3735,8 +3779,10 @@ body.kss .kss-example-preview .hero .hero__copy h1, body.kss .kss-example-previe
   margin: 0;
 }
 
-body.kss .kss-example-preview .hero:before,
-body.kss .kss-example-preview .hero:after {
+body.kss .kss-example-preview .hero .hero__image:before,
+body.kss .kss-example-preview .hero .hero__image:after,
+body.kss .kss-example-preview .hero .hero__video:before,
+body.kss .kss-example-preview .hero .hero__video:after {
   display: none;
   content: " ";
   position: absolute;
@@ -3750,13 +3796,16 @@ body.kss .kss-example-preview .hero:after {
 }
 
 @media (min-width: 1550px) {
-  body.kss .kss-example-preview .hero:before,
-  body.kss .kss-example-preview .hero:after {
+  body.kss .kss-example-preview .hero .hero__image:before,
+  body.kss .kss-example-preview .hero .hero__image:after,
+  body.kss .kss-example-preview .hero .hero__video:before,
+  body.kss .kss-example-preview .hero .hero__video:after {
     display: block;
   }
 }
 
-body.kss .kss-example-preview .hero:after {
+body.kss .kss-example-preview .hero .hero__image:after,
+body.kss .kss-example-preview .hero .hero__video:after {
   background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
   background-image: linear-gradient(to left, #1b1b1b, transparent);
   left: auto;
@@ -4520,6 +4569,7 @@ body.kss .kss-example-preview .reveal__close:hover {
 }
 
 body.kss .kss-example-preview .section {
+  position: relative;
   padding-top: 4em;
   padding-bottom: 4em;
 }
@@ -4948,6 +4998,14 @@ body.kss .kss-example-preview table th {
 
 body.kss .kss-example-preview table tr p:last-child {
   margin: 0;
+}
+
+body.kss .kss-example-preview .tabs__tab-content {
+  display: none;
+}
+
+body.kss .kss-example-preview .tabs__tab-content.active {
+  display: inherit;
 }
 
 body.kss .kss-example-preview .thumbnail {

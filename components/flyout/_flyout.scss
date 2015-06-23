@@ -1,0 +1,26 @@
+/*
+Content Flyout
+
+Simple tool to make content hidden and flyout when a trigger is clicked.
+
+Markup: flyout.hbs
+
+Style guide: interactive.flyout
+*/
+.flyout__content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+.flyout__close {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 10px;
+  
+  &:hover {
+  }
+}

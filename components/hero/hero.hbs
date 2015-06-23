@@ -1,9 +1,21 @@
 <div class="hero {{ modifier_class }}">
-  {{# img }}
-    <div class="hero__image">
-      <img src="{{ src }}"/>
-    </div>
-  {{/ img }}
+  {{#if video}}
+    {{# video }}
+      <div class="hero__video">
+        <video autoplay="" loop="">
+          <source src="{{ src }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    {{/ video }}
+  {{else}}
+    {{# img }}
+      <div class="hero__image">
+        <img src="{{ src }}"/>
+      </div>
+    {{/ img }}
+  {{/if}}
+
 
   {{# text }}
     <div class="hero__copy content-container">

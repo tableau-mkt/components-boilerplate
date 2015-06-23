@@ -90,6 +90,11 @@
                 </a>
               </li>
               <li class="kss-nav__menu-item">
+                <a href="section-interactive.html#kssref-interactive-flyout">
+                  Content Flyout
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
                 <a href="section-interactive.html#kssref-interactive-popup">
                   Popups
                 </a>
@@ -102,6 +107,11 @@
               <li class="kss-nav__menu-item">
                 <a href="section-interactive.html#kssref-interactive-slideshow">
                   Slideshow
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-interactive.html#kssref-interactive-tabs">
+                  Content Tabs
                 </a>
               </li>
               <li class="kss-nav__menu-item">
@@ -212,6 +222,59 @@ content.</p>
             </div>
 
           </section>
+          <section id="kssref-interactive-flyout" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-interactive-flyout"> -->
+              Content Flyout
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Simple tool to make content hidden and flyout when a trigger is clicked.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <p>
+    <a href="#" class="flyout__trigger cta" data-flyout-target="flyout-container">Flyout Content</a>
+</p>
+
+<div class="flyout__content box--data-sources" id="flyout-container">
+  <div class="content-container">
+    <div class="clearfix"></div>
+    <p>Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.</p> <p>Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.</p>
+  </div>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;flyout__trigger cta&quot; data-flyout-target=&quot;flyout-container&quot;&gt;Flyout Content&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div class=&quot;flyout__content box--data-sources&quot; id=&quot;flyout-container&quot;&gt;
+  &lt;div class=&quot;content-container&quot;&gt;
+    &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+    &lt;p&gt;Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.&lt;/p&gt; &lt;p&gt;Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+          </section>
           <section id="kssref-interactive-popup" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
@@ -282,7 +345,7 @@ attribute that matches the <code>data-reveal-target</code>.</p>
                 <div class="kss-example-preview-wrapper">
                   <div id="curtain">
   <p>
-      <a href="#" class="reveal__trigger cta" data-reveal-target="content-container" data-reveal-type="markup" data-reveal-curtain="curtain">Reveal Content</a>
+      <a href="#" class="reveal__trigger cta" data-reveal-target="content-container" data-reveal-media="markup" data-reveal-type="false" data-reveal-curtain="curtain">Reveal Content</a>
   </p>
 </div>
 
@@ -299,7 +362,7 @@ attribute that matches the <code>data-reveal-target</code>.</p>
             <div class="kss-markup">
               <pre class="prettyprint lang-html"><code data-language="html">&lt;div id=&quot;curtain&quot;&gt;
   &lt;p&gt;
-      &lt;a href=&quot;#&quot; class=&quot;reveal__trigger cta&quot; data-reveal-target=&quot;content-container&quot; data-reveal-type=&quot;markup&quot; data-reveal-curtain=&quot;curtain&quot;&gt;Reveal Content&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;reveal__trigger cta&quot; data-reveal-target=&quot;content-container&quot; data-reveal-media=&quot;markup&quot; data-reveal-type=&quot;false&quot; data-reveal-curtain=&quot;curtain&quot;&gt;Reveal Content&lt;/a&gt;
   &lt;/p&gt;
 &lt;/div&gt;
 
@@ -334,9 +397,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
                   <div class="slideshow slideshow--hero  ">
     <div class="slideshow__slide" data-title="Hover title for next button" data-title-class="class-for-next-button">
       <div class="hero ">
-          <div class="hero__image">
-            <img src="http://placecage.com/300/200"/>
-          </div>
+            <div class="hero__image">
+              <img src="http://placecage.com/300/200"/>
+            </div>
+      
       
           <div class="hero__copy content-container">
             <div class="hero__copy__inner">
@@ -369,9 +433,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
     </div>
     <div class="slideshow__slide" data-title="Hover title for next button" data-title-class="class-for-next-button">
       <div class="hero ">
-          <div class="hero__image">
-            <img src="http://placecage.com/300/200"/>
-          </div>
+            <div class="hero__image">
+              <img src="http://placecage.com/300/200"/>
+            </div>
+      
       
           <div class="hero__copy content-container">
             <div class="hero__copy__inner">
@@ -404,9 +469,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
     </div>
     <div class="slideshow__slide" data-title="Hover title for next button" data-title-class="class-for-next-button">
       <div class="hero ">
-          <div class="hero__image">
-            <img src="http://placecage.com/300/200"/>
-          </div>
+            <div class="hero__image">
+              <img src="http://placecage.com/300/200"/>
+            </div>
+      
       
           <div class="hero__copy content-container">
             <div class="hero__copy__inner">
@@ -449,9 +515,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
               <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;slideshow slideshow--hero  &quot;&gt;
     &lt;div class=&quot;slideshow__slide&quot; data-title=&quot;Hover title for next button&quot; data-title-class=&quot;class-for-next-button&quot;&gt;
       &lt;div class=&quot;hero &quot;&gt;
-          &lt;div class=&quot;hero__image&quot;&gt;
-            &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
-          &lt;/div&gt;
+            &lt;div class=&quot;hero__image&quot;&gt;
+              &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
+            &lt;/div&gt;
+      
       
           &lt;div class=&quot;hero__copy content-container&quot;&gt;
             &lt;div class=&quot;hero__copy__inner&quot;&gt;
@@ -484,9 +551,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
     &lt;/div&gt;
     &lt;div class=&quot;slideshow__slide&quot; data-title=&quot;Hover title for next button&quot; data-title-class=&quot;class-for-next-button&quot;&gt;
       &lt;div class=&quot;hero &quot;&gt;
-          &lt;div class=&quot;hero__image&quot;&gt;
-            &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
-          &lt;/div&gt;
+            &lt;div class=&quot;hero__image&quot;&gt;
+              &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
+            &lt;/div&gt;
+      
       
           &lt;div class=&quot;hero__copy content-container&quot;&gt;
             &lt;div class=&quot;hero__copy__inner&quot;&gt;
@@ -519,9 +587,10 @@ attribute that matches the <code>data-reveal-target</code>.</p>
     &lt;/div&gt;
     &lt;div class=&quot;slideshow__slide&quot; data-title=&quot;Hover title for next button&quot; data-title-class=&quot;class-for-next-button&quot;&gt;
       &lt;div class=&quot;hero &quot;&gt;
-          &lt;div class=&quot;hero__image&quot;&gt;
-            &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
-          &lt;/div&gt;
+            &lt;div class=&quot;hero__image&quot;&gt;
+              &lt;img src=&quot;http://placecage.com/300/200&quot;/&gt;
+            &lt;/div&gt;
+      
       
           &lt;div class=&quot;hero__copy content-container&quot;&gt;
             &lt;div class=&quot;hero__copy__inner&quot;&gt;
@@ -553,6 +622,81 @@ attribute that matches the <code>data-reveal-target</code>.</p>
 
     &lt;/div&gt;
 &lt;/div&gt;
+</code></pre>
+            </div>
+
+          </section>
+          <section id="kssref-interactive-tabs" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-interactive-tabs"> -->
+              Content Tabs
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Tabbed content sections where one section is visible at a time.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <ul class="tabs__tabs">
+    <li>
+      <a href="#" class="tabs__tab-link  active" data-tab-content="tab-one">First Tab</a>
+    </li>
+    <li>
+      <a href="#" class="tabs__tab-link " data-tab-content="tab-two">Second Tab</a>
+    </li>
+    <li>
+      <a href="#" class="tabs__tab-link " data-tab-content="tab-three">third Tab</a>
+    </li>
+</ul>
+
+  <div class="tabs__tab-content active box--mobile box__padded" id="tab-one">
+    <h3>First Tab</h3><p>Accusamus recusandae consequat, velit hic perferendis consectetuer excepteur dictum nullam! Aute laoreet, ipsum sunt id asperiores quis accusamus lectus a, deleniti lacus nisl error consequatur optio minim rhoncus aptent do, mollitia dapibus pede, natoque integer pharetra iusto blandit ad! Elementum lacus voluptatibus. Cupidatat aliqua scelerisque! Cras at aliqua, montes ullamcorper.</p><p>Quod primis placeat praesent cupidatat facilisi quidem culpa, lacus nemo, aliquid, per integer nulla fugit venenatis fugiat laboriosam posuere deleniti illo mattis, aptent mus luctus diamlorem molestie ligula! Autem dolore? Suscipit consectetuer pede rhoncus? Voluptas voluptate veritatis id? Rhoncus congue quos repellendus doloribus magni semper, tempora etiam vulputate cupidatat scelerisque.</p>
+  </div>
+  <div class="tabs__tab-content box--dark-gray-3 box__padded" id="tab-two">
+    <h3>Second Tab</h3><p>Quia deserunt reiciendis per, ut! Ex error mi earum voluptate dolore deserunt, pulvinar! Mattis quasi vestibulum expedita. Euismod vestibulum sem? Consequuntur harum quam. Atque, tortor illo eros, aliquid accusamus ullamcorper natus maxime elit reprehenderit, pulvinar. Ligula, volutpat aut arcu nec ratione laboriosam ducimus nesciunt iste felis hendrerit enim, non dolores.</p><p>Et montes, a sollicitudin, reprehenderit dolor, porro quaerat dolor voluptatem, neque mauris blanditiis laborum earum tempor illo dicta, curae suspendisse? Deleniti, sociosqu, vivamus? Vivamus. Mollis assumenda inceptos adipisicing deleniti corporis quos? Optio beatae. Eligendi faucibus, per, eligendi viverra, maxime elit ut mollit? Velit elementum. Eu praesent? Fermentum eu? Ratione tempor.</p>
+  </div>
+  <div class="tabs__tab-content box--desktop box__padded" id="tab-three">
+    <h3>Third Tab</h3><p>Proident habitasse suscipit fuga necessitatibus, consequat quisquam tempore excepteur nisl, mus architecto. Tincidunt, laudantium? Animi eos cumque sociosqu leo atque! Euismod consequatur vitae facilis? Exercitation! Purus? Egestas ipsam, repellat expedita, interdum ligula, debitis debitis perferendis. Quam, facere dapibus amet provident, eos cubilia sodales quo explicabo nam fuga sunt delectus ad.</p><p>Diam nunc arcu montes arcu quae atque mi, molestiae ex ornare neque. Do, mattis dicta fermentum eius viverra quae quasi erat at laudantium optio. Provident amet, fusce, tempore dicta pellentesque, potenti dolor turpis nonummy volutpat omnis, asperiores nostrum. Platea beatae, voluptas tortor blandit mauris. Odit, magni saepe, cillum cumque consectetur.</p>
+  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;ul class=&quot;tabs__tabs&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; class=&quot;tabs__tab-link  active&quot; data-tab-content=&quot;tab-one&quot;&gt;First Tab&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; class=&quot;tabs__tab-link &quot; data-tab-content=&quot;tab-two&quot;&gt;Second Tab&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; class=&quot;tabs__tab-link &quot; data-tab-content=&quot;tab-three&quot;&gt;third Tab&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;div class=&quot;tabs__tab-content active box--mobile box__padded&quot; id=&quot;tab-one&quot;&gt;
+    &lt;h3&gt;First Tab&lt;/h3&gt;&lt;p&gt;Accusamus recusandae consequat, velit hic perferendis consectetuer excepteur dictum nullam! Aute laoreet, ipsum sunt id asperiores quis accusamus lectus a, deleniti lacus nisl error consequatur optio minim rhoncus aptent do, mollitia dapibus pede, natoque integer pharetra iusto blandit ad! Elementum lacus voluptatibus. Cupidatat aliqua scelerisque! Cras at aliqua, montes ullamcorper.&lt;/p&gt;&lt;p&gt;Quod primis placeat praesent cupidatat facilisi quidem culpa, lacus nemo, aliquid, per integer nulla fugit venenatis fugiat laboriosam posuere deleniti illo mattis, aptent mus luctus diamlorem molestie ligula! Autem dolore? Suscipit consectetuer pede rhoncus? Voluptas voluptate veritatis id? Rhoncus congue quos repellendus doloribus magni semper, tempora etiam vulputate cupidatat scelerisque.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tabs__tab-content box--dark-gray-3 box__padded&quot; id=&quot;tab-two&quot;&gt;
+    &lt;h3&gt;Second Tab&lt;/h3&gt;&lt;p&gt;Quia deserunt reiciendis per, ut! Ex error mi earum voluptate dolore deserunt, pulvinar! Mattis quasi vestibulum expedita. Euismod vestibulum sem? Consequuntur harum quam. Atque, tortor illo eros, aliquid accusamus ullamcorper natus maxime elit reprehenderit, pulvinar. Ligula, volutpat aut arcu nec ratione laboriosam ducimus nesciunt iste felis hendrerit enim, non dolores.&lt;/p&gt;&lt;p&gt;Et montes, a sollicitudin, reprehenderit dolor, porro quaerat dolor voluptatem, neque mauris blanditiis laborum earum tempor illo dicta, curae suspendisse? Deleniti, sociosqu, vivamus? Vivamus. Mollis assumenda inceptos adipisicing deleniti corporis quos? Optio beatae. Eligendi faucibus, per, eligendi viverra, maxime elit ut mollit? Velit elementum. Eu praesent? Fermentum eu? Ratione tempor.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tabs__tab-content box--desktop box__padded&quot; id=&quot;tab-three&quot;&gt;
+    &lt;h3&gt;Third Tab&lt;/h3&gt;&lt;p&gt;Proident habitasse suscipit fuga necessitatibus, consequat quisquam tempore excepteur nisl, mus architecto. Tincidunt, laudantium? Animi eos cumque sociosqu leo atque! Euismod consequatur vitae facilis? Exercitation! Purus? Egestas ipsam, repellat expedita, interdum ligula, debitis debitis perferendis. Quam, facere dapibus amet provident, eos cubilia sodales quo explicabo nam fuga sunt delectus ad.&lt;/p&gt;&lt;p&gt;Diam nunc arcu montes arcu quae atque mi, molestiae ex ornare neque. Do, mattis dicta fermentum eius viverra quae quasi erat at laudantium optio. Provident amet, fusce, tempore dicta pellentesque, potenti dolor turpis nonummy volutpat omnis, asperiores nostrum. Platea beatae, voluptas tortor blandit mauris. Odit, magni saepe, cillum cumque consectetur.&lt;/p&gt;
+  &lt;/div&gt;
 </code></pre>
             </div>
 

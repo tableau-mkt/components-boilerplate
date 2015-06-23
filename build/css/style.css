@@ -237,17 +237,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
-.inline-list li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li {
   display: inline-block;
 }
 
@@ -359,17 +359,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
-.inline-list li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li {
   display: inline-block;
 }
 
@@ -1671,6 +1671,30 @@ Style guide: layout.divider-vertical
 
 .vertical-divider p:last-child {
   margin-bottom: 0;
+}
+
+/*
+Content Flyout
+
+Simple tool to make content hidden and flyout when a trigger is clicked.
+
+Markup: flyout.hbs
+
+Style guide: interactive.flyout
+*/
+.flyout__content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+.flyout__close {
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  top: 10px;
 }
 
 /*
@@ -3238,6 +3262,17 @@ Style guide: layout.hero
   width: 100%;
 }
 
+.hero .hero__video {
+  position: relative;
+  line-height: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hero .hero__video video {
+  width: 100%;
+}
+
 .hero .hero__copy {
   position: absolute;
   top: 0;
@@ -3257,8 +3292,10 @@ Style guide: layout.hero
   margin: 0;
 }
 
-.hero:before,
-.hero:after {
+.hero .hero__image:before,
+.hero .hero__image:after,
+.hero .hero__video:before,
+.hero .hero__video:after {
   display: none;
   content: " ";
   position: absolute;
@@ -3272,13 +3309,16 @@ Style guide: layout.hero
 }
 
 @media (min-width: 1550px) {
-  .hero:before,
-  .hero:after {
+  .hero .hero__image:before,
+  .hero .hero__image:after,
+  .hero .hero__video:before,
+  .hero .hero__video:after {
     display: block;
   }
 }
 
-.hero:after {
+.hero .hero__image:after,
+.hero .hero__video:after {
   background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
   background-image: linear-gradient(to left, #1b1b1b, transparent);
   left: auto;
@@ -4199,6 +4239,7 @@ Weight: 40
 Style guide layout.section
 */
 .section {
+  position: relative;
   padding-top: 4em;
   padding-bottom: 4em;
 }
@@ -4748,6 +4789,23 @@ table th {
 
 table tr p:last-child {
   margin: 0;
+}
+
+/*
+Content Tabs
+
+Tabbed content sections where one section is visible at a time.
+
+Markup: tabs.hbs
+
+Style guide: interactive.tabs
+*/
+.tabs__tab-content {
+  display: none;
+}
+
+.tabs__tab-content.active {
+  display: inherit;
 }
 
 /*

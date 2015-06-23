@@ -1,0 +1,12 @@
+<p>
+  {{# trigger}}
+    <a href="#" class="flyout__trigger {{ classes }}" data-flyout-target="{{ ../contentId }}">{{ text }}</a>
+  {{/ trigger}}
+</p>
+
+<div class="flyout__content box--data-sources" id="{{ contentId }}">
+  <div class="content-container">
+    <div class="clearfix"></div>
+    {{{ flyoutContent }}}
+  </div>
+</div>

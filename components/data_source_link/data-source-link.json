@@ -1,5 +1,7 @@
 {
   "url": "#",
   "number": "44",
-  "color": false
+  "color": false,
+  "label": false,
+  "flyoutTarget": false
 }

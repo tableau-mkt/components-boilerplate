@@ -37,13 +37,14 @@
     var data = $(trigger).data(),
         $target = $('#' + data.revealTarget),
         $curtain = $('#' + data.revealCurtain),
-        type = data.revealType;
+        type = data.revealType,
+        media = data.revealMedia;
 
     $(trigger).data('revealState', 'open');
     $target.slideDown(animation);
     $curtain.slideUp(animation);
 
-    if (type == "video") {
+    if (media == "video") {
       setTimeout(function() {
         $target.find('video')[0].play();
       }, animation.duration/2);
@@ -55,13 +56,13 @@
     var data = $(trigger).data(),
         $target = $('#' + data.revealTarget),
         $curtain = $('#' + data.revealCurtain),
-        type = data.revealType;
+        media = data.revealMedia;
 
     $(trigger).data('revealState', 'closed');
     $target.slideUp(animation);
     $curtain.slideDown(animation);
 
-    if (type == "video") {
+    if (media == "video") {
       $target.find('video')[0].pause();
     }
   }

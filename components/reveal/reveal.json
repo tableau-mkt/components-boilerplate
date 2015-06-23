@@ -3,7 +3,8 @@
     "text": "Reveal Content",
     "classes": "cta"
   },
-  "type": "markup",
+  "type": false,
+  "media": "markup",
   "contentId": "content-container",
   "revealContent": "<img src='http://placecage.com/600/400'>",
   "curtainId": "curtain"

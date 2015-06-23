@@ -1,4 +1,4 @@
-<a class="data-source-link{{#if color }} data-source-link--{{color}}{{/if}} {{modifier_class}}" href="{{ url }}">
+<a class="data-source-link{{#if color }} data-source-link--{{color}}{{/if}}{{#if class }} {{ class }}{{/if}} {{modifier_class}}" href="{{ url }}"{{#if flyoutTarget }}data-flyout-target="{{ flyoutTarget }}"{{/if}}>
   <span class="data-source-link__number">{{ number }}</span>
   <span class="data-source-link__label text--label">
     {{#if label}}

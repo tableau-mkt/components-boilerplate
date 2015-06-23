@@ -30,6 +30,17 @@ Style guide: layout.hero
     }
   }
 
+  .hero__video {
+    position: relative;
+    line-height: 0;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    video {
+      width: 100%;
+    }
+  }
+
   .hero__copy {
     position: absolute;
     top: 0;
@@ -46,8 +57,10 @@ Style guide: layout.hero
 
 
   // Gradients to transition hero image to dark background on wider screens
-  &:before,
-  &:after {
+  .hero__image:before,
+  .hero__image:after,
+  .hero__video:before,
+  .hero__video:after {
     display: none;
     content: " ";
     position: absolute;
@@ -63,7 +76,8 @@ Style guide: layout.hero
     }
   }
 
-  &:after {
+  .hero__image:after,
+  .hero__video:after {
     background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
     left: auto;
     right: 0;

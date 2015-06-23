@@ -1,0 +1,26 @@
+/*
+Content Tabs
+
+Tabbed content sections where one section is visible at a time.
+
+Markup: tabs.hbs
+
+Style guide: interactive.tabs
+*/
+
+.tabs__tabs {
+  @extend %plain-list;
+  @extend %inline-list;
+}
+
+.tabs__content {
+  
+}
+
+.tabs__tab-content {
+  display: none;
+
+  &.active {
+    display: inherit;
+  }
+}
