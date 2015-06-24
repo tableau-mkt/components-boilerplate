@@ -16,7 +16,6 @@ Style guide: layout.grids
 
 
 $grid-columns: 12;
-$tablet: 740px;
 $susy: (
   columns: $grid-columns,
   gutters: 1/3,
@@ -28,7 +27,7 @@ $susy: (
     position: relative;
     box-sizing: border-box;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($mf-tablet) {
       @include span($i);
 
       &.grid--last {
@@ -40,12 +39,12 @@ $susy: (
     }
   }
   .push--#{$i} {
-    @include breakpoint($tablet) {
+    @include breakpoint($mf-tablet) {
       @include push($i);
     }
   }
   .pull--#{$i} {
-    @include breakpoint($tablet) {
+    @include breakpoint($mf-tablet) {
       @include pull($i);
     }
   }
@@ -67,12 +66,12 @@ $susy: (
 
 @for $i from 1 through 24 {
   .push-half--#{$i} {
-    @include breakpoint($tablet) {
+    @include breakpoint($mf-tablet) {
       @include push($i);
     }
   }
   .pull-half--#{$i} {
-    @include breakpoint($tablet) {
+    @include breakpoint($mf-tablet) {
       @include pull($i);
     }
   }

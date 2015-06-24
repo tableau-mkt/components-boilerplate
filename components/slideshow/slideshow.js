@@ -8,6 +8,8 @@
         $heroSlideShow.slick({
           dots: true,
           arrows: false,
+          speed: 650,
+          easing: "easeInOutQuart",
           slide: '.slideshow__slide'
         });
 

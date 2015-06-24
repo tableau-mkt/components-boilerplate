@@ -10,7 +10,7 @@ Style guide: interactive.slideshow
 
 .slideshow {
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: $layout-max;
 
   &.slideshow--hero {
     .slideshow__slide {

@@ -18,7 +18,7 @@ Style guide: images.thumbnail
   
   img {
     max-width: 100%;
-    @include transition(all 1s ease);
+    @include transition(all 750ms ease);
   }
 
   img:hover {

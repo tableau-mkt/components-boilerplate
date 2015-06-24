@@ -3,29 +3,19 @@
  */
 
 // Breakpoints
-// @todo these are from Huge. May need refactoring
-$stop-after-width: 1550px;
-$breakpoint-extra-large: 1920px;
-$breakpoint-large-min: 961px;
-$breakpoint-medium-max: 960px;
-$breakpoint-medium-min: 641px;
-$breakpoint-small-max: 640px;
+$mobile: max-width 640px;
+$tablet: max-width 960px;
+$desktop: min-width 961px;
+$content-max: 1550px;
+$layout-max: 1920px;
 
 
-// Device sizes
-$mobile: max-width 739px;
-$tablet: 740px;
-$desktop: 980px;
-
-
-// Layout units
-$menu-height-wide: 78px;
-$menu-height-mobile: 49px;
-$grid-columns: 12;
-$grid-container-width: 960px;
-$grid-column-padding: 10px;
-$section-vert-spacing: 3em;
-$footer-height: 98px;
+// Mobile-first breakpoints
+$mf-mobile: max-width 639px;
+$mf-tablet: 640px;
+$mf-desktop: 960px;
+$mf-desktop-max: 1920px;
+$mf-content-max: 1550px;
 
 
 // Font sizes

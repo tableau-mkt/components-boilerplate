@@ -16,7 +16,7 @@ Style guide: layout.container
 .content-container {
   @extend %clearfix;
   box-sizing: border-box;
-  max-width: 1550px;
+  max-width: $content-max;
   margin-left: auto;
   margin-right: auto;
   padding-left: 11%;
@@ -25,5 +25,15 @@ Style guide: layout.container
   &.content-container--wide {
     padding-left: 3%;
     padding-right: 3%;
+  }
+
+  @include breakpoint($tablet) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  @include breakpoint($mobile) {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }

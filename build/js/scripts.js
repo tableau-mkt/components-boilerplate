@@ -763,6 +763,8 @@ function dataSources() {
         $heroSlideShow.slick({
           dots: true,
           arrows: false,
+          speed: 650,
+          easing: "easeInOutQuart",
           slide: '.slideshow__slide'
         });
 
@@ -941,6 +943,8 @@ function dataSources() {
         centerPadding: '200px',
         slidesToShow: 1,
         arrows: true,
+        speed: 650,
+        easing: "easeInOutQuart",
         slide: '.viz-slideshow__slide',
         prevArrow: $(this).find('.viz-slideshow__arrow--prev'),
         nextArrow: $(this).find('.viz-slideshow__arrow--next')
