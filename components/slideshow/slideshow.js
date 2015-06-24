@@ -81,14 +81,21 @@
     // Next and previous arrow integration with slick
     function slideShowNavigationEvents() {
 
-      $('.slideshow__arrow--right').click(function(e){
+      $('.slideshow__arrow--right').click(function(e) {
         e.preventDefault();
         $heroSlideShow.slick('slickNext');
       });
 
-      $('.slideshow__arrow--left').click(function(e){
+      $('.slideshow__arrow--left').click(function(e) {
         e.preventDefault();
         $heroSlideShow.slick('slickPrev');
+      });
+
+      $('.slideshow__arrow').hover(function(e) {
+        $(this).find('.slideshow__arrow__title').animate({
+          width: "toggle",
+          opacity: "toggle"
+        });
       });
 
     }

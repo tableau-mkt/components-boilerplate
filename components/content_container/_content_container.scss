@@ -27,12 +27,12 @@ Style guide: layout.container
     padding-right: 3%;
   }
 
-  @include breakpoint($tablet) {
+  @include breakpoint(max-width $tablet-max) {
     padding-left: 2em;
     padding-right: 2em;
   }
 
-  @include breakpoint($mobile) {
+  @include breakpoint($mobile-only) {
     padding-left: 1em;
     padding-right: 1em;
   }

@@ -3,19 +3,18 @@
  */
 
 // Breakpoints
-$mobile: max-width 640px;
-$tablet: max-width 960px;
-$desktop: min-width 961px;
+$mobile-max: 639px;
+$tablet-min: 640px;
+$tablet-max: 960px;
+$desktop-min: 961px;
 $content-max: 1550px;
 $layout-max: 1920px;
 
+// Layout-exclusive breakpoints
+$mobile-only: max-width $mobile-max;
+$tablet-only: $tablet-min $tablet-max;
+$desktop-only: min-width $desktop-min;
 
-// Mobile-first breakpoints
-$mf-mobile: max-width 639px;
-$mf-tablet: 640px;
-$mf-desktop: 960px;
-$mf-desktop-max: 1920px;
-$mf-content-max: 1550px;
 
 
 // Font sizes

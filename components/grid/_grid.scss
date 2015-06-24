@@ -27,7 +27,7 @@ $susy: (
     position: relative;
     box-sizing: border-box;
 
-    @include breakpoint($mf-tablet) {
+    @include breakpoint($tablet-min) {
       @include span($i);
 
       &.grid--last {
@@ -39,12 +39,12 @@ $susy: (
     }
   }
   .push--#{$i} {
-    @include breakpoint($mf-tablet) {
+    @include breakpoint($tablet-min) {
       @include push($i);
     }
   }
   .pull--#{$i} {
-    @include breakpoint($mf-tablet) {
+    @include breakpoint($tablet-min) {
       @include pull($i);
     }
   }
@@ -66,12 +66,12 @@ $susy: (
 
 @for $i from 1 through 24 {
   .push-half--#{$i} {
-    @include breakpoint($mf-tablet) {
+    @include breakpoint($tablet-min) {
       @include push($i);
     }
   }
   .pull-half--#{$i} {
-    @include breakpoint($mf-tablet) {
+    @include breakpoint($tablet-min) {
       @include pull($i);
     }
   }

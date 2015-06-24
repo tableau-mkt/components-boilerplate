@@ -34,7 +34,7 @@ Markup: sidebar_nav.hbs
   }
 }
 
-@include breakpoint($mobile) {
+@include breakpoint($mobile-only) {
   .sidebar--nav {
     opacity: 0;
     position: relative;

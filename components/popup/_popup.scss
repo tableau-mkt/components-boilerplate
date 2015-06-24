@@ -78,7 +78,7 @@ button.mfp-arrow {
     margin: -40px 0 0;
   }
 
-  @include breakpoint($desktop) {
+  @include breakpoint($desktop-min) {
     &.mfp-arrow-left {
       left: 5%;
     }

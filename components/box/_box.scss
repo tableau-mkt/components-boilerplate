@@ -114,7 +114,7 @@ Style guide: boxes.stretchy
     width: 100%;
   }
 
-  @include breakpoint($tablet) {
+  @include breakpoint($tablet-min) {
     &.box__stretchy--halves,
     &.box__stretchy--thirds,
     &.box__stretchy--fourths,
@@ -128,7 +128,7 @@ Style guide: boxes.stretchy
     }
   }
 
-  @include breakpoint($desktop) {
+  @include breakpoint($desktop-only) {
 
     &.box__stretchy--thirds {
       width: 1/3 * 100%;

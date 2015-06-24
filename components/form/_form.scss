@@ -42,7 +42,7 @@ input[type=email] {
   background: $white;
   color: $text-dark-body;
   
-  @include breakpoint($mobile) {
+  @include breakpoint($mobile-only) {
     width: 100%;
   }
 }

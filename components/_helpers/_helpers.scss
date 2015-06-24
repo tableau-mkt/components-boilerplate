@@ -83,9 +83,16 @@ most common proportions for video players.
   background-position: center;
 }
 
-@include breakpoint($mobile) {
+@include breakpoint($mobile-only) {
   // Hide the element from display only on the mobile breakpoint
   .mobile-hide {
+    display: none;
+  }
+}
+
+@include breakpoint($desktop-only) {
+  // Hide the element from display only on the desktop breakpoint
+  .desktop-hide {
     display: none;
   }
 }

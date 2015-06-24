@@ -43,7 +43,7 @@ $section-padding: (
     background-position: center;
   }
 
-  @include breakpoint($mobile) {
+  @include breakpoint($mobile-only) {
     
     $section-padding: (
       one: 1em,

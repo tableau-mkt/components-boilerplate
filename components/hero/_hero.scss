@@ -21,8 +21,14 @@ Style guide: layout.hero
   overflow: hidden;  
   
   .hero__image {
-    height: 0;
-    padding-bottom: 33%;
+    position: relative;
+    max-width: $layout-max;
+    margin: 0 auto;
+    
+    .hero__image__inner {
+      height: 0;
+      padding-bottom: 33%;
+    }
 
     img {
       position: absolute;
