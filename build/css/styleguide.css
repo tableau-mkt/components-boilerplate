@@ -818,6 +818,8 @@ Weight: 1
 
 Markup: list.hbs
 
+.list-negative - Light colored bullets.
+
 Style guide: lists.standard
 */
   /*
@@ -1075,6 +1077,7 @@ Weight: 5
 .heading-highlight--public - Public colored highlight
 .heading-highlight--reader - Reader colored highlight
 .heading-highlight--mobile - Mobile colored highlight
+.heading-highlight--negative - White colored highlight
 
 Style guide: typography.heading-highlight
 */
@@ -1333,7 +1336,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1434,7 +1437,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1968,7 +1971,7 @@ body.kss .kss-example-preview .box__stretchy.box__stretchy--sixths {
   }
 }
 
-body.kss .kss-example-preview .content-container {
+body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
   box-sizing: border-box;
   max-width: 1550px;
   margin-left: auto;
@@ -1977,20 +1980,20 @@ body.kss .kss-example-preview .content-container {
   padding-right: 11%;
 }
 
-body.kss .kss-example-preview .content-container.content-container--wide {
+body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container--wide.flyout__close-wrapper {
   padding-left: 3%;
   padding-right: 3%;
 }
 
 @media (max-width: 960px) {
-  body.kss .kss-example-preview .content-container {
+  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
 @media (max-width: 639px) {
-  body.kss .kss-example-preview .content-container {
+  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -2318,11 +2321,16 @@ body.kss .kss-example-preview .flyout__content {
   width: 100%;
 }
 
-body.kss .kss-example-preview .flyout__close {
+body.kss .kss-example-preview .flyout__close-wrapper {
   position: absolute;
+  width: 100%;
+  padding-top: 3em;
+}
+
+body.kss .kss-example-preview .flyout__close-wrapper .flyout__close-link {
+  position: relative;
   z-index: 5;
-  right: 10px;
-  top: 10px;
+  float: right;
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -4360,6 +4368,11 @@ body.kss .kss-example-preview ul {
   padding-left: 1em;
 }
 
+body.kss .kss-example-preview .list-negative {
+  list-style-image: url(../images/icons/bullet-white.png);
+  padding-left: 1em;
+}
+
 body.kss .kss-example-preview .tags-list .tags-list__tag a {
   font-size: 1em;
   color: #6f99a5;
@@ -5008,6 +5021,14 @@ body.kss .kss-example-preview table tr p:last-child {
   margin: 0;
 }
 
+body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
+  margin-right: 2em;
+}
+
+body.kss .kss-example-preview .tabs__tabs .tabs__tab-link.active {
+  font-weight: bold;
+}
+
 body.kss .kss-example-preview .tabs__tab-content {
   display: none;
 }
@@ -5084,6 +5105,10 @@ body.kss .kss-example-preview .heading-highlight.heading-highlight--mobile:befor
   background: #DB8E6A;
 }
 
+body.kss .kss-example-preview .heading-highlight.heading-highlight--negative:before {
+  background: #fff;
+}
+
 body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview .data-source-link .data-source-link__number, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
 body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
 body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
@@ -5098,7 +5123,7 @@ body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .subnav .subnav__links li a, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .subnav .subnav__links li a, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -5224,7 +5249,7 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;

@@ -47,7 +47,10 @@
 
 
       $triggers.click(function(e) {
-        var state = $(this).data('flyoutState');
+        var $target = $('#' + $(this).data('flyoutTarget')),
+            state = $target.data('flyoutState');
+
+        console.log(state);
 
         if (state == 'closed') {
           showContent(this);
@@ -57,8 +60,8 @@
         e.preventDefault();
       });
 
-      $('.flyout__close').click(function(e) {
-        $(this).parent('.flyout__content').data('flyoutTrigger').click();
+      $('.flyout__close-link').click(function(e) {
+        $(this).closest('.flyout__content').data('flyoutTrigger').click();
         e.preventDefault();
       });
     }
@@ -72,7 +75,8 @@
         $parent = $target.offsetParent(),
         parentPadding = $parent.outerHeight() - $parent.height();
 
-    $(trigger).data('flyoutState', 'open');
+    $target.data('flyoutState', 'open');
+
     $target.animate({
       left: '0%',
     }, animation);
@@ -94,7 +98,7 @@
 
     $parentClone.remove();
 
-    $(trigger).data('flyoutState', 'closed');
+    $target.data('flyoutState', 'closed');
     
     $target.animate({
       left: '100%',
@@ -109,7 +113,7 @@
   // Hand-full of setup tasks
   function setup() {
     // Add flyout-state data
-    $triggers.data('flyoutState', 'closed');
+    $contents.data('flyoutState', 'closed');
     
     // Link content back to it's corresponding trigger
     $triggers.each(function(index, el) {
@@ -122,9 +126,6 @@
       $(this).show();
       $(this).offsetParent().css('overflow', 'hidden');
     });
-
-    // Add a close icon to each content continer
-    $contents.prepend($('<a href="#" class="link flyout__close" href="#">Close &#9587;</a>'));
   }
 
 })(jQuery);

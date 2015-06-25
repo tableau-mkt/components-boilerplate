@@ -14,6 +14,7 @@ Weight: 5
 .heading-highlight--public - Public colored highlight
 .heading-highlight--reader - Reader colored highlight
 .heading-highlight--mobile - Mobile colored highlight
+.heading-highlight--negative - White colored highlight
 
 Style guide: typography.heading-highlight
 */
@@ -37,5 +38,9 @@ Style guide: typography.heading-highlight
     &.heading-highlight--#{"" + $name}:before {
       background: $color;
     }
+  }
+
+  &.heading-highlight--negative:before {
+    background: $text-negative;
   }
 }

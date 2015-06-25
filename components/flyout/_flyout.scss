@@ -15,12 +15,19 @@ Style guide: interactive.flyout
   width: 100%;
 }
 
-.flyout__close {
+.flyout__close-wrapper {
   position: absolute;
-  z-index: 5;
-  right: 10px;
-  top: 10px;
-  
-  &:hover {
+  width: 100%;
+  padding-top: 3em;
+  @extend .content-container;
+
+  .flyout__close-link {
+    position: relative;
+    z-index: 5;
+    float: right;
+
+    
+    &:hover {
+    }
   }
 }

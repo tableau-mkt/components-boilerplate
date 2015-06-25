@@ -257,7 +257,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .teaser-list:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -385,7 +385,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .teaser-list:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1285,7 +1285,7 @@ Weight: 30
 
 Style guide: layout.container
 */
-.content-container {
+.content-container, .flyout__close-wrapper {
   box-sizing: border-box;
   max-width: 1550px;
   margin-left: auto;
@@ -1294,20 +1294,20 @@ Style guide: layout.container
   padding-right: 11%;
 }
 
-.content-container.content-container--wide {
+.content-container.content-container--wide, .content-container--wide.flyout__close-wrapper {
   padding-left: 3%;
   padding-right: 3%;
 }
 
 @media (max-width: 960px) {
-  .content-container {
+  .content-container, .flyout__close-wrapper {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
 @media (max-width: 639px) {
-  .content-container {
+  .content-container, .flyout__close-wrapper {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -1716,11 +1716,16 @@ Style guide: interactive.flyout
   width: 100%;
 }
 
-.flyout__close {
+.flyout__close-wrapper {
   position: absolute;
+  width: 100%;
+  padding-top: 3em;
+}
+
+.flyout__close-wrapper .flyout__close-link {
+  position: relative;
   z-index: 5;
-  right: 10px;
-  top: 10px;
+  float: right;
 }
 
 /*
@@ -3925,10 +3930,17 @@ Weight: 1
 
 Markup: list.hbs
 
+.list-negative - Light colored bullets.
+
 Style guide: lists.standard
 */
 ul {
   list-style-image: url(../images/icons/bullet.png);
+  padding-left: 1em;
+}
+
+.list-negative {
+  list-style-image: url(../images/icons/bullet-white.png);
   padding-left: 1em;
 }
 
@@ -4808,6 +4820,14 @@ Markup: tabs.hbs
 
 Style guide: interactive.tabs
 */
+.tabs__tabs .tabs__tab-link {
+  margin-right: 2em;
+}
+
+.tabs__tabs .tabs__tab-link.active {
+  font-weight: bold;
+}
+
 .tabs__tab-content {
   display: none;
 }
@@ -4871,6 +4891,7 @@ Weight: 5
 .heading-highlight--public - Public colored highlight
 .heading-highlight--reader - Reader colored highlight
 .heading-highlight--mobile - Mobile colored highlight
+.heading-highlight--negative - White colored highlight
 
 Style guide: typography.heading-highlight
 */
@@ -4914,6 +4935,10 @@ Style guide: typography.heading-highlight
   background: #DB8E6A;
 }
 
+.heading-highlight.heading-highlight--negative:before {
+  background: #fff;
+}
+
 /*
 Font Families
 
@@ -4953,7 +4978,7 @@ h6, .heading--h6 {
   font-family: 'Benton Sans Light', Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .subnav .subnav__links li a, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow {
+.text--benton-book, .cta, .global-footer .global-footer__language, .global-nav .global-nav__primary-menu li a, .link, .subnav .subnav__links li a, .heading--x-small, .text--label, .tags-list, .slideshow .slideshow__arrow, .tabs__tabs .tabs__tab-link {
   font-family: 'Benton Sans Book', Helvetica, sans-serif;
 }
 
@@ -5151,7 +5176,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .tags-list, .slideshow .slideshow__arrow {
+.text--label, .tags-list, .slideshow .slideshow__arrow, .tabs__tabs .tabs__tab-link {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;

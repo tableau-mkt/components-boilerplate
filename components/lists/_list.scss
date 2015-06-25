@@ -7,10 +7,17 @@ Weight: 1
 
 Markup: list.hbs
 
+.list-negative - Light colored bullets.
+
 Style guide: lists.standard
 */
 
 ul {
   list-style-image: url(../images/icons/bullet.png);
+  padding-left: 1em;
+}
+
+.list-negative {
+  list-style-image: url(../images/icons/bullet-white.png);
   padding-left: 1em;
 }

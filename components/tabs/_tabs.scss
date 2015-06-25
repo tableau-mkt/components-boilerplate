@@ -11,6 +11,15 @@ Style guide: interactive.tabs
 .tabs__tabs {
   @extend %plain-list;
   @extend %inline-list;
+  
+  .tabs__tab-link {
+    @extend .text--label;
+    margin-right: 2em;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
 }
 
 .tabs__content {
