@@ -22,12 +22,9 @@ Style guide: interactive.tabs
   }
 }
 
-.tabs__content {
-  
-}
-
 .tabs__tab-content {
   display: none;
+  @extend %clearfix;
 
   &.active {
     display: inherit;

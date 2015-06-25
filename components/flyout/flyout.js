@@ -19,8 +19,6 @@
         var $target = $('#' + $(this).data('flyoutTarget')),
             state = $target.data('flyoutState');
 
-        console.log(state);
-
         if (state == 'closed') {
           showContent(this);
         } else if (state == 'open') {

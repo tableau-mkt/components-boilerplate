@@ -1336,7 +1336,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .tabs__tab-content:after {
   content: "";
   display: table;
   clear: both;
@@ -1437,7 +1437,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .tabs__tab-content:after {
   content: "";
   display: table;
   clear: both;

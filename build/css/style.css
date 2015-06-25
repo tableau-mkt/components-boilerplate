@@ -257,7 +257,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .tabs__tab-content:after {
   content: "";
   display: table;
   clear: both;
@@ -385,7 +385,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .tabs__tab-content:after {
   content: "";
   display: table;
   clear: both;
