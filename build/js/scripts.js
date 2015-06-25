@@ -691,12 +691,17 @@ function dataSources() {
   // Show the target content
   function showContent(trigger) {
     var data = $(trigger).data(),
+        $trigger = $(trigger),
         $target = $('#' + data.revealTarget),
         $curtain = $('#' + data.revealCurtain),
+        hideText = data.revealHideText,
         type = data.revealType,
         media = data.revealMedia;
 
-    $(trigger).data('revealState', 'open');
+    $trigger.data('revealState', 'open')
+    if (hideText != "") {
+      $trigger.text(hideText);
+    }
     $target.slideDown(animation);
     $curtain.slideUp(animation);
 
@@ -712,9 +717,10 @@ function dataSources() {
     var data = $(trigger).data(),
         $target = $('#' + data.revealTarget),
         $curtain = $('#' + data.revealCurtain),
+        showText = data.revealShowText,
         media = data.revealMedia;
 
-    $(trigger).data('revealState', 'closed');
+    $(trigger).data('revealState', 'closed').text(showText);
     $target.slideUp(animation);
     $curtain.slideDown(animation);
 
@@ -728,10 +734,15 @@ function dataSources() {
     // Add reveal-state data
     $triggers.data('revealState', 'closed');
     
-    // Link content back to it's corresponding trigger
     $triggers.each(function(index, el) {
-      var $target = $('#' + $(this).data('revealTarget'));
+      var $target = $('#' + $(this).data('revealTarget')),
+          showText = $(this).text();
+      
+      // Link content back to it's corresponding trigger
       $target.data('revealTrigger', $(this));
+
+      // Save original trigger text
+      $triggers.data('revealShowText', showText);
     });
 
     // // Set initial margin on content if there is a curtain

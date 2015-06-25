@@ -3923,6 +3923,10 @@ body.kss .kss-example-preview .icon--slideshow-next-dark {
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
+body.kss .kss-example-preview .icon--large {
+  font-size: 3.5em;
+}
+
 @font-face {
   body.kss .kss-example-preview {
     font-family: "tableau-icons";
@@ -5026,9 +5030,9 @@ body.kss .kss-example-preview .thumbnail img {
 }
 
 body.kss .kss-example-preview .thumbnail img:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 body.kss .kss-example-preview .thumbnail.thumbnail--play:after {

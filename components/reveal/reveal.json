@@ -1,6 +1,7 @@
 {
   "trigger": {
     "text": "Reveal Content",
+    "hideText": "Hide Content",
     "classes": "cta"
   },
   "type": false,

@@ -3446,6 +3446,10 @@ Misc fonts for prototype
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
+.icon--large {
+  font-size: 3.5em;
+}
+
 @font-face {
   font-family: "tableau-icons";
   src: url("../fonts/tableau-icons.eot");
@@ -4837,9 +4841,9 @@ Style guide: images.thumbnail
 }
 
 .thumbnail img:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .thumbnail.thumbnail--play:after {
