@@ -748,6 +748,17 @@ rather than needing to push by a full unit. This should only be used if you need
 to center content in an uneven number of columns
  */
   /*
+Hamburger
+
+Hamburger icon for mobile navigation.
+
+Markup: hamburger.hbs
+
+.hamburger--open - Open state of hamburger icon.
+
+Style guide navigation.hamburger
+*/
+  /*
 Page Hero
 
 Heroes on need to accomplish two main tasks. First, they need to convey a 
@@ -1316,6 +1327,24 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .mobile-show {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .tablet-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .tablet-show {
+    display: none;
+  }
+}
+
 @media (min-width: 961px) {
   body.kss .kss-example-preview .desktop-hide {
     display: none;
@@ -1413,6 +1442,24 @@ body.kss .kss-example-preview .bg-cover {
 
 @media (max-width: 639px) {
   body.kss .kss-example-preview .mobile-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .mobile-show {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .tablet-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .tablet-show {
     display: none;
   }
 }
@@ -2170,6 +2217,8 @@ body.kss .kss-example-preview .data-source-link:focus {
 }
 
 body.kss .kss-example-preview .data-source-link .data-source-link__number {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   font-size: 3.5714285714em;
   line-height: 66px;
 }
@@ -2496,21 +2545,16 @@ body.kss .kss-example-preview .global-nav {
   background: #fff;
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__logo,
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu,
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
-  float: left;
-  opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
-  float: right;
-}
-
 body.kss .kss-example-preview .global-nav .global-nav__logo {
   max-width: 200px;
+  float: left;
+}
+
+@media (max-width: 1300px) {
+  body.kss .kss-example-preview .global-nav .global-nav__logo {
+    max-width: 140px;
+    margin-top: 6px;
+  }
 }
 
 body.kss .kss-example-preview .global-nav .global-nav__logo a {
@@ -2518,107 +2562,127 @@ body.kss .kss-example-preview .global-nav .global-nav__logo a {
   line-height: 0;
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu ul {
-  margin: 0.8em 0 0 3em;
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .global-nav .global-nav__logo,
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu,
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
+    float: left;
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
+    float: right;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu ul {
+    margin: 0.8em 0 0 3em;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
+    position: relative;
+    padding: 10px;
+    color: #212535;
+    font-family: "Benton Sans Book", Helvetica, sans-serif;
+  }
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
-  position: relative;
-  padding: 10px;
-  color: #212535;
+@media (min-width: 961px) and (max-width: 1300px) {
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
+    padding: 10px 8px;
+  }
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expandable a:after {
-  content: "";
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  top: 47px;
-  left: 50%;
-  margin-left: -20px;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #f0f0f0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expandable a:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    top: 47px;
+    left: 50%;
+    margin-left: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f0f0f0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expanded a:after {
+    opacity: 1;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
+    padding-right: 45px;
+    text-align: right;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link {
+    padding: 10px;
+    color: #000;
+  }
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__primary-menu li.expanded a:after {
-  opacity: 1;
+@media (min-width: 961px) and (max-width: 1300px) {
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link {
+    padding: 10px 8px;
+  }
 }
 
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
-  padding-right: 45px;
-  text-align: right;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link {
-  padding: 10px;
-  color: #000;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
-  margin: 0 0 0 10px;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search {
-  position: absolute;
-  right: 0;
-  width: 45px;
-  height: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] {
-  position: absolute;
-  right: 0;
-  width: 45px;
-  height: 100%;
-  border: none;
-  cursor: pointer;
-  padding: 0 0 0 45px;
-  background-image: url("../images/icons/icon-magnifying-glass.svg");
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: 15px center;
-  text-align: left;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']:focus {
-  outline: none;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-webkit-input-placeholder,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-moz-placeholder,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-moz-placeholder,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-ms-input-placeholder {
-  color: #787878;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-decoration,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-cancel-button,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-button,
-body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-decoration {
-  display: none;
-}
-
-body.kss .kss-example-preview .global-nav .global-nav__search .global-nav__search__close {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  background-image: url("../images/global/x-close-nav.png");
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: center center;
-  top: 0;
-  right: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
+    margin: 0 0 0 10px;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search {
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] {
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 0 45px;
+    background-image: url("../images/icons/icon-magnifying-glass.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 15px center;
+    text-align: left;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']:focus {
+    outline: none;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-webkit-input-placeholder,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-moz-placeholder,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] ::-moz-placeholder,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'] :-ms-input-placeholder {
+    color: #787878;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-decoration,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-cancel-button,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-button,
+  body.kss .kss-example-preview .global-nav .global-nav__search input[type='search']::-webkit-search-results-decoration {
+    display: none;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__search .global-nav__search__close {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    background-image: url("../images/global/x-close-nav.png");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center center;
+    top: 0;
+    right: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
 }
 
 body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__search {
@@ -2643,6 +2707,63 @@ body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .global-nav {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 64px;
+  }
+  body.kss .kss-example-preview .global-nav .relative {
+    position: initial;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__mobile-wrapper {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #f0f0f0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    padding: 14px;
+    -webkit-transition: background 0.75s;
+            transition: background 0.75s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__hamburger.open {
+    background: #f0f0f0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li {
+    display: block;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
+    display: block;
+    padding: 6px 1em;
+    border-bottom: 1px solid #ddd;
+    color: #212535;
+    font-family: "Benton Sans Light", Helvetica, sans-serif;
+    font-size: 1.7142857143em;
+    color: #333;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li {
+    display: block;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link,
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
+    padding: 12px 24px;
+    color: #000;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
+    color: #eb912c;
+    background: none;
+    margin: 0;
+  }
 }
 
 body.kss .kss-example-preview .global-nav__drawer {
@@ -3759,6 +3880,65 @@ body.kss .kss-example-preview .grid--12 {
   body.kss .kss-example-preview .pull-half--24 {
     margin-left: -101.694915254%;
   }
+}
+
+body.kss .kss-example-preview .hamburger {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty,
+body.kss .kss-example-preview .hamburger .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 36px;
+  background: #000;
+  font-size: 0;
+  text-indent: -999em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  content: '';
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty {
+  top: 18px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:before {
+  top: -4px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  top: 4px;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty {
+  background-color: transparent;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after {
+  top: 0;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 body.kss .kss-example-preview .hero {
@@ -5109,34 +5289,25 @@ body.kss .kss-example-preview .heading-highlight.heading-highlight--negative:bef
   background: #fff;
 }
 
-body.kss .kss-example-preview .text--benton-thin, body.kss .kss-example-preview .data-source-link .data-source-link__number, body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
-body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2,
-body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3,
-body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .heading--h4,
-body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
-body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
-  font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+body.kss .kss-example-preview .text--benton-thin {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
 }
 
-body.kss .kss-example-preview .text--benton-light, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete, body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .subnav .subnav__title, body.kss .kss-example-preview .text--dropdown {
-  font-family: 'Benton Sans Light', Helvetica, sans-serif;
+body.kss .kss-example-preview .text--benton-light {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a, body.kss .kss-example-preview .link, body.kss .kss-example-preview .subnav .subnav__links li a, body.kss .kss-example-preview .heading--x-small, body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
-  font-family: 'Benton Sans Book', Helvetica, sans-serif;
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .link, body.kss .kss-example-preview .subnav .subnav__links li a {
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
 body.kss .kss-example-preview .text--benton-medium {
-  font-family: 'Benton Sans Medium', Helvetica, sans-serif;
+  font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview body,
-body.kss .kss-example-preview .kss-example-preview-wrapper,
-body.kss .kss-example-preview .text--body-large,
-body.kss .kss-example-preview .text--body-medium,
-body.kss .kss-example-preview .text--body-small {
-  font-family: 'Merriweather', serif;
+body.kss .kss-example-preview .text--merriweather-light {
+  font-family: "Merriweather", serif;
 }
 
 body.kss .kss-example-preview body,
@@ -5144,6 +5315,7 @@ body.kss .kss-example-preview .kss-example-preview-wrapper,
 body.kss .kss-example-preview .text--body-large,
 body.kss .kss-example-preview .text--body-medium,
 body.kss .kss-example-preview .text--body-small {
+  font-family: "Merriweather", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
@@ -5168,6 +5340,8 @@ body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--x-smal
 body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--label, body.kss .kss-example-preview .heading--h5,
 body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
   margin: .5em 0;
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   line-height: 1.2;
 }
 
@@ -5196,36 +5370,47 @@ body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
 }
 
 body.kss .kss-example-preview .heading--homepage {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   font-size: 5em;
   line-height: 1.21;
   color: #000;
 }
 
 body.kss .kss-example-preview .heading--product {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   color: #000;
 }
 
 body.kss .kss-example-preview .heading--download {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   font-size: 3.4285714286em;
   line-height: 1.25;
   color: #000;
 }
 
 body.kss .kss-example-preview .heading--medium {
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-weight: 100;
   line-height: 1.39;
   color: #000;
 }
 
 body.kss .kss-example-preview .heading--small {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
   color: #333;
   -webkit-font-smoothing: auto;
 }
 
 body.kss .kss-example-preview .heading--x-small {
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
   color: #333;
 }
 
 body.kss .kss-example-preview .heading--label {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
   margin: 0;
   font-size: 1.4285714286em;
   color: #333;
@@ -5234,22 +5419,26 @@ body.kss .kss-example-preview .heading--label {
 }
 
 body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.7142857143em;
   color: #333;
 }
 
 body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .subnav .subnav__title {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.5714285714em;
   color: #000;
 }
 
 body.kss .kss-example-preview .text--dropdown {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.1428571429em;
   color: #787878;
   line-height: 1.875;
 }
 
 body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .slideshow .slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;

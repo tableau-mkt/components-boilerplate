@@ -185,15 +185,21 @@ function dataSourcesSearch() {
  * Global gavigation interactions
  */
 (function($){
-  $(document).ready(function(){
+  var $globalNav = $('.global-nav'),
+      $menu = $globalNav.find('.global-nav__primary-menu'),
+      $expandableLinks = $menu.find('li.expandable'),
+      $drawer = $('.global-nav__drawer'),
+      $hamburger = $globalNav.find('.hamburger'),
+      $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
+      animation = {
+        duration: 500,
+        easing: "easeInOutQuart"
+      };
 
+  $(document).ready(function(){
+    
     // Drawer Expanding interaction
     // @todo needs lots of work here.
-    var $globalNav = $('.global-nav'),
-        $menu = $globalNav.find('.global-nav__primary-menu'),
-        $expandableLinks = $menu.find('li.expandable'),
-        $drawer = $('.global-nav__drawer');
-
     $expandableLinks.hover( 
       function() {
         openDrawer(this);
@@ -204,16 +210,6 @@ function dataSourcesSearch() {
       }
     );
 
-    function openDrawer(el) {
-      $(el).addClass('expanded');
-      $drawer.slideDown();
-    }
-
-    function closeDrawer() {
-      $expandableLinks.removeClass('expanded');
-      $drawer.slideUp();
-    }
-
     $drawer.click(function(e) {
       e.stopPropagation();
     });
@@ -222,21 +218,41 @@ function dataSourcesSearch() {
       closeDrawer();
     });
 
+    // Mobile menu
+    $hamburger.on('click.global-nav', function(e) {
+      $mobileWrapper.slideToggle(animation);
+      $hamburger.parent().toggleClass('open');
+      e.preventDefault();
+    });
+
+
+  });
+
+  function openDrawer(el) {
+    $(el).addClass('expanded');
+    $drawer.slideDown();
+  }
+
+  function closeDrawer() {
+    $expandableLinks.removeClass('expanded');
+    $drawer.slideUp();
+  }
 
 
 
 
-    /***************************************************************************
-    * HUGE Code below - @todo remove
-    ***************************************************************************/
 
-    // Nav event listeners
-    // navigationSetup();
+  /***************************************************************************
+  * HUGE Code below - @todo remove
+  ***************************************************************************/
 
-    // Product navigation functionality
-    // productNavigationSetup();
+  // Nav event listeners
+  // navigationSetup();
 
+  // Product navigation functionality
+  // productNavigationSetup();
 
+  $(document).ready(function(){
     function navigationSetup() {
       var $hamburger = $('.hamburger'),
           $hamburgerClose = $('.hamburger-close'),
@@ -503,6 +519,21 @@ function dataSourcesSearch() {
       appendTo: ".global-nav"
     });
 
+  });
+})(jQuery);
+;
+/** 
+ * Hamburger interaction interactions
+ */
+(function($){
+  var $hamburger = $('.hamburger');
+  $(document).ready(function(){
+    if ($hamburger.length) {
+      $hamburger.on('click.hamburger', function(e) {
+        $(this).toggleClass('hamburger--open');
+        e.preventDefault();
+      });
+    }
   });
 })(jQuery);
 ;

@@ -25,24 +25,24 @@ Style guide: typography.fonts
 */
 
 .text--benton-thin {
-  font-family: 'Benton Sans Thin', Helvetica, sans-serif;
+  font-family: $text--benton-thin;
   font-weight: 100;
 }
 
 .text--benton-light {
-  font-family: 'Benton Sans Light', Helvetica, sans-serif;
+  font-family: $text--benton-light;
 }
 
 .text--benton-book {
-  font-family: 'Benton Sans Book', Helvetica, sans-serif;
+  font-family: $text--benton-book;
 }
 
 .text--benton-medium {
-  font-family: 'Benton Sans Medium', Helvetica, sans-serif;
+  font-family: $text--benton-medium;
 }
 
 .text--merriweather-light {
-  font-family: 'Merriweather', serif;
+  font-family: $text--merriweather-light;
 }
 
 
@@ -69,7 +69,7 @@ body,
 .text--body-large,
 .text--body-medium,
 .text--body-small {
-  @extend .text--merriweather-light;
+  font-family: $text--merriweather-light;
   font-weight: normal;
   font-style: normal;
   font-size: $base-font-size;
@@ -106,8 +106,9 @@ h3, .heading--h3,
 h4, .heading--h4,
 h5, .heading--h5,
 h6, .heading--h6 {
-  @extend .text--benton-thin;
   margin: .5em 0;
+  font-family: $text--benton-thin;
+  font-weight: 100;
   line-height: 1.2;
 }
 
@@ -170,7 +171,8 @@ Styleguide typography.context-headings
 
 .heading--homepage {
   @extend h1;
-  @extend .text--benton-thin;
+  font-family: $text--benton-thin;
+  font-weight: 100;
   font-size: em(70px);
   line-height: 1.21;
   color: $text-headlines;
@@ -178,13 +180,15 @@ Styleguide typography.context-headings
 
 .heading--product {
   @extend h1;
-  @extend .text--benton-thin;
+  font-family: $text--benton-thin;
+  font-weight: 100;
   color: $text-headlines;
 }
 
 .heading--download {
   @extend h1;
-  @extend .text--benton-thin;
+  font-family: $text--benton-thin;
+  font-weight: 100;
   font-size: em(48px);
   line-height: 1.25;
   color: $text-headlines;
@@ -192,27 +196,28 @@ Styleguide typography.context-headings
 
 .heading--medium {
   @extend h2;
-  @extend .text--benton-thin;
+  font-family: $text--benton-thin;
+  font-weight: 100;
   line-height: 1.39;
   color: $text-headlines;
 }
 
 .heading--small {
   @extend h3;
-  @extend .text--benton-light;
+  font-family: $text--benton-light;
   color: $text-dark-body;
   -webkit-font-smoothing: auto;
 }
 
 .heading--x-small {
   @extend h4;
-  @extend .text--benton-book;
+  font-family: $text--benton-book;
   color: $text-dark-body;
 }
 
 .heading--label {
   @extend h5;
-  @extend .text--benton-light;
+  font-family: $text--benton-light;
   margin: 0;
   font-size: em(20px);
   color: $text-dark-body;
@@ -239,26 +244,26 @@ Style guide: typography.other
 */
 
 .text--large-copy {
-  @extend .text--benton-light;
+  font-family: $text--benton-light;
   font-size: em(24px);
   color: $text-dark-body;
 }
 
 .text--sub-nav {
-  @extend .text--benton-light;
+  font-family: $text--benton-light;
   font-size: em(22px);
   color: $text-headlines;
 }
 
 .text--dropdown {
-  @extend .text--benton-light;
+  font-family: $text--benton-light;
   font-size: em(16px);
   color: $text-medium-body;
   line-height: 1.875;
 }
 
 .text--label {
-  @extend .text--benton-book;
+  font-family: $text--benton-book;
   font-size: em(11px);
   letter-spacing: 1px;
   // color: $text-dark-body;

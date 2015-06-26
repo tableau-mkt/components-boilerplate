@@ -27,7 +27,7 @@ Style guide: layout.container
     padding-right: 3%;
   }
 
-  @include breakpoint(max-width $tablet-max) {
+  @include breakpoint($tablet-max) {
     padding-left: 2em;
     padding-right: 2em;
   }

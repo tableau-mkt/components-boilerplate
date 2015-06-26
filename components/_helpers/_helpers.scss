@@ -90,6 +90,27 @@ most common proportions for video players.
   }
 }
 
+@include breakpoint($tablet-min) {
+  // Show element only on the mobile breakpoint
+  .mobile-show {
+    display: none;
+  }
+}
+
+@include breakpoint($tablet-max) {
+  // Hide the element from display only on the tablet breakpoint
+  .tablet-hide {
+    display: none;
+  }
+}
+
+@include breakpoint($desktop-only) {
+  // Show element only on the tablet and mobile breakpoint
+  .tablet-show {
+    display: none;
+  }
+}
+
 @include breakpoint($desktop-only) {
   // Hide the element from display only on the desktop breakpoint
   .desktop-hide {

@@ -3,19 +3,14 @@
  */
 
 // Breakpoints
-$mobile-max: 639px;
+$mobile-max: max-width 639px;
 $tablet-min: 640px;
-$tablet-max: 960px;
+$tablet-max: max-width 960px;
 $desktop-min: 961px;
 $content-max: 1550px;
 $layout-max: 1920px;
 
 // Layout-exclusive breakpoints
-$mobile-only: max-width $mobile-max;
-$tablet-only: $tablet-min $tablet-max;
+$mobile-only: $mobile-max;
+$tablet-only: (min-width $tablet-min) ($tablet-max);
 $desktop-only: min-width $desktop-min;
-
-
-
-// Font sizes
-$base-font-size: 14px;
