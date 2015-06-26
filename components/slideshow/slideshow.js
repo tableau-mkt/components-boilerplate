@@ -10,7 +10,15 @@
           arrows: false,
           speed: 650,
           easing: "easeInOutQuart",
-          slide: '.slideshow__slide'
+          slide: '.slideshow__slide',
+          responsive: [
+            {
+              breakpoint: 639,
+              settings: {
+                adaptiveHeight: true,
+              }
+            }
+          ]
         });
 
         slideShowNavigation();

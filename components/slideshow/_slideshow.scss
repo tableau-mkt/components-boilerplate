@@ -119,7 +119,8 @@ Style guide: interactive.slideshow
   @include breakpoint($mobile-only) {
     .slick-dots {
       bottom: auto;
-      top: 32%;
+      top: 0;
+      margin-top: 40%;
     }
 
     .slideshow__arrow {

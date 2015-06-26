@@ -1521,6 +1521,12 @@ Style guide: buttons-links.cta
   color: #c92434;
 }
 
+@media (max-width: 639px) {
+  .cta {
+    display: block;
+  }
+}
+
 /* 
 Data Source Link
 
@@ -1920,7 +1926,15 @@ Style Guide: navigation.footer
 }
 
 .global-footer .global-footer__first {
+  float: left;
+  width: 55%;
   padding-top: 22px;
+}
+
+.global-footer .global-footer__second {
+  float: right;
+  width: 45%;
+  text-align: right;
 }
 
 .global-footer .global-footer__language {
@@ -1984,12 +1998,47 @@ Style Guide: navigation.footer
 
 .global-footer .global-footer__menu li a {
   color: #bbb;
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
 .global-footer .global-footer__social li a {
   color: #bbb;
   font-size: 1.2em;
-  margin-left: 1em;
+  padding-left: 1em;
+}
+
+@media (max-width: 960px) {
+  .global-footer .global-footer__first {
+    width: 65%;
+  }
+  .global-footer .global-footer__second {
+    width: 35%;
+  }
+  .global-footer .global-footer__menu li {
+    padding: 0 0.5em;
+  }
+}
+
+@media (max-width: 639px) {
+  .global-footer .global-footer__first,
+  .global-footer .global-footer__second {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+  .global-footer .global-footer__language {
+    float: none;
+  }
+  .global-footer .global-footer__language .global-footer__language__options {
+    width: 100%;
+  }
+  .global-footer .global-footer__menu {
+    float: none;
+    margin: 2em 0 1em;
+  }
+  .global-footer .global-footer__social li a {
+    padding: .5em;
+  }
 }
 
 /*
@@ -3552,7 +3601,7 @@ Style guide: layout.hero
   }
 }
 
-@media (min-width: 640px) and (max-width: 960px) {
+@media (max-width: 960px) {
   .hero .hero__background .hero__background__inner {
     padding-bottom: 50%;
   }
@@ -3565,6 +3614,16 @@ Style guide: layout.hero
 }
 
 @media (max-width: 639px) {
+  .hero {
+    background: #fff;
+    color: #333;
+  }
+  .hero h1, .hero .heading--homepage, .hero .heading--product, .hero .heading--download, .hero h4, .hero .heading--x-small {
+    color: #333;
+  }
+  .hero .hero__content {
+    padding-bottom: 2em;
+  }
   .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
     font-size: 3em;
   }
@@ -4725,7 +4784,8 @@ Style guide: interactive.slideshow
 @media (max-width: 639px) {
   .slideshow .slick-dots {
     bottom: auto;
-    top: 32%;
+    top: 0;
+    margin-top: 40%;
   }
   .slideshow .slideshow__arrow {
     display: none;

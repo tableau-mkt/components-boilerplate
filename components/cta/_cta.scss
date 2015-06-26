@@ -117,4 +117,8 @@ Style guide: buttons-links.cta
       color: $button-final;
     }
   }
+
+  @include breakpoint($mobile-only) {
+    display: block;
+  }
 }

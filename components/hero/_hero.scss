@@ -98,7 +98,7 @@ Style guide: layout.hero
     }
   }
 
-  @include breakpoint($tablet-only) {
+  @include breakpoint($tablet-max) {
     .hero__background .hero__background__inner {
       padding-bottom: 50%;
     }
@@ -113,7 +113,16 @@ Style guide: layout.hero
   }
 
   @include breakpoint($mobile-only) {
+    background: #fff;
+    color: $text-dark-body;
+
+    h1, h4 {
+      color: $text-dark-body;      
+    }
+
     .hero__content {
+      padding-bottom: 2em;
+      
       h1 {
         font-size: 3em;
 
