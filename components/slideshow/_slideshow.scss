@@ -108,6 +108,25 @@ Style guide: interactive.slideshow
     }
 
   }
+
+  @include breakpoint($tablet-only) {
+    .content-container {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    .slick-dots {
+      bottom: auto;
+      top: 32%;
+    }
+
+    .slideshow__arrow {
+      display: none;
+    }
+  }
+
 }
 
 

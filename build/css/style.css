@@ -3463,18 +3463,19 @@ Style guide: layout.hero
   overflow: hidden;
 }
 
-.hero .hero__image {
+.hero .hero__background {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
 }
 
-.hero .hero__image .hero__image__inner {
+.hero .hero__background .hero__background__inner {
   height: 0;
   padding-bottom: 33%;
+  background-size: cover;
 }
 
-.hero .hero__image img {
+.hero .hero__background img {
   position: absolute;
   width: 100%;
 }
@@ -3490,61 +3491,90 @@ Style guide: layout.hero
   width: 100%;
 }
 
-.hero .hero__content {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
+@media (min-width: 640px) {
+  .hero .hero__content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+  }
+  .hero .hero__content .hero__content__inner {
+    width: 100%;
+  }
+  .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
+    margin: 0;
+  }
 }
 
-.hero .hero__content .hero__content__inner {
-  width: 100%;
+@media (min-width: 961px) {
+  .hero .hero__background:before,
+  .hero .hero__background:after,
+  .hero .hero__video:before,
+  .hero .hero__video:after {
+    display: none;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 200px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+    background-image: linear-gradient(to right, #1b1b1b, transparent);
+  }
 }
 
-.hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
-  margin: 0;
-}
-
-.hero .hero__image:before,
-.hero .hero__image:after,
-.hero .hero__video:before,
-.hero .hero__video:after {
-  display: none;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 200px;
-  height: 100%;
-  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
-  background-image: linear-gradient(to right, #1b1b1b, transparent);
-}
-
-@media (min-width: 1920px) {
-  .hero .hero__image:before,
-  .hero .hero__image:after,
+@media (min-width: 961px) and (min-width: 1920px) {
+  .hero .hero__background:before,
+  .hero .hero__background:after,
   .hero .hero__video:before,
   .hero .hero__video:after {
     display: block;
   }
 }
 
-.hero .hero__image:after,
-.hero .hero__video:after {
-  background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
-  background-image: linear-gradient(to left, #1b1b1b, transparent);
-  left: auto;
-  right: 0;
+@media (min-width: 961px) {
+  .hero .hero__background:after,
+  .hero .hero__video:after {
+    background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
+    background-image: linear-gradient(to left, #1b1b1b, transparent);
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .hero .hero__background .hero__background__inner {
+    padding-bottom: 50%;
+  }
+  .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
+    font-size: 4em;
+  }
+  .hero .hero__content h1 br, .hero .hero__content .heading--homepage br, .hero .hero__content .heading--product br, .hero .hero__content .heading--download br {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
+    font-size: 3em;
+  }
+  .hero .hero__content h1 br, .hero .hero__content .heading--homepage br, .hero .hero__content .heading--product br, .hero .hero__content .heading--download br {
+    display: none;
+  }
+  .hero .hero__content .cta {
+    display: block;
+    text-align: center;
+  }
 }
 
 /*
@@ -4683,6 +4713,23 @@ Style guide: interactive.slideshow
 
 .slideshow .slideshow__arrow.slideshow__arrow--right:hover .slideshow__arrow__title {
   padding: 15px 40px 15px 15px;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .slideshow .content-container, .slideshow .flyout__close-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 639px) {
+  .slideshow .slick-dots {
+    bottom: auto;
+    top: 32%;
+  }
+  .slideshow .slideshow__arrow {
+    display: none;
+  }
 }
 
 /*******************************************************************************

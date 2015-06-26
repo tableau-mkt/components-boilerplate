@@ -20,14 +20,15 @@ Style guide: layout.hero
   width: 100%;
   overflow: hidden;  
   
-  .hero__image {
+  .hero__background {
     position: relative;
     max-width: $layout-max;
     margin: 0 auto;
     
-    .hero__image__inner {
+    .hero__background__inner {
       height: 0;
       padding-bottom: 33%;
+      background-size: cover;
     }
 
     img {
@@ -47,51 +48,85 @@ Style guide: layout.hero
     }
   }
 
-  .hero__content {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    // @todo add fallback for older browsers
-    display: flex;
-    align-items: center;
-    color: $text-negative;
-
-    .hero__content__inner {
+  @include breakpoint($tablet-min) {
+    .hero__content {
+      position: absolute;
+      top: 0;
+      height: 100%;
       width: 100%;
-    }
-    
-    h1 {
-      margin: 0;
-    }
+      // @todo add fallback for older browsers
+      display: flex;
+      align-items: center;
+      color: $text-negative;
 
-  }
-
-
-  // Gradients to transition hero image to dark background on wider screens
-  .hero__image:before,
-  .hero__image:after,
-  .hero__video:before,
-  .hero__video:after {
-    display: none;
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 200px;
-    height: 100%;
-    background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
-
-    @include breakpoint($layout-max) {
-      display: block;
+      .hero__content__inner {
+        width: 100%;
+      }
+      
+      h1 {
+        margin: 0;
+      }
     }
   }
 
-  .hero__image:after,
-  .hero__video:after {
-    background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
-    left: auto;
-    right: 0;
+  @include breakpoint($desktop-only) {
+    // Gradients to transition hero image to dark background on wider screens
+    .hero__background:before,
+    .hero__background:after,
+    .hero__video:before,
+    .hero__video:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 200px;
+      height: 100%;
+      background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
+
+      @include breakpoint($layout-max) {
+        display: block;
+      }
+    }
+
+    .hero__background:after,
+    .hero__video:after {
+      background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
+      left: auto;
+      right: 0;
+    }
   }
+
+  @include breakpoint($tablet-only) {
+    .hero__background .hero__background__inner {
+      padding-bottom: 50%;
+    }
+
+    .hero__content h1 {
+      font-size: 4em;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    .hero__content {
+      h1 {
+        font-size: 3em;
+
+        br {
+          display: none;
+        }
+      }
+
+      .cta {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
 }
