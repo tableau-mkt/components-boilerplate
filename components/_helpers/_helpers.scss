@@ -102,11 +102,9 @@ most common proportions for video players.
   .tablet-hide {
     display: none;
   }
-}
 
-@include breakpoint($desktop-only) {
-  // Show element only on the tablet and mobile breakpoint
-  .tablet-show {
+  // Show element only on the desktop breakpoint
+  .desktop-show {
     display: none;
   }
 }
@@ -114,6 +112,11 @@ most common proportions for video players.
 @include breakpoint($desktop-only) {
   // Hide the element from display only on the desktop breakpoint
   .desktop-hide {
+    display: none;
+  }
+  
+  // Show element only on the tablet and mobile breakpoint
+  .tablet-show {
     display: none;
   }
 }

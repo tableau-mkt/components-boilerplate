@@ -76,9 +76,6 @@ Background colors mapping in the form of:
 Product colors mapping in the form of:
   mdifier-name: $color
 */
-  /**
- * SASS vars
- */
   /* generated with grunt-sass-globbing */
   /*
 em($target)
@@ -350,9 +347,6 @@ Background colors mapping in the form of:
 Product colors mapping in the form of:
   mdifier-name: $color
 */
-  /**
- * SASS vars
- */
   /*
 Typography
 
@@ -580,6 +574,7 @@ Markup: cta.hbs
 .cta--play - CTA button with play icon.
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
+.cta--full-width - Full width CTA that fills the width of it's container.
 
 Style guide: buttons-links.cta
 */
@@ -660,6 +655,8 @@ Nothing to see here yet...
 Markup: form_input.hbs
 
 Weight: 1
+
+.input--full-width - A full-width input field.
 
 Style guide: forms.input
 */
@@ -1337,16 +1334,16 @@ body.kss .kss-example-preview .bg-cover {
   body.kss .kss-example-preview .tablet-hide {
     display: none;
   }
-}
-
-@media (min-width: 961px) {
-  body.kss .kss-example-preview .tablet-show {
+  body.kss .kss-example-preview .desktop-show {
     display: none;
   }
 }
 
 @media (min-width: 961px) {
   body.kss .kss-example-preview .desktop-hide {
+    display: none;
+  }
+  body.kss .kss-example-preview .tablet-show {
     display: none;
   }
 }
@@ -1456,16 +1453,16 @@ body.kss .kss-example-preview .bg-cover {
   body.kss .kss-example-preview .tablet-hide {
     display: none;
   }
-}
-
-@media (min-width: 961px) {
-  body.kss .kss-example-preview .tablet-show {
+  body.kss .kss-example-preview .desktop-show {
     display: none;
   }
 }
 
 @media (min-width: 961px) {
   body.kss .kss-example-preview .desktop-hide {
+    display: none;
+  }
+  body.kss .kss-example-preview .tablet-show {
     display: none;
   }
 }
@@ -2051,6 +2048,7 @@ body.kss .kss-example-preview .cta {
   margin: .5em 0;
   padding: 17px 25px;
   background-color: #e8762c;
+  border: 0;
   border-radius: 0;
   cursor: pointer;
   letter-spacing: 1px;
@@ -2196,9 +2194,23 @@ body.kss .kss-example-preview .cta.cta--tertiary:active {
   color: #c92434;
 }
 
+body.kss .kss-example-preview .cta.cta--full-width {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
 @media (max-width: 639px) {
   body.kss .kss-example-preview .cta {
     display: block;
+  }
+  body.kss .kss-example-preview .cta:nth-child(n+2) {
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview button.cta {
+    width: 100%;
   }
 }
 
@@ -2399,12 +2411,13 @@ body.kss .kss-example-preview input[type=password],
 body.kss .kss-example-preview input[type=number],
 body.kss .kss-example-preview input[type=email] {
   box-sizing: border-box;
-  margin-bottom: 1em;
-  padding: 0.7em;
+  margin-bottom: 0.5em;
+  padding: 1em;
   border: 0;
   border-radius: 0;
   background: #fff;
   color: #333;
+  font-size: 14px;
 }
 
 @media (max-width: 639px) {
@@ -2417,8 +2430,22 @@ body.kss .kss-example-preview input[type=email] {
   }
 }
 
+body.kss .kss-example-preview input[type=text].input--full-width,
+body.kss .kss-example-preview input[type=tel].input--full-width,
+body.kss .kss-example-preview input[type=password].input--full-width,
+body.kss .kss-example-preview input[type=number].input--full-width,
+body.kss .kss-example-preview input[type=email].input--full-width {
+  width: 100%;
+}
+
 body.kss .kss-example-preview input::-webkit-input-placeholder {
-  color: #eee;
+  color: #787878;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview input {
+    text-align: center;
+  }
 }
 
 body.kss .kss-example-preview input[type=submit].submitting,
@@ -2574,6 +2601,7 @@ body.kss .kss-example-preview .global-footer .global-footer__social li a {
   }
   body.kss .kss-example-preview .global-footer .global-footer__language {
     float: none;
+    margin-right: 0;
   }
   body.kss .kss-example-preview .global-footer .global-footer__language .global-footer__language__options {
     width: 100%;
@@ -3643,6 +3671,17 @@ body.kss .kss-example-preview .grid--12 {
   }
 }
 
+@media (max-width: 799.5px) and (min-width: 426px) {
+  body.kss .kss-example-preview .grid--3 {
+    width: 48.9361702128%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  body.kss .kss-example-preview .grid--3:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 640px) {
   body.kss .kss-example-preview .push-half--1 {
     margin-left: 4.2372881356%;
@@ -4673,6 +4712,12 @@ body.kss .kss-example-preview .teaser-list > a:hover img {
 
 body.kss .kss-example-preview .teaser-list .teaser-list__title {
   margin: 0.5em 0;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .teaser-list .teaser-list__item {
+    margin-bottom: 2em;
+  }
 }
 
 body.kss .kss-example-preview .teaser-list.teaser-list--full-width {

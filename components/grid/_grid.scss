@@ -50,6 +50,18 @@ $susy: (
   }
 }
 
+// Special handling for grid--3 on tablet and mobile.
+@include breakpoint((max-width $tablet-mid) (min-width $mobile-two-thirds)) {
+  .grid--3 {
+    @include span(6);
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+
+
 /*
 Half-column Push/Pull
 

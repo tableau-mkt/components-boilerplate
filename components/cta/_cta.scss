@@ -17,6 +17,7 @@ Markup: cta.hbs
 .cta--play - CTA button with play icon.
 .cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
+.cta--full-width - Full width CTA that fills the width of it's container.
 
 Style guide: buttons-links.cta
 */
@@ -26,6 +27,7 @@ Style guide: buttons-links.cta
   margin: .5em 0;
   padding: 17px 25px;
   background-color: $button-orange;
+  border: 0;
   border-radius: 0;
   cursor: pointer;
   letter-spacing: 1px;
@@ -118,7 +120,27 @@ Style guide: buttons-links.cta
     }
   }
 
-  @include breakpoint($mobile-only) {
+  &.cta--full-width {
     display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+}
+
+// Mobile-only tweaks
+@include breakpoint($mobile-only) {
+  .cta {
+    display: block;
+
+    &:nth-child(n+2) {
+      margin-left: 0;
+    }  
+  }
+
+  button.cta {
+    width: 100%;
   }
 }

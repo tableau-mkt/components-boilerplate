@@ -1,0 +1,20 @@
+// Breakpoints
+$mobile-max: max-width 639px;
+$tablet-min: min-width 640px;
+$tablet-max: max-width 960px;
+$desktop-min: min-width 961px;
+
+// Layout-exclusive breakpoints
+$mobile-only: $mobile-max;
+$tablet-only: ($tablet-min) ($tablet-max);
+$desktop-only: $desktop-min;
+
+// Pixel values for calculations and layout
+$mobile-max-width: 639px;
+$tablet-max-width: 960px;
+$content-max: 1550px;
+$layout-max: 1920px;
+
+// Calculations for special cases
+$tablet-mid: $tablet-max-width - (($tablet-max-width - $mobile-max-width)/2);
+$mobile-two-thirds: ($mobile-max-width/3) * 2;
