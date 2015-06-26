@@ -4,6 +4,7 @@
 (function($){
   var $links = $('.tabs__tab-link'),
       $contents = $('.tabs__tab-content'),
+      $linkTriggers = $('.tabs__tab-trigger'),
       animation = {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -11,7 +12,7 @@
   
   $(document).ready(function(){
     if ($links.length && $contents.length) {
-      $links.click(function(e) {
+      $links.on('click.tabs', function(e) {
         if (!$(this).hasClass('active')) {
           var $link = $(this),
               $content = $('#' + $link.data('tab-content')),
@@ -48,6 +49,16 @@
         }
         e.preventDefault();
       });
+      
+      $linkTriggers.on('click.tabs-trigger', function(e) {
+        var $link = $links.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+            $content = $('#' + $(this).data('tab-content'));
+
+        // Manage active class
+        $links.add($contents).removeClass('active');
+        $link.add($content).addClass('active');
+      });
+
     }
   });
 })(jQuery);
