@@ -772,7 +772,7 @@ Weight: 10
 Style guide: layout.hero
 */
   /*
-Misc fonts for prototype
+Misc icons for prototype. Must clean up.
 @todo icon-font these!
 */
   /*
@@ -2200,6 +2200,7 @@ body.kss .kss-example-preview .cta.cta--full-width {
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 @media (max-width: 639px) {
@@ -2816,30 +2817,64 @@ body.kss .kss-example-preview .global-nav.global-nav--search-shown .global-nav__
   body.kss .kss-example-preview .global-nav .global-nav__hamburger.open {
     background: #f0f0f0;
   }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu {
+    padding-top: 1.5em;
+  }
   body.kss .kss-example-preview .global-nav .global-nav__primary-menu li {
     display: block;
+    padding: 0 1em;
   }
   body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
     display: block;
-    padding: 6px 1em;
+    padding: 6px 0.5em;
     border-bottom: 1px solid #ddd;
     color: #212535;
     font-family: "Benton Sans Light", Helvetica, sans-serif;
     font-size: 1.7142857143em;
     color: #333;
   }
-  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li {
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li:last-child a {
+    border-bottom: 0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu .expandable a:after {
+    content: url("../images/icons/expand-right.png");
+    float: right;
+    margin-top: -2px;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu {
+    text-align: center;
+    padding: 24px;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li:last-child {
     display: block;
   }
-  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.link,
-  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
-    padding: 12px 24px;
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu a.link,
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu a.search {
+    padding: 12px;
     color: #000;
   }
-  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu li a.cta {
-    color: #eb912c;
-    background: none;
-    margin: 0;
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu a.search {
+    zoom: .7;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li {
+    padding: 0 2em;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__primary-menu li a {
+    padding: 6px 0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__secondary-menu a.cta {
+    display: inline-block;
+    width: 100%;
+    max-width: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-align: center;
   }
 }
 
@@ -4172,7 +4207,8 @@ body.kss .kss-example-preview .icon--collapse,
 body.kss .kss-example-preview .icon--slideshow-prev-light,
 body.kss .kss-example-preview .icon--slideshow-next-light,
 body.kss .kss-example-preview .icon--slideshow-prev-dark,
-body.kss .kss-example-preview .icon--slideshow-next-dark {
+body.kss .kss-example-preview .icon--slideshow-next-dark,
+body.kss .kss-example-preview .icon--magnifying-glass {
   display: inline-block;
 }
 
@@ -4237,6 +4273,10 @@ body.kss .kss-example-preview .icon--slideshow-prev-dark {
 
 body.kss .kss-example-preview .icon--slideshow-next-dark {
   content: url("../images/icons/slideshow-next-dark.png");
+}
+
+body.kss .kss-example-preview .icon--magnifying-glass {
+  content: url("../images/icons/icon-magnifying-glass.svg");
 }
 
 body.kss .kss-example-preview .icon--large {

@@ -9,7 +9,7 @@
       $hamburger = $globalNav.find('.hamburger'),
       $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
       animation = {
-        duration: 500,
+        duration: 750,
         easing: "easeInOutQuart"
       };
 

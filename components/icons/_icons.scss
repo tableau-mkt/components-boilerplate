@@ -1,7 +1,7 @@
 
 
 /*
-Misc fonts for prototype
+Misc icons for prototype. Must clean up.
 @todo icon-font these!
 */
 
@@ -18,7 +18,8 @@ Misc fonts for prototype
 .icon--slideshow-prev-light,
 .icon--slideshow-next-light,
 .icon--slideshow-prev-dark,
-.icon--slideshow-next-dark {
+.icon--slideshow-next-dark,
+.icon--magnifying-glass {
   display: inline-block;
 }
 
@@ -73,6 +74,10 @@ Misc fonts for prototype
 }
 .icon--slideshow-next-dark {
   content: url('../images/icons/slideshow-next-dark.png');
+}
+
+.icon--magnifying-glass {
+  content: url('../images/icons/icon-magnifying-glass.svg');
 }
 
 

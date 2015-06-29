@@ -219,33 +219,79 @@ Style guide: navigation.global
       }
     }
 
-    .global-nav__primary-menu li {
-      display: block;
+    .global-nav__primary-menu {
+      padding-top: 1.5em;
 
-      a {
+      li {
         display: block;
-        padding: 6px 1em;
-        border-bottom: 1px solid $nav-drawer-gray-2;
-        color: $text-nav-items;
-        font-family: $text--benton-light;
-        font-size: em(24px);
-        color: $text-dark-body;
+        padding: 0 1em;
+       
+        a {
+          display: block;
+          padding: 6px 0.5em;
+          border-bottom: 1px solid $nav-drawer-gray-2;
+          color: $text-nav-items;
+          font-family: $text--benton-light;
+          font-size: em(24px);
+          color: $text-dark-body;
+        }
+
+
+        &:last-child a {
+          border-bottom: 0;
+        }
+      }
+
+      .expandable a:after {
+        content: url('../images/icons/expand-right.png');
+        float: right;
+        margin-top: -2px;
       }
     }
 
-    .global-nav__secondary-menu li {
-      display: block;
+    .global-nav__secondary-menu {
+      text-align: center;
+      padding: 24px;
+
+      li:last-child {
+        display: block;
+      }
 
       a.link,
-      a.cta {
-        padding: 12px 24px;
+      a.search {
+        padding: 12px;
         color: $text-headlines;
       }
 
+      a.search {
+        // @todo remove all this grossness once we have a proper icon font.
+        zoom: .7;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+
+    }
+  }
+
+  @include breakpoint($tablet-only) {
+    .global-nav__primary-menu li {
+      padding: 0 2em;
+
+      a {
+        padding: 6px 0;
+      }
+    }
+
+    .global-nav__secondary-menu {
       a.cta {
-        color: $text-link;
-        background: none;
-        margin: 0;
+        display: inline-block;
+        width: 100%;
+        max-width: 550px;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+        text-align: center;
       }
     }
   }

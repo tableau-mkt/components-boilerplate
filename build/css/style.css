@@ -1523,6 +1523,7 @@ Style guide: buttons-links.cta
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 @media (max-width: 639px) {
@@ -2280,30 +2281,64 @@ Style guide: navigation.global
   .global-nav .global-nav__hamburger.open {
     background: #f0f0f0;
   }
+  .global-nav .global-nav__primary-menu {
+    padding-top: 1.5em;
+  }
   .global-nav .global-nav__primary-menu li {
     display: block;
+    padding: 0 1em;
   }
   .global-nav .global-nav__primary-menu li a {
     display: block;
-    padding: 6px 1em;
+    padding: 6px 0.5em;
     border-bottom: 1px solid #ddd;
     color: #212535;
     font-family: "Benton Sans Light", Helvetica, sans-serif;
     font-size: 1.7142857143em;
     color: #333;
   }
-  .global-nav .global-nav__secondary-menu li {
+  .global-nav .global-nav__primary-menu li:last-child a {
+    border-bottom: 0;
+  }
+  .global-nav .global-nav__primary-menu .expandable a:after {
+    content: url("../images/icons/expand-right.png");
+    float: right;
+    margin-top: -2px;
+  }
+  .global-nav .global-nav__secondary-menu {
+    text-align: center;
+    padding: 24px;
+  }
+  .global-nav .global-nav__secondary-menu li:last-child {
     display: block;
   }
-  .global-nav .global-nav__secondary-menu li a.link,
-  .global-nav .global-nav__secondary-menu li a.cta {
-    padding: 12px 24px;
+  .global-nav .global-nav__secondary-menu a.link,
+  .global-nav .global-nav__secondary-menu a.search {
+    padding: 12px;
     color: #000;
   }
-  .global-nav .global-nav__secondary-menu li a.cta {
-    color: #eb912c;
-    background: none;
-    margin: 0;
+  .global-nav .global-nav__secondary-menu a.search {
+    zoom: .7;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .global-nav .global-nav__primary-menu li {
+    padding: 0 2em;
+  }
+  .global-nav .global-nav__primary-menu li a {
+    padding: 6px 0;
+  }
+  .global-nav .global-nav__secondary-menu a.cta {
+    display: inline-block;
+    width: 100%;
+    max-width: 550px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    text-align: center;
   }
 }
 
@@ -3676,7 +3711,7 @@ Style guide: layout.hero
 }
 
 /*
-Misc fonts for prototype
+Misc icons for prototype. Must clean up.
 @todo icon-font these!
 */
 .icon--product-mobile,
@@ -3692,7 +3727,8 @@ Misc fonts for prototype
 .icon--slideshow-prev-light,
 .icon--slideshow-next-light,
 .icon--slideshow-prev-dark,
-.icon--slideshow-next-dark {
+.icon--slideshow-next-dark,
+.icon--magnifying-glass {
   display: inline-block;
 }
 
@@ -3757,6 +3793,10 @@ Misc fonts for prototype
 
 .icon--slideshow-next-dark {
   content: url("../images/icons/slideshow-next-dark.png");
+}
+
+.icon--magnifying-glass {
+  content: url("../images/icons/icon-magnifying-glass.svg");
 }
 
 .icon--large {
