@@ -43,17 +43,22 @@
     var data = $(trigger).data(),
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
+        $slideout = $parent.find('.flyout__slideout'),
         parentPadding = $parent.outerHeight() - $parent.height();
 
     $target.data('flyoutState', 'open');
 
-    $target.animate({
-      left: '0%',
-    }, animation);
-
     // Adjust height of parent
     $parent.animate({
       height: $target.outerHeight(true) - parentPadding,
+    }, animation);
+
+    $slideout.animate({
+      marginLeft: '-100%',
+    }, animation);
+
+    $target.animate({
+      left: '0',
     }, animation);
   }
 
@@ -62,21 +67,22 @@
     var data = $(trigger).data(),
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
-        parentPadding = $parent.outerHeight() - $parent.height(),
-        $parentClone = $parent.clone().css({"height":"auto"}).appendTo($parent.parent()),
-        parentHeight = $parentClone.css("height");
-
-    $parentClone.remove();
+        $slideout = $parent.find('.flyout__slideout'),
+        slideoutHeight = $slideout.outerHeight(true);
 
     $target.data('flyoutState', 'closed');
-    
-    $target.animate({
-      left: '100%',
-    }, animation);
 
     // Adjust height of parent
     $parent.animate({
-      height: parentHeight,
+      height: slideoutHeight,
+    }, animation);
+
+    $slideout.animate({
+      marginLeft: '0',
+    }, animation);
+
+    $target.animate({
+      left: '100%',
     }, animation);
   }
 

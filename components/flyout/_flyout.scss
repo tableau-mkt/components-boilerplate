@@ -7,6 +7,11 @@ Markup: flyout.hbs
 
 Style guide: interactive.flyout
 */
+
+.flyout__slideout {
+  width: 100%;
+  overflow: auto;
+}
 .flyout__content {
   display: none;
   position: absolute;
