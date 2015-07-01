@@ -10,6 +10,10 @@ Style guide: navigation.global
 */
 
 .global-nav {
+
+}
+
+.global-nav__top {
   position: relative;
   height: 100px;
   padding: 2em 0;
@@ -299,26 +303,136 @@ Style guide: navigation.global
 }
 
 
-.global-nav__drawer {
-  display: none;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  z-index: 10;
-  
-  .global-nav__drawer__secondary {
-    position: relative;
+@include breakpoint($desktop-only) {
+  .global-nav__drawers {
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    width: 100%;
+    
+    .global-nav__drawers__drawer {
+      display: none;
+    }
+    
+    .global-nav__drawer__secondary {
+      position: relative;
 
-    .global-nav__drawer__secondary__background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      z-index: -1;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        z-index: 1;
+        background: $nav-drawer-gray-2;
+      }
+
+      & > * {
+        z-index: 2;
+        position: relative;
+      }
+      
+      .sub-nav__item__title,
+      .sub-nav__item__description {
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .sub-nav__item {
+        margin-top: .75em;
+      }
     }
   }
 }
+
+@include breakpoint($tablet-max) {
+  .global-nav__drawers {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+
+    .global-nav__drawers__drawer {
+      display: none;
+      width: 100%;
+      margin-left: 100%;
+      position: relative;
+      z-index: 15;
+
+    }
+
+    .content-container {
+      padding: 0;
+    }
+
+    .global-nav__drawers__drawer__controls {
+      padding:1em 2em 0;
+    }
+    .global-nav__drawer__primary,
+    .global-nav__drawer__secondary {
+      padding: 2em;
+    }
+
+    .global-nav__drawer__primary {
+      padding-top: 1em;
+    }
+
+    .global-nav__drawer__primary,
+    .global-nav__drawer__secondary,
+    .sub-nav__item {
+      width: auto;
+      float: none;
+      clear: both;
+      margin: 0;
+    }
+    
+
+    .sub-nav__item {
+      border-bottom: 1px solid $nav-drawer-gray-2;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      h3.heading-highlight {
+        padding-top: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      h5 {
+        font-size: em(20px);
+        line-height: 1.5;
+        -webkit-font-smoothing: auto;
+      }
+    }
+
+    .global-nav__drawer__secondary .sub-nav__item {
+      border-bottom-color: $text-light-body;
+    }
+
+  }
+}
+
+@include breakpoint($tablet-only) {
+  .global-nav__drawers {
+    .sub-nav__item {
+      .sub-nav__item__title {
+        display: inline-block;
+        width: 250px;
+      }
+
+      .sub-nav__item__description {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
 
 // Autocomplete
 .ui-autocomplete {

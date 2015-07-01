@@ -243,9 +243,11 @@ content.</p>
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
                 <div class="kss-example-preview-wrapper">
-                  <p>
-    <a href="#" class="flyout__trigger cta" data-flyout-target="flyout-container">Flyout Content</a>
-</p>
+                  <div class="flyout__slideout">
+  <p>
+      <a href="#" class="flyout__trigger cta" data-flyout-target="flyout-container">Flyout Content</a>
+  </p>
+</div>
 
 <div class="flyout__content box--data-sources" id="flyout-container">
   <div class="flyout__close-wrapper">
@@ -264,9 +266,11 @@ content.</p>
           
             <h4>Markup:</h4>
             <div class="kss-markup">
-              <pre class="prettyprint lang-html"><code data-language="html">&lt;p&gt;
-    &lt;a href=&quot;#&quot; class=&quot;flyout__trigger cta&quot; data-flyout-target=&quot;flyout-container&quot;&gt;Flyout Content&lt;/a&gt;
-&lt;/p&gt;
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;flyout__slideout&quot;&gt;
+  &lt;p&gt;
+      &lt;a href=&quot;#&quot; class=&quot;flyout__trigger cta&quot; data-flyout-target=&quot;flyout-container&quot;&gt;Flyout Content&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;flyout__content box--data-sources&quot; id=&quot;flyout-container&quot;&gt;
   &lt;div class=&quot;flyout__close-wrapper&quot;&gt;

@@ -1,5 +1,5 @@
-<header>
-  <div class="global-nav content-container content-container--wide">
+<header class="global-nav">
+  <div class="global-nav__top content-container content-container--wide">
     <div class="relative clearfix">
       {{# logo}}
         <div class="global-nav__logo">
@@ -12,8 +12,18 @@
       <div class="global-nav__mobile-wrapper tablet-hide">
         <nav class="global-nav__primary-menu">
           {{# primary}}
-            {{> link-list}}
+            <ul class="link-list link-list--inline">
+              {{#each items}}
+                <li{{#if class}} class="{{ class }}"{{/if}}{{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}>
+                  {{# link}}
+                    {{> link-base}}
+                  {{/ link}}
+                </li>
+              {{/each}}
+            </ul>
           {{/primary}}
+
+            {{> link-list}}
         </nav>
 
         <nav class="global-nav__secondary-menu">
@@ -36,41 +46,56 @@
       </div>
     </div>
   </div>
+  
+  <div class="global-nav__drawers">
+    {{# drawers}}
+      <div class="global-nav__drawers__drawer box--nav-drawer-gray-1" id="{{ drawerId }}">
+        <div class="global-nav__drawers__drawer__controls desktop-hide">
+          <span>
+            <a class="link link--arrow-left global-nav__drawers__drawer__close" href="#">Back</a>
+          </span>
+          <span class="float-right">
+            <a class="link" href="{{ drawerId }}">View All Products</a>
+          </a>
+        </div>
+        <div class="content-container content-container--wide">
+          <div class="global-nav__drawer__primary grid--8">
+            <hr class="spacer spacer--four tablet-hide">
 
-  <div class="global-nav__drawer box--nav-drawer-gray-1">
-    <div class="content-container content-container--wide">
-      <div class="global-nav__drawer__primary grid--8">
-        <hr class="spacer spacer--four">
-
-        {{# drawer.primaryItems}}
-          <div class="sub-nav__item grid--4">  
-            {{# title}}
-              <a href="{{ ../url }}" class="text--{{ color  }}">{{> heading}}</a>
-            {{/ title}}
-            
-            <p>{{ description }}</p>
-            <p>
-              <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
-            </p>
+            {{# primaryItems}}
+              <div class="sub-nav__item grid--4">  
+                {{# title}}
+                  <h3 class="sub-nav__item__title {{ classes }}">
+                    <a href="{{ ../url }}" class="text--{{ color  }}">{{ text }}</a>
+                  </h3>
+                {{/ title}}
+                
+                <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
+                <p class="tablet-hide">
+                  <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
+                </p>
+              </div>
+            {{/ primaryItems}}
           </div>
-        {{/ drawer.primaryItems}}
-      </div>
 
-      {{# secondaryItems}}
-      <div class="global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2 box__padded box__padded--three">
-        <h3 class="text--label">{{ title }}</h3>
-        <ul class="plain-list">
-          {{# items}}
-            <li>
-              <span><a class="text--bold text--dark-body text--dropdown" href="{{ url }}">{{ title }}</a></span><br>
-              <span>{{ description }}</span>
-            </li>
-          {{/ items}}
-        </ul>
-        <div class="global-nav__drawer__secondary__background box--nav-drawer-gray-2"></div>
-      </div>
-      {{/ secondaryItems}}
+          {{# secondaryItems}}
+          <div class="global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2 box__padded box__padded--three">
+            <h3 class="text--label">{{ title }}</h3>
+            <ul class="plain-list">
+              {{# items}}
+                <li class="sub-nav__item">
+                  <h5 class="sub-nav__item__title text--dropdown text--bold">
+                    <a class="text--dark-body" href="{{ url }}">{{ title }}</a>
+                  </h5>
+                  <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
+                </li>
+              {{/ items}}
+            </ul>
+          </div>
+          {{/ secondaryItems}}
 
-    </div>
+        </div>
+      </div>
+    {{/ drawers}}
   </div>
 </header>

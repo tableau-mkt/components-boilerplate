@@ -22,7 +22,7 @@ Style guide: images.thumbnail
   }
 
   img:hover {
-    @include transform(scale(1.03));
+    @include transform(scale(1.04));
   }
 
   &.thumbnail--play:after {

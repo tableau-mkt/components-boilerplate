@@ -22,13 +22,13 @@
 
     $search.on('click', function(e){
       e.preventDefault();
-      $(this).parents('.global-nav').addClass('global-nav--search-shown');
+      $(this).parents('.global-nav__top').addClass('global-nav--search-shown');
     });
 
     $closeSearch.on('click', function(e){
       e.stopPropagation();
       e.preventDefault();
-      $search.parents('.global-nav').removeClass('global-nav--search-shown');
+      $search.parents('.global-nav__top').removeClass('global-nav--search-shown');
     });
     
     // Search auto-complete for demo purposes. Requires jQuery UI Autocomplete

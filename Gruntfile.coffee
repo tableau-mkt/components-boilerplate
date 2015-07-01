@@ -95,6 +95,7 @@ module.exports = (grunt) ->
           'hoverintent/**/*.*'
           'slick.js/**/*.*'
           'waypoints/**/*.*'
+          'matchMedia/**/*.*'
         ]
         dest: 'build/bower'
 

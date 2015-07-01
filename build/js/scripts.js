@@ -84,17 +84,18 @@ Tabia.later = function(func, time) {
     var data = $(trigger).data(),
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
+        $slideout = $parent.find('.flyout__slideout'),
         parentPadding = $parent.outerHeight() - $parent.height();
 
     $target.data('flyoutState', 'open');
 
-    $target.animate({
-      left: '0%',
-    }, animation);
-
     // Adjust height of parent
     $parent.animate({
       height: $target.outerHeight(true) - parentPadding,
+    }, animation);
+
+    $slideout.add($target).animate({
+      marginLeft: '-=100%',
     }, animation);
   }
 
@@ -103,21 +104,18 @@ Tabia.later = function(func, time) {
     var data = $(trigger).data(),
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
-        parentPadding = $parent.outerHeight() - $parent.height(),
-        $parentClone = $parent.clone().css({"height":"auto"}).appendTo($parent.parent()),
-        parentHeight = $parentClone.css("height");
-
-    $parentClone.remove();
+        $slideout = $parent.find('.flyout__slideout'),
+        slideoutHeight = $slideout.outerHeight(true);
 
     $target.data('flyoutState', 'closed');
-    
-    $target.animate({
-      left: '100%',
-    }, animation);
 
     // Adjust height of parent
     $parent.animate({
-      height: parentHeight,
+      height: slideoutHeight,
+    }, animation);
+
+    $slideout.add($target).animate({
+      marginLeft: '+=100%',
     }, animation);
   }
 
@@ -185,12 +183,13 @@ function dataSourcesSearch() {
  * Global gavigation interactions
  */
 (function($){
-  var $globalNav = $('.global-nav'),
+  var $globalNav = $('.global-nav__top'),
       $menu = $globalNav.find('.global-nav__primary-menu'),
       $expandableLinks = $menu.find('li.expandable'),
-      $drawer = $('.global-nav__drawer'),
+      $drawers = $('.global-nav__drawers__drawer'),
       $hamburger = $globalNav.find('.hamburger'),
       $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
+      $mobileDrawerClose = $('.global-nav__drawers__drawer__close'),
       animation = {
         duration: 750,
         easing: "easeInOutQuart"
@@ -198,24 +197,56 @@ function dataSourcesSearch() {
 
   $(document).ready(function(){
     
-    // Drawer Expanding interaction
-    // @todo needs lots of work here.
-    $expandableLinks.hover( 
-      function() {
-        openDrawer(this);
-      }, function() {
-        $globalNav.find('a').not($(this).find('a')).hover(function() {
-          closeDrawer();
-        });
-      }
-    );
+    if (matchMedia('(min-width: 961px)').matches) {
+      // Drawer Expanding interaction
+      // @todo needs lots of work here.
+      $expandableLinks.hover( 
+        function() {
+          openDrawer($(this));
+        }, function() {
+          var $link = $(this);
+          $globalNav.find('a').not($link.find('a')).hover(function() {
+            closeDrawer($link);
+          });
+        }
+      );
 
-    $drawer.click(function(e) {
-      e.stopPropagation();
-    });
+      $drawers.click(function(e) {
+        e.stopPropagation();
+      });
 
-    $(document).click(function() {
-      closeDrawer();
+      $(document).click(function() {
+        closeDrawer($expandableLinks.filter('.expanded'));
+      });
+    }
+
+    if (matchMedia('(max-width: 960px)').matches) {
+      $expandableLinks.on('click.nav', function(e) {
+        var $link = $(this),
+            $drawer = $('#' + $link.data('drawer-id'));
+        
+        $drawer.show();
+
+        $drawer.add($mobileWrapper).animate({
+          marginLeft: '-=100%'
+        }, animation);
+       
+        e.preventDefault();
+      });
+    }
+
+    $mobileDrawerClose.on('click.nav', function(e) {
+      var $drawer = $(this).closest('.global-nav__drawers__drawer');
+
+      $drawer.add($mobileWrapper).animate({
+        marginLeft: '+=100%'
+      }, animation);
+
+      setTimeout(function() {
+        $drawer.hide();
+      }, animation.duration);
+
+      e.preventDefault();
     });
 
     // Mobile menu
@@ -228,14 +259,18 @@ function dataSourcesSearch() {
 
   });
 
-  function openDrawer(el) {
-    $(el).addClass('expanded');
-    $drawer.slideDown();
+  function openDrawer($link) {
+    var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
+
+    $link.add($drawer).addClass('expanded');
+    $drawers.filter('#' + $link.data('drawer-id')).slideDown(animation);
   }
 
-  function closeDrawer() {
-    $expandableLinks.removeClass('expanded');
-    $drawer.slideUp();
+  function closeDrawer($link) {
+    var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
+
+    $link.add($drawer).removeClass('expanded');
+    $drawers.filter('#' + $link.data('drawer-id')).slideUp(animation);
   }
 
 
@@ -502,13 +537,13 @@ function dataSourcesSearch() {
 
     $search.on('click', function(e){
       e.preventDefault();
-      $(this).parents('.global-nav').addClass('global-nav--search-shown');
+      $(this).parents('.global-nav__top').addClass('global-nav--search-shown');
     });
 
     $closeSearch.on('click', function(e){
       e.stopPropagation();
       e.preventDefault();
-      $search.parents('.global-nav').removeClass('global-nav--search-shown');
+      $search.parents('.global-nav__top').removeClass('global-nav--search-shown');
     });
     
     // Search auto-complete for demo purposes. Requires jQuery UI Autocomplete

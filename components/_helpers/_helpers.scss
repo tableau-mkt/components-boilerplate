@@ -52,6 +52,16 @@ most common proportions for video players.
   padding: 0;
 }
 
+// Float element to the right
+.float-right {
+  float: right;
+}
+
+// Float element to the left
+.float-left {
+  float: left;
+}
+
 // Zero out the lineheight of an element
 .line-height-zero {
   line-height: 0;

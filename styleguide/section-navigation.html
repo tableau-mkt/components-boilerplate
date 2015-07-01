@@ -156,8 +156,8 @@ secondary, and sub navigation as well as the global search bar.</p>
             <div class="kss-example kss-example__default">
               <div class="kss-example-preview">
                 <div class="kss-example-preview-wrapper">
-                  <header>
-  <div class="global-nav content-container content-container--wide">
+                  <header class="global-nav">
+  <div class="global-nav__top content-container content-container--wide">
     <div class="relative clearfix">
         <div class="global-nav__logo">
           <a href="/build/">
@@ -167,7 +167,7 @@ secondary, and sub navigation as well as the global search bar.</p>
       
       <div class="global-nav__mobile-wrapper tablet-hide">
         <nav class="global-nav__primary-menu">
-            <ul class="link-list link-list--inline ">
+            <ul class="link-list link-list--inline">
                 <li class="expandable">
                     <a href=""  class="">Products</a>
                 </li>
@@ -186,6 +186,9 @@ secondary, and sub navigation as well as the global search bar.</p>
                 <li>
                     <a href=""  class="">About</a>
                 </li>
+            </ul>
+
+            <ul class="link-list [modifier class] ">
             </ul>
         </nav>
 
@@ -219,61 +222,8 @@ secondary, and sub navigation as well as the global search bar.</p>
       </div>
     </div>
   </div>
-
-  <div class="global-nav__drawer box--nav-drawer-gray-1">
-    <div class="content-container content-container--wide">
-      <div class="global-nav__drawer__primary grid--8">
-        <hr class="spacer spacer--four">
-
-          <div class="sub-nav__item grid--4">  
-              <a href="/build/desktop.html" class="text--"><h3 class=" heading-highlight heading--small heading-highlight--desktop text--desktop">Tableau Desktop</h3>
-</a>
-            
-            <p>Business analytics anyone can use.</p>
-            <p>
-              <a class="link link--arrow" href="/build/desktop.html">Learn More</a>
-            </p>
-          </div>
-          <div class="sub-nav__item grid--4">  
-              <a href="/build/server.html" class="text--"><h3 class=" heading-highlight heading--small heading-highlight--server text--server">Tableau Server</h3>
-</a>
-            
-            <p>Rapid-fire business intelligence, today.</p>
-            <p>
-              <a class="link link--arrow" href="/build/server.html">Learn More</a>
-            </p>
-          </div>
-          <div class="sub-nav__item grid--4">  
-              <a href="/build/online.html" class="text--"><h3 class=" heading-highlight heading--small heading-highlight--online text--online">Tableau Online</h3>
-</a>
-            
-            <p>The power of Tableau, in the cloud.</p>
-            <p>
-              <a class="link link--arrow" href="/build/online.html">Learn More</a>
-            </p>
-          </div>
-      </div>
-
-      <div class="global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2 box__padded box__padded--three">
-        <h3 class="text--label">More Tableau Products</h3>
-        <ul class="plain-list">
-            <li>
-              <span><a class="text--bold text--dark-body text--dropdown" href="#">Tableau Mobile</a></span><br>
-              <span>Tableau straight from your phone.</span>
-            </li>
-            <li>
-              <span><a class="text--bold text--dark-body text--dropdown" href="#">Tableau Public</a></span><br>
-              <span>Publish interactive data online.</span>
-            </li>
-            <li>
-              <span><a class="text--bold text--dark-body text--dropdown" href="#">Tableau Reader</a></span><br>
-              <span>Read saved files from Tableau Desktop.</span>
-            </li>
-        </ul>
-        <div class="global-nav__drawer__secondary__background box--nav-drawer-gray-2"></div>
-      </div>
-
-    </div>
+  
+  <div class="global-nav__drawers">
   </div>
 </header>
 
@@ -284,8 +234,8 @@ secondary, and sub navigation as well as the global search bar.</p>
           
             <h4>Markup:</h4>
             <div class="kss-markup">
-              <pre class="prettyprint lang-html"><code data-language="html">&lt;header&gt;
-  &lt;div class=&quot;global-nav content-container content-container--wide&quot;&gt;
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;header class=&quot;global-nav&quot;&gt;
+  &lt;div class=&quot;global-nav__top content-container content-container--wide&quot;&gt;
     &lt;div class=&quot;relative clearfix&quot;&gt;
         &lt;div class=&quot;global-nav__logo&quot;&gt;
           &lt;a href=&quot;/build/&quot;&gt;
@@ -295,7 +245,7 @@ secondary, and sub navigation as well as the global search bar.</p>
       
       &lt;div class=&quot;global-nav__mobile-wrapper tablet-hide&quot;&gt;
         &lt;nav class=&quot;global-nav__primary-menu&quot;&gt;
-            &lt;ul class=&quot;link-list link-list--inline &quot;&gt;
+            &lt;ul class=&quot;link-list link-list--inline&quot;&gt;
                 &lt;li class=&quot;expandable&quot;&gt;
                     &lt;a href=&quot;&quot;  class=&quot;&quot;&gt;Products&lt;/a&gt;
                 &lt;/li&gt;
@@ -314,6 +264,9 @@ secondary, and sub navigation as well as the global search bar.</p>
                 &lt;li&gt;
                     &lt;a href=&quot;&quot;  class=&quot;&quot;&gt;About&lt;/a&gt;
                 &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ul class=&quot;link-list [modifier class] &quot;&gt;
             &lt;/ul&gt;
         &lt;/nav&gt;
 
@@ -347,61 +300,8 @@ secondary, and sub navigation as well as the global search bar.</p>
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class=&quot;global-nav__drawer box--nav-drawer-gray-1&quot;&gt;
-    &lt;div class=&quot;content-container content-container--wide&quot;&gt;
-      &lt;div class=&quot;global-nav__drawer__primary grid--8&quot;&gt;
-        &lt;hr class=&quot;spacer spacer--four&quot;&gt;
-
-          &lt;div class=&quot;sub-nav__item grid--4&quot;&gt;  
-              &lt;a href=&quot;/build/desktop.html&quot; class=&quot;text--&quot;&gt;&lt;h3 class=&quot; heading-highlight heading--small heading-highlight--desktop text--desktop&quot;&gt;Tableau Desktop&lt;/h3&gt;
-&lt;/a&gt;
-            
-            &lt;p&gt;Business analytics anyone can use.&lt;/p&gt;
-            &lt;p&gt;
-              &lt;a class=&quot;link link--arrow&quot; href=&quot;/build/desktop.html&quot;&gt;Learn More&lt;/a&gt;
-            &lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;sub-nav__item grid--4&quot;&gt;  
-              &lt;a href=&quot;/build/server.html&quot; class=&quot;text--&quot;&gt;&lt;h3 class=&quot; heading-highlight heading--small heading-highlight--server text--server&quot;&gt;Tableau Server&lt;/h3&gt;
-&lt;/a&gt;
-            
-            &lt;p&gt;Rapid-fire business intelligence, today.&lt;/p&gt;
-            &lt;p&gt;
-              &lt;a class=&quot;link link--arrow&quot; href=&quot;/build/server.html&quot;&gt;Learn More&lt;/a&gt;
-            &lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;sub-nav__item grid--4&quot;&gt;  
-              &lt;a href=&quot;/build/online.html&quot; class=&quot;text--&quot;&gt;&lt;h3 class=&quot; heading-highlight heading--small heading-highlight--online text--online&quot;&gt;Tableau Online&lt;/h3&gt;
-&lt;/a&gt;
-            
-            &lt;p&gt;The power of Tableau, in the cloud.&lt;/p&gt;
-            &lt;p&gt;
-              &lt;a class=&quot;link link--arrow&quot; href=&quot;/build/online.html&quot;&gt;Learn More&lt;/a&gt;
-            &lt;/p&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;global-nav__drawer__secondary grid--4 grid--last box--nav-drawer-gray-2 box__padded box__padded--three&quot;&gt;
-        &lt;h3 class=&quot;text--label&quot;&gt;More Tableau Products&lt;/h3&gt;
-        &lt;ul class=&quot;plain-list&quot;&gt;
-            &lt;li&gt;
-              &lt;span&gt;&lt;a class=&quot;text--bold text--dark-body text--dropdown&quot; href=&quot;#&quot;&gt;Tableau Mobile&lt;/a&gt;&lt;/span&gt;&lt;br&gt;
-              &lt;span&gt;Tableau straight from your phone.&lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;span&gt;&lt;a class=&quot;text--bold text--dark-body text--dropdown&quot; href=&quot;#&quot;&gt;Tableau Public&lt;/a&gt;&lt;/span&gt;&lt;br&gt;
-              &lt;span&gt;Publish interactive data online.&lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;span&gt;&lt;a class=&quot;text--bold text--dark-body text--dropdown&quot; href=&quot;#&quot;&gt;Tableau Reader&lt;/a&gt;&lt;/span&gt;&lt;br&gt;
-              &lt;span&gt;Read saved files from Tableau Desktop.&lt;/span&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;div class=&quot;global-nav__drawer__secondary__background box--nav-drawer-gray-2&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-
-    &lt;/div&gt;
+  
+  &lt;div class=&quot;global-nav__drawers&quot;&gt;
   &lt;/div&gt;
 &lt;/header&gt;
 </code></pre>
