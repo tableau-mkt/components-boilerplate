@@ -6045,3 +6045,33 @@ body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow
 body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--next {
   right: 187px;
 }
+
+body.kss .kss-example-preview .viz-slideshow .viz-slideshow__slide__copy {
+  opacity: 0;
+  -webkit-transition: opacity 650ms;
+          transition: opacity 650ms;
+}
+
+body.kss .kss-example-preview .viz-slideshow .slick-active .viz-slideshow__slide__copy {
+  opacity: 1;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .viz-slideshow .viz-slideshow__slide {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+    left: 37px;
+  }
+  body.kss .kss-example-preview .viz-slideshow .viz-slideshow__arrow.viz-slideshow__arrow--next {
+    right: 37px;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .viz-slideshow .viz-slideshow__slide {
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}

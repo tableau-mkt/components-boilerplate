@@ -49,4 +49,37 @@ Style guide: interactive.viz-slideshow
       right: 187px;
     }
   }
+
+  .viz-slideshow__slide__copy {
+    opacity: 0;
+    transition: opacity 650ms;
+  }
+
+  .slick-active .viz-slideshow__slide__copy {
+    opacity: 1;
+  }
+
+  @include breakpoint($tablet-only) {
+
+    .viz-slideshow__slide {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+
+    .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+      left: 37px;
+    }
+
+    .viz-slideshow__arrow.viz-slideshow__arrow--next {
+      right: 37px;
+    }
+  }
+
+  @include breakpoint($mobile-max) {
+
+    .viz-slideshow__slide {
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+  }
 }

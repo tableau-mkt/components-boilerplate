@@ -926,7 +926,24 @@ function dataSourcesSearch() {
         easing: "easeInOutQuart",
         slide: '.viz-slideshow__slide',
         prevArrow: $(this).find('.viz-slideshow__arrow--prev'),
-        nextArrow: $(this).find('.viz-slideshow__arrow--next')
+        nextArrow: $(this).find('.viz-slideshow__arrow--next'),
+        responsive: [
+          {
+            breakpoint: 940,
+            settings: {
+              centerPadding: '50px'
+            }
+          },
+          {
+            breakpoint: 639,
+            settings: {
+              centerPadding: '25px',
+              arrows: false,
+              prevArrow: false,
+              nextArrow: false
+            }
+          }
+        ]
       });
     }
   });

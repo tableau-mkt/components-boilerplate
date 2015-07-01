@@ -8,20 +8,22 @@
           </div>
         {{/ thumbnail}}
 
-        {{# title}}
-          <div class="grid--4">
-            {{> heading}}
+        <div class="viz-slideshow__slide__copy">
+          {{# title}}
+            <div class="grid--4">
+              {{> heading}}
+            </div>
+          {{/ title}}
+
+          <div class="grid--8 grid--last vertical-divider">
+            {{#if description}}
+              <p>{{{ description }}}</p>
+            {{/ if}}
+
+            {{# download}}
+              <span>{{> link}}</span>
+            {{/ download}}
           </div>
-        {{/ title}}
-
-        <div class="grid--8 grid--last vertical-divider">
-          {{#if description}}
-            <p>{{{ description }}}</p>
-          {{/ if}}
-
-          {{# download}}
-            <span>{{> link}}</span>
-          {{/ download}}
         </div>
       </div>
     {{/each}}
