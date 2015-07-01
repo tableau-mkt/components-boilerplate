@@ -53,12 +53,8 @@
       height: $target.outerHeight(true) - parentPadding,
     }, animation);
 
-    $slideout.animate({
-      marginLeft: '-100%',
-    }, animation);
-
-    $target.animate({
-      left: '0',
+    $slideout.add($target).animate({
+      marginLeft: '-=100%',
     }, animation);
   }
 
@@ -77,12 +73,8 @@
       height: slideoutHeight,
     }, animation);
 
-    $slideout.animate({
-      marginLeft: '0',
-    }, animation);
-
-    $target.animate({
-      left: '100%',
+    $slideout.add($target).animate({
+      marginLeft: '+=100%',
     }, animation);
   }
 
