@@ -1,8 +1,103 @@
 
 
 /*
+Icons
+
 Misc icons for prototype. Must clean up.
 @todo icon-font these!
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon--product-mobile - product-mobile icon
+.icon--product-public - product-public icon
+.icon--product-reader - product-reader icon
+.icon--database - database icon
+.icon--diagram - diagram icon
+.icon--management - management icon
+.icon--statistics - statistics icon
+.icon--arrow-long - arrow-long icon
+.icon--expand - expand icon
+.icon--collapse - collapse icon
+.icon--slideshow-prev-light - slideshow-prev-light icon
+.icon--slideshow-next-light - slideshow-next-light icon
+.icon--slideshow-prev-dark - slideshow-prev-dark icon
+.icon--slideshow-next-dark - slideshow-next-dark icon
+.icon--magnifying-glass  - magnifying-glass icon
+.icon--app-browser - app-browser icon
+.icon--apple - apple icon
+.icon--area-chart - area-chart icon
+.icon--arrow-circle-right - arrow-circle-right icon
+.icon--arrow-down - arrow-down icon
+.icon--arrow-heavy-up - arrow-heavy-up icon
+.icon--arrow-up - arrow-up icon
+.icon--bar-chart - bar-chart icon
+.icon--book-isometric - book-isometric icon
+.icon--book-open - book-open icon
+.icon--broadcast - broadcast icon
+.icon--calendar - calendar icon
+.icon--chat-bubble - chat-bubble icon
+.icon--chat-bubbles-solid - chat-bubbles-solid icon
+.icon--chevron-down - chevron-down icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
+.icon--chevron-up - chevron-up icon
+.icon--close-circle - close-circle icon
+.icon--cloud - cloud icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--cursor-hand - cursor-hand icon
+.icon--cursor - cursor icon
+.icon--dashboard - dashboard icon
+.icon--database-storage - database-storage icon
+.icon--document-3 - document-3 icon
+.icon--document-5 - document-5 icon
+.icon--download - download icon
+.icon--email - email icon
+.icon--embed - embed icon
+.icon--enterprise - enterprise icon
+.icon--gears - gears icon
+.icon--globe - globe icon
+.icon--grid-9x9 - grid-9x9 icon
+.icon--laptop - laptop icon
+.icon--line-plot - line-plot icon
+.icon--link - link icon
+.icon--list-blog-view - list-blog-view icon
+.icon--lock - lock icon
+.icon--logo-apple - logo-apple icon
+.icon--logo-windows - logo-windows icon
+.icon--mail-speed - mail-speed icon
+.icon--memory - memory icon
+.icon--microphone - microphone icon
+.icon--mobile-menu - mobile-menu icon
+.icon--news - news icon
+.icon--people-2 - people-2 icon
+.icon--people - people icon
+.icon--play-circle-big - play-circle-big icon
+.icon--play-circle-small - play-circle-small icon
+.icon--question - question icon
+.icon--quote-double-start - quote-double-start icon
+.icon--refresh - refresh icon
+.icon--search - search icon
+.icon--share - share icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-rss - social-rss icon
+.icon--social-twitter - social-twitter icon
+.icon--social-youtube - social-youtube icon
+.icon--table-join - table-join icon
+.icon--tableau-logo - tableau-logo icon
+.icon--tablet - tablet icon
+.icon--timer-60 - timer-60 icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
+.icon--vizql - vizql icon
+
+Style Guide: icons.icons
 */
 
 .icon--product-mobile,
@@ -57,7 +152,7 @@ Misc icons for prototype. Must clean up.
 }
 
 .icon--expand {
-  content: url(../images/icons/expans.png);
+  content: url(../images/icons/expand.png);
 }
 .icon--collapse {
   content: url(../images/icons/collapse.png);

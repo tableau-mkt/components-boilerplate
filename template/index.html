@@ -111,6 +111,7 @@
         {{#if markup}}
           <h4>Example{{#if modifiers}}s{{/if}}</h4>
           <div class="kss-examples">
+            {{#unless nodefault}}
             <div class="kss-example kss-example__default">
               {{#if modifiers}}
               <div class="kss-example-details">
@@ -125,6 +126,8 @@
                 </div>
               </div>
             </div>
+            {{/unless}}
+           
             {{#eachModifier}}
               <div class="kss-example">
                 <div class="kss-example-details">

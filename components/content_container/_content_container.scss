@@ -22,6 +22,11 @@ Style guide: layout.container
   padding-left: 11%;
   padding-right: 11%;
 
+  h2:first-child {
+    margin-top: 0;
+    margin-bottom: .75em;
+  }
+
   &.content-container--wide {
     padding-left: 3%;
     padding-right: 3%;

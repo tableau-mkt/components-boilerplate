@@ -5,7 +5,7 @@
       "hover_title": "Hover title for next button",
       "hover_class": "box--desktop",
       "img": {
-        "src": "http://placecage.com/300/200"
+        "src": "http://www.placecage.com/300/200"
       },
       "text": {
         "sub_title": {
@@ -27,7 +27,7 @@
       "hover_title": "Hover title for next button",
       "hover_class": "box--server",
       "img": {
-        "src": "http://placecage.com/300/200"
+        "src": "http://www.placecage.com/300/200"
       },
       "text": {
         "sub_title": {
@@ -49,7 +49,7 @@
       "hover_title": "Hover title for next button",
       "hover_class": "box--mobile",
       "img": {
-        "src": "http://placecage.com/300/200"
+        "src": "http://www.placecage.com/300/200"
       },
       "text": {
         "sub_title": {

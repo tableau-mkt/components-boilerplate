@@ -14,7 +14,10 @@
     "../build/bower/waypoints/lib/shortcuts/sticky.min.js",
     "../build/js/scripts.js"
   ],
-  "custom": "nocode",
+  "custom": [
+    "nocode",
+    "nodefault"
+  ],
   "homepage": "../template/homepage.md",
   "source": "../components",
   "destination": "../styleguide",

@@ -7,6 +7,6 @@
   "type": false,
   "media": "markup",
   "contentId": "content-container",
-  "revealContent": "<img src='http://placecage.com/600/400'>",
+  "revealContent": "<img src='http://www.placecage.com/600/400'>",
   "curtainId": "curtain"
 }

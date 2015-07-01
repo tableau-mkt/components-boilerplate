@@ -28,7 +28,7 @@ Style guide: interactive.slideshow
 
       &.slick-active button:before {
         opacity: .75;
-        color: $button-orange;
+        color: #666;
       }
 
       button:before {
@@ -37,6 +37,7 @@ Style guide: interactive.slideshow
         opacity: 1;
         width: 30px;
         height: 30px;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
         transition: color .25s;
       }
     }

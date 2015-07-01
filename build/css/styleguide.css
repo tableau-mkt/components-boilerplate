@@ -443,6 +443,15 @@ Weight: 90
 Style guide layout
 */
   /*
+Icons 
+
+Graphical icons used inline with text or on their own
+
+Weight: 100
+
+Style guide icons
+*/
+  /*
 Accordion
 
 An accordion of content that allows you to expand and collapse sections of 
@@ -501,6 +510,8 @@ legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
 just to make the examples look better.
 
 Markup: box_colored.hbs
+
+Nodefault: true
 
 Weight: 2
 
@@ -605,7 +616,6 @@ Markup: divider.hbs
 
 Weight: 0
 
-.divider--solid - A solid hairline divider. [Default]
 .divider--gradient - A divider that fades out to transparent on either end. 
 .divider--dashed - A dashed divider.
 
@@ -772,8 +782,103 @@ Weight: 10
 Style guide: layout.hero
 */
   /*
+Icons
+
 Misc icons for prototype. Must clean up.
 @todo icon-font these!
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon--product-mobile - product-mobile icon
+.icon--product-public - product-public icon
+.icon--product-reader - product-reader icon
+.icon--database - database icon
+.icon--diagram - diagram icon
+.icon--management - management icon
+.icon--statistics - statistics icon
+.icon--arrow-long - arrow-long icon
+.icon--expand - expand icon
+.icon--collapse - collapse icon
+.icon--slideshow-prev-light - slideshow-prev-light icon
+.icon--slideshow-next-light - slideshow-next-light icon
+.icon--slideshow-prev-dark - slideshow-prev-dark icon
+.icon--slideshow-next-dark - slideshow-next-dark icon
+.icon--magnifying-glass  - magnifying-glass icon
+.icon--app-browser - app-browser icon
+.icon--apple - apple icon
+.icon--area-chart - area-chart icon
+.icon--arrow-circle-right - arrow-circle-right icon
+.icon--arrow-down - arrow-down icon
+.icon--arrow-heavy-up - arrow-heavy-up icon
+.icon--arrow-up - arrow-up icon
+.icon--bar-chart - bar-chart icon
+.icon--book-isometric - book-isometric icon
+.icon--book-open - book-open icon
+.icon--broadcast - broadcast icon
+.icon--calendar - calendar icon
+.icon--chat-bubble - chat-bubble icon
+.icon--chat-bubbles-solid - chat-bubbles-solid icon
+.icon--chevron-down - chevron-down icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
+.icon--chevron-up - chevron-up icon
+.icon--close-circle - close-circle icon
+.icon--cloud - cloud icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--cursor-hand - cursor-hand icon
+.icon--cursor - cursor icon
+.icon--dashboard - dashboard icon
+.icon--database-storage - database-storage icon
+.icon--document-3 - document-3 icon
+.icon--document-5 - document-5 icon
+.icon--download - download icon
+.icon--email - email icon
+.icon--embed - embed icon
+.icon--enterprise - enterprise icon
+.icon--gears - gears icon
+.icon--globe - globe icon
+.icon--grid-9x9 - grid-9x9 icon
+.icon--laptop - laptop icon
+.icon--line-plot - line-plot icon
+.icon--link - link icon
+.icon--list-blog-view - list-blog-view icon
+.icon--lock - lock icon
+.icon--logo-apple - logo-apple icon
+.icon--logo-windows - logo-windows icon
+.icon--mail-speed - mail-speed icon
+.icon--memory - memory icon
+.icon--microphone - microphone icon
+.icon--mobile-menu - mobile-menu icon
+.icon--news - news icon
+.icon--people-2 - people-2 icon
+.icon--people - people icon
+.icon--play-circle-big - play-circle-big icon
+.icon--play-circle-small - play-circle-small icon
+.icon--question - question icon
+.icon--quote-double-start - quote-double-start icon
+.icon--refresh - refresh icon
+.icon--search - search icon
+.icon--share - share icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-rss - social-rss icon
+.icon--social-twitter - social-twitter icon
+.icon--social-youtube - social-youtube icon
+.icon--table-join - table-join icon
+.icon--tableau-logo - tableau-logo icon
+.icon--tablet - tablet icon
+.icon--timer-60 - timer-60 icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
+.icon--vizql - vizql icon
+
+Style Guide: icons.icons
 */
   /*
 Base Text Link
@@ -863,7 +968,7 @@ Markup:
 <div class="teaser-list teaser-list--full-width">
   <div class="teaser-list__thumbnail grid-3">
     <a href="#">
-      <img src="http://placecage.com/223/223">
+      <img src="http://www.placecage.com/223/223">
     </a>
   </div>
   <div class="teaser-list__info grid-9 grid-last">
@@ -1104,6 +1209,8 @@ Stories and Articles sections.
 
 Markup: fonts.hbs
 
+Nodefault: true
+
 Weight: 1
 
 .text--benton-thin - Benton Sans Thin
@@ -1158,6 +1265,10 @@ These heading classes are used for specific contexts.
 
 Markup: context-headings.hbs
 
+Nodefault: true
+
+Nocode: true
+
 Weight: 4
 
 .heading--homepage - Homepage Hero (70px) - uses `<h1>`
@@ -1176,6 +1287,8 @@ Other Type Treatments
 Other treatments used for text throughout the site
 
 Markup: context-headings.hbs
+
+Nodefault: true
 
 Weight: 5
 
@@ -2038,6 +2151,11 @@ body.kss .kss-example-preview .content-container, body.kss .kss-example-preview 
   margin-right: auto;
   padding-left: 11%;
   padding-right: 11%;
+}
+
+body.kss .kss-example-preview .content-container h2:first-child, body.kss .kss-example-preview .flyout__close-wrapper h2:first-child, body.kss .kss-example-preview .content-container .heading--medium:first-child, body.kss .kss-example-preview .flyout__close-wrapper .heading--medium:first-child {
+  margin-top: 0;
+  margin-bottom: .75em;
 }
 
 body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container--wide.flyout__close-wrapper {
@@ -4226,6 +4344,12 @@ body.kss .kss-example-preview .hero .hero__video video {
   body.kss .kss-example-preview .hero .hero__content h1, body.kss .kss-example-preview .hero .hero__content .heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--product, body.kss .kss-example-preview .hero .hero__content .heading--download {
     margin: 0;
   }
+  body.kss .kss-example-preview .hero .hero__content h4 + .hero__content__headline, body.kss .kss-example-preview .hero .hero__content .heading--x-small + .hero__content__headline {
+    margin-top: .5em;
+  }
+  body.kss .kss-example-preview .hero .hero__content .hero__content__cta {
+    margin-top: 1em;
+  }
 }
 
 @media (min-width: 961px) {
@@ -4269,10 +4393,10 @@ body.kss .kss-example-preview .hero .hero__video video {
   body.kss .kss-example-preview .hero .hero__background .hero__background__inner {
     padding-bottom: 50%;
   }
-  body.kss .kss-example-preview .hero .hero__content h1, body.kss .kss-example-preview .hero .hero__content .heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--product, body.kss .kss-example-preview .hero .hero__content .heading--download {
+  body.kss .kss-example-preview .hero .hero__content h1.heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--homepage {
     font-size: 4em;
   }
-  body.kss .kss-example-preview .hero .hero__content h1 br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--product br, body.kss .kss-example-preview .hero .hero__content .heading--download br {
+  body.kss .kss-example-preview .hero .hero__content h1.heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br {
     display: none;
   }
 }
@@ -4288,10 +4412,10 @@ body.kss .kss-example-preview .hero .hero__video video {
   body.kss .kss-example-preview .hero .hero__content {
     padding-bottom: 2em;
   }
-  body.kss .kss-example-preview .hero .hero__content h1, body.kss .kss-example-preview .hero .hero__content .heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--product, body.kss .kss-example-preview .hero .hero__content .heading--download {
+  body.kss .kss-example-preview .hero .hero__content h1.heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--homepage {
     font-size: 3em;
   }
-  body.kss .kss-example-preview .hero .hero__content h1 br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--product br, body.kss .kss-example-preview .hero .hero__content .heading--download br {
+  body.kss .kss-example-preview .hero .hero__content h1.heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br {
     display: none;
   }
   body.kss .kss-example-preview .hero .hero__content .cta {
@@ -4358,7 +4482,7 @@ body.kss .kss-example-preview .icon--arrow-long {
 }
 
 body.kss .kss-example-preview .icon--expand {
-  content: url(../images/icons/expans.png);
+  content: url(../images/icons/expand.png);
 }
 
 body.kss .kss-example-preview .icon--collapse {
@@ -5201,7 +5325,7 @@ body.kss .kss-example-preview .slideshow .slick-dots li {
 
 body.kss .kss-example-preview .slideshow .slick-dots li.slick-active button:before {
   opacity: .75;
-  color: #e8762c;
+  color: #666;
 }
 
 body.kss .kss-example-preview .slideshow .slick-dots li button:before {
@@ -5210,6 +5334,7 @@ body.kss .kss-example-preview .slideshow .slick-dots li button:before {
   opacity: 1;
   width: 30px;
   height: 30px;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
 }
@@ -5671,7 +5796,7 @@ body.kss .kss-example-preview .heading--homepage {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
   font-size: 5em;
-  line-height: 1.21;
+  line-height: 1;
   color: #000;
 }
 

@@ -98,6 +98,8 @@ generated style guide displays each variation properly.
 component will be displayed in the generated style guide.
 * To prevent the code exmaple from rendering for a component, add a 
 `Nocode: true` tag to the KSS comment.
+* To prevent the the default exmaple from rendering for a component, add a 
+`Nodefault: true` tag to the KSS comment.
 
 ## Adding/Editing Components
 

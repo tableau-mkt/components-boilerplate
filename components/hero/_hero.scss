@@ -66,6 +66,14 @@ Style guide: layout.hero
       h1 {
         margin: 0;
       }
+      
+      h4 + .hero__content__headline {
+        margin-top: .5em;
+      }
+
+      .hero__content__cta {
+        margin-top: 1em;
+      }
     }
   }
 
@@ -103,7 +111,7 @@ Style guide: layout.hero
       padding-bottom: 50%;
     }
 
-    .hero__content h1 {
+    .hero__content h1.heading--homepage {
       font-size: 4em;
 
       br {
@@ -123,7 +131,7 @@ Style guide: layout.hero
     .hero__content {
       padding-bottom: 2em;
       
-      h1 {
+      h1.heading--homepage {
         font-size: 3em;
 
         br {

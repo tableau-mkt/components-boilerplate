@@ -13,6 +13,8 @@ Stories and Articles sections.
 
 Markup: fonts.hbs
 
+Nodefault: true
+
 Weight: 1
 
 .text--benton-thin - Benton Sans Thin
@@ -156,6 +158,10 @@ These heading classes are used for specific contexts.
 
 Markup: context-headings.hbs
 
+Nodefault: true
+
+Nocode: true
+
 Weight: 4
 
 .heading--homepage - Homepage Hero (70px) - uses `<h1>`
@@ -174,7 +180,7 @@ Styleguide typography.context-headings
   font-family: $text--benton-thin;
   font-weight: 100;
   font-size: em(70px);
-  line-height: 1.21;
+  line-height: 1;
   color: $text-headlines;
 }
 
@@ -232,6 +238,8 @@ Other Type Treatments
 Other treatments used for text throughout the site
 
 Markup: context-headings.hbs
+
+Nodefault: true
 
 Weight: 5
 

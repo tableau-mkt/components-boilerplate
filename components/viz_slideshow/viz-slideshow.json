@@ -2,7 +2,7 @@
   "vizzes": [
     {
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
@@ -16,7 +16,7 @@
     },
     {
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": true,
         "alt": "visualization"
       },
@@ -35,7 +35,7 @@
     {
       "new": false,
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
@@ -50,7 +50,7 @@
     {
       "new": false,
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
@@ -65,7 +65,7 @@
     {
       "new": false,
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
@@ -80,7 +80,7 @@
     {
       "new": false,
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
@@ -95,7 +95,7 @@
     {
       "new": false,
       "thumbnail": {
-        "src": "http://placecage.com/600/350",
+        "src": "http://www.placecage.com/600/350",
         "new": false,
         "alt": "visualization"
       },
