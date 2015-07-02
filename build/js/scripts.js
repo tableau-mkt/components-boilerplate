@@ -225,7 +225,7 @@ function dataSourcesSearch() {
         var $link = $(this),
             $drawer = $('#' + $link.data('drawer-id'));
         
-        $drawer.show();
+        $drawer.show().addClass('open');
 
         $drawer.add($mobileWrapper).animate({
           marginLeft: '-=100%'
@@ -238,19 +238,25 @@ function dataSourcesSearch() {
     $mobileDrawerClose.on('click.nav', function(e) {
       var $drawer = $(this).closest('.global-nav__drawers__drawer');
 
-      $drawer.add($mobileWrapper).animate({
-        marginLeft: '+=100%'
-      }, animation);
-
-      setTimeout(function() {
-        $drawer.hide();
-      }, animation.duration);
-
+      closeDrawerMobile($drawer);
+      
       e.preventDefault();
     });
 
     // Mobile menu
     $hamburger.on('click.global-nav', function(e) {
+      var $openDrawer = $drawers.filter('.open'),
+          drawerOptions = $.extend({}, animation);
+
+      if ($openDrawer.length) {
+        drawerOptions.done = function() {
+          $openDrawer.css('margin-left', '100%');
+          $mobileWrapper.css('margin-left', '0%');
+        };
+
+        $openDrawer.slideUp(drawerOptions).removeClass('open');
+      }
+
       $mobileWrapper.slideToggle(animation);
       $hamburger.parent().toggleClass('open');
       e.preventDefault();
@@ -271,6 +277,16 @@ function dataSourcesSearch() {
 
     $link.add($drawer).removeClass('expanded');
     $drawers.filter('#' + $link.data('drawer-id')).slideUp(animation);
+  }
+
+  function closeDrawerMobile($drawer) {
+    $drawer.add($mobileWrapper).animate({
+      marginLeft: '+=100%'
+    }, animation);
+
+    setTimeout(function() {
+      $drawer.hide().removeClass('open');
+    }, animation.duration);
   }
 
 
