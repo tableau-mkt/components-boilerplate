@@ -947,51 +947,6 @@ Weight: 30
 Style guide: lists.tags
 */
   /*
-Basic Teaser List
-
-A basic list of teasers, used for things like a list of blog posts.
-
-Weight: 20
-
-Markup: teaser-list.hbs
-
-Style guide: lists.teaser
-*/
-  /*
-Full-width Teaser List
-
-A full-width list of teasers, used for things like a list of blog posts.
-
-Weight: 5
-
-Markup:
-<div class="teaser-list teaser-list--full-width">
-  <div class="teaser-list__thumbnail grid-3">
-    <a href="#">
-      <img src="http://www.placecage.com/223/223">
-    </a>
-  </div>
-  <div class="teaser-list__info grid-9 grid-last">
-    <h2 class="teaser-list__title">
-      <a href="#">Blog Post or something</a>
-    </h2>
-    <div class="teaser-list__secondary-label">
-      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
-    </div>
-    <p class="teaser-list__description">
-      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
-    </p>
-    <div class="class="teaser-list__read-more">
-      <a href="/blog/another-post">Read More</a>
-    </div>
-  </div>
-</div>
-
-################################################################################
-# Style guide: lists.full-width ################################################
-################################################################################
-*/
-  /*
 Popups
 
 Used to popup content into a modal box ontop of the page.
@@ -1162,6 +1117,18 @@ Tabbed content sections where one section is visible at a time.
 Markup: tabs.hbs
 
 Style guide: interactive.tabs
+*/
+  /*
+Basic Teaser List
+
+A basic list of teasers, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 20
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
 */
   /*
 Thumbnail Image
@@ -1483,7 +1450,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .tabs__tab-content:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1610,7 +1577,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .li
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .tabs__tab-content:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1895,6 +1862,15 @@ body.kss .kss-example-preview .box--white h6, body.kss .kss-example-preview .box
   color: #000;
 }
 
+body.kss .kss-example-preview .box--white h1 a, body.kss .kss-example-preview .box--white .heading--homepage a, body.kss .kss-example-preview .box--white .heading--product a, body.kss .kss-example-preview .box--white .heading--download a, body.kss .kss-example-preview .box--white .heading--h1 a,
+body.kss .kss-example-preview .box--white h2 a, body.kss .kss-example-preview .box--white .heading--medium a, body.kss .kss-example-preview .box--white .heading--h2 a,
+body.kss .kss-example-preview .box--white h3 a, body.kss .kss-example-preview .box--white .heading--small a, body.kss .kss-example-preview .box--white .heading--h3 a,
+body.kss .kss-example-preview .box--white h4 a, body.kss .kss-example-preview .box--white .heading--x-small a, body.kss .kss-example-preview .box--white .heading--h4 a,
+body.kss .kss-example-preview .box--white h5 a, body.kss .kss-example-preview .box--white .heading--label a, body.kss .kss-example-preview .box--white .heading--h5 a,
+body.kss .kss-example-preview .box--white h6 a, body.kss .kss-example-preview .box--white .heading--h6 a {
+  color: #000;
+}
+
 body.kss .kss-example-preview .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
@@ -1906,6 +1882,15 @@ body.kss .kss-example-preview .box--light-gray-1 h3, body.kss .kss-example-previ
 body.kss .kss-example-preview .box--light-gray-1 h4, body.kss .kss-example-preview .box--light-gray-1 .heading--x-small, body.kss .kss-example-preview .box--light-gray-1 .heading--h4,
 body.kss .kss-example-preview .box--light-gray-1 h5, body.kss .kss-example-preview .box--light-gray-1 .heading--label, body.kss .kss-example-preview .box--light-gray-1 .heading--h5,
 body.kss .kss-example-preview .box--light-gray-1 h6, body.kss .kss-example-preview .box--light-gray-1 .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .box--light-gray-1 h1 a, body.kss .kss-example-preview .box--light-gray-1 .heading--homepage a, body.kss .kss-example-preview .box--light-gray-1 .heading--product a, body.kss .kss-example-preview .box--light-gray-1 .heading--download a, body.kss .kss-example-preview .box--light-gray-1 .heading--h1 a,
+body.kss .kss-example-preview .box--light-gray-1 h2 a, body.kss .kss-example-preview .box--light-gray-1 .heading--medium a, body.kss .kss-example-preview .box--light-gray-1 .heading--h2 a,
+body.kss .kss-example-preview .box--light-gray-1 h3 a, body.kss .kss-example-preview .box--light-gray-1 .heading--small a, body.kss .kss-example-preview .box--light-gray-1 .heading--h3 a,
+body.kss .kss-example-preview .box--light-gray-1 h4 a, body.kss .kss-example-preview .box--light-gray-1 .heading--x-small a, body.kss .kss-example-preview .box--light-gray-1 .heading--h4 a,
+body.kss .kss-example-preview .box--light-gray-1 h5 a, body.kss .kss-example-preview .box--light-gray-1 .heading--label a, body.kss .kss-example-preview .box--light-gray-1 .heading--h5 a,
+body.kss .kss-example-preview .box--light-gray-1 h6 a, body.kss .kss-example-preview .box--light-gray-1 .heading--h6 a {
   color: #000;
 }
 
@@ -1923,6 +1908,15 @@ body.kss .kss-example-preview .box--light-gray-2 h6, body.kss .kss-example-previ
   color: #000;
 }
 
+body.kss .kss-example-preview .box--light-gray-2 h1 a, body.kss .kss-example-preview .box--light-gray-2 .heading--homepage a, body.kss .kss-example-preview .box--light-gray-2 .heading--product a, body.kss .kss-example-preview .box--light-gray-2 .heading--download a, body.kss .kss-example-preview .box--light-gray-2 .heading--h1 a,
+body.kss .kss-example-preview .box--light-gray-2 h2 a, body.kss .kss-example-preview .box--light-gray-2 .heading--medium a, body.kss .kss-example-preview .box--light-gray-2 .heading--h2 a,
+body.kss .kss-example-preview .box--light-gray-2 h3 a, body.kss .kss-example-preview .box--light-gray-2 .heading--small a, body.kss .kss-example-preview .box--light-gray-2 .heading--h3 a,
+body.kss .kss-example-preview .box--light-gray-2 h4 a, body.kss .kss-example-preview .box--light-gray-2 .heading--x-small a, body.kss .kss-example-preview .box--light-gray-2 .heading--h4 a,
+body.kss .kss-example-preview .box--light-gray-2 h5 a, body.kss .kss-example-preview .box--light-gray-2 .heading--label a, body.kss .kss-example-preview .box--light-gray-2 .heading--h5 a,
+body.kss .kss-example-preview .box--light-gray-2 h6 a, body.kss .kss-example-preview .box--light-gray-2 .heading--h6 a {
+  color: #000;
+}
+
 body.kss .kss-example-preview .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
@@ -1934,6 +1928,15 @@ body.kss .kss-example-preview .box--dark-gray-1 h3, body.kss .kss-example-previe
 body.kss .kss-example-preview .box--dark-gray-1 h4, body.kss .kss-example-preview .box--dark-gray-1 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-1 .heading--h4,
 body.kss .kss-example-preview .box--dark-gray-1 h5, body.kss .kss-example-preview .box--dark-gray-1 .heading--label, body.kss .kss-example-preview .box--dark-gray-1 .heading--h5,
 body.kss .kss-example-preview .box--dark-gray-1 h6, body.kss .kss-example-preview .box--dark-gray-1 .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--dark-gray-1 h1 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--homepage a, body.kss .kss-example-preview .box--dark-gray-1 .heading--product a, body.kss .kss-example-preview .box--dark-gray-1 .heading--download a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h1 a,
+body.kss .kss-example-preview .box--dark-gray-1 h2 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--medium a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h2 a,
+body.kss .kss-example-preview .box--dark-gray-1 h3 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--small a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h3 a,
+body.kss .kss-example-preview .box--dark-gray-1 h4 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--x-small a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h4 a,
+body.kss .kss-example-preview .box--dark-gray-1 h5 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--label a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h5 a,
+body.kss .kss-example-preview .box--dark-gray-1 h6 a, body.kss .kss-example-preview .box--dark-gray-1 .heading--h6 a {
   color: #fff;
 }
 
@@ -1951,6 +1954,15 @@ body.kss .kss-example-preview .box--dark-gray-2 h6, body.kss .kss-example-previe
   color: #fff;
 }
 
+body.kss .kss-example-preview .box--dark-gray-2 h1 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--homepage a, body.kss .kss-example-preview .box--dark-gray-2 .heading--product a, body.kss .kss-example-preview .box--dark-gray-2 .heading--download a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h1 a,
+body.kss .kss-example-preview .box--dark-gray-2 h2 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--medium a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h2 a,
+body.kss .kss-example-preview .box--dark-gray-2 h3 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--small a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h3 a,
+body.kss .kss-example-preview .box--dark-gray-2 h4 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--x-small a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h4 a,
+body.kss .kss-example-preview .box--dark-gray-2 h5 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--label a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h5 a,
+body.kss .kss-example-preview .box--dark-gray-2 h6 a, body.kss .kss-example-preview .box--dark-gray-2 .heading--h6 a {
+  color: #fff;
+}
+
 body.kss .kss-example-preview .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
@@ -1962,6 +1974,15 @@ body.kss .kss-example-preview .box--dark-gray-3 h3, body.kss .kss-example-previe
 body.kss .kss-example-preview .box--dark-gray-3 h4, body.kss .kss-example-preview .box--dark-gray-3 .heading--x-small, body.kss .kss-example-preview .box--dark-gray-3 .heading--h4,
 body.kss .kss-example-preview .box--dark-gray-3 h5, body.kss .kss-example-preview .box--dark-gray-3 .heading--label, body.kss .kss-example-preview .box--dark-gray-3 .heading--h5,
 body.kss .kss-example-preview .box--dark-gray-3 h6, body.kss .kss-example-preview .box--dark-gray-3 .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--dark-gray-3 h1 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--homepage a, body.kss .kss-example-preview .box--dark-gray-3 .heading--product a, body.kss .kss-example-preview .box--dark-gray-3 .heading--download a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h1 a,
+body.kss .kss-example-preview .box--dark-gray-3 h2 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--medium a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h2 a,
+body.kss .kss-example-preview .box--dark-gray-3 h3 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--small a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h3 a,
+body.kss .kss-example-preview .box--dark-gray-3 h4 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--x-small a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h4 a,
+body.kss .kss-example-preview .box--dark-gray-3 h5 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--label a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h5 a,
+body.kss .kss-example-preview .box--dark-gray-3 h6 a, body.kss .kss-example-preview .box--dark-gray-3 .heading--h6 a {
   color: #fff;
 }
 
@@ -1979,6 +2000,15 @@ body.kss .kss-example-preview .box--about-featured h6, body.kss .kss-example-pre
   color: #fff;
 }
 
+body.kss .kss-example-preview .box--about-featured h1 a, body.kss .kss-example-preview .box--about-featured .heading--homepage a, body.kss .kss-example-preview .box--about-featured .heading--product a, body.kss .kss-example-preview .box--about-featured .heading--download a, body.kss .kss-example-preview .box--about-featured .heading--h1 a,
+body.kss .kss-example-preview .box--about-featured h2 a, body.kss .kss-example-preview .box--about-featured .heading--medium a, body.kss .kss-example-preview .box--about-featured .heading--h2 a,
+body.kss .kss-example-preview .box--about-featured h3 a, body.kss .kss-example-preview .box--about-featured .heading--small a, body.kss .kss-example-preview .box--about-featured .heading--h3 a,
+body.kss .kss-example-preview .box--about-featured h4 a, body.kss .kss-example-preview .box--about-featured .heading--x-small a, body.kss .kss-example-preview .box--about-featured .heading--h4 a,
+body.kss .kss-example-preview .box--about-featured h5 a, body.kss .kss-example-preview .box--about-featured .heading--label a, body.kss .kss-example-preview .box--about-featured .heading--h5 a,
+body.kss .kss-example-preview .box--about-featured h6 a, body.kss .kss-example-preview .box--about-featured .heading--h6 a {
+  color: #fff;
+}
+
 body.kss .kss-example-preview .box--data-sources {
   background-color: #2e4c65;
   color: #fff;
@@ -1990,6 +2020,15 @@ body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-previ
 body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
 body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
 body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .box--data-sources .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--data-sources h1 a, body.kss .kss-example-preview .box--data-sources .heading--homepage a, body.kss .kss-example-preview .box--data-sources .heading--product a, body.kss .kss-example-preview .box--data-sources .heading--download a, body.kss .kss-example-preview .box--data-sources .heading--h1 a,
+body.kss .kss-example-preview .box--data-sources h2 a, body.kss .kss-example-preview .box--data-sources .heading--medium a, body.kss .kss-example-preview .box--data-sources .heading--h2 a,
+body.kss .kss-example-preview .box--data-sources h3 a, body.kss .kss-example-preview .box--data-sources .heading--small a, body.kss .kss-example-preview .box--data-sources .heading--h3 a,
+body.kss .kss-example-preview .box--data-sources h4 a, body.kss .kss-example-preview .box--data-sources .heading--x-small a, body.kss .kss-example-preview .box--data-sources .heading--h4 a,
+body.kss .kss-example-preview .box--data-sources h5 a, body.kss .kss-example-preview .box--data-sources .heading--label a, body.kss .kss-example-preview .box--data-sources .heading--h5 a,
+body.kss .kss-example-preview .box--data-sources h6 a, body.kss .kss-example-preview .box--data-sources .heading--h6 a {
   color: #fff;
 }
 
@@ -2007,6 +2046,15 @@ body.kss .kss-example-preview .box--desktop h6, body.kss .kss-example-preview .b
   color: #fff;
 }
 
+body.kss .kss-example-preview .box--desktop h1 a, body.kss .kss-example-preview .box--desktop .heading--homepage a, body.kss .kss-example-preview .box--desktop .heading--product a, body.kss .kss-example-preview .box--desktop .heading--download a, body.kss .kss-example-preview .box--desktop .heading--h1 a,
+body.kss .kss-example-preview .box--desktop h2 a, body.kss .kss-example-preview .box--desktop .heading--medium a, body.kss .kss-example-preview .box--desktop .heading--h2 a,
+body.kss .kss-example-preview .box--desktop h3 a, body.kss .kss-example-preview .box--desktop .heading--small a, body.kss .kss-example-preview .box--desktop .heading--h3 a,
+body.kss .kss-example-preview .box--desktop h4 a, body.kss .kss-example-preview .box--desktop .heading--x-small a, body.kss .kss-example-preview .box--desktop .heading--h4 a,
+body.kss .kss-example-preview .box--desktop h5 a, body.kss .kss-example-preview .box--desktop .heading--label a, body.kss .kss-example-preview .box--desktop .heading--h5 a,
+body.kss .kss-example-preview .box--desktop h6 a, body.kss .kss-example-preview .box--desktop .heading--h6 a {
+  color: #fff;
+}
+
 body.kss .kss-example-preview .box--server {
   background-color: #7fa9bb;
   color: #fff;
@@ -2018,6 +2066,15 @@ body.kss .kss-example-preview .box--server h3, body.kss .kss-example-preview .bo
 body.kss .kss-example-preview .box--server h4, body.kss .kss-example-preview .box--server .heading--x-small, body.kss .kss-example-preview .box--server .heading--h4,
 body.kss .kss-example-preview .box--server h5, body.kss .kss-example-preview .box--server .heading--label, body.kss .kss-example-preview .box--server .heading--h5,
 body.kss .kss-example-preview .box--server h6, body.kss .kss-example-preview .box--server .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--server h1 a, body.kss .kss-example-preview .box--server .heading--homepage a, body.kss .kss-example-preview .box--server .heading--product a, body.kss .kss-example-preview .box--server .heading--download a, body.kss .kss-example-preview .box--server .heading--h1 a,
+body.kss .kss-example-preview .box--server h2 a, body.kss .kss-example-preview .box--server .heading--medium a, body.kss .kss-example-preview .box--server .heading--h2 a,
+body.kss .kss-example-preview .box--server h3 a, body.kss .kss-example-preview .box--server .heading--small a, body.kss .kss-example-preview .box--server .heading--h3 a,
+body.kss .kss-example-preview .box--server h4 a, body.kss .kss-example-preview .box--server .heading--x-small a, body.kss .kss-example-preview .box--server .heading--h4 a,
+body.kss .kss-example-preview .box--server h5 a, body.kss .kss-example-preview .box--server .heading--label a, body.kss .kss-example-preview .box--server .heading--h5 a,
+body.kss .kss-example-preview .box--server h6 a, body.kss .kss-example-preview .box--server .heading--h6 a {
   color: #fff;
 }
 
@@ -2035,6 +2092,15 @@ body.kss .kss-example-preview .box--online h6, body.kss .kss-example-preview .bo
   color: #fff;
 }
 
+body.kss .kss-example-preview .box--online h1 a, body.kss .kss-example-preview .box--online .heading--homepage a, body.kss .kss-example-preview .box--online .heading--product a, body.kss .kss-example-preview .box--online .heading--download a, body.kss .kss-example-preview .box--online .heading--h1 a,
+body.kss .kss-example-preview .box--online h2 a, body.kss .kss-example-preview .box--online .heading--medium a, body.kss .kss-example-preview .box--online .heading--h2 a,
+body.kss .kss-example-preview .box--online h3 a, body.kss .kss-example-preview .box--online .heading--small a, body.kss .kss-example-preview .box--online .heading--h3 a,
+body.kss .kss-example-preview .box--online h4 a, body.kss .kss-example-preview .box--online .heading--x-small a, body.kss .kss-example-preview .box--online .heading--h4 a,
+body.kss .kss-example-preview .box--online h5 a, body.kss .kss-example-preview .box--online .heading--label a, body.kss .kss-example-preview .box--online .heading--h5 a,
+body.kss .kss-example-preview .box--online h6 a, body.kss .kss-example-preview .box--online .heading--h6 a {
+  color: #fff;
+}
+
 body.kss .kss-example-preview .box--public {
   background-color: #324E7A;
   color: #fff;
@@ -2046,6 +2112,15 @@ body.kss .kss-example-preview .box--public h3, body.kss .kss-example-preview .bo
 body.kss .kss-example-preview .box--public h4, body.kss .kss-example-preview .box--public .heading--x-small, body.kss .kss-example-preview .box--public .heading--h4,
 body.kss .kss-example-preview .box--public h5, body.kss .kss-example-preview .box--public .heading--label, body.kss .kss-example-preview .box--public .heading--h5,
 body.kss .kss-example-preview .box--public h6, body.kss .kss-example-preview .box--public .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--public h1 a, body.kss .kss-example-preview .box--public .heading--homepage a, body.kss .kss-example-preview .box--public .heading--product a, body.kss .kss-example-preview .box--public .heading--download a, body.kss .kss-example-preview .box--public .heading--h1 a,
+body.kss .kss-example-preview .box--public h2 a, body.kss .kss-example-preview .box--public .heading--medium a, body.kss .kss-example-preview .box--public .heading--h2 a,
+body.kss .kss-example-preview .box--public h3 a, body.kss .kss-example-preview .box--public .heading--small a, body.kss .kss-example-preview .box--public .heading--h3 a,
+body.kss .kss-example-preview .box--public h4 a, body.kss .kss-example-preview .box--public .heading--x-small a, body.kss .kss-example-preview .box--public .heading--h4 a,
+body.kss .kss-example-preview .box--public h5 a, body.kss .kss-example-preview .box--public .heading--label a, body.kss .kss-example-preview .box--public .heading--h5 a,
+body.kss .kss-example-preview .box--public h6 a, body.kss .kss-example-preview .box--public .heading--h6 a {
   color: #fff;
 }
 
@@ -2063,6 +2138,15 @@ body.kss .kss-example-preview .box--reader h6, body.kss .kss-example-preview .bo
   color: #fff;
 }
 
+body.kss .kss-example-preview .box--reader h1 a, body.kss .kss-example-preview .box--reader .heading--homepage a, body.kss .kss-example-preview .box--reader .heading--product a, body.kss .kss-example-preview .box--reader .heading--download a, body.kss .kss-example-preview .box--reader .heading--h1 a,
+body.kss .kss-example-preview .box--reader h2 a, body.kss .kss-example-preview .box--reader .heading--medium a, body.kss .kss-example-preview .box--reader .heading--h2 a,
+body.kss .kss-example-preview .box--reader h3 a, body.kss .kss-example-preview .box--reader .heading--small a, body.kss .kss-example-preview .box--reader .heading--h3 a,
+body.kss .kss-example-preview .box--reader h4 a, body.kss .kss-example-preview .box--reader .heading--x-small a, body.kss .kss-example-preview .box--reader .heading--h4 a,
+body.kss .kss-example-preview .box--reader h5 a, body.kss .kss-example-preview .box--reader .heading--label a, body.kss .kss-example-preview .box--reader .heading--h5 a,
+body.kss .kss-example-preview .box--reader h6 a, body.kss .kss-example-preview .box--reader .heading--h6 a {
+  color: #fff;
+}
+
 body.kss .kss-example-preview .box--mobile {
   background-color: #DB8E6A;
   color: #fff;
@@ -2074,6 +2158,15 @@ body.kss .kss-example-preview .box--mobile h3, body.kss .kss-example-preview .bo
 body.kss .kss-example-preview .box--mobile h4, body.kss .kss-example-preview .box--mobile .heading--x-small, body.kss .kss-example-preview .box--mobile .heading--h4,
 body.kss .kss-example-preview .box--mobile h5, body.kss .kss-example-preview .box--mobile .heading--label, body.kss .kss-example-preview .box--mobile .heading--h5,
 body.kss .kss-example-preview .box--mobile h6, body.kss .kss-example-preview .box--mobile .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .box--mobile h1 a, body.kss .kss-example-preview .box--mobile .heading--homepage a, body.kss .kss-example-preview .box--mobile .heading--product a, body.kss .kss-example-preview .box--mobile .heading--download a, body.kss .kss-example-preview .box--mobile .heading--h1 a,
+body.kss .kss-example-preview .box--mobile h2 a, body.kss .kss-example-preview .box--mobile .heading--medium a, body.kss .kss-example-preview .box--mobile .heading--h2 a,
+body.kss .kss-example-preview .box--mobile h3 a, body.kss .kss-example-preview .box--mobile .heading--small a, body.kss .kss-example-preview .box--mobile .heading--h3 a,
+body.kss .kss-example-preview .box--mobile h4 a, body.kss .kss-example-preview .box--mobile .heading--x-small a, body.kss .kss-example-preview .box--mobile .heading--h4 a,
+body.kss .kss-example-preview .box--mobile h5 a, body.kss .kss-example-preview .box--mobile .heading--label a, body.kss .kss-example-preview .box--mobile .heading--h5 a,
+body.kss .kss-example-preview .box--mobile h6 a, body.kss .kss-example-preview .box--mobile .heading--h6 a {
   color: #fff;
 }
 
@@ -2091,6 +2184,15 @@ body.kss .kss-example-preview .box--nav-drawer-gray-1 h6, body.kss .kss-example-
   color: #000;
 }
 
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h1 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--homepage a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--product a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--download a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h1 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h2 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--medium a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h2 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h3 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--small a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h3 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h4 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--x-small a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h4 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h5 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--label a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h5 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 h6 a, body.kss .kss-example-preview .box--nav-drawer-gray-1 .heading--h6 a {
+  color: #000;
+}
+
 body.kss .kss-example-preview .box--nav-drawer-gray-2 {
   background-color: #ddd;
   color: #333;
@@ -2102,6 +2204,15 @@ body.kss .kss-example-preview .box--nav-drawer-gray-2 h3, body.kss .kss-example-
 body.kss .kss-example-preview .box--nav-drawer-gray-2 h4, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--x-small, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h4,
 body.kss .kss-example-preview .box--nav-drawer-gray-2 h5, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--label, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h5,
 body.kss .kss-example-preview .box--nav-drawer-gray-2 h6, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h1 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--homepage a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--product a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--download a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h1 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h2 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--medium a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h2 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h3 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--small a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h3 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h4 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--x-small a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h4 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h5 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--label a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h5 a,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 h6 a, body.kss .kss-example-preview .box--nav-drawer-gray-2 .heading--h6 a {
   color: #000;
 }
 
@@ -2164,14 +2275,16 @@ body.kss .kss-example-preview .content-container.content-container--wide, body.k
 }
 
 @media (max-width: 960px) {
-  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
+  body.kss .kss-example-preview .content-container,
+  body.kss .kss-example-preview .flyout__close-wrapper, body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container--wide.flyout__close-wrapper {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
 @media (max-width: 639px) {
-  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
+  body.kss .kss-example-preview .content-container,
+  body.kss .kss-example-preview .flyout__close-wrapper, body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container--wide.flyout__close-wrapper {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -3028,6 +3141,19 @@ body.kss .kss-example-preview .global-nav__top.global-nav--search-shown .global-
   }
   body.kss .kss-example-preview .global-nav__drawers .global-nav__drawers__drawer {
     display: none;
+  }
+  body.kss .kss-example-preview .global-nav__drawers .global-nav__drawer__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item__link {
+    margin-bottom: 0;
   }
   body.kss .kss-example-preview .global-nav__drawers .global-nav__drawer__secondary {
     position: relative;
@@ -4393,9 +4519,6 @@ body.kss .kss-example-preview .hero .hero__video video {
   body.kss .kss-example-preview .hero .hero__background .hero__background__inner {
     padding-bottom: 50%;
   }
-  body.kss .kss-example-preview .hero .hero__content h1.heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--homepage {
-    font-size: 4em;
-  }
   body.kss .kss-example-preview .hero .hero__content h1.heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br {
     display: none;
   }
@@ -4406,14 +4529,14 @@ body.kss .kss-example-preview .hero .hero__video video {
     background: #fff;
     color: #333;
   }
-  body.kss .kss-example-preview .hero h1, body.kss .kss-example-preview .hero .heading--homepage, body.kss .kss-example-preview .hero .heading--product, body.kss .kss-example-preview .hero .heading--download, body.kss .kss-example-preview .hero h4, body.kss .kss-example-preview .hero .heading--x-small {
+  body.kss .kss-example-preview .hero h1, body.kss .kss-example-preview .hero .heading--homepage, body.kss .kss-example-preview .hero .heading--product, body.kss .kss-example-preview .hero .heading--download, body.kss .kss-example-preview .hero h4.heading--label, body.kss .kss-example-preview .hero .heading--label.heading--x-small {
     color: #333;
   }
   body.kss .kss-example-preview .hero .hero__content {
-    padding-bottom: 2em;
+    padding: 2em 0;
   }
   body.kss .kss-example-preview .hero .hero__content h1.heading--homepage, body.kss .kss-example-preview .hero .hero__content .heading--homepage {
-    font-size: 3em;
+    margin-top: .2em;
   }
   body.kss .kss-example-preview .hero .hero__content h1.heading--homepage br, body.kss .kss-example-preview .hero .hero__content .heading--homepage br {
     display: none;
@@ -4507,6 +4630,16 @@ body.kss .kss-example-preview .icon--slideshow-next-dark {
 
 body.kss .kss-example-preview .icon--magnifying-glass {
   content: url("../images/icons/icon-magnifying-glass.svg");
+}
+
+body.kss .kss-example-preview .icon--ecosystem-style {
+  border: 5px solid #DEDEDE;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  font-size: 7.5em;
+  background: #fafafa;
 }
 
 body.kss .kss-example-preview .icon--large {
@@ -4951,6 +5084,10 @@ body.kss .kss-example-preview .list-negative {
   padding-left: 1em;
 }
 
+body.kss .kss-example-preview .tags-list {
+  margin: .5em 0;
+}
+
 body.kss .kss-example-preview .tags-list .tags-list__tag a {
   font-size: 1em;
   color: #6f99a5;
@@ -4962,41 +5099,6 @@ body.kss .kss-example-preview .tags-list .tags-list__tag:after {
 
 body.kss .kss-example-preview .tags-list .tags-list__tag:last-child:after {
   content: "";
-}
-
-body.kss .kss-example-preview .teaser-list > a {
-  display: block;
-  color: #333;
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-body.kss .kss-example-preview .teaser-list > a:hover {
-  color: #eb912c;
-  text-decoration: none;
-}
-
-body.kss .kss-example-preview .teaser-list > a:hover img {
-  opacity: 0.85;
-}
-
-body.kss .kss-example-preview .teaser-list .teaser-list__title {
-  margin: 0.5em 0;
-}
-
-@media (max-width: 639px) {
-  body.kss .kss-example-preview .teaser-list .teaser-list__item {
-    margin-bottom: 2em;
-  }
-}
-
-body.kss .kss-example-preview .teaser-list.teaser-list--full-width {
-  padding: 2em 0;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-body.kss .kss-example-preview .teaser-list.teaser-list--full-width .teaser-list__title {
-  margin: 0 0 0.5em;
 }
 
 body.kss .kss-example-preview .block--delta-blocks-tabs {
@@ -5665,6 +5767,47 @@ body.kss .kss-example-preview .tabs__tab-content.active {
   display: inherit;
 }
 
+body.kss .kss-example-preview .teaser-list > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+body.kss .kss-example-preview .teaser-list > a:hover {
+  color: #eb912c;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .teaser-list > a:hover img {
+  opacity: 0.85;
+}
+
+body.kss .kss-example-preview .teaser-list .teaser-list__thumbnail {
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .teaser-list .teaser-list__title {
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .teaser-list .teaser-list__description {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+body.kss .kss-example-preview .teaser-list .teaser-list__link {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .teaser-list .teaser-list__item {
+    margin-bottom: 2em;
+  }
+}
+
 body.kss .kss-example-preview .thumbnail {
   position: relative;
   display: inline-block;
@@ -5797,8 +5940,32 @@ body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepa
   font-size: 3.5714285714em;
 }
 
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1 {
+    font-size: 3.2142857143em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1 {
+    font-size: 2.2857142857em;
+  }
+}
+
 body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2 {
   font-size: 2.5714285714em;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2 {
+    font-size: 2.2857142857em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--medium, body.kss .kss-example-preview .heading--h2 {
+    font-size: 2em;
+  }
 }
 
 body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--small, body.kss .kss-example-preview .heading--h3 {
@@ -5825,10 +5992,42 @@ body.kss .kss-example-preview .heading--homepage {
   color: #000;
 }
 
+body.kss .kss-example-preview .heading--homepage a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--homepage {
+    font-size: 3.2142857143em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--homepage {
+    font-size: 2.2857142857em;
+  }
+}
+
 body.kss .kss-example-preview .heading--product {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
   color: #000;
+}
+
+body.kss .kss-example-preview .heading--product a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--product {
+    font-size: 2.2857142857em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--product {
+    font-size: 1.9285714286em;
+  }
 }
 
 body.kss .kss-example-preview .heading--download {
@@ -5839,11 +6038,43 @@ body.kss .kss-example-preview .heading--download {
   color: #000;
 }
 
+body.kss .kss-example-preview .heading--download a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--download {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--download {
+    font-size: 1.4285714286em;
+  }
+}
+
 body.kss .kss-example-preview .heading--medium {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
   line-height: 1.39;
   color: #000;
+}
+
+body.kss .kss-example-preview .heading--medium a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--medium {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--medium {
+    font-size: 1.4285714286em;
+  }
 }
 
 body.kss .kss-example-preview .heading--small {
@@ -5852,9 +6083,41 @@ body.kss .kss-example-preview .heading--small {
   -webkit-font-smoothing: auto;
 }
 
+body.kss .kss-example-preview .heading--small a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--small {
+    font-size: 1.4285714286em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--small {
+    font-size: 1.2857142857em;
+  }
+}
+
 body.kss .kss-example-preview .heading--x-small {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   color: #333;
+}
+
+body.kss .kss-example-preview .heading--x-small a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--x-small {
+    font-size: 1.1428571429em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--x-small {
+    font-size: 1.0714285714em;
+  }
 }
 
 body.kss .kss-example-preview .heading--label {
@@ -5864,6 +6127,22 @@ body.kss .kss-example-preview .heading--label {
   color: #333;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
+}
+
+body.kss .kss-example-preview .heading--label a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .heading--label {
+    font-size: 1.1428571429em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .heading--label {
+    font-size: 1.0714285714em;
+  }
 }
 
 body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav__top .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete {
@@ -6079,6 +6358,38 @@ body.kss .kss-example-preview .viz-slideshow .viz-slideshow__slide__copy {
 
 body.kss .kss-example-preview .viz-slideshow .slick-active .viz-slideshow__slide__copy {
   opacity: 1;
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .viz-slideshow:before,
+  body.kss .kss-example-preview .viz-slideshow:after {
+    display: none;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 180px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #fff, transparent);
+    background-image: linear-gradient(to right, #fff, transparent);
+  }
+}
+
+@media (min-width: 961px) and (min-width: 1550px) {
+  body.kss .kss-example-preview .viz-slideshow:before,
+  body.kss .kss-example-preview .viz-slideshow:after {
+    display: block;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .viz-slideshow:after {
+    background-image: -webkit-linear-gradient(right, #fff, transparent);
+    background-image: linear-gradient(to left, #fff, transparent);
+    left: auto;
+    right: 0;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 960px) {

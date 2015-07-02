@@ -314,6 +314,15 @@ Style guide: navigation.global
       display: none;
     }
     
+    .global-nav__drawer__inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .sub-nav__item__link {
+      margin-bottom: 0;
+    }
+
     .global-nav__drawer__secondary {
       position: relative;
 

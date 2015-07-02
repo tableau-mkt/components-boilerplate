@@ -1,0 +1,55 @@
+/*
+Basic Teaser List
+
+A basic list of teasers, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 20
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
+*/
+.teaser-list {
+  @extend %clearfix;
+
+  & > a {
+    display: block;
+    color: $text-dark-body;
+    @include transition(color .25s);
+
+    &:hover {
+      color: $text-link;
+      text-decoration: none;
+    }
+
+    &:hover img {
+      opacity: 0.85;
+    }
+  }
+
+  .teaser-list__thumbnail {
+    line-height: 0;
+  }
+
+  .teaser-list__title {
+    margin-top: 0.7em;
+    margin-bottom: 0;
+  }
+  
+  .teaser-list__description {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  .teaser-list__link {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($mobile-only) {
+    .teaser-list__item {
+      margin-bottom: 2em;
+    }
+  }
+}

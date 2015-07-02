@@ -59,6 +59,31 @@ Style guide: interactive.viz-slideshow
     opacity: 1;
   }
 
+  @include breakpoint($desktop-only) {
+    &:before,
+    &:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 180px;
+      height: 100%;
+      background-image: linear-gradient(to right, $white, transparent);
+
+      @include breakpoint($content-max) {
+        display: block;
+      }
+    }
+
+    &:after {
+      background-image: linear-gradient(to left, $white, transparent);
+      left: auto;
+      right: 0;
+    }
+  }
+
   @include breakpoint($tablet-only) {
 
     .viz-slideshow__slide {

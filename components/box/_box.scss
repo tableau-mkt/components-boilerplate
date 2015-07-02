@@ -80,6 +80,10 @@ Style guide: boxes.colored
     h5, .heading--h5,
     h6, .heading--h6 {
       color: nth($colors, 3);
+
+      a {
+        color: nth($colors, 3);
+      }
     }
   }
 }

@@ -280,7 +280,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .tabs__tab-content:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .tabs__tab-content:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -434,7 +434,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .tabs__tab-content:after {
+.clearfix:after, .content-container:after, .flyout__close-wrapper:after, .tabs__tab-content:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1062,6 +1062,15 @@ Style guide: boxes.colored
   color: #000;
 }
 
+.box--white h1 a, .box--white .heading--homepage a, .box--white .heading--product a, .box--white .heading--download a, .box--white .heading--h1 a,
+.box--white h2 a, .box--white .heading--medium a, .box--white .heading--h2 a,
+.box--white h3 a, .box--white .heading--small a, .box--white .heading--h3 a,
+.box--white h4 a, .box--white .heading--x-small a, .box--white .heading--h4 a,
+.box--white h5 a, .box--white .heading--label a, .box--white .heading--h5 a,
+.box--white h6 a, .box--white .heading--h6 a {
+  color: #000;
+}
+
 .box--light-gray-1 {
   background-color: #fafafa;
   color: #333;
@@ -1073,6 +1082,15 @@ Style guide: boxes.colored
 .box--light-gray-1 h4, .box--light-gray-1 .heading--x-small, .box--light-gray-1 .heading--h4,
 .box--light-gray-1 h5, .box--light-gray-1 .heading--label, .box--light-gray-1 .heading--h5,
 .box--light-gray-1 h6, .box--light-gray-1 .heading--h6 {
+  color: #000;
+}
+
+.box--light-gray-1 h1 a, .box--light-gray-1 .heading--homepage a, .box--light-gray-1 .heading--product a, .box--light-gray-1 .heading--download a, .box--light-gray-1 .heading--h1 a,
+.box--light-gray-1 h2 a, .box--light-gray-1 .heading--medium a, .box--light-gray-1 .heading--h2 a,
+.box--light-gray-1 h3 a, .box--light-gray-1 .heading--small a, .box--light-gray-1 .heading--h3 a,
+.box--light-gray-1 h4 a, .box--light-gray-1 .heading--x-small a, .box--light-gray-1 .heading--h4 a,
+.box--light-gray-1 h5 a, .box--light-gray-1 .heading--label a, .box--light-gray-1 .heading--h5 a,
+.box--light-gray-1 h6 a, .box--light-gray-1 .heading--h6 a {
   color: #000;
 }
 
@@ -1090,6 +1108,15 @@ Style guide: boxes.colored
   color: #000;
 }
 
+.box--light-gray-2 h1 a, .box--light-gray-2 .heading--homepage a, .box--light-gray-2 .heading--product a, .box--light-gray-2 .heading--download a, .box--light-gray-2 .heading--h1 a,
+.box--light-gray-2 h2 a, .box--light-gray-2 .heading--medium a, .box--light-gray-2 .heading--h2 a,
+.box--light-gray-2 h3 a, .box--light-gray-2 .heading--small a, .box--light-gray-2 .heading--h3 a,
+.box--light-gray-2 h4 a, .box--light-gray-2 .heading--x-small a, .box--light-gray-2 .heading--h4 a,
+.box--light-gray-2 h5 a, .box--light-gray-2 .heading--label a, .box--light-gray-2 .heading--h5 a,
+.box--light-gray-2 h6 a, .box--light-gray-2 .heading--h6 a {
+  color: #000;
+}
+
 .box--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
@@ -1101,6 +1128,15 @@ Style guide: boxes.colored
 .box--dark-gray-1 h4, .box--dark-gray-1 .heading--x-small, .box--dark-gray-1 .heading--h4,
 .box--dark-gray-1 h5, .box--dark-gray-1 .heading--label, .box--dark-gray-1 .heading--h5,
 .box--dark-gray-1 h6, .box--dark-gray-1 .heading--h6 {
+  color: #fff;
+}
+
+.box--dark-gray-1 h1 a, .box--dark-gray-1 .heading--homepage a, .box--dark-gray-1 .heading--product a, .box--dark-gray-1 .heading--download a, .box--dark-gray-1 .heading--h1 a,
+.box--dark-gray-1 h2 a, .box--dark-gray-1 .heading--medium a, .box--dark-gray-1 .heading--h2 a,
+.box--dark-gray-1 h3 a, .box--dark-gray-1 .heading--small a, .box--dark-gray-1 .heading--h3 a,
+.box--dark-gray-1 h4 a, .box--dark-gray-1 .heading--x-small a, .box--dark-gray-1 .heading--h4 a,
+.box--dark-gray-1 h5 a, .box--dark-gray-1 .heading--label a, .box--dark-gray-1 .heading--h5 a,
+.box--dark-gray-1 h6 a, .box--dark-gray-1 .heading--h6 a {
   color: #fff;
 }
 
@@ -1118,6 +1154,15 @@ Style guide: boxes.colored
   color: #fff;
 }
 
+.box--dark-gray-2 h1 a, .box--dark-gray-2 .heading--homepage a, .box--dark-gray-2 .heading--product a, .box--dark-gray-2 .heading--download a, .box--dark-gray-2 .heading--h1 a,
+.box--dark-gray-2 h2 a, .box--dark-gray-2 .heading--medium a, .box--dark-gray-2 .heading--h2 a,
+.box--dark-gray-2 h3 a, .box--dark-gray-2 .heading--small a, .box--dark-gray-2 .heading--h3 a,
+.box--dark-gray-2 h4 a, .box--dark-gray-2 .heading--x-small a, .box--dark-gray-2 .heading--h4 a,
+.box--dark-gray-2 h5 a, .box--dark-gray-2 .heading--label a, .box--dark-gray-2 .heading--h5 a,
+.box--dark-gray-2 h6 a, .box--dark-gray-2 .heading--h6 a {
+  color: #fff;
+}
+
 .box--dark-gray-3 {
   background-color: #1b1b1b;
   color: #bbb;
@@ -1129,6 +1174,15 @@ Style guide: boxes.colored
 .box--dark-gray-3 h4, .box--dark-gray-3 .heading--x-small, .box--dark-gray-3 .heading--h4,
 .box--dark-gray-3 h5, .box--dark-gray-3 .heading--label, .box--dark-gray-3 .heading--h5,
 .box--dark-gray-3 h6, .box--dark-gray-3 .heading--h6 {
+  color: #fff;
+}
+
+.box--dark-gray-3 h1 a, .box--dark-gray-3 .heading--homepage a, .box--dark-gray-3 .heading--product a, .box--dark-gray-3 .heading--download a, .box--dark-gray-3 .heading--h1 a,
+.box--dark-gray-3 h2 a, .box--dark-gray-3 .heading--medium a, .box--dark-gray-3 .heading--h2 a,
+.box--dark-gray-3 h3 a, .box--dark-gray-3 .heading--small a, .box--dark-gray-3 .heading--h3 a,
+.box--dark-gray-3 h4 a, .box--dark-gray-3 .heading--x-small a, .box--dark-gray-3 .heading--h4 a,
+.box--dark-gray-3 h5 a, .box--dark-gray-3 .heading--label a, .box--dark-gray-3 .heading--h5 a,
+.box--dark-gray-3 h6 a, .box--dark-gray-3 .heading--h6 a {
   color: #fff;
 }
 
@@ -1146,6 +1200,15 @@ Style guide: boxes.colored
   color: #fff;
 }
 
+.box--about-featured h1 a, .box--about-featured .heading--homepage a, .box--about-featured .heading--product a, .box--about-featured .heading--download a, .box--about-featured .heading--h1 a,
+.box--about-featured h2 a, .box--about-featured .heading--medium a, .box--about-featured .heading--h2 a,
+.box--about-featured h3 a, .box--about-featured .heading--small a, .box--about-featured .heading--h3 a,
+.box--about-featured h4 a, .box--about-featured .heading--x-small a, .box--about-featured .heading--h4 a,
+.box--about-featured h5 a, .box--about-featured .heading--label a, .box--about-featured .heading--h5 a,
+.box--about-featured h6 a, .box--about-featured .heading--h6 a {
+  color: #fff;
+}
+
 .box--data-sources {
   background-color: #2e4c65;
   color: #fff;
@@ -1157,6 +1220,15 @@ Style guide: boxes.colored
 .box--data-sources h4, .box--data-sources .heading--x-small, .box--data-sources .heading--h4,
 .box--data-sources h5, .box--data-sources .heading--label, .box--data-sources .heading--h5,
 .box--data-sources h6, .box--data-sources .heading--h6 {
+  color: #fff;
+}
+
+.box--data-sources h1 a, .box--data-sources .heading--homepage a, .box--data-sources .heading--product a, .box--data-sources .heading--download a, .box--data-sources .heading--h1 a,
+.box--data-sources h2 a, .box--data-sources .heading--medium a, .box--data-sources .heading--h2 a,
+.box--data-sources h3 a, .box--data-sources .heading--small a, .box--data-sources .heading--h3 a,
+.box--data-sources h4 a, .box--data-sources .heading--x-small a, .box--data-sources .heading--h4 a,
+.box--data-sources h5 a, .box--data-sources .heading--label a, .box--data-sources .heading--h5 a,
+.box--data-sources h6 a, .box--data-sources .heading--h6 a {
   color: #fff;
 }
 
@@ -1174,6 +1246,15 @@ Style guide: boxes.colored
   color: #fff;
 }
 
+.box--desktop h1 a, .box--desktop .heading--homepage a, .box--desktop .heading--product a, .box--desktop .heading--download a, .box--desktop .heading--h1 a,
+.box--desktop h2 a, .box--desktop .heading--medium a, .box--desktop .heading--h2 a,
+.box--desktop h3 a, .box--desktop .heading--small a, .box--desktop .heading--h3 a,
+.box--desktop h4 a, .box--desktop .heading--x-small a, .box--desktop .heading--h4 a,
+.box--desktop h5 a, .box--desktop .heading--label a, .box--desktop .heading--h5 a,
+.box--desktop h6 a, .box--desktop .heading--h6 a {
+  color: #fff;
+}
+
 .box--server {
   background-color: #7fa9bb;
   color: #fff;
@@ -1185,6 +1266,15 @@ Style guide: boxes.colored
 .box--server h4, .box--server .heading--x-small, .box--server .heading--h4,
 .box--server h5, .box--server .heading--label, .box--server .heading--h5,
 .box--server h6, .box--server .heading--h6 {
+  color: #fff;
+}
+
+.box--server h1 a, .box--server .heading--homepage a, .box--server .heading--product a, .box--server .heading--download a, .box--server .heading--h1 a,
+.box--server h2 a, .box--server .heading--medium a, .box--server .heading--h2 a,
+.box--server h3 a, .box--server .heading--small a, .box--server .heading--h3 a,
+.box--server h4 a, .box--server .heading--x-small a, .box--server .heading--h4 a,
+.box--server h5 a, .box--server .heading--label a, .box--server .heading--h5 a,
+.box--server h6 a, .box--server .heading--h6 a {
   color: #fff;
 }
 
@@ -1202,6 +1292,15 @@ Style guide: boxes.colored
   color: #fff;
 }
 
+.box--online h1 a, .box--online .heading--homepage a, .box--online .heading--product a, .box--online .heading--download a, .box--online .heading--h1 a,
+.box--online h2 a, .box--online .heading--medium a, .box--online .heading--h2 a,
+.box--online h3 a, .box--online .heading--small a, .box--online .heading--h3 a,
+.box--online h4 a, .box--online .heading--x-small a, .box--online .heading--h4 a,
+.box--online h5 a, .box--online .heading--label a, .box--online .heading--h5 a,
+.box--online h6 a, .box--online .heading--h6 a {
+  color: #fff;
+}
+
 .box--public {
   background-color: #324E7A;
   color: #fff;
@@ -1213,6 +1312,15 @@ Style guide: boxes.colored
 .box--public h4, .box--public .heading--x-small, .box--public .heading--h4,
 .box--public h5, .box--public .heading--label, .box--public .heading--h5,
 .box--public h6, .box--public .heading--h6 {
+  color: #fff;
+}
+
+.box--public h1 a, .box--public .heading--homepage a, .box--public .heading--product a, .box--public .heading--download a, .box--public .heading--h1 a,
+.box--public h2 a, .box--public .heading--medium a, .box--public .heading--h2 a,
+.box--public h3 a, .box--public .heading--small a, .box--public .heading--h3 a,
+.box--public h4 a, .box--public .heading--x-small a, .box--public .heading--h4 a,
+.box--public h5 a, .box--public .heading--label a, .box--public .heading--h5 a,
+.box--public h6 a, .box--public .heading--h6 a {
   color: #fff;
 }
 
@@ -1230,6 +1338,15 @@ Style guide: boxes.colored
   color: #fff;
 }
 
+.box--reader h1 a, .box--reader .heading--homepage a, .box--reader .heading--product a, .box--reader .heading--download a, .box--reader .heading--h1 a,
+.box--reader h2 a, .box--reader .heading--medium a, .box--reader .heading--h2 a,
+.box--reader h3 a, .box--reader .heading--small a, .box--reader .heading--h3 a,
+.box--reader h4 a, .box--reader .heading--x-small a, .box--reader .heading--h4 a,
+.box--reader h5 a, .box--reader .heading--label a, .box--reader .heading--h5 a,
+.box--reader h6 a, .box--reader .heading--h6 a {
+  color: #fff;
+}
+
 .box--mobile {
   background-color: #DB8E6A;
   color: #fff;
@@ -1241,6 +1358,15 @@ Style guide: boxes.colored
 .box--mobile h4, .box--mobile .heading--x-small, .box--mobile .heading--h4,
 .box--mobile h5, .box--mobile .heading--label, .box--mobile .heading--h5,
 .box--mobile h6, .box--mobile .heading--h6 {
+  color: #fff;
+}
+
+.box--mobile h1 a, .box--mobile .heading--homepage a, .box--mobile .heading--product a, .box--mobile .heading--download a, .box--mobile .heading--h1 a,
+.box--mobile h2 a, .box--mobile .heading--medium a, .box--mobile .heading--h2 a,
+.box--mobile h3 a, .box--mobile .heading--small a, .box--mobile .heading--h3 a,
+.box--mobile h4 a, .box--mobile .heading--x-small a, .box--mobile .heading--h4 a,
+.box--mobile h5 a, .box--mobile .heading--label a, .box--mobile .heading--h5 a,
+.box--mobile h6 a, .box--mobile .heading--h6 a {
   color: #fff;
 }
 
@@ -1258,6 +1384,15 @@ Style guide: boxes.colored
   color: #000;
 }
 
+.box--nav-drawer-gray-1 h1 a, .box--nav-drawer-gray-1 .heading--homepage a, .box--nav-drawer-gray-1 .heading--product a, .box--nav-drawer-gray-1 .heading--download a, .box--nav-drawer-gray-1 .heading--h1 a,
+.box--nav-drawer-gray-1 h2 a, .box--nav-drawer-gray-1 .heading--medium a, .box--nav-drawer-gray-1 .heading--h2 a,
+.box--nav-drawer-gray-1 h3 a, .box--nav-drawer-gray-1 .heading--small a, .box--nav-drawer-gray-1 .heading--h3 a,
+.box--nav-drawer-gray-1 h4 a, .box--nav-drawer-gray-1 .heading--x-small a, .box--nav-drawer-gray-1 .heading--h4 a,
+.box--nav-drawer-gray-1 h5 a, .box--nav-drawer-gray-1 .heading--label a, .box--nav-drawer-gray-1 .heading--h5 a,
+.box--nav-drawer-gray-1 h6 a, .box--nav-drawer-gray-1 .heading--h6 a {
+  color: #000;
+}
+
 .box--nav-drawer-gray-2 {
   background-color: #ddd;
   color: #333;
@@ -1269,6 +1404,15 @@ Style guide: boxes.colored
 .box--nav-drawer-gray-2 h4, .box--nav-drawer-gray-2 .heading--x-small, .box--nav-drawer-gray-2 .heading--h4,
 .box--nav-drawer-gray-2 h5, .box--nav-drawer-gray-2 .heading--label, .box--nav-drawer-gray-2 .heading--h5,
 .box--nav-drawer-gray-2 h6, .box--nav-drawer-gray-2 .heading--h6 {
+  color: #000;
+}
+
+.box--nav-drawer-gray-2 h1 a, .box--nav-drawer-gray-2 .heading--homepage a, .box--nav-drawer-gray-2 .heading--product a, .box--nav-drawer-gray-2 .heading--download a, .box--nav-drawer-gray-2 .heading--h1 a,
+.box--nav-drawer-gray-2 h2 a, .box--nav-drawer-gray-2 .heading--medium a, .box--nav-drawer-gray-2 .heading--h2 a,
+.box--nav-drawer-gray-2 h3 a, .box--nav-drawer-gray-2 .heading--small a, .box--nav-drawer-gray-2 .heading--h3 a,
+.box--nav-drawer-gray-2 h4 a, .box--nav-drawer-gray-2 .heading--x-small a, .box--nav-drawer-gray-2 .heading--h4 a,
+.box--nav-drawer-gray-2 h5 a, .box--nav-drawer-gray-2 .heading--label a, .box--nav-drawer-gray-2 .heading--h5 a,
+.box--nav-drawer-gray-2 h6 a, .box--nav-drawer-gray-2 .heading--h6 a {
   color: #000;
 }
 
@@ -1362,14 +1506,18 @@ Style guide: layout.container
 }
 
 @media (max-width: 960px) {
-  .content-container, .flyout__close-wrapper {
+  .content-container,
+  .flyout__close-wrapper,
+  .content-container.content-container--wide, .content-container--wide.flyout__close-wrapper {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
 @media (max-width: 639px) {
-  .content-container, .flyout__close-wrapper {
+  .content-container,
+  .flyout__close-wrapper,
+  .content-container.content-container--wide, .content-container--wide.flyout__close-wrapper {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -2390,6 +2538,19 @@ Style guide: navigation.global
   }
   .global-nav__drawers .global-nav__drawers__drawer {
     display: none;
+  }
+  .global-nav__drawers .global-nav__drawer__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .global-nav__drawers .sub-nav__item__link {
+    margin-bottom: 0;
   }
   .global-nav__drawers .global-nav__drawer__secondary {
     position: relative;
@@ -3807,9 +3968,6 @@ Style guide: layout.hero
   .hero .hero__background .hero__background__inner {
     padding-bottom: 50%;
   }
-  .hero .hero__content h1.heading--homepage, .hero .hero__content .heading--homepage {
-    font-size: 4em;
-  }
   .hero .hero__content h1.heading--homepage br, .hero .hero__content .heading--homepage br {
     display: none;
   }
@@ -3820,14 +3978,14 @@ Style guide: layout.hero
     background: #fff;
     color: #333;
   }
-  .hero h1, .hero .heading--homepage, .hero .heading--product, .hero .heading--download, .hero h4, .hero .heading--x-small {
+  .hero h1, .hero .heading--homepage, .hero .heading--product, .hero .heading--download, .hero h4.heading--label, .hero .heading--label.heading--x-small {
     color: #333;
   }
   .hero .hero__content {
-    padding-bottom: 2em;
+    padding: 2em 0;
   }
   .hero .hero__content h1.heading--homepage, .hero .hero__content .heading--homepage {
-    font-size: 3em;
+    margin-top: .2em;
   }
   .hero .hero__content h1.heading--homepage br, .hero .hero__content .heading--homepage br {
     display: none;
@@ -4020,6 +4178,16 @@ Style Guide: icons.icons
 
 .icon--magnifying-glass {
   content: url("../images/icons/icon-magnifying-glass.svg");
+}
+
+.icon--ecosystem-style {
+  border: 5px solid #DEDEDE;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  font-size: 7.5em;
+  background: #fafafa;
 }
 
 .icon--large {
@@ -4526,6 +4694,10 @@ Weight: 30
 
 Style guide: lists.tags
 */
+.tags-list {
+  margin: .5em 0;
+}
+
 .tags-list .tags-list__tag a {
   font-size: 1em;
   color: #6f99a5;
@@ -4537,86 +4709,6 @@ Style guide: lists.tags
 
 .tags-list .tags-list__tag:last-child:after {
   content: "";
-}
-
-/*
-Basic Teaser List
-
-A basic list of teasers, used for things like a list of blog posts.
-
-Weight: 20
-
-Markup: teaser-list.hbs
-
-Style guide: lists.teaser
-*/
-.teaser-list > a {
-  display: block;
-  color: #333;
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-.teaser-list > a:hover {
-  color: #eb912c;
-  text-decoration: none;
-}
-
-.teaser-list > a:hover img {
-  opacity: 0.85;
-}
-
-.teaser-list .teaser-list__title {
-  margin: 0.5em 0;
-}
-
-@media (max-width: 639px) {
-  .teaser-list .teaser-list__item {
-    margin-bottom: 2em;
-  }
-}
-
-/*
-Full-width Teaser List
-
-A full-width list of teasers, used for things like a list of blog posts.
-
-Weight: 5
-
-Markup:
-<div class="teaser-list teaser-list--full-width">
-  <div class="teaser-list__thumbnail grid-3">
-    <a href="#">
-      <img src="http://www.placecage.com/223/223">
-    </a>
-  </div>
-  <div class="teaser-list__info grid-9 grid-last">
-    <h2 class="teaser-list__title">
-      <a href="#">Blog Post or something</a>
-    </h2>
-    <div class="teaser-list__secondary-label">
-      <span>Friday, April 10, 2015</span> - <span>Make Me Smarter</span>
-    </div>
-    <p class="teaser-list__description">
-      Semper. Recusandae, vestibulum! Viverra cupidatat nostrud similique class mollis. Eius eget, nam! Pharetra? Litora condimentum expedita amet numquam, adipiscing pulvinar at interdum fringilla purus possimus fames.
-    </p>
-    <div class="class="teaser-list__read-more">
-      <a href="/blog/another-post">Read More</a>
-    </div>
-  </div>
-</div>
-
-################################################################################
-# Style guide: lists.full-width ################################################
-################################################################################
-*/
-.teaser-list.teaser-list--full-width {
-  padding: 2em 0;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.teaser-list.teaser-list--full-width .teaser-list__title {
-  margin: 0 0 0.5em;
 }
 
 .block--delta-blocks-tabs {
@@ -5458,6 +5550,59 @@ Style guide: interactive.tabs
 }
 
 /*
+Basic Teaser List
+
+A basic list of teasers, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 20
+
+Markup: teaser-list.hbs
+
+Style guide: lists.teaser
+*/
+.teaser-list > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.teaser-list > a:hover {
+  color: #eb912c;
+  text-decoration: none;
+}
+
+.teaser-list > a:hover img {
+  opacity: 0.85;
+}
+
+.teaser-list .teaser-list__thumbnail {
+  line-height: 0;
+}
+
+.teaser-list .teaser-list__title {
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+.teaser-list .teaser-list__description {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.teaser-list .teaser-list__link {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+  .teaser-list .teaser-list__item {
+    margin-bottom: 2em;
+  }
+}
+
+/*
 Thumbnail Image
 
 A small image that shows a preview of the content that it is linking to.
@@ -5673,8 +5818,32 @@ h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
   font-size: 3.5714285714em;
 }
 
+@media (min-width: 640px) and (max-width: 960px) {
+  h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
+    font-size: 3.2142857143em;
+  }
+}
+
+@media (max-width: 639px) {
+  h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
+    font-size: 2.2857142857em;
+  }
+}
+
 h2, .heading--medium, .heading--h2 {
   font-size: 2.5714285714em;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  h2, .heading--medium, .heading--h2 {
+    font-size: 2.2857142857em;
+  }
+}
+
+@media (max-width: 639px) {
+  h2, .heading--medium, .heading--h2 {
+    font-size: 2em;
+  }
 }
 
 h3, .heading--small, .heading--h3 {
@@ -5735,10 +5904,42 @@ Styleguide typography.context-headings
   color: #000;
 }
 
+.heading--homepage a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--homepage {
+    font-size: 3.2142857143em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--homepage {
+    font-size: 2.2857142857em;
+  }
+}
+
 .heading--product {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
   color: #000;
+}
+
+.heading--product a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--product {
+    font-size: 2.2857142857em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--product {
+    font-size: 1.9285714286em;
+  }
 }
 
 .heading--download {
@@ -5749,11 +5950,43 @@ Styleguide typography.context-headings
   color: #000;
 }
 
+.heading--download a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--download {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--download {
+    font-size: 1.4285714286em;
+  }
+}
+
 .heading--medium {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
   line-height: 1.39;
   color: #000;
+}
+
+.heading--medium a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--medium {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--medium {
+    font-size: 1.4285714286em;
+  }
 }
 
 .heading--small {
@@ -5762,9 +5995,41 @@ Styleguide typography.context-headings
   -webkit-font-smoothing: auto;
 }
 
+.heading--small a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--small {
+    font-size: 1.4285714286em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--small {
+    font-size: 1.2857142857em;
+  }
+}
+
 .heading--x-small {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   color: #333;
+}
+
+.heading--x-small a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--x-small {
+    font-size: 1.1428571429em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--x-small {
+    font-size: 1.0714285714em;
+  }
 }
 
 .heading--label {
@@ -5774,6 +6039,22 @@ Styleguide typography.context-headings
   color: #333;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
+}
+
+.heading--label a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .heading--label {
+    font-size: 1.1428571429em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--label {
+    font-size: 1.0714285714em;
+  }
 }
 
 /*
@@ -6073,6 +6354,38 @@ Style guide: interactive.viz-slideshow
 
 .viz-slideshow .slick-active .viz-slideshow__slide__copy {
   opacity: 1;
+}
+
+@media (min-width: 961px) {
+  .viz-slideshow:before,
+  .viz-slideshow:after {
+    display: none;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 180px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #fff, transparent);
+    background-image: linear-gradient(to right, #fff, transparent);
+  }
+}
+
+@media (min-width: 961px) and (min-width: 1550px) {
+  .viz-slideshow:before,
+  .viz-slideshow:after {
+    display: block;
+  }
+}
+
+@media (min-width: 961px) {
+  .viz-slideshow:after {
+    background-image: -webkit-linear-gradient(right, #fff, transparent);
+    background-image: linear-gradient(to left, #fff, transparent);
+    left: auto;
+    right: 0;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 960px) {

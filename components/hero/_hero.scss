@@ -111,12 +111,8 @@ Style guide: layout.hero
       padding-bottom: 50%;
     }
 
-    .hero__content h1.heading--homepage {
-      font-size: 4em;
-
-      br {
-        display: none;
-      }
+    .hero__content h1.heading--homepage br {
+      display: none;
     }
   }
 
@@ -124,15 +120,15 @@ Style guide: layout.hero
     background: #fff;
     color: $text-dark-body;
 
-    h1, h4 {
+    h1, h4.heading--label {
       color: $text-dark-body;      
     }
 
     .hero__content {
-      padding-bottom: 2em;
+      padding: 2em 0;
       
       h1.heading--homepage {
-        font-size: 3em;
+        margin-top: .2em;
 
         br {
           display: none;

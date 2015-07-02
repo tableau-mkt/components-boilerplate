@@ -116,10 +116,26 @@ h6, .heading--h6 {
 
 h1, .heading--h1 {
   font-size: em(50px);
+
+  @include breakpoint($tablet-only) {
+    font-size: em(45px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(32px);
+  }
 }
 
 h2, .heading--h2 {
   font-size: em(36px);
+
+  @include breakpoint($tablet-only) {
+    font-size: em(32px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(28px);
+  }
 }
 
 h3, .heading--h3 {
@@ -182,6 +198,18 @@ Styleguide typography.context-headings
   font-size: em(70px);
   line-height: 1;
   color: $text-headlines;
+  
+  a {
+    color: $text-headlines;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(45px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(32px);
+  }
 }
 
 .heading--product {
@@ -189,6 +217,18 @@ Styleguide typography.context-headings
   font-family: $text--benton-thin;
   font-weight: 100;
   color: $text-headlines;
+  
+  a {
+    color: $text-headlines;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(32px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(27px);
+  }
 }
 
 .heading--download {
@@ -198,6 +238,18 @@ Styleguide typography.context-headings
   font-size: em(48px);
   line-height: 1.25;
   color: $text-headlines;
+  
+  a {
+    color: $text-headlines;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(28px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(20px);
+  }
 }
 
 .heading--medium {
@@ -206,6 +258,18 @@ Styleguide typography.context-headings
   font-weight: 100;
   line-height: 1.39;
   color: $text-headlines;
+  
+  a {
+    color: $text-headlines;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(28px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(20px);
+  }
 }
 
 .heading--small {
@@ -213,12 +277,36 @@ Styleguide typography.context-headings
   font-family: $text--benton-light;
   color: $text-dark-body;
   -webkit-font-smoothing: auto;
+  
+  a {
+    color: $text-dark-body;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(20px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(18px);
+  }
 }
 
 .heading--x-small {
   @extend h4;
   font-family: $text--benton-book;
   color: $text-dark-body;
+  
+  a {
+    color: $text-dark-body;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(16px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(15px);
+  }
 }
 
 .heading--label {
@@ -229,6 +317,18 @@ Styleguide typography.context-headings
   color: $text-dark-body;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
+  
+  a {
+    color: $text-dark-body;
+  }
+
+  @include breakpoint($tablet-only) {
+    font-size: em(16px);
+  }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(15px);
+  }
 }
 
 

@@ -58,10 +58,8 @@
             <a class="link" href="{{ drawerId }}">View All Products</a>
           </a>
         </div>
-        <div class="content-container content-container--wide">
+        <div class="global-nav__drawer__inner content-container content-container--wide">
           <div class="global-nav__drawer__primary grid--8">
-            <hr class="spacer spacer--four tablet-hide">
-
             {{# primaryItems}}
               <div class="sub-nav__item grid--4">  
                 {{# title}}
@@ -71,7 +69,7 @@
                 {{/ title}}
                 
                 <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
-                <p class="tablet-hide">
+                <p class="sub-nav__item__link tablet-hide">
                   <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
                 </p>
               </div>

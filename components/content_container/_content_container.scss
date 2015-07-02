@@ -32,6 +32,10 @@ Style guide: layout.container
     padding-right: 3%;
   }
 
+}
+
+.content-container,
+.content-container.content-container--wide {
   @include breakpoint($tablet-max) {
     padding-left: 2em;
     padding-right: 2em;
