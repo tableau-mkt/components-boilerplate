@@ -48,6 +48,10 @@ Style guide: layout.hero
     }
   }
 
+  .hero__video + .hero__background {
+    display: none;
+  }
+
   @include breakpoint($tablet-min) {
     .hero__content {
       position: absolute;
@@ -105,8 +109,33 @@ Style guide: layout.hero
       right: 0;
     }
   }
+}
 
-  @include breakpoint($tablet-max) {
+// Set up the gradient fades for wide screens for each background color.
+@each $name, $colors in $background-colors {
+  .box--#{"" + $name} {
+    .hero__background:before,
+    .hero__video:before {
+      background-image: linear-gradient(to right, nth($colors, 1), transparent);
+    }
+
+    .hero__background:after,
+    .hero__video:after {
+      background-image: linear-gradient(to left, nth($colors, 1), transparent);
+    }
+  }
+}
+
+@include breakpoint($tablet-max) {
+  .hero {
+    .hero__video {
+      display: none;
+    }
+    
+    .hero__video + .hero__background {
+      display: block;
+    }
+
     .hero__background .hero__background__inner {
       padding-bottom: 50%;
     }
@@ -115,8 +144,10 @@ Style guide: layout.hero
       display: none;
     }
   }
+}
 
-  @include breakpoint($mobile-only) {
+@include breakpoint($mobile-only) {
+  .hero {
     h1, h4.heading--label {
       color: $text-dark-body;      
     }
@@ -139,4 +170,10 @@ Style guide: layout.hero
     }
   }
 
+  .box--dark-gray-1 .hero,
+  .box--dark-gray-2 .hero,
+  .box--dark-gray-3 .hero {
+    background: #fff;
+    color: $text-dark-body;
+  }
 }

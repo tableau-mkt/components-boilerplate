@@ -116,9 +116,6 @@ Style guide: interactive.hero-slideshow
   }
 
   @include breakpoint($mobile-only) {
-    background: #fff;
-    color: $text-dark-body;
-
     .slick-dots {
       bottom: auto;
       top: 0;

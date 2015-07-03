@@ -44,7 +44,8 @@
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
         $slideout = $parent.find('.flyout__slideout'),
-        parentPadding = $parent.outerHeight() - $parent.height();
+        parentPadding = $parent.outerHeight() - $parent.height(),
+        offset = $('.sticky-wrapper .stuck').outerHeight(true);
 
     $target.data('flyoutState', 'open');
 
@@ -56,6 +57,8 @@
     $slideout.add($target).animate({
       marginLeft: '-=100%',
     }, animation);
+
+    smoothScrollTop($parent, animation.duration, offset, true);
   }
 
   // Hide the target content

@@ -26,7 +26,8 @@
     $nav.find('a').click(function(e) {
       var element = $(this).attr('href'),
           offset = $('.subnav').outerHeight(true) - 1;
-      $('body,html').animate({scrollTop:$(element).offset().top - offset},500);
+
+      smoothScrollTop($(element), 500, offset);
       e.preventDefault();
     });
     

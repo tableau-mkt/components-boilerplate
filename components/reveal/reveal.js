@@ -40,7 +40,10 @@
         $curtain = $('#' + data.revealCurtain),
         hideText = data.revealHideText,
         type = data.revealType,
-        media = data.revealMedia;
+        media = data.revealMedia,
+        scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+        $scrollTarget = $curtain.length ? $curtain : $target.offsetParent();
+
 
     $trigger.data('revealState', 'open')
     if (hideText != "") {
@@ -54,6 +57,8 @@
         $target.find('video')[0].play();
       }, animation.duration/2);
     }
+
+    smoothScrollTop($scrollTarget, animation.duration, scrollOffset, true);
   }
 
   // Hide the target content

@@ -4012,6 +4012,10 @@ body.kss .kss-example-preview .hero .hero__video video {
   width: 100%;
 }
 
+body.kss .kss-example-preview .hero .hero__video + .hero__background {
+  display: none;
+}
+
 @media (min-width: 640px) {
   body.kss .kss-example-preview .hero .hero__content {
     position: absolute;
@@ -4079,7 +4083,205 @@ body.kss .kss-example-preview .hero .hero__video video {
   }
 }
 
+body.kss .kss-example-preview .box--white .hero__background:before,
+body.kss .kss-example-preview .box--white .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #fff, transparent);
+  background-image: linear-gradient(to right, #fff, transparent);
+}
+
+body.kss .kss-example-preview .box--white .hero__background:after,
+body.kss .kss-example-preview .box--white .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #fff, transparent);
+  background-image: linear-gradient(to left, #fff, transparent);
+}
+
+body.kss .kss-example-preview .box--light-gray-1 .hero__background:before,
+body.kss .kss-example-preview .box--light-gray-1 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #fafafa, transparent);
+  background-image: linear-gradient(to right, #fafafa, transparent);
+}
+
+body.kss .kss-example-preview .box--light-gray-1 .hero__background:after,
+body.kss .kss-example-preview .box--light-gray-1 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #fafafa, transparent);
+  background-image: linear-gradient(to left, #fafafa, transparent);
+}
+
+body.kss .kss-example-preview .box--light-gray-2 .hero__background:before,
+body.kss .kss-example-preview .box--light-gray-2 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #ebebeb, transparent);
+  background-image: linear-gradient(to right, #ebebeb, transparent);
+}
+
+body.kss .kss-example-preview .box--light-gray-2 .hero__background:after,
+body.kss .kss-example-preview .box--light-gray-2 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #ebebeb, transparent);
+  background-image: linear-gradient(to left, #ebebeb, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-1 .hero__background:before,
+body.kss .kss-example-preview .box--dark-gray-1 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #464646, transparent);
+  background-image: linear-gradient(to right, #464646, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-1 .hero__background:after,
+body.kss .kss-example-preview .box--dark-gray-1 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #464646, transparent);
+  background-image: linear-gradient(to left, #464646, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-2 .hero__background:before,
+body.kss .kss-example-preview .box--dark-gray-2 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #333, transparent);
+  background-image: linear-gradient(to right, #333, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-2 .hero__background:after,
+body.kss .kss-example-preview .box--dark-gray-2 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #333, transparent);
+  background-image: linear-gradient(to left, #333, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-3 .hero__background:before,
+body.kss .kss-example-preview .box--dark-gray-3 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
+  background-image: linear-gradient(to right, #1b1b1b, transparent);
+}
+
+body.kss .kss-example-preview .box--dark-gray-3 .hero__background:after,
+body.kss .kss-example-preview .box--dark-gray-3 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
+  background-image: linear-gradient(to left, #1b1b1b, transparent);
+}
+
+body.kss .kss-example-preview .box--about-featured .hero__background:before,
+body.kss .kss-example-preview .box--about-featured .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #457387, transparent);
+  background-image: linear-gradient(to right, #457387, transparent);
+}
+
+body.kss .kss-example-preview .box--about-featured .hero__background:after,
+body.kss .kss-example-preview .box--about-featured .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #457387, transparent);
+  background-image: linear-gradient(to left, #457387, transparent);
+}
+
+body.kss .kss-example-preview .box--data-sources .hero__background:before,
+body.kss .kss-example-preview .box--data-sources .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #2e4c65, transparent);
+  background-image: linear-gradient(to right, #2e4c65, transparent);
+}
+
+body.kss .kss-example-preview .box--data-sources .hero__background:after,
+body.kss .kss-example-preview .box--data-sources .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #2e4c65, transparent);
+  background-image: linear-gradient(to left, #2e4c65, transparent);
+}
+
+body.kss .kss-example-preview .box--desktop .hero__background:before,
+body.kss .kss-example-preview .box--desktop .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #23529c, transparent);
+  background-image: linear-gradient(to right, #23529c, transparent);
+}
+
+body.kss .kss-example-preview .box--desktop .hero__background:after,
+body.kss .kss-example-preview .box--desktop .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #23529c, transparent);
+  background-image: linear-gradient(to left, #23529c, transparent);
+}
+
+body.kss .kss-example-preview .box--server .hero__background:before,
+body.kss .kss-example-preview .box--server .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #7fa9bb, transparent);
+  background-image: linear-gradient(to right, #7fa9bb, transparent);
+}
+
+body.kss .kss-example-preview .box--server .hero__background:after,
+body.kss .kss-example-preview .box--server .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #7fa9bb, transparent);
+  background-image: linear-gradient(to left, #7fa9bb, transparent);
+}
+
+body.kss .kss-example-preview .box--online .hero__background:before,
+body.kss .kss-example-preview .box--online .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #58a3b9, transparent);
+  background-image: linear-gradient(to right, #58a3b9, transparent);
+}
+
+body.kss .kss-example-preview .box--online .hero__background:after,
+body.kss .kss-example-preview .box--online .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #58a3b9, transparent);
+  background-image: linear-gradient(to left, #58a3b9, transparent);
+}
+
+body.kss .kss-example-preview .box--public .hero__background:before,
+body.kss .kss-example-preview .box--public .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #324E7A, transparent);
+  background-image: linear-gradient(to right, #324E7A, transparent);
+}
+
+body.kss .kss-example-preview .box--public .hero__background:after,
+body.kss .kss-example-preview .box--public .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #324E7A, transparent);
+  background-image: linear-gradient(to left, #324E7A, transparent);
+}
+
+body.kss .kss-example-preview .box--reader .hero__background:before,
+body.kss .kss-example-preview .box--reader .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #B28CCF, transparent);
+  background-image: linear-gradient(to right, #B28CCF, transparent);
+}
+
+body.kss .kss-example-preview .box--reader .hero__background:after,
+body.kss .kss-example-preview .box--reader .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #B28CCF, transparent);
+  background-image: linear-gradient(to left, #B28CCF, transparent);
+}
+
+body.kss .kss-example-preview .box--mobile .hero__background:before,
+body.kss .kss-example-preview .box--mobile .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #DB8E6A, transparent);
+  background-image: linear-gradient(to right, #DB8E6A, transparent);
+}
+
+body.kss .kss-example-preview .box--mobile .hero__background:after,
+body.kss .kss-example-preview .box--mobile .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #DB8E6A, transparent);
+  background-image: linear-gradient(to left, #DB8E6A, transparent);
+}
+
+body.kss .kss-example-preview .box--nav-drawer-gray-1 .hero__background:before,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #f0f0f0, transparent);
+  background-image: linear-gradient(to right, #f0f0f0, transparent);
+}
+
+body.kss .kss-example-preview .box--nav-drawer-gray-1 .hero__background:after,
+body.kss .kss-example-preview .box--nav-drawer-gray-1 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #f0f0f0, transparent);
+  background-image: linear-gradient(to left, #f0f0f0, transparent);
+}
+
+body.kss .kss-example-preview .box--nav-drawer-gray-2 .hero__background:before,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 .hero__video:before {
+  background-image: -webkit-linear-gradient(left, #ddd, transparent);
+  background-image: linear-gradient(to right, #ddd, transparent);
+}
+
+body.kss .kss-example-preview .box--nav-drawer-gray-2 .hero__background:after,
+body.kss .kss-example-preview .box--nav-drawer-gray-2 .hero__video:after {
+  background-image: -webkit-linear-gradient(right, #ddd, transparent);
+  background-image: linear-gradient(to left, #ddd, transparent);
+}
+
 @media (max-width: 960px) {
+  body.kss .kss-example-preview .hero .hero__video {
+    display: none;
+  }
+  body.kss .kss-example-preview .hero .hero__video + .hero__background {
+    display: block;
+  }
   body.kss .kss-example-preview .hero .hero__background .hero__background__inner {
     padding-bottom: 50%;
   }
@@ -4104,6 +4306,12 @@ body.kss .kss-example-preview .hero .hero__video video {
   body.kss .kss-example-preview .hero .hero__content .cta {
     display: block;
     text-align: center;
+  }
+  body.kss .kss-example-preview .box--dark-gray-1 .hero,
+  body.kss .kss-example-preview .box--dark-gray-2 .hero,
+  body.kss .kss-example-preview .box--dark-gray-3 .hero {
+    background: #fff;
+    color: #333;
   }
 }
 
@@ -4210,10 +4418,6 @@ body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.hero-slides
 }
 
 @media (max-width: 639px) {
-  body.kss .kss-example-preview .hero-slideshow {
-    background: #fff;
-    color: #333;
-  }
   body.kss .kss-example-preview .hero-slideshow .slick-dots {
     bottom: auto;
     top: 0;
@@ -4993,6 +5197,10 @@ body.kss .kss-example-preview .section.section--background-image {
 }
 
 @media (max-width: 639px) {
+  body.kss .kss-example-preview .section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
   body.kss .kss-example-preview .section.section--padded-one {
     padding-top: 1em;
     padding-bottom: 1em;

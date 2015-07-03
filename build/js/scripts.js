@@ -7,6 +7,35 @@ Tabia.yo = function(content) {
 Tabia.later = function(func, time) {
   setTimeout(func, time || 2000);
 };
+
+
+/**
+ * Smooth Scroll to top of an element
+ * @param  {jQuery Object} $element - Element to scroll to the top of
+ * @param  {integer} duration       - Length of the animation
+ * @param  {integer} offset         - Any offset to account for sticky elements
+ * @param  {boolean} onlyUp         - Whether scroll should only happen if the scroll direction is up
+ */
+function smoothScrollTop($element, duration, offset, onlyUp) {
+  duration = duration || 500;
+  offset = offset || 0;
+  onlyUp = onlyUp || false;
+
+  var elementTop = $element.offset().top,
+      pageTop = $(window).scrollTop(),
+      scroll = !onlyUp;
+
+  if (onlyUp && pageTop > elementTop) {
+    scroll = true;
+  }
+
+  if (scroll) {
+    $('body,html').animate({
+      scrollTop: elementTop - offset
+    }, duration);
+  }
+}
+
 ;
 /**
  * Custom Accordion implementation.
@@ -85,7 +114,8 @@ Tabia.later = function(func, time) {
         $target = $('#' + data.flyoutTarget),
         $parent = $target.offsetParent(),
         $slideout = $parent.find('.flyout__slideout'),
-        parentPadding = $parent.outerHeight() - $parent.height();
+        parentPadding = $parent.outerHeight() - $parent.height(),
+        offset = $('.sticky-wrapper .stuck').outerHeight(true);
 
     $target.data('flyoutState', 'open');
 
@@ -97,6 +127,8 @@ Tabia.later = function(func, time) {
     $slideout.add($target).animate({
       marginLeft: '-=100%',
     }, animation);
+
+    smoothScrollTop($parent, animation.duration, offset, true);
   }
 
   // Hide the target content
@@ -745,7 +777,10 @@ function dataSourcesSearch() {
         $curtain = $('#' + data.revealCurtain),
         hideText = data.revealHideText,
         type = data.revealType,
-        media = data.revealMedia;
+        media = data.revealMedia,
+        scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+        $scrollTarget = $curtain.length ? $curtain : $target.offsetParent();
+
 
     $trigger.data('revealState', 'open')
     if (hideText != "") {
@@ -759,6 +794,8 @@ function dataSourcesSearch() {
         $target.find('video')[0].play();
       }, animation.duration/2);
     }
+
+    smoothScrollTop($scrollTarget, animation.duration, scrollOffset, true);
   }
 
   // Hide the target content
@@ -856,7 +893,8 @@ function dataSourcesSearch() {
     $nav.find('a').click(function(e) {
       var element = $(this).attr('href'),
           offset = $('.subnav').outerHeight(true) - 1;
-      $('body,html').animate({scrollTop:$(element).offset().top - offset},500);
+
+      smoothScrollTop($(element), 500, offset);
       e.preventDefault();
     });
     
