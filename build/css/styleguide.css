@@ -3218,16 +3218,12 @@ body.kss .kss-example-preview .global-nav__top.global-nav--search-shown .global-
   body.kss .kss-example-preview .global-nav__drawers .sub-nav__item:last-child {
     border-bottom: 0;
   }
-  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item h3.heading-highlight, body.kss .kss-example-preview .global-nav__drawers .sub-nav__item .heading-highlight.heading--small {
-    padding-top: 0;
+  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item .sub-nav__item__title {
+    margin: .5em 0;
+    padding: 0;
   }
-  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item h3.heading-highlight:before, body.kss .kss-example-preview .global-nav__drawers .sub-nav__item .heading-highlight.heading--small:before {
+  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item .sub-nav__item__title:before {
     display: none;
-  }
-  body.kss .kss-example-preview .global-nav__drawers .sub-nav__item h5, body.kss .kss-example-preview .global-nav__drawers .sub-nav__item .heading--label {
-    font-size: 1.4285714286em;
-    line-height: 1.5;
-    -webkit-font-smoothing: auto;
   }
   body.kss .kss-example-preview .global-nav__drawers .global-nav__drawer__secondary .sub-nav__item {
     border-bottom-color: #bbb;

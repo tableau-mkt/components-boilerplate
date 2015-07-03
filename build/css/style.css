@@ -2618,16 +2618,12 @@ Style guide: navigation.global
   .global-nav__drawers .sub-nav__item:last-child {
     border-bottom: 0;
   }
-  .global-nav__drawers .sub-nav__item h3.heading-highlight, .global-nav__drawers .sub-nav__item .heading-highlight.heading--small {
-    padding-top: 0;
+  .global-nav__drawers .sub-nav__item .sub-nav__item__title {
+    margin: .5em 0;
+    padding: 0;
   }
-  .global-nav__drawers .sub-nav__item h3.heading-highlight:before, .global-nav__drawers .sub-nav__item .heading-highlight.heading--small:before {
+  .global-nav__drawers .sub-nav__item .sub-nav__item__title:before {
     display: none;
-  }
-  .global-nav__drawers .sub-nav__item h5, .global-nav__drawers .sub-nav__item .heading--label {
-    font-size: 1.4285714286em;
-    line-height: 1.5;
-    -webkit-font-smoothing: auto;
   }
   .global-nav__drawers .global-nav__drawer__secondary .sub-nav__item {
     border-bottom-color: #bbb;
