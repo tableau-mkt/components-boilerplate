@@ -1,0 +1,133 @@
+/*
+Hero Slideshow
+
+Slideshow formatted specifically for use as a Hero. Depends on the Hero component
+
+Markup: hero-slideshow.hbs
+
+Style guide: interactive.hero-slideshow
+*/
+
+.hero-slideshow {
+  margin: 0 auto;
+
+  .hero-slideshow__slide {
+    position: relative;
+  }
+
+
+  // Slick dots
+  .slick-dots {
+    height: 20px;
+    bottom: 0;
+
+    li {
+      margin: 0;
+
+      &.slick-active button:before {
+        opacity: .75;
+        color: #666;
+      }
+
+      button:before {
+        color: $white;
+        font-size: 9px;
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
+        transition: color .25s;
+      }
+    }
+  }
+
+
+  // Arrow Controls
+  .hero-slideshow__arrow {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 1;
+    margin-top: -12px;
+    line-height: 18px;
+    text-decoration: none;
+    overflow: visible;
+    color: $white;
+    @extend .text--label;
+
+    .hero-slideshow__arrow__title {
+      display: none;
+      position: absolute;
+      top: -10px;
+      right: -15px;
+      width: auto;
+      padding: 15px 15px 15px 40px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    // @todo handle these as actual icons
+    .icon-slideshow-arrow-left,
+    .icon-slideshow-arrow-right {
+      position: relative;
+      display: block;
+      margin: 0;
+      z-index: 1;
+      width: 13px;
+      height: 25px;
+      background: url('../images/icons/slideshow-prev-light.png') 0 0 no-repeat;
+      transition: all 1s ease;
+    }
+
+    .icon-slideshow-arrow-right {
+      background: url('../images/icons/slideshow-next-light.png') 0 0 no-repeat;
+    }
+
+    &.inverted:hover .icon-slideshow-arrow-left {
+      background: url('../images/icons/slideshow-prev-dark.png') 0 0 no-repeat;
+    }
+
+    &.hero-slideshow__arrow--left .hero-slideshow__arrow__title {
+      left: -15px;
+      right: auto;
+    }
+
+    &.hero-slideshow__arrow--right {
+      right: 5%;
+      left: auto;
+
+      &.inverted:hover .icon-slideshow-arrow-right {
+        background: url('../images/icons/slideshow-next-dark.png') 0 0 no-repeat;
+      }
+
+      &:hover .hero-slideshow__arrow__title {
+        padding: 15px 40px 15px 15px;
+      }
+
+    }
+
+  }
+
+  @include breakpoint($tablet-only) {
+    .content-container {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    background: #fff;
+    color: $text-dark-body;
+
+    .slick-dots {
+      bottom: auto;
+      top: 0;
+      margin-top: 40%;
+    }
+
+    .hero-slideshow__arrow {
+      display: none;
+    }
+  }
+
+}

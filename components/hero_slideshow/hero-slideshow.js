@@ -1,6 +1,6 @@
 (function($){
   $(document).ready(function(){
-    var $heroSlideShow = $('.slideshow--hero');
+    var $heroSlideShow = $('.hero-slideshow');
 
     // Initialize hero carousel
     function init() {
@@ -10,7 +10,7 @@
           arrows: false,
           speed: 650,
           easing: "easeInOutQuart",
-          slide: '.slideshow__slide',
+          slide: '.hero-slideshow__slide',
           responsive: [
             {
               breakpoint: 639,
@@ -26,7 +26,7 @@
     }
 
     function slideShowNavigation() {
-      var $slides = $heroSlideShow.find('.slideshow__slide').not('.slick-cloned'),
+      var $slides = $heroSlideShow.find('.hero-slideshow__slide').not('.slick-cloned'),
           count = $slides.length,
           slidesID = [],
           slideHoverText = [],
@@ -47,8 +47,8 @@
 
       // Update slide navigation dom
       for(var i=0; i < count; i++) {
-        $arrowLeft = $slides.eq(i).find('.slideshow__arrow--left');
-        $arrowRight = $slides.eq(i).find('.slideshow__arrow--right');
+        $arrowLeft = $slides.eq(i).find('.hero-slideshow__arrow--left');
+        $arrowRight = $slides.eq(i).find('.hero-slideshow__arrow--right');
         next = i+1;
         prev = i-1;
         arrowLeftInverted = '';
@@ -73,12 +73,12 @@
 
         // Add class and text to the arrows
         $arrowLeft.addClass(arrowLeftInverted)
-            .find('.slideshow__arrow__title')
+            .find('.hero-slideshow__arrow__title')
             .addClass(slideHoverClass[prev])
             .html(slideHoverText[prev]);
         
         $arrowRight.addClass(arrowRightInverted)
-            .find('.slideshow__arrow__title')
+            .find('.hero-slideshow__arrow__title')
             .addClass(slideHoverClass[next])
             .html(slideHoverText[next]);
       }
@@ -89,18 +89,18 @@
     // Next and previous arrow integration with slick
     function slideShowNavigationEvents() {
 
-      $('.slideshow__arrow--right').click(function(e) {
+      $('.hero-slideshow__arrow--right').click(function(e) {
         e.preventDefault();
         $heroSlideShow.slick('slickNext');
       });
 
-      $('.slideshow__arrow--left').click(function(e) {
+      $('.hero-slideshow__arrow--left').click(function(e) {
         e.preventDefault();
         $heroSlideShow.slick('slickPrev');
       });
 
-      $('.slideshow__arrow').hover(function(e) {
-        $(this).find('.slideshow__arrow__title').animate({
+      $('.hero-slideshow__arrow').hover(function(e) {
+        $(this).find('.hero-slideshow__arrow__title').animate({
           width: "toggle",
           opacity: "toggle"
         });

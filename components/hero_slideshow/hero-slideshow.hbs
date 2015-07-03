@@ -1,0 +1,18 @@
+<div class="hero-slideshow  {{ slideshow_id }}">
+  {{#each slides }}
+    <div class="hero-slideshow__slide" data-title="{{hover_title}}" data-title-class="{{hover_class}}">
+      {{> hero }}
+      
+      <a href="#" class="hero-slideshow__arrow hero-slideshow__arrow--left">
+        <span class="hero-slideshow__arrow__title"></span>
+        <span class="icon-slideshow-arrow-left"></span>
+      </a>
+
+      <a href="#" class="hero-slideshow__arrow hero-slideshow__arrow--right">
+        <span class="icon-slideshow-arrow-right"></span>
+        <span class="hero-slideshow__arrow__title"></span>
+      </a>
+
+    </div>
+  {{/each}}
+</div>

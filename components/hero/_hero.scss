@@ -117,9 +117,6 @@ Style guide: layout.hero
   }
 
   @include breakpoint($mobile-only) {
-    background: #fff;
-    color: $text-dark-body;
-
     h1, h4.heading--label {
       color: $text-dark-body;      
     }
