@@ -1,0 +1,9 @@
+<div class="context-switcher {{ modifier_class }}{{#if classes}} {{ classes }}{{/if}}">
+  <span class="context-switcher__trigger {{ triggerClass }}">{{ triggerText }}</span>
+  <ul class="context-switcher__list">
+    <li class="selected"><a href="#" data-option-id="default">{{ triggerText }}</a></li>
+    {{#each options}}
+      <li><a href="#" data-option-id="{{ id }}">{{ text }}</a></li>
+    {{/each}}
+  </ul>
+</div>

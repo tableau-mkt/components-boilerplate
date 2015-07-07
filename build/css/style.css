@@ -266,13 +266,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -420,13 +420,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .link-list.link-list--plain, .sidebar--nav ul {
+.plain-list, .inline-list, .link-list.link-list--inline, .tags-list, .tabs__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .sidebar--nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .link-list.link-list--plain li, .sidebar--nav ul li {
+.plain-list li, .inline-list li, .link-list.link-list--inline li, .tags-list li, .tabs__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .sidebar--nav ul li {
   list-style: none;
 }
 
@@ -1521,6 +1521,72 @@ Style guide: layout.container
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+
+/*
+Context Switcher
+
+
+
+Markup: context-switcher.hbs
+
+Style guide: interactive.context-switcher
+*/
+.context-switcher {
+  display: inline-block;
+  position: relative;
+}
+
+.context-switcher .context-switcher__trigger {
+  margin-right: 1em;
+  border-bottom: 1px solid #6f99a5;
+  color: #6f99a5;
+  cursor: pointer;
+}
+
+.context-switcher .context-switcher__trigger:after {
+  content: url(../images/icons/drop-down-arrow-teal.png);
+  position: absolute;
+  right: 0;
+  top: .5em;
+  line-height: 0;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+.context-switcher .context-switcher__trigger.open:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.context-switcher .context-switcher__list {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  max-height: 9.6em;
+  min-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 10px;
+  padding: .7em 0;
+  background: #fff;
+  text-align: left;
+  font-size: .7em;
+}
+
+.context-switcher .context-switcher__list li {
+  padding: 0.3em 0.7em;
+}
+
+.context-switcher .context-switcher__list li a {
+  color: #333;
+}
+
+.context-switcher .context-switcher__list li.selected {
+  display: none;
 }
 
 /* 
@@ -3040,12 +3106,27 @@ Style guide: layout.grids
 }
 
 @media (max-width: 799.5px) and (min-width: 426px) {
-  .grid--3 {
+  .grid--tablet-mobile-split .grid--3 {
     width: 48.9361702128%;
     float: left;
     margin-right: 2.1276595745%;
   }
-  .grid--3:nth-child(even) {
+  .grid--tablet-mobile-split .grid--3:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .grid--tablet-full {
+    width: 100%;
+    margin-right: 0;
+  }
+  .grid--tablet-half {
+    width: 48.9361702128%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .grid--tablet-half:nth-child(even) {
     margin-right: 0;
   }
 }
@@ -3803,8 +3884,6 @@ Style guide: interactive.hero-slideshow
   color: #fff;
   font-size: 9px;
   opacity: 1;
-  width: 30px;
-  height: 30px;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
@@ -4082,6 +4161,12 @@ Style Guide: icons.icons
   display: inline-block;
   font-size: 7.5em;
   background: #fafafa;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .icon--ecosystem-style {
+    zoom: 0.7;
+  }
 }
 
 .icon--large {

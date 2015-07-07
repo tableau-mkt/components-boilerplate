@@ -1,0 +1,64 @@
+/*
+Context Switcher
+
+
+
+Markup: context-switcher.hbs
+
+Style guide: interactive.context-switcher
+*/
+
+.context-switcher {
+  display: inline-block;
+  position: relative;
+
+  .context-switcher__trigger {
+    margin-right: 1em;
+    border-bottom: 1px solid $text-learning;
+    color: $text-learning;
+    cursor: pointer;
+
+    &:after {
+      content: url(../images/icons/drop-down-arrow-teal.png);
+      position: absolute;
+      right: 0;
+      top: .5em;
+      line-height: 0;
+      transition: transform .5s;
+    }
+
+    &.open:after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .context-switcher__list {
+    @extend %plain-list;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    max-height: 9.6em;
+    min-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+    padding: .7em 0;
+    background: #fff;
+    text-align: left;
+    font-size: .7em;
+
+    li {
+      padding: .3em .7em;
+
+      a {
+        color: $text-dark-body;
+      }
+
+      &.selected {
+        display: none;
+      }
+    }
+  }
+}

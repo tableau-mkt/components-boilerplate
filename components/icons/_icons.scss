@@ -184,6 +184,10 @@ Style Guide: icons.icons
   display: inline-block;
   font-size: 7.5em;
   background: $bg-light-gray-1;
+
+  @include breakpoint($tablet-only) {
+    zoom: 0.7;
+  }
 }
 
 
