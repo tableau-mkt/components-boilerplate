@@ -50,9 +50,27 @@ $susy: (
   }
 }
 
+
 // Special handling for grid--3 on tablet and mobile.
 @include breakpoint((max-width $tablet-mid) (min-width $mobile-two-thirds)) {
-  .grid--3 {
+  .grid--tablet-mobile-split {
+    .grid--3 {
+      @include span(6);
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint($tablet-only) {
+  .grid--tablet-full {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .grid--tablet-half {
     @include span(6);
 
     &:nth-child(even) {
