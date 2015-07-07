@@ -5433,6 +5433,10 @@ body.kss .kss-example-preview .subnav.stuck .subnav__cta {
   height: auto;
 }
 
+body.kss .kss-example-preview .subnav .subnav__title {
+  margin: 0.4em 0;
+}
+
 body.kss .kss-example-preview .subnav .subnav__links {
   margin: 0.8em 0 0 2em;
   padding: 0;
@@ -5915,7 +5919,7 @@ body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .
   color: #333;
 }
 
-body.kss .kss-example-preview .text--sub-nav, body.kss .kss-example-preview .subnav .subnav__title {
+body.kss .kss-example-preview .text--sub-nav {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.5714285714em;
   color: #000;
@@ -5993,7 +5997,7 @@ body.kss .kss-example-preview .text--lineheight-zero {
   line-height: 0;
 }
 
-body.kss .kss-example-preview .text--negative, body.kss .kss-example-preview .subnav .subnav__title {
+body.kss .kss-example-preview .text--negative {
   color: #fff !important;
 }
 

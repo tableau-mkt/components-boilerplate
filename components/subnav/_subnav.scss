@@ -40,8 +40,7 @@ Style guide: navigation.subnav
   }
 
   .subnav__title {
-    @extend .text--sub-nav;
-    @extend .text--negative;
+    margin: 0.4em 0;
   }
 
   .subnav__links {

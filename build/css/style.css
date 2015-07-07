@@ -5166,6 +5166,10 @@ Style guide: navigation.subnav
   height: auto;
 }
 
+.subnav .subnav__title {
+  margin: 0.4em 0;
+}
+
 .subnav .subnav__links {
   margin: 0.8em 0 0 2em;
   padding: 0;
@@ -5845,7 +5849,7 @@ Style guide: typography.other
   color: #333;
 }
 
-.text--sub-nav, .subnav .subnav__title {
+.text--sub-nav {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.5714285714em;
   color: #000;
@@ -5980,7 +5984,7 @@ Weight: 7
 Style guide: typography.colors
 */
 /* Create a class for each text color */
-.text--negative, .subnav .subnav__title {
+.text--negative {
   color: #fff !important;
 }
 
