@@ -321,14 +321,6 @@ Styleguide typography.context-headings
   a {
     color: $text-dark-body;
   }
-
-  @include breakpoint($tablet-only) {
-    font-size: em(16px);
-  }
-
-  @include breakpoint($mobile-only) {
-    font-size: em(15px);
-  }
 }
 
 

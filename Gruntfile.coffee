@@ -39,8 +39,8 @@ module.exports = (grunt) ->
     sass:
       dist:
         options:
-           sourceMap: true
-           outputStyle: 'expanded'
+          sourceMap: true
+          outputStyle: 'expanded'
         files: [
           {
             expand: true
@@ -52,8 +52,8 @@ module.exports = (grunt) ->
         ]
       dev:
         options:
-           sourceMap: true
-           outputStyle: 'expanded'
+          sourceMap: true
+          outputStyle: 'expanded'
         files: [
           {
             expand: true
@@ -98,6 +98,11 @@ module.exports = (grunt) ->
           'matchMedia/**/*.*'
         ]
         dest: 'build/bower'
+      assets:
+        expand: true
+        src: 'components/**/*.{jpg,gif,png}'
+        dest: 'build/images'
+
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)

@@ -12,6 +12,7 @@
     "../build/bower/hoverintent/jquery.hoverIntent.js",
     "../build/bower/waypoints/lib/jquery.waypoints.min.js",
     "../build/bower/waypoints/lib/shortcuts/sticky.min.js",
+    "../build/bower/waypoints/lib/shortcuts/inview.min.js",
     "../build/js/scripts.js"
   ],
   "custom": [

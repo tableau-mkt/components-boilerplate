@@ -717,6 +717,16 @@ Weight: 4
 Style guide: forms.confirmation
 */
   /*
+Gif Player
+
+Starts playing a gif once it's scrolled into view and only loops once. Provides
+option to reloop the gif.
+
+Markup: gif-player.hbs
+
+Style Guide: interactive.gif-player
+*/
+  /*
 Global Footer
 
 The global footer that is displayed at the bottom of each page. Contains several
@@ -814,6 +824,7 @@ Markup: icon.hbs
 .icon--management - management icon
 .icon--statistics - statistics icon
 .icon--arrow-long - arrow-long icon
+.icon--arrow-long-down - arrow-long-down icon
 .icon--expand - expand icon
 .icon--collapse - collapse icon
 .icon--slideshow-prev-light - slideshow-prev-light icon
@@ -4515,6 +4526,7 @@ body.kss .kss-example-preview .icon--diagram,
 body.kss .kss-example-preview .icon--management,
 body.kss .kss-example-preview .icon--statistics,
 body.kss .kss-example-preview .icon--arrow-long,
+body.kss .kss-example-preview .icon--arrow-long-down,
 body.kss .kss-example-preview .icon--expand,
 body.kss .kss-example-preview .icon--collapse,
 body.kss .kss-example-preview .icon--slideshow-prev-light,
@@ -4562,6 +4574,10 @@ body.kss .kss-example-preview .icon--statistics:before {
 
 body.kss .kss-example-preview .icon--arrow-long {
   content: url(../images/icons/icon-arrow-long.png);
+}
+
+body.kss .kss-example-preview .icon--arrow-long-down {
+  content: url(../images/icons/icon-arrow-long-down.png);
 }
 
 body.kss .kss-example-preview .icon--expand {
@@ -5899,18 +5915,6 @@ body.kss .kss-example-preview .heading--label {
 
 body.kss .kss-example-preview .heading--label a {
   color: #333;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  body.kss .kss-example-preview .heading--label {
-    font-size: 1.1428571429em;
-  }
-}
-
-@media (max-width: 639px) {
-  body.kss .kss-example-preview .heading--label {
-    font-size: 1.0714285714em;
-  }
 }
 
 body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav__top .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete {

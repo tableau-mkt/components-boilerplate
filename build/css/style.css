@@ -2190,6 +2190,16 @@ Weight: 4
 Style guide: forms.confirmation
 */
 /*
+Gif Player
+
+Starts playing a gif once it's scrolled into view and only loops once. Provides
+option to reloop the gif.
+
+Markup: gif-player.hbs
+
+Style Guide: interactive.gif-player
+*/
+/*
 Global Footer
 
 The global footer that is displayed at the bottom of each page. Contains several
@@ -3987,6 +3997,7 @@ Markup: icon.hbs
 .icon--management - management icon
 .icon--statistics - statistics icon
 .icon--arrow-long - arrow-long icon
+.icon--arrow-long-down - arrow-long-down icon
 .icon--expand - expand icon
 .icon--collapse - collapse icon
 .icon--slideshow-prev-light - slideshow-prev-light icon
@@ -4076,6 +4087,7 @@ Style Guide: icons.icons
 .icon--management,
 .icon--statistics,
 .icon--arrow-long,
+.icon--arrow-long-down,
 .icon--expand,
 .icon--collapse,
 .icon--slideshow-prev-light,
@@ -4123,6 +4135,10 @@ Style Guide: icons.icons
 
 .icon--arrow-long {
   content: url(../images/icons/icon-arrow-long.png);
+}
+
+.icon--arrow-long-down {
+  content: url(../images/icons/icon-arrow-long-down.png);
 }
 
 .icon--expand {
@@ -5811,18 +5827,6 @@ Styleguide typography.context-headings
 
 .heading--label a {
   color: #333;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .heading--label {
-    font-size: 1.1428571429em;
-  }
-}
-
-@media (max-width: 639px) {
-  .heading--label {
-    font-size: 1.0714285714em;
-  }
 }
 
 /*
