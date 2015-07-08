@@ -2065,6 +2065,7 @@ Weight: 1
 Style guide: forms.input
 */
 input[type=text],
+input[type=search],
 input[type=tel],
 input[type=password],
 input[type=number],
@@ -2081,6 +2082,7 @@ input[type=email] {
 
 @media (max-width: 639px) {
   input[type=text],
+  input[type=search],
   input[type=tel],
   input[type=password],
   input[type=number],
@@ -2090,6 +2092,7 @@ input[type=email] {
 }
 
 input[type=text].input--full-width,
+input[type=search].input--full-width,
 input[type=tel].input--full-width,
 input[type=password].input--full-width,
 input[type=number].input--full-width,
@@ -4910,6 +4913,31 @@ Style guide: interactive.reveal
 .reveal__close:hover {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.4);
+}
+
+/*
+Search Highlight
+
+Searches through a list of items and highlights items that match the term.
+
+Markup: search-highlight.hbs
+
+Style Guide: interactive.search-highlight
+*/
+input[type=search].search-highlight {
+  width: 100%;
+  max-width: 300px;
+  padding-right: 3em;
+  border: 0;
+  border-radius: 30px;
+  background-image: url("../images/icons/icon-magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right 15px center;
+}
+
+input[type=search].search-highlight:focus {
+  outline: 0;
 }
 
 /*

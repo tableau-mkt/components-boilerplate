@@ -1,0 +1,25 @@
+/*
+Search Highlight
+
+Searches through a list of items and highlights items that match the term.
+
+Markup: search-highlight.hbs
+
+Style Guide: interactive.search-highlight
+*/
+
+input[type=search].search-highlight {
+  width: 100%;
+  max-width: 300px;
+  padding-right: 3em;  
+  border: 0;
+  border-radius: 30px;
+  background-image: url('../images/icons/icon-magnifying-glass.svg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right 15px center;
+
+  &:focus {
+    outline: 0;
+  }
+}

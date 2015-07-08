@@ -996,6 +996,15 @@ Markup: reveal.hbs
 Style guide: interactive.reveal
 */
   /*
+Search Highlight
+
+Searches through a list of items and highlights items that match the term.
+
+Markup: search-highlight.hbs
+
+Style Guide: interactive.search-highlight
+*/
+  /*
 Content Section
 
 Used to wrap a section of content and apply vertical padding between wrappers 
@@ -2731,6 +2740,7 @@ body.kss .kss-example-preview .form--fields label {
 }
 
 body.kss .kss-example-preview input[type=text],
+body.kss .kss-example-preview input[type=search],
 body.kss .kss-example-preview input[type=tel],
 body.kss .kss-example-preview input[type=password],
 body.kss .kss-example-preview input[type=number],
@@ -2747,6 +2757,7 @@ body.kss .kss-example-preview input[type=email] {
 
 @media (max-width: 639px) {
   body.kss .kss-example-preview input[type=text],
+  body.kss .kss-example-preview input[type=search],
   body.kss .kss-example-preview input[type=tel],
   body.kss .kss-example-preview input[type=password],
   body.kss .kss-example-preview input[type=number],
@@ -2756,6 +2767,7 @@ body.kss .kss-example-preview input[type=email] {
 }
 
 body.kss .kss-example-preview input[type=text].input--full-width,
+body.kss .kss-example-preview input[type=search].input--full-width,
 body.kss .kss-example-preview input[type=tel].input--full-width,
 body.kss .kss-example-preview input[type=password].input--full-width,
 body.kss .kss-example-preview input[type=number].input--full-width,
@@ -5264,6 +5276,22 @@ body.kss .kss-example-preview .reveal__close {
 body.kss .kss-example-preview .reveal__close:hover {
   text-decoration: none;
   background: rgba(0, 0, 0, 0.4);
+}
+
+body.kss .kss-example-preview input[type=search].search-highlight {
+  width: 100%;
+  max-width: 300px;
+  padding-right: 3em;
+  border: 0;
+  border-radius: 30px;
+  background-image: url("../images/icons/icon-magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right 15px center;
+}
+
+body.kss .kss-example-preview input[type=search].search-highlight:focus {
+  outline: 0;
 }
 
 body.kss .kss-example-preview .section {

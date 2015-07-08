@@ -1,0 +1,19 @@
+{
+  "contentId": "test-content",
+  "highlightClass": "text--bold",
+  "list": {
+    "items": [
+      {"text": "Actian Vectorwise 2.0 or later (Windows only)"},
+      {"text": "Amazon Redshift"},
+      {"text": "Amazon Elastic MapReduce"},
+      {"text": "Cloudera Hadoop Hive and Impala; Hive CDH3u1, which includes Hive .71, or later; Impala 1.0 or later"},
+      {"text": "DataStax Enterprise Edition 2.2 or later (Windows only)"},
+      {"text": "EXASOL 4.2 or later (Windows only)"},
+      {"text": "Firebird 2.1.4 or later"},
+      {"text": "Google Analytics"},
+      {"text": "Google BigQuery"},
+      {"text": "Hortonworks Hadoop Hive 1.1 or later"},
+      {"text": "HP Vertica 6.x or later"}
+    ]
+  }
+}
