@@ -10,5 +10,13 @@
       });
     });
 
+    if (matchMedia('(max-width: 960px)').matches) {
+      $('.mobile-sticky').each(function(i) {
+        var sticky = new Waypoint.Sticky({
+          element: $(this)[0]
+        });
+      });
+    }
+
   });
 })(jQuery);

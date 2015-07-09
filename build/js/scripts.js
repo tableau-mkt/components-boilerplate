@@ -344,6 +344,14 @@ function dataSourcesSearch() {
 
     /* Tablet/mobile stuff */ 
     if (matchMedia('(max-width: 960px)').matches) {
+
+      // Set the height of the dropdown content
+      mobileHeightAdjust()
+      
+      $(window).resize(function(e) {
+        mobileHeightAdjust()
+      });
+
       $expandableLinks.on('click.nav', function(e) {
         var $link = $(this),
             $drawer = $('#' + $link.data('drawer-id'));
@@ -410,6 +418,28 @@ function dataSourcesSearch() {
     setTimeout(function() {
       $drawer.hide().removeClass('open');
     }, animation.duration);
+  }
+
+  function mobileHeightAdjust() {
+    var drawerHeight = $(window).outerHeight(true) - $globalNav.outerHeight(true);
+
+
+console.log("TEST");
+
+
+    $mobileWrapper.add($drawers).each(function(index, el) {
+      var $wrapper = $(el),
+          origHeight = $wrapper.data('orig-height');
+      
+      if (isNaN(origHeight)) {
+        origHeight = $wrapper.height();
+        $wrapper.data('orig-height', origHeight);
+      }
+
+      if (origHeight < drawerHeight) {
+        $wrapper.height(drawerHeight);
+      }
+    });
   }
 
 })(jQuery);;
@@ -746,6 +776,14 @@ function dataSourcesSearch() {
         element: $(this)[0]
       });
     });
+
+    if (matchMedia('(max-width: 960px)').matches) {
+      $('.mobile-sticky').each(function(i) {
+        var sticky = new Waypoint.Sticky({
+          element: $(this)[0]
+        });
+      });
+    }
 
   });
 })(jQuery);
