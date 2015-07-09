@@ -118,11 +118,9 @@
   }
 
   function mobileHeightAdjust() {
+    // @todo this is pretty bad... Can probably figure out a clever CSS hack to 
+    // acheive this with vh units or something.
     var drawerHeight = $(window).outerHeight(true) - $globalNav.outerHeight(true);
-
-
-console.log("TEST");
-
 
     $mobileWrapper.add($drawers).each(function(index, el) {
       var $wrapper = $(el),

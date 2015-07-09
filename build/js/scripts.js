@@ -421,11 +421,9 @@ function dataSourcesSearch() {
   }
 
   function mobileHeightAdjust() {
+    // @todo this is pretty bad... Can probably figure out a clever CSS hack to 
+    // acheive this with vh units or something.
     var drawerHeight = $(window).outerHeight(true) - $globalNav.outerHeight(true);
-
-
-console.log("TEST");
-
 
     $mobileWrapper.add($drawers).each(function(index, el) {
       var $wrapper = $(el),
@@ -442,7 +440,8 @@ console.log("TEST");
     });
   }
 
-})(jQuery);;
+})(jQuery);
+;
 /** 
  * Global search bar interaction
  */
@@ -648,11 +647,14 @@ console.log("TEST");
         $(this).parent('.reveal__content').data('revealTrigger').click();
         e.preventDefault();
       });
+
+      // Trigger auto-reveal
+      autoReveal();
     }
   });
 
   // Show the target content
-  function showContent(trigger) {
+  function showContent(trigger, noAnimation) {
     var data = $(trigger).data(),
         $trigger = $(trigger),
         $target = $('#' + data.revealTarget),
@@ -662,6 +664,9 @@ console.log("TEST");
         media = data.revealMedia,
         scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
 
+    if (noAnimation) {
+      animation.duration = 0;
+    }
 
     $trigger.data('revealState', 'open')
     if (hideText != "") {
@@ -729,6 +734,21 @@ console.log("TEST");
 
     // Add a close icon to each content continer
     $contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+  }
+
+  function autoReveal() {
+    var hash = window.location.hash;
+
+    if (hash.length && $contents.is(hash)) {
+      var $trigger = $(hash).data('revealTrigger');
+
+      // Prevent scrolling to the anchor...
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 1);
+
+      showContent($trigger, true);
+    }
   }
 
 })(jQuery);

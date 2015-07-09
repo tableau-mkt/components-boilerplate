@@ -29,11 +29,14 @@
         $(this).parent('.reveal__content').data('revealTrigger').click();
         e.preventDefault();
       });
+
+      // Trigger auto-reveal
+      autoReveal();
     }
   });
 
   // Show the target content
-  function showContent(trigger) {
+  function showContent(trigger, noAnimation) {
     var data = $(trigger).data(),
         $trigger = $(trigger),
         $target = $('#' + data.revealTarget),
@@ -43,6 +46,9 @@
         media = data.revealMedia,
         scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
 
+    if (noAnimation) {
+      animation.duration = 0;
+    }
 
     $trigger.data('revealState', 'open')
     if (hideText != "") {
@@ -110,6 +116,21 @@
 
     // Add a close icon to each content continer
     $contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+  }
+
+  function autoReveal() {
+    var hash = window.location.hash;
+
+    if (hash.length && $contents.is(hash)) {
+      var $trigger = $(hash).data('revealTrigger');
+
+      // Prevent scrolling to the anchor...
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 1);
+
+      showContent($trigger, true);
+    }
   }
 
 })(jQuery);
