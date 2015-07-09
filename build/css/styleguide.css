@@ -627,6 +627,7 @@ Weight: 0
 
 .divider--gradient - A divider that fades out to transparent on either end. 
 .divider--dashed - A dashed divider.
+.divider--dark - A darker divider used for darker backgrounds
 
 Style guide: layout.divider
 */
@@ -644,6 +645,7 @@ Weight: 10
 .vertical-divider--right - A divider on the right side of the element.
 .vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
 .vertical-divider--or - A divider with the word "Or" in the middle.
+.vertical-divider--dark - A darker divider for darker backgrounds.
 
 Style guide: layout.divider-vertical
 */
@@ -982,6 +984,15 @@ Markup: popup.hbs
 Style guide: interactive.popup
  */
   /* Transitioning the popup in and out */
+  /*
+Quotes
+
+Stylized quoted text such as a pull quote or testimonial.
+
+Markup: quote.hbs
+
+Style Guide: typography.quote
+*/
   /*
 Content Reveal
 
@@ -2680,6 +2691,16 @@ body.kss .kss-example-preview .divider.divider--dashed {
   border-top-style: dotted;
 }
 
+body.kss .kss-example-preview .divider.divider--dark {
+  border-color: #464646;
+}
+
+body.kss .kss-example-preview .divider.divider--dark.divider--gradient {
+  background: #464646;
+  background: -webkit-linear-gradient(left, transparent, #464646, transparent);
+  background: linear-gradient(to right, transparent, #464646, transparent);
+}
+
 body.kss .kss-example-preview .vertical-divider {
   min-height: 50px;
   border-left: 1px solid #dedede;
@@ -2707,6 +2728,10 @@ body.kss .kss-example-preview .vertical-divider .heading--medium:first-child, bo
 
 body.kss .kss-example-preview .vertical-divider p:last-child {
   margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--dark {
+  border-color: #464646;
 }
 
 body.kss .kss-example-preview .flyout__slideout {
@@ -5247,6 +5272,48 @@ body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
   opacity: 0;
 }
 
+body.kss .kss-example-preview .quote .quote__text {
+  position: relative;
+  font-size: 1.7em;
+  line-height: 1.4;
+}
+
+body.kss .kss-example-preview .quote .quote__text:before {
+  position: absolute;
+  content: "\201C";
+  left: -0.6em;
+}
+
+body.kss .kss-example-preview .quote .quote__text:after {
+  content: "\201D";
+}
+
+body.kss .kss-example-preview .quote .quote__byline:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  margin-right: .5em;
+  vertical-align: middle;
+  background: #bbb;
+}
+
+body.kss .kss-example-preview .quote .quote__byline .quote__byline__title {
+  color: #787878;
+}
+
+body.kss .kss-example-preview .quote.quote--light .quote__byline .quote__byline__name {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .quote.quote--light .quote__byline .quote__byline__title {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .quote.quote--light .quote__byline:before {
+  background: #bbb;
+}
+
 body.kss .kss-example-preview .reveal__content {
   position: relative;
   display: none;
@@ -5964,11 +6031,12 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .quote .quote__byline, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body.kss .kss-example-preview strong,

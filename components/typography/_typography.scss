@@ -368,6 +368,7 @@ Style guide: typography.other
   letter-spacing: 1px;
   // color: $text-dark-body;
   text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 

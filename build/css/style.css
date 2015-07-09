@@ -1931,6 +1931,7 @@ Weight: 0
 
 .divider--gradient - A divider that fades out to transparent on either end. 
 .divider--dashed - A dashed divider.
+.divider--dark - A darker divider used for darker backgrounds
 
 Style guide: layout.divider
 */
@@ -1955,6 +1956,16 @@ Style guide: layout.divider
   border-top-style: dotted;
 }
 
+.divider.divider--dark {
+  border-color: #464646;
+}
+
+.divider.divider--dark.divider--gradient {
+  background: #464646;
+  background: -webkit-linear-gradient(left, transparent, #464646, transparent);
+  background: linear-gradient(to right, transparent, #464646, transparent);
+}
+
 /*
 Vertical Dividers
 
@@ -1969,6 +1980,7 @@ Weight: 10
 .vertical-divider--right - A divider on the right side of the element.
 .vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
 .vertical-divider--or - A divider with the word "Or" in the middle.
+.vertical-divider--dark - A darker divider for darker backgrounds.
 
 Style guide: layout.divider-vertical
 */
@@ -2000,6 +2012,10 @@ Style guide: layout.divider-vertical
 
 .vertical-divider p:last-child {
   margin-bottom: 0;
+}
+
+.vertical-divider.vertical-divider--dark {
+  border-color: #464646;
 }
 
 /*
@@ -4872,6 +4888,57 @@ button.mfp-arrow:active {
 }
 
 /*
+Quotes
+
+Stylized quoted text such as a pull quote or testimonial.
+
+Markup: quote.hbs
+
+Style Guide: typography.quote
+*/
+.quote .quote__text {
+  position: relative;
+  font-size: 1.7em;
+  line-height: 1.4;
+}
+
+.quote .quote__text:before {
+  position: absolute;
+  content: "\201C";
+  left: -0.6em;
+}
+
+.quote .quote__text:after {
+  content: "\201D";
+}
+
+.quote .quote__byline:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  margin-right: .5em;
+  vertical-align: middle;
+  background: #bbb;
+}
+
+.quote .quote__byline .quote__byline__title {
+  color: #787878;
+}
+
+.quote.quote--light .quote__byline .quote__byline__name {
+  color: #fff;
+}
+
+.quote.quote--light .quote__byline .quote__byline__title {
+  color: #bbb;
+}
+
+.quote.quote--light .quote__byline:before {
+  background: #bbb;
+}
+
+/*
 Content Reveal
 
 Simple tool to make content hidden and revealed when a trigger is clicked. It 
@@ -5894,11 +5961,12 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .hero-slideshow .hero-slideshow__arrow, .tags-list, .tabs__tabs .tabs__tab-link {
+.text--label, .hero-slideshow .hero-slideshow__arrow, .tags-list, .quote .quote__byline, .tabs__tabs .tabs__tab-link {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /*

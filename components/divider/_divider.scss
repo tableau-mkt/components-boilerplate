@@ -10,6 +10,7 @@ Weight: 0
 
 .divider--gradient - A divider that fades out to transparent on either end. 
 .divider--dashed - A dashed divider.
+.divider--dark - A darker divider used for darker backgrounds
 
 Style guide: layout.divider
 */
@@ -32,6 +33,15 @@ Style guide: layout.divider
   &.divider--dashed {
     border-top-style: dotted;
   }  
+
+  &.divider--dark {
+    border-color: $bg-dark-gray-1;
+
+    &.divider--gradient {
+      background: $bg-dark-gray-1;
+      background: linear-gradient(to right, transparent, $bg-dark-gray-1, transparent);
+    }
+  }
 }
 
 
@@ -49,6 +59,7 @@ Weight: 10
 .vertical-divider--right - A divider on the right side of the element.
 .vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
 .vertical-divider--or - A divider with the word "Or" in the middle.
+.vertical-divider--dark - A darker divider for darker backgrounds.
 
 Style guide: layout.divider-vertical
 */
@@ -77,6 +88,10 @@ Style guide: layout.divider-vertical
 
   p:last-child {
     margin-bottom: 0;
+  }
+
+  &.vertical-divider--dark {
+    border-color: $bg-dark-gray-1;
   }
 
   // @TODO make this work. Example in ecosystem section of Products Family
