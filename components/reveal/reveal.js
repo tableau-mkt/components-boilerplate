@@ -36,7 +36,7 @@
   });
 
   // Show the target content
-  function showContent(trigger, noAnimation) {
+  function showContent(trigger, customAnimation) {
     var data = $(trigger).data(),
         $trigger = $(trigger),
         $target = $('#' + data.revealTarget),
@@ -44,27 +44,24 @@
         hideText = data.revealHideText,
         type = data.revealType,
         media = data.revealMedia,
-        scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
-
-    if (noAnimation) {
-      animation.duration = 0;
-    }
+        scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+        customAnimation = customAnimation || animation;
 
     $trigger.data('revealState', 'open')
     if (hideText != "") {
       $trigger.text(hideText);
     }
-    $target.slideDown(animation);
-    $curtain.slideUp(animation);
+    $target.slideDown(customAnimation);
+    $curtain.slideUp(customAnimation);
 
     if (media == "video") {
       setTimeout(function() {
         $target.find('video')[0].play();
-      }, animation.duration/2);
+      }, customAnimation.duration/2);
     }
 
     if ($curtain.length) {
-      smoothScrollTop($curtain, animation.duration, scrollOffset, true);
+      smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
     }
   }
 
@@ -129,7 +126,7 @@
         window.scrollTo(0, 0);
       }, 1);
 
-      showContent($trigger, true);
+      showContent($trigger, {duration: 0});
     }
   }
 
