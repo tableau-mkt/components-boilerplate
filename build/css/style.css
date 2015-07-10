@@ -6043,6 +6043,12 @@ em,
   text-align: center;
 }
 
+@media (max-width: 639px) {
+  .mobile-text--centered {
+    text-align: center;
+  }
+}
+
 .text--justified {
   text-align: justified;
 }

@@ -419,6 +419,11 @@ em,
 .text--centered {
   text-align: center;
 }
+@include breakpoint($mobile-only) {
+  .mobile-text--centered {
+    text-align: center;
+  }
+}
 .text--justified {
   text-align: justified;
 }

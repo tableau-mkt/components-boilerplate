@@ -6089,6 +6089,12 @@ body.kss .kss-example-preview .text--centered {
   text-align: center;
 }
 
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .mobile-text--centered {
+    text-align: center;
+  }
+}
+
 body.kss .kss-example-preview .text--justified {
   text-align: justified;
 }
