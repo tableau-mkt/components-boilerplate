@@ -64,38 +64,40 @@ Weight: 10
 Style guide: layout.divider-vertical
 */
 .vertical-divider {
-  min-height: 50px;
-  border-left: 1px solid $accent-dividers;
-  padding-left: 2em;
-
-  &.vertical-divider--dashed {
-    border-left-style: dotted;
-  } 
-  &.vertical-divider--right {
-    border-left: 0;
-    border-right: 1px solid $accent-dividers;
+  @include breakpoint($tablet-min) {
+    min-height: 50px;
+    border-left: 1px solid $accent-dividers;
+    padding-left: 2em;
 
     &.vertical-divider--dashed {
-      border-right-style: dotted;
+      border-left-style: dotted;
     } 
-  }
+    &.vertical-divider--right {
+      border-left: 0;
+      border-right: 1px solid $accent-dividers;
 
-  p:first-child,
-  h2:first-child,
-  h3:first-child {
-    margin-top: 0;
-  }
+      &.vertical-divider--dashed {
+        border-right-style: dotted;
+      } 
+    }
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+    p:first-child,
+    h2:first-child,
+    h3:first-child {
+      margin-top: 0;
+    }
 
-  &.vertical-divider--dark {
-    border-color: $bg-dark-gray-1;
-  }
+    p:last-child {
+      margin-bottom: 0;
+    }
 
-  // @TODO make this work. Example in ecosystem section of Products Family
-  &.vertical-divider--or {
-    
+    &.vertical-divider--dark {
+      border-color: $bg-dark-gray-1;
+    }
+
+    // @TODO make this work. Example in ecosystem section of Products Family
+    &.vertical-divider--or {
+      
+    }
   }
 }

@@ -79,6 +79,12 @@
     $slideout.add($target).animate({
       marginLeft: '+=100%',
     }, animation);
+
+    // Reset height of $parent to inherit in case of screen resizing that would 
+    // need to adjust the height.
+    setTimeout(function() {
+      $parent.css('height', 'inherit');
+    }, animation.duration + 1);
   }
 
   // Hand-full of setup tasks

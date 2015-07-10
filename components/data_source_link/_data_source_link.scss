@@ -19,9 +19,11 @@ Style guide: buttons-links.data-source
 .data-source-link {
   position: relative;
   display: inline-block;
+  float: left;
   width: 66px;
   height: 66px;
   padding: 15px;
+  margin: 0 3em 3em 0;
   border: 2px solid $button-orange;
   background: transparent;
   color: $button-orange;
@@ -66,5 +68,16 @@ Style guide: buttons-links.data-source
         color: nth($colors, 2);
       }
     }
+  }
+
+  @include breakpoint($tablet-min) {
+    & + ul {
+      margin-left: 130px;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    float: none;
+    margin: 0 0 2em 0;
   }
 }

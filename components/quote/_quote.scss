@@ -57,4 +57,13 @@ Style Guide: typography.quote
       }
     }
   }
+
+  @include breakpoint($mobile-only) {
+    .quote__text {
+      font-size: 1.2em;
+    }
+    .quote__byline:before {
+      width: 20px;
+    }
+  }
 }

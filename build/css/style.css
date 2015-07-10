@@ -1804,9 +1804,11 @@ Style guide: buttons-links.data-source
 .data-source-link {
   position: relative;
   display: inline-block;
+  float: left;
   width: 66px;
   height: 66px;
   padding: 15px;
+  margin: 0 3em 3em 0;
   border: 2px solid #e8762c;
   background: transparent;
   color: #e8762c;
@@ -1919,6 +1921,19 @@ Style guide: buttons-links.data-source
   color: #DB8E6A;
 }
 
+@media (min-width: 640px) {
+  .data-source-link + ul {
+    margin-left: 130px;
+  }
+}
+
+@media (max-width: 639px) {
+  .data-source-link {
+    float: none;
+    margin: 0 0 2em 0;
+  }
+}
+
 /*
 HorizontalDividers
 
@@ -1984,38 +1999,34 @@ Weight: 10
 
 Style guide: layout.divider-vertical
 */
-.vertical-divider {
-  min-height: 50px;
-  border-left: 1px solid #dedede;
-  padding-left: 2em;
-}
-
-.vertical-divider.vertical-divider--dashed {
-  border-left-style: dotted;
-}
-
-.vertical-divider.vertical-divider--right {
-  border-left: 0;
-  border-right: 1px solid #dedede;
-}
-
-.vertical-divider.vertical-divider--right.vertical-divider--dashed {
-  border-right-style: dotted;
-}
-
-.vertical-divider p:first-child,
-.vertical-divider h2:first-child,
-.vertical-divider .heading--medium:first-child,
-.vertical-divider h3:first-child, .vertical-divider .heading--small:first-child {
-  margin-top: 0;
-}
-
-.vertical-divider p:last-child {
-  margin-bottom: 0;
-}
-
-.vertical-divider.vertical-divider--dark {
-  border-color: #464646;
+@media (min-width: 640px) {
+  .vertical-divider {
+    min-height: 50px;
+    border-left: 1px solid #dedede;
+    padding-left: 2em;
+  }
+  .vertical-divider.vertical-divider--dashed {
+    border-left-style: dotted;
+  }
+  .vertical-divider.vertical-divider--right {
+    border-left: 0;
+    border-right: 1px solid #dedede;
+  }
+  .vertical-divider.vertical-divider--right.vertical-divider--dashed {
+    border-right-style: dotted;
+  }
+  .vertical-divider p:first-child,
+  .vertical-divider h2:first-child,
+  .vertical-divider .heading--medium:first-child,
+  .vertical-divider h3:first-child, .vertical-divider .heading--small:first-child {
+    margin-top: 0;
+  }
+  .vertical-divider p:last-child {
+    margin-bottom: 0;
+  }
+  .vertical-divider.vertical-divider--dark {
+    border-color: #464646;
+  }
 }
 
 /*
@@ -4936,6 +4947,15 @@ Style Guide: typography.quote
 
 .quote.quote--light .quote__byline:before {
   background: #bbb;
+}
+
+@media (max-width: 639px) {
+  .quote .quote__text {
+    font-size: 1.2em;
+  }
+  .quote .quote__byline:before {
+    width: 20px;
+  }
 }
 
 /*
