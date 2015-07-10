@@ -1808,7 +1808,7 @@ Style guide: buttons-links.data-source
   width: 66px;
   height: 66px;
   padding: 15px;
-  margin: 0 3em 3em 0;
+  margin: 0 2em 2em 0;
   border: 2px solid #e8762c;
   background: transparent;
   color: #e8762c;
@@ -1923,7 +1923,8 @@ Style guide: buttons-links.data-source
 
 @media (min-width: 640px) {
   .data-source-link + ul {
-    margin-left: 130px;
+    margin-left: 120px;
+    margin-top: 0;
   }
 }
 
@@ -2438,7 +2439,7 @@ Style guide: navigation.global
     margin-left: -20px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #f0f0f0;
+    border-bottom: 20px solid #ebebeb;
     pointer-events: none;
     -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
             transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -5190,28 +5191,19 @@ Vertical Spacer
 
 Used to create vertical spacing between sections of content without just a stack
 of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
-(<code>&lt;hr&gt;</code>). The default spacing is 2em, but you can use modifier 
-classes to add 4em or 6em of spacingas well. These examples put a spacer between 
-two divs to dempnstrate the amount of space that will be added with each modifier.
+(<code>&lt;hr&gt;</code>). These examples put a spacer between two divs to 
+dempnstrate the amount of space that will be added with each modifier.
 
-Markup:
-<div class="grid-6 box__padded box--green">
-  <p>
-    Maxime. Temporibus minim atque ullamcorper, aptent, necessitatibus lacinia tempor volutpat irure torquent! Voluptas inventore!
-  </p>
-</div>
-<hr class="spacer {$modifiers}">
-<div class="grid-6 box__padded box--white">
-  <p>
-    Repellat porro repudiandae nam, officia elit sodales lorem! Molestias minima! Imperdiet maiores class lectus quae lacus, amet varius doloremque interdum.
-  </p>
-</div>
+Markup: spacer.hbs
 
+.spacer--one - Spacer with 1em of space.
 .spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+.spacer--three - Spacer with 3em of space.
 .spacer--four - Spacer with 4em of space.
+.spacer--five - Spacer with 5em of space.
 .spacer--six - Spacer with 6em of space.
 
-Style guide: 3.6
+Style guide: layout.spacer
 */
 .spacer {
   clear: both;
@@ -5221,8 +5213,24 @@ Style guide: 3.6
   border: 0;
 }
 
+.spacer.spacer--one {
+  height: 1em;
+}
+
+.spacer.spacer--two {
+  height: 2em;
+}
+
+.spacer.spacer--three {
+  height: 3em;
+}
+
 .spacer.spacer--four {
   height: 4em;
+}
+
+.spacer.spacer--five {
+  height: 5em;
 }
 
 .spacer.spacer--six {
@@ -5438,6 +5446,14 @@ Style guide: interactive.tabs
 
 .tabs__tabs .tabs__tab-link.active {
   font-weight: bold;
+}
+
+.box--data-sources .tabs__tab-link {
+  color: #a3b9cb;
+}
+
+.box--data-sources .tabs__tab-link.active {
+  color: #fff;
 }
 
 .tabs__tab-content {

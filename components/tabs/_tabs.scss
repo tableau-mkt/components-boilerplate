@@ -22,6 +22,14 @@ Style guide: interactive.tabs
   }
 }
 
+.box--data-sources .tabs__tab-link {
+  color: $text-data-sources;
+
+  &.active {
+    color: $text-negative;
+  }
+}
+
 .tabs__tab-content {
   display: none;
   @extend %clearfix;
