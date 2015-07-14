@@ -3,9 +3,11 @@
     <h5 class="subnav__title heading--label">{{ title }}</h5>
 
     {{# anchors}}
-      <ul class="subnav__links">
-        {{> link-list}}
-      </ul>
+      <div class="subnav__links">
+        <div class="subnav__links__wrapper">
+          {{> link-list}}
+        </div>
+      </div>
     {{/anchors}}
 
     {{# cta}}

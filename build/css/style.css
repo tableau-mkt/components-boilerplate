@@ -5338,22 +5338,51 @@ Style guide: navigation.subnav
 }
 
 @media (max-width: 639px) {
+  .subnav {
+    padding: 0;
+  }
   .subnav .subnav__title,
   .subnav .subnav__links,
   .subnav .subnav__cta {
     float: none;
   }
   .subnav .subnav__links {
+    position: relative;
     margin: 0;
     border-top: 1px solid #787878;
   }
-  .subnav .subnav__links li {
+  .subnav .subnav__links:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 44px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: -webkit-linear-gradient(right, #464646, transparent);
+    background-image: linear-gradient(to left, #464646, transparent);
+  }
+  .subnav .subnav__links .subnav__links__wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0.25em 0;
+  }
+  .subnav .subnav__links .subnav__links__wrapper ul.link-list {
+    white-space: nowrap;
+  }
+  .subnav .subnav__links .subnav__links__wrapper li {
     padding: 0.5em 1em 0.5em 0;
   }
   .subnav .subnav__cta {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 1em;
+  }
+  .subnav .subnav__cta .cta {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 

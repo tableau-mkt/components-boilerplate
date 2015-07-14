@@ -72,29 +72,58 @@ Style guide: navigation.subnav
   }
 
   @include breakpoint($mobile-only) {
+    padding: 0;
+
     .subnav__title,
     .subnav__links,
     .subnav__cta {
       float: none;
     }
 
+
     .subnav__links {
+      position: relative;
       margin: 0;
       border-top: 1px solid $text-medium-body;
 
-      li {
-        padding: .5em 1em .5em 0;
-        
-        a {
-          
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 80px;
+        height: 44px;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        pointer-events: none;
+        background-image: linear-gradient(to left, $bg-dark-gray-1, transparent);
+      }
+
+      .subnav__links__wrapper {
+        width: 100%;
+        overflow-x: auto;
+        padding: 0.25em 0;
+
+        ul.link-list {
+          white-space: nowrap;
+        }
+
+        li {
+          padding: .5em 1em .5em 0;
         }
       }
+
     }
 
     .subnav__cta {
       position: absolute;
-      top: 10px;
+      top: 5px;
       right: 1em;
+
+      .cta {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
     }
   }
 }
