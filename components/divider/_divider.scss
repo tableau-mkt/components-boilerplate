@@ -64,40 +64,55 @@ Weight: 10
 Style guide: layout.divider-vertical
 */
 .vertical-divider {
-  @include breakpoint($tablet-min) {
+  border-left: 1px solid $accent-dividers;
+
+  &.vertical-divider--dashed {
+    border-left-style: dotted;
+  } 
+  &.vertical-divider--right {
+    border-left: 0;
+    border-right: 1px solid $accent-dividers;
+    padding-left: inherit;
+    
+    &.vertical-divider--dashed {
+      border-right-style: dotted;
+    } 
+  }
+
+  p:first-child,
+  h2:first-child,
+  h3:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &.vertical-divider--dark {
+    border-color: $bg-dark-gray-1;
+  }
+
+  // @TODO make this work. Example in ecosystem section of Products Family
+  &.vertical-divider--or {
+    
+  }
+
+  @include breakpoint ($tablet-min) {
     min-height: 50px;
-    border-left: 1px solid $accent-dividers;
     padding-left: 2em;
 
-    &.vertical-divider--dashed {
-      border-left-style: dotted;
-    } 
     &.vertical-divider--right {
-      border-left: 0;
-      border-right: 1px solid $accent-dividers;
-
-      &.vertical-divider--dashed {
-        border-right-style: dotted;
-      } 
+      padding-right: 2em;
     }
+  }
 
-    p:first-child,
-    h2:first-child,
-    h3:first-child {
-      margin-top: 0;
-    }
+  @include breakpoint ($mobile-only) {
+    border: 0;
 
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    &.vertical-divider--dark {
-      border-color: $bg-dark-gray-1;
-    }
-
-    // @TODO make this work. Example in ecosystem section of Products Family
-    &.vertical-divider--or {
-      
+    &.vertical-divider--mobile {
+      border-left: 1px solid $accent-dividers;
+      padding-left: 2em;
     }
   }
 }

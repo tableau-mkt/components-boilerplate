@@ -1,0 +1,41 @@
+/* 
+Shameful hacks that should be fixed
+*/
+
+@include breakpoint($mobile-only) {
+  .shame__additional-features {
+    .grid--1 {
+      float: left;
+    }
+
+    .grid--5 {
+      margin-left: 4em;
+    }
+  }
+}
+
+@include breakpoint($tablet-min) {
+  .shame__image-left {
+    float: left;
+    width: 80%;
+    margin-right: 5%;
+    margin-left: -10%;
+  }
+  .shame__image-right {
+    float: right;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: -10%;
+    text-align: right;
+  }
+
+  .shame__text-right {
+    float: right;
+    width: 25%;
+  }
+
+  .shame__text-left {
+    float: left;
+    width: 25%;
+  }
+}

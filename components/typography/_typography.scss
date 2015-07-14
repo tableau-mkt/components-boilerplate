@@ -301,11 +301,11 @@ Styleguide typography.context-headings
   }
 
   @include breakpoint($tablet-only) {
-    font-size: em(16px);
+    font-size: em(20px);
   }
 
   @include breakpoint($mobile-only) {
-    font-size: em(15px);
+    font-size: em(18px);
   }
 }
 

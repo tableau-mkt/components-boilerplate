@@ -1034,6 +1034,9 @@ Weight: 40
 
 Style guide layout.section
 */
+  /* 
+Shameful hacks that should be fixed
+*/
   /*
 Sidebar Nav
 
@@ -2708,32 +2711,55 @@ body.kss .kss-example-preview .divider.divider--dark.divider--gradient {
   background: linear-gradient(to right, transparent, #464646, transparent);
 }
 
+body.kss .kss-example-preview .vertical-divider {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--dashed {
+  border-left-style: dotted;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
+  border-left: 0;
+  border-right: 1px solid #dedede;
+  padding-left: inherit;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--right.vertical-divider--dashed {
+  border-right-style: dotted;
+}
+
+body.kss .kss-example-preview .vertical-divider p:first-child,
+body.kss .kss-example-preview .vertical-divider h2:first-child,
+body.kss .kss-example-preview .vertical-divider .heading--medium:first-child, body.kss .kss-example-preview .vertical-divider h3:first-child, body.kss .kss-example-preview .vertical-divider .heading--small:first-child {
+  margin-top: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider p:last-child {
+  margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--dark {
+  border-color: #464646;
+}
+
 @media (min-width: 640px) {
   body.kss .kss-example-preview .vertical-divider {
     min-height: 50px;
-    border-left: 1px solid #dedede;
     padding-left: 2em;
   }
-  body.kss .kss-example-preview .vertical-divider.vertical-divider--dashed {
-    border-left-style: dotted;
-  }
   body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
-    border-left: 0;
-    border-right: 1px solid #dedede;
+    padding-right: 2em;
   }
-  body.kss .kss-example-preview .vertical-divider.vertical-divider--right.vertical-divider--dashed {
-    border-right-style: dotted;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .vertical-divider {
+    border: 0;
   }
-  body.kss .kss-example-preview .vertical-divider p:first-child,
-  body.kss .kss-example-preview .vertical-divider h2:first-child,
-  body.kss .kss-example-preview .vertical-divider .heading--medium:first-child, body.kss .kss-example-preview .vertical-divider h3:first-child, body.kss .kss-example-preview .vertical-divider .heading--small:first-child {
-    margin-top: 0;
-  }
-  body.kss .kss-example-preview .vertical-divider p:last-child {
-    margin-bottom: 0;
-  }
-  body.kss .kss-example-preview .vertical-divider.vertical-divider--dark {
-    border-color: #464646;
+  body.kss .kss-example-preview .vertical-divider.vertical-divider--mobile {
+    border-left: 1px solid #dedede;
+    padding-left: 2em;
   }
 }
 
@@ -2865,13 +2891,13 @@ body.kss .kss-example-preview .global-footer .global-footer__menu {
 
 body.kss .kss-example-preview .global-footer .global-footer__first {
   float: left;
-  width: 55%;
+  width: 60%;
   padding-top: 22px;
 }
 
 body.kss .kss-example-preview .global-footer .global-footer__second {
   float: right;
-  width: 45%;
+  width: 40%;
   text-align: right;
 }
 
@@ -5435,6 +5461,39 @@ body.kss .kss-example-preview .section.section--padding-bottom-none {
   padding-bottom: 0;
 }
 
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .shame__additional-features .grid--1 {
+    float: left;
+  }
+  body.kss .kss-example-preview .shame__additional-features .grid--5 {
+    margin-left: 4em;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .shame__image-left {
+    float: left;
+    width: 80%;
+    margin-right: 5%;
+    margin-left: -10%;
+  }
+  body.kss .kss-example-preview .shame__image-right {
+    float: right;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: -10%;
+    text-align: right;
+  }
+  body.kss .kss-example-preview .shame__text-right {
+    float: right;
+    width: 25%;
+  }
+  body.kss .kss-example-preview .shame__text-left {
+    float: left;
+    width: 25%;
+  }
+}
+
 body.kss .kss-example-preview .sidebar--nav ul {
   margin: 0;
 }
@@ -5606,7 +5665,7 @@ body.kss .kss-example-preview .subnav .subnav__links li.active a {
 
 @media (max-width: 639px) {
   body.kss .kss-example-preview .subnav {
-    padding: 0;
+    padding: 1px 0 0;
   }
   body.kss .kss-example-preview .subnav .subnav__title,
   body.kss .kss-example-preview .subnav .subnav__links,
@@ -5623,7 +5682,7 @@ body.kss .kss-example-preview .subnav .subnav__links li.active a {
     display: block;
     position: absolute;
     width: 80px;
-    height: 44px;
+    height: 40px;
     top: 0;
     right: 0;
     z-index: 1;
@@ -6054,13 +6113,13 @@ body.kss .kss-example-preview .heading--x-small a {
 
 @media (min-width: 640px) and (max-width: 960px) {
   body.kss .kss-example-preview .heading--x-small {
-    font-size: 1.1428571429em;
+    font-size: 1.4285714286em;
   }
 }
 
 @media (max-width: 639px) {
   body.kss .kss-example-preview .heading--x-small {
-    font-size: 1.0714285714em;
+    font-size: 1.2857142857em;
   }
 }
 

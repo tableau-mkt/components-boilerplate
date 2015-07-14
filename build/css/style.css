@@ -2000,33 +2000,56 @@ Weight: 10
 
 Style guide: layout.divider-vertical
 */
+.vertical-divider {
+  border-left: 1px solid #dedede;
+}
+
+.vertical-divider.vertical-divider--dashed {
+  border-left-style: dotted;
+}
+
+.vertical-divider.vertical-divider--right {
+  border-left: 0;
+  border-right: 1px solid #dedede;
+  padding-left: inherit;
+}
+
+.vertical-divider.vertical-divider--right.vertical-divider--dashed {
+  border-right-style: dotted;
+}
+
+.vertical-divider p:first-child,
+.vertical-divider h2:first-child,
+.vertical-divider .heading--medium:first-child,
+.vertical-divider h3:first-child, .vertical-divider .heading--small:first-child {
+  margin-top: 0;
+}
+
+.vertical-divider p:last-child {
+  margin-bottom: 0;
+}
+
+.vertical-divider.vertical-divider--dark {
+  border-color: #464646;
+}
+
 @media (min-width: 640px) {
   .vertical-divider {
     min-height: 50px;
-    border-left: 1px solid #dedede;
     padding-left: 2em;
   }
-  .vertical-divider.vertical-divider--dashed {
-    border-left-style: dotted;
-  }
   .vertical-divider.vertical-divider--right {
-    border-left: 0;
-    border-right: 1px solid #dedede;
+    padding-right: 2em;
   }
-  .vertical-divider.vertical-divider--right.vertical-divider--dashed {
-    border-right-style: dotted;
+}
+
+@media (max-width: 639px) {
+  .vertical-divider {
+    border: 0;
   }
-  .vertical-divider p:first-child,
-  .vertical-divider h2:first-child,
-  .vertical-divider .heading--medium:first-child,
-  .vertical-divider h3:first-child, .vertical-divider .heading--small:first-child {
-    margin-top: 0;
-  }
-  .vertical-divider p:last-child {
-    margin-bottom: 0;
-  }
-  .vertical-divider.vertical-divider--dark {
-    border-color: #464646;
+  .vertical-divider.vertical-divider--mobile {
+    border-left: 1px solid #dedede;
+    padding-left: 2em;
   }
 }
 
@@ -2249,13 +2272,13 @@ Style Guide: navigation.footer
 
 .global-footer .global-footer__first {
   float: left;
-  width: 55%;
+  width: 60%;
   padding-top: 22px;
 }
 
 .global-footer .global-footer__second {
   float: right;
-  width: 45%;
+  width: 40%;
   text-align: right;
 }
 
@@ -5109,6 +5132,42 @@ Style guide layout.section
   padding-bottom: 0;
 }
 
+/* 
+Shameful hacks that should be fixed
+*/
+@media (max-width: 639px) {
+  .shame__additional-features .grid--1 {
+    float: left;
+  }
+  .shame__additional-features .grid--5 {
+    margin-left: 4em;
+  }
+}
+
+@media (min-width: 640px) {
+  .shame__image-left {
+    float: left;
+    width: 80%;
+    margin-right: 5%;
+    margin-left: -10%;
+  }
+  .shame__image-right {
+    float: right;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: -10%;
+    text-align: right;
+  }
+  .shame__text-right {
+    float: right;
+    width: 25%;
+  }
+  .shame__text-left {
+    float: left;
+    width: 25%;
+  }
+}
+
 /*
 Sidebar Nav
 
@@ -5339,7 +5398,7 @@ Style guide: navigation.subnav
 
 @media (max-width: 639px) {
   .subnav {
-    padding: 0;
+    padding: 1px 0 0;
   }
   .subnav .subnav__title,
   .subnav .subnav__links,
@@ -5356,7 +5415,7 @@ Style guide: navigation.subnav
     display: block;
     position: absolute;
     width: 80px;
-    height: 44px;
+    height: 40px;
     top: 0;
     right: 0;
     z-index: 1;
@@ -5966,13 +6025,13 @@ Styleguide typography.context-headings
 
 @media (min-width: 640px) and (max-width: 960px) {
   .heading--x-small {
-    font-size: 1.1428571429em;
+    font-size: 1.4285714286em;
   }
 }
 
 @media (max-width: 639px) {
   .heading--x-small {
-    font-size: 1.0714285714em;
+    font-size: 1.2857142857em;
   }
 }
 

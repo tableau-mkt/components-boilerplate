@@ -72,7 +72,7 @@ Style guide: navigation.subnav
   }
 
   @include breakpoint($mobile-only) {
-    padding: 0;
+    padding: 1px 0 0;
 
     .subnav__title,
     .subnav__links,
@@ -91,7 +91,7 @@ Style guide: navigation.subnav
         display: block;
         position: absolute;
         width: 80px;
-        height: 44px;
+        height: 40px;
         top: 0;
         right: 0;
         z-index: 1;
