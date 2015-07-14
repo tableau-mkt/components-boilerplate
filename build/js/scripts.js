@@ -37,6 +37,17 @@ function smoothScrollTop($element, duration, offset, onlyUp) {
 }
 
 
+/*
+A re-implementation of jQuery's slideDown() and slideUp() that animates the
+height of an element without requiring the use of display: none;
+
+Helpful when needing to hide a video player while maintaining control via an
+API.
+
+The element must have "overflow: hidden;" set in CSS for this to work properly.
+In order to have the element hidden by default, you mist also set "height: 0;"
+in CSS as well.
+*/
 
 (function ( $ ) {
   $.fn.slideHeight = function(direction, options) {
@@ -72,6 +83,7 @@ function smoothScrollTop($element, duration, offset, onlyUp) {
     return this;
   };
 }( jQuery ));
+
 ;
 /**
  * Custom Accordion implementation.
@@ -841,20 +853,34 @@ function dataSourcesSearch() {
      * Allows making an element sticky on the page with just a 'sticky' class.
      */
     $('.sticky').each(function(i) {
-      var sticky = new Waypoint.Sticky({
-        element: $(this)[0]
-      });
+      stickIt(this);
     });
 
-    if (matchMedia('(max-width: 960px)').matches) {
-      $('.mobile-sticky').each(function(i) {
-        var sticky = new Waypoint.Sticky({
-          element: $(this)[0]
-        });
+    if (matchMedia('(min-width: 961px)').matches) {
+      $('.sticky--desktop').each(function(i) {
+        stickIt(this);
+      });
+    }
+
+    if (matchMedia('(max-width: 960px) and (min-width: 640px)').matches) {
+      $('.sticky--tablet').each(function(i) {
+        stickIt(this);
+      });
+    }
+
+    if (matchMedia('(max-width: 639px)').matches) {
+      $('.sticky--mobile').each(function(i) {
+        stickIt(this);
       });
     }
 
   });
+
+  function stickIt(el) {
+    var sticky = new Waypoint.Sticky({
+      element: el
+    });
+  }
 })(jQuery);
 ;
 /**

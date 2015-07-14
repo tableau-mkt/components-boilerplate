@@ -5331,6 +5331,33 @@ Style guide: 6.2
   width: 100%;
 }
 
+@media (min-width: 961px) {
+  .sticky--desktop.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .sticky--tablet.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .sticky--mobile.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
 /*
 Subnavigation
 
@@ -5427,7 +5454,14 @@ Style guide: navigation.subnav
   .subnav .subnav__links {
     position: relative;
     margin: 0;
+    box-sizing: border-box;
     border-top: 1px solid #787878;
+  }
+  .subnav .subnav__links.stuck {
+    position: fixed;
+    left: 0;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   .subnav .subnav__links:before {
     content: '';
@@ -5455,6 +5489,7 @@ Style guide: navigation.subnav
   }
   .subnav .subnav__cta {
     position: absolute;
+    opacity: 1;
     top: 5px;
     right: 1em;
   }

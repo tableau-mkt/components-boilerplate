@@ -24,3 +24,30 @@ Style guide: 6.2
   top: 0;
   width: 100%;
 }
+
+@include breakpoint($desktop-only) {
+  .sticky--desktop.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;   
+  }
+}
+
+@include breakpoint($tablet-only) {
+  .sticky--tablet.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;   
+  }
+}
+
+@include breakpoint($mobile-only) {
+  .sticky--mobile.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;   
+  }
+}
