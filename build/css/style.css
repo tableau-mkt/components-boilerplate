@@ -222,6 +222,10 @@ most common proportions for video players.
   line-height: 0;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .hide {
   display: none;
 }
@@ -374,6 +378,10 @@ most common proportions for video players.
 
 .line-height-zero {
   line-height: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .hide {
@@ -4230,7 +4238,7 @@ Style Guide: icons.icons
   height: 200px;
   display: inline-block;
   font-size: 7.5em;
-  background: #fafafa;
+  background: #ededed;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -4997,7 +5005,8 @@ Style guide: interactive.reveal
 */
 .reveal__content {
   position: relative;
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
 
 .reveal__content video {
@@ -5396,6 +5405,16 @@ Style guide: navigation.subnav
   color: #fff;
 }
 
+@media (max-width: 960px) {
+  .subnav .subnav__links {
+    margin: 0.8em 0 0 1em;
+    padding: 0;
+  }
+  .subnav .subnav__links li {
+    padding: 0 6px;
+  }
+}
+
 @media (max-width: 639px) {
   .subnav {
     padding: 1px 0 0;
@@ -5420,8 +5439,8 @@ Style guide: navigation.subnav
     right: 0;
     z-index: 1;
     pointer-events: none;
-    background-image: -webkit-linear-gradient(right, #464646, transparent);
-    background-image: linear-gradient(to left, #464646, transparent);
+    background-image: -webkit-linear-gradient(left, rgba(70, 70, 70, 0), #464646);
+    background-image: linear-gradient(to right, rgba(70, 70, 70, 0), #464646);
   }
   .subnav .subnav__links .subnav__links__wrapper {
     width: 100%;

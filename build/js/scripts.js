@@ -36,6 +36,42 @@ function smoothScrollTop($element, duration, offset, onlyUp) {
   }
 }
 
+
+
+(function ( $ ) {
+  $.fn.slideHeight = function(direction, options) {
+
+    var $el = $(this),
+        options = options || {duration: 400, easing: "swing"};
+
+    if (direction === "down") {
+      var $elClone = $el.clone().show().css({"height":"auto"}).appendTo($el.parent()),
+          elHeight = $elClone.outerHeight(true);
+
+      // Removing clone needed for calculating height.
+      $elClone.remove();
+
+      $el.animate({
+          height: elHeight
+        }, 
+        options.duration,
+        options.easing,
+        function() {
+          // Reset the height to auto to ensure the height remains accurate on viewport resizing
+          $el.css('height', 'auto');
+        }
+      );
+    } 
+
+    if (direction === "up") {
+      $el.animate({
+        height: 0
+      }, options);
+    }
+
+    return this;
+  };
+}( jQuery ));
 ;
 /**
  * Custom Accordion implementation.
@@ -675,12 +711,19 @@ function dataSourcesSearch() {
     if (hideText != "") {
       $trigger.text(hideText);
     }
-    $target.slideDown(customAnimation);
+    
+    // Video players break when we display none so using a custom reimplementation
+    // of slideDown. See helpers.js.
+    $target.slideHeight('down', customAnimation);
+    
     $curtain.slideUp(customAnimation);
 
     if (media == "video") {
+      var videoObj = $target.find('.reveal-video--brightcove')[0],
+          player = videojs(videoObj);
+
       setTimeout(function() {
-        $target.find('video')[0].play();
+        player.play();
       }, customAnimation.duration/2);
     }
 
@@ -698,11 +741,14 @@ function dataSourcesSearch() {
         media = data.revealMedia;
 
     $(trigger).data('revealState', 'closed').text(showText);
-    $target.slideUp(animation);
+    
+    $target.slideHeight('up', animation);
+    
     $curtain.slideDown(animation);
 
     if (media == "video") {
-      $target.find('video')[0].pause();
+      var player = videojs($target.find('.reveal-video--brightcove')[0]);
+      player.pause();
     }
   }
 

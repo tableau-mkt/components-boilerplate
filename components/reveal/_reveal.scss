@@ -13,7 +13,8 @@ Style guide: interactive.reveal
 */
 .reveal__content {
   position: relative;
-  display: none;
+  height: 0;
+  overflow: hidden;
 
   video {
     width: 100%;

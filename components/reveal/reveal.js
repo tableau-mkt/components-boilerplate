@@ -51,12 +51,19 @@
     if (hideText != "") {
       $trigger.text(hideText);
     }
-    $target.slideDown(customAnimation);
+    
+    // Video players break when we display none so using a custom reimplementation
+    // of slideDown. See helpers.js.
+    $target.slideHeight('down', customAnimation);
+    
     $curtain.slideUp(customAnimation);
 
     if (media == "video") {
+      var videoObj = $target.find('.reveal-video--brightcove')[0],
+          player = videojs(videoObj);
+
       setTimeout(function() {
-        $target.find('video')[0].play();
+        player.play();
       }, customAnimation.duration/2);
     }
 
@@ -74,11 +81,14 @@
         media = data.revealMedia;
 
     $(trigger).data('revealState', 'closed').text(showText);
-    $target.slideUp(animation);
+    
+    $target.slideHeight('up', animation);
+    
     $curtain.slideDown(animation);
 
     if (media == "video") {
-      $target.find('video')[0].pause();
+      var player = videojs($target.find('.reveal-video--brightcove')[0]);
+      player.pause();
     }
   }
 

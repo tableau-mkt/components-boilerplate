@@ -71,6 +71,17 @@ Style guide: navigation.subnav
     }
   }
 
+  @include breakpoint($tablet-max) {
+    .subnav__links {
+      margin: 0.8em 0 0 1em;
+      padding: 0;
+      
+      li {
+        padding: 0 6px;
+      }
+    }
+  }
+
   @include breakpoint($mobile-only) {
     padding: 1px 0 0;
 
@@ -96,7 +107,7 @@ Style guide: navigation.subnav
         right: 0;
         z-index: 1;
         pointer-events: none;
-        background-image: linear-gradient(to left, $bg-dark-gray-1, transparent);
+        background-image: linear-gradient(to right, rgba(70, 70, 70, 0), $bg-dark-gray-1);
       }
 
       .subnav__links__wrapper {

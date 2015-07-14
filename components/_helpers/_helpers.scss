@@ -67,6 +67,11 @@ most common proportions for video players.
   line-height: 0;
 }
 
+// Set the overflow of an element to hidden
+.overflow-hidden {
+  overflow: hidden;
+}
+
 // Remove default list style and spacing
 .plain-list {
   @extend %plain-list;
