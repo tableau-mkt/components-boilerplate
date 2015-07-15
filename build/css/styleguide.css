@@ -1037,6 +1037,9 @@ Style guide layout.section
   /* 
 Shameful hacks that should be fixed
 */
+  /* hack for Desktop additional features on mobile */
+  /* Used on Desktop Product page */
+  /* Used on Desktop Pricing seciton */
   /*
 Sidebar Nav
 
@@ -5479,6 +5482,10 @@ body.kss .kss-example-preview .section.section--padding-bottom-none {
   }
 }
 
+body.kss .kss-example-preview .shame__additional-features:nth-of-type(odd) {
+  clear: left;
+}
+
 @media (min-width: 640px) {
   body.kss .kss-example-preview .shame__image-left {
     float: left;
@@ -5501,6 +5508,11 @@ body.kss .kss-example-preview .section.section--padding-bottom-none {
     float: left;
     width: 25%;
   }
+}
+
+body.kss .kss-example-preview .shame__links a {
+  color: #333;
+  text-decoration: underline;
 }
 
 body.kss .kss-example-preview .sidebar--nav ul {

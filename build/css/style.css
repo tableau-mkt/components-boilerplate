@@ -5144,6 +5144,7 @@ Style guide layout.section
 /* 
 Shameful hacks that should be fixed
 */
+/* hack for Desktop additional features on mobile */
 @media (max-width: 639px) {
   .shame__additional-features .grid--1 {
     float: left;
@@ -5153,6 +5154,11 @@ Shameful hacks that should be fixed
   }
 }
 
+.shame__additional-features:nth-of-type(odd) {
+  clear: left;
+}
+
+/* Used on Desktop Product page */
 @media (min-width: 640px) {
   .shame__image-left {
     float: left;
@@ -5175,6 +5181,12 @@ Shameful hacks that should be fixed
     float: left;
     width: 25%;
   }
+}
+
+/* Used on Desktop Pricing seciton */
+.shame__links a {
+  color: #333;
+  text-decoration: underline;
 }
 
 /*
