@@ -1040,6 +1040,7 @@ Shameful hacks that should be fixed
   /* hack for Desktop additional features on mobile */
   /* Used on Desktop Product page */
   /* Used on Desktop Pricing seciton */
+  /* fix for slideshow captions on Desktop. Used in viz-slideshow component */
   /*
 Sidebar Nav
 
@@ -5513,6 +5514,10 @@ body.kss .kss-example-preview .shame__additional-features:nth-of-type(odd) {
 body.kss .kss-example-preview .shame__links a {
   color: #333;
   text-decoration: underline;
+}
+
+body.kss .kss-example-preview .shame__margin-top {
+  margin-top: 1em;
 }
 
 body.kss .kss-example-preview .sidebar--nav ul {

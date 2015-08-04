@@ -52,3 +52,9 @@ Shameful hacks that should be fixed
   color: $text-dark-body;
   text-decoration: underline;
 }
+
+
+/* fix for slideshow captions on Desktop. Used in viz-slideshow component */
+.shame__margin-top {
+  margin-top: 1em;
+}
