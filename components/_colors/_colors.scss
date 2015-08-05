@@ -10,7 +10,12 @@ Style guide: colors
 /*
 Text Colors
 
-Colors used for typography. *Coming Soon*
+Colors used for typography.
+
+Markup: colors-text.hbs
+
+Nocode: 
+true
 
 Weight: 1
 
@@ -34,16 +39,44 @@ $text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
 
 
 /*
-Button Colors
+Background Colors
 
-Colors used for buttons. *Coming Soon*
+Colors used for backgrounds.
+
+Markup: colors-background.hbs
+
+Nocode: true
 
 Weight: 2
+
+Style guide: colors.background
+*/
+
+$bg-white: #fff;              // White BG - rgb(255, 255, 255)
+$bg-light-gray-1: #fafafa;    // Light Gray 1 - rgb(250, 250, 250)
+$bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
+$bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
+$bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
+$bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
+$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
+$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
+
+
+/*
+Button Colors
+
+Colors used for buttons.
+
+Markup: colors-buttons.hbs
+
+Nocode: true
+
+Weight: 3
 
 Style guide: colors.buttons
 */
 
-$button-orange: #e8762c;        // Button Orange - rgb(232,118, 44)
+$button-orange: #e8762c;        // Button Orange - rgb(232, 118, 44)
 $button-orange-hover: #ea8442;  // Button Orange - rgb(234, 132, 66)
 $button-final: #c92434;         // Final Progress - rgb(201, 36, 52)
 $button-desktop: #324e7a;       // Desktop Button - rgb(50, 78, 122)
@@ -61,47 +94,15 @@ $button-mobile-hover: #DB8E6A;  // Mobile Button Hover - rgb(219, 142, 106)
 
 
 /*
-Accent Colors
+Product Colors
 
-Colors used for accents. *Coming Soon*
+Specific brand colors for Tableau products.
 
-Weight: 3
+Markup: colors-product.hbs
 
-Style guide: colors.accent
-*/
-
-$accent-dividers: #dedede;    // Dividers - rgb(222, 222, 222)
-$gradient-orange-red: #ff9824, #c71f35;
-$nav-drawer-gray-1: #f0f0f0;
-$nav-drawer-gray-2: #ddd;
-
-
-/*
-Background Colors
-
-Colors used for backgrounds. *Coming Soon*
+Nocode: true
 
 Weight: 4
-
-Style guide: colors.background
-*/
-
-$bg-white: #fff;              // White BG - rgb(255, 255, 255)
-$bg-light-gray-1: #fafafa;    // Light Gray 1 - rgb(250, 250, 250)
-$bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
-$bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
-$bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
-$bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
-$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
-$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
-
-
-/*
-Product colors
-
-Specific brand colors for Tableau products. *Coming Soon*
-
-Weight: 5
 
 Style guide: colors.product
 */
@@ -112,6 +113,26 @@ $product-online: #58a3b9;     // Online - rgb(88, 163, 185)
 $product-public: #324E7A;     // Public - rgb(37, 88, 133)
 $product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
 $product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
+
+
+/*
+Accent Colors
+
+Colors used for accents.
+
+Markup: colors-accent.hbs
+
+Nocode: true
+
+Weight: 5
+
+Style guide: colors.accent
+*/
+
+$accent-dividers: #dedede;              // Dividers - rgb(222, 222, 222)
+$gradient-orange-red: #ff9824, #c71f35; // Color Gradient
+$nav-drawer-gray-1: #f0f0f0;            // Gray for Nav Drawer - rgb(240, 240, 240)
+$nav-drawer-gray-2: #ddd;               // Gray 2 for Nav Drawer - rgb(221, 221, 221)
 
 
 /*

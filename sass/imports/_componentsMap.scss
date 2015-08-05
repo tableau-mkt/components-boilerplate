@@ -1,5 +1,6 @@
 /* generated with grunt-sass-globbing */
 
+@import "../../components/_colors/colors";
 @import "../../components/_helpers/base";
 @import "../../components/_helpers/helpers";
 @import "../../components/_helpers/placeholders";
@@ -11,7 +12,6 @@
 @import "../../components/_helpers/mixins/transform";
 @import "../../components/_helpers/mixins/transition";
 @import "../../components/_helpers/variables/breakpoints";
-@import "../../components/_helpers/variables/colors";
 @import "../../components/_helpers/variables/typography";
 @import "../../components/kss_sections";
 @import "../../components/buttons_links/cta/cta";

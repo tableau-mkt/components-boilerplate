@@ -1,0 +1,11 @@
+<div class="color-pallete">
+  {{#each colors}}
+    <div class="color-pallet__item clearfix">
+      <div class="color-pallet__item__swatch" style="background: {{ hex }}; width: 100px; height: 100px; float: left; margin-right: 2em;"></div>
+      <p class="color-pallet__item__description">{{ description }}</p>
+      <span class="color-pallet__item__hex"><code>{{ hex }}</code></span>
+      <span class="color-pallet__item__rgb"><code>{{ rgb }}</code></span>
+      <span class="color-pallet__item__name"><code>{{ name }}</code></span>
+    </div>
+  {{/each}}
+</div>

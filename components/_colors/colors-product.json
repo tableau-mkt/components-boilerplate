@@ -1,0 +1,35 @@
+{
+  "colors": [
+    {
+      "name": "$product-desktop",
+      "hex": "#23529c",
+      "rgb": "rgb(35, 82, 156)",
+      "description": "Desktop"
+    },{
+      "name": "$product-server",
+      "hex": "#7fa9bb",
+      "rgb": "rgb(127, 169, 187)",
+      "description": "Server"
+    },{
+      "name": "$product-online",
+      "hex": "#58a3b9",
+      "rgb": "rgb(88, 163, 185)",
+      "description": "Online"
+    },{
+      "name": "$product-public",
+      "hex": "#324E7A",
+      "rgb": "rgb(37, 88, 133)",
+      "description": "Public"
+    },{
+      "name": "$product-reader",
+      "hex": "#B28CCF",
+      "rgb": "rgb(178, 140, 207)",
+      "description": "Reader"
+    },{
+      "name": "$product-mobile",
+      "hex": "#DB8E6A",
+      "rgb": "rgb(219, 142, 106)",
+      "description": "Mobile"
+    }
+  ]
+}

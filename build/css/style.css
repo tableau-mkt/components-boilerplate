@@ -1,80 +1,5 @@
 @charset "UTF-8";
 /* generated with grunt-sass-globbing */
-/*
-Color Palette 
-
-The Tableau brand collor pallet
-
-Style guide: colors
-*/
-/*
-Text Colors
-
-Colors used for typography. *Coming Soon*
-
-Weight: 1
-
-Style guide: colors.text
-*/
-/*
-Button Colors
-
-Colors used for buttons. *Coming Soon*
-
-Weight: 2
-
-Style guide: colors.buttons
-*/
-/*
-Accent Colors
-
-Colors used for accents. *Coming Soon*
-
-Weight: 3
-
-Style guide: colors.accent
-*/
-/*
-Background Colors
-
-Colors used for backgrounds. *Coming Soon*
-
-Weight: 4
-
-Style guide: colors.background
-*/
-/*
-Product colors
-
-Specific brand colors for Tableau products. *Coming Soon*
-
-Weight: 5
-
-Style guide: colors.product
-*/
-/*
-Basic Colors
-
-Some basic colors
-
-#Style guide: colors.basic
-*/
-/* 
-Text colors mapping in form of:
-  modifier-name: $text-color
-*/
-/* 
-Button colors mapping in the form of:
-  modifier-name: ($base-color, $hover-color)
-*/
-/* 
-Background colors mapping in the form of:
-  mdifier-name: ($bg-color, $copy-color, $heading-color)
-*/
-/* 
-Product colors mapping in the form of:
-  mdifier-name: $color
-*/
 /* generated with grunt-sass-globbing */
 /*
 em($target)
@@ -306,6 +231,102 @@ most common proportions for video players.
  * used to prevent unintentional overrides.
  */
 /* generated with grunt-sass-globbing */
+/*
+Color Palette 
+
+The Tableau brand collor pallet
+
+Style guide: colors
+*/
+/*
+Text Colors
+
+Colors used for typography.
+
+Markup: colors-text.hbs
+
+Nocode: 
+true
+
+Weight: 1
+
+Style guide: colors.text
+*/
+/*
+Background Colors
+
+Colors used for backgrounds.
+
+Markup: colors-background.hbs
+
+Nocode: true
+
+Weight: 2
+
+Style guide: colors.background
+*/
+/*
+Button Colors
+
+Colors used for buttons.
+
+Markup: colors-buttons.hbs
+
+Nocode: true
+
+Weight: 3
+
+Style guide: colors.buttons
+*/
+/*
+Product Colors
+
+Specific brand colors for Tableau products.
+
+Markup: colors-product.hbs
+
+Nocode: true
+
+Weight: 4
+
+Style guide: colors.product
+*/
+/*
+Accent Colors
+
+Colors used for accents.
+
+Markup: colors-accent.hbs
+
+Nocode: true
+
+Weight: 5
+
+Style guide: colors.accent
+*/
+/*
+Basic Colors
+
+Some basic colors
+
+#Style guide: colors.basic
+*/
+/* 
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+/* 
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+/* 
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+/* 
+Product colors mapping in the form of:
+  mdifier-name: $color
+*/
 /* Base styles for general page setup */
 body {
   margin: 0;
@@ -532,81 +553,6 @@ Parameters:
 
 Returns:
   Vendor prefixed transition rules
-*/
-/*
-Color Palette 
-
-The Tableau brand collor pallet
-
-Style guide: colors
-*/
-/*
-Text Colors
-
-Colors used for typography. *Coming Soon*
-
-Weight: 1
-
-Style guide: colors.text
-*/
-/*
-Button Colors
-
-Colors used for buttons. *Coming Soon*
-
-Weight: 2
-
-Style guide: colors.buttons
-*/
-/*
-Accent Colors
-
-Colors used for accents. *Coming Soon*
-
-Weight: 3
-
-Style guide: colors.accent
-*/
-/*
-Background Colors
-
-Colors used for backgrounds. *Coming Soon*
-
-Weight: 4
-
-Style guide: colors.background
-*/
-/*
-Product colors
-
-Specific brand colors for Tableau products. *Coming Soon*
-
-Weight: 5
-
-Style guide: colors.product
-*/
-/*
-Basic Colors
-
-Some basic colors
-
-#Style guide: colors.basic
-*/
-/* 
-Text colors mapping in form of:
-  modifier-name: $text-color
-*/
-/* 
-Button colors mapping in the form of:
-  modifier-name: ($base-color, $hover-color)
-*/
-/* 
-Background colors mapping in the form of:
-  mdifier-name: ($bg-color, $copy-color, $heading-color)
-*/
-/* 
-Product colors mapping in the form of:
-  mdifier-name: $color
 */
 /*
 Typography

@@ -1,0 +1,75 @@
+{
+  "colors": [
+    {
+      "name": "$text-negative",
+      "hex": "#fff",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "Negative Text"
+    },{
+      "name": "$text-light-body",
+      "hex": "#bbb",
+      "rgb": "rgb(187, 187, 187)",
+      "description": "Negative/light Body"
+    },{
+      "name": "$text-medium-body",
+      "hex": "#787878",
+      "rgb": "rgb(120, 120, 120)",
+      "description": "Default Med. Body"
+    },{
+      "name": "$text-dark-body",
+      "hex": "#333",
+      "rgb": "rgb(51, 51, 51)",
+      "description": "Default Dark Body"
+    },{
+      "name": "$text-link",
+      "hex": "#eb912c",
+      "rgb": "rgb(235, 145, 44)",
+      "description": "Link Orange"
+    },{
+      "name": "$text-headlines",
+      "hex": "#000",
+      "rgb": "rgb(0, 0, 0)",
+      "description": "Headlines"
+    },{
+      "name": "$text-nav-items",
+      "hex": "#212535",
+      "rgb": "rgb(33, 37, 53)",
+      "description": "Nav Items"
+    },{
+      "name": "$text-data-sources",
+      "hex": "#a3b9cb",
+      "rgb": "rgb(163, 185, 203)",
+      "description": "Data Sources"
+    },{
+      "name": "$text-stories",
+      "hex": "#847094",
+      "rgb": "rgb(132, 112, 148)",
+      "description": "Stories"
+    },{
+      "name": "$text-learning",
+      "hex": "#6f99a5",
+      "rgb": "rgb(111, 153, 165)",
+      "description": "Learning"
+    },{
+      "name": "$text-highlight",
+      "hex": "#53bd92",
+      "rgb": "rgb(83, 189, 146)",
+      "description": "Highlight Text"
+    },{
+      "name": "$text-mission-1",
+      "hex": "#316cc8",
+      "rgb": "rgb(13, 129, 190)",
+      "description": "Mission"
+    },{
+      "name": "$text-mission-2",
+      "hex": "#7dcdf1",
+      "rgb": "rgb(125, 205, 241)",
+      "description": "Mission"
+    },{
+      "name": "$text-mission-3",
+      "hex": "#5facce",
+      "rgb": "rgb(95, 172, 206)",
+      "description": "Mission"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "colors": [
+    {
+      "name": "$bg-white",
+      "hex": "#fff",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "White BG"
+    },{
+      "name": "$bg-light-gray-1",
+      "hex": "#fafafa",
+      "rgb": "rgb(250, 250, 250)",
+      "description": "Light Gray 1"
+    },{
+      "name": "$bg-light-gray-2",
+      "hex": "#ebebeb",
+      "rgb": "rgb(235, 235, 235)",
+      "description": "Light Gray 2"
+    },{
+      "name": "$bg-dark-gray-1",
+      "hex": "#464646",
+      "rgb": "rgb(70, 70, 70)",
+      "description": "Dk Gray 1"
+    },{
+      "name": "$bg-dark-gray-2",
+      "hex": "#333",
+      "rgb": "rgb(51, 51, 51)",
+      "description": "Dk Gray 2"
+    },{
+      "name": "$bg-dark-gray-3",
+      "hex": "#1b1b1b",
+      "rgb": "rgb(27, 27, 27)",
+      "description": "Dk Gray 3"
+    },{
+      "name": "$bg-about-featured",
+      "hex": "#457387",
+      "rgb": "rgb(69, 115, 135)",
+      "description": "About/Feat"
+    },{
+      "name": "$bg-data-sources",
+      "hex": "#2e4c65",
+      "rgb": "rgb(46, 76, 101)",
+      "description": "Data Sources"
+    }
+  ]
+}

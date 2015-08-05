@@ -1,0 +1,20 @@
+{
+  "colors": [
+    {
+      "name": "$accent-dividers",
+      "hex": "#dedede",
+      "rgb": "rgb(222, 222, 222)",
+      "description": "Dividers"
+    },{
+      "name": "$nav-drawer-gray-1",
+      "hex": "#f0f0f0",
+      "rgb": "rgb(240, 240, 240)",
+      "description": "Gray for Nav Drawer"
+    },{
+      "name": "$nav-drawer-gray-2",
+      "hex": "#ddd",
+      "rgb": "rgb(221, 221, 221)",
+      "description": "Gray 2 for Nav Drawer"
+    }
+  ]
+}
