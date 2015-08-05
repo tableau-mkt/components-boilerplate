@@ -1,0 +1,48 @@
+/*
+Font Families
+
+All text on tableau.com is set in either Benton Sans or Merriweather. This 
+includes body copy as well as page and section headers.
+
+**BentonSans** is primarily used for section headers and titling in it’s Thin 
+case, but it is also used in it’s Book case in buttons and other scenarios. 
+Occasionally BentonSans Medium is used in article templates.
+
+**Merriweather** is used in it’s Light case mainly for body copy and in the 
+Stories and Articles sections.
+
+Markup: fonts.hbs
+
+Nodefault: true
+
+Weight: 1
+
+.text--benton-thin - Benton Sans Thin
+.text--benton-light - Benton Sans Light
+.text--benton-book - Benton Sans Book
+.text--benton-medium - Benton Sans Medium
+.text--merriweather-light - Merriweather Light
+
+Style guide: typography.fonts
+*/
+
+.text--benton-thin {
+  font-family: $text--benton-thin;
+  font-weight: 100;
+}
+
+.text--benton-light {
+  font-family: $text--benton-light;
+}
+
+.text--benton-book {
+  font-family: $text--benton-book;
+}
+
+.text--benton-medium {
+  font-family: $text--benton-medium;
+}
+
+.text--merriweather-light {
+  font-family: $text--merriweather-light;
+}

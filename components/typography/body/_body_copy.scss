@@ -1,0 +1,40 @@
+/*
+Body Copy
+
+Main body copy for longer chunks of content in the body of a page.
+
+Markup: body-copy.hbs
+
+Weight: 2
+
+.text--body-large - Large body copy (15px)
+.text--body-medium - Medium body copy (14px)
+.text--body-small - Small body copy (12px)
+
+Style guide: typography.body-copy
+ */
+
+$base-font-size: 14px;
+
+body,
+.kss-example-preview-wrapper,
+.text--body-large,
+.text--body-medium,
+.text--body-small {
+  font-family: $text--merriweather-light;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $base-font-size;
+  color: $text-dark-body;
+  line-height: 1.86;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text--body-large {
+  font-size: em(15px);
+}
+
+.text--body-small {
+  font-size: em(12px);
+  line-height: 1.66;
+}

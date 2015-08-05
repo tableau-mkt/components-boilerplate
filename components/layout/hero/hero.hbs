@@ -1,0 +1,43 @@
+<div class="hero {{ modifier_class }}">
+  {{# video }}
+    <div class="hero__video">
+      <video autoplay="" loop="">
+        <source src="{{ src }}" type="video/mp4">
+        <img src="{{ ../img.src }}">
+      </video>
+    </div>
+  {{/ video }}
+
+  {{# img }}
+    <div class="hero__background">
+      <div class="hero__background__inner" style="background-image: url({{ src }});">
+      </div>
+    </div>
+  {{/ img }}
+
+  {{# text }}
+    <div class="hero__content">
+      <div class="hero__content__inner content-container">
+        {{# sub_title }}
+          {{> heading }}
+        {{/ sub_title }}
+        
+        <div class="hero__content__headline clearfix">
+          {{# headline }}
+            {{> heading }}
+          {{/ headline }}
+        </div>
+        
+        <div class="hero__content__cta clearfix">
+          {{# cta }}
+            {{> cta }}
+          {{/ cta }}
+        </div>
+
+        {{# link }}
+          {{> link-formatted}}
+        {{/ link }}
+      </div>
+    </div>
+  {{/ text }}
+</div>

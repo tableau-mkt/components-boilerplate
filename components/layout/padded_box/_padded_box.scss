@@ -1,0 +1,33 @@
+/*
+Padded box
+
+Adds padding to a container element. The `.box--dark-gray-1` class is used to 
+differentiate the box from the background. You will usually want to use a padded
+box on a container with a background color.
+
+Markup: box_padded.hbs
+
+Weight: 1
+
+.padded-box--one - A box with 1em of padding
+.padded-box--two - A box with 2em of padding (Default)
+.padded-box--three - A box with 3em of padding
+.padded-box--four - A box with 4em of padding
+
+Style guide: layout.padded
+*/
+.padded-box {
+  padding: 2em;
+  
+  &.padded-box--one {
+    padding: 1em;
+  }
+
+  &.padded-box--three {
+    padding: 3em;
+  }
+
+  &.padded-box--four {
+    padding: 3em;
+  }
+}

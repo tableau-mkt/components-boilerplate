@@ -1,0 +1,40 @@
+<div class="teaser-list {{ modifier_class}}">
+  {{#each items}}
+  <div class="teaser-list__item grid--{{ width }}">
+    {{#if icon}}
+    <div class="teaser-list__icon"> 
+      <a href="{{ url }}">
+        <span class="icon--{{ icon }}"></span>
+      </a>
+    </div> 
+    {{/if}}
+    {{# thumbnail}}
+    <div class="teaser-list__thumbnail"> 
+      <a href="{{ ../url }}">
+        {{> thumbnail }}
+      </a>
+    </div>
+    {{/ thumbnail}}
+    <div class="teaser-list__info">
+      {{# title}}
+        {{> heading }}
+      {{/ title}}
+      {{#if description}}
+      <p class="teaser-list__description">
+        {{ description }} 
+      </p>
+      {{/if}}
+      {{#if tags}}
+        {{# tags}}
+          {{> tags-list}}
+        {{/ tags}}
+      {{/ if}}
+      {{# link}}
+      <p class="teaser-list__link">
+        {{> link-formatted}}
+      </p>
+      {{/ link}}
+    </div>
+  </div>
+  {{/each}}
+</div>

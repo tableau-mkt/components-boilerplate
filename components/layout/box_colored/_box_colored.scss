@@ -1,0 +1,56 @@
+/* 
+Colored Backgrounds
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for 
+legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
+just to make the examples look better.
+@TODO - Rename this component and do away with the 'box' base element. Rename to
+bg--{color-name} or something similar.
+
+Markup: box_colored.hbs
+
+Nodefault: true
+
+Weight: 2
+
+.box--white - White BG colored box - (#fff)
+.box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
+.box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
+.box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
+.box--dark-gray-2 - Dk Gray 2 colored box - (#333)
+.box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
+.box--about-featured - About/Feat colored box - (#457387)
+.box--data-sources - Data Sources colored box - (#2e4c65)
+.box--desktop - Desktop product colored box - (#23529c)
+.box--server - Server product colored box - (#7fa9bb)
+.box--online - Online product colored box - (#58a3b9)
+.box--public - Public product colored box - (#324E7A)
+.box--reader - Reader product colored box - (#B28CCF)
+.box--mobile - Mobile product colored box - (#DB8E6A)
+.box--nav-drawer-gray-1 - Global nav drawer primary colored box - (#f0f0f0)
+.box--nav-drawer-gray-2 - Global nav drawer secondary colored box - (#ddd)
+
+Style guide: layout.colored
+*/
+
+/* Create a class for each background color */
+@each $name, $colors in $background-colors {
+  .box--#{"" + $name} {
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
+
+    h1, .heading--h1,
+    h2, .heading--h2,
+    h3, .heading--h3,
+    h4, .heading--h4,
+    h5, .heading--h5,
+    h6, .heading--h6 {
+      color: nth($colors, 3);
+
+      a {
+        color: nth($colors, 3);
+      }
+    }
+  }
+}
