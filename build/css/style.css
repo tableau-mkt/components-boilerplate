@@ -3736,6 +3736,79 @@ Style guide: layout.spacer
   height: 6em;
 }
 
+/*
+Card Teaser
+
+@todo Description
+
+Markup: card.hbs
+
+.card--wide - Double-wide version of a card.
+.card--quote - A highlighted card used for promoting an item with a quote.
+
+Style Guide: lists.card
+*/
+.card {
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+}
+
+.card .card__thumbnail {
+  border-radius: 2px;
+}
+
+.card .card__details {
+  padding: 0.7em 1em;
+}
+
+.card .card__label {
+  line-height: 1.4;
+}
+
+.card .card__title {
+  position: relative;
+  max-height: 4.8em;
+  overflow: hidden;
+  margin: 1em 0;
+  font-size: 1.43em;
+  line-height: 1.6;
+}
+
+.card .card__tags {
+  max-height: 1.86em;
+  overflow: hidden;
+}
+
+.card.card--wide .card__title {
+  max-height: 3.2em;
+  margin: 0.66em 0;
+  font-size: 2.14em;
+}
+
+.card.card--quote {
+  background: #2e4c65;
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .card.card--wide {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .card.card--row-end {
+    margin-right: 0;
+  }
+}
+
 /* 
 Link List
 
@@ -4728,7 +4801,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-.text--merriweather-light {
+.text--merriweather-light, .card .card__title {
   font-family: "Merriweather", serif;
 }
 

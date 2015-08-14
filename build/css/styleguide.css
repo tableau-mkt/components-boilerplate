@@ -819,6 +819,18 @@ Markup: spacer.hbs
 
 Style guide: layout.spacer
 */
+  /*
+Card Teaser
+
+@todo Description
+
+Markup: card.hbs
+
+.card--wide - Double-wide version of a card.
+.card--quote - A highlighted card used for promoting an item with a quote.
+
+Style Guide: lists.card
+*/
   /* 
 Link List
 
@@ -4208,6 +4220,67 @@ body.kss .kss-example-preview .spacer.spacer--six {
   height: 6em;
 }
 
+body.kss .kss-example-preview .card {
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+}
+
+body.kss .kss-example-preview .card .card__thumbnail {
+  border-radius: 2px;
+}
+
+body.kss .kss-example-preview .card .card__details {
+  padding: 0.7em 1em;
+}
+
+body.kss .kss-example-preview .card .card__label {
+  line-height: 1.4;
+}
+
+body.kss .kss-example-preview .card .card__title {
+  position: relative;
+  max-height: 4.8em;
+  overflow: hidden;
+  margin: 1em 0;
+  font-size: 1.43em;
+  line-height: 1.6;
+}
+
+body.kss .kss-example-preview .card .card__tags {
+  max-height: 1.86em;
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .card.card--wide .card__title {
+  max-height: 3.2em;
+  margin: 0.66em 0;
+  font-size: 2.14em;
+}
+
+body.kss .kss-example-preview .card.card--quote {
+  background: #2e4c65;
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .card {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  body.kss .kss-example-preview .card.card--wide {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  body.kss .kss-example-preview .card.card--row-end {
+    margin-right: 0;
+  }
+}
+
 body.kss .kss-example-preview .tags-list {
   margin: .5em 0;
 }
@@ -5058,7 +5131,7 @@ body.kss .kss-example-preview .text--benton-medium {
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--merriweather-light {
+body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview .card .card__title {
   font-family: "Merriweather", serif;
 }
 

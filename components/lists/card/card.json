@@ -1,0 +1,27 @@
+{
+  "url": "http://moviepilot.com/posts/2015/07/15/you-have-to-see-this-photo-of-a-buff-nicolas-cage-wearing-the-superman-suit-from-cancelled-film-3383750?lt_source=external,manual",
+  "type": null,
+  "thumbnail": {
+    "src": "http://www.placecage.com/300/300",
+    "alt": "Nic Cage"
+  },
+  "label": "Actor",
+  "title": "You Have to See This Photo of a Buff Nicolas Cage Wearing the Superman Suit from Cancelled Film",
+  "tags": {
+    "label": "Tags:",
+    "tags": [
+      {
+        "link": {
+          "text": "Ghost Rider",
+          "href": "#"
+        }
+      },
+      {
+        "link": {
+          "text": "Face Off",
+          "href": "#"
+        }
+      }
+    ]
+  }
+}
