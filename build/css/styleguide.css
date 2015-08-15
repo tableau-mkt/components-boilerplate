@@ -2008,6 +2008,7 @@ body.kss .kss-example-preview .thumbnail {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  max-width: 100%;
   line-height: 0;
 }
 
