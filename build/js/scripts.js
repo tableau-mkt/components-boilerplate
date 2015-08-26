@@ -85,6 +85,162 @@ in CSS as well.
 }( jQuery ));
 
 ;
+/** 
+ * Content Reveal utility
+ *
+ * Set a wrapper around content as a revealable region. Assign a "trigger" 
+ * element as the toggle to expand and collapse the content region.
+ *
+ * Options:
+ *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
+ *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
+ *   animation - Optional - [object] - animation settings for expanding/collapsing
+ */
+
+(function ( $ ) {
+  $.fn.contentReveal = function(options) {
+    // Default settings
+    var settings = $.extend({
+      contents: $(this),
+      animation: {
+        duration: 1000,
+        easing: "easeInOutQuart"
+      }
+    }, options);
+
+    if (settings.triggers) {
+      // Run setup
+      setup();
+
+      settings.triggers.click(function(e) {
+        var state = $(this).data('revealState');
+
+        if (state == 'closed') {
+          showContent(this);
+        } else if (state == 'open') {
+          hideContent(this);
+        }
+        e.preventDefault();
+      });
+
+      $('.reveal__close').click(function(e) {
+        $(this).parent('.reveal__content').data('revealTrigger').click();
+        e.preventDefault();
+      });
+
+      // Trigger auto-reveal
+      autoReveal();
+    }
+
+    // Show the target content
+    function showContent(trigger, customAnimation) {
+      var data = $(trigger).data(),
+          $trigger = $(trigger),
+          $target = $('#' + data.revealTarget),
+          $curtain = $('#' + data.revealCurtain),
+          hideText = data.revealHideText,
+          type = data.revealType,
+          media = data.revealMedia,
+          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+          customAnimation = customAnimation || settings.animation;
+
+      $trigger.data('revealState', 'open')
+      if (hideText != "") {
+        $trigger.text(hideText);
+      }
+      
+      // Video players break when we display none so using a custom reimplementation
+      // of slideDown. See helpers.js.
+      $target.slideHeight('down', customAnimation);
+      
+      $curtain.slideUp(customAnimation);
+
+      if (media == "video") {
+        var videoObj = $target.find('.reveal-video--brightcove')[0],
+            player = videojs(videoObj);
+
+        setTimeout(function() {
+          player.play();
+        }, customAnimation.duration/2);
+      }
+
+      if ($curtain.length) {
+        smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+      }
+    }
+
+    // Hide the target content
+    function hideContent(trigger) {
+      var data = $(trigger).data(),
+          $target = $('#' + data.revealTarget),
+          $curtain = $('#' + data.revealCurtain),
+          showText = data.revealShowText,
+          media = data.revealMedia;
+
+      $(trigger).data('revealState', 'closed').text(showText);
+      
+      $target.slideHeight('up', settings.animation);
+      
+      $curtain.slideDown(settings.animation);
+
+      if (media == "video") {
+        var player = videojs($target.find('.reveal-video--brightcove')[0]);
+        player.pause();
+      }
+    }
+
+    // Hand-full of setup tasks
+    function setup() {
+      // Add reveal-state data
+      settings.triggers.data('revealState', 'closed');
+      
+      settings.triggers.each(function(index, el) {
+        var $target = $('#' + $(this).data('revealTarget')),
+            showText = $(this).text();
+        
+        // Link content back to it's corresponding trigger
+        $target.data('revealTrigger', $(this));
+
+        // Save original trigger text
+        settings.triggers.data('revealShowText', showText);
+      });
+
+      // // Set initial margin on content if there is a curtain
+      // // @TODO this is for naimating the reveal as if the content is 
+      // // stationary and the elements above and below are revealing it. 
+      // // Currently, the content moves up as the curtain slides up.
+      // settings.contents.each(function(index, el) {
+      //   var data = $($(this).data('revealTrigger')).data(),
+      //       $curtain = $("#" + data.revealCurtain);
+
+      //   if ($curtain.length) {
+      //     $(this).css('margin-top', -$curtain.outerHeight(true));
+      //   }
+      // });
+
+      // Add a close icon to each content continer
+      settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+    }
+
+    function autoReveal() {
+      var hash = window.location.hash;
+
+      if (hash.length && settings.contents.is(hash)) {
+        var $trigger = $(hash).data('revealTrigger');
+
+        // Prevent scrolling to the anchor...
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 1);
+
+        showContent($trigger, {duration: 0});
+      }
+    }
+
+    return this;
+  }
+}( jQuery ));
+;
 /**
  * Custom Accordion implementation.
  */
@@ -355,6 +511,268 @@ function dataSourcesSearch() {
   });
 })(jQuery);
 ;
+(function($){
+  $(document).ready(function(){
+    var $heroSlideShow = $('.hero-slideshow');
+
+    // Initialize hero carousel
+    function init() {
+      if($heroSlideShow) {
+        $heroSlideShow.slick({
+          dots: true,
+          arrows: false,
+          speed: 650,
+          easing: "easeInOutQuart",
+          slide: '.hero-slideshow__slide',
+          responsive: [
+            {
+              breakpoint: 639,
+              settings: {
+                adaptiveHeight: true,
+              }
+            }
+          ]
+        });
+
+        slideShowNavigation();
+      }
+    }
+
+    function slideShowNavigation() {
+      var $slides = $heroSlideShow.find('.hero-slideshow__slide').not('.slick-cloned'),
+          count = $slides.length,
+          slidesID = [],
+          slideHoverText = [],
+          slideHoverClass = [],
+          $arrowLeft,
+          $arrowRight,
+          next,
+          prev,
+          arrowRightInverted,
+          arrowLeftInverted;
+
+      // Get slide navigation values from the dom
+      for(var k=0; k < count; k++) {
+        slidesID.push($($slides[k]).attr('id'));
+        slideHoverText.push($($slides[k]).data('title'));
+        slideHoverClass.push($($slides[k]).data('title-class'));
+      }
+
+      // Update slide navigation dom
+      for(var i=0; i < count; i++) {
+        $arrowLeft = $slides.eq(i).find('.hero-slideshow__arrow--left');
+        $arrowRight = $slides.eq(i).find('.hero-slideshow__arrow--right');
+        next = i+1;
+        prev = i-1;
+        arrowLeftInverted = '';
+        arrowRightInverted = '';
+
+        // Account for looping
+        if(prev === -1) {
+          prev = count -1;
+        }
+
+        if(next === count) {
+          next = 0;
+        }
+
+        if(slideHoverClass[prev].match('inverted')) {
+          arrowLeftInverted = 'inverted';
+        }
+
+        if(slideHoverClass[next].match('inverted')) {
+          arrowRightInverted = 'inverted';
+        }
+
+        // Add class and text to the arrows
+        $arrowLeft.addClass(arrowLeftInverted)
+            .find('.hero-slideshow__arrow__title')
+            .addClass(slideHoverClass[prev])
+            .html(slideHoverText[prev]);
+        
+        $arrowRight.addClass(arrowRightInverted)
+            .find('.hero-slideshow__arrow__title')
+            .addClass(slideHoverClass[next])
+            .html(slideHoverText[next]);
+      }
+
+      slideShowNavigationEvents();
+    }
+
+    // Next and previous arrow integration with slick
+    function slideShowNavigationEvents() {
+
+      $('.hero-slideshow__arrow--right').click(function(e) {
+        e.preventDefault();
+        $heroSlideShow.slick('slickNext');
+      });
+
+      $('.hero-slideshow__arrow--left').click(function(e) {
+        e.preventDefault();
+        $heroSlideShow.slick('slickPrev');
+      });
+
+      $('.hero-slideshow__arrow').hover(function(e) {
+        $(this).find('.hero-slideshow__arrow__title').animate({
+          width: "toggle",
+          opacity: "toggle"
+        });
+      });
+
+    }
+
+    // Start hero carousel
+    init();
+  });
+})(jQuery);
+;
+/** 
+ * Reveal content component interaction
+ * See jquery.contentReveal.js for details
+ */
+
+(function ( $ ) {
+  $(document).ready(function(){
+    $('.reveal__content').contentReveal({
+      triggers: $('.reveal__trigger')
+    });
+  });
+}( jQuery ));
+;
+/** 
+ * Search Highlight utility.
+ *
+ * Searches through a list of items and highlights items that match the term.
+ */
+(function($){
+  var $searches = $('.search-highlight');
+  
+  $(document).ready(function(){
+    if ($searches.length) {
+      $searches.each(function(index, el) {
+        var $search = $(el),
+            $content = $('#' + $search.data('content')),
+            highlightClass = $search.data('highlight-class') + " search-highlight__match",
+            $contentItems = $content.find('li');
+
+        $search.on('change paste keyup search', function(e) {
+          var term = $(this).val().toLowerCase();
+          $contentItems.each(function(index, item) {
+            var text = $(item).text().toLowerCase();
+            $(item).removeClass(highlightClass);
+            if (term.length > 0 && text.indexOf(term) > -1) {
+              $(item).addClass(highlightClass);
+            }
+          });
+        });
+
+      });
+    }
+  });
+})(jQuery);
+;
+/** 
+ * Tabs content utility
+ */
+(function($){
+  var $links = $('.tabs__tab-link'),
+      $contents = $('.tabs__tab-content'),
+      $linkTriggers = $('.tabs__tab-trigger'),
+      animation = {
+        duration: 1000,
+        easing: "easeInOutQuart"
+      };
+  
+  $(document).ready(function(){
+    if ($links.length && $contents.length) {
+      $links.on('click.tabs', function(e) {
+        if (!$(this).hasClass('active')) {
+          var $link = $(this),
+              $content = $('#' + $link.data('tab-content')),
+              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
+              $previousContent = $('#' + $previousLink.data('tab-content')),
+              previousContentHeight = $previousContent.outerHeight(true),
+              $flyoutContainer = $content.closest('.flyout__content'),
+              $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
+              contentHeight = $contentClone.outerHeight(true);
+
+          $contentClone.remove();
+
+          // Manage active class
+          $links.add($contents).removeClass('active');
+          $link.add($content).addClass('active');
+
+          // Animate the height transition between tabs
+          $content.height(previousContentHeight).animate({
+            height: contentHeight,
+          }, animation);
+
+          // Manage flyout container if tabs are within a flyout
+          if ($flyoutContainer.length) {
+            var $parent = $flyoutContainer.offsetParent(),
+                parentPadding = $parent.outerHeight() - $parent.height(),
+                flyoutHeight = $flyoutContainer.outerHeight(true),
+                heightChange = contentHeight - previousContentHeight;
+
+            // Adjust height of parent
+            $parent.animate({
+              height: flyoutHeight - parentPadding + heightChange,
+            }, animation);
+          }
+        }
+        e.preventDefault();
+      });
+      
+      $linkTriggers.on('click.tabs-trigger', function(e) {
+        var $link = $links.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+            $content = $('#' + $(this).data('tab-content'));
+
+        // Manage active class
+        $links.add($contents).removeClass('active');
+        $link.add($content).addClass('active');
+      });
+
+    }
+  });
+})(jQuery);
+;
+(function($){
+  var $vizSlideshow = $('.viz-slideshow__slides');
+
+  $(document).ready(function(){
+    if ($vizSlideshow.length) {
+      $vizSlideshow.slick({
+        centerMode: true,
+        centerPadding: '200px',
+        slidesToShow: 1,
+        arrows: true,
+        speed: 650,
+        easing: "easeInOutQuart",
+        slide: '.viz-slideshow__slide',
+        prevArrow: $(this).find('.viz-slideshow__arrow--prev'),
+        nextArrow: $(this).find('.viz-slideshow__arrow--next'),
+        responsive: [
+          {
+            breakpoint: 940,
+            settings: {
+              centerPadding: '50px'
+            }
+          },
+          {
+            breakpoint: 639,
+            settings: {
+              centerPadding: '25px',
+              arrows: false,
+              prevArrow: false,
+              nextArrow: false
+            }
+          }
+        ]
+      });
+    }
+  });
+})(jQuery);
+;
 /** 
  * Global gavigation interactions
  */
@@ -555,294 +973,39 @@ function dataSourcesSearch() {
   });
 })(jQuery);
 ;
-(function($){
-  $(document).ready(function(){
-    var $heroSlideShow = $('.hero-slideshow');
-
-    // Initialize hero carousel
-    function init() {
-      if($heroSlideShow) {
-        $heroSlideShow.slick({
-          dots: true,
-          arrows: false,
-          speed: 650,
-          easing: "easeInOutQuart",
-          slide: '.hero-slideshow__slide',
-          responsive: [
-            {
-              breakpoint: 639,
-              settings: {
-                adaptiveHeight: true,
-              }
-            }
-          ]
-        });
-
-        slideShowNavigation();
-      }
-    }
-
-    function slideShowNavigation() {
-      var $slides = $heroSlideShow.find('.hero-slideshow__slide').not('.slick-cloned'),
-          count = $slides.length,
-          slidesID = [],
-          slideHoverText = [],
-          slideHoverClass = [],
-          $arrowLeft,
-          $arrowRight,
-          next,
-          prev,
-          arrowRightInverted,
-          arrowLeftInverted;
-
-      // Get slide navigation values from the dom
-      for(var k=0; k < count; k++) {
-        slidesID.push($($slides[k]).attr('id'));
-        slideHoverText.push($($slides[k]).data('title'));
-        slideHoverClass.push($($slides[k]).data('title-class'));
-      }
-
-      // Update slide navigation dom
-      for(var i=0; i < count; i++) {
-        $arrowLeft = $slides.eq(i).find('.hero-slideshow__arrow--left');
-        $arrowRight = $slides.eq(i).find('.hero-slideshow__arrow--right');
-        next = i+1;
-        prev = i-1;
-        arrowLeftInverted = '';
-        arrowRightInverted = '';
-
-        // Account for looping
-        if(prev === -1) {
-          prev = count -1;
-        }
-
-        if(next === count) {
-          next = 0;
-        }
-
-        if(slideHoverClass[prev].match('inverted')) {
-          arrowLeftInverted = 'inverted';
-        }
-
-        if(slideHoverClass[next].match('inverted')) {
-          arrowRightInverted = 'inverted';
-        }
-
-        // Add class and text to the arrows
-        $arrowLeft.addClass(arrowLeftInverted)
-            .find('.hero-slideshow__arrow__title')
-            .addClass(slideHoverClass[prev])
-            .html(slideHoverText[prev]);
-        
-        $arrowRight.addClass(arrowRightInverted)
-            .find('.hero-slideshow__arrow__title')
-            .addClass(slideHoverClass[next])
-            .html(slideHoverText[next]);
-      }
-
-      slideShowNavigationEvents();
-    }
-
-    // Next and previous arrow integration with slick
-    function slideShowNavigationEvents() {
-
-      $('.hero-slideshow__arrow--right').click(function(e) {
-        e.preventDefault();
-        $heroSlideShow.slick('slickNext');
-      });
-
-      $('.hero-slideshow__arrow--left').click(function(e) {
-        e.preventDefault();
-        $heroSlideShow.slick('slickPrev');
-      });
-
-      $('.hero-slideshow__arrow').hover(function(e) {
-        $(this).find('.hero-slideshow__arrow__title').animate({
-          width: "toggle",
-          opacity: "toggle"
-        });
-      });
-
-    }
-
-    // Start hero carousel
-    init();
-  });
-})(jQuery);
-;
-/** 
- * Reveal content utility
+/**
+ * Sidebar nav  interaction including scroll-aware highlighting
  */
+
 (function($){
-  var $triggers = $('.reveal__trigger'),
-      $contents = $('.reveal__content'),
-      animation = {
-        duration: 1000,
-        easing: "easeInOutQuart"
-      };
-  
+  var $nav = $('.subnav__links'),
+      $anchors = $('.anchor');
+
   $(document).ready(function(){
-    if ($triggers.length && $contents.length) {
-      // Run setup
-      setup();
-
-      $triggers.click(function(e) {
-        var state = $(this).data('revealState');
-
-        if (state == 'closed') {
-          showContent(this);
-        } else if (state == 'open') {
-          hideContent(this);
-        }
-        e.preventDefault();
+    if ($nav.length && $anchors.length) {
+      $anchors.waypoint({
+        handler: function(direction) {
+          var id = this.element.id;
+          if (direction === 'down') {
+            $nav.find('a[href=#' + id + ']').parent().addClass('active').siblings().removeClass('active');
+          } else if (direction === 'up') {
+            $nav.find('a[href=#' + id + ']').parent().prev().addClass('active').siblings().removeClass('active');
+          }
+        },
+        offset: $('.subnav').outerHeight(true)
       });
-
-      $('.reveal__close').click(function(e) {
-        $(this).parent('.reveal__content').data('revealTrigger').click();
-        e.preventDefault();
-      });
-
-      // Trigger auto-reveal
-      autoReveal();
-    }
-  });
-
-  // Show the target content
-  function showContent(trigger, customAnimation) {
-    var data = $(trigger).data(),
-        $trigger = $(trigger),
-        $target = $('#' + data.revealTarget),
-        $curtain = $('#' + data.revealCurtain),
-        hideText = data.revealHideText,
-        type = data.revealType,
-        media = data.revealMedia,
-        scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
-        customAnimation = customAnimation || animation;
-
-    $trigger.data('revealState', 'open')
-    if (hideText != "") {
-      $trigger.text(hideText);
-    }
-    
-    // Video players break when we display none so using a custom reimplementation
-    // of slideDown. See helpers.js.
-    $target.slideHeight('down', customAnimation);
-    
-    $curtain.slideUp(customAnimation);
-
-    if (media == "video") {
-      var videoObj = $target.find('.reveal-video--brightcove')[0],
-          player = videojs(videoObj);
-
-      setTimeout(function() {
-        player.play();
-      }, customAnimation.duration/2);
     }
 
-    if ($curtain.length) {
-      smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
-    }
-  }
+    // Smooth Scroll for anchor links
+    // @TODO generalize and separate from this component
+    $nav.find('a').click(function(e) {
+      var element = $(this).attr('href'),
+          offset = $('.subnav').outerHeight(true) - 1;
 
-  // Hide the target content
-  function hideContent(trigger) {
-    var data = $(trigger).data(),
-        $target = $('#' + data.revealTarget),
-        $curtain = $('#' + data.revealCurtain),
-        showText = data.revealShowText,
-        media = data.revealMedia;
-
-    $(trigger).data('revealState', 'closed').text(showText);
-    
-    $target.slideHeight('up', animation);
-    
-    $curtain.slideDown(animation);
-
-    if (media == "video") {
-      var player = videojs($target.find('.reveal-video--brightcove')[0]);
-      player.pause();
-    }
-  }
-
-  // Hand-full of setup tasks
-  function setup() {
-    // Add reveal-state data
-    $triggers.data('revealState', 'closed');
-    
-    $triggers.each(function(index, el) {
-      var $target = $('#' + $(this).data('revealTarget')),
-          showText = $(this).text();
-      
-      // Link content back to it's corresponding trigger
-      $target.data('revealTrigger', $(this));
-
-      // Save original trigger text
-      $triggers.data('revealShowText', showText);
+      smoothScrollTop($(element), 500, offset);
+      e.preventDefault();
     });
-
-    // // Set initial margin on content if there is a curtain
-    // // @TODO this is for naimating the reveal as if the content is 
-    // // stationary and the elements above and below are revealing it. 
-    // // Currently, the content moves up as the curtain slides up.
-    // $contents.each(function(index, el) {
-    //   var data = $($(this).data('revealTrigger')).data(),
-    //       $curtain = $("#" + data.revealCurtain);
-
-    //   if ($curtain.length) {
-    //     $(this).css('margin-top', -$curtain.outerHeight(true));
-    //   }
-    // });
-
-    // Add a close icon to each content continer
-    $contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
-  }
-
-  function autoReveal() {
-    var hash = window.location.hash;
-
-    if (hash.length && $contents.is(hash)) {
-      var $trigger = $(hash).data('revealTrigger');
-
-      // Prevent scrolling to the anchor...
-      setTimeout(function() {
-        window.scrollTo(0, 0);
-      }, 1);
-
-      showContent($trigger, {duration: 0});
-    }
-  }
-
-})(jQuery);
-;
-/** 
- * Search Highlight utility.
- *
- * Searches through a list of items and highlights items that match the term.
- */
-(function($){
-  var $searches = $('.search-highlight');
-  
-  $(document).ready(function(){
-    if ($searches.length) {
-      $searches.each(function(index, el) {
-        var $search = $(el),
-            $content = $('#' + $search.data('content')),
-            highlightClass = $search.data('highlight-class') + " search-highlight__match",
-            $contentItems = $content.find('li');
-
-        $search.on('change paste keyup search', function(e) {
-          var term = $(this).val().toLowerCase();
-          $contentItems.each(function(index, item) {
-            var text = $(item).text().toLowerCase();
-            $(item).removeClass(highlightClass);
-            if (term.length > 0 && text.indexOf(term) > -1) {
-              $(item).addClass(highlightClass);
-            }
-          });
-        });
-
-      });
-    }
+    
   });
 })(jQuery);
 ;
@@ -881,142 +1044,4 @@ function dataSourcesSearch() {
       element: el
     });
   }
-})(jQuery);
-;
-/**
- * Sidebar nav  interaction including scroll-aware highlighting
- */
-
-(function($){
-  var $nav = $('.subnav__links'),
-      $anchors = $('.anchor');
-
-  $(document).ready(function(){
-    if ($nav.length && $anchors.length) {
-      $anchors.waypoint({
-        handler: function(direction) {
-          var id = this.element.id;
-          if (direction === 'down') {
-            $nav.find('a[href=#' + id + ']').parent().addClass('active').siblings().removeClass('active');
-          } else if (direction === 'up') {
-            $nav.find('a[href=#' + id + ']').parent().prev().addClass('active').siblings().removeClass('active');
-          }
-        },
-        offset: $('.subnav').outerHeight(true)
-      });
-    }
-
-    // Smooth Scroll for anchor links
-    // @TODO generalize and separate from this component
-    $nav.find('a').click(function(e) {
-      var element = $(this).attr('href'),
-          offset = $('.subnav').outerHeight(true) - 1;
-
-      smoothScrollTop($(element), 500, offset);
-      e.preventDefault();
-    });
-    
-  });
-})(jQuery);
-;
-/** 
- * Tabs content utility
- */
-(function($){
-  var $links = $('.tabs__tab-link'),
-      $contents = $('.tabs__tab-content'),
-      $linkTriggers = $('.tabs__tab-trigger'),
-      animation = {
-        duration: 1000,
-        easing: "easeInOutQuart"
-      };
-  
-  $(document).ready(function(){
-    if ($links.length && $contents.length) {
-      $links.on('click.tabs', function(e) {
-        if (!$(this).hasClass('active')) {
-          var $link = $(this),
-              $content = $('#' + $link.data('tab-content')),
-              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
-              $previousContent = $('#' + $previousLink.data('tab-content')),
-              previousContentHeight = $previousContent.outerHeight(true),
-              $flyoutContainer = $content.closest('.flyout__content'),
-              $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
-              contentHeight = $contentClone.outerHeight(true);
-
-          $contentClone.remove();
-
-          // Manage active class
-          $links.add($contents).removeClass('active');
-          $link.add($content).addClass('active');
-
-          // Animate the height transition between tabs
-          $content.height(previousContentHeight).animate({
-            height: contentHeight,
-          }, animation);
-
-          // Manage flyout container if tabs are within a flyout
-          if ($flyoutContainer.length) {
-            var $parent = $flyoutContainer.offsetParent(),
-                parentPadding = $parent.outerHeight() - $parent.height(),
-                flyoutHeight = $flyoutContainer.outerHeight(true),
-                heightChange = contentHeight - previousContentHeight;
-
-            // Adjust height of parent
-            $parent.animate({
-              height: flyoutHeight - parentPadding + heightChange,
-            }, animation);
-          }
-        }
-        e.preventDefault();
-      });
-      
-      $linkTriggers.on('click.tabs-trigger', function(e) {
-        var $link = $links.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
-
-        // Manage active class
-        $links.add($contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
-
-    }
-  });
-})(jQuery);
-;
-(function($){
-  var $vizSlideshow = $('.viz-slideshow__slides');
-
-  $(document).ready(function(){
-    if ($vizSlideshow.length) {
-      $vizSlideshow.slick({
-        centerMode: true,
-        centerPadding: '200px',
-        slidesToShow: 1,
-        arrows: true,
-        speed: 650,
-        easing: "easeInOutQuart",
-        slide: '.viz-slideshow__slide',
-        prevArrow: $(this).find('.viz-slideshow__arrow--prev'),
-        nextArrow: $(this).find('.viz-slideshow__arrow--next'),
-        responsive: [
-          {
-            breakpoint: 940,
-            settings: {
-              centerPadding: '50px'
-            }
-          },
-          {
-            breakpoint: 639,
-            settings: {
-              centerPadding: '25px',
-              arrows: false,
-              prevArrow: false,
-              nextArrow: false
-            }
-          }
-        ]
-      });
-    }
-  });
 })(jQuery);
