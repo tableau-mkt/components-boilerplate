@@ -129,6 +129,7 @@ Weight: 5
 .text--sub-nav - Sub Nav Mission
 .text--dropdown - Dropdown Copy
 .text--label - Label/Nav item
+.text--border - Label w/ border underline
 
 Style guide: typography.other
 */
@@ -159,4 +160,10 @@ Style guide: typography.other
   // color: $text-dark-body;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.text--border {
+  border-bottom: 1px dotted $accent-dividers;
+  padding-top: em(10px);
+  margin-bottom: em(10px);
 }
