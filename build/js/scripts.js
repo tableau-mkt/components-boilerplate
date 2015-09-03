@@ -96,6 +96,11 @@ in CSS as well.
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
+ * Usage:
+ *  $('.contents-wrapper-selector').contentReveal({
+ *    triggers: $('.triggers-selector')
+ *  });
+ *
  * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
  */
 
@@ -246,11 +251,23 @@ in CSS as well.
 /** 
  * Tabs content utility
  *
+ * Create interactive tabs that switch between different visible content when 
+ * tabs are clicked.
+ *
  * Options:
  *   contents - Required - [jQuery Object] - element(s) to use as content wrapper
  *   tabLinks - Optional - [jQuery Ojbect] - element(s) to be used as a trigger
- *   triggers - Optional - [jQuery Object]
+ *   triggers - Optional - [jQuery Object] - additional elements (other than tabs)
+ *     used for triggering the display of specific tabs
  *   animation - Optional - [object] - animation settings for expanding/collapsing
+ *
+ * Usage:
+ *   $('.tab-links-selector').tabs({
+ *     contents: $('.tab-contents-wrapper-selector'),
+ *     triggers: $('.tab-triggers-selector')
+ *   });
+ *
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin  
  */
 
 (function ( $ ) {
@@ -265,9 +282,6 @@ in CSS as well.
     }, options);
 
     if (settings.tabLinks && settings.contents) {
-
-console.log("YEPPERS");
-
       settings.tabLinks.on('click.tabs', function(e) {
         if (!$(this).hasClass('active')) {
           var $link = $(this),

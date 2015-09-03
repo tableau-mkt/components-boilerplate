@@ -32,9 +32,6 @@
     }, options);
 
     if (settings.tabLinks && settings.contents) {
-
-console.log("YEPPERS");
-
       settings.tabLinks.on('click.tabs', function(e) {
         if (!$(this).hasClass('active')) {
           var $link = $(this),
