@@ -6,3 +6,5 @@
   </li>
   {{/each}}
 </ul>
+
+{{! NOTE: Duplicate Handlebars template used for styleguide, etc. }}
