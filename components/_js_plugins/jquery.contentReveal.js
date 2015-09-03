@@ -8,6 +8,13 @@
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
  *   animation - Optional - [object] - animation settings for expanding/collapsing
+ *
+ * Usage:
+ *  $('.contents-wrapper-selector').contentReveal({
+ *    triggers: $('.triggers-selector')
+ *  });
+ *
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
  */
 
 (function ( $ ) {

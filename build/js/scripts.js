@@ -95,6 +95,8 @@ in CSS as well.
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
  *   animation - Optional - [object] - animation settings for expanding/collapsing
+ *
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
  */
 
 (function ( $ ) {
@@ -239,6 +241,83 @@ in CSS as well.
 
     return this;
   }
+}( jQuery ));
+;
+/** 
+ * Tabs content utility
+ *
+ * Options:
+ *   contents - Required - [jQuery Object] - element(s) to use as content wrapper
+ *   tabLinks - Optional - [jQuery Ojbect] - element(s) to be used as a trigger
+ *   triggers - Optional - [jQuery Object]
+ *   animation - Optional - [object] - animation settings for expanding/collapsing
+ */
+
+(function ( $ ) {
+  $.fn.tabs = function(options) {
+    // Default settings
+    var settings = $.extend({
+      tabLinks: $(this),
+      animation: {
+        duration: 1000,
+        easing: "easeInOutQuart"
+      }
+    }, options);
+
+    if (settings.tabLinks && settings.contents) {
+
+console.log("YEPPERS");
+
+      settings.tabLinks.on('click.tabs', function(e) {
+        if (!$(this).hasClass('active')) {
+          var $link = $(this),
+              $content = $('#' + $link.data('tab-content')),
+              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
+              $previousContent = $('#' + $previousLink.data('tab-content')),
+              previousContentHeight = $previousContent.outerHeight(true),
+              $flyoutContainer = $content.closest('.flyout__content'),
+              $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
+              contentHeight = $contentClone.outerHeight(true);
+
+          $contentClone.remove();
+
+          // Manage active class
+          settings.tabLinks.add(settings.contents).removeClass('active');
+          $link.add($content).addClass('active');
+
+          // Animate the height transition between tabs
+          $content.height(previousContentHeight).animate({
+            height: contentHeight,
+          }, settings.animation);
+
+          // Manage flyout container if tabs are within a flyout
+          if ($flyoutContainer.length) {
+            var $parent = $flyoutContainer.offsetParent(),
+                parentPadding = $parent.outerHeight() - $parent.height(),
+                flyoutHeight = $flyoutContainer.outerHeight(true),
+                heightChange = contentHeight - previousContentHeight;
+
+            // Adjust height of parent
+            $parent.animate({
+              height: flyoutHeight - parentPadding + heightChange,
+            }, settings.animation);
+          }
+        }
+        e.preventDefault();
+      });
+      
+      settings.triggers.on('click.tabs-trigger', function(e) {
+        var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+            $content = $('#' + $(this).data('tab-content'));
+
+        // Manage active class
+        settings.tabLinks.add(settings.contents).removeClass('active');
+        $link.add($content).addClass('active');
+      });
+    }
+
+    return this;
+  } 
 }( jQuery ));
 ;
 /**
@@ -672,69 +751,18 @@ function dataSourcesSearch() {
 })(jQuery);
 ;
 /** 
- * Tabs content utility
+ * Tabs component interaction
+ * See jquery.tabs.js for details
  */
-(function($){
-  var $links = $('.tabs__tab-link'),
-      $contents = $('.tabs__tab-content'),
-      $linkTriggers = $('.tabs__tab-trigger'),
-      animation = {
-        duration: 1000,
-        easing: "easeInOutQuart"
-      };
-  
+
+(function ( $ ) {
   $(document).ready(function(){
-    if ($links.length && $contents.length) {
-      $links.on('click.tabs', function(e) {
-        if (!$(this).hasClass('active')) {
-          var $link = $(this),
-              $content = $('#' + $link.data('tab-content')),
-              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
-              $previousContent = $('#' + $previousLink.data('tab-content')),
-              previousContentHeight = $previousContent.outerHeight(true),
-              $flyoutContainer = $content.closest('.flyout__content'),
-              $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
-              contentHeight = $contentClone.outerHeight(true);
-
-          $contentClone.remove();
-
-          // Manage active class
-          $links.add($contents).removeClass('active');
-          $link.add($content).addClass('active');
-
-          // Animate the height transition between tabs
-          $content.height(previousContentHeight).animate({
-            height: contentHeight,
-          }, animation);
-
-          // Manage flyout container if tabs are within a flyout
-          if ($flyoutContainer.length) {
-            var $parent = $flyoutContainer.offsetParent(),
-                parentPadding = $parent.outerHeight() - $parent.height(),
-                flyoutHeight = $flyoutContainer.outerHeight(true),
-                heightChange = contentHeight - previousContentHeight;
-
-            // Adjust height of parent
-            $parent.animate({
-              height: flyoutHeight - parentPadding + heightChange,
-            }, animation);
-          }
-        }
-        e.preventDefault();
-      });
-      
-      $linkTriggers.on('click.tabs-trigger', function(e) {
-        var $link = $links.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
-
-        // Manage active class
-        $links.add($contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
-
-    }
+    $('.tabs__tab-link').tabs({
+      contents: $('.tabs__tab-content'),
+      triggers: $('.tabs__tab-trigger')
+    });
   });
-})(jQuery);
+}( jQuery ));
 ;
 (function($){
   var $vizSlideshow = $('.viz-slideshow__slides');
