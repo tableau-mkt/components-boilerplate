@@ -70,14 +70,16 @@
         e.preventDefault();
       });
       
-      settings.triggers.on('click.tabs-trigger', function(e) {
-        var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
+      if (settings.triggers) {
+        settings.triggers.on('click.tabs-trigger', function(e) {
+          var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+              $content = $('#' + $(this).data('tab-content'));
 
-        // Manage active class
-        settings.tabLinks.add(settings.contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
+          // Manage active class
+          settings.tabLinks.add(settings.contents).removeClass('active');
+          $link.add($content).addClass('active');
+        });
+      }
     }
 
     return this;

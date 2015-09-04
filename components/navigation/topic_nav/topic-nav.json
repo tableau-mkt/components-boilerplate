@@ -1,0 +1,172 @@
+{
+  "tabs": [
+    {
+      "label": "Nic Cage",
+      "id": "nic",
+      "class": "active"
+    },
+    {
+      "label": "Activities",
+      "id": "activities"
+    },
+    {
+      "label": "Technology",
+      "id": "technology"
+    },
+    {
+      "label": "Search",
+      "id": "search"
+    }
+  ],
+
+  "drawers": [
+    {
+      "id": "nic",
+      "class": "active",
+      "topics": [
+        {
+          "label": "Leaving Las Vegas",
+          "url": "#"
+        },
+        {
+          "label": "National Treasure",
+          "url": "#"
+        },
+        {
+          "label": "Moonstruck",
+          "url": "#"
+        },
+        {
+          "label": "Kick-Ass",
+          "url": "#"
+        },
+        {
+          "label": "Ghost Rider",
+          "url": "#"
+        },
+        {
+          "label": "Bankok Dangerous",
+          "url": "#"
+        },
+        {
+          "label": "The Wicker Man",
+          "url": "#"
+        },
+        {
+          "label": "Adaptation.",
+          "url": "#"
+        },
+        {
+          "label": "THe Family Man",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "activities",
+      "topics": [
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "topics": [
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        },
+        {
+          "label": "Test Topic",
+          "url": "/stories/topics/"
+        }
+      ]
+    }
+  ]
+}

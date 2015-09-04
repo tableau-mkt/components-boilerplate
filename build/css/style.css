@@ -195,21 +195,21 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -449,21 +449,21 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1678,13 +1678,13 @@ Markup: reveal.hbs
 
 Style guide: interactive.reveal
 */
-.reveal__content {
+.reveal__content, .topic-nav .topic-nav__drawers {
   position: relative;
   height: 0;
   overflow: hidden;
 }
 
-.reveal__content video {
+.reveal__content video, .topic-nav .topic-nav__drawers video {
   width: 100%;
 }
 
@@ -1760,11 +1760,11 @@ Style guide: interactive.tabs
   color: #fff;
 }
 
-.tabs__tab-content {
+.tabs__tab-content, .topic-nav .topic-nav__drawer {
   display: none;
 }
 
-.tabs__tab-content.active {
+.tabs__tab-content.active, .topic-nav .active.topic-nav__drawer {
   display: inherit;
 }
 
@@ -4667,6 +4667,116 @@ Style guide: navigation.subnav
   }
 }
 
+/*
+Topic Navigation
+
+Used to navigate through different topics or categories of a section.
+
+Markup: topic-nav.hbs
+
+Style Guide: navigation.topic-nav
+*/
+.topic-nav a {
+  text-decoration: none;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.topic-nav .topic-nav__tabs {
+  margin-bottom: .7em;
+  text-align: center;
+}
+
+.topic-nav .topic-nav__tabs li {
+  margin: 0 1em;
+}
+
+.topic-nav .topic-nav__tabs a {
+  position: relative;
+  color: #bbb;
+}
+
+.topic-nav .topic-nav__tabs a:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  top: 34px;
+  left: 50%;
+  margin-left: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ebebeb;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.topic-nav .topic-nav__tabs a:hover {
+  color: #333;
+}
+
+.topic-nav .topic-nav__tabs a.active {
+  color: #333;
+}
+
+.topic-nav .topic-nav__tabs a.active:after {
+  opacity: 1;
+}
+
+.topic-nav .topic-nav__drawers {
+  background: #ebebeb;
+}
+
+.topic-nav .topic-nav__topic-list {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  column-gap: 4em;
+  -webkit-column-rule: 1px solid #dedede;
+  -moz-column-rule: 1px solid #dedede;
+  column-rule: 1px solid #dedede;
+  padding: 4em;
+}
+
+.topic-nav .topic-nav__topic-list li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.topic-nav .topic-nav__topic-list a {
+  color: #787878;
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  font-size: 1.14em;
+}
+
+.topic-nav .topic-nav__topic-list a:hover {
+  color: #333;
+}
+
+.topic-nav .topic-nav__toggle {
+  height: 0;
+  z-index: 5;
+  position: relative;
+  text-align: center;
+}
+
+.topic-nav .topic-nav__toggle a {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  line-height: 40px;
+}
+
 /* 
 Shameful hacks that should be fixed
 */
@@ -5025,7 +5135,7 @@ Weight: 5
 
 Style guide: typography.other
 */
-.text--large-copy, .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete {
+.text--large-copy, .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete, .topic-nav .topic-nav__tabs {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.7142857143em;
   color: #333;

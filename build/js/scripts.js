@@ -320,14 +320,16 @@ in CSS as well.
         e.preventDefault();
       });
       
-      settings.triggers.on('click.tabs-trigger', function(e) {
-        var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
+      if (settings.triggers) {
+        settings.triggers.on('click.tabs-trigger', function(e) {
+          var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+              $content = $('#' + $(this).data('tab-content'));
 
-        // Manage active class
-        settings.tabLinks.add(settings.contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
+          // Manage active class
+          settings.tabLinks.add(settings.contents).removeClass('active');
+          $link.add($content).addClass('active');
+        });
+      }
     }
 
     return this;
@@ -1050,6 +1052,23 @@ function dataSourcesSearch() {
     
   });
 })(jQuery);
+;
+/** 
+ * Topic Navigation interaction
+ * Requires jquery.contentReveal.js and jquery.tabs.js
+ */
+
+(function ( $ ) {
+  $(document).ready(function(){
+    $('.topic-nav__tabs a').tabs({
+      contents: $('.topic-nav__drawer')
+    });
+
+    $('.topic-nav__drawers').contentReveal({
+      triggers: $('.topic-nav__toggle a')
+    })
+  });
+}( jQuery ));
 ;
 (function($){
   $(document).ready(function(){
