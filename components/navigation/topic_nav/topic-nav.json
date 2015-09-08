@@ -2,16 +2,15 @@
   "tabs": [
     {
       "label": "Nic Cage",
-      "id": "nic",
-      "class": "active"
+      "id": "nic"
     },
     {
-      "label": "Activities",
-      "id": "activities"
+      "label": "John Travolta",
+      "id": "john"
     },
     {
-      "label": "Technology",
-      "id": "technology"
+      "label": "Steve Buschemi",
+      "id": "steve"
     },
     {
       "label": "Search",
@@ -63,7 +62,7 @@
       ]
     },
     {
-      "id": "activities",
+      "id": "john",
       "topics": [
         {
           "label": "Test Topic",
@@ -116,7 +115,7 @@
       ]
     },
     {
-      "id": "technology",
+      "id": "steve",
       "topics": [
         {
           "label": "Test Topic",

@@ -7,6 +7,7 @@
  * Options:
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
+ *   closeLink - Optional - [boolean] - whether a close link should be added
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
  * Usage:
@@ -22,6 +23,7 @@
     // Default settings
     var settings = $.extend({
       contents: $(this),
+      closeLink: true,
       animation: {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -32,7 +34,7 @@
       // Run setup
       setup();
 
-      settings.triggers.click(function(e) {
+      settings.triggers.on('click.reveal', function(e) {
         var state = $(this).data('revealState');
 
         if (state == 'closed') {
@@ -43,8 +45,8 @@
         e.preventDefault();
       });
 
-      $('.reveal__close').click(function(e) {
-        $(this).parent('.reveal__content').data('revealTrigger').click();
+      $('.reveal__close').on('click.reveal', function(e) {
+        hideContent($(this).parent('.reveal__content').data('revealTrigger'));
         e.preventDefault();
       });
 
@@ -64,7 +66,7 @@
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
           customAnimation = customAnimation || settings.animation;
 
-      $trigger.data('revealState', 'open')
+      $trigger.data('revealState', 'open').addClass('open');
       if (hideText != "") {
         $trigger.text(hideText);
       }
@@ -97,7 +99,7 @@
           showText = data.revealShowText,
           media = data.revealMedia;
 
-      $(trigger).data('revealState', 'closed').text(showText);
+      $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
       
       $target.slideHeight('up', settings.animation);
       
@@ -139,7 +141,9 @@
       // });
 
       // Add a close icon to each content continer
-      settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+      if (settings.closeLink) {
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+      }
     }
 
     function autoReveal() {

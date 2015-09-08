@@ -98,13 +98,13 @@ Style Guide: navigation.topic-nav
     }
   }
 
-  .topic-nav__toggle {
+  .topic-nav__toggle-wrapper {
     height: 0;
     z-index: 5;
     position: relative;
     text-align: center;
 
-    a {
+    .topic-nav__toggle {
       display: inline-block;
       position: relative;
       top: -20px;
@@ -114,6 +114,11 @@ Style Guide: navigation.topic-nav
       border: 1px solid $accent-dividers;
       border-radius: 50%;
       line-height: 40px;
+      transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.open {
+        transform: rotate(180deg);
+      }
     }
   }
 }

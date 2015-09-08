@@ -5137,14 +5137,14 @@ body.kss .kss-example-preview .topic-nav .topic-nav__topic-list a:hover {
   color: #333;
 }
 
-body.kss .kss-example-preview .topic-nav .topic-nav__toggle {
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper {
   height: 0;
   z-index: 5;
   position: relative;
   text-align: center;
 }
 
-body.kss .kss-example-preview .topic-nav .topic-nav__toggle a {
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle {
   display: inline-block;
   position: relative;
   top: -20px;
@@ -5154,6 +5154,14 @@ body.kss .kss-example-preview .topic-nav .topic-nav__toggle a {
   border: 1px solid #dedede;
   border-radius: 50%;
   line-height: 40px;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle.open {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media (max-width: 639px) {
