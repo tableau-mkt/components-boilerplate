@@ -36,7 +36,7 @@
         if (!$(this).hasClass('active')) {
           var $link = $(this),
               $content = $('#' + $link.data('tab-content')),
-              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
+              $previousLink = $link.closest("ul").find('a.active'),
               $previousContent = $('#' + $previousLink.data('tab-content')),
               previousContentHeight = $previousContent.outerHeight(true),
               $flyoutContainer = $content.closest('.flyout__content'),

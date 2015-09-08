@@ -7,7 +7,9 @@
 </ul>
 
 {{#each tabs}}
-  <div class="tabs__tab-content{{#if active}} active{{/if}}{{#if contentClass}} {{ contentClass }}{{/if}}" id="{{ id }}">
-    {{{ content }}}
+  <div class="tabs__tab-content{{#if active}} active{{/if}}" id="{{ id }}">
+    <div class="clearfix{{#if contentClass}} {{ contentClass }}{{/if}}">
+      {{{ content }}}
+    </div>
   </div>
 {{/each}}

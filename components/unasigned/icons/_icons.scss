@@ -149,35 +149,35 @@ Style Guide: icons.icons
   content: url(../images/icons/statistics.png);
 }
 
-.icon--arrow-long {
+.icon--arrow-long:before {
   content: url(../images/icons/icon-arrow-long.png);
 }
-.icon--arrow-long-down {
+.icon--arrow-long-down:before {
   content: url(../images/icons/icon-arrow-long-down.png);
 }
 
-.icon--expand {
+.icon--expand:before {
   content: url(../images/icons/expand.png);
 }
-.icon--collapse {
+.icon--collapse:before {
   content: url(../images/icons/collapse.png);
 }
 
-.icon--slideshow-prev-light {
+.icon--slideshow-prev-light:before {
   content: url('../images/icons/slideshow-prev-light.png');
 }
-.icon--slideshow-next-light {
+.icon--slideshow-next-light:before {
   content: url('../images/icons/slideshow-next-light.png');
 }
-.icon--slideshow-prev-dark {
+.icon--slideshow-prev-dark:before {
   content: url('../images/icons/slideshow-prev-dark.png');
 }
-.icon--slideshow-next-dark {
+.icon--slideshow-next-dark:before {
   content: url('../images/icons/slideshow-next-dark.png');
 }
 
-.icon--magnifying-glass {
-  content: url('../images/icons/icon-magnifying-glass.svg');
+.icon--magnifying-glass:before {
+  content: url('../images/icons/icon-magnifying-glass.png');
 }
 
 

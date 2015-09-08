@@ -329,16 +329,14 @@ Weight: 40
 Style guide: lists
 */
   /*
-Form Styles
+Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
 Weight: 50
 
-################################################################################
-# Style guide: forms ###########################################################
-################################################################################
+Style guide: forms 
 */
   /*
 Tables
@@ -515,6 +513,22 @@ Markup: form_confirmation.hbs
 Weight: 4
 
 Style guide: forms.confirmation
+*/
+  /*
+Section Search
+
+Section-level search form used within a specific section to search only content
+of that section. Displays autocomplete list and submits to global search results
+page filtered down to the corresponding section.
+
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+place of magnifying glass icon when text is in the field.
+
+Markup: section-search.hbs
+
+Weight: 10
+
+Style guide: forms.section-search
 */
   /*
 Thumbnail Image
@@ -2011,6 +2025,53 @@ body.kss .kss-example-preview input[type=submit].errored {
 body.kss .kss-example-preview .invalid {
   display: none;
   color: #DD1E06;
+}
+
+body.kss .kss-example-preview .section-search {
+  width: 60%;
+  position: relative;
+  margin: 2em auto;
+  background: #fafafa;
+  box-shadow: 2px 2px 3px #dedede inset;
+  border-radius: 50px;
+}
+
+body.kss .kss-example-preview .section-search input[type="search"] {
+  width: 100%;
+  margin: 0;
+  padding: 0.9em 64px 0.9em 1.3em;
+  background: none;
+  outline: 0;
+  font-size: 1.5em;
+  color: #787878;
+  font-family: "Merriweather", serif;
+}
+
+body.kss .kss-example-preview .section-search input[type="search"]::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .section-search input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0em;
+  text-indent: -99em;
+  background: none;
+  background-image: url("../images/icons/icon-magnifying-glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .section-search {
+    width: 100%;
+  }
 }
 
 body.kss .kss-example-preview .thumbnail {
@@ -5108,6 +5169,10 @@ body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
   background: #ebebeb;
 }
 
+body.kss .kss-example-preview .topic-nav .topic-nav__drawer .content-container, body.kss .kss-example-preview .topic-nav .topic-nav__drawer .flyout__close-wrapper {
+  overflow: hidden;
+}
+
 body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -5119,6 +5184,14 @@ body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   -moz-column-rule: 1px solid #dedede;
   column-rule: 1px solid #dedede;
   padding: 4em;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
 }
 
 body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
@@ -5150,7 +5223,10 @@ body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper .topic-nav__
   top: -20px;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background-color: #fff;
+  background-image: url("../images/icons/drop-down-arrow-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid #dedede;
   border-radius: 50%;
   line-height: 40px;
@@ -5976,40 +6052,40 @@ body.kss .kss-example-preview .icon--statistics:before {
   content: url(../images/icons/statistics.png);
 }
 
-body.kss .kss-example-preview .icon--arrow-long {
+body.kss .kss-example-preview .icon--arrow-long:before {
   content: url(../images/icons/icon-arrow-long.png);
 }
 
-body.kss .kss-example-preview .icon--arrow-long-down {
+body.kss .kss-example-preview .icon--arrow-long-down:before {
   content: url(../images/icons/icon-arrow-long-down.png);
 }
 
-body.kss .kss-example-preview .icon--expand {
+body.kss .kss-example-preview .icon--expand:before {
   content: url(../images/icons/expand.png);
 }
 
-body.kss .kss-example-preview .icon--collapse {
+body.kss .kss-example-preview .icon--collapse:before {
   content: url(../images/icons/collapse.png);
 }
 
-body.kss .kss-example-preview .icon--slideshow-prev-light {
+body.kss .kss-example-preview .icon--slideshow-prev-light:before {
   content: url("../images/icons/slideshow-prev-light.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-next-light {
+body.kss .kss-example-preview .icon--slideshow-next-light:before {
   content: url("../images/icons/slideshow-next-light.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-prev-dark {
+body.kss .kss-example-preview .icon--slideshow-prev-dark:before {
   content: url("../images/icons/slideshow-prev-dark.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-next-dark {
+body.kss .kss-example-preview .icon--slideshow-next-dark:before {
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
-body.kss .kss-example-preview .icon--magnifying-glass {
-  content: url("../images/icons/icon-magnifying-glass.svg");
+body.kss .kss-example-preview .icon--magnifying-glass:before {
+  content: url("../images/icons/icon-magnifying-glass.png");
 }
 
 body.kss .kss-example-preview .icon--ecosystem-style {

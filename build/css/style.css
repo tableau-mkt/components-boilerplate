@@ -590,16 +590,14 @@ Weight: 40
 Style guide: lists
 */
 /*
-Form Styles
+Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
 Weight: 50
 
-################################################################################
-# Style guide: forms ###########################################################
-################################################################################
+Style guide: forms 
 */
 /*
 Tables
@@ -1214,6 +1212,69 @@ Weight: 4
 
 Style guide: forms.confirmation
 */
+/*
+Section Search
+
+Section-level search form used within a specific section to search only content
+of that section. Displays autocomplete list and submits to global search results
+page filtered down to the corresponding section.
+
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+place of magnifying glass icon when text is in the field.
+
+Markup: section-search.hbs
+
+Weight: 10
+
+Style guide: forms.section-search
+*/
+.section-search {
+  width: 60%;
+  position: relative;
+  margin: 2em auto;
+  background: #fafafa;
+  box-shadow: 2px 2px 3px #dedede inset;
+  border-radius: 50px;
+}
+
+.section-search input[type="search"] {
+  width: 100%;
+  margin: 0;
+  padding: 0.9em 64px 0.9em 1.3em;
+  background: none;
+  outline: 0;
+  font-size: 1.5em;
+  color: #787878;
+  font-family: "Merriweather", serif;
+}
+
+.section-search input[type="search"]::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.section-search input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0em;
+  text-indent: -99em;
+  background: none;
+  background-image: url("../images/icons/icon-magnifying-glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  .section-search {
+    width: 100%;
+  }
+}
+
 /*
 Thumbnail Image
 
@@ -4729,6 +4790,10 @@ Style Guide: navigation.topic-nav
   background: #ebebeb;
 }
 
+.topic-nav .topic-nav__drawer .content-container, .topic-nav .topic-nav__drawer .flyout__close-wrapper {
+  overflow: hidden;
+}
+
 .topic-nav .topic-nav__topic-list {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -4740,6 +4805,14 @@ Style Guide: navigation.topic-nav
   -moz-column-rule: 1px solid #dedede;
   column-rule: 1px solid #dedede;
   padding: 4em;
+}
+
+@media (max-width: 639px) {
+  .topic-nav .topic-nav__topic-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
 }
 
 .topic-nav .topic-nav__topic-list li {
@@ -4771,7 +4844,10 @@ Style Guide: navigation.topic-nav
   top: -20px;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background-color: #fff;
+  background-image: url("../images/icons/drop-down-arrow-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid #dedede;
   border-radius: 50%;
   line-height: 40px;
@@ -5917,40 +5993,40 @@ Style Guide: icons.icons
   content: url(../images/icons/statistics.png);
 }
 
-.icon--arrow-long {
+.icon--arrow-long:before {
   content: url(../images/icons/icon-arrow-long.png);
 }
 
-.icon--arrow-long-down {
+.icon--arrow-long-down:before {
   content: url(../images/icons/icon-arrow-long-down.png);
 }
 
-.icon--expand {
+.icon--expand:before {
   content: url(../images/icons/expand.png);
 }
 
-.icon--collapse {
+.icon--collapse:before {
   content: url(../images/icons/collapse.png);
 }
 
-.icon--slideshow-prev-light {
+.icon--slideshow-prev-light:before {
   content: url("../images/icons/slideshow-prev-light.png");
 }
 
-.icon--slideshow-next-light {
+.icon--slideshow-next-light:before {
   content: url("../images/icons/slideshow-next-light.png");
 }
 
-.icon--slideshow-prev-dark {
+.icon--slideshow-prev-dark:before {
   content: url("../images/icons/slideshow-prev-dark.png");
 }
 
-.icon--slideshow-next-dark {
+.icon--slideshow-next-dark:before {
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
-.icon--magnifying-glass {
-  content: url("../images/icons/icon-magnifying-glass.svg");
+.icon--magnifying-glass:before {
+  content: url("../images/icons/icon-magnifying-glass.png");
 }
 
 .icon--ecosystem-style {
