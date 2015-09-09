@@ -842,6 +842,7 @@ Markup: card.hbs
 
 .card--wide - Double-wide version of a card.
 .card--quote - A highlighted card used for promoting an item with a quote.
+.card--summary - A card that displays summary text and no thumbnail
 
 Style Guide: lists.card
 */
@@ -2513,11 +2514,11 @@ body.kss .kss-example-preview .tabs__tabs .tabs__tab-link.active {
   font-weight: bold;
 }
 
-body.kss .kss-example-preview .box--data-sources .tabs__tab-link {
+body.kss .kss-example-preview .box--data-sources .tabs__tab-link, body.kss .kss-example-preview .card.card--quote .tabs__tab-link {
   color: #a3b9cb;
 }
 
-body.kss .kss-example-preview .box--data-sources .tabs__tab-link.active {
+body.kss .kss-example-preview .box--data-sources .tabs__tab-link.active, body.kss .kss-example-preview .card.card--quote .tabs__tab-link.active {
   color: #fff;
 }
 
@@ -2793,26 +2794,26 @@ body.kss .kss-example-preview .box--about-featured h6 a, body.kss .kss-example-p
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources {
+body.kss .kss-example-preview .box--data-sources, body.kss .kss-example-preview .card.card--quote {
   background-color: #2e4c65;
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources h1, body.kss .kss-example-preview .box--data-sources .heading--homepage, body.kss .kss-example-preview .box--data-sources .heading--product, body.kss .kss-example-preview .box--data-sources .heading--download, body.kss .kss-example-preview .box--data-sources .heading--h1,
-body.kss .kss-example-preview .box--data-sources h2, body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
-body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
-body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
-body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
-body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .box--data-sources .heading--h6 {
+body.kss .kss-example-preview .box--data-sources h1, body.kss .kss-example-preview .card.card--quote h1, body.kss .kss-example-preview .box--data-sources .heading--homepage, body.kss .kss-example-preview .card.card--quote .heading--homepage, body.kss .kss-example-preview .box--data-sources .heading--product, body.kss .kss-example-preview .card.card--quote .heading--product, body.kss .kss-example-preview .box--data-sources .heading--download, body.kss .kss-example-preview .card.card--quote .heading--download, body.kss .kss-example-preview .box--data-sources .heading--h1,
+body.kss .kss-example-preview .card.card--quote .heading--h1, body.kss .kss-example-preview .box--data-sources h2, body.kss .kss-example-preview .card.card--quote h2, body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .card.card--quote .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
+body.kss .kss-example-preview .card.card--quote .heading--h2, body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-preview .card.card--quote h3, body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .card.card--quote .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
+body.kss .kss-example-preview .card.card--quote .heading--h3, body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .card.card--quote h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .card.card--quote .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
+body.kss .kss-example-preview .card.card--quote .heading--h4, body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .card.card--quote h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .card.card--quote .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
+body.kss .kss-example-preview .card.card--quote .heading--h5, body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .card.card--quote h6, body.kss .kss-example-preview .box--data-sources .heading--h6, body.kss .kss-example-preview .card.card--quote .heading--h6 {
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources h1 a, body.kss .kss-example-preview .box--data-sources .heading--homepage a, body.kss .kss-example-preview .box--data-sources .heading--product a, body.kss .kss-example-preview .box--data-sources .heading--download a, body.kss .kss-example-preview .box--data-sources .heading--h1 a,
-body.kss .kss-example-preview .box--data-sources h2 a, body.kss .kss-example-preview .box--data-sources .heading--medium a, body.kss .kss-example-preview .box--data-sources .heading--h2 a,
-body.kss .kss-example-preview .box--data-sources h3 a, body.kss .kss-example-preview .box--data-sources .heading--small a, body.kss .kss-example-preview .box--data-sources .heading--h3 a,
-body.kss .kss-example-preview .box--data-sources h4 a, body.kss .kss-example-preview .box--data-sources .heading--x-small a, body.kss .kss-example-preview .box--data-sources .heading--h4 a,
-body.kss .kss-example-preview .box--data-sources h5 a, body.kss .kss-example-preview .box--data-sources .heading--label a, body.kss .kss-example-preview .box--data-sources .heading--h5 a,
-body.kss .kss-example-preview .box--data-sources h6 a, body.kss .kss-example-preview .box--data-sources .heading--h6 a {
+body.kss .kss-example-preview .box--data-sources h1 a, body.kss .kss-example-preview .card.card--quote h1 a, body.kss .kss-example-preview .box--data-sources .heading--homepage a, body.kss .kss-example-preview .card.card--quote .heading--homepage a, body.kss .kss-example-preview .box--data-sources .heading--product a, body.kss .kss-example-preview .card.card--quote .heading--product a, body.kss .kss-example-preview .box--data-sources .heading--download a, body.kss .kss-example-preview .card.card--quote .heading--download a, body.kss .kss-example-preview .box--data-sources .heading--h1 a,
+body.kss .kss-example-preview .card.card--quote .heading--h1 a, body.kss .kss-example-preview .box--data-sources h2 a, body.kss .kss-example-preview .card.card--quote h2 a, body.kss .kss-example-preview .box--data-sources .heading--medium a, body.kss .kss-example-preview .card.card--quote .heading--medium a, body.kss .kss-example-preview .box--data-sources .heading--h2 a,
+body.kss .kss-example-preview .card.card--quote .heading--h2 a, body.kss .kss-example-preview .box--data-sources h3 a, body.kss .kss-example-preview .card.card--quote h3 a, body.kss .kss-example-preview .box--data-sources .heading--small a, body.kss .kss-example-preview .card.card--quote .heading--small a, body.kss .kss-example-preview .box--data-sources .heading--h3 a,
+body.kss .kss-example-preview .card.card--quote .heading--h3 a, body.kss .kss-example-preview .box--data-sources h4 a, body.kss .kss-example-preview .card.card--quote h4 a, body.kss .kss-example-preview .box--data-sources .heading--x-small a, body.kss .kss-example-preview .card.card--quote .heading--x-small a, body.kss .kss-example-preview .box--data-sources .heading--h4 a,
+body.kss .kss-example-preview .card.card--quote .heading--h4 a, body.kss .kss-example-preview .box--data-sources h5 a, body.kss .kss-example-preview .card.card--quote h5 a, body.kss .kss-example-preview .box--data-sources .heading--label a, body.kss .kss-example-preview .card.card--quote .heading--label a, body.kss .kss-example-preview .box--data-sources .heading--h5 a,
+body.kss .kss-example-preview .card.card--quote .heading--h5 a, body.kss .kss-example-preview .box--data-sources h6 a, body.kss .kss-example-preview .card.card--quote h6 a, body.kss .kss-example-preview .box--data-sources .heading--h6 a, body.kss .kss-example-preview .card.card--quote .heading--h6 a {
   color: #fff;
 }
 
@@ -3995,13 +3996,13 @@ body.kss .kss-example-preview .box--about-featured .hero__video:after {
 }
 
 body.kss .kss-example-preview .box--data-sources .hero__background:before,
-body.kss .kss-example-preview .box--data-sources .hero__video:before {
+body.kss .kss-example-preview .card.card--quote .hero__background:before, body.kss .kss-example-preview .box--data-sources .hero__video:before, body.kss .kss-example-preview .card.card--quote .hero__video:before {
   background-image: -webkit-linear-gradient(left, #2e4c65, transparent);
   background-image: linear-gradient(to right, #2e4c65, transparent);
 }
 
 body.kss .kss-example-preview .box--data-sources .hero__background:after,
-body.kss .kss-example-preview .box--data-sources .hero__video:after {
+body.kss .kss-example-preview .card.card--quote .hero__background:after, body.kss .kss-example-preview .box--data-sources .hero__video:after, body.kss .kss-example-preview .card.card--quote .hero__video:after {
   background-image: -webkit-linear-gradient(right, #2e4c65, transparent);
   background-image: linear-gradient(to left, #2e4c65, transparent);
 }
@@ -4300,6 +4301,7 @@ body.kss .kss-example-preview .card {
 }
 
 body.kss .kss-example-preview .card .card__thumbnail {
+  display: block;
   border-radius: 2px;
 }
 
@@ -4308,10 +4310,11 @@ body.kss .kss-example-preview .card .card__details {
 }
 
 body.kss .kss-example-preview .card .card__label {
+  margin-top: 1em;
   line-height: 1.4;
 }
 
-body.kss .kss-example-preview .card .card__title {
+body.kss .kss-example-preview .card .card__title, body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
   position: relative;
   max-height: 4.8em;
   overflow: hidden;
@@ -4325,15 +4328,10 @@ body.kss .kss-example-preview .card .card__tags {
   overflow: hidden;
 }
 
-body.kss .kss-example-preview .card.card--wide .card__title {
+body.kss .kss-example-preview .card.card--wide .card__title, body.kss .kss-example-preview .card.card--wide .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card.card--wide h3.card__quote, body.kss .kss-example-preview .card.card--wide .card.card--quote .card__quote.heading--small, body.kss .kss-example-preview .card.card--quote .card.card--wide .card__quote.heading--small {
   max-height: 3.2em;
   margin: 0.66em 0;
   font-size: 2.14em;
-}
-
-body.kss .kss-example-preview .card.card--quote {
-  background: #2e4c65;
-  color: #fff;
 }
 
 @media (min-width: 640px) {
@@ -4349,6 +4347,106 @@ body.kss .kss-example-preview .card.card--quote {
   }
   body.kss .kss-example-preview .card.card--row-end {
     margin-right: 0;
+  }
+}
+
+body.kss .kss-example-preview .card.card--quote .card__quote-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  padding-top: 1px;
+  margin-bottom: 14.4em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__quote-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -14.4em;
+  width: 100%;
+  height: 12em;
+  background-image: -webkit-linear-gradient(bottom, #2e4c65, transparent);
+  background-image: linear-gradient(to top, #2e4c65, transparent);
+}
+
+body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
+  max-height: inherit;
+  height: 0;
+  margin-top: 1.5em;
+  padding-bottom: 140%;
+  font-size: 1.8571428571em;
+  color: #fff;
+}
+
+body.kss .kss-example-preview .card.card--quote h3.card__quote:after, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small:after {
+  content: '\201E';
+  display: block;
+  margin-top: -0.5em;
+  font-size: 2.5em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__label,
+body.kss .kss-example-preview .card.card--quote .card__tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__label {
+  overflow: hidden;
+  padding-right: .5em;
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags {
+  padding-left: .5em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags ul {
+  margin: 0;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .card.card--quote .tags-list__lable {
+  display: none;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 95%;
+  padding-top: 2em;
+  margin-bottom: 5%;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary p:first-child {
+  margin-top: -1em;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  background-image: -webkit-linear-gradient(bottom, #fff, transparent);
+  background-image: linear-gradient(to top, #fff, transparent);
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .card .card__inner {
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 16em;
+  }
+  body.kss .kss-example-preview .card.card--wide .card__inner {
+    height: 0;
+    padding-bottom: 48.5437%;
   }
 }
 
@@ -5123,7 +5221,7 @@ body.kss .kss-example-preview .topic-nav a {
 }
 
 body.kss .kss-example-preview .topic-nav .topic-nav__tabs {
-  margin-bottom: .7em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
@@ -5142,7 +5240,7 @@ body.kss .kss-example-preview .topic-nav .topic-nav__tabs a:after {
   opacity: 0;
   width: 0;
   height: 0;
-  top: 34px;
+  top: 45px;
   left: 50%;
   margin-left: -20px;
   border-left: 20px solid transparent;
@@ -5163,6 +5261,15 @@ body.kss .kss-example-preview .topic-nav .topic-nav__tabs a.active {
 
 body.kss .kss-example-preview .topic-nav .topic-nav__tabs a.active:after {
   opacity: 1;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
+    margin: 0 0.5em;
+  }
+  body.kss .kss-example-preview .topic-nav .topic-nav__tabs a:after {
+    display: none;
+  }
 }
 
 body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
@@ -5186,11 +5293,12 @@ body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   padding: 4em;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 960px) {
   body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
+    padding: 3em 0;
   }
 }
 
@@ -5326,7 +5434,7 @@ body.kss .kss-example-preview .text--benton-medium {
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview .card .card__title {
+body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview .card .card__title, body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
   font-family: "Merriweather", serif;
 }
 
