@@ -13,7 +13,9 @@
       {{#if quote}}
         <div class="card__quote-wrapper">
           <h3 class="card__quote">
-            {{{ quote }}}
+            <a href="{{ url }}">
+              {{{ quote }}}
+            </a>
           </h3>
         </div>
       {{/if}}
@@ -37,7 +39,9 @@
       {{/if}}
       {{#if summary}}
         <div class="card__summary">
-          {{{ summary }}}
+          <a href="{{ url }}">
+            {{{ summary }}}
+          </a>
         </div>
       {{/if}}
     </div>
