@@ -195,13 +195,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li {
   list-style: none;
 }
 
@@ -209,7 +209,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -449,13 +449,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li {
   list-style: none;
 }
 
@@ -463,7 +463,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -3905,6 +3905,23 @@ Style guide: lists.teaser
   }
 }
 
+/*
+Text Teaser List
+
+Short list of related/recommeded items, used for page footers.
+NOTE: Duplicated as mustache template for front-end LiftIgniter rendering!!!
+
+Weight: 10
+
+Markup: text_teaser_list.hbs
+
+Style guide: lists.text_teaser
+*/
+.text-teaser-list .text-teaser-list__title a {
+  font-family: "Merriweather", serif;
+  color: #787878;
+}
+
 /* 
 Standard Unordered List
 
@@ -5044,12 +5061,18 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .hero-slideshow .hero-slideshow__arrow, .tabs__tabs .tabs__tab-link, .tags-list, .quote .quote__byline {
+.text--label, .hero-slideshow .hero-slideshow__arrow, .tabs__tabs .tabs__tab-link, .tags-list, .text-teaser-list .text-teaser-list__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.text--border, .text-teaser-list .text-teaser-list__type {
+  border-bottom: 1px dotted #dedede;
+  padding-top: 0.7142857143em;
+  margin-bottom: 0.7142857143em;
 }
 
 /*
