@@ -195,13 +195,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -209,7 +209,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -449,13 +449,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -463,7 +463,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -4147,6 +4147,22 @@ Style guide: lists.teaser
   }
 }
 
+/*
+Text Teaser List
+
+Short list of related/recommeded items, used for page footers.
+
+Weight: 10
+
+Markup: text_teaser_list.hbs
+
+Style guide: lists.text_teaser
+*/
+.text-teaser-list .text-teaser-list__title a {
+  font-family: "Merriweather", serif;
+  color: #787878;
+}
+
 /* 
 Standard Unordered List
 
@@ -5407,6 +5423,7 @@ Weight: 5
 .text--sub-nav - Sub Nav Mission
 .text--dropdown - Dropdown Copy
 .text--label - Label/Nav item
+.text--border - Text with border underline
 
 Style guide: typography.other
 */
@@ -5429,12 +5446,18 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .hero-slideshow .hero-slideshow__arrow, .tabs__tabs .tabs__tab-link, .tags-list, .quote .quote__byline {
+.text--label, .hero-slideshow .hero-slideshow__arrow, .tabs__tabs .tabs__tab-link, .tags-list, .text-teaser-list .text-teaser-list__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.text--border, .text-teaser-list .text-teaser-list__type {
+  border-bottom: 1px dotted #dedede;
+  padding-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 /*

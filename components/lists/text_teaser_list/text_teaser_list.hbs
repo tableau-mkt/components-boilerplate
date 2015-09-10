@@ -1,0 +1,12 @@
+<ul class="text-teaser-list {{ modifier_class }}">
+  {{#each items}}
+  <li class="text-teaser-list__item grid--4">
+    {{#if type}}<p class="text-teaser-list__type">{{ type }}</p>{{/if}}
+    <h4 class="text-teaser-list__title">
+      <a href="{{ url }}">{{ title }}</a>
+    </h4>
+  </li>
+  {{/each}}
+</ul>
+
+{{! NOTE: Duplicate Mustache template used for front-end LiftIgniter rendering. }}

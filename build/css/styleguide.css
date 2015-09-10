@@ -914,6 +914,17 @@ Markup: teaser-list.hbs
 
 Style guide: lists.teaser
 */
+  /*
+Text Teaser List
+
+Short list of related/recommeded items, used for page footers.
+
+Weight: 10
+
+Markup: text_teaser_list.hbs
+
+Style guide: lists.text_teaser
+*/
   /* 
 Standard Unordered List
 
@@ -1100,6 +1111,7 @@ Weight: 5
 .text--sub-nav - Sub Nav Mission
 .text--dropdown - Dropdown Copy
 .text--label - Label/Nav item
+.text--border - Text with border underline
 
 Style guide: typography.other
 */
@@ -1466,13 +1478,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -1480,7 +1492,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .ta
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1597,13 +1609,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -1611,7 +1623,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .ta
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -4579,6 +4591,11 @@ body.kss .kss-example-preview .teaser-list .teaser-list__link {
   }
 }
 
+body.kss .kss-example-preview .text-teaser-list .text-teaser-list__title a {
+  font-family: "Merriweather", serif;
+  color: #787878;
+}
+
 body.kss .kss-example-preview ul {
   list-style-image: url(../images/icons/bullet.png);
   padding-left: 1em;
@@ -5672,12 +5689,18 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .quote .quote__byline {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .text-teaser-list .text-teaser-list__type, body.kss .kss-example-preview .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body.kss .kss-example-preview .text--border, body.kss .kss-example-preview .text-teaser-list .text-teaser-list__type {
+  border-bottom: 1px dotted #dedede;
+  padding-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
