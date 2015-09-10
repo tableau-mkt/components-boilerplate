@@ -36,7 +36,7 @@
         if (!$(this).hasClass('active')) {
           var $link = $(this),
               $content = $('#' + $link.data('tab-content')),
-              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
+              $previousLink = $link.closest("ul").find('a.active'),
               $previousContent = $('#' + $previousLink.data('tab-content')),
               previousContentHeight = $previousContent.outerHeight(true),
               $flyoutContainer = $content.closest('.flyout__content'),
@@ -70,14 +70,16 @@
         e.preventDefault();
       });
       
-      settings.triggers.on('click.tabs-trigger', function(e) {
-        var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
+      if (settings.triggers) {
+        settings.triggers.on('click.tabs-trigger', function(e) {
+          var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+              $content = $('#' + $(this).data('tab-content'));
 
-        // Manage active class
-        settings.tabLinks.add(settings.contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
+          // Manage active class
+          settings.tabLinks.add(settings.contents).removeClass('active');
+          $link.add($content).addClass('active');
+        });
+      }
     }
 
     return this;

@@ -1,0 +1,23 @@
+{
+  "type": "quote",
+  "url": "#",
+  "label": "Actor",
+  "quote": "I am not a demon. I am a lizard, a shark, a heat-seeking panther. I want to be Bob Denver on acid playing the accordion.",
+  "tags": {
+    "label": "Tags:",
+    "tags": [
+      {
+        "link": {
+          "text": "Ghost Rider",
+          "href": "#"
+        }
+      },
+      {
+        "link": {
+          "text": "Face Off",
+          "href": "#"
+        }
+      }
+    ]
+  }
+}

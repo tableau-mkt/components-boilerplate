@@ -94,6 +94,7 @@ in CSS as well.
  * Options:
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
+ *   closeLink - Optional - [boolean] - whether a close link should be added
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
  * Usage:
@@ -109,6 +110,7 @@ in CSS as well.
     // Default settings
     var settings = $.extend({
       contents: $(this),
+      closeLink: true,
       animation: {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -119,7 +121,7 @@ in CSS as well.
       // Run setup
       setup();
 
-      settings.triggers.click(function(e) {
+      settings.triggers.on('click.reveal', function(e) {
         var state = $(this).data('revealState');
 
         if (state == 'closed') {
@@ -130,8 +132,8 @@ in CSS as well.
         e.preventDefault();
       });
 
-      $('.reveal__close').click(function(e) {
-        $(this).parent('.reveal__content').data('revealTrigger').click();
+      $('.reveal__close').on('click.reveal', function(e) {
+        hideContent($(this).parent('.reveal__content').data('revealTrigger'));
         e.preventDefault();
       });
 
@@ -151,7 +153,7 @@ in CSS as well.
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
           customAnimation = customAnimation || settings.animation;
 
-      $trigger.data('revealState', 'open')
+      $trigger.data('revealState', 'open').addClass('open');
       if (hideText != "") {
         $trigger.text(hideText);
       }
@@ -184,7 +186,7 @@ in CSS as well.
           showText = data.revealShowText,
           media = data.revealMedia;
 
-      $(trigger).data('revealState', 'closed').text(showText);
+      $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
       
       $target.slideHeight('up', settings.animation);
       
@@ -226,7 +228,9 @@ in CSS as well.
       // });
 
       // Add a close icon to each content continer
-      settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+      if (settings.closeLink) {
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+      }
     }
 
     function autoReveal() {
@@ -286,7 +290,7 @@ in CSS as well.
         if (!$(this).hasClass('active')) {
           var $link = $(this),
               $content = $('#' + $link.data('tab-content')),
-              $previousLink = $link.closest("ul").find('.tabs__tab-link.active'),
+              $previousLink = $link.closest("ul").find('a.active'),
               $previousContent = $('#' + $previousLink.data('tab-content')),
               previousContentHeight = $previousContent.outerHeight(true),
               $flyoutContainer = $content.closest('.flyout__content'),
@@ -320,14 +324,16 @@ in CSS as well.
         e.preventDefault();
       });
       
-      settings.triggers.on('click.tabs-trigger', function(e) {
-        var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-            $content = $('#' + $(this).data('tab-content'));
+      if (settings.triggers) {
+        settings.triggers.on('click.tabs-trigger', function(e) {
+          var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
+              $content = $('#' + $(this).data('tab-content'));
 
-        // Manage active class
-        settings.tabLinks.add(settings.contents).removeClass('active');
-        $link.add($content).addClass('active');
-      });
+          // Manage active class
+          settings.tabLinks.add(settings.contents).removeClass('active');
+          $link.add($content).addClass('active');
+        });
+      }
     }
 
     return this;
@@ -1050,6 +1056,46 @@ function dataSourcesSearch() {
     
   });
 })(jQuery);
+;
+/** 
+ * Topic Navigation interaction
+ * Requires jquery.contentReveal.js and jquery.tabs.js
+ */
+
+(function ( $ ) {
+  $(document).ready(function() {
+    // Tabs integration
+    $('.topic-nav__tabs a').tabs({
+      contents: $('.topic-nav__drawer')
+    });
+
+    // contentReveal interaction
+    $('.topic-nav__drawers').contentReveal({
+      triggers: $('.topic-nav__toggle'),
+      closeLink: false
+    });
+
+    // Custom tweaks
+    $('.topic-nav__toggle').on('click.topic-nav', function(e) {
+      var $parentNav = $(this).closest('.topic-nav');
+
+      if ($(this).data('revealState') == 'open') {
+        $parentNav.find('.topic-nav__tabs a').eq(0).trigger('click').addClass('active');
+      } else {
+        $parentNav.find('.topic-nav__tabs a').removeClass('active');
+      }
+    });
+
+    $('.topic-nav__tabs a').on('click.topic-nav', function(e) {
+      var $toggle = $(this).closest('.topic-nav').find('.topic-nav__toggle');
+      
+      if ($toggle.data('revealState') == 'closed') {
+        $toggle.trigger('click.reveal');
+      }
+    });
+
+  });
+}( jQuery ));
 ;
 (function($){
   $(document).ready(function(){

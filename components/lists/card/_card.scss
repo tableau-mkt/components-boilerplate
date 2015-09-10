@@ -5,8 +5,7 @@ Card Teaser
 
 Markup: card.hbs
 
-.card--wide - Double-wide version of a card.
-.card--quote - A highlighted card used for promoting an item with a quote.
+Weight: 15
 
 Style Guide: lists.card
 */
@@ -19,7 +18,20 @@ Style Guide: lists.card
   border-radius: 2px;
 
   .card__thumbnail {
+    display: block;
     border-radius: 2px;
+    background: $bg-data-sources;
+
+    img {
+      width: 100%;
+      opacity: 0.6;
+      filter: grayscale(1);
+    }
+
+    &:hover img {
+      opacity: 1;
+      filter: grayscale(0);
+    }
   }
 
   .card__details {
@@ -27,11 +39,13 @@ Style Guide: lists.card
   }
 
   .card__label {
+    margin-top: 1em;
     line-height: 1.4;
   }
 
   .card__title {
     position: relative;
+    // We want at most 3 lines visible. line-height 1.6 * 3 = 4.8em
     max-height: 4.8em;
     overflow: hidden;
     margin: 1em 0;
@@ -50,34 +64,193 @@ Style Guide: lists.card
     }
   }
 
+  .card__title a,
+  .card__quote a,
+  .card__summary a {
+    display: block;
+  }
+
   .card__tags {
     max-height: 1.86em;
     overflow: hidden;
   }
 
-  &.card--wide {
-    .card__title {
-      max-height: 3.2em;
-      margin: 0.66em 0;
-      font-size: 2.14em;
+  @include breakpoint($tablet-min) {
+    // Maintain card proportions when scaling
+    .card__inner {
+      height: 0;
+      padding-bottom: 100%;
+      margin-bottom:16em;
     }
-  }
-
-
-  &.card--quote {
-    background: $bg-data-sources;
-    color: $white;
   }
   
   @include breakpoint($tablet-min) {
     @include span(4);
     
-    &.card--wide {
-      @include span(8);
-    }
-    
     &.card--row-end {
       margin-right: 0;
+    }
+  }
+}
+
+
+/*
+Wide Card Teaser
+
+Double-wide version of a card.
+
+Markup: card-wide.hbs
+
+Weight: 16
+
+Style Guide: lists.card-wide
+*/
+.card.card--wide {
+  .card__title {
+    // We want at most 2 lines visible. line-height 1.6 * 2 = 3.8em
+    max-height: 3.2em;
+    margin: 0.66em 0;
+    font-size: 2.14em;
+  }
+
+  @include breakpoint($tablet-min) {
+    // Maintain card proportions when scaling
+    .card__inner {
+      height: 0;
+      padding-bottom: 48.5437%;
+    }
+  }
+  
+  @include breakpoint($tablet-min) {
+    @include span(8);
+
+    &.card--row-end {
+      margin-right: 0;
+    }
+  }
+}
+
+
+/*
+Quote Card Teaser
+
+A highlighted card used for promoting an item with a quote.
+
+Markup: card-quote.hbs
+
+Weight: 17
+
+Style Guide: lists.card-quote
+*/
+
+.card.card--quote {
+  @extend .box--data-sources;
+
+  .card__quote-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    padding-top: 1px;
+    margin-bottom: 14.4em;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -14.4em;
+      width: 100%;
+      height: 12em;
+      background-image: linear-gradient(to top, $bg-data-sources, transparent); 
+    }
+  }
+
+  h3.card__quote {
+    @extend .card__title;
+    max-height: inherit;
+    height: 0;
+    margin-top: 1.5em;
+    padding-bottom: 140%;
+    font-size: em(26px);
+    color: $text-negative;
+
+    &:after {
+      content: '\201E';
+      display: block;
+      margin-top: -0.5em;
+      font-size: 2.5em;
+    }
+  }
+
+  .card__label,
+  .card__tags {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card__label {
+    overflow: hidden;
+    padding-right: .5em;
+    border-right: 1px solid $accent-dividers;
+  }
+
+  .card__tags {
+    padding-left: .5em;
+
+    ul {
+      margin: 0;
+    }
+
+    a {
+      color: $text-negative;        
+    }
+  }
+
+  .tags-list__lable {
+    display: none;
+  }
+}
+
+
+/*
+Summary Card Teaser
+
+A card that displays summary text and no thumbnail.
+
+Markup: card-summary.hbs
+
+Weight: 18
+
+Style Guide: lists.card-summary
+*/
+
+.card.card--summary {
+  .card__summary {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 95%;
+    padding-top: 2em;
+    margin-bottom: 5%;
+
+    a {
+      color: $text-dark-body;
+      text-decoration: none;
+    }
+
+    p:first-child {
+      margin-top: -1em;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10em;
+      pointer-events: none;
+      background-image: linear-gradient(to top, $white, transparent); 
     }
   }
 }

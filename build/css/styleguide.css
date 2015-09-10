@@ -329,16 +329,14 @@ Weight: 40
 Style guide: lists
 */
   /*
-Form Styles
+Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
 Weight: 50
 
-################################################################################
-# Style guide: forms ###########################################################
-################################################################################
+Style guide: forms 
 */
   /*
 Tables
@@ -515,6 +513,22 @@ Markup: form_confirmation.hbs
 Weight: 4
 
 Style guide: forms.confirmation
+*/
+  /*
+Section Search
+
+Section-level search form used within a specific section to search only content
+of that section. Displays autocomplete list and submits to global search results
+page filtered down to the corresponding section.
+
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+place of magnifying glass icon when text is in the field.
+
+Markup: section-search.hbs
+
+Weight: 10
+
+Style guide: forms.section-search
 */
   /*
 Thumbnail Image
@@ -826,10 +840,42 @@ Card Teaser
 
 Markup: card.hbs
 
-.card--wide - Double-wide version of a card.
-.card--quote - A highlighted card used for promoting an item with a quote.
+Weight: 15
 
 Style Guide: lists.card
+*/
+  /*
+Wide Card Teaser
+
+Double-wide version of a card.
+
+Markup: card-wide.hbs
+
+Weight: 16
+
+Style Guide: lists.card-wide
+*/
+  /*
+Quote Card Teaser
+
+A highlighted card used for promoting an item with a quote.
+
+Markup: card-quote.hbs
+
+Weight: 17
+
+Style Guide: lists.card-quote
+*/
+  /*
+Summary Card Teaser
+
+A card that displays summary text and no thumbnail.
+
+Markup: card-summary.hbs
+
+Weight: 18
+
+Style Guide: lists.card-summary
 */
   /* 
 Link List
@@ -872,7 +918,6 @@ Style guide: lists.teaser
 Text Teaser List
 
 Short list of related/recommeded items, used for page footers.
-NOTE: Duplicated as mustache template for front-end LiftIgniter rendering!!!
 
 Weight: 10
 
@@ -935,6 +980,15 @@ main categories throughout the page as jump links.
 Markup: subnav.hbs
 
 Style guide: navigation.subnav
+*/
+  /*
+Topic Navigation
+
+Used to navigate through different topics or categories of a section.
+
+Markup: topic-nav.hbs
+
+Style Guide: navigation.topic-nav
 */
   /* 
 Shameful hacks that should be fixed
@@ -1057,6 +1111,7 @@ Weight: 5
 .text--sub-nav - Sub Nav Mission
 .text--dropdown - Dropdown Copy
 .text--label - Label/Nav item
+.text--border - Text with border underline
 
 Style guide: typography.other
 */
@@ -1423,21 +1478,21 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1554,21 +1609,21 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1906,7 +1961,8 @@ body.kss .kss-example-preview .link.link--arrow:after {
 }
 
 body.kss .kss-example-preview .link.link--expand:before,
-body.kss .kss-example-preview .link.link--collapse:before {
+body.kss .kss-example-preview .link.link--collapse:before,
+body.kss .kss-example-preview .link.link--share:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
@@ -1918,6 +1974,10 @@ body.kss .kss-example-preview .link.link--expand:before {
 
 body.kss .kss-example-preview .link.link--collapse:before {
   content: url(../images/icons/collapse.png);
+}
+
+body.kss .kss-example-preview .link.link--share:before {
+  content: url(../images/icons/share.png);
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -2014,6 +2074,53 @@ body.kss .kss-example-preview input[type=submit].errored {
 body.kss .kss-example-preview .invalid {
   display: none;
   color: #DD1E06;
+}
+
+body.kss .kss-example-preview .section-search {
+  width: 60%;
+  position: relative;
+  margin: 2em auto;
+  background: #fafafa;
+  box-shadow: 2px 2px 3px #dedede inset;
+  border-radius: 50px;
+}
+
+body.kss .kss-example-preview .section-search input[type="search"] {
+  width: 100%;
+  margin: 0;
+  padding: 0.9em 64px 0.9em 1.3em;
+  background: none;
+  outline: 0;
+  font-size: 1.5em;
+  color: #787878;
+  font-family: "Merriweather", serif;
+}
+
+body.kss .kss-example-preview .section-search input[type="search"]::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .section-search input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0em;
+  text-indent: -99em;
+  background: none;
+  background-image: url("../images/icons/icon-magnifying-glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .section-search {
+    width: 100%;
+  }
 }
 
 body.kss .kss-example-preview .thumbnail {
@@ -2399,13 +2506,13 @@ body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
   opacity: 0;
 }
 
-body.kss .kss-example-preview .reveal__content {
+body.kss .kss-example-preview .reveal__content, body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
   position: relative;
   height: 0;
   overflow: hidden;
 }
 
-body.kss .kss-example-preview .reveal__content video {
+body.kss .kss-example-preview .reveal__content video, body.kss .kss-example-preview .topic-nav .topic-nav__drawers video {
   width: 100%;
 }
 
@@ -2455,19 +2562,19 @@ body.kss .kss-example-preview .tabs__tabs .tabs__tab-link.active {
   font-weight: bold;
 }
 
-body.kss .kss-example-preview .box--data-sources .tabs__tab-link {
+body.kss .kss-example-preview .box--data-sources .tabs__tab-link, body.kss .kss-example-preview .card.card--quote .tabs__tab-link {
   color: #a3b9cb;
 }
 
-body.kss .kss-example-preview .box--data-sources .tabs__tab-link.active {
+body.kss .kss-example-preview .box--data-sources .tabs__tab-link.active, body.kss .kss-example-preview .card.card--quote .tabs__tab-link.active {
   color: #fff;
 }
 
-body.kss .kss-example-preview .tabs__tab-content {
+body.kss .kss-example-preview .tabs__tab-content, body.kss .kss-example-preview .topic-nav .topic-nav__drawer {
   display: none;
 }
 
-body.kss .kss-example-preview .tabs__tab-content.active {
+body.kss .kss-example-preview .tabs__tab-content.active, body.kss .kss-example-preview .topic-nav .active.topic-nav__drawer {
   display: inherit;
 }
 
@@ -2735,26 +2842,26 @@ body.kss .kss-example-preview .box--about-featured h6 a, body.kss .kss-example-p
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources {
+body.kss .kss-example-preview .box--data-sources, body.kss .kss-example-preview .card.card--quote {
   background-color: #2e4c65;
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources h1, body.kss .kss-example-preview .box--data-sources .heading--homepage, body.kss .kss-example-preview .box--data-sources .heading--product, body.kss .kss-example-preview .box--data-sources .heading--download, body.kss .kss-example-preview .box--data-sources .heading--h1,
-body.kss .kss-example-preview .box--data-sources h2, body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
-body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
-body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
-body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
-body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .box--data-sources .heading--h6 {
+body.kss .kss-example-preview .box--data-sources h1, body.kss .kss-example-preview .card.card--quote h1, body.kss .kss-example-preview .box--data-sources .heading--homepage, body.kss .kss-example-preview .card.card--quote .heading--homepage, body.kss .kss-example-preview .box--data-sources .heading--product, body.kss .kss-example-preview .card.card--quote .heading--product, body.kss .kss-example-preview .box--data-sources .heading--download, body.kss .kss-example-preview .card.card--quote .heading--download, body.kss .kss-example-preview .box--data-sources .heading--h1,
+body.kss .kss-example-preview .card.card--quote .heading--h1, body.kss .kss-example-preview .box--data-sources h2, body.kss .kss-example-preview .card.card--quote h2, body.kss .kss-example-preview .box--data-sources .heading--medium, body.kss .kss-example-preview .card.card--quote .heading--medium, body.kss .kss-example-preview .box--data-sources .heading--h2,
+body.kss .kss-example-preview .card.card--quote .heading--h2, body.kss .kss-example-preview .box--data-sources h3, body.kss .kss-example-preview .card.card--quote h3, body.kss .kss-example-preview .box--data-sources .heading--small, body.kss .kss-example-preview .card.card--quote .heading--small, body.kss .kss-example-preview .box--data-sources .heading--h3,
+body.kss .kss-example-preview .card.card--quote .heading--h3, body.kss .kss-example-preview .box--data-sources h4, body.kss .kss-example-preview .card.card--quote h4, body.kss .kss-example-preview .box--data-sources .heading--x-small, body.kss .kss-example-preview .card.card--quote .heading--x-small, body.kss .kss-example-preview .box--data-sources .heading--h4,
+body.kss .kss-example-preview .card.card--quote .heading--h4, body.kss .kss-example-preview .box--data-sources h5, body.kss .kss-example-preview .card.card--quote h5, body.kss .kss-example-preview .box--data-sources .heading--label, body.kss .kss-example-preview .card.card--quote .heading--label, body.kss .kss-example-preview .box--data-sources .heading--h5,
+body.kss .kss-example-preview .card.card--quote .heading--h5, body.kss .kss-example-preview .box--data-sources h6, body.kss .kss-example-preview .card.card--quote h6, body.kss .kss-example-preview .box--data-sources .heading--h6, body.kss .kss-example-preview .card.card--quote .heading--h6 {
   color: #fff;
 }
 
-body.kss .kss-example-preview .box--data-sources h1 a, body.kss .kss-example-preview .box--data-sources .heading--homepage a, body.kss .kss-example-preview .box--data-sources .heading--product a, body.kss .kss-example-preview .box--data-sources .heading--download a, body.kss .kss-example-preview .box--data-sources .heading--h1 a,
-body.kss .kss-example-preview .box--data-sources h2 a, body.kss .kss-example-preview .box--data-sources .heading--medium a, body.kss .kss-example-preview .box--data-sources .heading--h2 a,
-body.kss .kss-example-preview .box--data-sources h3 a, body.kss .kss-example-preview .box--data-sources .heading--small a, body.kss .kss-example-preview .box--data-sources .heading--h3 a,
-body.kss .kss-example-preview .box--data-sources h4 a, body.kss .kss-example-preview .box--data-sources .heading--x-small a, body.kss .kss-example-preview .box--data-sources .heading--h4 a,
-body.kss .kss-example-preview .box--data-sources h5 a, body.kss .kss-example-preview .box--data-sources .heading--label a, body.kss .kss-example-preview .box--data-sources .heading--h5 a,
-body.kss .kss-example-preview .box--data-sources h6 a, body.kss .kss-example-preview .box--data-sources .heading--h6 a {
+body.kss .kss-example-preview .box--data-sources h1 a, body.kss .kss-example-preview .card.card--quote h1 a, body.kss .kss-example-preview .box--data-sources .heading--homepage a, body.kss .kss-example-preview .card.card--quote .heading--homepage a, body.kss .kss-example-preview .box--data-sources .heading--product a, body.kss .kss-example-preview .card.card--quote .heading--product a, body.kss .kss-example-preview .box--data-sources .heading--download a, body.kss .kss-example-preview .card.card--quote .heading--download a, body.kss .kss-example-preview .box--data-sources .heading--h1 a,
+body.kss .kss-example-preview .card.card--quote .heading--h1 a, body.kss .kss-example-preview .box--data-sources h2 a, body.kss .kss-example-preview .card.card--quote h2 a, body.kss .kss-example-preview .box--data-sources .heading--medium a, body.kss .kss-example-preview .card.card--quote .heading--medium a, body.kss .kss-example-preview .box--data-sources .heading--h2 a,
+body.kss .kss-example-preview .card.card--quote .heading--h2 a, body.kss .kss-example-preview .box--data-sources h3 a, body.kss .kss-example-preview .card.card--quote h3 a, body.kss .kss-example-preview .box--data-sources .heading--small a, body.kss .kss-example-preview .card.card--quote .heading--small a, body.kss .kss-example-preview .box--data-sources .heading--h3 a,
+body.kss .kss-example-preview .card.card--quote .heading--h3 a, body.kss .kss-example-preview .box--data-sources h4 a, body.kss .kss-example-preview .card.card--quote h4 a, body.kss .kss-example-preview .box--data-sources .heading--x-small a, body.kss .kss-example-preview .card.card--quote .heading--x-small a, body.kss .kss-example-preview .box--data-sources .heading--h4 a,
+body.kss .kss-example-preview .card.card--quote .heading--h4 a, body.kss .kss-example-preview .box--data-sources h5 a, body.kss .kss-example-preview .card.card--quote h5 a, body.kss .kss-example-preview .box--data-sources .heading--label a, body.kss .kss-example-preview .card.card--quote .heading--label a, body.kss .kss-example-preview .box--data-sources .heading--h5 a,
+body.kss .kss-example-preview .card.card--quote .heading--h5 a, body.kss .kss-example-preview .box--data-sources h6 a, body.kss .kss-example-preview .card.card--quote h6 a, body.kss .kss-example-preview .box--data-sources .heading--h6 a, body.kss .kss-example-preview .card.card--quote .heading--h6 a {
   color: #fff;
 }
 
@@ -3937,13 +4044,13 @@ body.kss .kss-example-preview .box--about-featured .hero__video:after {
 }
 
 body.kss .kss-example-preview .box--data-sources .hero__background:before,
-body.kss .kss-example-preview .box--data-sources .hero__video:before {
+body.kss .kss-example-preview .card.card--quote .hero__background:before, body.kss .kss-example-preview .box--data-sources .hero__video:before, body.kss .kss-example-preview .card.card--quote .hero__video:before {
   background-image: -webkit-linear-gradient(left, #2e4c65, transparent);
   background-image: linear-gradient(to right, #2e4c65, transparent);
 }
 
 body.kss .kss-example-preview .box--data-sources .hero__background:after,
-body.kss .kss-example-preview .box--data-sources .hero__video:after {
+body.kss .kss-example-preview .card.card--quote .hero__background:after, body.kss .kss-example-preview .box--data-sources .hero__video:after, body.kss .kss-example-preview .card.card--quote .hero__video:after {
   background-image: -webkit-linear-gradient(right, #2e4c65, transparent);
   background-image: linear-gradient(to left, #2e4c65, transparent);
 }
@@ -4242,7 +4349,22 @@ body.kss .kss-example-preview .card {
 }
 
 body.kss .kss-example-preview .card .card__thumbnail {
+  display: block;
   border-radius: 2px;
+  background: #2e4c65;
+}
+
+body.kss .kss-example-preview .card .card__thumbnail img {
+  width: 100%;
+  opacity: 0.6;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+body.kss .kss-example-preview .card .card__thumbnail:hover img {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 body.kss .kss-example-preview .card .card__details {
@@ -4250,10 +4372,11 @@ body.kss .kss-example-preview .card .card__details {
 }
 
 body.kss .kss-example-preview .card .card__label {
+  margin-top: 1em;
   line-height: 1.4;
 }
 
-body.kss .kss-example-preview .card .card__title {
+body.kss .kss-example-preview .card .card__title, body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
   position: relative;
   max-height: 4.8em;
   overflow: hidden;
@@ -4262,20 +4385,23 @@ body.kss .kss-example-preview .card .card__title {
   line-height: 1.6;
 }
 
+body.kss .kss-example-preview .card .card__title a,
+body.kss .kss-example-preview .card.card--quote h3.card__quote a, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small a, body.kss .kss-example-preview .card .card__quote a,
+body.kss .kss-example-preview .card .card__summary a {
+  display: block;
+}
+
 body.kss .kss-example-preview .card .card__tags {
   max-height: 1.86em;
   overflow: hidden;
 }
 
-body.kss .kss-example-preview .card.card--wide .card__title {
-  max-height: 3.2em;
-  margin: 0.66em 0;
-  font-size: 2.14em;
-}
-
-body.kss .kss-example-preview .card.card--quote {
-  background: #2e4c65;
-  color: #fff;
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .card .card__inner {
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 16em;
+  }
 }
 
 @media (min-width: 640px) {
@@ -4284,14 +4410,127 @@ body.kss .kss-example-preview .card.card--quote {
     float: left;
     margin-right: 2.1276595745%;
   }
+  body.kss .kss-example-preview .card.card--row-end {
+    margin-right: 0;
+  }
+}
+
+body.kss .kss-example-preview .card.card--wide .card__title, body.kss .kss-example-preview .card.card--wide .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card.card--wide h3.card__quote, body.kss .kss-example-preview .card.card--wide .card.card--quote .card__quote.heading--small, body.kss .kss-example-preview .card.card--quote .card.card--wide .card__quote.heading--small {
+  max-height: 3.2em;
+  margin: 0.66em 0;
+  font-size: 2.14em;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .card.card--wide .card__inner {
+    height: 0;
+    padding-bottom: 48.5437%;
+  }
+}
+
+@media (min-width: 640px) {
   body.kss .kss-example-preview .card.card--wide {
     width: 65.9574468085%;
     float: left;
     margin-right: 2.1276595745%;
   }
-  body.kss .kss-example-preview .card.card--row-end {
+  body.kss .kss-example-preview .card.card--wide.card--row-end {
     margin-right: 0;
   }
+}
+
+body.kss .kss-example-preview .card.card--quote .card__quote-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  padding-top: 1px;
+  margin-bottom: 14.4em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__quote-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -14.4em;
+  width: 100%;
+  height: 12em;
+  background-image: -webkit-linear-gradient(bottom, #2e4c65, transparent);
+  background-image: linear-gradient(to top, #2e4c65, transparent);
+}
+
+body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
+  max-height: inherit;
+  height: 0;
+  margin-top: 1.5em;
+  padding-bottom: 140%;
+  font-size: 1.8571428571em;
+  color: #fff;
+}
+
+body.kss .kss-example-preview .card.card--quote h3.card__quote:after, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small:after {
+  content: '\201E';
+  display: block;
+  margin-top: -0.5em;
+  font-size: 2.5em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__label,
+body.kss .kss-example-preview .card.card--quote .card__tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__label {
+  overflow: hidden;
+  padding-right: .5em;
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags {
+  padding-left: .5em;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags ul {
+  margin: 0;
+}
+
+body.kss .kss-example-preview .card.card--quote .card__tags a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .card.card--quote .tags-list__lable {
+  display: none;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 95%;
+  padding-top: 2em;
+  margin-bottom: 5%;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary a {
+  color: #333;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary p:first-child {
+  margin-top: -1em;
+}
+
+body.kss .kss-example-preview .card.card--summary .card__summary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  pointer-events: none;
+  background-image: -webkit-linear-gradient(bottom, #fff, transparent);
+  background-image: linear-gradient(to top, #fff, transparent);
 }
 
 body.kss .kss-example-preview .tags-list {
@@ -5063,6 +5302,140 @@ body.kss .kss-example-preview .subnav .subnav__links li.active a {
   }
 }
 
+body.kss .kss-example-preview .topic-nav a {
+  text-decoration: none;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
+  margin: 0 1em;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs a {
+  position: relative;
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs a:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  top: 45px;
+  left: 50%;
+  margin-left: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ebebeb;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs a:hover {
+  color: #333;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs a.active {
+  color: #333;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__tabs a.active:after {
+  opacity: 1;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
+    margin: 0 0.5em;
+  }
+  body.kss .kss-example-preview .topic-nav .topic-nav__tabs a:after {
+    display: none;
+  }
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
+  background: #ebebeb;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__drawer .content-container, body.kss .kss-example-preview .topic-nav .topic-nav__drawer .flyout__close-wrapper {
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  column-gap: 4em;
+  -webkit-column-rule: 1px solid #dedede;
+  -moz-column-rule: 1px solid #dedede;
+  column-rule: 1px solid #dedede;
+  padding: 4em;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    padding: 3em 0;
+  }
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__topic-list a {
+  color: #787878;
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  font-size: 1.14em;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__topic-list a:hover {
+  color: #333;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper {
+  height: 0;
+  z-index: 5;
+  position: relative;
+  text-align: center;
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background-image: url("../images/icons/drop-down-arrow-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  line-height: 40px;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body.kss .kss-example-preview .topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle.open {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 @media (max-width: 639px) {
   body.kss .kss-example-preview .shame__additional-features .grid--1 {
     float: left;
@@ -5149,7 +5522,7 @@ body.kss .kss-example-preview .text--benton-medium {
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview .card .card__title {
+body.kss .kss-example-preview .text--merriweather-light, body.kss .kss-example-preview .card .card__title, body.kss .kss-example-preview .card.card--quote h3.card__quote, body.kss .kss-example-preview .card.card--quote .card__quote.heading--small {
   font-family: "Merriweather", serif;
 }
 
@@ -5297,7 +5670,7 @@ body.kss .kss-example-preview .text--mission-3 {
   color: #5facce !important;
 }
 
-body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav__top .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete {
+body.kss .kss-example-preview .text--large-copy, body.kss .kss-example-preview .global-nav__top .global-nav__search input[type='search'], body.kss .kss-example-preview .ui-autocomplete, body.kss .kss-example-preview .topic-nav .topic-nav__tabs {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.7142857143em;
   color: #333;
@@ -5326,8 +5699,8 @@ body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-
 
 body.kss .kss-example-preview .text--border, body.kss .kss-example-preview .text-teaser-list .text-teaser-list__type {
   border-bottom: 1px dotted #dedede;
-  padding-top: 0.7142857143em;
-  margin-bottom: 0.7142857143em;
+  padding-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--homepage, body.kss .kss-example-preview .heading--product, body.kss .kss-example-preview .heading--download, body.kss .kss-example-preview .heading--h1,
@@ -5881,40 +6254,40 @@ body.kss .kss-example-preview .icon--statistics:before {
   content: url(../images/icons/statistics.png);
 }
 
-body.kss .kss-example-preview .icon--arrow-long {
+body.kss .kss-example-preview .icon--arrow-long:before {
   content: url(../images/icons/icon-arrow-long.png);
 }
 
-body.kss .kss-example-preview .icon--arrow-long-down {
+body.kss .kss-example-preview .icon--arrow-long-down:before {
   content: url(../images/icons/icon-arrow-long-down.png);
 }
 
-body.kss .kss-example-preview .icon--expand {
+body.kss .kss-example-preview .icon--expand:before {
   content: url(../images/icons/expand.png);
 }
 
-body.kss .kss-example-preview .icon--collapse {
+body.kss .kss-example-preview .icon--collapse:before {
   content: url(../images/icons/collapse.png);
 }
 
-body.kss .kss-example-preview .icon--slideshow-prev-light {
+body.kss .kss-example-preview .icon--slideshow-prev-light:before {
   content: url("../images/icons/slideshow-prev-light.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-next-light {
+body.kss .kss-example-preview .icon--slideshow-next-light:before {
   content: url("../images/icons/slideshow-next-light.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-prev-dark {
+body.kss .kss-example-preview .icon--slideshow-prev-dark:before {
   content: url("../images/icons/slideshow-prev-dark.png");
 }
 
-body.kss .kss-example-preview .icon--slideshow-next-dark {
+body.kss .kss-example-preview .icon--slideshow-next-dark:before {
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
-body.kss .kss-example-preview .icon--magnifying-glass {
-  content: url("../images/icons/icon-magnifying-glass.svg");
+body.kss .kss-example-preview .icon--magnifying-glass:before {
+  content: url("../images/icons/icon-magnifying-glass.png");
 }
 
 body.kss .kss-example-preview .icon--ecosystem-style {

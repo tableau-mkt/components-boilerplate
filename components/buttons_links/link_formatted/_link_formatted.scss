@@ -31,7 +31,8 @@ Style guide: buttons-links.link-formatted
   }
 
   &.link--expand:before,
-  &.link--collapse:before {
+  &.link--collapse:before,
+  &.link--share:before {
     display: inline-block;
     vertical-align: top;
     padding-right: 1em;
@@ -43,5 +44,9 @@ Style guide: buttons-links.link-formatted
 
   &.link--collapse:before {
     content: url(../images/icons/collapse.png);
+  }
+
+  &.link--share:before {
+    content: url(../images/icons/share.png);
   }
 }

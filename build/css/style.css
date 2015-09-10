@@ -195,21 +195,21 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -449,21 +449,21 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .teaser-list:after, .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -590,16 +590,14 @@ Weight: 40
 Style guide: lists
 */
 /*
-Form Styles
+Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
 Weight: 50
 
-################################################################################
-# Style guide: forms ###########################################################
-################################################################################
+Style guide: forms 
 */
 /*
 Tables
@@ -1044,7 +1042,8 @@ Style guide: buttons-links.link-formatted
 }
 
 .link.link--expand:before,
-.link.link--collapse:before {
+.link.link--collapse:before,
+.link.link--share:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
@@ -1056,6 +1055,10 @@ Style guide: buttons-links.link-formatted
 
 .link.link--collapse:before {
   content: url(../images/icons/collapse.png);
+}
+
+.link.link--share:before {
+  content: url(../images/icons/share.png);
 }
 
 /*
@@ -1214,6 +1217,69 @@ Weight: 4
 
 Style guide: forms.confirmation
 */
+/*
+Section Search
+
+Section-level search form used within a specific section to search only content
+of that section. Displays autocomplete list and submits to global search results
+page filtered down to the corresponding section.
+
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+place of magnifying glass icon when text is in the field.
+
+Markup: section-search.hbs
+
+Weight: 10
+
+Style guide: forms.section-search
+*/
+.section-search {
+  width: 60%;
+  position: relative;
+  margin: 2em auto;
+  background: #fafafa;
+  box-shadow: 2px 2px 3px #dedede inset;
+  border-radius: 50px;
+}
+
+.section-search input[type="search"] {
+  width: 100%;
+  margin: 0;
+  padding: 0.9em 64px 0.9em 1.3em;
+  background: none;
+  outline: 0;
+  font-size: 1.5em;
+  color: #787878;
+  font-family: "Merriweather", serif;
+}
+
+.section-search input[type="search"]::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.section-search input[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0em;
+  text-indent: -99em;
+  background: none;
+  background-image: url("../images/icons/icon-magnifying-glass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  .section-search {
+    width: 100%;
+  }
+}
+
 /*
 Thumbnail Image
 
@@ -1678,13 +1744,13 @@ Markup: reveal.hbs
 
 Style guide: interactive.reveal
 */
-.reveal__content {
+.reveal__content, .topic-nav .topic-nav__drawers {
   position: relative;
   height: 0;
   overflow: hidden;
 }
 
-.reveal__content video {
+.reveal__content video, .topic-nav .topic-nav__drawers video {
   width: 100%;
 }
 
@@ -1752,19 +1818,19 @@ Style guide: interactive.tabs
   font-weight: bold;
 }
 
-.box--data-sources .tabs__tab-link {
+.box--data-sources .tabs__tab-link, .card.card--quote .tabs__tab-link {
   color: #a3b9cb;
 }
 
-.box--data-sources .tabs__tab-link.active {
+.box--data-sources .tabs__tab-link.active, .card.card--quote .tabs__tab-link.active {
   color: #fff;
 }
 
-.tabs__tab-content {
+.tabs__tab-content, .topic-nav .topic-nav__drawer {
   display: none;
 }
 
-.tabs__tab-content.active {
+.tabs__tab-content.active, .topic-nav .active.topic-nav__drawer {
   display: inherit;
 }
 
@@ -2077,26 +2143,36 @@ Style guide: layout.colored
   color: #fff;
 }
 
-.box--data-sources {
+.box--data-sources, .card.card--quote {
   background-color: #2e4c65;
   color: #fff;
 }
 
-.box--data-sources h1, .box--data-sources .heading--homepage, .box--data-sources .heading--product, .box--data-sources .heading--download, .box--data-sources .heading--h1,
-.box--data-sources h2, .box--data-sources .heading--medium, .box--data-sources .heading--h2,
-.box--data-sources h3, .box--data-sources .heading--small, .box--data-sources .heading--h3,
-.box--data-sources h4, .box--data-sources .heading--x-small, .box--data-sources .heading--h4,
-.box--data-sources h5, .box--data-sources .heading--label, .box--data-sources .heading--h5,
-.box--data-sources h6, .box--data-sources .heading--h6 {
+.box--data-sources h1, .card.card--quote h1, .box--data-sources .heading--homepage, .card.card--quote .heading--homepage, .box--data-sources .heading--product, .card.card--quote .heading--product, .box--data-sources .heading--download, .card.card--quote .heading--download, .box--data-sources .heading--h1,
+.card.card--quote .heading--h1,
+.box--data-sources h2, .card.card--quote h2, .box--data-sources .heading--medium, .card.card--quote .heading--medium, .box--data-sources .heading--h2,
+.card.card--quote .heading--h2,
+.box--data-sources h3, .card.card--quote h3, .box--data-sources .heading--small, .card.card--quote .heading--small, .box--data-sources .heading--h3,
+.card.card--quote .heading--h3,
+.box--data-sources h4, .card.card--quote h4, .box--data-sources .heading--x-small, .card.card--quote .heading--x-small, .box--data-sources .heading--h4,
+.card.card--quote .heading--h4,
+.box--data-sources h5, .card.card--quote h5, .box--data-sources .heading--label, .card.card--quote .heading--label, .box--data-sources .heading--h5,
+.card.card--quote .heading--h5,
+.box--data-sources h6, .card.card--quote h6, .box--data-sources .heading--h6, .card.card--quote .heading--h6 {
   color: #fff;
 }
 
-.box--data-sources h1 a, .box--data-sources .heading--homepage a, .box--data-sources .heading--product a, .box--data-sources .heading--download a, .box--data-sources .heading--h1 a,
-.box--data-sources h2 a, .box--data-sources .heading--medium a, .box--data-sources .heading--h2 a,
-.box--data-sources h3 a, .box--data-sources .heading--small a, .box--data-sources .heading--h3 a,
-.box--data-sources h4 a, .box--data-sources .heading--x-small a, .box--data-sources .heading--h4 a,
-.box--data-sources h5 a, .box--data-sources .heading--label a, .box--data-sources .heading--h5 a,
-.box--data-sources h6 a, .box--data-sources .heading--h6 a {
+.box--data-sources h1 a, .card.card--quote h1 a, .box--data-sources .heading--homepage a, .card.card--quote .heading--homepage a, .box--data-sources .heading--product a, .card.card--quote .heading--product a, .box--data-sources .heading--download a, .card.card--quote .heading--download a, .box--data-sources .heading--h1 a,
+.card.card--quote .heading--h1 a,
+.box--data-sources h2 a, .card.card--quote h2 a, .box--data-sources .heading--medium a, .card.card--quote .heading--medium a, .box--data-sources .heading--h2 a,
+.card.card--quote .heading--h2 a,
+.box--data-sources h3 a, .card.card--quote h3 a, .box--data-sources .heading--small a, .card.card--quote .heading--small a, .box--data-sources .heading--h3 a,
+.card.card--quote .heading--h3 a,
+.box--data-sources h4 a, .card.card--quote h4 a, .box--data-sources .heading--x-small a, .card.card--quote .heading--x-small a, .box--data-sources .heading--h4 a,
+.card.card--quote .heading--h4 a,
+.box--data-sources h5 a, .card.card--quote h5 a, .box--data-sources .heading--label a, .card.card--quote .heading--label a, .box--data-sources .heading--h5 a,
+.card.card--quote .heading--h5 a,
+.box--data-sources h6 a, .card.card--quote h6 a, .box--data-sources .heading--h6 a, .card.card--quote .heading--h6 a {
   color: #fff;
 }
 
@@ -3368,13 +3444,15 @@ Style guide: layout.hero
 }
 
 .box--data-sources .hero__background:before,
-.box--data-sources .hero__video:before {
+.card.card--quote .hero__background:before,
+.box--data-sources .hero__video:before, .card.card--quote .hero__video:before {
   background-image: -webkit-linear-gradient(left, #2e4c65, transparent);
   background-image: linear-gradient(to right, #2e4c65, transparent);
 }
 
 .box--data-sources .hero__background:after,
-.box--data-sources .hero__video:after {
+.card.card--quote .hero__background:after,
+.box--data-sources .hero__video:after, .card.card--quote .hero__video:after {
   background-image: -webkit-linear-gradient(right, #2e4c65, transparent);
   background-image: linear-gradient(to left, #2e4c65, transparent);
 }
@@ -3744,8 +3822,7 @@ Card Teaser
 
 Markup: card.hbs
 
-.card--wide - Double-wide version of a card.
-.card--quote - A highlighted card used for promoting an item with a quote.
+Weight: 15
 
 Style Guide: lists.card
 */
@@ -3758,7 +3835,22 @@ Style Guide: lists.card
 }
 
 .card .card__thumbnail {
+  display: block;
   border-radius: 2px;
+  background: #2e4c65;
+}
+
+.card .card__thumbnail img {
+  width: 100%;
+  opacity: 0.6;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.card .card__thumbnail:hover img {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .card .card__details {
@@ -3766,10 +3858,11 @@ Style Guide: lists.card
 }
 
 .card .card__label {
+  margin-top: 1em;
   line-height: 1.4;
 }
 
-.card .card__title {
+.card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
   position: relative;
   max-height: 4.8em;
   overflow: hidden;
@@ -3778,20 +3871,23 @@ Style Guide: lists.card
   line-height: 1.6;
 }
 
+.card .card__title a,
+.card.card--quote h3.card__quote a, .card.card--quote .card__quote.heading--small a, .card .card__quote a,
+.card .card__summary a {
+  display: block;
+}
+
 .card .card__tags {
   max-height: 1.86em;
   overflow: hidden;
 }
 
-.card.card--wide .card__title {
-  max-height: 3.2em;
-  margin: 0.66em 0;
-  font-size: 2.14em;
-}
-
-.card.card--quote {
-  background: #2e4c65;
-  color: #fff;
+@media (min-width: 640px) {
+  .card .card__inner {
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 16em;
+  }
 }
 
 @media (min-width: 640px) {
@@ -3800,14 +3896,160 @@ Style Guide: lists.card
     float: left;
     margin-right: 2.1276595745%;
   }
+  .card.card--row-end {
+    margin-right: 0;
+  }
+}
+
+/*
+Wide Card Teaser
+
+Double-wide version of a card.
+
+Markup: card-wide.hbs
+
+Weight: 16
+
+Style Guide: lists.card-wide
+*/
+.card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote, .card.card--wide .card.card--quote .card__quote.heading--small, .card.card--quote .card.card--wide .card__quote.heading--small {
+  max-height: 3.2em;
+  margin: 0.66em 0;
+  font-size: 2.14em;
+}
+
+@media (min-width: 640px) {
+  .card.card--wide .card__inner {
+    height: 0;
+    padding-bottom: 48.5437%;
+  }
+}
+
+@media (min-width: 640px) {
   .card.card--wide {
     width: 65.9574468085%;
     float: left;
     margin-right: 2.1276595745%;
   }
-  .card.card--row-end {
+  .card.card--wide.card--row-end {
     margin-right: 0;
   }
+}
+
+/*
+Quote Card Teaser
+
+A highlighted card used for promoting an item with a quote.
+
+Markup: card-quote.hbs
+
+Weight: 17
+
+Style Guide: lists.card-quote
+*/
+.card.card--quote .card__quote-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  padding-top: 1px;
+  margin-bottom: 14.4em;
+}
+
+.card.card--quote .card__quote-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -14.4em;
+  width: 100%;
+  height: 12em;
+  background-image: -webkit-linear-gradient(bottom, #2e4c65, transparent);
+  background-image: linear-gradient(to top, #2e4c65, transparent);
+}
+
+.card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+  max-height: inherit;
+  height: 0;
+  margin-top: 1.5em;
+  padding-bottom: 140%;
+  font-size: 1.8571428571em;
+  color: #fff;
+}
+
+.card.card--quote h3.card__quote:after, .card.card--quote .card__quote.heading--small:after {
+  content: '\201E';
+  display: block;
+  margin-top: -0.5em;
+  font-size: 2.5em;
+}
+
+.card.card--quote .card__label,
+.card.card--quote .card__tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.card.card--quote .card__label {
+  overflow: hidden;
+  padding-right: .5em;
+  border-right: 1px solid #dedede;
+}
+
+.card.card--quote .card__tags {
+  padding-left: .5em;
+}
+
+.card.card--quote .card__tags ul {
+  margin: 0;
+}
+
+.card.card--quote .card__tags a {
+  color: #fff;
+}
+
+.card.card--quote .tags-list__lable {
+  display: none;
+}
+
+/*
+Summary Card Teaser
+
+A card that displays summary text and no thumbnail.
+
+Markup: card-summary.hbs
+
+Weight: 18
+
+Style Guide: lists.card-summary
+*/
+.card.card--summary .card__summary {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 95%;
+  padding-top: 2em;
+  margin-bottom: 5%;
+}
+
+.card.card--summary .card__summary a {
+  color: #333;
+  text-decoration: none;
+}
+
+.card.card--summary .card__summary p:first-child {
+  margin-top: -1em;
+}
+
+.card.card--summary .card__summary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  pointer-events: none;
+  background-image: -webkit-linear-gradient(bottom, #fff, transparent);
+  background-image: linear-gradient(to top, #fff, transparent);
 }
 
 /* 
@@ -3909,7 +4151,6 @@ Style guide: lists.teaser
 Text Teaser List
 
 Short list of related/recommeded items, used for page footers.
-NOTE: Duplicated as mustache template for front-end LiftIgniter rendering!!!
 
 Weight: 10
 
@@ -4684,6 +4925,149 @@ Style guide: navigation.subnav
   }
 }
 
+/*
+Topic Navigation
+
+Used to navigate through different topics or categories of a section.
+
+Markup: topic-nav.hbs
+
+Style Guide: navigation.topic-nav
+*/
+.topic-nav a {
+  text-decoration: none;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.topic-nav .topic-nav__tabs {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.topic-nav .topic-nav__tabs li {
+  margin: 0 1em;
+}
+
+.topic-nav .topic-nav__tabs a {
+  position: relative;
+  color: #bbb;
+}
+
+.topic-nav .topic-nav__tabs a:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  top: 45px;
+  left: 50%;
+  margin-left: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ebebeb;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.topic-nav .topic-nav__tabs a:hover {
+  color: #333;
+}
+
+.topic-nav .topic-nav__tabs a.active {
+  color: #333;
+}
+
+.topic-nav .topic-nav__tabs a.active:after {
+  opacity: 1;
+}
+
+@media (max-width: 639px) {
+  .topic-nav .topic-nav__tabs li {
+    margin: 0 0.5em;
+  }
+  .topic-nav .topic-nav__tabs a:after {
+    display: none;
+  }
+}
+
+.topic-nav .topic-nav__drawers {
+  background: #ebebeb;
+}
+
+.topic-nav .topic-nav__drawer .content-container, .topic-nav .topic-nav__drawer .flyout__close-wrapper {
+  overflow: hidden;
+}
+
+.topic-nav .topic-nav__topic-list {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  column-gap: 4em;
+  -webkit-column-rule: 1px solid #dedede;
+  -moz-column-rule: 1px solid #dedede;
+  column-rule: 1px solid #dedede;
+  padding: 4em;
+}
+
+@media (max-width: 960px) {
+  .topic-nav .topic-nav__topic-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    padding: 3em 0;
+  }
+}
+
+.topic-nav .topic-nav__topic-list li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.topic-nav .topic-nav__topic-list a {
+  color: #787878;
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  font-size: 1.14em;
+}
+
+.topic-nav .topic-nav__topic-list a:hover {
+  color: #333;
+}
+
+.topic-nav .topic-nav__toggle-wrapper {
+  height: 0;
+  z-index: 5;
+  position: relative;
+  text-align: center;
+}
+
+.topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background-image: url("../images/icons/drop-down-arrow-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  line-height: 40px;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.topic-nav .topic-nav__toggle-wrapper .topic-nav__toggle.open {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 /* 
 Shameful hacks that should be fixed
 */
@@ -4819,7 +5203,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-.text--merriweather-light, .card .card__title {
+.text--merriweather-light, .card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
   font-family: "Merriweather", serif;
 }
 
@@ -5039,10 +5423,11 @@ Weight: 5
 .text--sub-nav - Sub Nav Mission
 .text--dropdown - Dropdown Copy
 .text--label - Label/Nav item
+.text--border - Text with border underline
 
 Style guide: typography.other
 */
-.text--large-copy, .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete {
+.text--large-copy, .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete, .topic-nav .topic-nav__tabs {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   font-size: 1.7142857143em;
   color: #333;
@@ -5071,8 +5456,8 @@ Style guide: typography.other
 
 .text--border, .text-teaser-list .text-teaser-list__type {
   border-bottom: 1px dotted #dedede;
-  padding-top: 0.7142857143em;
-  margin-bottom: 0.7142857143em;
+  padding-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 /*
@@ -5822,40 +6207,40 @@ Style Guide: icons.icons
   content: url(../images/icons/statistics.png);
 }
 
-.icon--arrow-long {
+.icon--arrow-long:before {
   content: url(../images/icons/icon-arrow-long.png);
 }
 
-.icon--arrow-long-down {
+.icon--arrow-long-down:before {
   content: url(../images/icons/icon-arrow-long-down.png);
 }
 
-.icon--expand {
+.icon--expand:before {
   content: url(../images/icons/expand.png);
 }
 
-.icon--collapse {
+.icon--collapse:before {
   content: url(../images/icons/collapse.png);
 }
 
-.icon--slideshow-prev-light {
+.icon--slideshow-prev-light:before {
   content: url("../images/icons/slideshow-prev-light.png");
 }
 
-.icon--slideshow-next-light {
+.icon--slideshow-next-light:before {
   content: url("../images/icons/slideshow-next-light.png");
 }
 
-.icon--slideshow-prev-dark {
+.icon--slideshow-prev-dark:before {
   content: url("../images/icons/slideshow-prev-dark.png");
 }
 
-.icon--slideshow-next-dark {
+.icon--slideshow-next-dark:before {
   content: url("../images/icons/slideshow-next-dark.png");
 }
 
-.icon--magnifying-glass {
-  content: url("../images/icons/icon-magnifying-glass.svg");
+.icon--magnifying-glass:before {
+  content: url("../images/icons/icon-magnifying-glass.png");
 }
 
 .icon--ecosystem-style {

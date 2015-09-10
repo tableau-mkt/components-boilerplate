@@ -1,0 +1,178 @@
+{
+  "tabs": [
+    {
+      "label": "Nic Cage",
+      "id": "nic"
+    },
+    {
+      "label": "John Travolta",
+      "id": "john"
+    },
+    {
+      "label": "Adam Sandler",
+      "id": "adam"
+    },
+    {
+      "label": "<i class='icon--magnifying-glass'></i>",
+      "id": "search"
+    }
+  ],
+
+  "drawers": [
+    {
+      "id": "nic",
+      "class": "active",
+      "topics": [
+        {
+          "label": "Leaving Las Vegas",
+          "url": "#"
+        },
+        {
+          "label": "National Treasure",
+          "url": "#"
+        },
+        {
+          "label": "Moonstruck",
+          "url": "#"
+        },
+        {
+          "label": "Kick-Ass",
+          "url": "#"
+        },
+        {
+          "label": "Ghost Rider",
+          "url": "#"
+        },
+        {
+          "label": "Bankok Dangerous",
+          "url": "#"
+        },
+        {
+          "label": "The Wicker Man",
+          "url": "#"
+        },
+        {
+          "label": "Adaptation.",
+          "url": "#"
+        },
+        {
+          "label": "THe Family Man",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "john",
+      "topics": [
+        {
+          "label": "Face Off",
+          "url": "#"
+        },
+        {
+          "label": "Pulp Fiction",
+          "url": "#"
+        },
+        {
+          "label": "Grease",
+          "url": "#"
+        },
+        {
+          "label": "Hairspray",
+          "url": "#"
+        },
+        {
+          "label": "Stayin Alive",
+          "url": "#"
+        },
+        {
+          "label": "Saturday Night Fever",
+          "url": "#"
+        },
+        {
+          "label": "Bolt",
+          "url": "#"
+        },
+        {
+          "label": "The Punisher",
+          "url": "#"
+        },
+        {
+          "label": "Swordfish",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "adam",
+      "topics": [
+        {
+          "label": "Big Daddy",
+          "url": "#"
+        },
+        {
+          "label": "Mr. Deeds",
+          "url": "#"
+        },
+        {
+          "label": "Happy Gilmore",
+          "url": "#"
+        },
+        {
+          "label": "Spanglish",
+          "url": "#"
+        },
+        {
+          "label": "Jack and Jill",
+          "url": "#"
+        },
+        {
+          "label": "Funny People",
+          "url": "#"
+        },
+        {
+          "label": "Click",
+          "url": "#"
+        },
+        {
+          "label": "The Longest Yard",
+          "url": "#"
+        },
+        {
+          "label": "Anger Management",
+          "url": "#"
+        },
+        {
+          "label": "Little Nicky",
+          "url": "#"
+        },
+        {
+          "label": "The Waterboy",
+          "url": "#"
+        },
+        {
+          "label": "The Wedding Singer",
+          "url": "#"
+        },
+        {
+          "label": "Billy Madison",
+          "url": "#"
+        },
+        {
+          "label": "Punch-Drunk Love",
+          "url": "#"
+        },
+        {
+          "label": "50 First Dates",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "search": {
+        "id": "topicSearch",
+        "placeholder": "Search best actors"
+      }
+    }
+  ]
+}

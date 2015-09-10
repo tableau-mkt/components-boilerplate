@@ -70,6 +70,43 @@
           </a>
         </li>
         <li class="kss-nav__menu-item">
+          <a href="section-forms.html">
+            Forms
+          </a>
+          <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-base">
+                  Base Form Styles
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-input">
+                  Input Fields
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-buttons">
+                  Submit Buttons
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-validation">
+                  Validation Messages
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-confirmation">
+                  Confirmation Messages
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a href="section-forms.html#kssref-forms-section-search">
+                  Section Search
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="kss-nav__menu-item">
           <a href="section-navigation.html">
             Navigation
           </a>
@@ -94,6 +131,25 @@
 
     <article role="main" class="kss-content kss-right">
 
+          <div id="kssref-forms" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-1">
+            <!-- <a class="kss-title__permalink" href="#kssref-forms"> -->
+              Forms
+            <!-- </a> -->
+          </h2>
+
+
+          <div class="kss-description">
+            <p>Form elements such as text fields and submit buttons used to make forms that the
+user can submit information through. Here&#39;s an example form:</p>
+
+          </div>
+        </div>
+
+
+          </div>
           <section id="kssref-forms-base" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
@@ -361,6 +417,52 @@ form.hbs</code></pre>
             <h4>Markup:</h4>
             <div class="kss-markup">
               <pre class="prettyprint lang-html"><code data-language="html">&lt;span class=&quot;confirmation&quot;&gt;This is a confirmation message&lt;/span&gt;
+</code></pre>
+            </div>
+
+          </section>
+          <section id="kssref-forms-section-search" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h3 class="kss-title kss-title--level-2">
+            <!-- <a class="kss-title__permalink" href="#kssref-forms-section-search"> -->
+              Section Search
+            <!-- </a> -->
+          </h3>
+
+
+          <div class="kss-description">
+            <p>Section-level search form used within a specific section to search only content
+of that section. Displays autocomplete list and submits to global search results
+page filtered down to the corresponding section.</p>
+<p>@TODO add dropdonw autocomplete handling/styles as well as the clear &quot;X&quot; in
+place of magnifying glass icon when text is in the field.</p>
+
+          </div>
+        </div>
+
+          <h4>Example</h4>
+          <div class="kss-examples">
+            <div class="kss-example kss-example__default">
+              <div class="kss-example-preview">
+                <div class="kss-example-preview-wrapper">
+                  <div class="section-search">
+  <input type="search" name="exampleSearch" placeholder="Search this section">
+  <input type="submit" name="exampleSearchSubmit" value="Search">
+</div>
+
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          
+            <h4>Markup:</h4>
+            <div class="kss-markup">
+              <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;section-search&quot;&gt;
+  &lt;input type=&quot;search&quot; name=&quot;exampleSearch&quot; placeholder=&quot;Search this section&quot;&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;exampleSearchSubmit&quot; value=&quot;Search&quot;&gt;
+&lt;/div&gt;
 </code></pre>
             </div>
 
