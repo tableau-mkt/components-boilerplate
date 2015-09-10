@@ -1949,7 +1949,8 @@ body.kss .kss-example-preview .link.link--arrow:after {
 }
 
 body.kss .kss-example-preview .link.link--expand:before,
-body.kss .kss-example-preview .link.link--collapse:before {
+body.kss .kss-example-preview .link.link--collapse:before,
+body.kss .kss-example-preview .link.link--share:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
@@ -1961,6 +1962,10 @@ body.kss .kss-example-preview .link.link--expand:before {
 
 body.kss .kss-example-preview .link.link--collapse:before {
   content: url(../images/icons/collapse.png);
+}
+
+body.kss .kss-example-preview .link.link--share:before {
+  content: url(../images/icons/share.png);
 }
 
 body.kss .kss-example-preview .form--fields label {
@@ -4338,6 +4343,7 @@ body.kss .kss-example-preview .card .card__thumbnail {
 }
 
 body.kss .kss-example-preview .card .card__thumbnail img {
+  width: 100%;
   opacity: 0.6;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
