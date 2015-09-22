@@ -4610,8 +4610,20 @@ Style guide: navigation.global
         -ms-flex-align: center;
             align-items: center;
   }
+  .global-nav__drawers .global-nav__drawer__inner,
+  .global-nav__drawers .global-nav__drawer__secondary {
+    min-height: 275px;
+  }
   .global-nav__drawers .sub-nav__item__link {
     margin-bottom: 0;
+  }
+  .global-nav__drawers .global-nav__drawer__link-list ul {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 4em;
+    -moz-column-gap: 4em;
+    column-gap: 4em;
   }
   .global-nav__drawers .global-nav__drawer__secondary {
     position: relative;
@@ -4700,6 +4712,11 @@ Style guide: navigation.global
   }
   .global-nav__drawers .sub-nav__item .sub-nav__item__description {
     display: inline-block;
+  }
+  .global-nav__drawers .sub-nav__item .global-nav__drawer__link-list ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
 }
 

@@ -316,9 +316,24 @@ Style guide: navigation.global
       display: flex;
       align-items: center;
     }
+    
+    .global-nav__drawer__inner,
+    .global-nav__drawer__secondary {
+      min-height: 275px;
+    }
 
     .sub-nav__item__link {
       margin-bottom: 0;
+    }
+
+    .global-nav__drawer__link-list ul {
+      // @TODO provide support for IE <10 - https://github.com/BetleyWhitehorne/CSS3MultiColumn
+      -webkit-column-count: 3;
+      -moz-column-count:    3;
+      column-count:         3;
+      -webkit-column-gap:   4em;
+      -moz-column-gap:      4em;
+      column-gap:           4em;
     }
 
     .global-nav__drawer__secondary {
@@ -420,16 +435,20 @@ Style guide: navigation.global
 }
 
 @include breakpoint($tablet-only) {
-  .global-nav__drawers {
-    .sub-nav__item {
-      .sub-nav__item__title {
-        display: inline-block;
-        width: 250px;
-      }
+  .global-nav__drawers .sub-nav__item {
+    .sub-nav__item__title {
+      display: inline-block;
+      width: 250px;
+    }
 
-      .sub-nav__item__description {
-        display: inline-block;
-      }
+    .sub-nav__item__description {
+      display: inline-block;
+    }
+
+    .global-nav__drawer__link-list ul {
+      -webkit-column-count: 2;
+      -moz-column-count:    2;
+      column-count:         2;
     }
   }
 }

@@ -21,7 +21,8 @@
     "hoverintent": "briancherne/jquery-hoverIntent",
     "jquery-ui": "~1.11.4",
     "waypoints": "~3.1.1",
-    "matchMedia": "~0.2.0"
+    "matchMedia": "~0.2.0",
+    "underscore": "jashkenas/underscore"
   },
   "devDependencies": {
     "breakpoint-sass": "~2.6.1",

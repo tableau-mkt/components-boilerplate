@@ -20,9 +20,14 @@
     if (matchMedia('(min-width: 961px)').matches) {
       // Drawer Expanding interaction
       // @todo needs lots of work here.
+      
+      var throttle = _.throttle(function($link) {
+        openDrawer($link);
+      }, animation.duration);
+
       $expandableLinks.hover( 
         function() {
-          openDrawer($(this));
+          throttle($(this));
         }, function() {
           var $link = $(this);
               $hoverElements = $globalNav.closest('.global-nav').siblings(),
@@ -96,15 +101,19 @@
   function openDrawer($link) {
     var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
 
-    $link.add($drawer).addClass('expanded');
-    $drawers.filter('#' + $link.data('drawer-id')).slideDown(animation);
+    if (!$drawers.hasClass('expanded')) {
+      $link.add($drawer).addClass('expanded');
+      $drawers.filter('#' + $link.data('drawer-id')).slideDown(animation);
+    }
   }
 
   function closeDrawer($link) {
     var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
 
-    $link.add($drawer).removeClass('expanded');
-    $drawers.filter('#' + $link.data('drawer-id')).slideUp(animation);
+    if ($drawer.hasClass('expanded')) {
+      $link.add($drawer).removeClass('expanded');
+      $drawers.filter('#' + $link.data('drawer-id')).slideUp(animation);
+    }
   }
 
   function closeDrawerMobile($drawer) {

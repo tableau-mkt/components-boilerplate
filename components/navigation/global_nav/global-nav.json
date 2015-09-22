@@ -79,59 +79,112 @@
     ]
   },
   
-  "drawer": {
-    "primaryItems": [
-      {
-        "title": {
-          "text": "Tableau Desktop",
-          "level": "3",
-          "classes": "heading-highlight heading--small heading-highlight--desktop text--desktop"
+  "drawers": [
+    {
+      "drawerId": "products",
+      "primaryItems": [
+        {
+          "title": {
+            "text": "Tableau Desktop",
+            "level": "3",
+            "classes": "heading-highlight heading--small heading-highlight--desktop text--desktop",
+            "color": "desktop"
+          },
+          "url": "/products/desktop",
+          "description": "Business analytics anyone can use.",
+          "linkText": "Learn More"
         },
-        "url": "/build/desktop.html",
-        "description": "Business analytics anyone can use.",
-        "linkText": "Learn More"
-      },
-      {
-        "title": {
-          "text": "Tableau Server",
-          "level": "3",
-          "classes": "heading-highlight heading--small heading-highlight--server text--server"
+        {
+          "title": {
+            "text": "Tableau Server",
+            "level": "3",
+            "classes": "heading-highlight heading--small heading-highlight--server text--server",
+            "color": "server"
+          },
+          "url": "#",
+          "description": "Rapid-fire business intelligence, today.",
+          "linkText": "Learn More"
         },
-        "url": "/build/server.html",
-        "description": "Rapid-fire business intelligence, today.",
-        "linkText": "Learn More"
-      },
-      {
-        "title": {
-          "text": "Tableau Online",
-          "level": "3",
-          "classes": "heading-highlight heading--small heading-highlight--online text--online"
-        },
-        "url": "/build/online.html",
-        "description": "The power of Tableau, in the cloud.",
-        "linkText": "Learn More"
-      }
-    ]
-  },
+        {
+          "title": {
+            "text": "Tableau Online",
+            "level": "3",
+            "classes": "heading-highlight heading--small heading-highlight--online text--online",
+            "color": "online"
+          },
+          "url": "#",
+          "description": "The power of Tableau, in the cloud.",
+          "linkText": "Learn More"
+        }
+      ],
 
-  "secondaryItems": {
-    "title": "More Tableau Products",
-    "items": [
-      {
-        "title": "Tableau Mobile",
-        "description": "Tableau straight from your phone.",
-        "url": "#"
-      },
-      {
-        "title": "Tableau Public",
-        "description": "Publish interactive data online.",
-        "url": "#"
-      },
-      {
-        "title": "Tableau Reader",
-        "description": "Read saved files from Tableau Desktop.",
-        "url": "#"
+      "secondaryItems": {
+        "title": "More Tableau Products",
+        "items": [
+          {
+            "title": "Tableau Mobile",
+            "description": "Tableau straight from your phone.",
+            "classes": "heading--label",
+            "url": "#"
+          },
+          {
+            "title": "Tableau Public",
+            "description": "Publish interactive data online.",
+            "classes": "heading--label",
+            "url": "#"
+          },
+          {
+            "title": "Tableau Reader",
+            "description": "Read saved files from Tableau Desktop.",
+            "classes": "heading--label",
+            "url": "#"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "drawerId": "stories",
+      "primaryItems": [
+        {
+          "title": {
+            "text": "Industries",
+            "level": "3",
+            "classes": "heading-highlight heading--small"
+          },
+          "url": "#",
+          "description": "Visually analyze your data in a way that makes sense for your industry",
+          "linkText": "Learn More"
+        },
+        {
+          "title": {
+            "text": "Activities",
+            "level": "3",
+            "classes": "heading-highlight heading--small"
+          },
+          "url": "#",
+          "description": "Discover the most frequently used capabilities resulting in fast data insights.",
+          "linkText": "Learn More"
+        },
+        {
+          "title": {
+            "text": "Technology",
+            "level": "3",
+            "classes": "heading-highlight heading--small"
+          },
+          "url": "#",
+          "description": "Analyze nearly any data source live or with Tableau's Data Engine",
+          "linkText": "Learn More"
+        }
+      ],
+
+      "secondaryItems": {
+        "title": "Tableau Viz Gallery",
+        "thumbnail": {
+          "url": "http://www.placecage.com/270/150",
+          "title": "Tableau Viz Gallery"
+        },
+        "description": "Explore a wide range of visualizations to see what's possible in Tableau"
+      }
+    }
+  ]
 }

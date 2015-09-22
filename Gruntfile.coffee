@@ -96,6 +96,7 @@ module.exports = (grunt) ->
           'slick.js/**/*.*'
           'waypoints/**/*.*'
           'matchMedia/**/*.*'
+          'underscore/**/*.*'
         ]
         dest: 'build/bower'
       assets:
