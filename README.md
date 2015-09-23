@@ -16,7 +16,7 @@ Starts up a grunt watch task by default.
 ```$ grunt```
 
 ### Finish
-Produce the full style.css file, run it through css prefixer, and generate the kss-node based styleguide.
+Produce the full style.css file, run it through css prefixer, and generate the kss-node based style guide.
 ```$ grunt build```
 
 ## Defining a Component
@@ -100,6 +100,14 @@ component will be displayed in the generated style guide.
 `Nocode: true` tag to the KSS comment.
 * To prevent the the default exmaple from rendering for a component, add a 
 `Nodefault: true` tag to the KSS comment.
+* To prevent the entire component from rendering in the style guide altogether, 
+add a `Hidden: true` tag to the KSS comment. This is useful in cases where the 
+component is not yet ready to be added to the style guide or when a handlebars 
+template is needed as a partial, but doesn't correspond to an actual component.
+* To alter the background color of an example, add a `Bgcolor: #333333` tag to 
+the KSS comment where the value can be any CSS valid color (hexidecimal, rgb, or
+color keyword). This is useful in the case that a component is meant to only be 
+shown on a darker background, for instance.
 
 ## Adding/Editing Components
 

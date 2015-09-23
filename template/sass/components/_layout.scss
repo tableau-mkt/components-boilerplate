@@ -48,8 +48,12 @@ body.kss {
 }
 
 .kss-content {
-  max-width: 54em;
   padding: 1em;
+}
+
+.kss-style,
+.kss-markup {
+  max-width: 54em;
 }
 
 .kss-clearfix {

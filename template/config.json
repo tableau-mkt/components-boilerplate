@@ -17,6 +17,8 @@
     "../build/js/scripts.js"
   ],
   "custom": [
+    "bgcolor",
+    "hidden",
     "nocode",
     "nodefault"
   ],

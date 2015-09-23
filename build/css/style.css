@@ -239,6 +239,17 @@ The Tableau brand collor pallet
 Style guide: colors
 */
 /*
+Colors template
+
+Just loading the template as a partial
+
+Markup: colors.hbs
+
+Hidden: true
+
+Style guide: colors.template
+*/
+/*
 Text Colors
 
 Colors used for typography.
@@ -247,6 +258,8 @@ Markup: colors-text.hbs
 
 Nocode: 
 true
+
+Bgcolor: #F7F9FB
 
 Weight: 1
 
@@ -261,6 +274,8 @@ Markup: colors-background.hbs
 
 Nocode: true
 
+Bgcolor: #F7F9FB
+
 Weight: 2
 
 Style guide: colors.background
@@ -273,6 +288,8 @@ Colors used for buttons.
 Markup: colors-buttons.hbs
 
 Nocode: true
+
+Bgcolor: #F7F9FB
 
 Weight: 3
 
@@ -287,6 +304,8 @@ Markup: colors-product.hbs
 
 Nocode: true
 
+Bgcolor: #F7F9FB
+
 Weight: 4
 
 Style guide: colors.product
@@ -299,6 +318,8 @@ Colors used for accents.
 Markup: colors-accent.hbs
 
 Nocode: true
+
+Bgcolor: #F7F9FB
 
 Weight: 5
 
@@ -5317,7 +5338,9 @@ Text Colors
 
 Colors to be used in the text palette.
 
-Markup: colors.hbs
+Markup: colored-text.hbs
+
+Bgcolor: #F7F9FB
 
 Weight: 7
 
@@ -5551,11 +5574,11 @@ h6, .heading--h6 {
 /*
 Headings Template
 
-@todo remove this once #11 is resolved
+Just registering this template as a partial
 
 Markup: heading.hbs
 
-Weight: 100
+Hidden: true
 
 Styleguide typography.heading-template
 */

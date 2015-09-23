@@ -24,9 +24,7 @@
   .kss-example-preview {
     position: relative;
     margin-bottom: 2em;
-    padding: 1.5em;
-    border-top: 1px solid #1C447E;
-    background: #eee;
+    border: 1.5em solid #F7F9FB; 
     @extend .kss-clearfix;
   }
 }

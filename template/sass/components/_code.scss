@@ -13,6 +13,8 @@ pre {
 
 
 .kss-markup {
+  max-height: 30.1em;
+  overflow: auto;
   padding: 1em;
   background: #333;
   font-size: 0.88em;
@@ -32,6 +34,7 @@ code {
   color: #ffa0a0;
   font-style: normal;
   font-weight: normal;
+  white-space: pre;
 }
 
 

@@ -49,11 +49,13 @@
           <ul class="kss-nav__menu-child">
           {{#eachSection reference}}
             {{#ifDepth 2}}
-              <li class="kss-nav__menu-item">
-                <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
-                  {{header}}
-                </a>
-              </li>
+              {{#unless hidden}}
+                <li class="kss-nav__menu-item">
+                  <a href="section-{{../../../referenceURI}}.html#kssref-{{referenceURI}}">
+                    {{header}}
+                  </a>
+                </li>
+              {{/unless}}
             {{/ifDepth}}
           {{/eachSection}}
           </ul>
@@ -77,89 +79,91 @@
         the "#ifDepth 1" block as seen below.
       }}
       {{#eachSection rootName}}
-        {{#ifDepth 1}}
-          <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
-        {{else}}
-          <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
-        {{/ifDepth}}
+        {{#unless hidden}}
+          {{#ifDepth 1}}
+            <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+          {{else}}
+            <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+          {{/ifDepth}}
 
-        <div class="kss-style">
-          <h{{#ifDepth 1}}2{{else}}3{{/ifDepth}} class="kss-title kss-title--level-{{depth}}">
-            <!-- <a class="kss-title__permalink" href="#kssref-{{referenceURI}}"> -->
-              {{header}}
-            <!-- </a> -->
-          </h{{#ifDepth 1}}2{{else}}3{{/ifDepth}}>
+          <div class="kss-style">
+            <h{{#ifDepth 1}}2{{else}}3{{/ifDepth}} class="kss-title kss-title--level-{{depth}}">
+              <!-- <a class="kss-title__permalink" href="#kssref-{{referenceURI}}"> -->
+                {{header}}
+              <!-- </a> -->
+            </h{{#ifDepth 1}}2{{else}}3{{/ifDepth}}>
 
-        {{#if parameters}}
-          <ul class="kss-parameters">
-          {{#eachParameter}}
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">{{name}}</code>
-              <div class="kss-parameters__description">{{{description}}}</div>
-            </li>
-          {{/eachParameter}}
-          </ul>
-        {{/if}}
+          {{#if parameters}}
+            <ul class="kss-parameters">
+            {{#eachParameter}}
+              <li class="kss-parameters__item">
+                <code class="kss-parameters__name">{{name}}</code>
+                <div class="kss-parameters__description">{{{description}}}</div>
+              </li>
+            {{/eachParameter}}
+            </ul>
+          {{/if}}
 
-        {{#if description}}
-          <div class="kss-description">
-            {{{description}}}
-          </div>
-        {{/if}}
-        </div>
-
-        {{#if markup}}
-          <h4>Example{{#if modifiers}}s{{/if}}</h4>
-          <div class="kss-examples">
-            {{#unless nodefault}}
-            <div class="kss-example kss-example__default">
-              {{#if modifiers}}
-              <div class="kss-example-details">
-                <div class="kss-example-desc">
-                  <h6>Default styling</h6>
-                </div>
-              </div>
-              {{/if}}
-              <div class="kss-example-preview">
-                <div class="kss-example-preview-wrapper">
-                  {{{markup}}}
-                </div>
-              </div>
+          {{#if description}}
+            <div class="kss-description">
+              {{{description}}}
             </div>
-            {{/unless}}
-           
-            {{#eachModifier}}
-              <div class="kss-example">
+          {{/if}}
+          </div>
+
+          {{#if markup}}
+            <h4>Example{{#if modifiers}}s{{/if}}</h4>
+            <div class="kss-examples">
+              {{#unless nodefault}}
+              <div class="kss-example kss-example__default">
+                {{#if modifiers}}
                 <div class="kss-example-details">
                   <div class="kss-example-desc">
-                    <p>{{{description}}}</p>
-                  </div>
-                  <div class="kss-example-name">
-                    <p><code>{{name}}</code></p>
+                    <h6>Default styling</h6>
                   </div>
                 </div>
-                <div class="kss-example-preview">
+                {{/if}}
+                <div class="kss-example-preview"{{#if bgcolor}} style="background: {{ bgcolor }};"{{/if}}>
                   <div class="kss-example-preview-wrapper">
                     {{{markup}}}
                   </div>
                 </div>
               </div>
-            {{/eachModifier}}
-          </div>
-          
-          {{#unless nocode}}
-            <h4>Markup:</h4>
-            <div class="kss-markup">
-              <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
+              {{/unless}}
+             
+              {{#eachModifier}}
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>{{{description}}}</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>{{name}}</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview"{{#if ../bgcolor}} style="background: {{ ../../bgcolor }};"{{/if}}>
+                    <div class="kss-example-preview-wrapper">
+                      {{{markup}}}
+                    </div>
+                  </div>
+                </div>
+              {{/eachModifier}}
             </div>
-          {{/unless}}
-        {{/if}}
+            
+            {{#unless nocode}}
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">{{markup}}</code></pre>
+              </div>
+            {{/unless}}
+          {{/if}}
 
-        {{#ifDepth 1}}
-          </div>
-        {{else}}
-          </section>
-        {{/ifDepth}}
+          {{#ifDepth 1}}
+            </div>
+          {{else}}
+            </section>
+          {{/ifDepth}}
+        {{/unless}}
       {{/eachSection}}
     {{/if}}
     </article>
