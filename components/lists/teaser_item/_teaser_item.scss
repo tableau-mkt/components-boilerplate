@@ -1,0 +1,55 @@
+/*
+Basic Teaser Item
+
+A basic teaser item, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 30
+
+Markup: teaser-item.hbs
+
+Style guide: lists.teaser-item
+*/
+.teaser-item {
+  & > a {
+    display: block;
+    color: $text-dark-body;
+    @include transition(color .25s);
+
+    &:hover {
+      color: $text-link;
+      text-decoration: none;
+    }
+
+    &:hover img {
+      opacity: 0.85;
+    }
+  }
+
+  .teaser-item__thumbnail {
+    line-height: 0;
+  }
+
+  .teaser-item__eyebrow {
+    margin-top:1.5em;
+  }
+
+  .teaser-item__title {
+    margin-top: 0.7em;
+    margin-bottom: 0;
+  }
+
+  .teaser-item__eyebrow + .teaser-item__title,
+  .teaser-item__info:first-child .teaser-item__title:first-child {
+    margin-top: 0;
+  }
+
+  .teaser-item__link {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($mobile-only) {
+    margin-bottom: 2em;
+  }
+}

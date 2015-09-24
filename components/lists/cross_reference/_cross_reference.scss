@@ -1,0 +1,41 @@
+/*
+3-Up Cross Reference
+
+A list of 3 cross-referencing items.
+
+Markup: cross-reference.hbs
+
+Weight: 100
+
+Style guide: lists.cross-reference
+*/
+
+.cross-reference-list {
+
+  @include breakpoint($tablet-only) {
+    .cross-reference-list__title {
+      text-align: center;
+
+      .heading-highlight:before {
+        left: 50%;
+        margin-left: -25px;
+      }
+    }
+   
+    .cross-reference-list__title,
+    .cross-reference-list__items {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  @include breakpoint($tablet-max) {
+    .cross-reference-list__title {
+      margin-bottom: 2em;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

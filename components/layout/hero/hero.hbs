@@ -1,4 +1,4 @@
-<div class="hero {{ modifier_class }}">
+<div class="hero {{ modifier_class }}{{#if classes}} {{ classes }}{{/if}}">
   {{# video }}
     <div class="hero__video">
       <video autoplay="" loop="">
@@ -15,29 +15,37 @@
     </div>
   {{/ img }}
 
-  {{# text }}
+  {{#with text}}
     <div class="hero__content">
       <div class="hero__content__inner content-container">
-        {{# sub_title }}
+        {{#with sub_title}}
           {{> heading }}
-        {{/ sub_title }}
+        {{/with}}
         
-        <div class="hero__content__headline clearfix">
-          {{# headline }}
+        {{#with headline}}
+          <div class="hero__content__headline clearfix">
             {{> heading }}
-          {{/ headline }}
-        </div>
+          </div>
+        {{/with}}
         
-        <div class="hero__content__cta clearfix">
-          {{# cta }}
+        {{#with copy}}
+          <div class="hero__content__copy clearfix">
+            <p{{#if class}} class="{{ class}}"{{/if}}>
+              {{ text }}
+            </p>
+          </div>
+        {{/with}}
+        
+        {{#with cta}}
+          <div class="hero__content__cta clearfix">
             {{> cta }}
-          {{/ cta }}
-        </div>
+          </div>
+        {{/with}}
 
-        {{# link }}
+        {{#with link}}
           {{> link-formatted}}
-        {{/ link }}
+        {{/with}}
       </div>
     </div>
-  {{/ text }}
+  {{/with}}
 </div>

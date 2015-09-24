@@ -1,0 +1,17 @@
+<div class="cross-reference-list">
+  {{#if title}}
+    <div class="cross-reference-list__title grid--3">
+      <h2 class="heading-highlight  heading--small">
+        {{{ title }}}
+      </h2>
+    </div>
+  {{/if}}
+
+  {{#if items}}
+    <div class="cross-reference-list__items grid--9 grid--last">
+      {{#each items}}
+        {{> teaser-item }}
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

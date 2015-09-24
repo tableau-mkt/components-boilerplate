@@ -80,6 +80,11 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
+                  <a href="section-lists.html#kssref-lists-teaser-item">
+                    Basic Teaser Item
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
                   <a href="section-lists.html#kssref-lists-text_teaser">
                     Text Teaser List
                   </a>
@@ -105,13 +110,13 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-lists.html#kssref-lists-teaser">
-                    Basic Teaser List
+                  <a href="section-lists.html#kssref-lists-tags">
+                    Tags List
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-lists.html#kssref-lists-tags">
-                    Tags List
+                  <a href="section-lists.html#kssref-lists-cross-reference">
+                    3-Up Cross Reference
                   </a>
                 </li>
           </ul>
@@ -349,6 +354,99 @@ link through to the full version of the content.</p>
         &lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot; class=&quot;&quot;&gt;Get Free Trial&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-lists-teaser-item" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-lists-teaser-item"> -->
+                Basic Teaser Item
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>A basic teaser item, used for displaying a list of teasers to content that
+link to the full version of the content.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="teaser-item [modifier class] grid--4">
+  
+    <div class="teaser-item__thumbnail"> 
+      <a href="http://www.tableau.com">
+        <div class="thumbnail ">
+          <img src="http://www.placecage.com/250/250" alt="Nic Cage" />
+        </div>
+      </a>
+    </div>
+
+  <div class="teaser-item__info">
+      <div class="teaser-item__eyebrow">
+        <span class="text--label">Eyebrow Text</span>
+      </div>
+    
+      <h3 class="teaser-item__title heading--label">
+        <a href="http://www.tableau.com">This is a Teaser list item</a>
+      </h3>
+
+    <p class="teaser-item__description">
+      Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni
+    </p>
+
+
+    <p class="teaser-item__link">
+      <a href="#"  class="link  link link--arrow">Learn More</a>
+    </p>
+  </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;teaser-item [modifier class] grid--4&quot;&gt;
+  
+    &lt;div class=&quot;teaser-item__thumbnail&quot;&gt; 
+      &lt;a href=&quot;http://www.tableau.com&quot;&gt;
+        &lt;div class=&quot;thumbnail &quot;&gt;
+          &lt;img src=&quot;http://www.placecage.com/250/250&quot; alt=&quot;Nic Cage&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+  &lt;div class=&quot;teaser-item__info&quot;&gt;
+      &lt;div class=&quot;teaser-item__eyebrow&quot;&gt;
+        &lt;span class=&quot;text--label&quot;&gt;Eyebrow Text&lt;/span&gt;
+      &lt;/div&gt;
+    
+      &lt;h3 class=&quot;teaser-item__title heading--label&quot;&gt;
+        &lt;a href=&quot;http://www.tableau.com&quot;&gt;This is a Teaser list item&lt;/a&gt;
+      &lt;/h3&gt;
+
+    &lt;p class=&quot;teaser-item__description&quot;&gt;
+      Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni
+    &lt;/p&gt;
+
+
+    &lt;p class=&quot;teaser-item__link&quot;&gt;
+      &lt;a href=&quot;#&quot;  class=&quot;link  link link--arrow&quot;&gt;Learn More&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
 
@@ -801,177 +899,6 @@ link through to the full version of the content.</p>
               </div>
 
             </section>
-            <section id="kssref-lists-teaser" class="kss-section kss-section--depth-2">
-
-          <div class="kss-style">
-            <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-lists-teaser"> -->
-                Basic Teaser List
-              <!-- </a> -->
-            </h3>
-
-
-            <div class="kss-description">
-              <p>A basic list of teasers, used for displaying a list of teasers to content that
-link to the full version of the content.</p>
-
-            </div>
-          </div>
-
-            <h4>Example</h4>
-            <div class="kss-examples">
-              <div class="kss-example kss-example__default">
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <div class="teaser-list [modifier class]">
-  <div class="teaser-list__item grid--4">
-    <div class="teaser-list__thumbnail"> 
-      <a href="http://www.tableau.com">
-        <div class="thumbnail ">
-          <img src="http://www.placecage.com/250/250" alt="Nic Cage" />
-        </div>
-      </a>
-    </div>
-    <div class="teaser-list__info">
-        <h3 class=" heading--label teaser-list__title">
-          
-            This is a Teaser list item
-          
-        </h3>
-      <p class="teaser-list__description">
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      </p>
-      <p class="teaser-list__link">
-        <a href="#"  class="link  link link--arrow">Learn More</a>
-      </p>
-    </div>
-  </div>
-  <div class="teaser-list__item grid--4">
-    <div class="teaser-list__thumbnail"> 
-      <a href="http://www.tableau.com">
-        <div class="thumbnail ">
-          <img src="http://www.placecage.com/251/251" alt="Nic Cage" />
-        </div>
-      </a>
-    </div>
-    <div class="teaser-list__info">
-        <h3 class=" heading--label teaser-list__title">
-          
-            Another List Item
-          
-        </h3>
-      <p class="teaser-list__description">
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      </p>
-      <p class="teaser-list__link">
-        <a href="#"  class="link  link link--arrow">Learn More</a>
-      </p>
-    </div>
-  </div>
-  <div class="teaser-list__item grid--4">
-    <div class="teaser-list__thumbnail"> 
-      <a href="http://www.tableau.com">
-        <div class="thumbnail ">
-          <img src="http://www.placecage.com/252/252" alt="Nic Cage" />
-        </div>
-      </a>
-    </div>
-    <div class="teaser-list__info">
-        <h3 class=" heading--label teaser-list__title">
-          
-            Third Item Right Here
-          
-        </h3>
-      <p class="teaser-list__description">
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      </p>
-      <p class="teaser-list__link">
-        <a href="#"  class="link  link link--arrow">Learn More</a>
-      </p>
-    </div>
-  </div>
-</div>
-
-                  </div>
-                </div>
-              </div>
-             
-            </div>
-            
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;teaser-list [modifier class]&quot;&gt;
-  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
-    &lt;div class=&quot;teaser-list__thumbnail&quot;&gt; 
-      &lt;a href=&quot;http://www.tableau.com&quot;&gt;
-        &lt;div class=&quot;thumbnail &quot;&gt;
-          &lt;img src=&quot;http://www.placecage.com/250/250&quot; alt=&quot;Nic Cage&quot; /&gt;
-        &lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;teaser-list__info&quot;&gt;
-        &lt;h3 class=&quot; heading--label teaser-list__title&quot;&gt;
-          
-            This is a Teaser list item
-          
-        &lt;/h3&gt;
-      &lt;p class=&quot;teaser-list__description&quot;&gt;
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      &lt;/p&gt;
-      &lt;p class=&quot;teaser-list__link&quot;&gt;
-        &lt;a href=&quot;#&quot;  class=&quot;link  link link--arrow&quot;&gt;Learn More&lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
-    &lt;div class=&quot;teaser-list__thumbnail&quot;&gt; 
-      &lt;a href=&quot;http://www.tableau.com&quot;&gt;
-        &lt;div class=&quot;thumbnail &quot;&gt;
-          &lt;img src=&quot;http://www.placecage.com/251/251&quot; alt=&quot;Nic Cage&quot; /&gt;
-        &lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;teaser-list__info&quot;&gt;
-        &lt;h3 class=&quot; heading--label teaser-list__title&quot;&gt;
-          
-            Another List Item
-          
-        &lt;/h3&gt;
-      &lt;p class=&quot;teaser-list__description&quot;&gt;
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      &lt;/p&gt;
-      &lt;p class=&quot;teaser-list__link&quot;&gt;
-        &lt;a href=&quot;#&quot;  class=&quot;link  link link--arrow&quot;&gt;Learn More&lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;teaser-list__item grid--4&quot;&gt;
-    &lt;div class=&quot;teaser-list__thumbnail&quot;&gt; 
-      &lt;a href=&quot;http://www.tableau.com&quot;&gt;
-        &lt;div class=&quot;thumbnail &quot;&gt;
-          &lt;img src=&quot;http://www.placecage.com/252/252&quot; alt=&quot;Nic Cage&quot; /&gt;
-        &lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;teaser-list__info&quot;&gt;
-        &lt;h3 class=&quot; heading--label teaser-list__title&quot;&gt;
-          
-            Third Item Right Here
-          
-        &lt;/h3&gt;
-      &lt;p class=&quot;teaser-list__description&quot;&gt;
-        Nostrum est, sunt perferendis voluptas corrupti hendrerit, lacus nostrud magni 
-      &lt;/p&gt;
-      &lt;p class=&quot;teaser-list__link&quot;&gt;
-        &lt;a href=&quot;#&quot;  class=&quot;link  link link--arrow&quot;&gt;Learn More&lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
-
-            </section>
             <section id="kssref-lists-tags" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
@@ -1028,6 +955,174 @@ link to the full version of the content.</p>
         &lt;a href=&quot;#&quot;  class=&quot;link &quot;&gt;Google Bigquery&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-lists-cross-reference" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-lists-cross-reference"> -->
+                3-Up Cross Reference
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>A list of 3 cross-referencing items.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="cross-reference-list">
+    <div class="cross-reference-list__title grid--3">
+      <h2 class="heading-highlight  heading--small">
+        More ways<br>to learn.
+      </h2>
+    </div>
+
+    <div class="cross-reference-list__items grid--9 grid--last">
+        <div class="teaser-item  grid--4">
+          
+        
+          <div class="teaser-item__info">
+            
+              <h3 class="teaser-item__title heading--label">
+                <a href="">Free Webinars</a>
+              </h3>
+        
+            <p class="teaser-item__description">
+              One hour online learning sessions scheduled with an instructor.
+            </p>
+        
+        
+            <p class="teaser-item__link">
+              <a href="#"  class="link  link--arrow">Learn More</a>
+            </p>
+          </div>
+        </div>
+        <div class="teaser-item  grid--4">
+          
+        
+          <div class="teaser-item__info">
+            
+              <h3 class="teaser-item__title heading--label">
+                <a href="">Paid Classroom Training</a>
+              </h3>
+        
+            <p class="teaser-item__description">
+              Intensive multi-day courses offered at a location of your choice around the world.
+            </p>
+        
+        
+            <p class="teaser-item__link">
+              <a href="#"  class="link  link--arrow">Learn More</a>
+            </p>
+          </div>
+        </div>
+        <div class="teaser-item  grid--4">
+          
+        
+          <div class="teaser-item__info">
+            
+              <h3 class="teaser-item__title heading--label">
+                <a href="">Knowledge Base</a>
+              </h3>
+        
+            <p class="teaser-item__description">
+              Begin your Tableau experience smoothly with these key articles.
+            </p>
+        
+        
+            <p class="teaser-item__link">
+              <a href="#"  class="link  link--arrow">Learn More</a>
+            </p>
+          </div>
+        </div>
+    </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;cross-reference-list&quot;&gt;
+    &lt;div class=&quot;cross-reference-list__title grid--3&quot;&gt;
+      &lt;h2 class=&quot;heading-highlight  heading--small&quot;&gt;
+        More ways&lt;br&gt;to learn.
+      &lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;cross-reference-list__items grid--9 grid--last&quot;&gt;
+        &lt;div class=&quot;teaser-item  grid--4&quot;&gt;
+          
+        
+          &lt;div class=&quot;teaser-item__info&quot;&gt;
+            
+              &lt;h3 class=&quot;teaser-item__title heading--label&quot;&gt;
+                &lt;a href=&quot;&quot;&gt;Free Webinars&lt;/a&gt;
+              &lt;/h3&gt;
+        
+            &lt;p class=&quot;teaser-item__description&quot;&gt;
+              One hour online learning sessions scheduled with an instructor.
+            &lt;/p&gt;
+        
+        
+            &lt;p class=&quot;teaser-item__link&quot;&gt;
+              &lt;a href=&quot;#&quot;  class=&quot;link  link--arrow&quot;&gt;Learn More&lt;/a&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;teaser-item  grid--4&quot;&gt;
+          
+        
+          &lt;div class=&quot;teaser-item__info&quot;&gt;
+            
+              &lt;h3 class=&quot;teaser-item__title heading--label&quot;&gt;
+                &lt;a href=&quot;&quot;&gt;Paid Classroom Training&lt;/a&gt;
+              &lt;/h3&gt;
+        
+            &lt;p class=&quot;teaser-item__description&quot;&gt;
+              Intensive multi-day courses offered at a location of your choice around the world.
+            &lt;/p&gt;
+        
+        
+            &lt;p class=&quot;teaser-item__link&quot;&gt;
+              &lt;a href=&quot;#&quot;  class=&quot;link  link--arrow&quot;&gt;Learn More&lt;/a&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;teaser-item  grid--4&quot;&gt;
+          
+        
+          &lt;div class=&quot;teaser-item__info&quot;&gt;
+            
+              &lt;h3 class=&quot;teaser-item__title heading--label&quot;&gt;
+                &lt;a href=&quot;&quot;&gt;Knowledge Base&lt;/a&gt;
+              &lt;/h3&gt;
+        
+            &lt;p class=&quot;teaser-item__description&quot;&gt;
+              Begin your Tableau experience smoothly with these key articles.
+            &lt;/p&gt;
+        
+        
+            &lt;p class=&quot;teaser-item__link&quot;&gt;
+              &lt;a href=&quot;#&quot;  class=&quot;link  link--arrow&quot;&gt;Learn More&lt;/a&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
 

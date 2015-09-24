@@ -861,7 +861,7 @@ Card Teaser
 
 Markup: card.hbs
 
-Weight: 15
+Weight: 50
 
 Style Guide: lists.card
 */
@@ -872,7 +872,7 @@ Double-wide version of a card.
 
 Markup: card-wide.hbs
 
-Weight: 16
+Weight: 60
 
 Style Guide: lists.card-wide
 */
@@ -883,7 +883,7 @@ A highlighted card used for promoting an item with a quote.
 
 Markup: card-quote.hbs
 
-Weight: 17
+Weight: 70
 
 Style Guide: lists.card-quote
 */
@@ -894,16 +894,27 @@ A card that displays summary text and no thumbnail.
 
 Markup: card-summary.hbs
 
-Weight: 18
+Weight: 80
 
 Style Guide: lists.card-summary
+*/
+  /*
+3-Up Cross Reference
+
+A list of 3 cross-referencing items.
+
+Markup: cross-reference.hbs
+
+Weight: 100
+
+Style guide: lists.cross-reference
 */
   /* 
 Link List
 
 A simple unordered list of links.
 
-Weight: 10
+Weight: 20
 
 Markup: link-list.hbs
 
@@ -919,28 +930,28 @@ A list of tags such as categories or topics related to a piece of content
 
 Markup: tags-list.hbs
 
-Weight: 30
+Weight: 90
 
 Style guide: lists.tags
 */
   /*
-Basic Teaser List
+Basic Teaser Item
 
-A basic list of teasers, used for displaying a list of teasers to content that
+A basic teaser item, used for displaying a list of teasers to content that
 link to the full version of the content.
 
-Weight: 20
+Weight: 30
 
-Markup: teaser-list.hbs
+Markup: teaser-item.hbs
 
-Style guide: lists.teaser
+Style guide: lists.teaser-item
 */
   /*
 Text Teaser List
 
 Short list of related/recommeded items, used for page footers.
 
-Weight: 10
+Weight: 40
 
 Markup: text_teaser_list.hbs
 
@@ -951,7 +962,7 @@ Standard Unordered List
 
 A standard unordered list with bullets.
 
-Weight: 1
+Weight: 10
 
 Markup: list.hbs
 
@@ -1515,7 +1526,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .ta
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1646,7 +1657,7 @@ body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .ta
   display: inline-block;
 }
 
-body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .teaser-list:after, body.kss .kss-example-preview .text-teaser-list:after {
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .topic-nav .topic-nav__drawer:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .flyout__close-wrapper:after, body.kss .kss-example-preview .text-teaser-list:after {
   content: "";
   display: table;
   clear: both;
@@ -4556,6 +4567,30 @@ body.kss .kss-example-preview .card.card--summary .card__summary:after {
   background-image: linear-gradient(to top, #fff, transparent);
 }
 
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__title {
+    text-align: center;
+  }
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__title .heading-highlight:before {
+    left: 50%;
+    margin-left: -25px;
+  }
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__title,
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__items {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__title {
+    margin-bottom: 2em;
+  }
+  body.kss .kss-example-preview .cross-reference-list .cross-reference-list__title br {
+    display: none;
+  }
+}
+
 body.kss .kss-example-preview .tags-list {
   margin: .5em 0;
 }
@@ -4573,43 +4608,47 @@ body.kss .kss-example-preview .tags-list .tags-list__tag:last-child:after {
   content: "";
 }
 
-body.kss .kss-example-preview .teaser-list > a {
+body.kss .kss-example-preview .teaser-item > a {
   display: block;
   color: #333;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
 }
 
-body.kss .kss-example-preview .teaser-list > a:hover {
+body.kss .kss-example-preview .teaser-item > a:hover {
   color: #eb912c;
   text-decoration: none;
 }
 
-body.kss .kss-example-preview .teaser-list > a:hover img {
+body.kss .kss-example-preview .teaser-item > a:hover img {
   opacity: 0.85;
 }
 
-body.kss .kss-example-preview .teaser-list .teaser-list__thumbnail {
+body.kss .kss-example-preview .teaser-item .teaser-item__thumbnail {
   line-height: 0;
 }
 
-body.kss .kss-example-preview .teaser-list .teaser-list__title {
+body.kss .kss-example-preview .teaser-item .teaser-item__eyebrow {
+  margin-top: 1.5em;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__title {
   margin-top: 0.7em;
   margin-bottom: 0;
 }
 
-body.kss .kss-example-preview .teaser-list .teaser-list__description {
-  margin-top: 0.3em;
-  margin-bottom: 0.5em;
+body.kss .kss-example-preview .teaser-item .teaser-item__eyebrow + .teaser-item__title,
+body.kss .kss-example-preview .teaser-item .teaser-item__info:first-child .teaser-item__title:first-child {
+  margin-top: 0;
 }
 
-body.kss .kss-example-preview .teaser-list .teaser-list__link {
+body.kss .kss-example-preview .teaser-item .teaser-item__link {
   margin-top: 0.5em;
   margin-bottom: 0;
 }
 
 @media (max-width: 639px) {
-  body.kss .kss-example-preview .teaser-list .teaser-list__item {
+  body.kss .kss-example-preview .teaser-item {
     margin-bottom: 2em;
   }
 }
@@ -5904,18 +5943,6 @@ body.kss .kss-example-preview .heading--small {
 
 body.kss .kss-example-preview .heading--small a {
   color: #333;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  body.kss .kss-example-preview .heading--small {
-    font-size: 1.4285714286em;
-  }
-}
-
-@media (max-width: 639px) {
-  body.kss .kss-example-preview .heading--small {
-    font-size: 1.2857142857em;
-  }
 }
 
 body.kss .kss-example-preview .heading--x-small {

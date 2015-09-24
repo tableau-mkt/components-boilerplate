@@ -190,13 +190,13 @@ Styleguide typography.context-headings
     color: $text-dark-body;
   }
 
-  @include breakpoint($tablet-only) {
-    font-size: em(20px);
-  }
+  // @include breakpoint($tablet-only) {
+  //   font-size: em(20px);
+  // }
 
-  @include breakpoint($mobile-only) {
-    font-size: em(18px);
-  }
+  // @include breakpoint($mobile-only) {
+  //   font-size: em(18px);
+  // }
 }
 
 .heading--x-small {
