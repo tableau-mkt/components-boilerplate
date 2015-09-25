@@ -1,0 +1,110 @@
+/*
+Video Chapters
+
+Chapter parts for videos. Mainly On-Demand Training.
+
+Markup: video_chapters.hbs
+
+Style guide: video.video-chapters
+*/
+
+.viz-slideshow {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1520px;
+
+  .viz-slideshow__slide {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+
+  // Arrow Controls
+  .viz-slideshow__arrow {
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 26px;
+    top: 42%;
+    z-index: 5;
+    margin-top: -13px;
+    padding: 0;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+
+    i {
+      vertical-align: middle;
+    }
+
+    &.viz-slideshow__arrow--prev {
+      left: 187px;
+    }
+
+    &.viz-slideshow__arrow--next {
+      right: 187px;
+    }
+  }
+
+  .viz-slideshow__slide__copy {
+    opacity: 0;
+    transition: opacity 650ms;
+  }
+
+  .slick-active .viz-slideshow__slide__copy {
+    opacity: 1;
+  }
+
+  @include breakpoint($desktop-only) {
+    &:before,
+    &:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 180px;
+      height: 100%;
+      background-image: linear-gradient(to right, $white, transparent);
+
+      @include breakpoint($content-max) {
+        display: block;
+      }
+    }
+
+    &:after {
+      background-image: linear-gradient(to left, $white, transparent);
+      left: auto;
+      right: 0;
+    }
+  }
+
+  @include breakpoint($tablet-only) {
+
+    .viz-slideshow__slide {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+
+    .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+      left: 37px;
+    }
+
+    .viz-slideshow__arrow.viz-slideshow__arrow--next {
+      right: 37px;
+    }
+  }
+
+  @include breakpoint($mobile-max) {
+
+    .viz-slideshow__slide {
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+  }
+}

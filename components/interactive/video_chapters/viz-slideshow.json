@@ -1,0 +1,111 @@
+{
+  "vizzes": [
+    {
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    },
+    {
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": true,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": {
+        "href": "#",
+        "text": "Download this dataset in Tableau",
+        "class": "link--download"
+      }
+    },
+    {
+      "new": false,
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    },
+    {
+      "new": false,
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    },
+    {
+      "new": false,
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    },
+    {
+      "new": false,
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    },
+    {
+      "new": false,
+      "thumbnail": {
+        "src": "http://www.placecage.com/600/350",
+        "new": false,
+        "alt": "visualization"
+      },
+      "title": {
+        "text":  "Mapping Houston’s electricity usage.",
+        "level": "4",
+        "classes": "heading--x-small"
+      },
+      "description": "Frank Bracco of the City of Houston Blog, visualizes the changing energy usage climate in Houston, Texas.",
+      "download": false
+    }
+  ]
+}
