@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "timestamp": 60,
+      "title": "What is Data Blending",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 90,
+      "title": "Requirements for Data Blending",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 120,
+      "title": "Connecting to a second data source",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 240,
+      "title": "How to Blend",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 360,
+      "title": "Data Blending: Behind the Scenes",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 700,
+      "title": "Swapping Primary and Secondary Data Sources",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+
+    },
+    {
+      "timestamp": 1200,
+      "title": "Data Blending Wrangling against Gremlins",
+      "description": "Here we have two disparate sources of data. One is big, the other is orange; but does it blend?"
+    }
+  ]
+}
