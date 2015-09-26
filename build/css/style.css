@@ -195,13 +195,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .video__chapters, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .video__chapters li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -470,13 +470,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .video__chapters, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .video__chapters li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -601,6 +601,15 @@ Weight: 35
 Style guide: images
 */
 /*
+Media
+
+Media assets that are more complicated than images. E.g. Videos, Vizzes.
+
+Weight: 36
+
+Style guide: media
+*/
+/*
 Content Lists
 
 Lists of content that generally have a title, thumbnail and/or a description and
@@ -618,7 +627,7 @@ user can submit information through. Here's an example form:
 
 Weight: 50
 
-Style guide: forms 
+Style guide: forms
 */
 /*
 Tables
@@ -651,7 +660,7 @@ Weight: 80
 Style guide: interactive
 */
 /*
-Layout 
+Layout
 
 Components used for page layout
 
@@ -660,7 +669,7 @@ Weight: 90
 Style guide layout
 */
 /*
-Icons 
+Icons
 
 Graphical icons used inline with text or on their own
 
@@ -4185,6 +4194,48 @@ ul {
   padding-left: 1em;
 }
 
+/*
+Video Chapters
+
+Chapters for On-Demand Training Videos.
+
+Markup: video_chapters.hbs
+
+Style guide: media.video-chapters
+*/
+.video__chapters {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  margin-left: 2em;
+  color: #fff;
+}
+
+.video__chapter {
+  position: relative;
+  cursor: pointer;
+}
+
+.video__chapter:before {
+  position: absolute;
+  display: inline-block;
+  left: -1em;
+  top: 0.6em;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6.9px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/*
+Video Embed
+
+A Brightcove video embed. They come in two flavors: iframe and in-page (code-based). The former allows JavaScript interaction to be implemented with the player.
+
+Markup: video_embed.hbs
+
+Style guide: media.videoembed
+*/
 /*
 Global Footer
 

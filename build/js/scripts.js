@@ -30,7 +30,7 @@ function smoothScrollTop($element, duration, offset, onlyUp) {
   }
 
   if (scroll) {
-    $('body,html').animate({
+    $('body, html').animate({
       scrollTop: elementTop - offset
     }, duration);
   }
@@ -64,7 +64,7 @@ in CSS as well.
 
       $el.animate({
           height: elHeight
-        }, 
+        },
         options.duration,
         options.easing,
         function() {
@@ -72,7 +72,7 @@ in CSS as well.
           $el.css('height', 'auto');
         }
       );
-    } 
+    }
 
     if (direction === "up") {
       $el.animate({
@@ -84,11 +84,54 @@ in CSS as well.
   };
 }( jQuery ));
 
+
+/**
+ * General Brightcove video embed binding.
+ *
+ * This is a generic setup for in-page embedded players. We can bind a VideoJS wrapped object to a data property on the player DOM element, allowing us to control players by selecting the DOM element and accessing the bcPlayer data property. E.g.:
+ *
+ * $('#my-playerthing').data('bcPlayer').play();
+ * $('#my-playerthing').data('bcPlayer').pause();
+ *
+ * A more complicated example that retrieves the full video metadata via the Brightcove catalog method:
+ *
+ * var $video = $('#my-player-object');
+ *
+ * $video.data('bcPlayer').catalog.getVideo($video.data('videoId'),
+ * function(error, data) {
+ *   // Do things with the return.
+ *   console.log(data);
+ * });
+ *
+ * This presumes that the Brightcove API script has been loaded on page.
+ */
+(function ($, window) {
+  $(document).ready(function() {
+    // Use the default Brightcove embed selector.
+    var $players = $('.video-js');
+
+    // Bail early if there aren't even any players.
+    if (!$players.length || !typeof window.videojs === 'function') {
+      return;
+    }
+
+    $players.each(function setupBrightcoveInstances() {
+      var $this = $(this),
+        BCPlayer;
+
+      // Pass in the DOM element, not the jQuery wrapped object.
+      BCPlayer = window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
+        $this.data('bc-player', this);
+        $(document).trigger('brightcove:ready', $this.attr('id'));
+      });
+    });
+  });
+})(jQuery, window);
 ;
-/** 
+/**
  * Content Reveal utility
  *
- * Set a wrapper around content as a revealable region. Assign a "trigger" 
+ * Set a wrapper around content as a revealable region. Assign a "trigger"
  * element as the toggle to expand and collapse the content region.
  *
  * Options:
@@ -102,7 +145,7 @@ in CSS as well.
  *    triggers: $('.triggers-selector')
  *  });
  *
- * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin
  */
 
 (function ( $ ) {
@@ -157,11 +200,11 @@ in CSS as well.
       if (hideText != "") {
         $trigger.text(hideText);
       }
-      
+
       // Video players break when we display none so using a custom reimplementation
       // of slideDown. See helpers.js.
       $target.slideHeight('down', customAnimation);
-      
+
       $curtain.slideUp(customAnimation);
 
       if (media == "video") {
@@ -187,9 +230,9 @@ in CSS as well.
           media = data.revealMedia;
 
       $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
-      
+
       $target.slideHeight('up', settings.animation);
-      
+
       $curtain.slideDown(settings.animation);
 
       if (media == "video") {
@@ -202,11 +245,11 @@ in CSS as well.
     function setup() {
       // Add reveal-state data
       settings.triggers.data('revealState', 'closed');
-      
+
       settings.triggers.each(function(index, el) {
         var $target = $('#' + $(this).data('revealTarget')),
             showText = $(this).text();
-        
+
         // Link content back to it's corresponding trigger
         $target.data('revealTrigger', $(this));
 
@@ -215,8 +258,8 @@ in CSS as well.
       });
 
       // // Set initial margin on content if there is a curtain
-      // // @TODO this is for naimating the reveal as if the content is 
-      // // stationary and the elements above and below are revealing it. 
+      // // @TODO this is for naimating the reveal as if the content is
+      // // stationary and the elements above and below are revealing it.
       // // Currently, the content moves up as the curtain slides up.
       // settings.contents.each(function(index, el) {
       //   var data = $($(this).data('revealTrigger')).data(),
@@ -731,6 +774,62 @@ function dataSourcesSearch() {
     }
   });
 })(jQuery);
+;
+/**
+ * Brightcove video chapter handling.
+ *
+ * This handles chaptering interaction given an expected DOM structure. E.g.:
+ * <ul class="video__chapters" data-for="[VIDEO DOM ID]">
+ *   <li class="video__chapter" data-timestamp="60">Something</li>
+ *   <li class="video__chapter" data-timestamp="120">Something else</li>
+ * </ul>
+ *
+ * It listens for a brightcove:ready event that is raised per video instance as
+ * it successfully creates a Brightcove videojs wrapped player object.
+ */
+(function ($, window) {
+  $(document).ready(function () {
+    var $chapterLists = $('.video__chapters');
+
+    // Bail early if there aren't even any lists of chapters.
+    if (!$chapterLists.length || !typeof window.videojs === 'function') {
+      return;
+    }
+
+    // The Brightcove player binding is async. We wait for a raised event first
+    // before binding the video chapter actions.
+    $(document).bind('brightcove:ready', function (e, data) {
+      // The 'data' received here is the id attribute of the video player element.
+      var $readyChapters = $chapterLists.filter('[data-for="' + data + '"]'),
+          $videoElement = $('#' + data),
+          BCPlayer = $videoElement.data('bcPlayer');
+
+      // Bail early.
+      if (!$readyChapters.length) {
+        return;
+      }
+
+      $readyChapters.find('.video__chapter').on('click.chapter', function triggerVideoChapter (e) {
+        var $this = $(this),
+            timestamp = $this.data('timestamp');
+
+        e.preventDefault();
+
+        // Set the play time.
+        BCPlayer.currentTime(timestamp);
+
+        // Scroll.
+        smoothScrollTop($videoElement);
+
+        // Play the video if it ain't playing.
+        if (BCPlayer.paused()) {
+          BCPlayer.play();
+        }
+      })
+    });
+
+  });
+})(jQuery, window);
 ;
 /** 
  * Global gavigation interactions

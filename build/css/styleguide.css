@@ -340,6 +340,15 @@ Weight: 35
 Style guide: images
 */
   /*
+Media
+
+Media assets that are more complicated than images. E.g. Videos, Vizzes.
+
+Weight: 36
+
+Style guide: media
+*/
+  /*
 Content Lists
 
 Lists of content that generally have a title, thumbnail and/or a description and
@@ -357,7 +366,7 @@ user can submit information through. Here's an example form:
 
 Weight: 50
 
-Style guide: forms 
+Style guide: forms
 */
   /*
 Tables
@@ -390,7 +399,7 @@ Weight: 80
 Style guide: interactive
 */
   /*
-Layout 
+Layout
 
 Components used for page layout
 
@@ -399,7 +408,7 @@ Weight: 90
 Style guide layout
 */
   /*
-Icons 
+Icons
 
 Graphical icons used inline with text or on their own
 
@@ -971,6 +980,24 @@ Markup: list.hbs
 Style guide: lists.standard
 */
   /*
+Video Chapters
+
+Chapters for On-Demand Training Videos.
+
+Markup: video_chapters.hbs
+
+Style guide: media.video-chapters
+*/
+  /*
+Video Embed
+
+A Brightcove video embed. They come in two flavors: iframe and in-page (code-based). The former allows JavaScript interaction to be implemented with the player.
+
+Markup: video_embed.hbs
+
+Style guide: media.videoembed
+*/
+  /*
 Global Footer
 
 The global footer that is displayed at the bottom of each page. Contains several
@@ -1512,13 +1539,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .video__chapters, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .video__chapters li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -1643,13 +1670,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .video__chapters, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .video__chapters li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -4605,6 +4632,30 @@ body.kss .kss-example-preview ul {
 body.kss .kss-example-preview .list-negative {
   list-style-image: url(../images/icons/bullet-white.png);
   padding-left: 1em;
+}
+
+body.kss .kss-example-preview .video__chapters {
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  margin-left: 2em;
+  color: #fff;
+}
+
+body.kss .kss-example-preview .video__chapter {
+  position: relative;
+  cursor: pointer;
+}
+
+body.kss .kss-example-preview .video__chapter:before {
+  position: absolute;
+  display: inline-block;
+  left: -1em;
+  top: 0.6em;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6.9px;
+  border-color: transparent transparent transparent #fff;
 }
 
 body.kss .kss-example-preview .global-footer .global-footer__language,
