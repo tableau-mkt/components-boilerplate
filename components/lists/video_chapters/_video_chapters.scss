@@ -8,7 +8,7 @@ Markup: video_chapters.hbs
 Style guide: media.video-chapters
 */
 
-.video__chapters {
+.video-chapters {
   @extend %plain-list;
   font-family: $text--benton-light;
   margin-left: 2em;

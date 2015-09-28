@@ -12,7 +12,7 @@
  */
 (function ($, window) {
   $(document).ready(function () {
-    var $chapterLists = $('.video__chapters');
+    var $chapterLists = $('[data-chapters-for]');
 
     // Bail early if there aren't even any lists of chapters.
     if (!$chapterLists.length || !typeof window.videojs === 'function') {
@@ -21,9 +21,9 @@
 
     // The Brightcove player binding is async. We wait for a raised event first
     // before binding the video chapter actions.
-    $(document).bind('brightcove:ready', function (e, data) {
+    $(document).on('brightcove:ready', function (e, data) {
       // The 'data' received here is the id attribute of the video player element.
-      var $readyChapters = $chapterLists.filter('[data-for="' + data + '"]'),
+      var $readyChapters = $chapterLists.filter('[data-chapters-for="' + data + '"]'),
           $videoElement = $('#' + data),
           BCPlayer = $videoElement.data('bcPlayer');
 
