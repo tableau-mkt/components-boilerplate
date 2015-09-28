@@ -116,11 +116,10 @@ in CSS as well.
     }
 
     $players.each(function setupBrightcoveInstances() {
-      var $this = $(this),
-        BCPlayer;
+      var $this = $(this);
 
       // Pass in the DOM element, not the jQuery wrapped object.
-      BCPlayer = window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
+      window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
         $this.data('bc-player', this);
         $(document).trigger('brightcove:ready', $this.attr('id'));
       });
