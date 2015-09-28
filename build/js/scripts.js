@@ -116,11 +116,10 @@ in CSS as well.
     }
 
     $players.each(function setupBrightcoveInstances() {
-      var $this = $(this),
-        BCPlayer;
+      var $this = $(this);
 
       // Pass in the DOM element, not the jQuery wrapped object.
-      BCPlayer = window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
+      window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
         $this.data('bc-player', this);
         $(document).trigger('brightcove:ready', $this.attr('id'));
       });
@@ -128,10 +127,10 @@ in CSS as well.
   });
 })(jQuery, window);
 ;
-/**
+/** 
  * Content Reveal utility
  *
- * Set a wrapper around content as a revealable region. Assign a "trigger"
+ * Set a wrapper around content as a revealable region. Assign a "trigger" 
  * element as the toggle to expand and collapse the content region.
  *
  * Options:
@@ -145,7 +144,7 @@ in CSS as well.
  *    triggers: $('.triggers-selector')
  *  });
  *
- * @TODO: Can still use some cleanup and work to be a more agnostic plugin
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
  */
 
 (function ( $ ) {
@@ -200,11 +199,11 @@ in CSS as well.
       if (hideText != "") {
         $trigger.text(hideText);
       }
-
+      
       // Video players break when we display none so using a custom reimplementation
       // of slideDown. See helpers.js.
       $target.slideHeight('down', customAnimation);
-
+      
       $curtain.slideUp(customAnimation);
 
       if (media == "video") {
@@ -230,9 +229,9 @@ in CSS as well.
           media = data.revealMedia;
 
       $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
-
+      
       $target.slideHeight('up', settings.animation);
-
+      
       $curtain.slideDown(settings.animation);
 
       if (media == "video") {
@@ -245,11 +244,11 @@ in CSS as well.
     function setup() {
       // Add reveal-state data
       settings.triggers.data('revealState', 'closed');
-
+      
       settings.triggers.each(function(index, el) {
         var $target = $('#' + $(this).data('revealTarget')),
             showText = $(this).text();
-
+        
         // Link content back to it's corresponding trigger
         $target.data('revealTrigger', $(this));
 
@@ -258,8 +257,8 @@ in CSS as well.
       });
 
       // // Set initial margin on content if there is a curtain
-      // // @TODO this is for naimating the reveal as if the content is
-      // // stationary and the elements above and below are revealing it.
+      // // @TODO this is for naimating the reveal as if the content is 
+      // // stationary and the elements above and below are revealing it. 
       // // Currently, the content moves up as the curtain slides up.
       // settings.contents.each(function(index, el) {
       //   var data = $($(this).data('revealTrigger')).data(),
@@ -789,7 +788,7 @@ function dataSourcesSearch() {
  */
 (function ($, window) {
   $(document).ready(function () {
-    var $chapterLists = $('.video__chapters');
+    var $chapterLists = $('[data-chapters-for]');
 
     // Bail early if there aren't even any lists of chapters.
     if (!$chapterLists.length || !typeof window.videojs === 'function') {
@@ -798,9 +797,9 @@ function dataSourcesSearch() {
 
     // The Brightcove player binding is async. We wait for a raised event first
     // before binding the video chapter actions.
-    $(document).bind('brightcove:ready', function (e, data) {
+    $(document).on('brightcove:ready', function (e, data) {
       // The 'data' received here is the id attribute of the video player element.
-      var $readyChapters = $chapterLists.filter('[data-for="' + data + '"]'),
+      var $readyChapters = $chapterLists.filter('[data-chapters-for="' + data + '"]'),
           $videoElement = $('#' + data),
           BCPlayer = $videoElement.data('bcPlayer');
 

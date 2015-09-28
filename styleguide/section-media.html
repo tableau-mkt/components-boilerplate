@@ -155,38 +155,75 @@
               <div class="kss-example kss-example__default">
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <section class="padded-box box--dark-gray-1">
+                    <section class="padded-box box--dark-gray-1 clearfix">
 
-  <div style="display: block; position: relative;">
+  <div style="display: block; position: relative;" class="grid--6">
     <div style="display: block; padding-top: 56%;">
       <video id="my-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
       <script src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
     </div>
   </div>
 
-  <ul class="video__chapters" data-for="my-video">
-      <li data-timestamp="60" class="video__chapter">
-        What is Data Blending
-      </li>
-      <li data-timestamp="90" class="video__chapter">
-        Requirements for Data Blending
-      </li>
-      <li data-timestamp="120" class="video__chapter">
-        Connecting to a second data source
-      </li>
-      <li data-timestamp="240" class="video__chapter">
-        How to Blend
-      </li>
-      <li data-timestamp="360" class="video__chapter">
-        Data Blending: Behind the Scenes
-      </li>
-      <li data-timestamp="700" class="video__chapter">
-        Swapping Primary and Secondary Data Sources
-      </li>
-      <li data-timestamp="1200" class="video__chapter">
-        Data Blending Wrangling against Gremlins
-      </li>
-  </ul>
+  <div style="display: block; position: relative;" class="grid--6">
+    <div style="display: block; padding-top: 56%;">
+      <video id="my-other-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
+      <script src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
+    </div>
+  </div>
+</section>
+
+<section class="padded-box box--dark-gray-2 clearfix">
+  <div class="grid--5">
+    <ul class="video-chapters" data-chapters-for="my-video">
+        <li data-timestamp="60" class="video__chapter">
+          What is Data Blending
+        </li>
+        <li data-timestamp="90" class="video__chapter">
+          Requirements for Data Blending
+        </li>
+        <li data-timestamp="120" class="video__chapter">
+          Connecting to a second data source
+        </li>
+        <li data-timestamp="240" class="video__chapter">
+          How to Blend
+        </li>
+        <li data-timestamp="360" class="video__chapter">
+          Data Blending: Behind the Scenes
+        </li>
+        <li data-timestamp="700" class="video__chapter">
+          Swapping Primary and Secondary Data Sources
+        </li>
+        <li data-timestamp="1200" class="video__chapter">
+          Data Blending Wrangling against Gremlins
+        </li>
+    </ul>
+  </div>
+
+  <div class="grid--3 push--3">
+    <ul class="video-chapters" data-chapters-for="my-other-video">
+        <li data-timestamp="60" class="video__chapter">
+          What is Data Blending
+        </li>
+        <li data-timestamp="90" class="video__chapter">
+          Requirements for Data Blending
+        </li>
+        <li data-timestamp="120" class="video__chapter">
+          Connecting to a second data source
+        </li>
+        <li data-timestamp="240" class="video__chapter">
+          How to Blend
+        </li>
+        <li data-timestamp="360" class="video__chapter">
+          Data Blending: Behind the Scenes
+        </li>
+        <li data-timestamp="700" class="video__chapter">
+          Swapping Primary and Secondary Data Sources
+        </li>
+        <li data-timestamp="1200" class="video__chapter">
+          Data Blending Wrangling against Gremlins
+        </li>
+    </ul>
+  </div>
 </section>
 
                   </div>
@@ -197,38 +234,75 @@
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;section class=&quot;padded-box box--dark-gray-1&quot;&gt;
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;section class=&quot;padded-box box--dark-gray-1 clearfix&quot;&gt;
 
-  &lt;div style=&quot;display: block; position: relative;&quot;&gt;
+  &lt;div style=&quot;display: block; position: relative;&quot; class=&quot;grid--6&quot;&gt;
     &lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;
       &lt;video id=&quot;my-video&quot; data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
       &lt;script src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js&quot;&gt;&lt;/script&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;ul class=&quot;video__chapters&quot; data-for=&quot;my-video&quot;&gt;
-      &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
-        What is Data Blending
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
-        Requirements for Data Blending
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
-        Connecting to a second data source
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
-        How to Blend
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
-        Data Blending: Behind the Scenes
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
-        Swapping Primary and Secondary Data Sources
-      &lt;/li&gt;
-      &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
-        Data Blending Wrangling against Gremlins
-      &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;div style=&quot;display: block; position: relative;&quot; class=&quot;grid--6&quot;&gt;
+    &lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;
+      &lt;video id=&quot;my-other-video&quot; data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
+      &lt;script src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;padded-box box--dark-gray-2 clearfix&quot;&gt;
+  &lt;div class=&quot;grid--5&quot;&gt;
+    &lt;ul class=&quot;video-chapters&quot; data-chapters-for=&quot;my-video&quot;&gt;
+        &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
+          What is Data Blending
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
+          Requirements for Data Blending
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
+          Connecting to a second data source
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
+          How to Blend
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
+          Data Blending: Behind the Scenes
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
+          Swapping Primary and Secondary Data Sources
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
+          Data Blending Wrangling against Gremlins
+        &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid--3 push--3&quot;&gt;
+    &lt;ul class=&quot;video-chapters&quot; data-chapters-for=&quot;my-other-video&quot;&gt;
+        &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
+          What is Data Blending
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
+          Requirements for Data Blending
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
+          Connecting to a second data source
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
+          How to Blend
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
+          Data Blending: Behind the Scenes
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
+          Swapping Primary and Secondary Data Sources
+        &lt;/li&gt;
+        &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
+          Data Blending Wrangling against Gremlins
+        &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/section&gt;
 </code></pre>
               </div>
