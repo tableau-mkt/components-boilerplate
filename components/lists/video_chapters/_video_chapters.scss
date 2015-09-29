@@ -1,7 +1,7 @@
 /*
 Video Chapters
 
-Chapters for On-Demand Training Videos.
+A list of chapters for On-Demand Training Videos.
 
 Markup: video_chapters.hbs
 
@@ -9,26 +9,45 @@ Style guide: media.video-chapters
 */
 
 .video-chapters {
-  @extend %plain-list;
-  font-family: $text--benton-light;
-  margin-left: 2em;
+  // _link_list.scss
+  @extend .link-list--plain;
+  // _formatted_text.scss
+  @extend .text--caps;
+  @extend .text--small;
+  @extend .text--benton-book;
+  // _reveal.scss
+  @extend .reveal__content;
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
   color: $white;
 }
 
 .video__chapter {
   position: relative;
   cursor: pointer;
+  margin-top: 0.5em;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
+  // Custom arrow list item marker.
   &:before {
     position: absolute;
     display: inline-block;
-    left: -1em;
+    font-size: em(8px);
+    left: -1.6em;
     top: 0.6em;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 4px 0 4px 6.9px;
-    border-color: transparent transparent transparent $white;
+    content: '\25B6';
   }
+}
+
+.video-chapters__toggle {
+  // _link_formatted.scss
+  @extend .link;
+  @extend .link--expand;
+  display: inline-block;
+  margin-top: 1.5em;
+  cursor: pointer;
 }
