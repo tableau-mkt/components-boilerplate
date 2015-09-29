@@ -11,6 +11,7 @@ Style guide: buttons-links.link-base
 */
 
 a {
+  cursor: pointer;
   text-decoration: none;
 
   &:hover {
