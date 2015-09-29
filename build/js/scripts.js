@@ -824,6 +824,13 @@ function dataSourcesSearch() {
         if (BCPlayer.paused()) {
           BCPlayer.play();
         }
+      });
+
+      $readyChapters.each(function () {
+        $(this).contentReveal({
+          triggers: $(this).next('.video-chapters__toggle'),
+          closeLink: false
+        });
       })
     });
 

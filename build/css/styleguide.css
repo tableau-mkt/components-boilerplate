@@ -631,10 +631,10 @@ Style guide: interactive.popup
   /*
 Content Reveal
 
-Simple tool to make content hidden and revealed when a trigger is clicked. It 
+Simple tool to make content hidden and revealed when a trigger is clicked. It
 doesn't matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal__content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have an <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
@@ -982,7 +982,7 @@ Style guide: lists.standard
   /*
 Video Chapters
 
-Chapters for On-Demand Training Videos.
+A list of chapters for On-Demand Training Videos.
 
 Markup: video_chapters.hbs
 
@@ -1539,13 +1539,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .video-chapters li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -1670,13 +1670,13 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .text-teaser-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .video-chapters li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .text-teaser-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -2002,6 +2002,7 @@ body.kss .kss-example-preview .data-source-link.data-source-link--mobile:focus {
 }
 
 body.kss .kss-example-preview a {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -2009,35 +2010,35 @@ body.kss .kss-example-preview a:hover {
   text-decoration: underline;
 }
 
-body.kss .kss-example-preview .link {
+body.kss .kss-example-preview .link, body.kss .kss-example-preview .video-chapters__toggle {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-body.kss .kss-example-preview .link.link--arrow:after {
+body.kss .kss-example-preview .link.link--arrow:after, body.kss .kss-example-preview .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 body.kss .kss-example-preview .link.link--expand:before,
-body.kss .kss-example-preview .link.link--collapse:before,
-body.kss .kss-example-preview .link.link--share:before {
+body.kss .kss-example-preview .video-chapters__toggle:before, body.kss .kss-example-preview .link.link--collapse:before,
+body.kss .kss-example-preview .link--collapse.video-chapters__toggle:before, body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .link--share.video-chapters__toggle:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
 }
 
-body.kss .kss-example-preview .link.link--expand:before {
+body.kss .kss-example-preview .link.link--expand:before, body.kss .kss-example-preview .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-body.kss .kss-example-preview .link.link--collapse:before {
+body.kss .kss-example-preview .link.link--collapse:before, body.kss .kss-example-preview .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-body.kss .kss-example-preview .link.link--share:before {
+body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
 }
 
@@ -2506,13 +2507,13 @@ body.kss .kss-example-preview .popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
   opacity: 0;
 }
 
-body.kss .kss-example-preview .reveal__content, body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
+body.kss .kss-example-preview .reveal__content, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .topic-nav .topic-nav__drawers {
   position: relative;
   height: 0;
   overflow: hidden;
 }
 
-body.kss .kss-example-preview .reveal__content video, body.kss .kss-example-preview .topic-nav .topic-nav__drawers video {
+body.kss .kss-example-preview .reveal__content video, body.kss .kss-example-preview .video-chapters video, body.kss .kss-example-preview .topic-nav .topic-nav__drawers video {
   width: 100%;
 }
 
@@ -4635,27 +4636,35 @@ body.kss .kss-example-preview .list-negative {
 }
 
 body.kss .kss-example-preview .video-chapters {
-  font-family: "Benton Sans Light", Helvetica, sans-serif;
-  margin-left: 2em;
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #fff;
 }
 
 body.kss .kss-example-preview .video__chapter {
   position: relative;
   cursor: pointer;
+  margin-top: 0.5em;
+}
+
+body.kss .kss-example-preview .video__chapter:first-child {
+  margin-top: 0;
 }
 
 body.kss .kss-example-preview .video__chapter:before {
   position: absolute;
   display: inline-block;
-  left: -1em;
+  font-size: 0.5714285714em;
+  left: -1.6em;
   top: 0.6em;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 4px 0 4px 6.9px;
-  border-color: transparent transparent transparent #fff;
+  content: '\25B6';
+}
+
+body.kss .kss-example-preview .video-chapters__toggle {
+  display: inline-block;
+  margin-top: 1.5em;
+  cursor: pointer;
 }
 
 body.kss .kss-example-preview .global-footer .global-footer__language,
@@ -4857,14 +4866,14 @@ body.kss .kss-example-preview .global-nav__top .global-nav__logo a {
     padding-right: 45px;
     text-align: right;
   }
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -5011,7 +5020,7 @@ body.kss .kss-example-preview .global-nav__top.global-nav--search-shown .global-
     display: block;
   }
   body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.link,
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.search {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
     color: #000;
   }
@@ -5583,7 +5592,7 @@ body.kss .kss-example-preview .text--benton-light {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .link, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .subnav .subnav__links li a {
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .link, body.kss .kss-example-preview .video-chapters__toggle, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
@@ -5609,7 +5618,7 @@ body.kss .kss-example-preview .text--italic {
   font-style: italic;
 }
 
-body.kss .kss-example-preview .text--caps {
+body.kss .kss-example-preview .text--caps, body.kss .kss-example-preview .video-chapters {
   text-transform: uppercase;
 }
 
@@ -5647,7 +5656,7 @@ body.kss .kss-example-preview .text--base-size {
   font-size: 14px;
 }
 
-body.kss .kss-example-preview .text--small {
+body.kss .kss-example-preview .text--small, body.kss .kss-example-preview .video-chapters {
   font-size: 0.8571428571em;
 }
 

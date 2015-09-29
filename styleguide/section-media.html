@@ -145,7 +145,7 @@
 
 
             <div class="kss-description">
-              <p>Chapters for On-Demand Training Videos.</p>
+              <p>A list of chapters for On-Demand Training Videos.</p>
 
             </div>
           </div>
@@ -160,21 +160,15 @@
   <div style="display: block; position: relative;" class="grid--6">
     <div style="display: block; padding-top: 56%;">
       <video id="my-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-      <script src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
+
     </div>
   </div>
 
-  <div style="display: block; position: relative;" class="grid--6">
-    <div style="display: block; padding-top: 56%;">
-      <video id="my-other-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-      <script src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
-    </div>
-  </div>
 </section>
 
 <section class="padded-box box--dark-gray-2 clearfix">
-  <div class="grid--5">
-    <ul class="video-chapters" data-chapters-for="my-video">
+  <div class="grid--6">
+    <ul id="chapters-1" class="video-chapters" data-chapters-for="my-video">
         <li data-timestamp="60" class="video__chapter">
           What is Data Blending
         </li>
@@ -197,33 +191,12 @@
           Data Blending Wrangling against Gremlins
         </li>
     </ul>
+    <a class="video-chapters__toggle"
+      data-reveal-target="chapters-1"
+      data-reveal-media="markup"
+      data-reveal-hide-text="Hide Chapters">Show Chapters</a>
   </div>
 
-  <div class="grid--3 push--3">
-    <ul class="video-chapters" data-chapters-for="my-other-video">
-        <li data-timestamp="60" class="video__chapter">
-          What is Data Blending
-        </li>
-        <li data-timestamp="90" class="video__chapter">
-          Requirements for Data Blending
-        </li>
-        <li data-timestamp="120" class="video__chapter">
-          Connecting to a second data source
-        </li>
-        <li data-timestamp="240" class="video__chapter">
-          How to Blend
-        </li>
-        <li data-timestamp="360" class="video__chapter">
-          Data Blending: Behind the Scenes
-        </li>
-        <li data-timestamp="700" class="video__chapter">
-          Swapping Primary and Secondary Data Sources
-        </li>
-        <li data-timestamp="1200" class="video__chapter">
-          Data Blending Wrangling against Gremlins
-        </li>
-    </ul>
-  </div>
 </section>
 
                   </div>
@@ -239,21 +212,15 @@
   &lt;div style=&quot;display: block; position: relative;&quot; class=&quot;grid--6&quot;&gt;
     &lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;
       &lt;video id=&quot;my-video&quot; data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
-      &lt;script src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js&quot;&gt;&lt;/script&gt;
+
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div style=&quot;display: block; position: relative;&quot; class=&quot;grid--6&quot;&gt;
-    &lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;
-      &lt;video id=&quot;my-other-video&quot; data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
-      &lt;script src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js&quot;&gt;&lt;/script&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;padded-box box--dark-gray-2 clearfix&quot;&gt;
-  &lt;div class=&quot;grid--5&quot;&gt;
-    &lt;ul class=&quot;video-chapters&quot; data-chapters-for=&quot;my-video&quot;&gt;
+  &lt;div class=&quot;grid--6&quot;&gt;
+    &lt;ul id=&quot;chapters-1&quot; class=&quot;video-chapters&quot; data-chapters-for=&quot;my-video&quot;&gt;
         &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
           What is Data Blending
         &lt;/li&gt;
@@ -276,33 +243,12 @@
           Data Blending Wrangling against Gremlins
         &lt;/li&gt;
     &lt;/ul&gt;
+    &lt;a class=&quot;video-chapters__toggle&quot;
+      data-reveal-target=&quot;chapters-1&quot;
+      data-reveal-media=&quot;markup&quot;
+      data-reveal-hide-text=&quot;Hide Chapters&quot;&gt;Show Chapters&lt;/a&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;grid--3 push--3&quot;&gt;
-    &lt;ul class=&quot;video-chapters&quot; data-chapters-for=&quot;my-other-video&quot;&gt;
-        &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
-          What is Data Blending
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
-          Requirements for Data Blending
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
-          Connecting to a second data source
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
-          How to Blend
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
-          Data Blending: Behind the Scenes
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
-          Swapping Primary and Secondary Data Sources
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
-          Data Blending Wrangling against Gremlins
-        &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
 &lt;/section&gt;
 </code></pre>
               </div>
@@ -372,7 +318,8 @@
   <script>
     prettyPrint();
   </script>
-  <script src="../build/bower/jquery/dist/jquery.min.js"></script>
+  <script src="https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
+<script src="../build/bower/jquery/dist/jquery.min.js"></script>
 <script src="../build/bower/jquery-ui/jquery-ui.min.js"></script>
 <script src="../build/bower/slick.js/slick/slick.min.js"></script>
 <script src="../build/bower/hoverintent/jquery.hoverIntent.js"></script>
