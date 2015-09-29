@@ -1,10 +1,10 @@
 /*
 Content Reveal
 
-Simple tool to make content hidden and revealed when a trigger is clicked. It 
+Simple tool to make content hidden and revealed when a trigger is clicked. It
 doesn't matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal__content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have an <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
