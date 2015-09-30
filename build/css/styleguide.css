@@ -2350,68 +2350,6 @@ body.kss .kss-example-preview .hero-slideshow .slick-dots li button:before {
           transition: color 0.25s;
 }
 
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  z-index: 1;
-  margin-top: -12px;
-  line-height: 18px;
-  text-decoration: none;
-  overflow: visible;
-  color: #fff;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow .hero-slideshow__arrow__title {
-  display: none;
-  position: absolute;
-  top: -10px;
-  right: -15px;
-  width: auto;
-  padding: 15px 15px 15px 40px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow .icon-slideshow-arrow-left,
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow .icon-slideshow-arrow-right {
-  position: relative;
-  display: block;
-  margin: 0;
-  z-index: 1;
-  width: 13px;
-  height: 25px;
-  background: url("../images/icons/slideshow-prev-light.png") 0 0 no-repeat;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow .icon-slideshow-arrow-right {
-  background: url("../images/icons/slideshow-next-light.png") 0 0 no-repeat;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.inverted:hover .icon-slideshow-arrow-left {
-  background: url("../images/icons/slideshow-prev-dark.png") 0 0 no-repeat;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.hero-slideshow__arrow--left .hero-slideshow__arrow__title {
-  left: -15px;
-  right: auto;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.hero-slideshow__arrow--right {
-  right: 5%;
-  left: auto;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.hero-slideshow__arrow--right.inverted:hover .icon-slideshow-arrow-right {
-  background: url("../images/icons/slideshow-next-dark.png") 0 0 no-repeat;
-}
-
-body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow.hero-slideshow__arrow--right:hover .hero-slideshow__arrow__title {
-  padding: 15px 40px 15px 15px;
-}
-
 @media (min-width: 640px) and (max-width: 960px) {
   body.kss .kss-example-preview .hero-slideshow .content-container, body.kss .kss-example-preview .hero-slideshow .flyout__close-wrapper {
     padding-left: 10%;
@@ -5768,7 +5706,7 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .hero-slideshow .hero-slideshow__arrow, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .text-teaser-list .text-teaser-list__type, body.kss .kss-example-preview .quote .quote__byline {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .text-teaser-list .text-teaser-list__type, body.kss .kss-example-preview .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;

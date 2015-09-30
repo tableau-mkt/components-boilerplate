@@ -2,8 +2,6 @@
   "slides": [
     {
       "id": "slide-0",
-      "hover_title": "Hover title for next button",
-      "hover_class": "box--desktop",
       "img": {
         "src": "http://www.placecage.com/300/200"
       },
@@ -24,8 +22,6 @@
       }
     },{
       "id": "slide-0",
-      "hover_title": "Hover title for next button",
-      "hover_class": "box--server",
       "img": {
         "src": "http://www.placecage.com/300/200"
       },
@@ -46,8 +42,6 @@
       }
     },{
       "id": "slide-0",
-      "hover_title": "Hover title for next button",
-      "hover_class": "box--mobile",
       "img": {
         "src": "http://www.placecage.com/300/200"
       },
