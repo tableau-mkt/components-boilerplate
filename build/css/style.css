@@ -4238,6 +4238,10 @@ Style guide: media.video-chapters
   cursor: pointer;
 }
 
+.video-chapters__toggle:hover {
+  text-decoration: none;
+}
+
 /*
 Video Embed
 

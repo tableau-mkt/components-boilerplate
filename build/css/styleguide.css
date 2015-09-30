@@ -4667,6 +4667,10 @@ body.kss .kss-example-preview .video-chapters__toggle {
   cursor: pointer;
 }
 
+body.kss .kss-example-preview .video-chapters__toggle:hover {
+  text-decoration: none;
+}
+
 body.kss .kss-example-preview .global-footer .global-footer__language,
 body.kss .kss-example-preview .global-footer .global-footer__menu {
   float: left;
