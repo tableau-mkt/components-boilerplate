@@ -75,8 +75,18 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-media.html#kssref-media-videoembed">
-                    Video Embed
+                  <a href="section-media.html#kssref-media-video-chapters-demo">
+                    Video Chapters Demo
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
+                  <a href="section-media.html#kssref-media-video-embed-iframe">
+                    Video Embed iframe
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
+                  <a href="section-media.html#kssref-media-video-embed-responsive">
+                    Video Embed in-page
                   </a>
                 </li>
           </ul>
@@ -145,7 +155,99 @@
 
 
             <div class="kss-description">
-              <p>A list of chapters for On-Demand Training Videos.</p>
+              <p>A list of chapters for Brightcove videos.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview" style="background: #222222;">
+                  <div class="kss-example-preview-wrapper">
+                    <ul id="my-chapters" class="video-chapters" data-chapters-for="my-player">
+    <li data-timestamp="60" class="video-chapters__chapter">
+      What is Data Blending
+    </li>
+    <li data-timestamp="90" class="video-chapters__chapter">
+      Requirements for Data Blending
+    </li>
+    <li data-timestamp="120" class="video-chapters__chapter">
+      Connecting to a second data source
+    </li>
+    <li data-timestamp="240" class="video-chapters__chapter">
+      How to Blend
+    </li>
+    <li data-timestamp="360" class="video-chapters__chapter">
+      Data Blending: Behind the Scenes
+    </li>
+    <li data-timestamp="700" class="video-chapters__chapter">
+      Swapping Primary and Secondary Data Sources
+    </li>
+    <li data-timestamp="1200" class="video-chapters__chapter">
+      Data Blending Wrangling against Gremlins
+    </li>
+</ul>
+<div class="video-chapters__toggle-wrapper">
+<a href="#my-chapters" class="video-chapters__toggle"
+  data-reveal-target="my-chapters"
+  data-reveal-media="markup"
+  data-reveal-hide-text="Hide Chapters">Show Chapters</a>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;ul id=&quot;my-chapters&quot; class=&quot;video-chapters&quot; data-chapters-for=&quot;my-player&quot;&gt;
+    &lt;li data-timestamp=&quot;60&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      What is Data Blending
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;90&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      Requirements for Data Blending
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;120&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      Connecting to a second data source
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;240&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      How to Blend
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;360&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      Data Blending: Behind the Scenes
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;700&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      Swapping Primary and Secondary Data Sources
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;1200&quot; class=&quot;video-chapters__chapter&quot;&gt;
+      Data Blending Wrangling against Gremlins
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;video-chapters__toggle-wrapper&quot;&gt;
+&lt;a href=&quot;#my-chapters&quot; class=&quot;video-chapters__toggle&quot;
+  data-reveal-target=&quot;my-chapters&quot;
+  data-reveal-media=&quot;markup&quot;
+  data-reveal-hide-text=&quot;Hide Chapters&quot;&gt;Show Chapters&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-media-video-chapters-demo" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-media-video-chapters-demo"> -->
+                Video Chapters Demo
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Interaction demo for Brightcove video chapters.</p>
 
             </div>
           </div>
@@ -156,47 +258,47 @@
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
                     <section class="padded-box box--dark-gray-1 clearfix">
-
-  <div style="display: block; position: relative;" class="grid--6">
-    <div style="display: block; padding-top: 56%;">
-      <video id="my-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-
+  <div class="grid--6">
+    <div style="display: block; position: relative; max-width: 100%;">
+      <div style="display: block; padding-top: 56%;">
+        <video id="chapter-demo-player" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
+      </div>
     </div>
   </div>
-
 </section>
 
 <section class="padded-box box--dark-gray-2 clearfix">
   <div class="grid--6">
-    <ul id="chapters-1" class="video-chapters" data-chapters-for="my-video">
-        <li data-timestamp="60" class="video__chapter">
+    <ul id="chapter-demo" class="video-chapters" data-chapters-for="chapter-demo-player">
+        <li data-timestamp="60" class="video-chapters__chapter">
           What is Data Blending
         </li>
-        <li data-timestamp="90" class="video__chapter">
+        <li data-timestamp="90" class="video-chapters__chapter">
           Requirements for Data Blending
         </li>
-        <li data-timestamp="120" class="video__chapter">
+        <li data-timestamp="120" class="video-chapters__chapter">
           Connecting to a second data source
         </li>
-        <li data-timestamp="240" class="video__chapter">
+        <li data-timestamp="240" class="video-chapters__chapter">
           How to Blend
         </li>
-        <li data-timestamp="360" class="video__chapter">
+        <li data-timestamp="360" class="video-chapters__chapter">
           Data Blending: Behind the Scenes
         </li>
-        <li data-timestamp="700" class="video__chapter">
+        <li data-timestamp="700" class="video-chapters__chapter">
           Swapping Primary and Secondary Data Sources
         </li>
-        <li data-timestamp="1200" class="video__chapter">
+        <li data-timestamp="1200" class="video-chapters__chapter">
           Data Blending Wrangling against Gremlins
         </li>
     </ul>
-    <a class="video-chapters__toggle"
-      data-reveal-target="chapters-1"
+    <div class="video-chapters__toggle-wrapper">
+    <a href="#chapter-demo" class="video-chapters__toggle"
+      data-reveal-target="chapter-demo"
       data-reveal-media="markup"
       data-reveal-hide-text="Hide Chapters">Show Chapters</a>
+    </div>
   </div>
-
 </section>
 
                   </div>
@@ -205,67 +307,20 @@
              
             </div>
             
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;section class=&quot;padded-box box--dark-gray-1 clearfix&quot;&gt;
-
-  &lt;div style=&quot;display: block; position: relative;&quot; class=&quot;grid--6&quot;&gt;
-    &lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;
-      &lt;video id=&quot;my-video&quot; data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/section&gt;
-
-&lt;section class=&quot;padded-box box--dark-gray-2 clearfix&quot;&gt;
-  &lt;div class=&quot;grid--6&quot;&gt;
-    &lt;ul id=&quot;chapters-1&quot; class=&quot;video-chapters&quot; data-chapters-for=&quot;my-video&quot;&gt;
-        &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
-          What is Data Blending
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
-          Requirements for Data Blending
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
-          Connecting to a second data source
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
-          How to Blend
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
-          Data Blending: Behind the Scenes
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
-          Swapping Primary and Secondary Data Sources
-        &lt;/li&gt;
-        &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
-          Data Blending Wrangling against Gremlins
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;a class=&quot;video-chapters__toggle&quot;
-      data-reveal-target=&quot;chapters-1&quot;
-      data-reveal-media=&quot;markup&quot;
-      data-reveal-hide-text=&quot;Hide Chapters&quot;&gt;Show Chapters&lt;/a&gt;
-  &lt;/div&gt;
-
-&lt;/section&gt;
-</code></pre>
-              </div>
 
             </section>
-            <section id="kssref-media-videoembed" class="kss-section kss-section--depth-2">
+            <section id="kssref-media-video-embed-iframe" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
             <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-media-videoembed"> -->
-                Video Embed
+              <!-- <a class="kss-title__permalink" href="#kssref-media-video-embed-iframe"> -->
+                Video Embed iframe
               <!-- </a> -->
             </h3>
 
 
             <div class="kss-description">
-              <p>A Brightcove video embed. They come in two flavors: iframe and in-page (code-based). The former allows JavaScript interaction to be implemented with the player.</p>
+              <p>A Brightcove video embed in an iframe. This can be used by editors if a paragraph bundle is unvailable to them.</p>
 
             </div>
           </div>
@@ -275,13 +330,11 @@
               <div class="kss-example kss-example__default">
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <div style="display: block; position: relative; max-width: 100%;"><div style="display: block; padding-top: 56%;"><video data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-<script src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
-</div></div>
-
-<br><br>
-
-<div style="display: block; position: relative; max-width: 100%;"><div style="display: block; padding-top: 56%;"><iframe src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.html?videoId=4243191431001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+                    <div style="display: block; position: relative; max-width: 100%;">
+  <div style="display: block; padding-top: 56%;">
+    <iframe src="//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.html?videoId=4243191431001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe>
+  </div>
+</div>
 
                   </div>
                 </div>
@@ -289,17 +342,41 @@
              
             </div>
             
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div style=&quot;display: block; position: relative; max-width: 100%;&quot;&gt;&lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;&lt;video data-video-id=&quot;4243191431001&quot; data-account=&quot;3798483592001&quot; data-player=&quot;ad8b15bd-b737-4c9b-a550-53c61ac31107&quot; data-embed=&quot;default&quot; class=&quot;video-js&quot; controls=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/video&gt;
-&lt;script src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;&lt;/div&gt;
 
-&lt;br&gt;&lt;br&gt;
+            </section>
+            <section id="kssref-media-video-embed-responsive" class="kss-section kss-section--depth-2">
 
-&lt;div style=&quot;display: block; position: relative; max-width: 100%;&quot;&gt;&lt;div style=&quot;display: block; padding-top: 56%;&quot;&gt;&lt;iframe src=&quot;//players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.html?videoId=4243191431001&quot; allowfullscreen=&quot;&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; style=&quot;width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-</code></pre>
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-media-video-embed-responsive"> -->
+                Video Embed in-page
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>A Brightcove video embed. The in-page version allows JavaScript (videojs) interaction to be implemented with the player.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div style="display: block; position: relative; max-width: 100%;">
+  <div style="display: block; padding-top: 56%;">
+    <video id="my-player" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
+  </div>
+</div>
+
+                  </div>
+                </div>
               </div>
+             
+            </div>
+            
 
             </section>
     </article>
