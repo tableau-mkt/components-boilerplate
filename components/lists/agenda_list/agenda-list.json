@@ -1,0 +1,31 @@
+{
+  "agenda": {
+    "heading": "Agenda",
+    "list": [
+      {
+        "time": "1:30-3:30PM",
+        "description": "Registration"
+      },
+      {
+        "time": "2:30-3:30PM",
+        "description": "Keynote"
+      },
+      {
+        "time": "11:30AM-12:30PM",
+        "description": "Networking & Drinks"
+      },
+      {
+        "time": "4:30-5:30PM",
+        "description": "Institutions need data to improve. From enrollment to scholarships. (This tries to account for the kind of content that might be put in here)"
+      },
+      {
+        "time": "5:30-6:30PM",
+        "description": "Do your analytics tools slow you down or speed you up?"
+      },
+      {
+        "time": "11:30AM-12:30PM",
+        "description": "Networking & Drinks"
+      }
+    ]
+  }
+}
