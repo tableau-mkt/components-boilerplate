@@ -14,7 +14,8 @@ Style guide: lists.people-list
 }
 
 .people-list__heading {
-  @extend .heading--h4;
+  // _heading.scss
+  @extend .heading--x-small;
 }
 
 .person {
@@ -36,6 +37,7 @@ Style guide: lists.people-list
   }
 
   .person__info {
+    // Isolated to keep the text wrap at the isolation column.
     @include span(isolate last 3 of 4 at 1);
 
     @include breakpoint($tablet-min) {
@@ -52,6 +54,6 @@ Style guide: lists.people-list
   }
 
   .person__social {
-
+    // @todo on auto iconfont generation
   }
 }
