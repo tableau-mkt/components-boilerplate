@@ -13,12 +13,7 @@ Style guide: lists.people-list
   @extend %plain-list;
 }
 
-.people-list__heading {
-  // _heading.scss
-  @extend .heading--x-small;
-}
-
-.person {
+.people-list__person {
   @extend %clearfix;
   position: relative;
   margin-top: 1em;
@@ -42,7 +37,7 @@ Style guide: lists.people-list
 
     @include breakpoint($tablet-min) {
       @include span(4);
-      padding-top: 1em;
+      padding-top: 1.5em;
     }
   }
 
