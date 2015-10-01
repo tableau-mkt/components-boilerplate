@@ -1,7 +1,11 @@
 {
+  "video": {
+    "id": "chapter-demo-player",
+    "vid": 4243191431001
+  },
   "chapters": {
-    "player": "my-player",
-    "id": "my-chapters",
+    "player": "chapter-demo-player",
+    "id": "chapter-demo",
     "list": [
       {
         "timestamp": 60,

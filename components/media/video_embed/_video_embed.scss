@@ -1,11 +1,24 @@
 /*
-Video Embed
+Video Embed in-page
 
-A Brightcove video embed. They come in two flavors: iframe and in-page (code-based). The former allows JavaScript interaction to be implemented with the player.
+A Brightcove video embed. The in-page version allows JavaScript (videojs) interaction to be implemented with the player.
 
-Markup: video_embed.hbs
+Markup: video_embed_responsive.hbs
 
-Style guide: media.videoembed
+Nocode: true
+
+Style guide: media.video-embed-responsive
 */
 
 
+/*
+Video Embed iframe
+
+A Brightcove video embed in an iframe. This can be used by editors if a paragraph bundle is unvailable to them.
+
+Markup: video_embed_iframe.hbs
+
+Nocode: true
+
+Style guide: media.video-embed-iframe
+*/

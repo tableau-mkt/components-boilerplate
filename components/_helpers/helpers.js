@@ -120,7 +120,7 @@ in CSS as well.
 
       // Pass in the DOM element, not the jQuery wrapped object.
       window.videojs($this[0]).ready(function prepareBrightcoveInstance() {
-        $this.data('bc-player', this);
+        $this.data('bcPlayer', this);
         $(document).trigger('brightcove:ready', $this.attr('id'));
       });
     });

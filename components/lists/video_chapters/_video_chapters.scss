@@ -1,9 +1,11 @@
 /*
 Video Chapters
 
-A list of chapters for On-Demand Training Videos.
+A list of chapters for Brightcove videos.
 
 Markup: video_chapters.hbs
+
+Bgcolor: #222222
 
 Style guide: media.video-chapters
 */
@@ -12,18 +14,17 @@ Style guide: media.video-chapters
   // _link_list.scss
   @extend .link-list--plain;
   // _formatted_text.scss
-  @extend .text--caps;
-  @extend .text--small;
+  @extend .text--label;
   @extend .text--benton-book;
   // _reveal.scss
   @extend .reveal__content;
   padding-left: 2em;
   margin-top: 0;
   margin-bottom: 0;
-  color: $white;
+  color: $text-negative;
 }
 
-.video__chapter {
+.video-chapters__chapter {
   position: relative;
   cursor: pointer;
   margin-top: 0.5em;
@@ -43,15 +44,25 @@ Style guide: media.video-chapters
   }
 }
 
-.video-chapters__toggle {
-  // _link_formatted.scss
-  @extend .link;
-  @extend .link--expand;
-  display: inline-block;
+.video-chapters__toggle-wrapper {
   margin-top: 1.5em;
-  cursor: pointer;
 
-  &:hover {
-    text-decoration: none;
+  .video-chapters__toggle {
+    // _link_formatted.scss
+    @extend .link;
+    @extend .link--expand;
+    display: inline-block;
   }
 }
+
+/*
+Video Chapters Demo
+
+Interaction demo for Brightcove video chapters.
+
+Markup: video_chapters_demo.hbs
+
+Nocode: true
+
+Style guide: media.video-chapters-demo
+*/

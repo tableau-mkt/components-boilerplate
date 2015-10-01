@@ -2,7 +2,7 @@
  * Brightcove video chapter handling.
  *
  * This handles chaptering interaction given an expected DOM structure. E.g.:
- * <ul class="video__chapters" data-for="[VIDEO DOM ID]">
+ * <ul class="video__chapters" data-chapters-for="[VIDEO DOM ID]">
  *   <li class="video__chapter" data-timestamp="60">Something</li>
  *   <li class="video__chapter" data-timestamp="120">Something else</li>
  * </ul>
@@ -19,6 +19,14 @@
       return;
     }
 
+    // Utilize the revealContent plugin.
+    $chapterLists.each(function initChapterReveal() {
+      $(this).contentReveal({
+        triggers: $(this).next('.video-chapters__toggle-wrapper').find('.video-chapters__toggle'),
+        closeLink: false
+      });
+    });
+
     // The Brightcove player binding is async. We wait for a raised event first
     // before binding the video chapter actions.
     $(document).on('brightcove:ready', function (e, data) {
@@ -32,7 +40,7 @@
         return;
       }
 
-      $readyChapters.find('.video__chapter').on('click.chapter', function triggerVideoChapter (e) {
+      $readyChapters.find('.video-chapters__chapter').on('click.chapter', function triggerVideoChapter (e) {
         var $this = $(this),
             timestamp = $this.data('timestamp');
 
@@ -49,13 +57,6 @@
           BCPlayer.play();
         }
       });
-
-      $readyChapters.each(function () {
-        $(this).contentReveal({
-          triggers: $(this).next('.video-chapters__toggle'),
-          closeLink: false
-        });
-      })
     });
 
   });

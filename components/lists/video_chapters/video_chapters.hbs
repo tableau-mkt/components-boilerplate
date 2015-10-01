@@ -1,27 +1,15 @@
-<section class="padded-box box--dark-gray-1 clearfix">
-
-  <div style="display: block; position: relative;" class="grid--6">
-    <div style="display: block; padding-top: 56%;">
-      <video id="my-video" data-video-id="4243191431001" data-account="3798483592001" data-player="ad8b15bd-b737-4c9b-a550-53c61ac31107" data-embed="default" class="video-js" controls="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-
-    </div>
-  </div>
-
-</section>
-
-<section class="padded-box box--dark-gray-2 clearfix">
-  <div class="grid--6">
-    <ul id="chapters-1" class="video-chapters" data-chapters-for="my-video">
-      {{#each chapters}}
-        <li data-timestamp="{{timestamp}}" class="video__chapter">
-          {{title}}
-        </li>
-      {{/each}}
-    </ul>
-    <a class="video-chapters__toggle"
-      data-reveal-target="chapters-1"
-      data-reveal-media="markup"
-      data-reveal-hide-text="Hide Chapters">Show Chapters</a>
-  </div>
-
-</section>
+{{#with chapters }}
+<ul id="{{id}}" class="video-chapters" data-chapters-for="{{player}}">
+  {{#each list}}
+    <li data-timestamp="{{timestamp}}" class="video-chapters__chapter">
+      {{title}}
+    </li>
+  {{/each}}
+</ul>
+<div class="video-chapters__toggle-wrapper">
+<a href="#{{id}}" class="video-chapters__toggle"
+  data-reveal-target="{{id}}"
+  data-reveal-media="markup"
+  data-reveal-hide-text="Hide Chapters">Show Chapters</a>
+</div>
+{{/with }}
