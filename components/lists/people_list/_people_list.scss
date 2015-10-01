@@ -1,0 +1,57 @@
+/*
+People List
+
+A list of people, showing their name and associated metadata.
+
+Weight: 60
+
+Markup: people-list.hbs
+
+Style guide: lists.people-list
+*/
+.people-list {
+  @extend %plain-list;
+}
+
+.people-list__heading {
+  @extend .heading--h4;
+}
+
+.person {
+  @extend %clearfix;
+  position: relative;
+  margin-top: 1em;
+  color: $text-medium-body;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .person__image {
+    @include span(1 of 4);
+
+    @include breakpoint($tablet-min) {
+      @include span(2);
+    }
+  }
+
+  .person__info {
+    @include span(isolate last 3 of 4 at 1);
+
+    @include breakpoint($tablet-min) {
+      @include span(4);
+      padding-top: 1em;
+    }
+  }
+
+  .person__name {
+    @extend .text--body-medium;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: $text-dark-body;
+  }
+
+  .person__social {
+
+  }
+}

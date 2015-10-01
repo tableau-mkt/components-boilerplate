@@ -1,0 +1,66 @@
+{
+  "people": {
+    "list": [
+      {
+        "image": "http://www.placecage.com/c/400/400",
+        "name": "Drew Paul Doritos",
+        "description": "Team Lederhosen, Daimler AG",
+        "social": [
+          {
+            "name": "linkedin",
+            "url": "https://www.linkedins.com"
+          },
+          {
+            "name": "twitter",
+            "url": "https://twitters.com"
+          }
+        ]
+      },
+      {
+        "image": "http://www.placecage.com/c/400/400",
+        "name": "Drew Paul Doritos",
+        "description": "Executive Vice President of Biological Research, Weyland-Yutani",
+        "social": [
+          {
+            "name": "linkedin",
+            "url": "https://www.linkedins.com"
+          },
+          {
+            "name": "twitter",
+            "url": "https://twitters.com"
+          }
+        ]
+      },
+      {
+        "image": "http://www.placecage.com/300/300",
+        "name": "Hodor, der erste seines Namens, der einzelne WORTLAUT",
+        "description": "Analyst, King's Landing",
+        "social": [
+          {
+            "name": "facebook",
+            "url": "https://facebooks.com"
+          },
+          {
+            "name": "linkedin",
+            "url": "https://www.linkedins.com"
+          }
+        ]
+      },
+      {
+        "image": "http://www.placecage.com/300/300",
+        "name": "ブラン　スタルク",
+        "description": "木の子供, 北海道",
+        "social": [
+          {
+            "name": "facebook",
+            "url": "https://facebooks.com"
+          },
+          {
+            "name": "linkedin",
+            "url": "https://www.linkedins.com"
+          }
+        ]
+      }
+    ]
+  }
+}
