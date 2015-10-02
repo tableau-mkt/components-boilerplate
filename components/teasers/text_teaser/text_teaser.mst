@@ -1,0 +1,8 @@
+<div class="text-teaser-list__item grid--4 {{ modifier_class }}">
+  {{#if type}}<p class="text-teaser-list__type">{{ type }}</p>{{/if}}
+  <h4 class="text-teaser-list__title">
+    <a href="{{ url }}">{{ title }}</a>
+  </h4>
+</div>
+
+{{! NOTE: Duplicate Handlebars template used for styleguide, etc. }}

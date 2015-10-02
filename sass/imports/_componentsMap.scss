@@ -40,12 +40,10 @@
 @import "../../components/layout/padded_box/padded_box";
 @import "../../components/layout/section/section";
 @import "../../components/layout/spacer/spacer";
-@import "../../components/lists/card/card";
 @import "../../components/lists/cross_reference/cross_reference";
 @import "../../components/lists/link_list/link_list";
+@import "../../components/lists/table_list/table_list";
 @import "../../components/lists/tags_list/tags_list";
-@import "../../components/lists/teaser_item/teaser_item";
-@import "../../components/lists/text_teaser_list/text_teaser_list";
 @import "../../components/lists/unordered_list/list";
 @import "../../components/navigation/global_footer/global_footer";
 @import "../../components/navigation/global_nav/global_nav";
@@ -53,6 +51,9 @@
 @import "../../components/navigation/subnav/subnav";
 @import "../../components/navigation/topic_nav/topic_nav";
 @import "../../components/shame/shame";
+@import "../../components/teasers/card/card";
+@import "../../components/teasers/teaser_item/teaser_item";
+@import "../../components/teasers/text_teaser/text_teaser";
 @import "../../components/typography/body/body_copy";
 @import "../../components/typography/fonts/fonts";
 @import "../../components/typography/formatted_text/formatted_text";
@@ -63,4 +64,3 @@
 @import "../../components/unasigned/badge/badge";
 @import "../../components/unasigned/icons/icons";
 @import "../../components/unasigned/sticky/sticky";
-@import "../../components/unasigned/table/table";
