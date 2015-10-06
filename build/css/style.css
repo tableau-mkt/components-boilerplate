@@ -195,13 +195,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -209,7 +209,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .text-teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .table-list tbody tr:after {
   content: "";
   display: table;
   clear: both;
@@ -218,6 +218,12 @@ most common proportions for video players.
 .accordion--item, button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
+}
+
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 /**
@@ -470,13 +476,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .text-teaser-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .text-teaser-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -484,7 +490,7 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .text-teaser-list:after {
+.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .table-list tbody tr:after {
   content: "";
   display: table;
   clear: both;
@@ -493,6 +499,12 @@ most common proportions for video players.
 .accordion--item, button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
+}
+
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 /**
@@ -611,25 +623,24 @@ Weight: 40
 Style guide: lists
 */
 /*
+Content Teasers
+
+Breif teasers of content used individually or in lists to link to the full 
+view of the content.
+
+Weight: 50
+
+Style guide: teasers
+*/
+/*
 Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
-Weight: 50
-
-Style guide: forms 
-*/
-/*
-Tables
-
-Used for tabular data
-
 Weight: 60
 
-################################################################################
-# Style guide: tables ##########################################################
-################################################################################
+Style guide: forms 
 */
 /*
 Navigation
@@ -3776,273 +3787,156 @@ Style guide: layout.spacer
 }
 
 /*
-Card Teaser
+1-Up Cross Reference
 
-@todo Description
+A single cross reference item linking to related content.
 
-Markup: card.hbs
+Markup: cross-reference-1.hbs
 
 Weight: 50
 
-Style Guide: lists.card
+Style guide: lists.cross-reference-1
 */
-.card {
-  margin-bottom: 1.5em;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #ebebeb;
-  border-radius: 2px;
-}
-
-.card .card__thumbnail {
-  display: block;
-  border-radius: 2px;
-  background: #2e4c65;
-}
-
-.card .card__thumbnail img {
-  width: 100%;
-  opacity: 0.6;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-
-.card .card__thumbnail:hover img {
-  opacity: 1;
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.card .card__details {
-  padding: 0.7em 1em;
-}
-
-.card .card__label {
-  margin-top: 1em;
-  line-height: 1.4;
-}
-
-.card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
-  position: relative;
-  max-height: 4.8em;
-  overflow: hidden;
-  margin: 1em 0;
-  font-size: 1.43em;
-  line-height: 1.6;
-}
-
-.card .card__title a,
-.card.card--quote h3.card__quote a, .card.card--quote .card__quote.heading--small a, .card .card__quote a,
-.card .card__summary a {
-  display: block;
-}
-
-.card .card__tags {
-  max-height: 1.86em;
-  overflow: hidden;
-}
-
 @media (min-width: 640px) {
-  .card .card__inner {
-    height: 0;
-    padding-bottom: 100%;
-    margin-bottom: 16em;
-  }
-}
-
-@media (min-width: 640px) {
-  .card {
-    width: 31.914893617%;
+  .cross-reference-1 {
+    width: 82.9787234043%;
     float: left;
     margin-right: 2.1276595745%;
+    margin-left: 8.5106382979%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .card.card--row-end {
-    margin-right: 0;
-  }
-}
-
-/*
-Wide Card Teaser
-
-Double-wide version of a card.
-
-Markup: card-wide.hbs
-
-Weight: 60
-
-Style Guide: lists.card-wide
-*/
-.card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote, .card.card--wide .card.card--quote .card__quote.heading--small, .card.card--quote .card.card--wide .card__quote.heading--small {
-  max-height: 3.2em;
-  margin: 0.66em 0;
-  font-size: 2.14em;
-}
-
-@media (min-width: 640px) {
-  .card.card--wide .card__inner {
-    height: 0;
-    padding-bottom: 48.5437%;
-  }
-}
-
-@media (min-width: 640px) {
-  .card.card--wide {
-    width: 65.9574468085%;
+  .cross-reference-1 .cross-reference-1__image,
+  .cross-reference-1 .cross-reference-1__copy {
     float: left;
-    margin-right: 2.1276595745%;
   }
-  .card.card--wide.card--row-end {
-    margin-right: 0;
+  .cross-reference-1 .cross-reference-1__image {
+    width: 140px;
+    margin-right: -140px;
+    line-height: 0;
+    text-align: right;
+  }
+  .cross-reference-1 .cross-reference-1__copy {
+    margin-left: 140px;
+    padding-left: 2.1276595745%;
+  }
+  .cross-reference-1 .cross-reference-1__link {
+    margin: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .cross-reference-1 {
+    text-align: center;
   }
 }
 
 /*
-Quote Card Teaser
+2-Up Cross Reference
 
-A highlighted card used for promoting an item with a quote.
+A list of 2 cross referencing items linking to related content.
 
-Markup: card-quote.hbs
+Markup: cross-reference-2.hbs
 
-Weight: 70
+Weight: 50
 
-Style Guide: lists.card-quote
+Style guide: lists.cross-reference-2
 */
-.card.card--quote .card__quote-wrapper {
-  position: relative;
-  height: 0;
-  padding-bottom: 100%;
-  padding-top: 1px;
-  margin-bottom: 14.4em;
+@media (min-width: 961px) {
+  .cross-reference-2 .cross-reference-2__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cross-reference-2 .cross-reference-2__image,
+  .cross-reference-2 .cross-reference-2__copy {
+    float: left;
+  }
+  .cross-reference-2 .cross-reference-2__image {
+    width: 140px;
+    margin-right: -140px;
+    line-height: 0;
+    text-align: right;
+  }
+  .cross-reference-2 .cross-reference-2__copy {
+    margin-left: 140px;
+    padding-left: 4.2553191489%;
+  }
+  .cross-reference-2 .cross-reference-2__link {
+    margin: 0;
+  }
 }
 
-.card.card--quote .card__quote-wrapper:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -14.4em;
-  width: 100%;
-  height: 12em;
-  background-image: -webkit-linear-gradient(bottom, #2e4c65, transparent);
-  background-image: linear-gradient(to top, #2e4c65, transparent);
+@media (min-width: 640px) {
+  .cross-reference-2 .cross-reference-2__item:first-child {
+    padding-right: 2.1276595745%;
+    border-right: 1px solid #dedede;
+  }
+  .cross-reference-2 .cross-reference-2__item:last-child {
+    padding-left: 2.1276595745%;
+  }
 }
 
-.card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
-  max-height: inherit;
-  height: 0;
-  margin-top: 1.5em;
-  padding-bottom: 140%;
-  font-size: 1.8571428571em;
-  color: #fff;
+@media (max-width: 960px) {
+  .cross-reference-2 {
+    text-align: center;
+  }
 }
 
-.card.card--quote h3.card__quote:after, .card.card--quote .card__quote.heading--small:after {
-  content: '\201E';
-  display: block;
-  margin-top: -0.5em;
-  font-size: 2.5em;
-}
-
-.card.card--quote .card__label,
-.card.card--quote .card__tags {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-.card.card--quote .card__label {
-  overflow: hidden;
-  padding-right: .5em;
-  border-right: 1px solid #dedede;
-}
-
-.card.card--quote .card__tags {
-  padding-left: .5em;
-}
-
-.card.card--quote .card__tags ul {
-  margin: 0;
-}
-
-.card.card--quote .card__tags a {
-  color: #fff;
-}
-
-.card.card--quote .tags-list__lable {
-  display: none;
-}
-
-/*
-Summary Card Teaser
-
-A card that displays summary text and no thumbnail.
-
-Markup: card-summary.hbs
-
-Weight: 80
-
-Style Guide: lists.card-summary
-*/
-.card.card--summary .card__summary {
-  height: 0;
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 95%;
-  padding-top: 2em;
-  margin-bottom: 5%;
-}
-
-.card.card--summary .card__summary a {
-  color: #333;
-  text-decoration: none;
-}
-
-.card.card--summary .card__summary p:first-child {
-  margin-top: -1em;
-}
-
-.card.card--summary .card__summary:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10em;
-  pointer-events: none;
-  background-image: -webkit-linear-gradient(bottom, #fff, transparent);
-  background-image: linear-gradient(to top, #fff, transparent);
+@media (max-width: 639px) {
+  .cross-reference-2 {
+    margin: 0 -1em;
+  }
+  .cross-reference-2 .cross-reference-2__item {
+    padding: 1.5em 1em;
+  }
+  .cross-reference-2 .cross-reference-2__item:first-child {
+    border-bottom: 1px solid #dedede;
+  }
 }
 
 /*
 3-Up Cross Reference
 
-A list of 3 cross-referencing items.
+A list of 3 cross-referencing items linking to related content.
 
-Markup: cross-reference.hbs
+Markup: cross-reference-3.hbs
 
-Weight: 100
+Weight: 50
 
-Style guide: lists.cross-reference
+Style guide: lists.cross-reference-3
 */
 @media (min-width: 640px) and (max-width: 960px) {
-  .cross-reference-list .cross-reference-list__title {
+  .cross-reference-3 .cross-reference-3__title {
     text-align: center;
   }
-  .cross-reference-list .cross-reference-list__title .heading-highlight:before {
+  .cross-reference-3 .cross-reference-3__title .heading-highlight:before {
     left: 50%;
     margin-left: -25px;
   }
-  .cross-reference-list .cross-reference-list__title,
-  .cross-reference-list .cross-reference-list__items {
+  .cross-reference-3 .cross-reference-3__title,
+  .cross-reference-3 .cross-reference-3__items {
     width: 100%;
     margin-left: 0;
   }
 }
 
 @media (max-width: 960px) {
-  .cross-reference-list .cross-reference-list__title {
+  .cross-reference-3 .cross-reference-3__title {
     margin-bottom: 2em;
   }
-  .cross-reference-list .cross-reference-list__title br {
+  .cross-reference-3 .cross-reference-3__title br {
     display: none;
   }
 }
@@ -4062,13 +3956,114 @@ Markup: link-list.hbs
 Style guide: lists.link
 */
 /*
+Table List
+
+Lists content items in a table with multiple columns of information and a link
+to an expanded view of the content.
+
+Markup: table-list.hbs
+
+Weight: 40
+
+Style guide: lists.table-list
+*/
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-list thead {
+  text-align: left;
+  font-weight: normal;
+}
+
+.table-list thead th {
+  padding: 1em 1.91em;
+  color: #787878;
+}
+
+.table-list td {
+  padding: 1.5em;
+  border-top: 1px solid #dedede;
+  vertical-align: top;
+}
+
+.table-list td p:last-child {
+  margin-bottom: 0;
+}
+
+.table-list td p:first-child {
+  margin-top: 0;
+}
+
+.table-list td:first-child,
+.table-list th:first-child {
+  padding-left: 0;
+}
+
+.table-list td:last-child,
+.table-list th:last-child {
+  padding-right: 0;
+}
+
+@media (min-width: 640px) {
+  .table-list .table-list__link {
+    position: relative;
+    border-top: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .table-list .table-list__link a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    padding: 1.91em 0;
+    border-top: 3px solid #eb912c;
+  }
+}
+
+@media (max-width: 639px) {
+  .table-list thead {
+    display: none;
+  }
+  .table-list tbody tr {
+    position: relative;
+    display: block;
+    margin: 0 -1em;
+    padding: 1.5em;
+    border-bottom: 1px solid #dedede;
+  }
+  .table-list td {
+    display: block;
+    margin-right: 50px;
+    padding: 0;
+    border: 0;
+  }
+  .table-list .table-list__link a {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: url("../images/icons/read-more.png") no-repeat center center;
+    background-size: 25px;
+    text-align: center;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+}
+
+/*
 Tags List
 
 A list of tags such as categories or topics related to a piece of content
 
 Markup: tags-list.hbs
 
-Weight: 90
+Weight: 30
 
 Style guide: lists.tags
 */
@@ -4087,79 +4082,6 @@ Style guide: lists.tags
 
 .tags-list .tags-list__tag:last-child:after {
   content: "";
-}
-
-/*
-Basic Teaser Item
-
-A basic teaser item, used for displaying a list of teasers to content that
-link to the full version of the content.
-
-Weight: 30
-
-Markup: teaser-item.hbs
-
-Style guide: lists.teaser-item
-*/
-.teaser-item > a {
-  display: block;
-  color: #333;
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-.teaser-item > a:hover {
-  color: #eb912c;
-  text-decoration: none;
-}
-
-.teaser-item > a:hover img {
-  opacity: 0.85;
-}
-
-.teaser-item .teaser-item__thumbnail {
-  line-height: 0;
-}
-
-.teaser-item .teaser-item__eyebrow {
-  margin-top: 1.5em;
-}
-
-.teaser-item .teaser-item__title {
-  margin-top: 0.7em;
-  margin-bottom: 0;
-}
-
-.teaser-item .teaser-item__eyebrow + .teaser-item__title,
-.teaser-item .teaser-item__info:first-child .teaser-item__title:first-child {
-  margin-top: 0;
-}
-
-.teaser-item .teaser-item__link {
-  margin-top: 0.5em;
-  margin-bottom: 0;
-}
-
-@media (max-width: 639px) {
-  .teaser-item {
-    margin-bottom: 2em;
-  }
-}
-
-/*
-Text Teaser List
-
-Short list of related/recommeded items, used for page footers.
-
-Weight: 40
-
-Markup: text_teaser_list.hbs
-
-Style guide: lists.text_teaser
-*/
-.text-teaser-list .text-teaser-list__title a {
-  font-family: "Merriweather", serif;
-  color: #787878;
 }
 
 /* 
@@ -5138,6 +5060,316 @@ Shameful hacks that should be fixed
 }
 
 /*
+Card Teaser
+
+@todo Description
+
+Markup: card.hbs
+
+Weight: 50
+
+Style Guide: teasers.card
+*/
+.card {
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+}
+
+.card .card__thumbnail {
+  display: block;
+  border-radius: 2px;
+  background: #2e4c65;
+}
+
+.card .card__thumbnail img {
+  width: 100%;
+  opacity: 0.6;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.card .card__thumbnail:hover img {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.card .card__details {
+  padding: 0.7em 1em;
+}
+
+.card .card__label {
+  margin-top: 1em;
+  line-height: 1.4;
+}
+
+.card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+  position: relative;
+  max-height: 4.8em;
+  overflow: hidden;
+  margin: 1em 0;
+  font-size: 1.43em;
+  line-height: 1.6;
+}
+
+.card .card__title a,
+.card.card--quote h3.card__quote a, .card.card--quote .card__quote.heading--small a, .card .card__quote a,
+.card .card__summary a {
+  display: block;
+}
+
+.card .card__tags {
+  max-height: 1.86em;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .card .card__inner {
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 16em;
+  }
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .card.card--row-end {
+    margin-right: 0;
+  }
+}
+
+/*
+Wide Card Teaser
+
+Double-wide version of a card.
+
+Markup: card-wide.hbs
+
+Weight: 60
+
+Style Guide: teasers.card-wide
+*/
+.card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote, .card.card--wide .card.card--quote .card__quote.heading--small, .card.card--quote .card.card--wide .card__quote.heading--small {
+  max-height: 3.2em;
+  margin: 0.66em 0;
+  font-size: 2.14em;
+}
+
+@media (min-width: 640px) {
+  .card.card--wide .card__inner {
+    height: 0;
+    padding-bottom: 48.5437%;
+  }
+}
+
+@media (min-width: 640px) {
+  .card.card--wide {
+    width: 65.9574468085%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+  .card.card--wide.card--row-end {
+    margin-right: 0;
+  }
+}
+
+/*
+Quote Card Teaser
+
+A highlighted card used for promoting an item with a quote.
+
+Markup: card-quote.hbs
+
+Weight: 70
+
+Style Guide: teasers.card-quote
+*/
+.card.card--quote .card__quote-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  padding-top: 1px;
+  margin-bottom: 14.4em;
+}
+
+.card.card--quote .card__quote-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -14.4em;
+  width: 100%;
+  height: 12em;
+  background-image: -webkit-linear-gradient(bottom, #2e4c65, transparent);
+  background-image: linear-gradient(to top, #2e4c65, transparent);
+}
+
+.card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+  max-height: inherit;
+  height: 0;
+  margin-top: 1.5em;
+  padding-bottom: 140%;
+  font-size: 1.8571428571em;
+  color: #fff;
+}
+
+.card.card--quote h3.card__quote:after, .card.card--quote .card__quote.heading--small:after {
+  content: '\201E';
+  display: block;
+  margin-top: -0.5em;
+  font-size: 2.5em;
+}
+
+.card.card--quote .card__label,
+.card.card--quote .card__tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.card.card--quote .card__label {
+  overflow: hidden;
+  padding-right: .5em;
+  border-right: 1px solid #dedede;
+}
+
+.card.card--quote .card__tags {
+  padding-left: .5em;
+}
+
+.card.card--quote .card__tags ul {
+  margin: 0;
+}
+
+.card.card--quote .card__tags a {
+  color: #fff;
+}
+
+.card.card--quote .tags-list__lable {
+  display: none;
+}
+
+/*
+Summary Card Teaser
+
+A card that displays summary text and no thumbnail.
+
+Markup: card-summary.hbs
+
+Weight: 80
+
+Style Guide: teasers.card-summary
+*/
+.card.card--summary .card__summary {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 95%;
+  padding-top: 2em;
+  margin-bottom: 5%;
+}
+
+.card.card--summary .card__summary a {
+  color: #333;
+  text-decoration: none;
+}
+
+.card.card--summary .card__summary p:first-child {
+  margin-top: -1em;
+}
+
+.card.card--summary .card__summary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  pointer-events: none;
+  background-image: -webkit-linear-gradient(bottom, #fff, transparent);
+  background-image: linear-gradient(to top, #fff, transparent);
+}
+
+/*
+Basic Teaser Item
+
+A basic teaser item, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 30
+
+Markup: teaser-item.hbs
+
+Style guide: teasers.teaser-item
+*/
+.teaser-item > a {
+  display: block;
+  color: #333;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.teaser-item > a:hover {
+  color: #eb912c;
+  text-decoration: none;
+}
+
+.teaser-item > a:hover img {
+  opacity: 0.85;
+}
+
+.teaser-item .teaser-item__thumbnail {
+  line-height: 0;
+}
+
+.teaser-item .teaser-item__eyebrow {
+  margin-top: 1.5em;
+}
+
+.teaser-item .teaser-item__title {
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+.teaser-item .teaser-item__eyebrow + .teaser-item__title,
+.teaser-item .teaser-item__info:first-child .teaser-item__title:first-child {
+  margin-top: 0;
+}
+
+.teaser-item .teaser-item__link {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+  .teaser-item {
+    margin-bottom: 2em;
+  }
+}
+
+/*
+Text Teaser Item
+
+Text-only teaser item used for lists of recommended content.
+
+Weight: 40
+
+Markup: text_teaser.hbs
+
+Style guide: teasers.text_teaser
+*/
+.text-teaser-item .text-teaser-item__title a {
+  font-family: "Merriweather", serif;
+  color: #787878;
+}
+
+/*
 Body Copy
 
 Main body copy for longer chunks of content in the body of a page.
@@ -5248,7 +5480,7 @@ Weight: 6
 Style guide: typography.formatted
 */
 strong,
-.text--bold, table th {
+.text--bold {
   font-weight: bold;
 }
 
@@ -5464,7 +5696,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .tabs__tabs .tabs__tab-link, .tags-list, .text-teaser-list .text-teaser-list__type, .quote .quote__byline {
+.text--label, .tabs__tabs .tabs__tab-link, .table-list thead th, .tags-list, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
@@ -5472,7 +5704,7 @@ Style guide: typography.other
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.text--border, .text-teaser-list .text-teaser-list__type {
+.text--border, .text-teaser-item .text-teaser-item__type {
   border-bottom: 1px dotted #dedede;
   padding-top: 0.5em;
   margin-bottom: 0.75em;
@@ -6709,78 +6941,4 @@ Style guide: 6.2
     top: 0;
     width: 100%;
   }
-}
-
-/*
-Standard Table
-
-Basic table used for tabular data
-
-Markup:
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>    
-      <th>#</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>    
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>    
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>John</td>
-      <td>Doe</td>    
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>    
-      <td>...</td>
-    </tr>
-  </tbody>
-</table>
-
-Style guide: 4.1
-*/
-table {
-  width: 100%;
-}
-
-table tr.even,
-table tr.odd {
-  background-color: inherit;
-  border: none;
-}
-
-table tr:nth-child(even) {
-  background: #eee;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-table thead,
-table th {
-  background: #ddd;
-  background: rgba(0, 0, 0, 0.08);
-}
-
-table td,
-table th {
-  padding: 5px;
-}
-
-table th {
-  text-transform: uppercase;
-}
-
-table tr p:last-child {
-  margin: 0;
 }

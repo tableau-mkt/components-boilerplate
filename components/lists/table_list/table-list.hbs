@@ -1,0 +1,36 @@
+<table class="table-list {{ modifier_class }}">
+  <thead>
+    <tr>
+      {{#each headings}}
+        <th width="{{ width }}" class="{{ class }}">{{{ text }}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each rows}}
+      <tr>
+        {{#each cells}}
+          <td class="{{ class }}">
+            {{#if title}}
+              {{#if url}}
+              <h5 class="heading--label"><a href="{{ url }}">{{{ title }}}</a></h5>
+              {{else}}
+                <h5 class="heading--label">{{{ title }}}</h5>
+              {{/if}}
+
+            {{/if}}
+
+            {{#with content}}
+              {{{ this }}}
+            {{/with}}
+
+            {{#with link}}
+              {{> link-formatted}}
+            {{/with}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+/*
+Text Teaser Item
+
+Text-only teaser item used for lists of recommended content.
+
+Weight: 40
+
+Markup: text_teaser.hbs
+
+Style guide: teasers.text_teaser
+*/
+
+.text-teaser-item {
+
+  .text-teaser-item__title a {
+    font-family: $text--merriweather-light;
+    color: $text-medium-body;
+  }
+
+  .text-teaser-item__type {
+    @extend .text--label;
+    @extend .text--border;
+  }
+}

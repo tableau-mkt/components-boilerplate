@@ -1,19 +1,138 @@
 /*
-3-Up Cross Reference
+1-Up Cross Reference
 
-A list of 3 cross-referencing items.
+A single cross reference item linking to related content.
 
-Markup: cross-reference.hbs
+Markup: cross-reference-1.hbs
 
-Weight: 100
+Weight: 50
 
-Style guide: lists.cross-reference
+Style guide: lists.cross-reference-1
 */
 
-.cross-reference-list {
+.cross-reference-1 {
+  @include breakpoint($tablet-min) {
+    @include span(10);
+    @include pre(1);
+    display: flex;
+    align-items: center;
+
+    .cross-reference-1__image,
+    .cross-reference-1__copy {
+      float: left;
+    }
+
+    .cross-reference-1__image {
+      width: 140px;
+      margin-right: -140px;
+      line-height: 0;
+      text-align: right;
+    }
+    
+    .cross-reference-1__copy {
+      margin-left: 140px;
+      padding-left: gutter();
+    }
+
+    .cross-reference-1__link {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    text-align: center;
+  }
+}
+
+
+/*
+2-Up Cross Reference
+
+A list of 2 cross referencing items linking to related content.
+
+Markup: cross-reference-2.hbs
+
+Weight: 50
+
+Style guide: lists.cross-reference-2
+*/
+
+.cross-reference-2 {
+  @include breakpoint($desktop-only) {
+    .cross-reference-2__item {
+      display: flex;
+      align-items: center;
+    }
+
+    .cross-reference-2__image,
+    .cross-reference-2__copy {
+      float: left;
+    }
+
+    .cross-reference-2__image {
+      width: 140px;
+      margin-right: -140px;
+      line-height: 0;
+      text-align: right;
+    }
+    
+    .cross-reference-2__copy {
+      margin-left: 140px;
+      padding-left: gutter() * 2;
+    }
+
+    .cross-reference-2__link {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint($tablet-min) {
+    .cross-reference-2__item {
+      &:first-child {
+        padding-right: gutter();
+        border-right: 1px solid $accent-dividers;
+      }
+
+      &:last-child {
+        padding-left: gutter();
+      }
+    }
+  }
+
+  @include breakpoint($tablet-max) {
+    text-align: center;
+  }
+
+  @include breakpoint($mobile-only) {
+    margin: 0 -1em;
+
+    .cross-reference-2__item {
+      padding: 1.5em 1em;
+
+      &:first-child {
+        border-bottom: 1px solid $accent-dividers;
+      }
+    }
+  }
+}
+
+
+/*
+3-Up Cross Reference
+
+A list of 3 cross-referencing items linking to related content.
+
+Markup: cross-reference-3.hbs
+
+Weight: 50
+
+Style guide: lists.cross-reference-3
+*/
+
+.cross-reference-3 {
 
   @include breakpoint($tablet-only) {
-    .cross-reference-list__title {
+    .cross-reference-3__title {
       text-align: center;
 
       .heading-highlight:before {
@@ -22,15 +141,15 @@ Style guide: lists.cross-reference
       }
     }
    
-    .cross-reference-list__title,
-    .cross-reference-list__items {
+    .cross-reference-3__title,
+    .cross-reference-3__items {
       width: 100%;
       margin-left: 0;
     }
   }
 
   @include breakpoint($tablet-max) {
-    .cross-reference-list__title {
+    .cross-reference-3__title {
       margin-bottom: 2em;
 
       br {
