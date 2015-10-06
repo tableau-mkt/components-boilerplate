@@ -1035,7 +1035,6 @@ Weight: 15
 Style guide: buttons-links.link-base
 */
 a {
-  cursor: pointer;
   text-decoration: none;
 }
 
@@ -1060,37 +1059,37 @@ Weight: 20
 
 Style guide: buttons-links.link-formatted
 */
-.link, .video-chapters__toggle {
+.link, .video-chapters__toggle-wrapper .video-chapters__toggle {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-.link.link--arrow:after, .link--arrow.video-chapters__toggle:after {
+.link.link--arrow:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 .link.link--expand:before,
-.video-chapters__toggle:before,
+.video-chapters__toggle-wrapper .video-chapters__toggle:before,
 .link.link--collapse:before,
-.link--collapse.video-chapters__toggle:before,
-.link.link--share:before, .link--share.video-chapters__toggle:before {
+.video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before,
+.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
 }
 
-.link.link--expand:before, .video-chapters__toggle:before {
+.link.link--expand:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-.link.link--collapse:before, .link--collapse.video-chapters__toggle:before {
+.link.link--collapse:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-.link.link--share:before, .link--share.video-chapters__toggle:before {
+.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
 }
 
@@ -4200,9 +4199,11 @@ ul {
 /*
 Video Chapters
 
-A list of chapters for On-Demand Training Videos.
+A list of chapters for Brightcove videos.
 
 Markup: video_chapters.hbs
+
+Bgcolor: #222222
 
 Style guide: media.video-chapters
 */
@@ -4213,17 +4214,17 @@ Style guide: media.video-chapters
   color: #fff;
 }
 
-.video__chapter {
+.video-chapters__chapter {
   position: relative;
   cursor: pointer;
   margin-top: 0.5em;
 }
 
-.video__chapter:first-child {
+.video-chapters__chapter:first-child {
   margin-top: 0;
 }
 
-.video__chapter:before {
+.video-chapters__chapter:before {
   position: absolute;
   display: inline-block;
   font-size: 0.5714285714em;
@@ -4232,24 +4233,46 @@ Style guide: media.video-chapters
   content: '\25B6';
 }
 
-.video-chapters__toggle {
-  display: inline-block;
+.video-chapters__toggle-wrapper {
   margin-top: 1.5em;
-  cursor: pointer;
 }
 
-.video-chapters__toggle:hover {
-  text-decoration: none;
+.video-chapters__toggle-wrapper .video-chapters__toggle {
+  display: inline-block;
 }
 
 /*
-Video Embed
+Video Chapters Demo
 
-A Brightcove video embed. They come in two flavors: iframe and in-page (code-based). The former allows JavaScript interaction to be implemented with the player.
+Interaction demo for Brightcove video chapters.
 
-Markup: video_embed.hbs
+Markup: video_chapters_demo.hbs
 
-Style guide: media.videoembed
+Nocode: true
+
+Style guide: media.video-chapters-demo
+*/
+/*
+Video Embed in-page
+
+A Brightcove video embed. The in-page version allows JavaScript (videojs) interaction to be implemented with the player.
+
+Markup: video_embed_responsive.hbs
+
+Nocode: true
+
+Style guide: media.video-embed-responsive
+*/
+/*
+Video Embed iframe
+
+A Brightcove video embed in an iframe. This can be used by editors if a paragraph bundle is unvailable to them.
+
+Markup: video_embed_iframe.hbs
+
+Nocode: true
+
+Style guide: media.video-embed-iframe
 */
 /*
 Global Footer
@@ -4472,14 +4495,14 @@ Style guide: navigation.global
     padding-right: 45px;
     text-align: right;
   }
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -4626,8 +4649,8 @@ Style guide: navigation.global
     display: block;
   }
   .global-nav__top .global-nav__secondary-menu a.link,
-  .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle,
-  .global-nav__top .global-nav__secondary-menu a.search {
+  .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle,
+  .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
     color: #000;
   }
@@ -5278,7 +5301,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .link, .video-chapters__toggle, .video-chapters, .global-footer .global-footer__language, .subnav .subnav__links li a {
+.text--benton-book, .cta, .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
@@ -5328,7 +5351,7 @@ em,
   font-style: italic;
 }
 
-.text--caps, .video-chapters {
+.text--caps {
   text-transform: uppercase;
 }
 
@@ -5366,7 +5389,7 @@ em,
   font-size: 14px;
 }
 
-.text--small, .video-chapters {
+.text--small {
   font-size: 0.8571428571em;
 }
 
@@ -5531,7 +5554,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .tabs__tabs .tabs__tab-link, .tags-list, .text-teaser-list .text-teaser-list__type, .quote .quote__byline {
+.text--label, .tabs__tabs .tabs__tab-link, .tags-list, .text-teaser-list .text-teaser-list__type, .video-chapters, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
