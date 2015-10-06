@@ -10,6 +10,7 @@ Style guide: interactive.hero-slideshow
 
 .hero-slideshow {
   margin: 0 auto;
+  overflow: hidden;
 
   .hero-slideshow__slide {
     position: relative;

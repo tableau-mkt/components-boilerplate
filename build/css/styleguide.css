@@ -2326,6 +2326,7 @@ body.kss .kss-example-preview .flyout__close-wrapper .flyout__close-link {
 
 body.kss .kss-example-preview .hero-slideshow {
   margin: 0 auto;
+  overflow: hidden;
 }
 
 body.kss .kss-example-preview .hero-slideshow .hero-slideshow__slide {
