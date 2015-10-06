@@ -104,76 +104,83 @@
 
     <article role="main" class="kss-content kss-right">
 
-            <section id="kssref-6-2" class="kss-section kss-section--depth-2">
+            <section id="kssref-video-video-chapters" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
             <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-6-2"> -->
-                Sticky elements
+              <!-- <a class="kss-title__permalink" href="#kssref-video-video-chapters"> -->
+                Video Chapters
               <!-- </a> -->
             </h3>
 
 
             <div class="kss-description">
-              <p>Uses waypoints.js and the sticky.js shortcut to make elements on the page stick
-once they get scrolled to and are about to go out of view.</p>
+              <p>Chapter parts for videos. Mainly On-Demand Training.</p>
 
             </div>
           </div>
 
-            <h4>Examples</h4>
+            <h4>Example</h4>
             <div class="kss-examples">
               <div class="kss-example kss-example__default">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <h6>Default styling</h6>
-                  </div>
-                </div>
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <div class="grid-3">
-  <div class="sticky {$modifiers}">
-    <div class="box--green padded-box padded-box--one">
-      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
-    </div>
-  </div>
-</div>
+                    <ul class="video__chapters">
+    <li data-timestamp="60" class="video__chapter">
+      What is Data Blending
+    </li>
+    <li data-timestamp="90" class="video__chapter">
+      Requirements for Data Blending
+    </li>
+    <li data-timestamp="120" class="video__chapter">
+      Connecting to a second data source
+    </li>
+    <li data-timestamp="240" class="video__chapter">
+      How to Blend
+    </li>
+    <li data-timestamp="360" class="video__chapter">
+      Data Blending: Behind the Scenes
+    </li>
+    <li data-timestamp="700" class="video__chapter">
+      Swapping Primary and Secondary Data Sources
+    </li>
+    <li data-timestamp="1200" class="video__chapter">
+      Data Blending Wrangling against Gremlins
+    </li>
+</ul>
+
                   </div>
                 </div>
               </div>
              
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Doesn&#39;t add any spacing between the menu and the stuck element</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.sticky--nospacing</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <div class="grid-3">
-  <div class="sticky {$modifiers}">
-    <div class="box--green padded-box padded-box--one">
-      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
-    </div>
-  </div>
-</div>
-                    </div>
-                  </div>
-                </div>
             </div>
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;grid-3&quot;&gt;
-  &lt;div class=&quot;sticky {$modifiers}&quot;&gt;
-    &lt;div class=&quot;box--green padded-box padded-box--one&quot;&gt;
-      &lt;p&gt;Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;ul class=&quot;video__chapters&quot;&gt;
+    &lt;li data-timestamp=&quot;60&quot; class=&quot;video__chapter&quot;&gt;
+      What is Data Blending
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;90&quot; class=&quot;video__chapter&quot;&gt;
+      Requirements for Data Blending
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;120&quot; class=&quot;video__chapter&quot;&gt;
+      Connecting to a second data source
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;240&quot; class=&quot;video__chapter&quot;&gt;
+      How to Blend
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;360&quot; class=&quot;video__chapter&quot;&gt;
+      Data Blending: Behind the Scenes
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;700&quot; class=&quot;video__chapter&quot;&gt;
+      Swapping Primary and Secondary Data Sources
+    &lt;/li&gt;
+    &lt;li data-timestamp=&quot;1200&quot; class=&quot;video__chapter&quot;&gt;
+      Data Blending Wrangling against Gremlins
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
               </div>
 
             </section>
@@ -193,8 +200,7 @@ once they get scrolled to and are about to go out of view.</p>
   <script>
     prettyPrint();
   </script>
-  <script src="https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
-<script src="../build/bower/jquery/dist/jquery.min.js"></script>
+  <script src="../build/bower/jquery/dist/jquery.min.js"></script>
 <script src="../build/bower/jquery-ui/jquery-ui.min.js"></script>
 <script src="../build/bower/slick.js/slick/slick.min.js"></script>
 <script src="../build/bower/hoverintent/jquery.hoverIntent.js"></script>

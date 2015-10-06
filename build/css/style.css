@@ -195,13 +195,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .link-list.video-chapters, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .link-list.video-chapters li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -476,13 +476,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .link-list.video-chapters, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .link-list.video-chapters li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -613,6 +613,15 @@ Weight: 35
 Style guide: images
 */
 /*
+Media
+
+Media assets that are more complicated than images. E.g. Videos, Vizzes.
+
+Weight: 36
+
+Style guide: media
+*/
+/*
 Content Lists
 
 Lists of content that generally have a title, thumbnail and/or a description and
@@ -630,7 +639,11 @@ view of the content.
 
 Weight: 50
 
+<<<<<<< HEAD
 Style guide: teasers
+=======
+Style guide: forms
+>>>>>>> 0c4b9301ac5bdc0954985033807010126759746a
 */
 /*
 Forms
@@ -662,7 +675,7 @@ Weight: 80
 Style guide: interactive
 */
 /*
-Layout 
+Layout
 
 Components used for page layout
 
@@ -671,7 +684,7 @@ Weight: 90
 Style guide layout
 */
 /*
-Icons 
+Icons
 
 Graphical icons used inline with text or on their own
 
@@ -1061,35 +1074,37 @@ Weight: 20
 
 Style guide: buttons-links.link-formatted
 */
-.link {
+.link, .video-chapters__toggle-wrapper .video-chapters__toggle {
   font-size: 0.7857142857em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-.link.link--arrow:after {
+.link.link--arrow:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 .link.link--expand:before,
+.video-chapters__toggle-wrapper .video-chapters__toggle:before,
 .link.link--collapse:before,
-.link.link--share:before {
+.video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before,
+.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
 }
 
-.link.link--expand:before {
+.link.link--expand:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-.link.link--collapse:before {
+.link.link--collapse:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-.link.link--share:before {
+.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
 }
 
@@ -1705,23 +1720,23 @@ button.mfp-arrow:active {
 /*
 Content Reveal
 
-Simple tool to make content hidden and revealed when a trigger is clicked. It 
+Simple tool to make content hidden and revealed when a trigger is clicked. It
 doesn't matter where on the page the trigger and target content are, but the
 trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal__content</code> container must have am <code>id</code>
+attribute. The <code>.reveal__content</code> container must have an <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs
 
 Style guide: interactive.reveal
 */
-.reveal__content, .topic-nav .topic-nav__drawers {
+.reveal__content, .video-chapters, .topic-nav .topic-nav__drawers {
   position: relative;
   height: 0;
   overflow: hidden;
 }
 
-.reveal__content video, .topic-nav .topic-nav__drawers video {
+.reveal__content video, .video-chapters video, .topic-nav .topic-nav__drawers video {
   width: 100%;
 }
 
@@ -4108,6 +4123,84 @@ ul {
 }
 
 /*
+Video Chapters
+
+A list of chapters for Brightcove videos.
+
+Markup: video_chapters.hbs
+
+Bgcolor: #222222
+
+Style guide: media.video-chapters
+*/
+.video-chapters {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.video-chapters__chapter {
+  position: relative;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.video-chapters__chapter:first-child {
+  margin-top: 0;
+}
+
+.video-chapters__chapter:before {
+  position: absolute;
+  display: inline-block;
+  font-size: 0.5714285714em;
+  left: -1.6em;
+  top: 0.6em;
+  content: '\25B6';
+}
+
+.video-chapters__toggle-wrapper {
+  margin-top: 1.5em;
+}
+
+.video-chapters__toggle-wrapper .video-chapters__toggle {
+  display: inline-block;
+}
+
+/*
+Video Chapters Demo
+
+Interaction demo for Brightcove video chapters.
+
+Markup: video_chapters_demo.hbs
+
+Nocode: true
+
+Style guide: media.video-chapters-demo
+*/
+/*
+Video Embed in-page
+
+A Brightcove video embed. The in-page version allows JavaScript (videojs) interaction to be implemented with the player.
+
+Markup: video_embed_responsive.hbs
+
+Nocode: true
+
+Style guide: media.video-embed-responsive
+*/
+/*
+Video Embed iframe
+
+A Brightcove video embed in an iframe. This can be used by editors if a paragraph bundle is unvailable to them.
+
+Markup: video_embed_iframe.hbs
+
+Nocode: true
+
+Style guide: media.video-embed-iframe
+*/
+/*
 Global Footer
 
 The global footer that is displayed at the bottom of each page. Contains several
@@ -4328,14 +4421,14 @@ Style guide: navigation.global
     padding-right: 45px;
     text-align: right;
   }
-  .global-nav__top .global-nav__secondary-menu li a.link {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  .global-nav__top .global-nav__secondary-menu li a.link {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -4482,7 +4575,8 @@ Style guide: navigation.global
     display: block;
   }
   .global-nav__top .global-nav__secondary-menu a.link,
-  .global-nav__top .global-nav__secondary-menu a.search {
+  .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle,
+  .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
     color: #000;
   }
@@ -5443,7 +5537,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .link, .global-footer .global-footer__language, .subnav .subnav__links li a {
+.text--benton-book, .cta, .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
@@ -5696,7 +5790,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .tabs__tabs .tabs__tab-link, .table-list thead th, .tags-list, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
+.text--label, .tabs__tabs .tabs__tab-link, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
