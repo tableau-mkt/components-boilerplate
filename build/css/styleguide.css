@@ -4467,13 +4467,13 @@ body.kss .kss-example-preview .table-list th:last-child {
 }
 
 @media (min-width: 640px) {
-  body.kss .kss-example-preview .table-list td.table-list__link {
+  body.kss .kss-example-preview .table-list .table-list__link {
     position: relative;
     border-top: 0;
     padding: 0;
     text-align: center;
   }
-  body.kss .kss-example-preview .table-list td.table-list__link a {
+  body.kss .kss-example-preview .table-list .table-list__link a {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -4501,7 +4501,7 @@ body.kss .kss-example-preview .table-list th:last-child {
     padding: 0;
     border: 0;
   }
-  body.kss .kss-example-preview .table-list td.table-list__link a {
+  body.kss .kss-example-preview .table-list .table-list__link a {
     position: absolute;
     overflow: hidden;
     right: 0;

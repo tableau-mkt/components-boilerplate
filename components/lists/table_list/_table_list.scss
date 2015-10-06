@@ -52,7 +52,7 @@ Style guide: lists.table-list
   }
 
   @include breakpoint($tablet-min) {
-    td.table-list__link {
+    .table-list__link {
       position: relative;
       border-top: 0;
       padding: 0;
@@ -91,7 +91,7 @@ Style guide: lists.table-list
       border: 0;
     }
 
-    td.table-list__link a {
+    .table-list__link a {
       position: absolute;
       overflow: hidden;
       right: 0;

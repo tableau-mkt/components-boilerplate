@@ -3994,13 +3994,13 @@ Style guide: lists.table-list
 }
 
 @media (min-width: 640px) {
-  .table-list td.table-list__link {
+  .table-list .table-list__link {
     position: relative;
     border-top: 0;
     padding: 0;
     text-align: center;
   }
-  .table-list td.table-list__link a {
+  .table-list .table-list__link a {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -4028,7 +4028,7 @@ Style guide: lists.table-list
     padding: 0;
     border: 0;
   }
-  .table-list td.table-list__link a {
+  .table-list .table-list__link a {
     position: absolute;
     overflow: hidden;
     right: 0;
