@@ -98,11 +98,11 @@ Style guide: lists.table-list
       top: 0;
       bottom: 0;
       width: 50px;
-      text-align: center;
-      font-size: 0;
-      text-indent: -999em;
       background: url('../images/icons/read-more.png') no-repeat center center;
       background-size: 25px;
+      text-align: center;
+      text-indent: 100%;
+      white-space: nowrap;
     }
   }
 }

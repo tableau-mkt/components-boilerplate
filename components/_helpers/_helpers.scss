@@ -72,6 +72,11 @@ most common proportions for video players.
   overflow: hidden;
 }
 
+// Hide inner text of an element
+.hide-text {
+  @extend %hide-text;
+}
+
 // Remove default list style and spacing
 .plain-list {
   @extend %plain-list;

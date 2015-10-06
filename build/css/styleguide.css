@@ -1530,6 +1530,12 @@ body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview bu
   transition: background 0.25s, opacity 0.25s;
 }
 
+body.kss .kss-example-preview .hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
 body.kss .kss-example-preview body {
   margin: 0;
 }
@@ -1659,6 +1665,12 @@ body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .ta
 body.kss .kss-example-preview .accordion--item, body.kss .kss-example-preview button.mfp-arrow {
   -webkit-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
+}
+
+body.kss .kss-example-preview .hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 body.kss .kss-example-preview .cta {
@@ -4508,11 +4520,11 @@ body.kss .kss-example-preview .table-list th:last-child {
     top: 0;
     bottom: 0;
     width: 50px;
-    text-align: center;
-    font-size: 0;
-    text-indent: -999em;
     background: url("../images/icons/read-more.png") no-repeat center center;
     background-size: 25px;
+    text-align: center;
+    text-indent: 100%;
+    white-space: nowrap;
   }
 }
 
