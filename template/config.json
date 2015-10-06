@@ -6,6 +6,7 @@
     "../build/css/styleguide.css"
   ],
   "js": [
+    "https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js",
     "../build/bower/jquery/dist/jquery.min.js",
     "../build/bower/jquery-ui/jquery-ui.min.js",
     "../build/bower/slick.js/slick/slick.min.js",
