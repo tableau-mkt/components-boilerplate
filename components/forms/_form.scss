@@ -1,7 +1,8 @@
 /*
 Base Form Styles
 
-A simple example form.
+A basic form.
+
 Markup: form.hbs
 
 Weight: 0
@@ -9,19 +10,64 @@ Weight: 0
 Style guide: forms.base
 */
 
+.form__intro {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
 
-.form--fields {
-  label {
-    display: inline-block;
-    min-width: 110px;
+.form-field__wrapper {
+  @extend %clearfix;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.form-field__label {
+  @extend .text--label;
+  color: $text-form-label;
+  font-size: em(11px);
+}
+
+.has-float-label {
+  .form-field__label {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    left: 0.7em;
+    top: 0.5em;
+
+    // These are javascript activated state classes.
+    // @see jquery.floatlabel.js
+    &.is-active,
+    &.has-focus {
+      pointer-events: all;
+      display: block;
+      transform: translateY(-0.2em);
+      opacity: 1;
+      z-index: 1;
+    }
+    &.has-focus {
+      @include transition(opacity 50ms ease, transform 150ms ease);
+    }
   }
 }
+
+/*
+Video Chapters Demo
+
+Interaction demo for Brightcove video chapters.
+
+Markup: video_chapters_demo.hbs
+
+Nocode: true
+
+Style guide: media.video-chapters-demo
+*/
 
 
 /*
 Input Fields
 
-Nothing to see here yet...
+Text inputs on a form. Including text fields types, textareas
 
 Markup: form_input.hbs
 
@@ -30,69 +76,114 @@ Weight: 1
 .input--full-width - A full-width input field.
 
 Style guide: forms.input
+
+Nocode: true
 */
-input[type=text],
-input[type=search],
-input[type=tel],
-input[type=password],
-input[type=number],
-input[type=email] {
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea,
+.form__select {
+  @include transition(border-color 250ms);
   box-sizing: border-box;
-  margin-bottom: 0.5em;
-  padding: 1em;
-  border: 0;
+  border: 1px solid $form-border;
   border-radius: 0;
+  padding: 1.7em 0.5em 0.3em;
   background: $white;
   color: $text-dark-body;
   font-size: $base-font-size;
-  
+  outline: none;
+  text-align: left;
+  width: 100%;
+
   @include breakpoint($mobile-only) {
     width: 100%;
   }
-  
+
+  &:hover {
+    border-color: $gray;
+  }
+
   &.input--full-width {
     width: 100%;
   }
+
+  .form--single-field & {
+    text-align: center;
+  }
 }
 
-
-input::-webkit-input-placeholder {
+input::input-placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
   color: $text-medium-body;
 }
 
 @include breakpoint($mobile-only) {
   input {
     text-align: center;
-  }  
+  }
 }
 
+.form__select {
+  position: relative;
+  padding: 3em 0.5em 0.3em;
+
+  select {
+    @extend %cover-absolute;
+    width: 100%;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    left: 0.5em;
+    font-size: 1em;
+    color: $text-dark-body;
+    outline: none;
+    margin-top: 1.1em;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+select {
+  .select-placeholder {
+    color: $text-medium-body;
+  }
+}
 
 /*
 Submit Buttons
 
-Nothing to see here yet...
+Form action elements.
 
 Markup: form_button.hbs
 
-.submitting - In the process of submitting
-.submitted - Successfully submitted
-.errored - Error occured while submitting
+.is-submitting - In the process of submitting
+.is-submitted - Successfully submitted
+.is-errored - Error occured while submitting
 
 Weight: 2
 
-Style guide: forms.buttons
+Style guide: forms.actions
 */
-input[type=submit] {
-  
-}
-input[type=submit].submitting,
-input[type=submit].submitted,
-input[type=submit].errored {
-  cursor: inherit;
+input[type="submit"] {
+  @extend .cta--secondary;
+
+  &.is-submitting,
+  &.is-submitted,
+  &.is-errored {
+    cursor: inherit;
+  }
 }
 
 
-input[type=submit].submitting {
+input[type="submit"].submitting {
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
   background-size: 30px 30px;
@@ -165,10 +256,11 @@ Weight: 3
 
 Style guide: forms.validation
 */
-.invalid {
+.form__field--invalid {
   display: none;
   color: $error;
 }
+
 
 
 /*

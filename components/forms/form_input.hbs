@@ -1,8 +1,36 @@
-<label for="text-field">Text Field:</label>
-<input type="text" name="text-field" id="text-field"/>
-<br>
-<label for="email-field">Email Field:</label>
-<input type="email" name="email-field" id="email-field"/>
-<br>
-<label for="password-field">Password Field:</label>
-<input type="password" name="password-field" id="password-field"/>
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="text-field">Text Field:</label>
+  <input type="text" name="text-field" id="text-field" placeholder="text">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="email-field">Email Field:</label>
+  <input type="email" name="email-field" id="email-field" placeholder="email">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="password-field">Password Field:</label>
+  <input type="password" name="password-field" id="password-field" placeholder="password">
+</div>
+
+<div class="form-field__wrapper  has-float-label">
+  <label class="form-field__label" for="sample-textarea">Long text</label>
+  <textarea rows="5" name="sample-textarea" placeholder="Long text here..."></textarea>
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="sample-select">Industries</label>
+
+  <div class="form__select">
+    <select name="sample-select">
+      <option class="select-placeholder" value="_none" disabled selected>Industries</option>
+      <option value="bar">Other Choices</option>
+      <option value="bars">Other Choices</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-field__wrapper">
+  <input type="checkbox" name="example-checkbox" id="example-checkbox">
+  <label class="form-field__label" for="example-checkbox">A Great Checkbox</label>
+</div>
