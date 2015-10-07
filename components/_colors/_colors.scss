@@ -1,5 +1,5 @@
 /*
-Color Palette 
+Color Palette
 
 The Tableau brand collor pallet
 
@@ -27,7 +27,7 @@ Colors used for typography.
 
 Markup: colors-text.hbs
 
-Nocode: 
+Nocode:
 true
 
 Bgcolor: #F7F9FB
@@ -167,13 +167,14 @@ Some basic colors
 */
 
 $gray: #999;
+$grey-c2: #c2c2c2;
 $light-gray: #f2f2f2;
 $dark-gray: #333;
 $white: #fff;
 $black: #000;
 
 
-/* 
+/*
 Text colors mapping in form of:
   modifier-name: $text-color
 */
@@ -202,7 +203,7 @@ $text-colors: (
 );
 
 
-/* 
+/*
 Button colors mapping in the form of:
   modifier-name: ($base-color, $hover-color)
 */
@@ -218,7 +219,7 @@ $button-colors: (
 );
 
 
-/* 
+/*
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
@@ -243,7 +244,7 @@ $background-colors: (
 );
 
 
-/* 
+/*
 Product colors mapping in the form of:
   mdifier-name: $color
 */
@@ -259,3 +260,4 @@ $product-colors: (
 
 // Misc colors
 $error: #DD1E06;
+$form-border: $grey-c2;
