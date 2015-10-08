@@ -52,19 +52,6 @@ Style guide: forms.base
 }
 
 /*
-Video Chapters Demo
-
-Interaction demo for Brightcove video chapters.
-
-Markup: video_chapters_demo.hbs
-
-Nocode: true
-
-Style guide: media.video-chapters-demo
-*/
-
-
-/*
 Input Fields
 
 Text inputs on a form. Including text fields types, textareas
@@ -164,84 +151,52 @@ Form action elements.
 
 Markup: form_button.hbs
 
-.is-submitting - In the process of submitting
-.is-submitted - Successfully submitted
-.is-errored - Error occured while submitting
-
 Weight: 2
 
 Style guide: forms.actions
 */
+
+// .form-action--primary__wrapper {
+//   @extend .cta;
+//   @extend .cta--secondary;
+// }
+
+// input[type="submit"] {
+//   @extend %reset-box;
+//   @extend .link;
+//   font-size: 1em;
+//   background: transparent;
+
+//   &.is-submitting,
+//   &.is-submitted,
+//   &.is-errored {
+//     cursor: inherit;
+//   }
+// }
+
 input[type="submit"] {
+  @extend .cta;
   @extend .cta--secondary;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($tablet-min) {
+    width: auto;
+    min-width: 60%;
+  }
+
+  @include breakpoint($desktop-min) {
+    min-width: 40%;
+  }
+
 
   &.is-submitting,
   &.is-submitted,
   &.is-errored {
     cursor: inherit;
   }
-}
-
-
-input[type="submit"].submitting {
-  -webkit-background-size: 30px 30px;
-  -moz-background-size: 30px 30px;
-  background-size: 30px 30px;
-  background-color: $button-final;
-  border-color: $button-final;
-  color: $white;
-  background-image: -webkit-gradient(linear, left top, right bottom,
-    color-stop(.25, rgba(255, 255, 255, .25)), color-stop(.25, transparent),
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .25)),
-    color-stop(.75, rgba(255, 255, 255, .25)), color-stop(.75, transparent),
-    to(transparent));
-  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .25) 25%, transparent 25%,
-    transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
-    transparent 75%, transparent);
-  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .25) 25%, transparent 25%,
-    transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
-    transparent 75%, transparent);
-  background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .25) 25%, transparent 25%,
-    transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
-    transparent 75%, transparent);
-  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .25) 25%, transparent 25%,
-    transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
-    transparent 75%, transparent);
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, .25) 25%, transparent 25%,
-    transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
-    transparent 75%, transparent);
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-}
-
-input[type=submit].submitted {
-  background-color: $button-final;
-  border-color: $button-final;
-  color: $white;
-}
-
-input[type=submit].errored {
-  background-color: $error;
-  border-color: $error;
-  color: $white;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 60px 0;
-  };
-}
-
-@-moz-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 60px 0;
-  };
 }
 
 
