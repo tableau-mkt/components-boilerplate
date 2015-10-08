@@ -1,7 +1,7 @@
-/* 
+/*
 Primary CTA
 
-Primary CTA buttons (Solid) should be used when a single or important page 
+Primary CTA buttons (Solid) should be used when a single or important page
 action is required.
 
 Markup: cta.hbs
@@ -78,7 +78,7 @@ Style guide: buttons-links.cta
     padding-left: 1em;
     vertical-align: middle;
   }
-  
+
   &.cta--secondary {
     border: 2px solid $text-link;
     padding: 15px 23px;
@@ -138,7 +138,7 @@ Style guide: buttons-links.cta
 
     &:nth-child(n+2) {
       margin-left: 0;
-    }  
+    }
   }
 
   button.cta {
