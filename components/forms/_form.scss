@@ -37,8 +37,8 @@ Style guide: forms.base
 
     // These are javascript activated state classes.
     // @see jquery.floatlabel.js
-    &.is-active,
-    &.has-focus {
+    // &.has-focus,
+    &.is-active {
       pointer-events: all;
       display: block;
       transform: translateY(-0.2em);
