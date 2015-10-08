@@ -27,9 +27,17 @@
     // Set plugin method name and defaults
     var pluginName = 'floatLabel',
         defaults = {
+          // In case you want to preserve labels as visible for no js, or old
+          // IE users.
           wrapperInitClass: 'has-float-label',
+          // For a custom label selector, if you have multiple labels, for some
+          // reason.
           labelSelector: false,
+          // Class given to label when its field has a non-null value. Toggled
+          // when the value is empty / falsy.
           activeClass: 'is-active',
+          // Class given to label when its field is focused. Toggled when it
+          // loses focus.
           focusClass: 'has-focus'
         };
 
@@ -56,9 +64,12 @@
 
     // Utility: find a input that we want to alter the label for.
     Plugin.prototype._findInput = function(el) {
-      if ($(el).find('input, textarea').length) {
-        return $(el).find('input, textarea');
+      var $textInputs = $(el).find('input, textarea').not('[type="checkbox"], [type="radio"]');
+      // The regular text input types.
+      if ($textInputs.length) {
+        return $textInputs;
       }
+      // Try for select elements.
       else {
         return $(el).find('select');
       }
@@ -72,7 +83,7 @@
         return $(el).find(this.options.labelSelector);
       }
 
-      // Just try a label.
+      // Just try a label element.
       return $(el).find('label');
     };
 
@@ -111,7 +122,7 @@
 
     // Lightweight constructor, preventing against multiple instantiations
     $.fn[pluginName] = function (options) {
-      return this.each(function () {
+      return this.each(function initPlugin() {
         if (!$.data(this, 'plugin_' + pluginName)) {
           $.data(this, 'plugin_' + pluginName,
           new Plugin(this, options));
