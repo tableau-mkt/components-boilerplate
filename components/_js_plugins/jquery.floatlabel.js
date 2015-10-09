@@ -73,7 +73,6 @@
       else {
         return $(el).find('select');
       }
-      return false;
     };
 
     // Utility: find a label in the field wrapper element.
