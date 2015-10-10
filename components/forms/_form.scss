@@ -120,6 +120,36 @@ input:-ms-input-placeholder {
   position: relative;
   padding: 3em 0.5em 0.3em;
 
+  // Select arrow through pseudo selector triangles
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+    pointer-events: none;
+  }
+
+  /* Stroke */
+  &:before {
+    top: 20px;
+    right: 11px;
+    border-top-color: $grey-c2;
+    border-width: 8px;
+  }
+
+  /* Fill */
+  &:after {
+    top: 19px;
+    right: 12px;
+    border-top-color: $white;
+    border-width: 7px;
+  }
+
+
   select {
     @extend %cover-absolute;
     width: 100%;
@@ -130,7 +160,7 @@ input:-ms-input-placeholder {
     font-size: 1em;
     color: $text-dark-body;
     outline: none;
-    margin-top: 1.1em;
+    padding-top: 1.1em;
   }
 
   select::-ms-expand {
