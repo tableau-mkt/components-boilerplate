@@ -1,0 +1,23 @@
+{
+  "share": {
+    "label": "Share",
+    "widgets": [
+      {
+        "type": "linkedin",
+        "name": "LinkedIn"
+      },
+      {
+        "type": "facebook",
+        "name": "Facebook"
+      },
+      {
+        "type": "twitter",
+        "name": "Twitter"
+      },
+      {
+        "type": "gplus",
+        "name": "Google+"
+      }
+    ]
+  }
+}

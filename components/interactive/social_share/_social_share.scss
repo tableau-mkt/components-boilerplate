@@ -1,0 +1,39 @@
+/*
+Social Share
+
+A sharing element for social network widgets.
+
+Markup: social-share.hbs
+
+Style guide: interactive.social-share
+*/
+
+.social-share {
+  @extend .text--label;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: $text-link;
+}
+
+.social-share__widgets {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.social-share__wrapper {
+  margin-top: 1em;
+
+  .social-share__widget  {
+    display: inline-block;
+    margin-left: 1em;
+    color: $text-link;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
