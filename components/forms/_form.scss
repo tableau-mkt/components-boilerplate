@@ -24,7 +24,6 @@ Style guide: forms.base
 .form-field__label {
   @extend .text--label;
   color: $text-form-label;
-  font-size: em(11px);
 }
 
 .has-float-label {
@@ -137,7 +136,7 @@ input:-ms-input-placeholder {
   &:before {
     top: 20px;
     right: 11px;
-    border-top-color: $grey-c2;
+    border-top-color: $form-border;
     border-width: 8px;
   }
 
