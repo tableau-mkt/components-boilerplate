@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* generated with grunt-sass-globbing */
 /* generated with grunt-sass-globbing */
 /*
@@ -195,13 +194,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .link-list.video-chapters, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .link-list.video-chapters li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -209,13 +208,21 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .table-list tbody tr:after {
+.clearfix:after, .form-field__wrapper:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .people-list__person:after, .table-list tbody tr:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.accordion--item, button.mfp-arrow {
+.form__select select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.accordion--item {
   -webkit-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
@@ -238,9 +245,9 @@ most common proportions for video players.
  */
 /* generated with grunt-sass-globbing */
 /*
-Color Palette 
+Color Palette
 
-The Tableau brand collor pallet
+The Tableau brand color pallet
 
 Style guide: colors
 */
@@ -262,7 +269,7 @@ Colors used for typography.
 
 Markup: colors-text.hbs
 
-Nocode: 
+Nocode:
 true
 
 Bgcolor: #F7F9FB
@@ -338,19 +345,19 @@ Some basic colors
 
 #Style guide: colors.basic
 */
-/* 
+/*
 Text colors mapping in form of:
   modifier-name: $text-color
 */
-/* 
+/*
 Button colors mapping in the form of:
   modifier-name: ($base-color, $hover-color)
 */
-/* 
+/*
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
-/* 
+/*
 Product colors mapping in the form of:
   mdifier-name: $color
 */
@@ -476,13 +483,13 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .link-list.link-list--plain, .link-list.video-chapters, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .link-list.link-list--plain li, .link-list.video-chapters li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
@@ -490,13 +497,21 @@ most common proportions for video players.
   display: inline-block;
 }
 
-.clearfix:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .table-list tbody tr:after {
+.clearfix:after, .form-field__wrapper:after, .tabs__tab-content:after, .topic-nav .topic-nav__drawer:after, .content-container:after, .flyout__close-wrapper:after, .people-list__person:after, .table-list tbody tr:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.accordion--item, button.mfp-arrow {
+.form__select select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.accordion--item {
   -webkit-transition: background 0.25s, opacity 0.25s;
   transition: background 0.25s, opacity 0.25s;
 }
@@ -634,7 +649,7 @@ Style guide: lists
 /*
 Content Teasers
 
-Breif teasers of content used individually or in lists to link to the full 
+Breif teasers of content used individually or in lists to link to the full
 view of the content.
 
 Weight: 50
@@ -649,7 +664,7 @@ user can submit information through. Here's an example form:
 
 Weight: 60
 
-Style guide: forms 
+Style guide: forms
 */
 /*
 Navigation
@@ -680,18 +695,9 @@ Weight: 90
 Style guide layout
 */
 /*
-Icons
-
-Graphical icons used inline with text or on their own
-
-Weight: 100
-
-Style guide icons
-*/
-/* 
 Primary CTA
 
-Primary CTA buttons (Solid) should be used when a single or important page 
+Primary CTA buttons (Solid) should be used when a single or important page
 action is required.
 
 Markup: cta.hbs
@@ -711,7 +717,7 @@ Markup: cta.hbs
 
 Style guide: buttons-links.cta
 */
-.cta {
+.cta, .form__wrapper input[type="submit"] {
   display: inline-block;
   margin: .5em 0;
   padding: 17px 25px;
@@ -730,90 +736,98 @@ Style guide: buttons-links.cta
   transition: background-color 0.25s, color 0.35s;
 }
 
-.cta:nth-child(n+2) {
+.cta:nth-child(n+2), .form__wrapper input[type="submit"]:nth-child(n+2) {
   margin-left: 1em;
 }
 
 .cta:hover,
-.cta:focus {
+.form__wrapper input[type="submit"]:hover,
+.cta:focus, .form__wrapper input[type="submit"]:focus {
   background-color: #ea8442;
   text-decoration: underline;
 }
 
-.cta:active {
+.cta:active, .form__wrapper input[type="submit"]:active {
   background-color: #c92434;
   text-decoration: underline;
 }
 
-.cta.cta--orange {
+.cta.cta--orange, .form__wrapper input.cta--orange[type="submit"] {
   background-color: #e8762c;
 }
 
 .cta.cta--orange:hover,
-.cta.cta--orange:focus {
+.form__wrapper input.cta--orange[type="submit"]:hover,
+.cta.cta--orange:focus, .form__wrapper input.cta--orange[type="submit"]:focus {
   background-color: #ea8442;
 }
 
-.cta.cta--desktop {
+.cta.cta--desktop, .form__wrapper input.cta--desktop[type="submit"] {
   background-color: #324e7a;
 }
 
 .cta.cta--desktop:hover,
-.cta.cta--desktop:focus {
+.form__wrapper input.cta--desktop[type="submit"]:hover,
+.cta.cta--desktop:focus, .form__wrapper input.cta--desktop[type="submit"]:focus {
   background-color: #23529c;
 }
 
-.cta.cta--server {
+.cta.cta--server, .form__wrapper input.cta--server[type="submit"] {
   background-color: #5e899b;
 }
 
 .cta.cta--server:hover,
-.cta.cta--server:focus {
+.form__wrapper input.cta--server[type="submit"]:hover,
+.cta.cta--server:focus, .form__wrapper input.cta--server[type="submit"]:focus {
   background-color: #7fa9bb;
 }
 
-.cta.cta--online {
+.cta.cta--online, .form__wrapper input.cta--online[type="submit"] {
   background-color: #7099a5;
 }
 
 .cta.cta--online:hover,
-.cta.cta--online:focus {
+.form__wrapper input.cta--online[type="submit"]:hover,
+.cta.cta--online:focus, .form__wrapper input.cta--online[type="submit"]:focus {
   background-color: #58a3b9;
 }
 
-.cta.cta--public {
+.cta.cta--public, .form__wrapper input.cta--public[type="submit"] {
   background-color: #2d4b65;
 }
 
 .cta.cta--public:hover,
-.cta.cta--public:focus {
+.form__wrapper input.cta--public[type="submit"]:hover,
+.cta.cta--public:focus, .form__wrapper input.cta--public[type="submit"]:focus {
   background-color: #324E7A;
 }
 
-.cta.cta--reader {
+.cta.cta--reader, .form__wrapper input.cta--reader[type="submit"] {
   background-color: #9d7eb5;
 }
 
 .cta.cta--reader:hover,
-.cta.cta--reader:focus {
+.form__wrapper input.cta--reader[type="submit"]:hover,
+.cta.cta--reader:focus, .form__wrapper input.cta--reader[type="submit"]:focus {
   background-color: #B28CCF;
 }
 
-.cta.cta--mobile {
+.cta.cta--mobile, .form__wrapper input.cta--mobile[type="submit"] {
   background-color: #c87e5b;
 }
 
 .cta.cta--mobile:hover,
-.cta.cta--mobile:focus {
+.form__wrapper input.cta--mobile[type="submit"]:hover,
+.cta.cta--mobile:focus, .form__wrapper input.cta--mobile[type="submit"]:focus {
   background-color: #DB8E6A;
 }
 
-.cta.cta--arrow:after {
+.cta.cta--arrow:after, .form__wrapper input.cta--arrow[type="submit"]:after {
   content: url(../images/icons/icon-arrow.png);
   padding-left: .5em;
 }
 
-.cta.cta--play:after {
+.cta.cta--play:after, .form__wrapper input.cta--play[type="submit"]:after {
   content: url(../images/icons/icon-play.png);
   display: inline-block;
   height: 0px;
@@ -822,7 +836,7 @@ Style guide: buttons-links.cta
   vertical-align: middle;
 }
 
-.cta.cta--secondary {
+.cta.cta--secondary, .form__wrapper input[type="submit"] {
   border: 2px solid #eb912c;
   padding: 15px 23px;
   background: transparent;
@@ -830,21 +844,22 @@ Style guide: buttons-links.cta
 }
 
 .cta.cta--secondary:hover,
-.cta.cta--secondary:focus {
+.form__wrapper input[type="submit"]:hover,
+.cta.cta--secondary:focus, .form__wrapper input[type="submit"]:focus {
   background: transparent;
 }
 
-.cta.cta--secondary:active {
+.cta.cta--secondary:active, .form__wrapper input[type="submit"]:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
 
-.cta.cta--secondary.cta--arrow:after {
+.cta.cta--secondary.cta--arrow:after, .form__wrapper input.cta--arrow[type="submit"]:after {
   content: url(../images/icons/icon-arrow-orange.png);
 }
 
-.cta.cta--tertiary {
+.cta.cta--tertiary, .form__wrapper input.cta--tertiary[type="submit"] {
   border: 2px solid #e8762c;
   padding: 15px 23px;
   background: transparent;
@@ -852,17 +867,18 @@ Style guide: buttons-links.cta
 }
 
 .cta.cta--tertiary:hover,
-.cta.cta--tertiary:focus {
+.form__wrapper input.cta--tertiary[type="submit"]:hover,
+.cta.cta--tertiary:focus, .form__wrapper input.cta--tertiary[type="submit"]:focus {
   background: transparent;
 }
 
-.cta.cta--tertiary:active {
+.cta.cta--tertiary:active, .form__wrapper input.cta--tertiary[type="submit"]:active {
   border-color: #c92434;
   background: transparent;
   color: #c92434;
 }
 
-.cta.cta--full-width {
+.cta.cta--full-width, .form__wrapper input.cta--full-width[type="submit"] {
   display: block;
   width: 100%;
   margin-left: 0;
@@ -872,10 +888,10 @@ Style guide: buttons-links.cta
 }
 
 @media (max-width: 639px) {
-  .cta {
+  .cta, .form__wrapper input[type="submit"] {
     display: block;
   }
-  .cta:nth-child(n+2) {
+  .cta:nth-child(n+2), .form__wrapper input[type="submit"]:nth-child(n+2) {
     margin-left: 0;
   }
   button.cta {
@@ -1107,22 +1123,55 @@ Style guide: buttons-links.link-formatted
 /*
 Base Form Styles
 
-A simple example form.
+A basic form.
+
 Markup: form.hbs
 
 Weight: 0
 
 Style guide: forms.base
 */
-.form--fields label {
-  display: inline-block;
-  min-width: 110px;
+.form__intro {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.form-field__wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.form-field__label {
+  color: #0076A3;
+}
+
+.has-float-label .form-field__label {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  left: 0.7em;
+  top: 0.5em;
+}
+
+.has-float-label .form-field__label.is-active {
+  pointer-events: all;
+  display: block;
+  -webkit-transform: translateY(-0.2em);
+      -ms-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  opacity: 1;
+  z-index: 1;
+}
+
+.has-float-label .form-field__label.has-focus {
+  -webkit-transition: opacity 50ms ease, -webkit-transform 150ms ease;
+  transition: opacity 50ms ease, transform 150ms ease;
 }
 
 /*
 Input Fields
 
-Nothing to see here yet...
+Text inputs on a form. Including text fields types, textareas
 
 Markup: form_input.hbs
 
@@ -1131,44 +1180,67 @@ Weight: 1
 .input--full-width - A full-width input field.
 
 Style guide: forms.input
+
+Nocode: true
 */
-input[type=text],
-input[type=search],
-input[type=tel],
-input[type=password],
-input[type=number],
-input[type=email] {
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea,
+.form__select {
+  -webkit-transition: border-color 250ms;
+  transition: border-color 250ms;
   box-sizing: border-box;
-  margin-bottom: 0.5em;
-  padding: 1em;
-  border: 0;
+  border: 1px solid #dedede;
   border-radius: 0;
+  padding: 1.7em 0.5em 0.3em;
   background: #fff;
   color: #333;
   font-size: 14px;
+  outline: none;
+  text-align: left;
 }
 
-@media (max-width: 639px) {
-  input[type=text],
-  input[type=search],
-  input[type=tel],
-  input[type=password],
-  input[type=number],
-  input[type=email] {
-    width: 100%;
-  }
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+textarea:hover,
+.form__select:hover {
+  border-color: #999;
 }
 
-input[type=text].input--full-width,
-input[type=search].input--full-width,
-input[type=tel].input--full-width,
-input[type=password].input--full-width,
-input[type=number].input--full-width,
-input[type=email].input--full-width {
+input[type="text"].input--full-width,
+input[type="search"].input--full-width,
+input[type="tel"].input--full-width,
+input[type="password"].input--full-width,
+input[type="number"].input--full-width,
+input[type="email"].input--full-width,
+textarea.input--full-width,
+.form__select.input--full-width {
   width: 100%;
 }
 
-input::-webkit-input-placeholder {
+.form--single-field input[type="text"],
+.form--single-field input[type="search"],
+.form--single-field input[type="tel"],
+.form--single-field input[type="password"],
+.form--single-field input[type="number"],
+.form--single-field input[type="email"],
+.form--single-field textarea,
+.form--single-field .form__select {
+  text-align: center;
+}
+
+input::input-placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
   color: #787878;
 }
 
@@ -1178,59 +1250,96 @@ input::-webkit-input-placeholder {
   }
 }
 
+.form__select {
+  position: relative;
+  padding: 3em 0.5em 0.3em;
+  /* Stroke */
+  /* Fill */
+}
+
+.form__select:before,
+.form__select:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom: 0;
+  pointer-events: none;
+}
+
+.form__select:before {
+  top: 20px;
+  right: 11px;
+  border-top-color: #dedede;
+  border-width: 8px;
+}
+
+.form__select:after {
+  top: 19px;
+  right: 12px;
+  border-top-color: #fff;
+  border-width: 7px;
+}
+
+.form__select select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  background: transparent;
+  left: 0.5em;
+  font-size: 1em;
+  color: #333;
+  outline: none;
+  padding-top: 1.1em;
+}
+
+.form__select select::-ms-expand {
+  display: none;
+}
+
+select .select-placeholder {
+  color: #787878;
+}
+
 /*
 Submit Buttons
 
-Nothing to see here yet...
+Form action elements.
 
 Markup: form_button.hbs
 
-.submitting - In the process of submitting
-.submitted - Successfully submitted
-.errored - Error occured while submitting
-
 Weight: 2
 
-Style guide: forms.buttons
+Style guide: forms.actions
 */
-input[type=submit].submitting,
-input[type=submit].submitted,
-input[type=submit].errored {
+.form__wrapper input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .form__wrapper input[type="submit"] {
+    width: auto;
+    min-width: 60%;
+  }
+}
+
+@media (min-width: 961px) {
+  .form__wrapper input[type="submit"] {
+    min-width: 40%;
+  }
+}
+
+.form__wrapper input[type="submit"].is-submitting,
+.form__wrapper input[type="submit"].is-submitted,
+.form__wrapper input[type="submit"].is-errored {
   cursor: inherit;
-}
-
-input[type=submit].submitting {
-  background-size: 30px 30px;
-  background-color: #c92434;
-  border-color: #c92434;
-  color: #fff;
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), right);
-  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: -webkit-linear-gradient(315deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-}
-
-input[type=submit].submitted {
-  background-color: #c92434;
-  border-color: #c92434;
-  color: #fff;
-}
-
-input[type=submit].errored {
-  background-color: #DD1E06;
-  border-color: #DD1E06;
-  color: #fff;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 60px 0;
-  }
 }
 
 /*
@@ -1244,7 +1353,7 @@ Weight: 3
 
 Style guide: forms.validation
 */
-.invalid {
+.form__field--invalid {
   display: none;
   color: #DD1E06;
 }
@@ -1267,7 +1376,7 @@ Section-level search form used within a specific section to search only content
 of that section. Displays autocomplete list and submits to global search results
 page filtered down to the corresponding section.
 
-@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in
 place of magnifying glass icon when text is in the field.
 
 Markup: section-search.hbs
@@ -1291,6 +1400,7 @@ Style guide: forms.section-search
   padding: 0.9em 64px 0.9em 1.3em;
   background: none;
   outline: 0;
+  border: 0;
   font-size: 1.5em;
   color: #787878;
   font-family: "Merriweather", serif;
@@ -1594,126 +1704,6 @@ Style guide: interactive.hero-slideshow
 }
 
 /*
-Popups
-
-Used to popup content into a modal box ontop of the page.
-
-Markup: popup.hbs
-
-Style guide: interactive.popup
- */
-.mfp-container {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.mfp-content {
-  max-width: 800px;
-  z-index: 5;
-  background: #fff;
-}
-
-.popup--content {
-  display: none;
-  padding: 2em;
-}
-
-.mfp-content .popup--content {
-  display: inherit;
-}
-
-button.mfp-arrow {
-  position: absolute;
-  top: 50%;
-  height: 80px;
-  width: 40px;
-  margin: -40px 0 0;
-  opacity: 1;
-  z-index: 10;
-  cursor: pointer;
-}
-
-button.mfp-arrow:before,
-button.mfp-arrow:after {
-  height: 80px;
-  width: 40px;
-  margin: 0;
-  padding: 15px 0;
-  border: 0;
-  opacity: 1;
-  line-height: 1;
-  font-family: "tc-icons";
-  font-size: 2.25em;
-  color: #fff;
-  text-shadow: 0 0 8px #666;
-}
-
-button.mfp-arrow.mfp-arrow-left {
-  left: 10px;
-}
-
-button.mfp-arrow.mfp-arrow-left:before {
-  content: "<";
-}
-
-button.mfp-arrow.mfp-arrow-right {
-  right: 10px;
-}
-
-button.mfp-arrow.mfp-arrow-right:before {
-  content: ">";
-}
-
-button.mfp-arrow:hover {
-  opacity: 0.8;
-}
-
-button.mfp-arrow:active {
-  margin: -40px 0 0;
-}
-
-@media (min-width: 961px) {
-  button.mfp-arrow.mfp-arrow-left {
-    left: 5%;
-  }
-  button.mfp-arrow.mfp-arrow-right {
-    right: 5%;
-  }
-}
-
-/* Transitioning the popup in and out */
-.popup--fade.mfp-bg {
-  opacity: 0;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-}
-
-.popup--fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-
-.popup--fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-.popup--fade.mfp-wrap .mfp-content,
-.popup--fade.mfp-wrap .mfp-arrow {
-  opacity: 0;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-}
-
-.popup--fade.mfp-wrap.mfp-ready .mfp-content,
-.popup--fade.mfp-wrap.mfp-ready .mfp-arrow {
-  opacity: 1;
-}
-
-.popup--fade.mfp-wrap.mfp-removing .mfp-content,
-.popup--fade.mfp-wrap.mfp-removing .mfp-arrow {
-  opacity: 0;
-}
-
-/*
 Content Reveal
 
 Simple tool to make content hidden and revealed when a trigger is clicked. It
@@ -1781,6 +1771,44 @@ input[type=search].search-highlight {
 
 input[type=search].search-highlight:focus {
   outline: 0;
+}
+
+/*
+Social Share
+
+A sharing element for social network widgets.
+
+Markup: social-share.hbs
+
+Style guide: interactive.social-share
+*/
+.social-share {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #eb912c;
+}
+
+.social-share__widgets {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.social-share__wrapper {
+  margin-top: 1em;
+}
+
+.social-share__wrapper .social-share__widget {
+  display: inline-block;
+  margin-left: 1em;
+  color: #eb912c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-share__wrapper .social-share__widget:first-child {
+  margin-left: 0;
 }
 
 /*
@@ -3563,7 +3591,7 @@ Style guide: layout.hero
   .hero .hero__content h1.heading--homepage br, .hero .hero__content .heading--homepage br {
     display: none;
   }
-  .hero .hero__content .cta {
+  .hero .hero__content .cta, .hero .hero__content .form__wrapper input[type="submit"], .form__wrapper .hero .hero__content input[type="submit"] {
     display: block;
     text-align: center;
   }
@@ -3798,6 +3826,45 @@ Style guide: layout.spacer
 }
 
 /*
+Agenda List
+
+An agenda list with a time and a description per item.
+
+Markup: agenda-list.hbs
+
+Style guide: lists.agenda
+*/
+.agenda-list {
+  display: table;
+}
+
+.agenda-list__item {
+  display: table-row;
+}
+
+.agenda-list__item .agenda__time {
+  display: table-cell;
+  min-width: 10em;
+}
+
+.agenda-list__item .agenda__description {
+  position: relative;
+  display: table-cell;
+  padding-left: 2.5em;
+  padding-bottom: 1em;
+}
+
+.agenda-list__item .agenda__description:before {
+  position: absolute;
+  display: block;
+  content: '';
+  border-top: 1px solid #dedede;
+  width: 1em;
+  top: 0.85em;
+  left: 0.5em;
+}
+
+/*
 1-Up Cross Reference
 
 A single cross reference item linking to related content.
@@ -3966,6 +4033,68 @@ Markup: link-list.hbs
 
 Style guide: lists.link
 */
+/*
+People List
+
+A list of people, showing their name and associated metadata.
+
+Weight: 60
+
+Markup: people-list.hbs
+
+Style guide: lists.people-list
+*/
+.people-list__person {
+  position: relative;
+  margin-top: 1em;
+  color: #787878;
+}
+
+.people-list__person:first-child {
+  margin-top: 0;
+}
+
+.people-list__person .person__image {
+  width: 20%;
+  float: left;
+  margin-right: 6.6666666667%;
+}
+
+@media (min-width: 640px) {
+  .people-list__person .person__image {
+    width: 14.8936170213%;
+    float: left;
+    margin-right: 2.1276595745%;
+  }
+}
+
+.people-list__person .person__info {
+  width: 73.3333333333%;
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+}
+
+@media (min-width: 640px) {
+  .people-list__person .person__info {
+    width: 31.914893617%;
+    float: left;
+    margin-right: 2.1276595745%;
+    padding-top: 1.5em;
+  }
+}
+
+.people-list__person .person__name {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #333;
+}
+
+.people-list__person .person__social .link--social {
+  display: inline-block;
+  margin-right: 1em;
+}
+
 /*
 Table List
 
@@ -4174,6 +4303,76 @@ Nocode: true
 
 Style guide: media.video-chapters-demo
 */
+/*
+Icons
+
+Custom icon webfont.
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon-people - people icon
+.icon-search - search icon
+.icon-social-facebook - social-facebook icon
+.icon-social-gplus - social-gplus icon
+.icon-social-instagram - social-instagram icon
+.icon-social-linkedin - social-linkedin icon
+.icon-social-twitter - social-twitter icon
+
+Style Guide: media.icons
+*/
+@font-face {
+  font-family: "tableau-icons";
+  src: url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.eot?bfaa1091b0d2e85c1a98449168933126");
+  src: url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.woff?bfaa1091b0d2e85c1a98449168933126") format("woff"), url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.ttf?bfaa1091b0d2e85c1a98449168933126") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "tableau-icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-people:before {
+  content: "\f101";
+}
+
+.icon-search:before {
+  content: "\f102";
+}
+
+.icon-social-facebook:before {
+  content: "\f103";
+}
+
+.icon-social-gplus:before {
+  content: "\f104";
+}
+
+.icon-social-instagram:before {
+  content: "\f105";
+}
+
+.icon-social-linkedin:before {
+  content: "\f106";
+}
+
+.icon-social-twitter:before {
+  content: "\f107";
+}
+
 /*
 Video Embed in-page
 
@@ -4845,7 +5044,7 @@ Style guide: navigation.subnav
           transition: opacity 0.5s;
 }
 
-.subnav .subnav__cta .cta {
+.subnav .subnav__cta .cta, .subnav .subnav__cta .form__wrapper input[type="submit"], .form__wrapper .subnav .subnav__cta input[type="submit"] {
   margin: 0;
 }
 
@@ -4947,7 +5146,7 @@ Style guide: navigation.subnav
     top: 5px;
     right: 1em;
   }
-  .subnav .subnav__cta .cta {
+  .subnav .subnav__cta .cta, .subnav .subnav__cta .form__wrapper input[type="submit"], .form__wrapper .subnav .subnav__cta input[type="submit"] {
     padding-top: 12px;
     padding-bottom: 12px;
   }
@@ -5096,7 +5295,7 @@ Style Guide: navigation.topic-nav
           transform: rotate(180deg);
 }
 
-/* 
+/*
 Shameful hacks that should be fixed
 */
 /* hack for Desktop additional features on mobile */
@@ -5147,6 +5346,117 @@ Shameful hacks that should be fixed
 /* fix for slideshow captions on Desktop. Used in viz-slideshow component */
 .shame__margin-top {
   margin-top: 1em;
+}
+
+/*
+Image based icons
+
+@TODO get design to make SVGs and migrate to iconfont generation.
+*/
+.icon--product-mobile,
+.icon--product-public,
+.icon--product-reader,
+.icon--database,
+.icon--diagram,
+.icon--management,
+.icon--statistics,
+.icon--arrow-long,
+.icon--arrow-long-down,
+.icon--expand,
+.icon--collapse,
+.icon--slideshow-prev-light,
+.icon--slideshow-next-light,
+.icon--slideshow-prev-dark,
+.icon--slideshow-next-dark,
+.icon--magnifying-glass {
+  display: inline-block;
+}
+
+.icon--product-mobile:before {
+  content: url(../images/icons/icon-product-mobile.png);
+}
+
+.icon--product-public:before {
+  content: url(../images/icons/icon-product-public.png);
+}
+
+.icon--product-reader:before {
+  content: url(../images/icons/icon-product-reader.png);
+}
+
+.icon--product-mobile:before,
+.icon--product-public:before,
+.icon--product-reader:before {
+  display: inline-block;
+  height: 40px;
+}
+
+.icon--database:before {
+  content: url(../images/icons/database.png);
+}
+
+.icon--diagram:before {
+  content: url(../images/icons/diagram.png);
+}
+
+.icon--management:before {
+  content: url(../images/icons/management.png);
+}
+
+.icon--statistics:before {
+  content: url(../images/icons/statistics.png);
+}
+
+.icon--arrow-long:before {
+  content: url(../images/icons/icon-arrow-long.png);
+}
+
+.icon--arrow-long-down:before {
+  content: url(../images/icons/icon-arrow-long-down.png);
+}
+
+.icon--expand:before {
+  content: url(../images/icons/expand.png);
+}
+
+.icon--collapse:before {
+  content: url(../images/icons/collapse.png);
+}
+
+.icon--slideshow-prev-light:before {
+  content: url("../images/icons/slideshow-prev-light.png");
+}
+
+.icon--slideshow-next-light:before {
+  content: url("../images/icons/slideshow-next-light.png");
+}
+
+.icon--slideshow-prev-dark:before {
+  content: url("../images/icons/slideshow-prev-dark.png");
+}
+
+.icon--slideshow-next-dark:before {
+  content: url("../images/icons/slideshow-next-dark.png");
+}
+
+.icon--magnifying-glass:before {
+  content: url("../images/icons/icon-magnifying-glass.png");
+}
+
+.icon--ecosystem-style {
+  border: 5px solid #DEDEDE;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  font-size: 7.5em;
+  background: #ededed;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .icon--ecosystem-style {
+    zoom: 0.7;
+  }
 }
 
 /*
@@ -5478,6 +5788,7 @@ body,
 .kss-example-preview-wrapper,
 .text--body-large,
 .text--body-medium,
+.people-list__person .person__name,
 .text--body-small {
   font-family: "Merriweather", serif;
   font-weight: normal;
@@ -5500,14 +5811,14 @@ body,
 /*
 Font Families
 
-All text on tableau.com is set in either Benton Sans or Merriweather. This 
+All text on tableau.com is set in either Benton Sans or Merriweather. This
 includes body copy as well as page and section headers.
 
-**BentonSans** is primarily used for section headers and titling in it’s Thin 
-case, but it is also used in it’s Book case in buttons and other scenarios. 
+**BentonSans** is primarily used for section headers and titling in its Thin
+case, but it is also used in its Book case in buttons and other scenarios.
 Occasionally BentonSans Medium is used in article templates.
 
-**Merriweather** is used in it’s Light case mainly for body copy and in the 
+**Merriweather** is used in its Light case mainly for body copy and in the
 Stories and Articles sections.
 
 Markup: fonts.hbs
@@ -5533,7 +5844,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
+.text--benton-book, .cta, .form__wrapper input[type="submit"], .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
@@ -5786,7 +6097,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .tabs__tabs .tabs__tab-link, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
+.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.7857142857em;
   letter-spacing: 1px;
@@ -6379,605 +6690,6 @@ Weight: 4
 .badge.badge--nav-drawer-gray-2.badge--outlined {
   background: none;
   color: #ddd;
-}
-
-/*
-Icons
-
-Misc icons for prototype. Must clean up.
-@todo icon-font these!
-
-Nodefault: true
-
-Markup: icon.hbs
-
-.icon--product-mobile - product-mobile icon
-.icon--product-public - product-public icon
-.icon--product-reader - product-reader icon
-.icon--database - database icon
-.icon--diagram - diagram icon
-.icon--management - management icon
-.icon--statistics - statistics icon
-.icon--arrow-long - arrow-long icon
-.icon--arrow-long-down - arrow-long-down icon
-.icon--expand - expand icon
-.icon--collapse - collapse icon
-.icon--slideshow-prev-light - slideshow-prev-light icon
-.icon--slideshow-next-light - slideshow-next-light icon
-.icon--slideshow-prev-dark - slideshow-prev-dark icon
-.icon--slideshow-next-dark - slideshow-next-dark icon
-.icon--magnifying-glass  - magnifying-glass icon
-.icon--app-browser - app-browser icon
-.icon--apple - apple icon
-.icon--area-chart - area-chart icon
-.icon--arrow-circle-right - arrow-circle-right icon
-.icon--arrow-down - arrow-down icon
-.icon--arrow-heavy-up - arrow-heavy-up icon
-.icon--arrow-up - arrow-up icon
-.icon--bar-chart - bar-chart icon
-.icon--book-isometric - book-isometric icon
-.icon--book-open - book-open icon
-.icon--broadcast - broadcast icon
-.icon--calendar - calendar icon
-.icon--chat-bubble - chat-bubble icon
-.icon--chat-bubbles-solid - chat-bubbles-solid icon
-.icon--chevron-down - chevron-down icon
-.icon--chevron-left - chevron-left icon
-.icon--chevron-right - chevron-right icon
-.icon--chevron-up - chevron-up icon
-.icon--close-circle - close-circle icon
-.icon--cloud - cloud icon
-.icon--cursor-cloud - cursor-cloud icon
-.icon--cursor-hand - cursor-hand icon
-.icon--cursor - cursor icon
-.icon--dashboard - dashboard icon
-.icon--database-storage - database-storage icon
-.icon--document-3 - document-3 icon
-.icon--document-5 - document-5 icon
-.icon--download - download icon
-.icon--email - email icon
-.icon--embed - embed icon
-.icon--enterprise - enterprise icon
-.icon--gears - gears icon
-.icon--globe - globe icon
-.icon--grid-9x9 - grid-9x9 icon
-.icon--laptop - laptop icon
-.icon--line-plot - line-plot icon
-.icon--link - link icon
-.icon--list-blog-view - list-blog-view icon
-.icon--lock - lock icon
-.icon--logo-apple - logo-apple icon
-.icon--logo-windows - logo-windows icon
-.icon--mail-speed - mail-speed icon
-.icon--memory - memory icon
-.icon--microphone - microphone icon
-.icon--mobile-menu - mobile-menu icon
-.icon--news - news icon
-.icon--people-2 - people-2 icon
-.icon--people - people icon
-.icon--play-circle-big - play-circle-big icon
-.icon--play-circle-small - play-circle-small icon
-.icon--question - question icon
-.icon--quote-double-start - quote-double-start icon
-.icon--refresh - refresh icon
-.icon--search - search icon
-.icon--share - share icon
-.icon--social-facebook - social-facebook icon
-.icon--social-gplus - social-gplus icon
-.icon--social-instagram - social-instagram icon
-.icon--social-linkedin - social-linkedin icon
-.icon--social-rss - social-rss icon
-.icon--social-twitter - social-twitter icon
-.icon--social-youtube - social-youtube icon
-.icon--table-join - table-join icon
-.icon--tableau-logo - tableau-logo icon
-.icon--tablet - tablet icon
-.icon--timer-60 - timer-60 icon
-.icon--triangle-down - triangle-down icon
-.icon--triangle-left - triangle-left icon
-.icon--triangle-right - triangle-right icon
-.icon--triangle-up - triangle-up icon
-.icon--vizql - vizql icon
-
-Style Guide: icons.icons
-*/
-.icon--product-mobile,
-.icon--product-public,
-.icon--product-reader,
-.icon--database,
-.icon--diagram,
-.icon--management,
-.icon--statistics,
-.icon--arrow-long,
-.icon--arrow-long-down,
-.icon--expand,
-.icon--collapse,
-.icon--slideshow-prev-light,
-.icon--slideshow-next-light,
-.icon--slideshow-prev-dark,
-.icon--slideshow-next-dark,
-.icon--magnifying-glass {
-  display: inline-block;
-}
-
-.icon--product-mobile:before {
-  content: url(../images/icons/icon-product-mobile.png);
-}
-
-.icon--product-public:before {
-  content: url(../images/icons/icon-product-public.png);
-}
-
-.icon--product-reader:before {
-  content: url(../images/icons/icon-product-reader.png);
-}
-
-.icon--product-mobile:before,
-.icon--product-public:before,
-.icon--product-reader:before {
-  display: inline-block;
-  height: 40px;
-}
-
-.icon--database:before {
-  content: url(../images/icons/database.png);
-}
-
-.icon--diagram:before {
-  content: url(../images/icons/diagram.png);
-}
-
-.icon--management:before {
-  content: url(../images/icons/management.png);
-}
-
-.icon--statistics:before {
-  content: url(../images/icons/statistics.png);
-}
-
-.icon--arrow-long:before {
-  content: url(../images/icons/icon-arrow-long.png);
-}
-
-.icon--arrow-long-down:before {
-  content: url(../images/icons/icon-arrow-long-down.png);
-}
-
-.icon--expand:before {
-  content: url(../images/icons/expand.png);
-}
-
-.icon--collapse:before {
-  content: url(../images/icons/collapse.png);
-}
-
-.icon--slideshow-prev-light:before {
-  content: url("../images/icons/slideshow-prev-light.png");
-}
-
-.icon--slideshow-next-light:before {
-  content: url("../images/icons/slideshow-next-light.png");
-}
-
-.icon--slideshow-prev-dark:before {
-  content: url("../images/icons/slideshow-prev-dark.png");
-}
-
-.icon--slideshow-next-dark:before {
-  content: url("../images/icons/slideshow-next-dark.png");
-}
-
-.icon--magnifying-glass:before {
-  content: url("../images/icons/icon-magnifying-glass.png");
-}
-
-.icon--ecosystem-style {
-  border: 5px solid #DEDEDE;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  font-size: 7.5em;
-  background: #ededed;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .icon--ecosystem-style {
-    zoom: 0.7;
-  }
-}
-
-.icon--large {
-  font-size: 3.5em;
-}
-
-@font-face {
-  font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons.eot");
-  src: url("../fonts/tableau-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons.woff") format("woff"), url("../fonts/tableau-icons.ttf") format("truetype"), url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "tableau-icons";
-    src: url("../fonts/tableau-icons.svg#tableau-icons") format("svg");
-  }
-}
-
-[data-icon]:before {
-  content: attr(data-icon);
-}
-
-[data-icon]:before,
-.icon--app-browser:before,
-.icon--apple:before,
-.icon--area-chart:before,
-.icon--arrow-circle-right:before,
-.icon--arrow-down:before,
-.icon--arrow-heavy-up:before,
-.icon--arrow-up:before,
-.icon--bar-chart:before,
-.icon--book-isometric:before,
-.icon--book-open:before,
-.icon--broadcast:before,
-.icon--calendar:before,
-.icon--chat-bubble:before,
-.icon--chat-bubbles-solid:before,
-.icon--chevron-down:before,
-.icon--chevron-left:before,
-.icon--chevron-right:before,
-.icon--chevron-up:before,
-.icon--close-circle:before,
-.icon--cloud:before,
-.icon--cursor-cloud:before,
-.icon--cursor-hand:before,
-.icon--cursor:before,
-.icon--dashboard:before,
-.icon--database-storage:before,
-.icon--document-3:before,
-.icon--document-5:before,
-.icon--download:before,
-.icon--email:before,
-.icon--embed:before,
-.icon--enterprise:before,
-.icon--gears:before,
-.icon--globe:before,
-.icon--grid-9x9:before,
-.icon--laptop:before,
-.icon--line-plot:before,
-.icon--link:before,
-.icon--list-blog-view:before,
-.icon--lock:before,
-.icon--logo-apple:before,
-.icon--logo-windows:before,
-.icon--mail-speed:before,
-.icon--memory:before,
-.icon--microphone:before,
-.icon--mobile-menu:before,
-.icon--news:before,
-.icon--people-2:before,
-.icon--people:before,
-.icon--play-circle-big:before,
-.icon--play-circle-small:before,
-.icon--question:before,
-.icon--quote-double-start:before,
-.icon--refresh:before,
-.icon--search:before,
-.icon--share:before,
-.icon--social-facebook:before,
-.icon--social-gplus:before,
-.icon--social-instagram:before,
-.icon--social-linkedin:before,
-.icon--social-rss:before,
-.icon--social-twitter:before,
-.icon--social-youtube:before,
-.icon--table-join:before,
-.icon--tableau-logo:before,
-.icon--tablet:before,
-.icon--timer-60:before,
-.icon--triangle-down:before,
-.icon--triangle-left:before,
-.icon--triangle-right:before,
-.icon--triangle-up:before,
-.icon--vizql:before {
-  display: inline-block;
-  font-family: "tableau-icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-.icon--app-browser:before {
-  content: "\f100";
-}
-
-.icon--apple:before {
-  content: "\f101";
-}
-
-.icon--area-chart:before {
-  content: "\f102";
-}
-
-.icon--arrow-circle-right:before {
-  content: "\f103";
-}
-
-.icon--arrow-down:before {
-  content: "\f104";
-}
-
-.icon--arrow-heavy-up:before {
-  content: "\f105";
-}
-
-.icon--arrow-up:before {
-  content: "\f106";
-}
-
-.icon--bar-chart:before {
-  content: "\f138";
-}
-
-.icon--book-isometric:before {
-  content: "\f107";
-}
-
-.icon--book-open:before {
-  content: "\f108";
-}
-
-.icon--broadcast:before {
-  content: "\f109";
-}
-
-.icon--calendar:before {
-  content: "\f10a";
-}
-
-.icon--chat-bubble:before {
-  content: "\f10b";
-}
-
-.icon--chat-bubbles-solid:before {
-  content: "\f10c";
-}
-
-.icon--chevron-down:before {
-  content: "\f10d";
-}
-
-.icon--chevron-left:before {
-  content: "\f10e";
-}
-
-.icon--chevron-right:before {
-  content: "\f10f";
-}
-
-.icon--chevron-up:before {
-  content: "\f110";
-}
-
-.icon--close-circle:before {
-  content: "\f111";
-}
-
-.icon--cloud:before {
-  content: "\f139";
-}
-
-.icon--cursor-cloud:before {
-  content: "\f112";
-}
-
-.icon--cursor-hand:before {
-  content: "\f113";
-}
-
-.icon--cursor:before {
-  content: "\f13a";
-}
-
-.icon--dashboard:before {
-  content: "\f114";
-}
-
-.icon--database-storage:before {
-  content: "\f115";
-}
-
-.icon--document-3:before {
-  content: "\f116";
-}
-
-.icon--document-5:before {
-  content: "\f117";
-}
-
-.icon--download:before {
-  content: "\f118";
-}
-
-.icon--email:before {
-  content: "\f119";
-}
-
-.icon--embed:before {
-  content: "\f13b";
-}
-
-.icon--enterprise:before {
-  content: "\f13c";
-}
-
-.icon--gears:before {
-  content: "\f11a";
-}
-
-.icon--globe:before {
-  content: "\f11b";
-}
-
-.icon--grid-9x9:before {
-  content: "\f11c";
-}
-
-.icon--laptop:before {
-  content: "\f11d";
-}
-
-.icon--line-plot:before {
-  content: "\f13d";
-}
-
-.icon--link:before {
-  content: "\f150";
-}
-
-.icon--list-blog-view:before {
-  content: "\f11e";
-}
-
-.icon--lock:before {
-  content: "\f13e";
-}
-
-.icon--logo-apple:before {
-  content: "\f14f";
-}
-
-.icon--logo-windows:before {
-  content: "\f145";
-}
-
-.icon--mail-speed:before {
-  content: "\f13f";
-}
-
-.icon--memory:before {
-  content: "\f140";
-}
-
-.icon--microphone:before {
-  content: "\f11f";
-}
-
-.icon--mobile-menu:before {
-  content: "\f141";
-}
-
-.icon--news:before {
-  content: "\f120";
-}
-
-.icon--people-2:before {
-  content: "\f122";
-}
-
-.icon--people:before {
-  content: "\f121";
-}
-
-.icon--play-circle-big:before {
-  content: "\f123";
-}
-
-.icon--play-circle-small:before {
-  content: "\f124";
-}
-
-.icon--question:before {
-  content: "\f125";
-}
-
-.icon--quote-double-start:before {
-  content: "\f137";
-}
-
-.icon--refresh:before {
-  content: "\f126";
-}
-
-.icon--search:before {
-  content: "\f127";
-}
-
-.icon--share:before {
-  content: "\f128";
-}
-
-.icon--social-facebook:before {
-  content: "\f129";
-}
-
-.icon--social-gplus:before {
-  content: "\f12a";
-}
-
-.icon--social-instagram:before {
-  content: "\f12b";
-}
-
-.icon--social-linkedin:before {
-  content: "\f12c";
-}
-
-.icon--social-rss:before {
-  content: "\f12d";
-}
-
-.icon--social-twitter:before {
-  content: "\f12e";
-}
-
-.icon--social-youtube:before {
-  content: "\f12f";
-}
-
-.icon--table-join:before {
-  content: "\f142";
-}
-
-.icon--tableau-logo:before {
-  content: "\f130";
-}
-
-.icon--tablet:before {
-  content: "\f143";
-}
-
-.icon--timer-60:before {
-  content: "\f131";
-}
-
-.icon--triangle-down:before {
-  content: "\f132";
-}
-
-.icon--triangle-left:before {
-  content: "\f133";
-}
-
-.icon--triangle-right:before {
-  content: "\f134";
-}
-
-.icon--triangle-up:before {
-  content: "\f135";
-}
-
-.icon--vizql:before {
-  content: "\f144";
 }
 
 /*

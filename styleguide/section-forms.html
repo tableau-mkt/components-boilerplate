@@ -95,7 +95,7 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-forms.html#kssref-forms-buttons">
+                  <a href="section-forms.html#kssref-forms-actions">
                     Submit Buttons
                   </a>
                 </li>
@@ -129,11 +129,6 @@
         <li class="kss-nav__menu-item">
           <a href="section-layout.html">
             Layout
-          </a>
-        </li>
-        <li class="kss-nav__menu-item">
-          <a href="section-icons.html">
-            Icons
           </a>
         </li>
       </ul>
@@ -170,6 +165,10 @@ user can submit information through. Here&#39;s an example form:</p>
             </h3>
 
 
+            <div class="kss-description">
+              <p>A basic form.</p>
+
+            </div>
           </div>
 
             <h4>Example</h4>
@@ -177,8 +176,46 @@ user can submit information through. Here&#39;s an example form:</p>
               <div class="kss-example kss-example__default">
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    A simple example form.
-form.hbs
+                    <div class="form__wrapper">
+  <div class="form__intro">
+    <h3 class="form__intro__heading">Almost there!</h3>
+    <div class="form__intro__description">
+      It only takes 30 seconds to fill out the form, or <a href='#sso-login'>sign in</a>.
+    </div>
+  </div>
+
+    <div class="form-field__wrapper has-float-label">
+    <label class="form-field__label" for="first-name">First Name</label>
+
+      <input class="form-field" type="text" name="first-name" placeholder="First Name">
+
+    </div>
+    <div class="form-field__wrapper has-float-label">
+    <label class="form-field__label" for="last-name">Last Name</label>
+
+      <input class="form-field" type="text" name="last-name" placeholder="Last Name">
+
+    </div>
+    <div class="form-field__wrapper has-float-label">
+    <label class="form-field__label" for="email">Business E-mail</label>
+
+      <input class="form-field" type="email" name="email" placeholder="E-mail address">
+
+    </div>
+    <div class="form-field__wrapper has-float-label">
+    <label class="form-field__label" for="organization">Organization</label>
+
+      <input class="form-field" type="text" name="organization" placeholder="First Name">
+
+    </div>
+
+  <div class="form__actions">
+    <span class="form-action--primary__wrapper">
+      <input type="submit" value="Submit">
+    </span>
+  </div>
+</div>
+
                   </div>
                 </div>
               </div>
@@ -187,8 +224,46 @@ form.hbs
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">A simple example form.
-form.hbs</code></pre>
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;form__wrapper&quot;&gt;
+  &lt;div class=&quot;form__intro&quot;&gt;
+    &lt;h3 class=&quot;form__intro__heading&quot;&gt;Almost there!&lt;/h3&gt;
+    &lt;div class=&quot;form__intro__description&quot;&gt;
+      It only takes 30 seconds to fill out the form, or &lt;a href=&#x27;#sso-login&#x27;&gt;sign in&lt;/a&gt;.
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+    &lt;div class=&quot;form-field__wrapper has-float-label&quot;&gt;
+    &lt;label class=&quot;form-field__label&quot; for=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
+
+      &lt;input class=&quot;form-field&quot; type=&quot;text&quot; name=&quot;first-name&quot; placeholder=&quot;First Name&quot;&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-field__wrapper has-float-label&quot;&gt;
+    &lt;label class=&quot;form-field__label&quot; for=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
+
+      &lt;input class=&quot;form-field&quot; type=&quot;text&quot; name=&quot;last-name&quot; placeholder=&quot;Last Name&quot;&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-field__wrapper has-float-label&quot;&gt;
+    &lt;label class=&quot;form-field__label&quot; for=&quot;email&quot;&gt;Business E-mail&lt;/label&gt;
+
+      &lt;input class=&quot;form-field&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;E-mail address&quot;&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-field__wrapper has-float-label&quot;&gt;
+    &lt;label class=&quot;form-field__label&quot; for=&quot;organization&quot;&gt;Organization&lt;/label&gt;
+
+      &lt;input class=&quot;form-field&quot; type=&quot;text&quot; name=&quot;organization&quot; placeholder=&quot;First Name&quot;&gt;
+
+    &lt;/div&gt;
+
+  &lt;div class=&quot;form__actions&quot;&gt;
+    &lt;span class=&quot;form-action--primary__wrapper&quot;&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
               </div>
 
             </section>
@@ -203,7 +278,7 @@ form.hbs</code></pre>
 
 
             <div class="kss-description">
-              <p>Nothing to see here yet...</p>
+              <p>Text inputs on a form. Including text fields types, textareas</p>
 
             </div>
           </div>
@@ -218,14 +293,42 @@ form.hbs</code></pre>
                 </div>
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <label for="text-field">Text Field:</label>
-<input type="text" name="text-field" id="text-field"/>
-<br>
-<label for="email-field">Email Field:</label>
-<input type="email" name="email-field" id="email-field"/>
-<br>
-<label for="password-field">Password Field:</label>
-<input type="password" name="password-field" id="password-field"/>
+                    <div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="text-field">Text Field:</label>
+  <input type="text" name="text-field" id="text-field" placeholder="text">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="email-field">Email Field:</label>
+  <input type="email" name="email-field" id="email-field" placeholder="email">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="password-field">Password Field:</label>
+  <input type="password" name="password-field" id="password-field" placeholder="password">
+</div>
+
+<div class="form-field__wrapper  has-float-label">
+  <label class="form-field__label" for="sample-textarea">Long text</label>
+  <textarea rows="5" name="sample-textarea" placeholder="Long text here..."></textarea>
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="sample-select">Industries</label>
+
+  <div class="form__select">
+    <select name="sample-select">
+      <option class="select-placeholder" value="_none" disabled selected>Industries</option>
+      <option value="bar">Other Choices</option>
+      <option value="bars">Other Choices</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-field__wrapper">
+  <input type="checkbox" name="example-checkbox" id="example-checkbox">
+  <label class="form-field__label" for="example-checkbox">A Great Checkbox</label>
+</div>
 
                   </div>
                 </div>
@@ -242,119 +345,86 @@ form.hbs</code></pre>
                   </div>
                   <div class="kss-example-preview">
                     <div class="kss-example-preview-wrapper">
-                      <label for="text-field">Text Field:</label>
-<input type="text" name="text-field" id="text-field"/>
-<br>
-<label for="email-field">Email Field:</label>
-<input type="email" name="email-field" id="email-field"/>
-<br>
-<label for="password-field">Password Field:</label>
-<input type="password" name="password-field" id="password-field"/>
+                      <div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="text-field">Text Field:</label>
+  <input type="text" name="text-field" id="text-field" placeholder="text">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="email-field">Email Field:</label>
+  <input type="email" name="email-field" id="email-field" placeholder="email">
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="password-field">Password Field:</label>
+  <input type="password" name="password-field" id="password-field" placeholder="password">
+</div>
+
+<div class="form-field__wrapper  has-float-label">
+  <label class="form-field__label" for="sample-textarea">Long text</label>
+  <textarea rows="5" name="sample-textarea" placeholder="Long text here..."></textarea>
+</div>
+
+<div class="form-field__wrapper has-float-label">
+  <label class="form-field__label" for="sample-select">Industries</label>
+
+  <div class="form__select">
+    <select name="sample-select">
+      <option class="select-placeholder" value="_none" disabled selected>Industries</option>
+      <option value="bar">Other Choices</option>
+      <option value="bars">Other Choices</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-field__wrapper">
+  <input type="checkbox" name="example-checkbox" id="example-checkbox">
+  <label class="form-field__label" for="example-checkbox">A Great Checkbox</label>
+</div>
 
                     </div>
                   </div>
                 </div>
             </div>
             
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;label for=&quot;text-field&quot;&gt;Text Field:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;text-field&quot; id=&quot;text-field&quot;/&gt;
-&lt;br&gt;
-&lt;label for=&quot;email-field&quot;&gt;Email Field:&lt;/label&gt;
-&lt;input type=&quot;email&quot; name=&quot;email-field&quot; id=&quot;email-field&quot;/&gt;
-&lt;br&gt;
-&lt;label for=&quot;password-field&quot;&gt;Password Field:&lt;/label&gt;
-&lt;input type=&quot;password&quot; name=&quot;password-field&quot; id=&quot;password-field&quot;/&gt;
-</code></pre>
-              </div>
 
             </section>
-            <section id="kssref-forms-buttons" class="kss-section kss-section--depth-2">
+            <section id="kssref-forms-actions" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
             <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-forms-buttons"> -->
+              <!-- <a class="kss-title__permalink" href="#kssref-forms-actions"> -->
                 Submit Buttons
               <!-- </a> -->
             </h3>
 
 
             <div class="kss-description">
-              <p>Nothing to see here yet...</p>
+              <p>Form action elements.</p>
 
             </div>
           </div>
 
-            <h4>Examples</h4>
+            <h4>Example</h4>
             <div class="kss-examples">
               <div class="kss-example kss-example__default">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <h6>Default styling</h6>
-                  </div>
-                </div>
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <input type="submit" class="cta [modifier class]" value="Submit [modifier class]" />
+                    <span class="form-action--primary__wrapper">
+  <input type="submit" value="Submit">
+</span>
 
                   </div>
                 </div>
               </div>
              
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>In the process of submitting</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.submitting</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <input type="submit" class="cta submitting" value="Submit submitting" />
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Successfully submitted</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.submitted</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <input type="submit" class="cta submitted" value="Submit submitted" />
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Error occured while submitting</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.errored</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <input type="submit" class="cta errored" value="Submit errored" />
-
-                    </div>
-                  </div>
-                </div>
             </div>
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;input type=&quot;submit&quot; class=&quot;cta [modifier class]&quot; value=&quot;Submit [modifier class]&quot; /&gt;
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;span class=&quot;form-action--primary__wrapper&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/span&gt;
 </code></pre>
               </div>
 

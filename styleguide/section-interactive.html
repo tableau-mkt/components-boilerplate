@@ -120,11 +120,6 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-interactive.html#kssref-interactive-popup">
-                    Popups
-                  </a>
-                </li>
-                <li class="kss-nav__menu-item">
                   <a href="section-interactive.html#kssref-interactive-reveal">
                     Content Reveal
                   </a>
@@ -132,6 +127,11 @@
                 <li class="kss-nav__menu-item">
                   <a href="section-interactive.html#kssref-interactive-search-highlight">
                     Search Highlight
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
+                  <a href="section-interactive.html#kssref-interactive-social-share">
+                    Social Share
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
@@ -149,11 +149,6 @@
         <li class="kss-nav__menu-item">
           <a href="section-layout.html">
             Layout
-          </a>
-        </li>
-        <li class="kss-nav__menu-item">
-          <a href="section-icons.html">
-            Icons
           </a>
         </li>
       </ul>
@@ -684,50 +679,6 @@ option to reloop the gif.</p>
               </div>
 
             </section>
-            <section id="kssref-interactive-popup" class="kss-section kss-section--depth-2">
-
-          <div class="kss-style">
-            <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-interactive-popup"> -->
-                Popups
-              <!-- </a> -->
-            </h3>
-
-
-            <div class="kss-description">
-              <p>Used to popup content into a modal box ontop of the page.</p>
-
-            </div>
-          </div>
-
-            <h4>Example</h4>
-            <div class="kss-examples">
-              <div class="kss-example kss-example__default">
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <a href="#popup-test" class="cta popup-inline">Popup trigger</a>
-<div id="popup-test" class="popup--content">
-  <p>Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.</p>
-  <p>Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.</p>
-</div>
-
-                  </div>
-                </div>
-              </div>
-             
-            </div>
-            
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;a href=&quot;#popup-test&quot; class=&quot;cta popup-inline&quot;&gt;Popup trigger&lt;/a&gt;
-&lt;div id=&quot;popup-test&quot; class=&quot;popup--content&quot;&gt;
-  &lt;p&gt;Pulvinar cupidatat numquam nisl nascetur officia massa fugiat eros aliqua, iste! Corporis ducimus nisl possimus lorem, in corrupti maecenas voluptatum, arcu hymenaeos? Vel quod wisi placerat delectus animi ducimus vero? Aliquet imperdiet cras, ullam expedita, lorem phasellus minus senectus? Tortor curae nunc, mus esse maiores, adipisci aliquam ante, ullamcorper mattis.&lt;/p&gt;
-  &lt;p&gt;Morbi quasi risus saepe. Cupiditate inceptos, aliquid. In sunt. Habitasse excepturi faucibus, suscipit delectus fugiat, aute! Donec elementum luctus officiis. Netus reiciendis officiis netus, aut quod nunc sociosqu pretium placeat, ex fuga nemo, nulla, magna voluptate nobis iaculis quam mollit voluptatum ea viverra gravida erat quasi curabitur dolores, pulvinar, aliquip.&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
-
-            </section>
             <section id="kssref-interactive-reveal" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
@@ -894,6 +845,76 @@ attribute that matches the <code>data-reveal-target</code>.</p>
             HP Vertica 6.x or later
           &lt;/li&gt;
       &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-interactive-social-share" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-interactive-social-share"> -->
+                Social Share
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>A sharing element for social network widgets.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="social-share__wrapper">
+  <a class="social-share" href="#"><i class="icon icon_share"></i> Share</a>
+
+  <div class="social-share__widgets">
+      <a href="#" class="social-share__widget social-share__widet--linkedin" data-social="linkedin">
+        <i class="icon icon-social-linkedin"></i>
+      </a>
+      <a href="#" class="social-share__widget social-share__widet--facebook" data-social="facebook">
+        <i class="icon icon-social-facebook"></i>
+      </a>
+      <a href="#" class="social-share__widget social-share__widet--twitter" data-social="twitter">
+        <i class="icon icon-social-twitter"></i>
+      </a>
+      <a href="#" class="social-share__widget social-share__widet--gplus" data-social="gplus">
+        <i class="icon icon-social-gplus"></i>
+      </a>
+  </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;social-share__wrapper&quot;&gt;
+  &lt;a class=&quot;social-share&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon_share&quot;&gt;&lt;/i&gt; Share&lt;/a&gt;
+
+  &lt;div class=&quot;social-share__widgets&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;social-share__widget social-share__widet--linkedin&quot; data-social=&quot;linkedin&quot;&gt;
+        &lt;i class=&quot;icon icon-social-linkedin&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;social-share__widget social-share__widet--facebook&quot; data-social=&quot;facebook&quot;&gt;
+        &lt;i class=&quot;icon icon-social-facebook&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;social-share__widget social-share__widet--twitter&quot; data-social=&quot;twitter&quot;&gt;
+        &lt;i class=&quot;icon icon-social-twitter&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;social-share__widget social-share__widet--gplus&quot; data-social=&quot;gplus&quot;&gt;
+        &lt;i class=&quot;icon icon-social-gplus&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>

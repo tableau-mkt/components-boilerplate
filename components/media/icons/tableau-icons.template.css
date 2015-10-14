@@ -9,7 +9,7 @@ Markup: icon.hbs
 
 <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>.<%= classPrefix %><%= glyphs[glyphIdx] %> - <%= glyphs[glyphIdx] %> icon
 <% } %>
-Style Guide: icons.icons
+Style Guide: media.icons
 */
 
 <% if (fontfaceStyles) { %>
