@@ -49,6 +49,9 @@ Style guide: lists.people-list
   }
 
   .person__social {
-    // @todo on auto iconfont generation
+    .link--social {
+      display: inline-block;
+      margin-right: 1em;
+    }
   }
 }

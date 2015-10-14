@@ -5,14 +5,15 @@
  */
 (function ($, window) {
   $(document).ready(function () {
-    var $socialShare = $('.social-share');
+    var $socialShare = $('.social-share__wrapper');
 
     // Bail early if there aren't even any element.
     if (!$socialShare.length) {
       return;
     }
 
-    // Utilize the revealContent plugin.
+    // Utilize the slideHeight custom animation.
+    // @TODO change this out to contentReveal, would likely involve refactor.
     $socialShare.each(function initSocialShare() {
       var $this = $(this),
           $widgets = $('.social-share__widgets'),
