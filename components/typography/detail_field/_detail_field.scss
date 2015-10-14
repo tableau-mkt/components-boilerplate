@@ -1,0 +1,23 @@
+/*
+Detail Field
+
+Field with a label.
+
+Markup: detail-field.hbs
+
+.detail-field--secondary
+
+Styleguide: typography.detail-field
+*/
+
+.detail-field {
+
+  .detail-field__label {
+    @extend .text--label;
+  }
+
+  &.detail-field--secondary {
+    @extend .text--sub-nav;
+    border-bottom: 1px solid $accent-dividers;
+  }
+}
