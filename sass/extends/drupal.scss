@@ -1,0 +1,19 @@
+// Extend components to work with rigid Drupal DOM.
+
+.group-event-details,
+.field--name-datetime-range {
+  @extend .text--sub-nav;
+  @extend .padded-box--one;
+  @extend .padded-box--border-bottom;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+  .group-event-details .field-label,
+  .field--name-datetime-range .field-label {
+    @extend .text--label;
+  }
+
+.field--name-field-agenda .field-label,
+.field--name-field-sponsors .field-label{
+  @extend .text--sub-nav;
+}

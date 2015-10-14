@@ -1,7 +1,7 @@
 /*
 Padded box
 
-Adds padding to a container element. The `.box--dark-gray-1` class is used to 
+Adds padding to a container element. The `.box--dark-gray-1` class is used to
 differentiate the box from the background. You will usually want to use a padded
 box on a container with a background color.
 
@@ -18,7 +18,7 @@ Style guide: layout.padded
 */
 .padded-box {
   padding: 2em;
-  
+
   &.padded-box--one {
     padding: 1em;
   }
@@ -28,6 +28,10 @@ Style guide: layout.padded
   }
 
   &.padded-box--four {
-    padding: 3em;
+    padding: 4em;
+  }
+
+  &.padded-box--border-bottom {
+    border-bottom: 1px solid $accent-dividers;
   }
 }
