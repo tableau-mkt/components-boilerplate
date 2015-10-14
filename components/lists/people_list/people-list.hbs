@@ -1,0 +1,39 @@
+{{#with people }}
+<h3 class="heading--x-small">{{heading}}</h3>
+<ul class="people-list">
+  {{#each list}}
+    <li class="people-list__person">
+
+      {{!-- Person photo / avatar --}}
+      {{#if image}}
+      <div class="person__image">
+        <img src="{{image}}" alt="{{name}}">
+      </div>
+      {{/if }}
+
+      {{!-- Wrapper for details about a person --}}
+      <div class="person__info">
+        {{!-- Person name --}}
+        {{#if name}}
+          <h4 class="person__name">{{name}}</h4>
+        {{/if }}
+
+        {{!-- Person description / profile --}}
+        {{#if description}}
+          <div class="person__description">{{description}}</div>
+        {{/if }}
+
+        {{!-- Social links --}}
+        {{#if social}}
+          <div class="person__social">
+          {{#each social}}
+            <a class="link--social link--social-{{name}}" href="{{url}}"><i class="icon icon-social-{{name}}"></i></a>
+          {{/each }}
+          </div>
+        {{/if }}
+      </div>
+
+    </li>
+  {{/each}}
+</ul>
+{{/with }}

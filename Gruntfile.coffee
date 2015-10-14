@@ -5,6 +5,13 @@ module.exports = (grunt) ->
       options:
         livereload: 1234
 
+      webfont:
+        files: [
+          'assets/svg/*.svg',
+          'components/{,**/}*.svg'
+        ]
+        tasks: ['webfont:icons']
+
       sass:
         files: [
           'components/{,**/}*.{scss,sass}'
@@ -104,6 +111,22 @@ module.exports = (grunt) ->
         src: 'components/**/*.{jpg,gif,png}'
         dest: 'build/images'
 
+    webfont:
+      icons:
+        src: [
+          'assets/svg/*.svg',
+          'components/{,**/}*.svg'
+        ]
+        dest: 'build/fonts'
+        destCss: 'components/media/icons'
+        htmlDemo: true
+        options:
+          font: 'tableau-icons'
+          stylesheet: 'scss'
+          template: 'components/media/icons/tableau-icons.template.css'
+          relativeFontPath: '../fonts'
+          fontFilename: 'tableau-icons-{hash}'
+
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
@@ -112,6 +135,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
+    'webfont:icons'
     'sass_globbing'
     'sass:dist'
     'shell:kss'

@@ -1,7 +1,7 @@
 /*
-Color Palette 
+Color Palette
 
-The Tableau brand collor pallet
+The Tableau brand color pallet
 
 Style guide: colors
 */
@@ -27,7 +27,7 @@ Colors used for typography.
 
 Markup: colors-text.hbs
 
-Nocode: 
+Nocode:
 true
 
 Bgcolor: #F7F9FB
@@ -51,6 +51,8 @@ $text-highlight: #53bd92;     // Highlight Text - rgb(83, 189, 146)
 $text-mission-1: #316cc8;     // Mission - rgb(13, 129, 190)
 $text-mission-2: #7dcdf1;     // Mission - rgb(125, 205, 241)
 $text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
+$text-form-label: #0076A3;    // Form label
+$text-form-error: #c72035;    // Form error state
 
 
 /*
@@ -173,7 +175,7 @@ $white: #fff;
 $black: #000;
 
 
-/* 
+/*
 Text colors mapping in form of:
   modifier-name: $text-color
 */
@@ -202,7 +204,7 @@ $text-colors: (
 );
 
 
-/* 
+/*
 Button colors mapping in the form of:
   modifier-name: ($base-color, $hover-color)
 */
@@ -218,7 +220,7 @@ $button-colors: (
 );
 
 
-/* 
+/*
 Background colors mapping in the form of:
   mdifier-name: ($bg-color, $copy-color, $heading-color)
 */
@@ -243,7 +245,7 @@ $background-colors: (
 );
 
 
-/* 
+/*
 Product colors mapping in the form of:
   mdifier-name: $color
 */
@@ -259,3 +261,4 @@ $product-colors: (
 
 // Misc colors
 $error: #DD1E06;
+$form-border: $accent-dividers;

@@ -1,0 +1,22 @@
+{{#with agenda }}
+<h3 class="heading--x-small">{{heading}}</h3>
+<ul class="agenda-list">
+  {{#each list}}
+    <li class="agenda-list__item">
+      {{!-- Time --}}
+      {{#if time}}
+      <time class="agenda__time">
+        {{time}}
+      </time>
+      {{/if }}
+
+      {{!-- Description --}}
+      {{#if description}}
+      <div class="agenda__description">
+        {{description}}
+      </div>
+      {{/if }}
+    </li>
+  {{/each}}
+</ul>
+{{/with }}

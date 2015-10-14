@@ -1,3 +1,23 @@
-{{> "form_input" }}
-<br><br>
-<input type="submit" value="Submit" />
+{{#with form}}
+<div class="form__wrapper">
+  <div class="form__intro">
+    <h3 class="form__intro__heading">{{heading}}</h3>
+    <div class="form__intro__description">
+      {{{description}}}
+    </div>
+  </div>
+
+  {{#each fields.list}}
+    <div class="form-field__wrapper has-float-label">
+    <label class="form-field__label" for="{{name}}">{{label}}</label>
+
+      <input class="form-field" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
+
+    </div>
+  {{/each}}
+
+  <div class="form__actions">
+    {{> form_button}}
+  </div>
+</div>
+{{/with}}

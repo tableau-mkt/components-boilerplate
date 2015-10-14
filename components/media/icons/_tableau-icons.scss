@@ -1,0 +1,107 @@
+/*
+Icons
+
+Custom icon webfont.
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon-people - people icon
+.icon-play-circle-small - play-circle-small icon
+.icon-search - search icon
+.icon-social-facebook - social-facebook icon
+.icon-social-gplus - social-gplus icon
+.icon-social-instagram - social-instagram icon
+.icon-social-linkedin - social-linkedin icon
+.icon-social-rss - social-rss icon
+.icon-social-twitter - social-twitter icon
+.icon-social-youtube - social-youtube icon
+.icon-tableau-logo - tableau-logo icon
+
+Style Guide: media.icons
+*/
+
+
+@font-face {
+  font-family:"tableau-icons";
+  src:url("../fonts/tableau-icons-8e209291a42e7ef1b781ec7f869866e5.eot?8e209291a42e7ef1b781ec7f869866e5");
+  src:url("../fonts/tableau-icons-8e209291a42e7ef1b781ec7f869866e5.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-8e209291a42e7ef1b781ec7f869866e5.woff?8e209291a42e7ef1b781ec7f869866e5") format("woff"),
+		url("../fonts/tableau-icons-8e209291a42e7ef1b781ec7f869866e5.ttf?8e209291a42e7ef1b781ec7f869866e5") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+.icon {
+  font-family:"tableau-icons";
+  display:inline-block;
+  vertical-align:middle;
+  line-height:1;
+  font-weight:normal;
+  font-style:normal;
+  speak:none;
+  text-decoration:inherit;
+  text-transform:none;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+
+// Icons
+
+
+.icon-people:before {
+  content:"\f101";
+}
+
+
+.icon-play-circle-small:before {
+  content:"\f102";
+}
+
+
+.icon-search:before {
+  content:"\f103";
+}
+
+
+.icon-social-facebook:before {
+  content:"\f104";
+}
+
+
+.icon-social-gplus:before {
+  content:"\f105";
+}
+
+
+.icon-social-instagram:before {
+  content:"\f106";
+}
+
+
+.icon-social-linkedin:before {
+  content:"\f107";
+}
+
+
+.icon-social-rss:before {
+  content:"\f108";
+}
+
+
+.icon-social-twitter:before {
+  content:"\f109";
+}
+
+
+.icon-social-youtube:before {
+  content:"\f10a";
+}
+
+
+.icon-tableau-logo:before {
+  content:"\f10b";
+}

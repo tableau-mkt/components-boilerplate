@@ -1,4 +1,4 @@
-/* 
+/*
 Shameful hacks that should be fixed
 */
 
@@ -57,4 +57,107 @@ Shameful hacks that should be fixed
 /* fix for slideshow captions on Desktop. Used in viz-slideshow component */
 .shame__margin-top {
   margin-top: 1em;
+}
+
+
+
+
+/*
+Image based icons
+
+@TODO get design to make SVGs and migrate to iconfont generation.
+*/
+
+.icon--product-mobile,
+.icon--product-public,
+.icon--product-reader,
+.icon--database,
+.icon--diagram,
+.icon--management,
+.icon--statistics,
+.icon--arrow-long,
+.icon--arrow-long-down,
+.icon--expand,
+.icon--collapse,
+.icon--slideshow-prev-light,
+.icon--slideshow-next-light,
+.icon--slideshow-prev-dark,
+.icon--slideshow-next-dark,
+.icon--magnifying-glass {
+  display: inline-block;
+}
+
+.icon--product-mobile:before {
+  content: url(../images/icons/icon-product-mobile.png);
+}
+.icon--product-public:before {
+  content: url(../images/icons/icon-product-public.png);
+}
+.icon--product-reader:before {
+  content: url(../images/icons/icon-product-reader.png);
+}
+.icon--product-mobile:before,
+.icon--product-public:before,
+.icon--product-reader:before {
+  display: inline-block;
+  height: 40px;
+}
+
+.icon--database:before {
+  content: url(../images/icons/database.png);
+}
+.icon--diagram:before {
+  content: url(../images/icons/diagram.png);
+}
+.icon--management:before {
+  content: url(../images/icons/management.png);
+}
+.icon--statistics:before {
+  content: url(../images/icons/statistics.png);
+}
+
+.icon--arrow-long:before {
+  content: url(../images/icons/icon-arrow-long.png);
+}
+.icon--arrow-long-down:before {
+  content: url(../images/icons/icon-arrow-long-down.png);
+}
+
+.icon--expand:before {
+  content: url(../images/icons/expand.png);
+}
+.icon--collapse:before {
+  content: url(../images/icons/collapse.png);
+}
+
+.icon--slideshow-prev-light:before {
+  content: url('../images/icons/slideshow-prev-light.png');
+}
+.icon--slideshow-next-light:before {
+  content: url('../images/icons/slideshow-next-light.png');
+}
+.icon--slideshow-prev-dark:before {
+  content: url('../images/icons/slideshow-prev-dark.png');
+}
+.icon--slideshow-next-dark:before {
+  content: url('../images/icons/slideshow-next-dark.png');
+}
+
+.icon--magnifying-glass:before {
+  content: url('../images/icons/icon-magnifying-glass.png');
+}
+
+
+.icon--ecosystem-style {
+  border: 5px solid #DEDEDE;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  font-size: 7.5em;
+  background: #ededed;
+
+  @include breakpoint($tablet-only) {
+    zoom: 0.7;
+  }
 }

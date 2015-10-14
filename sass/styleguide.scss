@@ -1,5 +1,11 @@
-// Keep the component styles isolated to the preview container.
+// Specifically for the styleguide, wrap the tableau-icon font-face declaration,
+// because it doesn't work. At this time, the styles are essentially added twice
+// because we glob them in styles.scss imports. When this issue is updated:
+// https://github.com/DennisBecker/grunt-sass-globbing/issues/19, we should look
+// at fixing this. Not a big deal at the moment.
+@import "../components/media/icons/tableau-icons";
+
+// Otherwise, keep the component styles isolated to the preview container.
 body.kss .kss-example-preview {
   @import 'style';
-
 }

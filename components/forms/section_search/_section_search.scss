@@ -5,7 +5,7 @@ Section-level search form used within a specific section to search only content
 of that section. Displays autocomplete list and submits to global search results
 page filtered down to the corresponding section.
 
-@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in 
+@TODO add dropdonw autocomplete handling/styles as well as the clear "X" in
 place of magnifying glass icon when text is in the field.
 
 Markup: section-search.hbs
@@ -22,13 +22,14 @@ Style guide: forms.section-search
   background: $bg-light-gray-1;
   box-shadow: 2px 2px 3px $accent-dividers inset;
   border-radius: 50px;
-  
+
   input[type="search"] {
     width: 100%;
     margin: 0;
     padding: 0.9em 64px 0.9em 1.3em;
     background: none;
     outline: 0;
+    border: 0;
     font-size: 1.5em;
     color: $text-medium-body;
     font-family: $text--merriweather-light;
