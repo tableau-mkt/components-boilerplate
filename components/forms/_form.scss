@@ -83,11 +83,11 @@ textarea,
   font-size: $base-font-size;
   outline: none;
   text-align: left;
-  width: 100%;
 
-  @include breakpoint($mobile-only) {
-    width: 100%;
-  }
+  // @TODO see if we even need this.
+  // @include breakpoint($mobile-only) {
+  //   width: 100%;
+  // }
 
   &:hover {
     border-color: $gray;
@@ -203,30 +203,33 @@ Style guide: forms.actions
 //   }
 // }
 
-input[type="submit"] {
-  @extend .cta;
-  @extend .cta--secondary;
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.form__wrapper {
+  input[type="submit"] {
+    @extend .cta;
+    @extend .cta--secondary;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
-  @include breakpoint($tablet-min) {
-    width: auto;
-    min-width: 60%;
-  }
+    @include breakpoint($tablet-min) {
+      width: auto;
+      min-width: 60%;
+    }
 
-  @include breakpoint($desktop-min) {
-    min-width: 40%;
-  }
+    @include breakpoint($desktop-min) {
+      min-width: 40%;
+    }
 
 
-  &.is-submitting,
-  &.is-submitted,
-  &.is-errored {
-    cursor: inherit;
+    &.is-submitting,
+    &.is-submitted,
+    &.is-errored {
+      cursor: inherit;
+    }
   }
 }
+
 
 
 /*
