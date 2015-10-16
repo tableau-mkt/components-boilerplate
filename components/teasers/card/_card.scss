@@ -144,7 +144,7 @@ Style Guide: teasers.card-quote
 */
 
 .card.card--quote {
-  @extend .box--data-sources;
+  @extend .bg--data-sources;
 
   .card__quote-wrapper {
     position: relative;

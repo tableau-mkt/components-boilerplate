@@ -1,0 +1,55 @@
+/* 
+Background Colors
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for 
+legibility. 
+
+Markup: bg_color.hbs
+
+Nodefault: true
+
+Nocode: true
+
+Weight: 2
+
+.bg--white - White background color. - (#fff)
+.bg--light-gray-1 - Light Gray 1 background color - (#fafafa)
+.bg--light-gray-2 - Light Gray 2 background color - (#ebebeb)
+.bg--dark-gray-1 - Dk Gray 1 background color - (#464646)
+.bg--dark-gray-2 - Dk Gray 2 background color - (#333)
+.bg--dark-gray-3 - Dk Gray 3 background color - (#1b1b1b)
+.bg--about-featured - About/Feat background color - (#457387)
+.bg--data-sources - Data Sources background color - (#2e4c65)
+.bg--desktop - Desktop product background color - (#23529c)
+.bg--server - Server product background color - (#7fa9bb)
+.bg--online - Online product background color - (#58a3b9)
+.bg--public - Public product background color - (#324E7A)
+.bg--reader - Reader product background color - (#B28CCF)
+.bg--mobile - Mobile product background color - (#DB8E6A)
+.bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
+.bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
+
+Style guide: layout.colored
+*/
+
+/* Create a class for each background color */
+@each $name, $colors in $background-colors {
+  .bg--#{"" + $name} {
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
+
+    h1, .heading--h1,
+    h2, .heading--h2,
+    h3, .heading--h3,
+    h4, .heading--h4,
+    h5, .heading--h5,
+    h6, .heading--h6 {
+      color: nth($colors, 3);
+
+      a {
+        color: nth($colors, 3);
+      }
+    }
+  }
+}

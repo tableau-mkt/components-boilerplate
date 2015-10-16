@@ -3,7 +3,7 @@ Formatted Text
 
 Markup: formatted.hbs
 
-Weight: 6
+Weight: 30
 
 .text--bold - Bold text for emphasis. Same as `<strong>`
 .text--light - Light text. Default for non-headings
@@ -82,7 +82,7 @@ Markup: colored-text.hbs
 
 Bgcolor: #F7F9FB
 
-Weight: 7
+Weight: 32
 
 .text--negative - Negative Text colored text. `#fff;`
 .text--light-body - Negative/light Body colored text. `#bbb`
@@ -112,6 +112,19 @@ Style guide: typography.colors
 @each $name, $color in $text-colors {
   .text--#{"" + $name} {
     color: $color !important;
+
+    h1, .heading--h1,
+    h2, .heading--h2,
+    h3, .heading--h3,
+    h4, .heading--h4,
+    h5, .heading--h5,
+    h6, .heading--h6 {
+      color: $color;
+      
+      a {
+        color: $color;
+      }
+    }
   }
 }
 
@@ -125,7 +138,7 @@ Markup: context-headings.hbs
 
 Nodefault: true
 
-Weight: 5
+Weight: 31
 
 .text--large-copy - Large Copy
 .text--sub-nav - Sub Nav Mission

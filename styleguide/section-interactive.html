@@ -135,6 +135,11 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
+                  <a href="section-interactive.html#kssref-interactive-sticky">
+                    Sticky elements
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
                   <a href="section-interactive.html#kssref-interactive-tabs">
                     Content Tabs
                   </a>
@@ -357,7 +362,7 @@ content.</p>
   </p>
 </div>
 
-<div class="flyout__content box--data-sources" id="flyout-container">
+<div class="flyout__content bg--data-sources" id="flyout-container">
   <div class="flyout__close-wrapper">
     <a href="#" class="link flyout__close-link" href="#">Close &#9587;</a>
   </div>
@@ -381,7 +386,7 @@ content.</p>
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;flyout__content box--data-sources&quot; id=&quot;flyout-container&quot;&gt;
+&lt;div class=&quot;flyout__content bg--data-sources&quot; id=&quot;flyout-container&quot;&gt;
   &lt;div class=&quot;flyout__close-wrapper&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;link flyout__close-link&quot; href=&quot;#&quot;&gt;Close &amp;#9587;&lt;/a&gt;
   &lt;/div&gt;
@@ -756,7 +761,7 @@ attribute that matches the <code>data-reveal-target</code>.</p>
               <div class="kss-example kss-example__default">
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <div class="box--desktop">
+                    <div class="bg--desktop">
   <input type="search" class="search-highlight" data-content="test-content" data-highlight-class="text--bold"/>
 
   <div id="test-content">
@@ -806,7 +811,7 @@ attribute that matches the <code>data-reveal-target</code>.</p>
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;box--desktop&quot;&gt;
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;bg--desktop&quot;&gt;
   &lt;input type=&quot;search&quot; class=&quot;search-highlight&quot; data-content=&quot;test-content&quot; data-highlight-class=&quot;text--bold&quot;/&gt;
 
   &lt;div id=&quot;test-content&quot;&gt;
@@ -921,6 +926,82 @@ attribute that matches the <code>data-reveal-target</code>.</p>
               </div>
 
             </section>
+            <section id="kssref-interactive-sticky" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-interactive-sticky"> -->
+                Sticky elements
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Uses waypoints.js and the sticky.js shortcut to make elements on the page stick
+once they get scrolled to and are about to go out of view.</p>
+
+            </div>
+          </div>
+
+            <h4>Examples</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <h6>Default styling</h6>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="grid--3">
+  <div class="sticky [modifier class]">
+    <div class="bg--green padded-box padded-box--one">
+      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
+    </div>
+  </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Doesn&#39;t add any spacing between the menu and the stuck element</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.sticky--nospacing</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <div class="grid--3">
+  <div class="sticky sticky--nospacing">
+    <div class="bg--green padded-box padded-box--one">
+      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
+    </div>
+  </div>
+</div>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;grid--3&quot;&gt;
+  &lt;div class=&quot;sticky [modifier class]&quot;&gt;
+    &lt;div class=&quot;bg--green padded-box padded-box--one&quot;&gt;
+      &lt;p&gt;Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
             <section id="kssref-interactive-tabs" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
@@ -955,17 +1036,17 @@ attribute that matches the <code>data-reveal-target</code>.</p>
 </ul>
 
   <div class="tabs__tab-content active" id="tab-one">
-    <div class="clearfix box--mobile padded-box">
+    <div class="clearfix bg--mobile padded-box">
       <h3>First Tab</h3><p>Accusamus recusandae consequat, velit hic perferendis consectetuer excepteur dictum nullam! Aute laoreet, ipsum sunt id asperiores quis accusamus lectus a, deleniti lacus nisl error consequatur optio minim rhoncus aptent do, mollitia dapibus pede, natoque integer pharetra iusto blandit ad! Elementum lacus voluptatibus. Cupidatat aliqua scelerisque! Cras at aliqua, montes ullamcorper.</p><p>Quod primis placeat praesent cupidatat facilisi quidem culpa, lacus nemo, aliquid, per integer nulla fugit venenatis fugiat laboriosam posuere deleniti illo mattis, aptent mus luctus diamlorem molestie ligula! Autem dolore? Suscipit consectetuer pede rhoncus? Voluptas voluptate veritatis id? Rhoncus congue quos repellendus doloribus magni semper, tempora etiam vulputate cupidatat scelerisque.</p>
     </div>
   </div>
   <div class="tabs__tab-content" id="tab-two">
-    <div class="clearfix box--dark-gray-3 padded-box">
+    <div class="clearfix bg--dark-gray-3 padded-box">
       <h3>Second Tab</h3><p>Delectus debitis nonummy erat laudantium, temporibus dis autem dis impedit anim cumque! Ridiculus pharetra eros laborum, tenetur, sint, felis. Lacus lectus penatibus, eiusmod? Praesentium eaque facilisis vehicula odio. Doloribus tempore! Fermentum pellentesque, magnam exercitationem, netus, facilisis officiis cupidatat deserunt optio. Quia deleniti, est accumsan bibendum taciti ipsum ullamco, mollit curabitur.</p>
     </div>
   </div>
   <div class="tabs__tab-content" id="tab-three">
-    <div class="clearfix box--desktop padded-box">
+    <div class="clearfix bg--desktop padded-box">
       <h3>Third Tab</h3><p>Et vestibulum harum eleifend per montes, suspendisse urna dictum, aperiam suspendisse, interdum corporis, atque est nostrud? Totam? Posuere tincidunt sit. Faucibus illo distinctio ad? Magni, labore aliqua sequi ullam faucibus, laoreet suspendisse ullamco condimentum ad, facilisi, vero unde lorem aenean euismod officia. Facilisi reiciendis vivamus mi eleifend dolor? Natoque consequuntur.</p><p>Voluptate platea malesuada illo omnis erat in esse? Veniam pede, dolore, dicta quaerat necessitatibus. Eleifend illo. Class. Morbi metus consequatur, animi necessitatibus esse lacus, nonummy a, nascetur et, lacinia aliquet magnam iusto ultrices, facilisis. Pariatur architecto, quas delectus litora autem? Molestie? Tristique, harum exercitation nemo litora? Natus erat, dapibus adipiscing.</p><p>Lacus nulla recusandae proident, vivamus aliquip atque auctor aperiam? Distinctio class sapiente nec dignissimos provident placerat curae officia donec consectetuer tortor? Exercitationem. Aliquip incidunt. Animi non odio impedit, senectus vestibulum, magnam tincidunt? Cillum fringilla quisque sapien! Fugiat blanditiis, omnis sunt, mauris tempus dignissim eros! Cubilia integer adipiscing doloribus, quia iaculis.</p>
     </div>
   </div>
@@ -991,17 +1072,17 @@ attribute that matches the <code>data-reveal-target</code>.</p>
 &lt;/ul&gt;
 
   &lt;div class=&quot;tabs__tab-content active&quot; id=&quot;tab-one&quot;&gt;
-    &lt;div class=&quot;clearfix box--mobile padded-box&quot;&gt;
+    &lt;div class=&quot;clearfix bg--mobile padded-box&quot;&gt;
       &lt;h3&gt;First Tab&lt;/h3&gt;&lt;p&gt;Accusamus recusandae consequat, velit hic perferendis consectetuer excepteur dictum nullam! Aute laoreet, ipsum sunt id asperiores quis accusamus lectus a, deleniti lacus nisl error consequatur optio minim rhoncus aptent do, mollitia dapibus pede, natoque integer pharetra iusto blandit ad! Elementum lacus voluptatibus. Cupidatat aliqua scelerisque! Cras at aliqua, montes ullamcorper.&lt;/p&gt;&lt;p&gt;Quod primis placeat praesent cupidatat facilisi quidem culpa, lacus nemo, aliquid, per integer nulla fugit venenatis fugiat laboriosam posuere deleniti illo mattis, aptent mus luctus diamlorem molestie ligula! Autem dolore? Suscipit consectetuer pede rhoncus? Voluptas voluptate veritatis id? Rhoncus congue quos repellendus doloribus magni semper, tempora etiam vulputate cupidatat scelerisque.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;tabs__tab-content&quot; id=&quot;tab-two&quot;&gt;
-    &lt;div class=&quot;clearfix box--dark-gray-3 padded-box&quot;&gt;
+    &lt;div class=&quot;clearfix bg--dark-gray-3 padded-box&quot;&gt;
       &lt;h3&gt;Second Tab&lt;/h3&gt;&lt;p&gt;Delectus debitis nonummy erat laudantium, temporibus dis autem dis impedit anim cumque! Ridiculus pharetra eros laborum, tenetur, sint, felis. Lacus lectus penatibus, eiusmod? Praesentium eaque facilisis vehicula odio. Doloribus tempore! Fermentum pellentesque, magnam exercitationem, netus, facilisis officiis cupidatat deserunt optio. Quia deleniti, est accumsan bibendum taciti ipsum ullamco, mollit curabitur.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;tabs__tab-content&quot; id=&quot;tab-three&quot;&gt;
-    &lt;div class=&quot;clearfix box--desktop padded-box&quot;&gt;
+    &lt;div class=&quot;clearfix bg--desktop padded-box&quot;&gt;
       &lt;h3&gt;Third Tab&lt;/h3&gt;&lt;p&gt;Et vestibulum harum eleifend per montes, suspendisse urna dictum, aperiam suspendisse, interdum corporis, atque est nostrud? Totam? Posuere tincidunt sit. Faucibus illo distinctio ad? Magni, labore aliqua sequi ullam faucibus, laoreet suspendisse ullamco condimentum ad, facilisi, vero unde lorem aenean euismod officia. Facilisi reiciendis vivamus mi eleifend dolor? Natoque consequuntur.&lt;/p&gt;&lt;p&gt;Voluptate platea malesuada illo omnis erat in esse? Veniam pede, dolore, dicta quaerat necessitatibus. Eleifend illo. Class. Morbi metus consequatur, animi necessitatibus esse lacus, nonummy a, nascetur et, lacinia aliquet magnam iusto ultrices, facilisis. Pariatur architecto, quas delectus litora autem? Molestie? Tristique, harum exercitation nemo litora? Natus erat, dapibus adipiscing.&lt;/p&gt;&lt;p&gt;Lacus nulla recusandae proident, vivamus aliquip atque auctor aperiam? Distinctio class sapiente nec dignissimos provident placerat curae officia donec consectetuer tortor? Exercitationem. Aliquip incidunt. Animi non odio impedit, senectus vestibulum, magnam tincidunt? Cillum fringilla quisque sapien! Fugiat blanditiis, omnis sunt, mauris tempus dignissim eros! Cubilia integer adipiscing doloribus, quia iaculis.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
