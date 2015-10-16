@@ -51,6 +51,8 @@ Style guide: navigation.global
     .global-nav__primary-menu {
 
       ul {
+        @extend %plain-list;
+        @extend %inline-list;
         margin: 0.8em 0 0 3em;
       }
       
@@ -112,6 +114,7 @@ Style guide: navigation.global
       height: 100%;
       transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
 
+      input[type='text'],
       input[type='search'] {
         position: absolute;
         right: 0;
