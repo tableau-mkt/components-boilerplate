@@ -5,17 +5,14 @@
 .field--name-field-agenda,
 .field--name-field-sponsors {
   @extend .detail-field
-}
 
-  .group-event-details .field-label,
-  .field--name-datetime-range .field-label,
-  .field--name-field-agenda .field-label,
-  .field--name-field-sponsors .field-label {
+  .field-label {
     @extend .detail-field__label;
   }
+}
 
-  /* "Sidebar" meta details. */
-  .group-event-details,
-  .field--name-datetime-range {
-    @extend .detail-field--secondary;
-  }
+// "Sidebar" meta details.
+.group-event-details,
+.field--name-datetime-range {
+  @extend .detail-field--secondary;
+}
