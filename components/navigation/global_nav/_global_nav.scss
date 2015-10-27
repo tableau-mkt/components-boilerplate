@@ -16,7 +16,7 @@ Style guide: navigation.global
 .global-nav__top {
   position: relative;
   height: 100px;
-  padding: 2em 0;
+  padding: em(28px) 0;
   background: #fff;
  
   .global-nav__logo {
@@ -49,11 +49,16 @@ Style guide: navigation.global
   
 
     .global-nav__primary-menu {
+      @extend .text--body-small;
 
       ul {
-        @extend %plain-list;
-        @extend %inline-list;
         margin: 0.8em 0 0 3em;
+        padding: 0;
+        list-style: none;
+        
+        li {
+          display: inline-block;
+        }
       }
       
       li a {
@@ -323,6 +328,11 @@ Style guide: navigation.global
     .global-nav__drawer__inner,
     .global-nav__drawer__secondary {
       min-height: 275px;
+    }
+
+    .sub-nav__item__description,
+    .global-nav__drawer__link-list {
+      @extend .text--body-small;
     }
 
     .sub-nav__item__link {

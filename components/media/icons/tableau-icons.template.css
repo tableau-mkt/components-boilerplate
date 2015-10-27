@@ -7,7 +7,7 @@ Nodefault: true
 
 Markup: icon.hbs
 
-<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>.<%= classPrefix %><%= glyphs[glyphIdx] %> - <%= glyphs[glyphIdx] %> icon
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>.<%= classPrefix %>-<%= glyphs[glyphIdx] %> - <%= glyphs[glyphIdx] %> icon
 <% } %>
 Style Guide: media.icons
 */
@@ -47,7 +47,7 @@ Style Guide: media.icons
 
 <% if (iconsStyles) { %>/* Icons */<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
 <% if (stylesheet === 'less') { %>
-.<%= mixinPrefix %><%= glyphs[glyphIdx] %>() {
+.<%= mixinPrefix %>-<%= glyphs[glyphIdx] %>() {
   &:before {
     content:"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
   }
@@ -55,13 +55,13 @@ Style Guide: media.icons
   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x<%= codepoints[glyphIdx] %>;');
   <% } %>
 }
-.<%= classPrefix %><%= glyphs[glyphIdx] %>{
-  .<%= mixinPrefix %><%= glyphs[glyphIdx] %>();
+.<%= classPrefix %>-<%= glyphs[glyphIdx] %>{
+  .<%= mixinPrefix %>-<%= glyphs[glyphIdx] %>();
 }<% } else { %>
-<% if (ie7) {%>.<%= classPrefix %><%= glyphs[glyphIdx] %> {
+<% if (ie7) {%>.<%= classPrefix %>-<%= glyphs[glyphIdx] %> {
   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x<%= codepoints[glyphIdx] %>;');
 }
 <% } %>
-.<%= classPrefix %><%= glyphs[glyphIdx] %>:before {
+.<%= classPrefix %>-<%= glyphs[glyphIdx] %>:before {
   content:"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
 }<% } } } %>

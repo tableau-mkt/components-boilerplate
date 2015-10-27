@@ -194,17 +194,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .global-nav__top .global-nav__primary-menu ul, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .global-nav__top .global-nav__primary-menu ul li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .global-nav__top .global-nav__primary-menu ul li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -483,17 +483,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .global-nav__top .global-nav__primary-menu ul, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .global-nav__top .global-nav__primary-menu ul li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .global-nav__top .global-nav__primary-menu ul li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -941,7 +941,7 @@ Style guide: buttons-links.data-source
 .data-source-link .data-source-link__number {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 3.5714285714em;
+  font-size: 3.125em;
   line-height: 66px;
 }
 
@@ -1087,7 +1087,7 @@ Weight: 20
 Style guide: buttons-links.link-formatted
 */
 .link, .video-chapters__toggle-wrapper .video-chapters__toggle {
-  font-size: 0.7857142857em;
+  font-size: 0.6875em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
@@ -1199,7 +1199,7 @@ textarea,
   padding: 1.7em 0.5em 0.3em;
   background: #fff;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
   text-align: left;
 }
@@ -1735,7 +1735,7 @@ Style guide: interactive.reveal
   height: 45px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
   color: #fff;
   text-align: center;
   font-weight: bold;
@@ -1809,6 +1809,52 @@ Style guide: interactive.social-share
 
 .social-share__wrapper .social-share__widget:first-child {
   margin-left: 0;
+}
+
+/*
+Sticky elements
+
+Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
+once they get scrolled to and are about to go out of view.
+
+Markup: sticky.hbs
+
+.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
+
+Style guide: interactive.sticky
+*/
+.stuck {
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 961px) {
+  .sticky--desktop.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .sticky--tablet.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .sticky--mobile.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
 }
 
 /*
@@ -4279,7 +4325,7 @@ Style guide: media.video-chapters
 .video-chapters__chapter:before {
   position: absolute;
   display: inline-block;
-  font-size: 0.5714285714em;
+  font-size: 0.5em;
   left: -1.6em;
   top: 0.6em;
   content: '\25B6';
@@ -4313,20 +4359,23 @@ Nodefault: true
 
 Markup: icon.hbs
 
-.icon-people - people icon
-.icon-search - search icon
-.icon-social-facebook - social-facebook icon
-.icon-social-gplus - social-gplus icon
-.icon-social-instagram - social-instagram icon
-.icon-social-linkedin - social-linkedin icon
-.icon-social-twitter - social-twitter icon
+.icon--people - people icon
+.icon--search - search icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-twitter - social-twitter icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--laptop - laptop icon
+.icon--people - people icon
 
 Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.eot?4245026e7c61f54d469377acf784e4a6");
-  src: url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.woff?4245026e7c61f54d469377acf784e4a6") format("woff"), url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.ttf?4245026e7c61f54d469377acf784e4a6") format("truetype");
+  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?2f4737f1e7ee7f92a62ca2bb1afbf5ff");
+  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.woff?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("woff"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.ttf?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -4346,32 +4395,44 @@ Style Guide: media.icons
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-people:before {
+.icon--people:before {
   content: "\f101";
 }
 
-.icon-search:before {
+.icon--search:before {
   content: "\f102";
 }
 
-.icon-social-facebook:before {
+.icon--social-facebook:before {
   content: "\f103";
 }
 
-.icon-social-gplus:before {
+.icon--social-gplus:before {
   content: "\f104";
 }
 
-.icon-social-instagram:before {
+.icon--social-instagram:before {
   content: "\f105";
 }
 
-.icon-social-linkedin:before {
+.icon--social-linkedin:before {
   content: "\f106";
 }
 
-.icon-social-twitter:before {
+.icon--social-twitter:before {
   content: "\f107";
+}
+
+.icon--cursor-cloud:before {
+  content: "\f108";
+}
+
+.icon--laptop:before {
+  content: "\f109";
+}
+
+.icon--people:before {
+  content: "\f101";
 }
 
 /*
@@ -4543,7 +4604,7 @@ Style guide: navigation.global
 .global-nav__top {
   position: relative;
   height: 100px;
-  padding: 2em 0;
+  padding: 1.75em 0;
   background: #fff;
 }
 
@@ -4578,6 +4639,11 @@ Style guide: navigation.global
   }
   .global-nav__top .global-nav__primary-menu ul {
     margin: 0.8em 0 0 3em;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__top .global-nav__primary-menu ul li {
+    display: inline-block;
   }
   .global-nav__top .global-nav__primary-menu li a {
     position: relative;
@@ -4762,7 +4828,7 @@ Style guide: navigation.global
     border-bottom: 1px solid #ddd;
     color: #212535;
     font-family: "Benton Sans Light", Helvetica, sans-serif;
-    font-size: 1.7142857143em;
+    font-size: 1.5em;
     color: #333;
   }
   .global-nav__top .global-nav__primary-menu li:last-child a {
@@ -5459,9 +5525,11 @@ Image based icons
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  line-height: 200px;
   display: inline-block;
   font-size: 7.5em;
   background: #ededed;
+  text-decoration: none;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -5522,7 +5590,7 @@ Style Guide: teasers.card
   max-height: 4.8em;
   overflow: hidden;
   margin: 1em 0;
-  font-size: 1.43em;
+  font-size: 1.25em;
   line-height: 1.6;
 }
 
@@ -5570,7 +5638,7 @@ Style Guide: teasers.card-wide
 .card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote {
   max-height: 3.2em;
   margin: 0.66em 0;
-  font-size: 2.14em;
+  font-size: 1.875em;
 }
 
 @media (min-width: 640px) {
@@ -5626,7 +5694,7 @@ Style Guide: teasers.card-quote
   height: 0;
   margin-top: 1.5em;
   padding-bottom: 140%;
-  font-size: 1.8571428571em;
+  font-size: 1.625em;
   color: #fff;
 }
 
@@ -5787,36 +5855,42 @@ Main body copy for longer chunks of content in the body of a page.
 
 Markup: body-copy.hbs
 
+Nodefault: true
+
 Weight: 10
 
-.text--body-large - Large body copy (15px)
-.text--body-medium - Medium body copy (14px)
-.text--body-small - Small body copy (12px)
+.text--body-base - Default base body copy (16px/30)
+.text--body-small - Small body copy (14px/26)
+.text--body-medium - Medium body copy (20px/35)
+.text--body-large - Large body copy (30px/46)
 
 Style guide: typography.body-copy
  */
 body,
-.kss-example-preview-wrapper,
-.text--body-large,
-.text--body-medium,
-.people-list__person .person__name,
-.text--body-small {
+.kss-example-preview-wrapper {
   font-family: "Merriweather", serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  line-height: 1.86;
+  line-height: 1.88;
   -webkit-font-smoothing: antialiased;
 }
 
-.text--body-large {
-  font-size: 1.0714285714em;
+.text--body-small, .global-footer .global-footer__first, .global-nav__top .global-nav__primary-menu, .global-nav__drawers .sub-nav__item__description,
+.global-nav__drawers .global-nav__drawer__link-list, .card.card--summary .card__summary, .teaser-item .teaser-item__description {
+  font-size: 0.875em;
+  line-height: 1.86;
 }
 
-.text--body-small {
-  font-size: 0.8571428571em;
-  line-height: 1.66;
+.text--body-medium, .people-list__person .person__name {
+  font-size: 1.25em;
+  line-height: 1.75;
+}
+
+.text--body-large {
+  font-size: 1.875em;
+  line-height: 1.53;
 }
 
 /*
@@ -5934,23 +6008,23 @@ em,
 }
 
 .text--huge {
-  font-size: 2.5714285714em;
+  font-size: 2.25em;
 }
 
 .text--big {
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
 }
 
 .text--base-size {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .text--small {
-  font-size: 0.8571428571em;
+  font-size: 0.75em;
 }
 
 .text--tiny {
-  font-size: 0.7142857143em;
+  font-size: 0.625em;
 }
 
 .text--lineheight-zero {
@@ -6454,26 +6528,26 @@ Style guide: typography.other
 .text--large-copy, .global-nav__top .global-nav__search input[type='text'],
 .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete, .topic-nav .topic-nav__tabs {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
   color: #333;
 }
 
 .text--sub-nav {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.5714285714em;
+  font-size: 1.375em;
   color: #000;
 }
 
 .text--dropdown {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.1428571429em;
+  font-size: 1em;
   color: #787878;
   line-height: 1.875;
 }
 
 .text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
-  font-size: 0.7857142857em;
+  font-size: 0.6875em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -6509,7 +6583,7 @@ h6, .heading--h6 {
 }
 
 h1, .heading--homepage, .heading--product, .heading--h1 {
-  font-size: 3.4285714286em;
+  font-size: 3em;
   line-height: 1.25;
   color: #000;
 }
@@ -6520,18 +6594,18 @@ h1 a, .heading--homepage a, .heading--product a, .heading--h1 a {
 
 @media (min-width: 640px) and (max-width: 960px) {
   h1, .heading--homepage, .heading--product, .heading--h1 {
-    font-size: 3.2142857143em;
+    font-size: 2.8125em;
   }
 }
 
 @media (max-width: 639px) {
   h1, .heading--homepage, .heading--product, .heading--h1 {
-    font-size: 2.2857142857em;
+    font-size: 2em;
   }
 }
 
 h2, .heading--medium, .heading--h2 {
-  font-size: 2.5714285714em;
+  font-size: 2.25em;
   line-height: 1.39;
   color: #000;
 }
@@ -6542,18 +6616,18 @@ h2 a, .heading--medium a, .heading--h2 a {
 
 @media (min-width: 640px) and (max-width: 960px) {
   h2, .heading--medium, .heading--h2 {
-    font-size: 2.2857142857em;
+    font-size: 2em;
   }
 }
 
 @media (max-width: 639px) {
   h2, .heading--medium, .heading--h2 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 
 h3, .heading--h3 {
-  font-size: 1.8571428571em;
+  font-size: 1.625em;
   font-family: "Benton Sans Light", Helvetica, sans-serif;
   color: #333;
   -webkit-font-smoothing: auto;
@@ -6564,7 +6638,7 @@ h3 a, .heading--h3 a {
 }
 
 h4, .heading--h4 {
-  font-size: 1.6428571429em;
+  font-size: 1.4375em;
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   color: #333;
 }
@@ -6575,13 +6649,13 @@ h4 a, .heading--h4 a {
 
 @media (min-width: 640px) and (max-width: 960px) {
   h4, .heading--h4 {
-    font-size: 1.4285714286em;
+    font-size: 1.25em;
   }
 }
 
 @media (max-width: 639px) {
   h4, .heading--h4 {
-    font-size: 1.2857142857em;
+    font-size: 1.125em;
   }
 }
 
@@ -6633,37 +6707,37 @@ Weight: 21
 Styleguide typography.context-headings
 */
 .heading--homepage {
-  font-size: 5em;
+  font-size: 4.375em;
   line-height: 1;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
   .heading--product {
-    font-size: 2.2857142857em;
-  }
-}
-
-@media (max-width: 639px) {
-  .heading--product {
-    font-size: 1.9285714286em;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .heading--medium {
     font-size: 2em;
   }
 }
 
 @media (max-width: 639px) {
+  .heading--product {
+    font-size: 1.6875em;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
   .heading--medium {
-    font-size: 1.4285714286em;
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--medium {
+    font-size: 1.25em;
   }
 }
 
 .heading--label {
   margin: 0;
-  font-size: 1.4285714286em;
+  font-size: 1.25em;
 }
 
 /*
@@ -6789,51 +6863,5 @@ Style Guide: typography.quote
   }
   .quote .quote__byline:before {
     width: 20px;
-  }
-}
-
-/*
-Sticky elements
-
-Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
-once they get scrolled to and are about to go out of view.
-
-Markup: sticky.hbs
-
-.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
-
-Style guide: interactive.sticky
-*/
-.stuck {
-  position: fixed;
-  z-index: 7;
-  top: 0;
-  width: 100%;
-}
-
-@media (min-width: 961px) {
-  .sticky--desktop.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .sticky--tablet.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
-  }
-}
-
-@media (max-width: 639px) {
-  .sticky--mobile.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
   }
 }

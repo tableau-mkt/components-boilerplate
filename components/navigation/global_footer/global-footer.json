@@ -70,19 +70,19 @@
     "items": [
       {
         "link": {
-          "text": "<i class=\"icon--social-linkedin\"></i>",
+          "text": "<i class=\"icon icon--social-linkedin\"></i>",
           "url": "http://www.linkedin.com/company/tableau-software"
         }
       },
       {
         "link": {
-          "text": "<i class=\"icon--social-facebook\"></i>",
+          "text": "<i class=\"icon icon--social-facebook\"></i>",
           "url": "http://www.facebook.com/tableausw"
         }
       },
       {
         "link": {
-          "text": "<i class=\"icon--social-twitter\"></i>",
+          "text": "<i class=\"icon icon--social-twitter\"></i>",
           "url": "http://www.twitter.com/tableau"
         }
       }
