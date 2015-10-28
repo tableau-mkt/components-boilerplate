@@ -44,6 +44,10 @@ Style guide: teasers.teaser-item
     margin-top: 0;
   }
 
+  .teaser-item__description {
+    @extend .text--body-small;
+  }
+
   .teaser-item__link {
     margin-top: 0.5em;
     margin-bottom: 0;

@@ -4,18 +4,11 @@ Sticky elements
 Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
 once they get scrolled to and are about to go out of view.
 
-Markup:
-<div class="grid-3">
-  <div class="sticky {$modifiers}">
-    <div class="box--green padded-box padded-box--one">
-      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
-    </div>
-  </div>
-</div>
+Markup: sticky.hbs
 
 .sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
 
-Style guide: 6.2
+Style guide: interactive.sticky
 */
 
 .stuck {

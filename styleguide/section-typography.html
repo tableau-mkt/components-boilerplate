@@ -55,11 +55,6 @@
           </a>
           <ul class="kss-nav__menu-child">
                 <li class="kss-nav__menu-item">
-                  <a href="section-typography.html#kssref-typography-quote">
-                    Quotes
-                  </a>
-                </li>
-                <li class="kss-nav__menu-item">
                   <a href="section-typography.html#kssref-typography-fonts">
                     Font Families
                   </a>
@@ -80,8 +75,8 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-typography.html#kssref-typography-heading-highlight">
-                    Heading Highlight
+                  <a href="section-typography.html#kssref-typography-formatted">
+                    Formatted Text
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
@@ -90,13 +85,18 @@
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-typography.html#kssref-typography-formatted">
-                    Formatted Text
+                  <a href="section-typography.html#kssref-typography-colors">
+                    Text Colors
                   </a>
                 </li>
                 <li class="kss-nav__menu-item">
-                  <a href="section-typography.html#kssref-typography-colors">
-                    Text Colors
+                  <a href="section-typography.html#kssref-typography-quote">
+                    Quotes
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
+                  <a href="section-typography.html#kssref-typography-heading-highlight">
+                    Heading Highlight
                   </a>
                 </li>
           </ul>
@@ -165,54 +165,6 @@
 
 
             </div>
-            <section id="kssref-typography-quote" class="kss-section kss-section--depth-2">
-
-          <div class="kss-style">
-            <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-typography-quote"> -->
-                Quotes
-              <!-- </a> -->
-            </h3>
-
-
-            <div class="kss-description">
-              <p>Stylized quoted text such as a pull quote or testimonial.</p>
-
-            </div>
-          </div>
-
-            <h4>Example</h4>
-            <div class="kss-examples">
-              <div class="kss-example kss-example__default">
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <div class="quote [modifier class]">
-  <p class="quote__text">Tableau is the best thing that ever happened to us. We&#x27;ve spent 90 percent of our time on the data and 10 percent on the tool. We had a significant ROI.</p>
-  <p class="quote__byline">
-    <span class="quote__byline__name">Cindy Sedlacek,</span>
-    <span class="quote__byline__title">Professor</span>
-  </p>
-</div>
-
-                  </div>
-                </div>
-              </div>
-             
-            </div>
-            
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;quote [modifier class]&quot;&gt;
-  &lt;p class=&quot;quote__text&quot;&gt;Tableau is the best thing that ever happened to us. We&amp;#x27;ve spent 90 percent of our time on the data and 10 percent on the tool. We had a significant ROI.&lt;/p&gt;
-  &lt;p class=&quot;quote__byline&quot;&gt;
-    &lt;span class=&quot;quote__byline__name&quot;&gt;Cindy Sedlacek,&lt;/span&gt;
-    &lt;span class=&quot;quote__byline__title&quot;&gt;Professor&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
-
-            </section>
             <section id="kssref-typography-fonts" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
@@ -340,15 +292,6 @@ Stories and Articles sections.</p>
                 </div>
             </div>
             
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;p class=&quot;[modifier class] text--big&quot;&gt;
-  ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
-  abcdefghijklmnopqrstuvwxyz&lt;br&gt;
-  1234567890!@#$%^&amp;*()
-&lt;/p&gt;
-</code></pre>
-              </div>
 
             </section>
             <section id="kssref-typography-body-copy" class="kss-section kss-section--depth-2">
@@ -369,34 +312,19 @@ Stories and Articles sections.</p>
 
             <h4>Examples</h4>
             <div class="kss-examples">
-              <div class="kss-example kss-example__default">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <h6>Default styling</h6>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <p class="[modifier class]"> 
-  Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
-</p>
-
-                  </div>
-                </div>
-              </div>
              
                 <div class="kss-example">
                   <div class="kss-example-details">
                     <div class="kss-example-desc">
-                      <p>Large body copy (15px)</p>
+                      <p>Default base body copy (16px/30)</p>
                     </div>
                     <div class="kss-example-name">
-                      <p><code>.text--body-large</code></p>
+                      <p><code>.text--body-base</code></p>
                     </div>
                   </div>
                   <div class="kss-example-preview">
                     <div class="kss-example-preview-wrapper">
-                      <p class="text--body-large"> 
+                      <p class="text--body-base"> 
   Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
 </p>
 
@@ -406,7 +334,25 @@ Stories and Articles sections.</p>
                 <div class="kss-example">
                   <div class="kss-example-details">
                     <div class="kss-example-desc">
-                      <p>Medium body copy (14px)</p>
+                      <p>Small body copy (14px/26)</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--body-small</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--body-small"> 
+  Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
+</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Medium body copy (20px/35)</p>
                     </div>
                     <div class="kss-example-name">
                       <p><code>.text--body-medium</code></p>
@@ -424,15 +370,15 @@ Stories and Articles sections.</p>
                 <div class="kss-example">
                   <div class="kss-example-details">
                     <div class="kss-example-desc">
-                      <p>Small body copy (12px)</p>
+                      <p>Large body copy (30px/46)</p>
                     </div>
                     <div class="kss-example-name">
-                      <p><code>.text--body-small</code></p>
+                      <p><code>.text--body-large</code></p>
                     </div>
                   </div>
                   <div class="kss-example-preview">
                     <div class="kss-example-preview-wrapper">
-                      <p class="text--body-small"> 
+                      <p class="text--body-large"> 
   Pariatur pretium interdum ut platea ab, purus tortor alias erat tortor pellentesque pede, feugiat placerat dolor quos adipisci, impedit, illo! Litora necessitatibus interdum sociosqu! Natus volutpat ab? Penatibus arcu dis! Volutpat repudiandae dolorum vehicula semper provident reiciendis magna pulvinar elementum sociosqu aut. Aliquip integer laborum, molestiae wisi per pretium auctor.
 </p>
 
@@ -550,22 +496,6 @@ Stories and Articles sections.</p>
                 <div class="kss-example">
                   <div class="kss-example-details">
                     <div class="kss-example-desc">
-                      <p>Download Success (48px) - uses <code>&lt;h1&gt;</code></p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading--download</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="heading--download">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
                       <p>Medium headers (36px) - uses <code>&lt;h2&gt;</code></p>
                     </div>
                     <div class="kss-example-name">
@@ -575,38 +505,6 @@ Stories and Articles sections.</p>
                   <div class="kss-example-preview">
                     <div class="kss-example-preview-wrapper">
                       <p class="heading--medium">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Small Headline/Product labels (26px) - uses <code>&lt;h3&gt;</code></p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading--small</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="heading--small">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>XS Headline (23px) - uses <code>&lt;h4&gt;</code></p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading--x-small</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="heading--x-small">Lorem Ipsum</p>
 
                     </div>
                   </div>
@@ -629,268 +527,6 @@ Stories and Articles sections.</p>
                 </div>
             </div>
             
-
-            </section>
-            <section id="kssref-typography-heading-highlight" class="kss-section kss-section--depth-2">
-
-          <div class="kss-style">
-            <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-typography-heading-highlight"> -->
-                Heading Highlight
-              <!-- </a> -->
-            </h3>
-
-
-            <div class="kss-description">
-              <p>Highlight style for headings. Modifiers can be used to color the highlight
-related to a particular product.</p>
-
-            </div>
-          </div>
-
-            <h4>Examples</h4>
-            <div class="kss-examples">
-              <div class="kss-example kss-example__default">
-                <div class="kss-example-details">
-                  <div class="kss-example-desc">
-                    <h6>Default styling</h6>
-                  </div>
-                </div>
-                <div class="kss-example-preview">
-                  <div class="kss-example-preview-wrapper">
-                    <h3 class="heading-highlight heading--small [modifier class] ">Highlight Heading</h3>
-
-                  </div>
-                </div>
-              </div>
-             
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Desktop colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--desktop</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--desktop ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Server colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--server</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--server ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Online colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--online</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--online ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Public colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--public</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--public ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Reader colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--reader</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--reader ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Mobile colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--mobile</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--mobile ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>White colored highlight</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.heading-highlight--negative</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <h3 class="heading-highlight heading--small heading-highlight--negative ">Highlight Heading</h3>
-
-                    </div>
-                  </div>
-                </div>
-            </div>
-            
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;h3 class=&quot;heading-highlight heading--small [modifier class] &quot;&gt;Highlight Heading&lt;/h3&gt;
-</code></pre>
-              </div>
-
-            </section>
-            <section id="kssref-typography-other" class="kss-section kss-section--depth-2">
-
-          <div class="kss-style">
-            <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-typography-other"> -->
-                Other Type Treatments
-              <!-- </a> -->
-            </h3>
-
-
-            <div class="kss-description">
-              <p>Other treatments used for text throughout the site</p>
-
-            </div>
-          </div>
-
-            <h4>Examples</h4>
-            <div class="kss-examples">
-             
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Large Copy</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.text--large-copy</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="text--large-copy">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Sub Nav Mission</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.text--sub-nav</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="text--sub-nav">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Dropdown Copy</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.text--dropdown</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="text--dropdown">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Label/Nav item</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.text--label</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="text--label">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="kss-example">
-                  <div class="kss-example-details">
-                    <div class="kss-example-desc">
-                      <p>Text with border underline</p>
-                    </div>
-                    <div class="kss-example-name">
-                      <p><code>.text--border</code></p>
-                    </div>
-                  </div>
-                  <div class="kss-example-preview">
-                    <div class="kss-example-preview-wrapper">
-                      <p class="text--border">Lorem Ipsum</p>
-
-                    </div>
-                  </div>
-                </div>
-            </div>
-            
-              <h4>Markup</h4>
-              <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;p class=&quot;[modifier class]&quot;&gt;Lorem Ipsum&lt;/p&gt;
-</code></pre>
-              </div>
 
             </section>
             <section id="kssref-typography-formatted" class="kss-section kss-section--depth-2">
@@ -1182,6 +818,114 @@ related to a particular product.</p>
                 <pre class="prettyprint lang-html"><code data-language="html">&lt;p class=&quot;[modifier class]&quot;&gt;
   This sentence is an example of formatted text.
 &lt;/p&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-typography-other" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-typography-other"> -->
+                Other Type Treatments
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Other treatments used for text throughout the site</p>
+
+            </div>
+          </div>
+
+            <h4>Examples</h4>
+            <div class="kss-examples">
+             
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Large Copy</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--large-copy</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--large-copy">Lorem Ipsum</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Sub Nav Mission</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--sub-nav</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--sub-nav">Lorem Ipsum</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Dropdown Copy</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--dropdown</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--dropdown">Lorem Ipsum</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Label/Nav item</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--label</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--label">Lorem Ipsum</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Text with border underline</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.text--border</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <p class="text--border">Lorem Ipsum</p>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;p class=&quot;[modifier class]&quot;&gt;Lorem Ipsum&lt;/p&gt;
 </code></pre>
               </div>
 
@@ -1543,6 +1287,208 @@ related to a particular product.</p>
               <h4>Markup</h4>
               <div class="kss-markup">
                 <pre class="prettyprint lang-html"><code data-language="html">&lt;h3 class=&quot;[modifier class]&quot;&gt;Colored text used on an &amp;lt;h3&amp;gt;&lt;/h3&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-typography-quote" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-typography-quote"> -->
+                Quotes
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Stylized quoted text such as a pull quote or testimonial.</p>
+
+            </div>
+          </div>
+
+            <h4>Example</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="quote [modifier class]">
+  <p class="quote__text">Tableau is the best thing that ever happened to us. We&#x27;ve spent 90 percent of our time on the data and 10 percent on the tool. We had a significant ROI.</p>
+  <p class="quote__byline">
+    <span class="quote__byline__name">Cindy Sedlacek,</span>
+    <span class="quote__byline__title">Professor</span>
+  </p>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;quote [modifier class]&quot;&gt;
+  &lt;p class=&quot;quote__text&quot;&gt;Tableau is the best thing that ever happened to us. We&amp;#x27;ve spent 90 percent of our time on the data and 10 percent on the tool. We had a significant ROI.&lt;/p&gt;
+  &lt;p class=&quot;quote__byline&quot;&gt;
+    &lt;span class=&quot;quote__byline__name&quot;&gt;Cindy Sedlacek,&lt;/span&gt;
+    &lt;span class=&quot;quote__byline__title&quot;&gt;Professor&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-typography-heading-highlight" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-typography-heading-highlight"> -->
+                Heading Highlight
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Highlight style for headings. Modifiers can be used to color the highlight
+related to a particular product.</p>
+
+            </div>
+          </div>
+
+            <h4>Examples</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <h6>Default styling</h6>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <h3 class="heading-highlight heading--small [modifier class] ">Highlight Heading</h3>
+
+                  </div>
+                </div>
+              </div>
+             
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Desktop colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--desktop</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--desktop ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Server colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--server</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--server ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Online colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--online</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--online ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Public colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--public</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--public ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Reader colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--reader</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--reader ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Mobile colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--mobile</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--mobile ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>White colored highlight</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.heading-highlight--negative</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <h3 class="heading-highlight heading--small heading-highlight--negative ">Highlight Heading</h3>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;h3 class=&quot;heading-highlight heading--small [modifier class] &quot;&gt;Highlight Heading&lt;/h3&gt;
 </code></pre>
               </div>
 

@@ -5,21 +5,21 @@
       "id": "tab-one",
       "active": true,
       "content": "<h3>First Tab</h3><p>Accusamus recusandae consequat, velit hic perferendis consectetuer excepteur dictum nullam! Aute laoreet, ipsum sunt id asperiores quis accusamus lectus a, deleniti lacus nisl error consequatur optio minim rhoncus aptent do, mollitia dapibus pede, natoque integer pharetra iusto blandit ad! Elementum lacus voluptatibus. Cupidatat aliqua scelerisque! Cras at aliqua, montes ullamcorper.</p><p>Quod primis placeat praesent cupidatat facilisi quidem culpa, lacus nemo, aliquid, per integer nulla fugit venenatis fugiat laboriosam posuere deleniti illo mattis, aptent mus luctus diamlorem molestie ligula! Autem dolore? Suscipit consectetuer pede rhoncus? Voluptas voluptate veritatis id? Rhoncus congue quos repellendus doloribus magni semper, tempora etiam vulputate cupidatat scelerisque.</p>",
-      "contentClass": "box--mobile padded-box"
+      "contentClass": "bg--mobile padded-box"
     },
     {
       "label": "Second Tab",
       "id": "tab-two",
       "active": false,
       "content": "<h3>Second Tab</h3><p>Delectus debitis nonummy erat laudantium, temporibus dis autem dis impedit anim cumque! Ridiculus pharetra eros laborum, tenetur, sint, felis. Lacus lectus penatibus, eiusmod? Praesentium eaque facilisis vehicula odio. Doloribus tempore! Fermentum pellentesque, magnam exercitationem, netus, facilisis officiis cupidatat deserunt optio. Quia deleniti, est accumsan bibendum taciti ipsum ullamco, mollit curabitur.</p>",
-      "contentClass": "box--dark-gray-3 padded-box"
+      "contentClass": "bg--dark-gray-3 padded-box"
     },
     {
       "label": "third Tab",
       "id": "tab-three",
       "active": false,
       "content": "<h3>Third Tab</h3><p>Et vestibulum harum eleifend per montes, suspendisse urna dictum, aperiam suspendisse, interdum corporis, atque est nostrud? Totam? Posuere tincidunt sit. Faucibus illo distinctio ad? Magni, labore aliqua sequi ullam faucibus, laoreet suspendisse ullamco condimentum ad, facilisi, vero unde lorem aenean euismod officia. Facilisi reiciendis vivamus mi eleifend dolor? Natoque consequuntur.</p><p>Voluptate platea malesuada illo omnis erat in esse? Veniam pede, dolore, dicta quaerat necessitatibus. Eleifend illo. Class. Morbi metus consequatur, animi necessitatibus esse lacus, nonummy a, nascetur et, lacinia aliquet magnam iusto ultrices, facilisis. Pariatur architecto, quas delectus litora autem? Molestie? Tristique, harum exercitation nemo litora? Natus erat, dapibus adipiscing.</p><p>Lacus nulla recusandae proident, vivamus aliquip atque auctor aperiam? Distinctio class sapiente nec dignissimos provident placerat curae officia donec consectetuer tortor? Exercitationem. Aliquip incidunt. Animi non odio impedit, senectus vestibulum, magnam tincidunt? Cillum fringilla quisque sapien! Fugiat blanditiis, omnis sunt, mauris tempus dignissim eros! Cubilia integer adipiscing doloribus, quia iaculis.</p>",
-      "contentClass": "box--desktop padded-box"
+      "contentClass": "bg--desktop padded-box"
     }
   ]
 }

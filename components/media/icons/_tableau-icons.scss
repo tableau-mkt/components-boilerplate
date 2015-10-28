@@ -7,13 +7,23 @@ Nodefault: true
 
 Markup: icon.hbs
 
-.icon-people - people icon
-.icon-search - search icon
-.icon-social-facebook - social-facebook icon
-.icon-social-gplus - social-gplus icon
-.icon-social-instagram - social-instagram icon
-.icon-social-linkedin - social-linkedin icon
-.icon-social-twitter - social-twitter icon
+.icon--people - people icon
+.icon--search - search icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-twitter - social-twitter icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--laptop - laptop icon
+.icon--link - link icon
+.icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
@@ -21,10 +31,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.eot?4245026e7c61f54d469377acf784e4a6");
-  src:url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.woff?4245026e7c61f54d469377acf784e4a6") format("woff"),
-		url("../fonts/tableau-icons-4245026e7c61f54d469377acf784e4a6.ttf?4245026e7c61f54d469377acf784e4a6") format("truetype");
+  src:url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
+  src:url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"),
+		url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -48,36 +58,86 @@ Style Guide: media.icons
 // Icons
 
 
-.icon-people:before {
+.icon--people:before {
   content:"\f101";
 }
 
 
-.icon-search:before {
+.icon--search:before {
   content:"\f102";
 }
 
 
-.icon-social-facebook:before {
+.icon--social-facebook:before {
   content:"\f103";
 }
 
 
-.icon-social-gplus:before {
+.icon--social-gplus:before {
   content:"\f104";
 }
 
 
-.icon-social-instagram:before {
+.icon--social-instagram:before {
   content:"\f105";
 }
 
 
-.icon-social-linkedin:before {
+.icon--social-linkedin:before {
   content:"\f106";
 }
 
 
-.icon-social-twitter:before {
+.icon--social-twitter:before {
   content:"\f107";
+}
+
+
+.icon--cursor-cloud:before {
+  content:"\f108";
+}
+
+
+.icon--laptop:before {
+  content:"\f109";
+}
+
+
+.icon--link:before {
+  content:"\f10a";
+}
+
+
+.icon--people:before {
+  content:"\f101";
+}
+
+
+.icon--share:before {
+  content:"\f10b";
+}
+
+
+.icon--tableau-logo:before {
+  content:"\f10c";
+}
+
+
+.icon--triangle-down:before {
+  content:"\f10d";
+}
+
+
+.icon--triangle-left:before {
+  content:"\f10e";
+}
+
+
+.icon--triangle-right:before {
+  content:"\f10f";
+}
+
+
+.icon--triangle-up:before {
+  content:"\f110";
 }

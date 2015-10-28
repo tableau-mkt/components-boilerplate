@@ -22,6 +22,7 @@ Style Guide: navigation.footer
     float: left;
     width: 60%;
     padding-top: 22px;
+    @extend .text--body-small;
   }
 
   .global-footer__second {

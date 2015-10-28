@@ -18,7 +18,7 @@
 @import "../../components/buttons_links/data_source_link/data_source_link";
 @import "../../components/buttons_links/link_base/link_base";
 @import "../../components/buttons_links/link_formatted/link_formatted";
-@import "../../components/forms/form";
+@import "../../components/forms/form_base/form_base";
 @import "../../components/forms/section_search/section_search";
 @import "../../components/images/thumbnail/thumbnail";
 @import "../../components/interactive/accordion/accordion";
@@ -29,9 +29,10 @@
 @import "../../components/interactive/reveal/reveal";
 @import "../../components/interactive/search_highlight/search_highlight";
 @import "../../components/interactive/social_share/social_share";
+@import "../../components/interactive/sticky/sticky";
 @import "../../components/interactive/tabs/tabs";
 @import "../../components/interactive/viz_slideshow/viz_slideshow";
-@import "../../components/layout/box_colored/box_colored";
+@import "../../components/layout/bg_color/bg_color";
 @import "../../components/layout/content_container/content_container";
 @import "../../components/layout/divider/divider";
 @import "../../components/layout/grid/grid";
@@ -65,6 +66,3 @@
 @import "../../components/typography/heading/heading";
 @import "../../components/typography/heading_highlight/heading_highlight";
 @import "../../components/typography/quote/quote";
-@import "../../components/unasigned/anchor/anchor";
-@import "../../components/unasigned/badge/badge";
-@import "../../components/unasigned/sticky/sticky";
