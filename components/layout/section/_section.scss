@@ -8,8 +8,9 @@ Markup: section-kss.hbs
 
 Weight: 40
 
-.section--padded-one - Section with 2em of vertical padding
+.section--padded-one - Section with 1em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-three - Section with 3em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
 .section--padding-top-none - Cancels out all top padding
@@ -22,6 +23,7 @@ Style guide layout.section
 $section-padding: (
   one: 1em,
   two: 2em,
+  three: 3em,
   four: 4em,
   six: 6em
 );

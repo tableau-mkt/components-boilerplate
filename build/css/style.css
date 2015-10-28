@@ -194,17 +194,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .pager, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -483,17 +483,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .pager, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -1787,6 +1787,16 @@ Style guide: interactive.social-share
   display: inline-block;
   cursor: pointer;
   color: #eb912c;
+}
+
+.social-share:hover {
+  text-decoration: none;
+}
+
+.social-share i.icon {
+  font-size: 16px;
+  line-height: 13px;
+  vertical-align: top;
 }
 
 .social-share__widgets {
@@ -3749,8 +3759,9 @@ Markup: section-kss.hbs
 
 Weight: 40
 
-.section--padded-one - Section with 2em of vertical padding
+.section--padded-one - Section with 1em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-three - Section with 3em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
 .section--padding-top-none - Cancels out all top padding
@@ -3772,6 +3783,11 @@ Style guide layout.section
 .section.section--padded-two {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.section.section--padded-three {
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .section.section--padded-four {
@@ -4368,19 +4384,27 @@ Markup: icon.hbs
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--laptop - laptop icon
+.icon--link - link icon
 .icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?2f4737f1e7ee7f92a62ca2bb1afbf5ff");
-  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.woff?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("woff"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.ttf?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("truetype");
+  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
+  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon {
+.icon, .pager .pager__endcap.pager__endcap--previous a:before,
+.pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
   vertical-align: middle;
@@ -4431,8 +4455,36 @@ Style Guide: media.icons
   content: "\f109";
 }
 
+.icon--link:before {
+  content: "\f10a";
+}
+
 .icon--people:before {
   content: "\f101";
+}
+
+.icon--share:before {
+  content: "\f10b";
+}
+
+.icon--tableau-logo:before {
+  content: "\f10c";
+}
+
+.icon--triangle-down:before {
+  content: "\f10d";
+}
+
+.icon--triangle-left:before {
+  content: "\f10e";
+}
+
+.icon--triangle-right:before {
+  content: "\f10f";
+}
+
+.icon--triangle-up:before {
+  content: "\f110";
 }
 
 /*
@@ -5086,6 +5138,80 @@ Style guide navigation.hamburger
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+/*
+Pager
+
+Used to navigate between the different pages of a paged piece of content
+
+Markup: pager.hbs
+
+Style guide: navigation.pager
+*/
+.pager {
+  margin: 1em 0;
+  line-height: 23px;
+  text-align: center;
+}
+
+.pager .pager__endcap a {
+  color: #787878;
+  padding: 5px 1em;
+}
+
+.pager .pager__endcap.pager__endcap--current a {
+  color: #bbb;
+}
+
+.pager .pager__endcap.pager__endcap--previous a:before,
+.pager .pager__endcap.pager__endcap--next a:after {
+  text-decoration: none;
+}
+
+.pager .pager__endcap.pager__endcap--previous a:before {
+  content: "\f10e";
+  padding-right: 5px;
+}
+
+.pager .pager__endcap.pager__endcap--next a:after {
+  content: "\f10f";
+  padding-left: 5px;
+}
+
+.pager .pager__page {
+  margin: 0 0.1em;
+}
+
+.pager .pager__page a {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Benton Sans Medium", Helvetica, sans-serif;
+  color: #787878;
+  font-size: 12px;
+}
+
+.pager .pager__page.pager__page--current a {
+  color: #333;
+  border: 1px solid #333;
+}
+
+@media (max-width: 960px) {
+  .pager {
+    line-height: 35px;
+  }
+  .pager .pager__endcap a {
+    padding: 11px 1em;
+  }
+  .pager .pager__page a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }
 
 /*
@@ -6545,7 +6671,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
+.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .pager .pager__endcap, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.6875em;
   letter-spacing: 1px;

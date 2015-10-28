@@ -16,19 +16,27 @@ Markup: icon.hbs
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--laptop - laptop icon
+.icon--link - link icon
 .icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?2f4737f1e7ee7f92a62ca2bb1afbf5ff");
-  src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.woff?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("woff"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.ttf?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("truetype");
+  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
+  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon {
+.icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
   vertical-align: middle;
@@ -79,8 +87,36 @@ Style Guide: media.icons
   content: "\f109";
 }
 
+.icon--link:before {
+  content: "\f10a";
+}
+
 .icon--people:before {
   content: "\f101";
+}
+
+.icon--share:before {
+  content: "\f10b";
+}
+
+.icon--tableau-logo:before {
+  content: "\f10c";
+}
+
+.icon--triangle-down:before {
+  content: "\f10d";
+}
+
+.icon--triangle-left:before {
+  content: "\f10e";
+}
+
+.icon--triangle-right:before {
+  content: "\f10f";
+}
+
+.icon--triangle-up:before {
+  content: "\f110";
 }
 
 body.kss .kss-example-preview {
@@ -919,8 +955,9 @@ Markup: section-kss.hbs
 
 Weight: 40
 
-.section--padded-one - Section with 2em of vertical padding
+.section--padded-one - Section with 1em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-three - Section with 3em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
 .section--padding-top-none - Cancels out all top padding
@@ -1090,7 +1127,14 @@ Markup: icon.hbs
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--laptop - laptop icon
+.icon--link - link icon
 .icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
@@ -1148,6 +1192,15 @@ Markup: hamburger.hbs
 .hamburger--open - Open state of hamburger icon.
 
 Style guide navigation.hamburger
+*/
+  /*
+Pager
+
+Used to navigate between the different pages of a paged piece of content
+
+Markup: pager.hbs
+
+Style guide: navigation.pager
 */
   /*
 Subnavigation
@@ -1553,17 +1606,17 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .agenda-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .people-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .pager, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .agenda-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .people-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .agenda-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .people-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .pager li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .agenda-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .people-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .pager li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -1698,17 +1751,17 @@ body.kss .kss-example-preview .bg-cover {
   }
 }
 
-body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .agenda-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .people-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .pager, body.kss .kss-example-preview .topic-nav .topic-nav__tabs, body.kss .kss-example-preview .context-switcher .context-switcher__list, body.kss .kss-example-preview .agenda-list, body.kss .kss-example-preview .link-list.link-list--plain, body.kss .kss-example-preview .link-list.video-chapters, body.kss .kss-example-preview .people-list, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .agenda-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .people-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
+body.kss .kss-example-preview .plain-list li, body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .pager li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li, body.kss .kss-example-preview .context-switcher .context-switcher__list li, body.kss .kss-example-preview .agenda-list li, body.kss .kss-example-preview .link-list.link-list--plain li, body.kss .kss-example-preview .link-list.video-chapters li, body.kss .kss-example-preview .people-list li, body.kss .kss-example-preview .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
+body.kss .kss-example-preview .inline-list li, body.kss .kss-example-preview .tabs__tabs li, body.kss .kss-example-preview .link-list.link-list--inline li, body.kss .kss-example-preview .tags-list li, body.kss .kss-example-preview .pager li, body.kss .kss-example-preview .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -2586,6 +2639,16 @@ body.kss .kss-example-preview .social-share {
   display: inline-block;
   cursor: pointer;
   color: #eb912c;
+}
+
+body.kss .kss-example-preview .social-share:hover {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .social-share i.icon {
+  font-size: 16px;
+  line-height: 13px;
+  vertical-align: top;
 }
 
 body.kss .kss-example-preview .social-share__widgets {
@@ -4352,6 +4415,11 @@ body.kss .kss-example-preview .section.section--padded-two {
   padding-bottom: 2em;
 }
 
+body.kss .kss-example-preview .section.section--padded-three {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
 body.kss .kss-example-preview .section.section--padded-four {
   padding-top: 4em;
   padding-bottom: 4em;
@@ -4787,14 +4855,15 @@ body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__t
 @font-face {
   body.kss .kss-example-preview {
     font-family: "tableau-icons";
-    src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?2f4737f1e7ee7f92a62ca2bb1afbf5ff");
-    src: url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.woff?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("woff"), url("../fonts/tableau-icons-2f4737f1e7ee7f92a62ca2bb1afbf5ff.ttf?2f4737f1e7ee7f92a62ca2bb1afbf5ff") format("truetype");
+    src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
+    src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 }
 
-body.kss .kss-example-preview .icon {
+body.kss .kss-example-preview .icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
   vertical-align: middle;
@@ -4845,8 +4914,36 @@ body.kss .kss-example-preview .icon--laptop:before {
   content: "\f109";
 }
 
+body.kss .kss-example-preview .icon--link:before {
+  content: "\f10a";
+}
+
 body.kss .kss-example-preview .icon--people:before {
   content: "\f101";
+}
+
+body.kss .kss-example-preview .icon--share:before {
+  content: "\f10b";
+}
+
+body.kss .kss-example-preview .icon--tableau-logo:before {
+  content: "\f10c";
+}
+
+body.kss .kss-example-preview .icon--triangle-down:before {
+  content: "\f10d";
+}
+
+body.kss .kss-example-preview .icon--triangle-left:before {
+  content: "\f10e";
+}
+
+body.kss .kss-example-preview .icon--triangle-right:before {
+  content: "\f10f";
+}
+
+body.kss .kss-example-preview .icon--triangle-up:before {
+  content: "\f110";
 }
 
 body.kss .kss-example-preview .global-footer .global-footer__language,
@@ -5444,6 +5541,71 @@ body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+body.kss .kss-example-preview .pager {
+  margin: 1em 0;
+  line-height: 23px;
+  text-align: center;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap a {
+  color: #787878;
+  padding: 5px 1em;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--current a {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before {
+  content: "\f10e";
+  padding-right: 5px;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
+  content: "\f10f";
+  padding-left: 5px;
+}
+
+body.kss .kss-example-preview .pager .pager__page {
+  margin: 0 0.1em;
+}
+
+body.kss .kss-example-preview .pager .pager__page a {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Benton Sans Medium", Helvetica, sans-serif;
+  color: #787878;
+  font-size: 12px;
+}
+
+body.kss .kss-example-preview .pager .pager__page.pager__page--current a {
+  color: #333;
+  border: 1px solid #333;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .pager {
+    line-height: 35px;
+  }
+  body.kss .kss-example-preview .pager .pager__endcap a {
+    padding: 11px 1em;
+  }
+  body.kss .kss-example-preview .pager .pager__page a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }
 
 body.kss .kss-example-preview .subnav {
@@ -6680,7 +6842,7 @@ body.kss .kss-example-preview .text--dropdown {
   line-height: 1.875;
 }
 
-body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .form-field__label, body.kss .kss-example-preview .social-share, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .agenda-list__item .agenda__time, body.kss .kss-example-preview .table-list thead th, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .text-teaser-item .text-teaser-item__type, body.kss .kss-example-preview .quote .quote__byline {
+body.kss .kss-example-preview .text--label, body.kss .kss-example-preview .form-field__label, body.kss .kss-example-preview .social-share, body.kss .kss-example-preview .tabs__tabs .tabs__tab-link, body.kss .kss-example-preview .agenda-list__item .agenda__time, body.kss .kss-example-preview .table-list thead th, body.kss .kss-example-preview .tags-list, body.kss .kss-example-preview .video-chapters, body.kss .kss-example-preview .pager .pager__endcap, body.kss .kss-example-preview .text-teaser-item .text-teaser-item__type, body.kss .kss-example-preview .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.6875em;
   letter-spacing: 1px;
