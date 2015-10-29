@@ -1086,38 +1086,65 @@ Weight: 20
 
 Style guide: buttons-links.link-formatted
 */
-.link, .video-chapters__toggle-wrapper .video-chapters__toggle {
+.link, .topic-link, .video-chapters__toggle-wrapper .video-chapters__toggle {
   font-size: 0.6875em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-.link.link--arrow:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
+.link.link--arrow:after, .link--arrow.topic-link:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 .link.link--expand:before,
+.link--expand.topic-link:before,
 .video-chapters__toggle-wrapper .video-chapters__toggle:before,
 .link.link--collapse:before,
+.link--collapse.topic-link:before,
 .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before,
-.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+.link.link--share:before, .link--share.topic-link:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
 }
 
-.link.link--expand:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
+.link.link--expand:before, .link--expand.topic-link:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-.link.link--collapse:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
+.link.link--collapse:before, .link--collapse.topic-link:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+.link.link--share:before, .link--share.topic-link:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
+}
+
+/*
+Topic Link
+
+Links to a topic that a piece of content was tagged with. Meant to be used on a
+a full content view page as the primary topic that the piece of content is 
+tagged with.
+
+Markup: topic-link.hbs
+
+Style guide: buttons-links.topic-link
+*/
+.topic-link {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  color: #333;
+  -webkit-transition: border-color 0.25s;
+          transition: border-color 0.25s;
+}
+
+.topic-link:hover {
+  border-color: #dedede;
 }
 
 /*
@@ -1793,7 +1820,8 @@ Style guide: interactive.social-share
   text-decoration: none;
 }
 
-.social-share i.icon {
+.social-share .icon, .social-share .pager .pager__endcap.pager__endcap--previous a:before, .pager .pager__endcap.pager__endcap--previous .social-share a:before,
+.social-share .pager .pager__endcap.pager__endcap--next a:after, .pager .pager__endcap.pager__endcap--next .social-share a:after {
   font-size: 16px;
   line-height: 13px;
   vertical-align: top;
@@ -2043,6 +2071,7 @@ Weight: 2
 .bg--mobile - Mobile product background color - (#DB8E6A)
 .bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
 .bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
+.bg--media-shade - Dark gradient background for sections of content containing media (vizzes, videos) - (#464646 - #1b1b1b)
 
 Style guide: layout.colored
 */
@@ -2162,26 +2191,36 @@ Style guide: layout.colored
   color: #fff;
 }
 
-.bg--dark-gray-3 {
+.bg--dark-gray-3, .bg--media-shade {
   background-color: #1b1b1b;
   color: #bbb;
 }
 
-.bg--dark-gray-3 h1, .bg--dark-gray-3 .heading--homepage, .bg--dark-gray-3 .heading--product, .bg--dark-gray-3 .heading--h1,
-.bg--dark-gray-3 h2, .bg--dark-gray-3 .heading--medium, .bg--dark-gray-3 .heading--h2,
-.bg--dark-gray-3 h3, .bg--dark-gray-3 .heading--h3,
-.bg--dark-gray-3 h4, .bg--dark-gray-3 .heading--h4,
-.bg--dark-gray-3 h5, .bg--dark-gray-3 .heading--label, .bg--dark-gray-3 .heading--h5,
-.bg--dark-gray-3 h6, .bg--dark-gray-3 .heading--h6 {
+.bg--dark-gray-3 h1, .bg--media-shade h1, .bg--dark-gray-3 .heading--homepage, .bg--media-shade .heading--homepage, .bg--dark-gray-3 .heading--product, .bg--media-shade .heading--product, .bg--dark-gray-3 .heading--h1,
+.bg--media-shade .heading--h1,
+.bg--dark-gray-3 h2, .bg--media-shade h2, .bg--dark-gray-3 .heading--medium, .bg--media-shade .heading--medium, .bg--dark-gray-3 .heading--h2,
+.bg--media-shade .heading--h2,
+.bg--dark-gray-3 h3, .bg--media-shade h3, .bg--dark-gray-3 .heading--h3,
+.bg--media-shade .heading--h3,
+.bg--dark-gray-3 h4, .bg--media-shade h4, .bg--dark-gray-3 .heading--h4,
+.bg--media-shade .heading--h4,
+.bg--dark-gray-3 h5, .bg--media-shade h5, .bg--dark-gray-3 .heading--label, .bg--media-shade .heading--label, .bg--dark-gray-3 .heading--h5,
+.bg--media-shade .heading--h5,
+.bg--dark-gray-3 h6, .bg--media-shade h6, .bg--dark-gray-3 .heading--h6, .bg--media-shade .heading--h6 {
   color: #fff;
 }
 
-.bg--dark-gray-3 h1 a, .bg--dark-gray-3 .heading--homepage a, .bg--dark-gray-3 .heading--product a, .bg--dark-gray-3 .heading--h1 a,
-.bg--dark-gray-3 h2 a, .bg--dark-gray-3 .heading--medium a, .bg--dark-gray-3 .heading--h2 a,
-.bg--dark-gray-3 h3 a, .bg--dark-gray-3 .heading--h3 a,
-.bg--dark-gray-3 h4 a, .bg--dark-gray-3 .heading--h4 a,
-.bg--dark-gray-3 h5 a, .bg--dark-gray-3 .heading--label a, .bg--dark-gray-3 .heading--h5 a,
-.bg--dark-gray-3 h6 a, .bg--dark-gray-3 .heading--h6 a {
+.bg--dark-gray-3 h1 a, .bg--media-shade h1 a, .bg--dark-gray-3 .heading--homepage a, .bg--media-shade .heading--homepage a, .bg--dark-gray-3 .heading--product a, .bg--media-shade .heading--product a, .bg--dark-gray-3 .heading--h1 a,
+.bg--media-shade .heading--h1 a,
+.bg--dark-gray-3 h2 a, .bg--media-shade h2 a, .bg--dark-gray-3 .heading--medium a, .bg--media-shade .heading--medium a, .bg--dark-gray-3 .heading--h2 a,
+.bg--media-shade .heading--h2 a,
+.bg--dark-gray-3 h3 a, .bg--media-shade h3 a, .bg--dark-gray-3 .heading--h3 a,
+.bg--media-shade .heading--h3 a,
+.bg--dark-gray-3 h4 a, .bg--media-shade h4 a, .bg--dark-gray-3 .heading--h4 a,
+.bg--media-shade .heading--h4 a,
+.bg--dark-gray-3 h5 a, .bg--media-shade h5 a, .bg--dark-gray-3 .heading--label a, .bg--media-shade .heading--label a, .bg--dark-gray-3 .heading--h5 a,
+.bg--media-shade .heading--h5 a,
+.bg--dark-gray-3 h6 a, .bg--media-shade h6 a, .bg--dark-gray-3 .heading--h6 a, .bg--media-shade .heading--h6 a {
   color: #fff;
 }
 
@@ -2423,6 +2462,11 @@ Style guide: layout.colored
 .bg--nav-drawer-gray-2 h5 a, .bg--nav-drawer-gray-2 .heading--label a, .bg--nav-drawer-gray-2 .heading--h5 a,
 .bg--nav-drawer-gray-2 h6 a, .bg--nav-drawer-gray-2 .heading--h6 a {
   color: #000;
+}
+
+.bg--media-shade {
+  background: -webkit-linear-gradient(top, #464646, #1b1b1b);
+  background: linear-gradient(to bottom, #464646, #1b1b1b);
 }
 
 /*
@@ -3485,13 +3529,15 @@ Style guide: layout.hero
 }
 
 .bg--dark-gray-3 .hero__background:before,
-.bg--dark-gray-3 .hero__video:before {
+.bg--media-shade .hero__background:before,
+.bg--dark-gray-3 .hero__video:before, .bg--media-shade .hero__video:before {
   background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
   background-image: linear-gradient(to right, #1b1b1b, transparent);
 }
 
 .bg--dark-gray-3 .hero__background:after,
-.bg--dark-gray-3 .hero__video:after {
+.bg--media-shade .hero__background:after,
+.bg--dark-gray-3 .hero__video:after, .bg--media-shade .hero__video:after {
   background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
   background-image: linear-gradient(to left, #1b1b1b, transparent);
 }
@@ -3652,7 +3698,7 @@ Style guide: layout.hero
   }
   .bg--dark-gray-1 .hero,
   .bg--dark-gray-2 .hero,
-  .bg--dark-gray-3 .hero {
+  .bg--dark-gray-3 .hero, .bg--media-shade .hero {
     background: #fff;
     color: #333;
   }
@@ -4735,14 +4781,14 @@ Style guide: navigation.global
     padding-right: 45px;
     text-align: right;
   }
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.topic-link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.topic-link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -4899,6 +4945,7 @@ Style guide: navigation.global
     display: block;
   }
   .global-nav__top .global-nav__secondary-menu a.link,
+  .global-nav__top .global-nav__secondary-menu a.topic-link,
   .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle,
   .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
@@ -5143,7 +5190,7 @@ Style guide navigation.hamburger
 /*
 Pager
 
-Used to navigate between the different pages of a paged piece of content
+Used to navigate between the different pages of content that uses pagination.
 
 Markup: pager.hbs
 
@@ -5151,13 +5198,13 @@ Style guide: navigation.pager
 */
 .pager {
   margin: 1em 0;
-  line-height: 23px;
+  line-height: 1.5em;
   text-align: center;
 }
 
 .pager .pager__endcap a {
   color: #787878;
-  padding: 5px 1em;
+  padding: 0.5em 1em;
 }
 
 .pager .pager__endcap.pager__endcap--current a {
@@ -5171,12 +5218,12 @@ Style guide: navigation.pager
 
 .pager .pager__endcap.pager__endcap--previous a:before {
   content: "\f10e";
-  padding-right: 5px;
+  padding-right: 0.5em;
 }
 
 .pager .pager__endcap.pager__endcap--next a:after {
   content: "\f10f";
-  padding-left: 5px;
+  padding-left: 0.5em;
 }
 
 .pager .pager__page {
@@ -5185,14 +5232,21 @@ Style guide: navigation.pager
 
 .pager .pager__page a {
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 2em;
+  height: 2em;
   border: 1px solid #dedede;
   border-radius: 50%;
   text-align: center;
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
   color: #787878;
-  font-size: 12px;
+  font-size: 0.75em;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.pager .pager__page a:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 .pager .pager__page.pager__page--current a {
@@ -5202,15 +5256,15 @@ Style guide: navigation.pager
 
 @media (max-width: 960px) {
   .pager {
-    line-height: 35px;
+    line-height: 2.25em;
   }
   .pager .pager__endcap a {
-    padding: 11px 1em;
+    padding: 1em 1em;
   }
   .pager .pager__page a {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+    width: 2.25em;
+    height: 2.25em;
+    font-size: 1em;
   }
 }
 
@@ -6057,7 +6111,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .form__wrapper input[type="submit"], .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
+.text--benton-book, .cta, .form__wrapper input[type="submit"], .link, .topic-link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 

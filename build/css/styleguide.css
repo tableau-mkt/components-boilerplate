@@ -595,6 +595,17 @@ Weight: 20
 Style guide: buttons-links.link-formatted
 */
   /*
+Topic Link
+
+Links to a topic that a piece of content was tagged with. Meant to be used on a
+a full content view page as the primary topic that the piece of content is 
+tagged with.
+
+Markup: topic-link.hbs
+
+Style guide: buttons-links.topic-link
+*/
+  /*
 Base Form Styles
 
 A basic form.
@@ -819,6 +830,7 @@ Weight: 2
 .bg--mobile - Mobile product background color - (#DB8E6A)
 .bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
 .bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
+.bg--media-shade - Dark gradient background for sections of content containing media (vizzes, videos) - (#464646 - #1b1b1b)
 
 Style guide: layout.colored
 */
@@ -1196,7 +1208,7 @@ Style guide navigation.hamburger
   /*
 Pager
 
-Used to navigate between the different pages of a paged piece of content
+Used to navigate between the different pages of content that uses pagination.
 
 Markup: pager.hbs
 
@@ -2104,36 +2116,50 @@ body.kss .kss-example-preview a:hover {
   text-decoration: underline;
 }
 
-body.kss .kss-example-preview .link, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle {
+body.kss .kss-example-preview .link, body.kss .kss-example-preview .topic-link, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle {
   font-size: 0.6875em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-body.kss .kss-example-preview .link.link--arrow:after, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
+body.kss .kss-example-preview .link.link--arrow:after, body.kss .kss-example-preview .link--arrow.topic-link:after, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 body.kss .kss-example-preview .link.link--expand:before,
-body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before, body.kss .kss-example-preview .link.link--collapse:before,
-body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before, body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+body.kss .kss-example-preview .link--expand.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before, body.kss .kss-example-preview .link.link--collapse:before,
+body.kss .kss-example-preview .link--collapse.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before, body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .link--share.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
   vertical-align: top;
   padding-right: 1em;
 }
 
-body.kss .kss-example-preview .link.link--expand:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before {
+body.kss .kss-example-preview .link.link--expand:before, body.kss .kss-example-preview .link--expand.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-body.kss .kss-example-preview .link.link--collapse:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
+body.kss .kss-example-preview .link.link--collapse:before, body.kss .kss-example-preview .link--collapse.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .link--share.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
+}
+
+body.kss .kss-example-preview .topic-link {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  color: #333;
+  -webkit-transition: border-color 0.25s;
+          transition: border-color 0.25s;
+}
+
+body.kss .kss-example-preview .topic-link:hover {
+  border-color: #dedede;
 }
 
 body.kss .kss-example-preview .form__intro {
@@ -2645,7 +2671,9 @@ body.kss .kss-example-preview .social-share:hover {
   text-decoration: none;
 }
 
-body.kss .kss-example-preview .social-share i.icon {
+body.kss .kss-example-preview .social-share .icon, body.kss .kss-example-preview .social-share .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous .social-share a:before,
+body.kss .kss-example-preview .social-share .pager .pager__endcap.pager__endcap--next a:after, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next .social-share a:after {
   font-size: 16px;
   line-height: 13px;
   vertical-align: top;
@@ -2949,26 +2977,26 @@ body.kss .kss-example-preview .bg--dark-gray-2 h6 a, body.kss .kss-example-previ
   color: #fff;
 }
 
-body.kss .kss-example-preview .bg--dark-gray-3 {
+body.kss .kss-example-preview .bg--dark-gray-3, body.kss .kss-example-preview .bg--media-shade {
   background-color: #1b1b1b;
   color: #bbb;
 }
 
-body.kss .kss-example-preview .bg--dark-gray-3 h1, body.kss .kss-example-preview .bg--dark-gray-3 .heading--homepage, body.kss .kss-example-preview .bg--dark-gray-3 .heading--product, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1,
-body.kss .kss-example-preview .bg--dark-gray-3 h2, body.kss .kss-example-preview .bg--dark-gray-3 .heading--medium, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2,
-body.kss .kss-example-preview .bg--dark-gray-3 h3, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3,
-body.kss .kss-example-preview .bg--dark-gray-3 h4, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4,
-body.kss .kss-example-preview .bg--dark-gray-3 h5, body.kss .kss-example-preview .bg--dark-gray-3 .heading--label, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5,
-body.kss .kss-example-preview .bg--dark-gray-3 h6, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6 {
+body.kss .kss-example-preview .bg--dark-gray-3 h1, body.kss .kss-example-preview .bg--media-shade h1, body.kss .kss-example-preview .bg--dark-gray-3 .heading--homepage, body.kss .kss-example-preview .bg--media-shade .heading--homepage, body.kss .kss-example-preview .bg--dark-gray-3 .heading--product, body.kss .kss-example-preview .bg--media-shade .heading--product, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1,
+body.kss .kss-example-preview .bg--media-shade .heading--h1, body.kss .kss-example-preview .bg--dark-gray-3 h2, body.kss .kss-example-preview .bg--media-shade h2, body.kss .kss-example-preview .bg--dark-gray-3 .heading--medium, body.kss .kss-example-preview .bg--media-shade .heading--medium, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2,
+body.kss .kss-example-preview .bg--media-shade .heading--h2, body.kss .kss-example-preview .bg--dark-gray-3 h3, body.kss .kss-example-preview .bg--media-shade h3, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3,
+body.kss .kss-example-preview .bg--media-shade .heading--h3, body.kss .kss-example-preview .bg--dark-gray-3 h4, body.kss .kss-example-preview .bg--media-shade h4, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4,
+body.kss .kss-example-preview .bg--media-shade .heading--h4, body.kss .kss-example-preview .bg--dark-gray-3 h5, body.kss .kss-example-preview .bg--media-shade h5, body.kss .kss-example-preview .bg--dark-gray-3 .heading--label, body.kss .kss-example-preview .bg--media-shade .heading--label, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5,
+body.kss .kss-example-preview .bg--media-shade .heading--h5, body.kss .kss-example-preview .bg--dark-gray-3 h6, body.kss .kss-example-preview .bg--media-shade h6, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6, body.kss .kss-example-preview .bg--media-shade .heading--h6 {
   color: #fff;
 }
 
-body.kss .kss-example-preview .bg--dark-gray-3 h1 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--homepage a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--product a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1 a,
-body.kss .kss-example-preview .bg--dark-gray-3 h2 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--medium a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2 a,
-body.kss .kss-example-preview .bg--dark-gray-3 h3 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3 a,
-body.kss .kss-example-preview .bg--dark-gray-3 h4 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4 a,
-body.kss .kss-example-preview .bg--dark-gray-3 h5 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--label a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5 a,
-body.kss .kss-example-preview .bg--dark-gray-3 h6 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6 a {
+body.kss .kss-example-preview .bg--dark-gray-3 h1 a, body.kss .kss-example-preview .bg--media-shade h1 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--homepage a, body.kss .kss-example-preview .bg--media-shade .heading--homepage a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--product a, body.kss .kss-example-preview .bg--media-shade .heading--product a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1 a,
+body.kss .kss-example-preview .bg--media-shade .heading--h1 a, body.kss .kss-example-preview .bg--dark-gray-3 h2 a, body.kss .kss-example-preview .bg--media-shade h2 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--medium a, body.kss .kss-example-preview .bg--media-shade .heading--medium a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2 a,
+body.kss .kss-example-preview .bg--media-shade .heading--h2 a, body.kss .kss-example-preview .bg--dark-gray-3 h3 a, body.kss .kss-example-preview .bg--media-shade h3 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3 a,
+body.kss .kss-example-preview .bg--media-shade .heading--h3 a, body.kss .kss-example-preview .bg--dark-gray-3 h4 a, body.kss .kss-example-preview .bg--media-shade h4 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4 a,
+body.kss .kss-example-preview .bg--media-shade .heading--h4 a, body.kss .kss-example-preview .bg--dark-gray-3 h5 a, body.kss .kss-example-preview .bg--media-shade h5 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--label a, body.kss .kss-example-preview .bg--media-shade .heading--label a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5 a,
+body.kss .kss-example-preview .bg--media-shade .heading--h5 a, body.kss .kss-example-preview .bg--dark-gray-3 h6 a, body.kss .kss-example-preview .bg--media-shade h6 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6 a, body.kss .kss-example-preview .bg--media-shade .heading--h6 a {
   color: #fff;
 }
 
@@ -3200,6 +3228,11 @@ body.kss .kss-example-preview .bg--nav-drawer-gray-2 h4 a, body.kss .kss-example
 body.kss .kss-example-preview .bg--nav-drawer-gray-2 h5 a, body.kss .kss-example-preview .bg--nav-drawer-gray-2 .heading--label a, body.kss .kss-example-preview .bg--nav-drawer-gray-2 .heading--h5 a,
 body.kss .kss-example-preview .bg--nav-drawer-gray-2 h6 a, body.kss .kss-example-preview .bg--nav-drawer-gray-2 .heading--h6 a {
   color: #000;
+}
+
+body.kss .kss-example-preview .bg--media-shade {
+  background: -webkit-linear-gradient(top, #464646, #1b1b1b);
+  background: linear-gradient(to bottom, #464646, #1b1b1b);
 }
 
 body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .flyout__close-wrapper {
@@ -4173,13 +4206,13 @@ body.kss .kss-example-preview .bg--dark-gray-2 .hero__video:after {
 }
 
 body.kss .kss-example-preview .bg--dark-gray-3 .hero__background:before,
-body.kss .kss-example-preview .bg--dark-gray-3 .hero__video:before {
+body.kss .kss-example-preview .bg--media-shade .hero__background:before, body.kss .kss-example-preview .bg--dark-gray-3 .hero__video:before, body.kss .kss-example-preview .bg--media-shade .hero__video:before {
   background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
   background-image: linear-gradient(to right, #1b1b1b, transparent);
 }
 
 body.kss .kss-example-preview .bg--dark-gray-3 .hero__background:after,
-body.kss .kss-example-preview .bg--dark-gray-3 .hero__video:after {
+body.kss .kss-example-preview .bg--media-shade .hero__background:after, body.kss .kss-example-preview .bg--dark-gray-3 .hero__video:after, body.kss .kss-example-preview .bg--media-shade .hero__video:after {
   background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
   background-image: linear-gradient(to left, #1b1b1b, transparent);
 }
@@ -4338,7 +4371,7 @@ body.kss .kss-example-preview .bg--nav-drawer-gray-2 .hero__video:after {
   }
   body.kss .kss-example-preview .bg--dark-gray-1 .hero,
   body.kss .kss-example-preview .bg--dark-gray-2 .hero,
-  body.kss .kss-example-preview .bg--dark-gray-3 .hero {
+  body.kss .kss-example-preview .bg--dark-gray-3 .hero, body.kss .kss-example-preview .bg--media-shade .hero {
     background: #fff;
     color: #333;
   }
@@ -5150,14 +5183,14 @@ body.kss .kss-example-preview .global-nav__top .global-nav__logo a {
     padding-right: 45px;
     text-align: right;
   }
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.topic-link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li a.topic-link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -5314,7 +5347,7 @@ body.kss .kss-example-preview .global-nav__top.global-nav--search-shown .global-
     display: block;
   }
   body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.link,
-  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.search {
+  body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.topic-link, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle, body.kss .kss-example-preview .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, body.kss .kss-example-preview .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
     color: #000;
   }
@@ -5545,13 +5578,13 @@ body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after
 
 body.kss .kss-example-preview .pager {
   margin: 1em 0;
-  line-height: 23px;
+  line-height: 1.5em;
   text-align: center;
 }
 
 body.kss .kss-example-preview .pager .pager__endcap a {
   color: #787878;
-  padding: 5px 1em;
+  padding: 0.5em 1em;
 }
 
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--current a {
@@ -5565,12 +5598,12 @@ body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after 
 
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before {
   content: "\f10e";
-  padding-right: 5px;
+  padding-right: 0.5em;
 }
 
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
   content: "\f10f";
-  padding-left: 5px;
+  padding-left: 0.5em;
 }
 
 body.kss .kss-example-preview .pager .pager__page {
@@ -5579,14 +5612,21 @@ body.kss .kss-example-preview .pager .pager__page {
 
 body.kss .kss-example-preview .pager .pager__page a {
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 2em;
+  height: 2em;
   border: 1px solid #dedede;
   border-radius: 50%;
   text-align: center;
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
   color: #787878;
-  font-size: 12px;
+  font-size: 0.75em;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+body.kss .kss-example-preview .pager .pager__page a:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 body.kss .kss-example-preview .pager .pager__page.pager__page--current a {
@@ -5596,15 +5636,15 @@ body.kss .kss-example-preview .pager .pager__page.pager__page--current a {
 
 @media (max-width: 960px) {
   body.kss .kss-example-preview .pager {
-    line-height: 35px;
+    line-height: 2.25em;
   }
   body.kss .kss-example-preview .pager .pager__endcap a {
-    padding: 11px 1em;
+    padding: 1em 1em;
   }
   body.kss .kss-example-preview .pager .pager__page a {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+    width: 2.25em;
+    height: 2.25em;
+    font-size: 1em;
   }
 }
 
@@ -6306,7 +6346,7 @@ body.kss .kss-example-preview .text--benton-light {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .form__wrapper input[type="submit"], body.kss .kss-example-preview .link, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .subnav .subnav__links li a {
+body.kss .kss-example-preview .text--benton-book, body.kss .kss-example-preview .cta, body.kss .kss-example-preview .form__wrapper input[type="submit"], body.kss .kss-example-preview .link, body.kss .kss-example-preview .topic-link, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle, body.kss .kss-example-preview .global-footer .global-footer__language, body.kss .kss-example-preview .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
