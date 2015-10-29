@@ -29,6 +29,7 @@ Weight: 2
 .bg--mobile - Mobile product background color - (#DB8E6A)
 .bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
 .bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
+.bg--media-shade - Dark gradient background for sections of content containing media (vizzes, videos) - (#464646 - #1b1b1b)
 
 Style guide: layout.colored
 */
@@ -52,4 +53,9 @@ Style guide: layout.colored
       }
     }
   }
+}
+
+.bg--media-shade {
+  @extend .bg--dark-gray-3;
+  background: linear-gradient(to bottom, $bg-dark-gray-1, $bg-dark-gray-3);
 }

@@ -1,0 +1,25 @@
+/*
+Topic Link
+
+Links to a topic that a piece of content was tagged with. Meant to be used on a
+a full content view page as the primary topic that the piece of content is 
+tagged with.
+
+Markup: topic-link.hbs
+
+Style guide: buttons-links.topic-link
+*/
+
+.topic-link {
+  @extend .link;
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border: 1px solid $bg-light-gray-2;
+  background: $white;
+  color: $text-dark-body;
+  transition: border-color .25s;
+
+  &:hover {
+    border-color: $accent-dividers;
+  }
+}

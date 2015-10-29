@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {
+      "number": "1",
+      "current": true
+    },
+    {
+      "number": "2"
+    },
+    {
+      "number": "3"
+    },
+    {
+      "number": "4"
+    }
+  ]
+}

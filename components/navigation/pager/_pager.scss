@@ -1,0 +1,86 @@
+/*
+Pager
+
+Used to navigate between the different pages of content that uses pagination.
+
+Markup: pager.hbs
+
+Style guide: navigation.pager
+*/
+
+.pager {
+  @extend %inline-list;
+  margin: 1em 0;
+  line-height: 23px;
+  text-align: center;
+
+  .pager__endcap {
+    @extend .text--label;
+
+    a {
+      color: $text-medium-body;
+      padding: 5px 1em;
+    }
+
+    &.pager__endcap--current a {
+      color: $text-light-body;
+    }
+
+    &.pager__endcap--previous a:before,
+    &.pager__endcap--next a:after {
+      @extend .icon;
+      text-decoration: none;
+    }
+    
+    &.pager__endcap--previous a:before {
+      content:"\f10e";
+      padding-right: 5px;
+    }
+
+    &.pager__endcap--next a:after {
+      content:"\f10f";
+      padding-left: 5px;
+    }
+  }
+
+  .pager__page {
+    margin: 0 .1em;
+
+    a {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      border: 1px solid $accent-dividers;
+      border-radius: 50%;
+      text-align: center;
+      font-family: $text--benton-medium;
+      color: $text-medium-body;
+      font-size: 12px;
+      transition: color .25s;
+    }
+
+    a:hover {
+      color: $black;
+      text-decoration: none;
+    }
+
+    &.pager__page--current a {
+      color: $text-dark-body;
+      border: 1px solid $text-dark-body;
+    }
+  }
+
+  @include breakpoint($tablet-max) {
+    line-height: 35px;
+
+    .pager__endcap a {
+      padding: 11px 1em;
+    }
+
+    .pager__page a {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+    }
+  }
+}
