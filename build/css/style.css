@@ -1820,7 +1820,8 @@ Style guide: interactive.social-share
   text-decoration: none;
 }
 
-.social-share i.icon {
+.social-share .icon, .social-share .pager .pager__endcap.pager__endcap--previous a:before, .pager .pager__endcap.pager__endcap--previous .social-share a:before,
+.social-share .pager .pager__endcap.pager__endcap--next a:after, .pager .pager__endcap.pager__endcap--next .social-share a:after {
   font-size: 16px;
   line-height: 13px;
   vertical-align: top;
@@ -5197,13 +5198,13 @@ Style guide: navigation.pager
 */
 .pager {
   margin: 1em 0;
-  line-height: 23px;
+  line-height: 1.5em;
   text-align: center;
 }
 
 .pager .pager__endcap a {
   color: #787878;
-  padding: 5px 1em;
+  padding: 0.5em 1em;
 }
 
 .pager .pager__endcap.pager__endcap--current a {
@@ -5217,12 +5218,12 @@ Style guide: navigation.pager
 
 .pager .pager__endcap.pager__endcap--previous a:before {
   content: "\f10e";
-  padding-right: 5px;
+  padding-right: 0.5em;
 }
 
 .pager .pager__endcap.pager__endcap--next a:after {
   content: "\f10f";
-  padding-left: 5px;
+  padding-left: 0.5em;
 }
 
 .pager .pager__page {
@@ -5231,14 +5232,14 @@ Style guide: navigation.pager
 
 .pager .pager__page a {
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 2em;
+  height: 2em;
   border: 1px solid #dedede;
   border-radius: 50%;
   text-align: center;
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
   color: #787878;
-  font-size: 12px;
+  font-size: 0.75em;
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
 }
@@ -5255,15 +5256,15 @@ Style guide: navigation.pager
 
 @media (max-width: 960px) {
   .pager {
-    line-height: 35px;
+    line-height: 2.25em;
   }
   .pager .pager__endcap a {
-    padding: 11px 1em;
+    padding: 1em 1em;
   }
   .pager .pager__page a {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+    width: 2.25em;
+    height: 2.25em;
+    font-size: 1em;
   }
 }
 

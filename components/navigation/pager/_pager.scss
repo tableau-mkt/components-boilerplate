@@ -11,7 +11,7 @@ Style guide: navigation.pager
 .pager {
   @extend %inline-list;
   margin: 1em 0;
-  line-height: 23px;
+  line-height: 1.5em;
   text-align: center;
 
   .pager__endcap {
@@ -19,7 +19,7 @@ Style guide: navigation.pager
 
     a {
       color: $text-medium-body;
-      padding: 5px 1em;
+      padding: 0.5em 1em;
     }
 
     &.pager__endcap--current a {
@@ -34,12 +34,12 @@ Style guide: navigation.pager
     
     &.pager__endcap--previous a:before {
       content:"\f10e";
-      padding-right: 5px;
+      padding-right: 0.5em;
     }
 
     &.pager__endcap--next a:after {
       content:"\f10f";
-      padding-left: 5px;
+      padding-left: 0.5em;
     }
   }
 
@@ -48,14 +48,14 @@ Style guide: navigation.pager
 
     a {
       display: inline-block;
-      width: 23px;
-      height: 23px;
+      width: 2em;
+      height: 2em;
       border: 1px solid $accent-dividers;
       border-radius: 50%;
       text-align: center;
       font-family: $text--benton-medium;
       color: $text-medium-body;
-      font-size: 12px;
+      font-size: 0.75em;
       transition: color .25s;
     }
 
@@ -71,16 +71,16 @@ Style guide: navigation.pager
   }
 
   @include breakpoint($tablet-max) {
-    line-height: 35px;
+    line-height: 2.25em;
 
     .pager__endcap a {
-      padding: 11px 1em;
+      padding: 1em 1em;
     }
 
     .pager__page a {
-      width: 35px;
-      height: 35px;
-      font-size: 16px;
+      width: 2.25em;
+      height: 2.25em;
+      font-size: 1em;
     }
   }
 }
