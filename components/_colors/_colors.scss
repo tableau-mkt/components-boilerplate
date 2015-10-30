@@ -259,6 +259,17 @@ $product-colors: (
   mobile: $product-mobile,
 );
 
+
+/**
+ * Label colors
+ */
+
+$label-colors: (
+  purple: ($text-stories, $text-negative)
+);
+
 // Misc colors
 $error: #DD1E06;
+$teal-dark: #7099a5;
 $form-border: $accent-dividers;
+
