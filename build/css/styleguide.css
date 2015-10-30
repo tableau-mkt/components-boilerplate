@@ -1,3 +1,7 @@
+/* 
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
 /*
 Icons
 
@@ -15,6 +19,7 @@ Markup: icon.hbs
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
 .icon--people - people icon
@@ -29,13 +34,13 @@ Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
-  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+.icon, body.kss .kss-example-preview .cta.cta--download:after, body.kss .kss-example-preview .form__wrapper input.cta--download[type="submit"]:after, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
@@ -83,12 +88,16 @@ body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after 
   content: "\f108";
 }
 
-.icon--laptop:before {
+.icon--download:before {
   content: "\f109";
 }
 
-.icon--link:before {
+.icon--laptop:before {
   content: "\f10a";
+}
+
+.icon--link:before {
+  content: "\f10b";
 }
 
 .icon--people:before {
@@ -96,27 +105,27 @@ body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after 
 }
 
 .icon--share:before {
-  content: "\f10b";
-}
-
-.icon--tableau-logo:before {
   content: "\f10c";
 }
 
-.icon--triangle-down:before {
+.icon--tableau-logo:before {
   content: "\f10d";
 }
 
-.icon--triangle-left:before {
+.icon--triangle-down:before {
   content: "\f10e";
 }
 
-.icon--triangle-right:before {
+.icon--triangle-left:before {
   content: "\f10f";
 }
 
-.icon--triangle-up:before {
+.icon--triangle-right:before {
   content: "\f110";
+}
+
+.icon--triangle-up:before {
+  content: "\f111";
 }
 
 body.kss .kss-example-preview {
@@ -1122,6 +1131,21 @@ Nocode: true
 Style guide: media.video-chapters-demo
 */
   /*
+Formatted Icons
+
+Different formatting/style options for icons
+
+Markup: icon-formatted.hbs
+
+.icon--big - A big icon.
+
+Style guide: media.icon-formatted
+*/
+  /* 
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
+  /*
 Icons
 
 Custom icon webfont.
@@ -1138,6 +1162,7 @@ Markup: icon.hbs
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
 .icon--people - people icon
@@ -1913,6 +1938,14 @@ body.kss .kss-example-preview .cta.cta--play:after, body.kss .kss-example-previe
   vertical-align: middle;
 }
 
+body.kss .kss-example-preview .cta.cta--download:after, body.kss .kss-example-preview .form__wrapper input.cta--download[type="submit"]:after {
+  content: "\f109";
+  height: 10px;
+  padding-left: 1em;
+  font-size: 1.5em;
+  text-decoration: none !important;
+}
+
 body.kss .kss-example-preview .cta.cta--secondary, body.kss .kss-example-preview .form__wrapper input[type="submit"] {
   border: 2px solid #eb912c;
   padding: 15px 23px;
@@ -2132,8 +2165,9 @@ body.kss .kss-example-preview .link.link--expand:before,
 body.kss .kss-example-preview .link--expand.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before, body.kss .kss-example-preview .link.link--collapse:before,
 body.kss .kss-example-preview .link--collapse.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before, body.kss .kss-example-preview .link.link--share:before, body.kss .kss-example-preview .link--share.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding-right: 1em;
+  line-height: 1;
 }
 
 body.kss .kss-example-preview .link.link--expand:before, body.kss .kss-example-preview .link--expand.topic-link:before, body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__toggle:before {
@@ -2671,7 +2705,7 @@ body.kss .kss-example-preview .social-share:hover {
   text-decoration: none;
 }
 
-body.kss .kss-example-preview .social-share .icon, body.kss .kss-example-preview .social-share .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .social-share .icon, body.kss .kss-example-preview .social-share .cta.cta--download:after, body.kss .kss-example-preview .social-share .form__wrapper input.cta--download[type="submit"]:after, body.kss .kss-example-preview .form__wrapper .social-share input.cta--download[type="submit"]:after, body.kss .kss-example-preview .social-share .pager .pager__endcap.pager__endcap--previous a:before,
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous .social-share a:before,
 body.kss .kss-example-preview .social-share .pager .pager__endcap.pager__endcap--next a:after, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next .social-share a:after {
   font-size: 16px;
@@ -4885,17 +4919,21 @@ body.kss .kss-example-preview .video-chapters__toggle-wrapper .video-chapters__t
   display: inline-block;
 }
 
+body.kss .kss-example-preview .icon--big {
+  font-size: 3em;
+}
+
 @font-face {
   body.kss .kss-example-preview {
     font-family: "tableau-icons";
-    src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
-    src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
+    src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+    src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 }
 
-body.kss .kss-example-preview .icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .icon, body.kss .kss-example-preview .cta.cta--download:after, body.kss .kss-example-preview .form__wrapper input.cta--download[type="submit"]:after, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
 body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
@@ -4943,12 +4981,16 @@ body.kss .kss-example-preview .icon--cursor-cloud:before {
   content: "\f108";
 }
 
-body.kss .kss-example-preview .icon--laptop:before {
+body.kss .kss-example-preview .icon--download:before {
   content: "\f109";
 }
 
-body.kss .kss-example-preview .icon--link:before {
+body.kss .kss-example-preview .icon--laptop:before {
   content: "\f10a";
+}
+
+body.kss .kss-example-preview .icon--link:before {
+  content: "\f10b";
 }
 
 body.kss .kss-example-preview .icon--people:before {
@@ -4956,27 +4998,27 @@ body.kss .kss-example-preview .icon--people:before {
 }
 
 body.kss .kss-example-preview .icon--share:before {
-  content: "\f10b";
-}
-
-body.kss .kss-example-preview .icon--tableau-logo:before {
   content: "\f10c";
 }
 
-body.kss .kss-example-preview .icon--triangle-down:before {
+body.kss .kss-example-preview .icon--tableau-logo:before {
   content: "\f10d";
 }
 
-body.kss .kss-example-preview .icon--triangle-left:before {
+body.kss .kss-example-preview .icon--triangle-down:before {
   content: "\f10e";
 }
 
-body.kss .kss-example-preview .icon--triangle-right:before {
+body.kss .kss-example-preview .icon--triangle-left:before {
   content: "\f10f";
 }
 
-body.kss .kss-example-preview .icon--triangle-up:before {
+body.kss .kss-example-preview .icon--triangle-right:before {
   content: "\f110";
+}
+
+body.kss .kss-example-preview .icon--triangle-up:before {
+  content: "\f111";
 }
 
 body.kss .kss-example-preview .global-footer .global-footer__language,

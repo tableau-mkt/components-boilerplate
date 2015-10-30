@@ -836,6 +836,14 @@ Style guide: buttons-links.cta
   vertical-align: middle;
 }
 
+.cta.cta--download:after, .form__wrapper input.cta--download[type="submit"]:after {
+  content: "\f109";
+  height: 10px;
+  padding-left: 1em;
+  font-size: 1.5em;
+  text-decoration: none !important;
+}
+
 .cta.cta--secondary, .form__wrapper input[type="submit"] {
   border: 2px solid #eb912c;
   padding: 15px 23px;
@@ -1106,8 +1114,9 @@ Style guide: buttons-links.link-formatted
 .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before,
 .link.link--share:before, .link--share.topic-link:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding-right: 1em;
+  line-height: 1;
 }
 
 .link.link--expand:before, .link--expand.topic-link:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
@@ -1820,7 +1829,7 @@ Style guide: interactive.social-share
   text-decoration: none;
 }
 
-.social-share .icon, .social-share .pager .pager__endcap.pager__endcap--previous a:before, .pager .pager__endcap.pager__endcap--previous .social-share a:before,
+.social-share .icon, .social-share .cta.cta--download:after, .social-share .form__wrapper input.cta--download[type="submit"]:after, .form__wrapper .social-share input.cta--download[type="submit"]:after, .social-share .pager .pager__endcap.pager__endcap--previous a:before, .pager .pager__endcap.pager__endcap--previous .social-share a:before,
 .social-share .pager .pager__endcap.pager__endcap--next a:after, .pager .pager__endcap.pager__endcap--next .social-share a:after {
   font-size: 16px;
   line-height: 13px;
@@ -4413,6 +4422,25 @@ Nocode: true
 Style guide: media.video-chapters-demo
 */
 /*
+Formatted Icons
+
+Different formatting/style options for icons
+
+Markup: icon-formatted.hbs
+
+.icon--big - A big icon.
+
+Style guide: media.icon-formatted
+*/
+.icon--big {
+  font-size: 3em;
+}
+
+/* 
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
+/*
 Icons
 
 Custom icon webfont.
@@ -4429,6 +4457,7 @@ Markup: icon.hbs
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
 .icon--people - people icon
@@ -4443,13 +4472,13 @@ Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
-  src: url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"), url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon, .pager .pager__endcap.pager__endcap--previous a:before,
+.icon, .cta.cta--download:after, .form__wrapper input.cta--download[type="submit"]:after, .pager .pager__endcap.pager__endcap--previous a:before,
 .pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
@@ -4497,12 +4526,16 @@ Style Guide: media.icons
   content: "\f108";
 }
 
-.icon--laptop:before {
+.icon--download:before {
   content: "\f109";
 }
 
-.icon--link:before {
+.icon--laptop:before {
   content: "\f10a";
+}
+
+.icon--link:before {
+  content: "\f10b";
 }
 
 .icon--people:before {
@@ -4510,27 +4543,27 @@ Style Guide: media.icons
 }
 
 .icon--share:before {
-  content: "\f10b";
-}
-
-.icon--tableau-logo:before {
   content: "\f10c";
 }
 
-.icon--triangle-down:before {
+.icon--tableau-logo:before {
   content: "\f10d";
 }
 
-.icon--triangle-left:before {
+.icon--triangle-down:before {
   content: "\f10e";
 }
 
-.icon--triangle-right:before {
+.icon--triangle-left:before {
   content: "\f10f";
 }
 
-.icon--triangle-up:before {
+.icon--triangle-right:before {
   content: "\f110";
+}
+
+.icon--triangle-up:before {
+  content: "\f111";
 }
 
 /*

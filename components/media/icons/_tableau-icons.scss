@@ -1,3 +1,8 @@
+/* 
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
+
 /*
 Icons
 
@@ -15,6 +20,7 @@ Markup: icon.hbs
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
 .icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
 .icon--people - people icon
@@ -31,10 +37,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?421ca58ab1a0ac5e7de2bcef244c94e5");
-  src:url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.woff?421ca58ab1a0ac5e7de2bcef244c94e5") format("woff"),
-		url("../fonts/tableau-icons-421ca58ab1a0ac5e7de2bcef244c94e5.ttf?421ca58ab1a0ac5e7de2bcef244c94e5") format("truetype");
+  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"),
+		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -98,13 +104,18 @@ Style Guide: media.icons
 }
 
 
-.icon--laptop:before {
+.icon--download:before {
   content:"\f109";
 }
 
 
-.icon--link:before {
+.icon--laptop:before {
   content:"\f10a";
+}
+
+
+.icon--link:before {
+  content:"\f10b";
 }
 
 
@@ -114,30 +125,30 @@ Style Guide: media.icons
 
 
 .icon--share:before {
-  content:"\f10b";
-}
-
-
-.icon--tableau-logo:before {
   content:"\f10c";
 }
 
 
-.icon--triangle-down:before {
+.icon--tableau-logo:before {
   content:"\f10d";
 }
 
 
-.icon--triangle-left:before {
+.icon--triangle-down:before {
   content:"\f10e";
 }
 
 
-.icon--triangle-right:before {
+.icon--triangle-left:before {
   content:"\f10f";
 }
 
 
-.icon--triangle-up:before {
+.icon--triangle-right:before {
   content:"\f110";
+}
+
+
+.icon--triangle-up:before {
+  content:"\f111";
 }

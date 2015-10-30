@@ -34,8 +34,9 @@ Style guide: buttons-links.link-formatted
   &.link--collapse:before,
   &.link--share:before {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     padding-right: 1em;
+    line-height: 1;
   }
 
   &.link--expand:before {
