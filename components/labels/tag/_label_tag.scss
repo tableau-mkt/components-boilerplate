@@ -15,7 +15,7 @@ Style guide: labels.tag
 .label-tag {
   @extend .text--label;
   display: inline-block;
-  padding: em(4px) em(6px);
+  padding: em(4px) em(6px) em(3px) em(8px);
   margin-left: em(6px);
   line-height: 1;
   vertical-align: middle;
