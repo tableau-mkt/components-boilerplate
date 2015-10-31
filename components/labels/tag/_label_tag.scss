@@ -32,6 +32,7 @@ Style guide: labels.tag
 [dir="rtl"],
 .direction--rtl {
   .label-tag {
+    margin-left: initial;
     margin-right: em(6px);
   }
 }
