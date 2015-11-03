@@ -1,33 +1,50 @@
 # Tableau Components
 
-A place to keep our library of reusable components for various web properties.
+A component library and automated style guide based on the Tableau corporate 
+brand. This README focuses on development within the component library. See the 
+overview page of the generated styleguide (demo below) for usage instructions
+and guidelines.
 
-###[Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
+### [Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
 
 ## Getting started
-Install your local dependencies: we add susy and breakpoint-sass via bower and take care of sass-globbing via a grunt-task. This enables up to strip out all Compass and Ruby based dependencies.
+
+Clone this repo (or a fork of it) to your local machine for development. Once
+you have a local instance of the repo, install development and front-end 
+dependencies
 ```
 $ npm install
 $ bower install
-```
+``` 
 
-### Develop
-Starts up a grunt watch task by default.
-```$ grunt```
+### Development workflow
+This project uses Grunt to run build and setup process such as sass globbing and
+building the kss-node style guide. While developing components, run grunt watch 
+to have grunt listen to all file changes and run any necessary processes.
 
-### Finish
-Produce the full style.css file, run it through css prefixer, and generate the kss-node based style guide.
+```$ grunt watch```
+
+#### Live Reload
+Grunt watch also provides live reload functionality to refresh your browser tab 
+whenever grunt runs a task. To enable this in your workflow, grab the browser 
+plugin for your browser of choice such as the [Google Chrole extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
+and follow the instructions to enable it in your working tab.
+
+#### Final build
+Once you are done with work on components and ready tyo commit changes, kill any
+running `grunt watch` process with `Ctrl+C` and run the following:
+
 ```$ grunt build```
 
-## Defining a Component
+## What is a Component?
 
-A component is a reusable bundle of styles, markup, javascript, and other static
-resources used as the building blocks for a web page. Components have a
-determined structure, but the style and interaction behaviors can potentially
-vary from site to site.
+**Component**
+_noun_
 
-## Anatomy of a Component
+1. A reusable bundle of styles, markup, javascript, and other static resources 
+compiled together with other components to make up a webpage. 
 
+## Components of... Components
 A component can consist of the following files:
 
 * **SASS file** - Defines the visual styles of the component including any
@@ -39,7 +56,7 @@ up the component.
 of the component and provides example data to populate the handlebars template.
 * **Javascript file** - Defines any interactions required by the component.
 
-## Example Component Structure:
+### Example Component Structure:
 
 ```
 ┌ components
@@ -47,27 +64,33 @@ of the component and provides example data to populate the handlebars template.
   ├── _component-name.scss
   ├── component-name.hbs
   ├── component-name.json
-  └── component-name.js
+  ├── component-name.js
+  └─┬ component-assets
+    ├── component-icon.svg
+    └── component-image.png
 ```
 
-### Scaffold a component
-If you haven't already done so, install [grunt-init](http://gruntjs.com/project-scaffolding).
+### The SASS
 
-Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
+We use a flavor of the [BEM](https://en.bem.info/) methodology when structuring
+components. A component may contain the following parts:
 
+* Component
+* Element
+* Modifier
+* State
+
+#### Class Name Structure
 ```
-git clone https://github.com/tableau-mkt/spawn-component.git ~/.grunt-init/component
+.the-component             # Component
+.the-component__an-element # Sub-element
+.the-component--modifier   # Modifier
+.the-component:hover       # State
 ```
 
-#### Usage
-At the command-line, cd into your local www7 components directory, run this command and follow the prompts.
-
-```
-$ cd [PATH-TO-YOUR-LOCAL-WWW7-COMPONENTS-REPO]
-$ grunt-init component
-```
-
-## KSS Comment Example:
+#### KSS Comments
+We use KSS style comments in order to facilitate the automatic generation of the
+style guide. Here is an example component declaration.
 
 ```
 /*
@@ -87,7 +110,7 @@ Style guide: section.component
 */
 ```
 
-### Notes:
+##### Notes:
 
 * The weight field is optional and is used solely used for ordering the
 component within a generated style guide via kss-node.
@@ -109,18 +132,11 @@ the KSS comment where the value can be any CSS valid color (hexidecimal, rgb, or
 color keyword). This is useful in the case that a component is meant to only be 
 shown on a darker background, for instance.
 
-## Adding/Editing Components
-
-1. Clone this repo:
-`git clone git@github.com:tableau-mkt/components.git components`
-2. Install the dependencies: `bundle install` and `npm install`
-3. Watch for changes and automatically run built processes: `grunt watch`
-4. OR manually build: `grunt build` or `grunt styleguide` for just kss build
-without a compass compile.
+### Scaffold a component
+We've built a tool to help scafold out new components using [grunt-init](http://gruntjs.com/project-scaffolding)
+See the [spawn-component](https://github.com/tableau-mkt/spawn-component) repo
+to use this tool.
 
 ## Other info
-
-* The style guide generator used in this project is
-[kss-node](https://github.com/kss-node/kss-node).
-* The template used for kss-node is our custom-built
-[kss-template](https://github.com/tableau-mkt/kss-template).
+* The style guide generator used in this project is [kss-node](https://github.com/kss-node/kss-node).
+* The template used for kss-node is our custom-built [kss-template](https://github.com/tableau-mkt/kss-template).

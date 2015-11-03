@@ -118,7 +118,47 @@ of components as well as any variations (modifiers) and markup examples. </p>
 the latest updates and additions. Components will occasionally be updated, 
 added, and possibly even removed. </p>
 <p><img src="https://media.giphy.com/media/xTiTnHMbep19cuNnoY/giphy.gif" alt=""></p>
-<h4 id="development">Development</h4>
+<h2 id="usage">Usage</h2>
+<h3 id="initial-setup">Initial Setup</h3>
+<p>In order to start using the styles and components available in the style guide, 
+the following need to be included on each page:</p>
+<h5 id="html-lt-head-gt-">HTML &lt;head&gt;</h5>
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;!-- Ensures proper page width and zoom level on mobile devices --&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+&lt;!-- CSS assets. Slick stylesheets are only required for slideshows --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/bower/slick.js/slick/slick.css&quot; media=&quot;all&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/bower/slick.js/slick/slick-theme.css&quot; media=&quot;all&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/css/style.css&quot; media=&quot;all&quot; /&gt;
+&lt;!-- Tableau Sparkle favicon --&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;/build/images/favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+&lt;!-- Web Fonts - New domains will need to be requested to be whitelisted --&gt;
+&lt;link href=&quot;//cloud.webtype.com/css/22656ecb-3391-46f0-80ba-dce1b9624199.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;link href=&#39;//fonts.googleapis.com/css?family=Merriweather:300italic,300,700,700italic&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;</code></pre>
+</div>
+
+
+<h5 id="bottom-of-html-document">Bottom of HTML document</h5>
+<p>The following libraries and scripts are needed for specific interactive 
+conponents to function properly. <code>jquery.min.js</code> and <code>scripts.js</code> are required
+as these are necessary for much of the basic interactive functionality.</p>
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;script src=&quot;build/bower/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/jquery-ui/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/slick.js/slick/slick.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/hoverintent/jquery.hoverIntent.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/waypoints/lib/jquery.waypoints.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/waypoints/lib/shortcuts/sticky.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/waypoints/lib/shortcuts/inview.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/matchMedia/matchMedia.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/bower/underscore/underscore-min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/js/scripts.js&quot;&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<h3 id="using-components">Using Components</h3>
+<h1 id="-todo-this-section">@TODO this section</h1>
+<h2 id="development">Development</h2>
 <p>See the project <a href="https://github.com/tableau-mkt/components#tableau-components">README</a>
 for development guidelines for working with the style guide. If you don&#39;t have 
 access, please request it from <a href="mailto:marketing-webteam@tableau.com">marketing-webteam@tableau.com</a>.</p>

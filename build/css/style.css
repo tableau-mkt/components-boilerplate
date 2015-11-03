@@ -1083,6 +1083,7 @@ Style guide: buttons-links.link-base
 */
 a {
   text-decoration: none;
+  color: #eb912c;
 }
 
 a:hover {
@@ -4032,6 +4033,8 @@ An agenda list with a time and a description per item.
 
 Markup: agenda-list.hbs
 
+Weight: 70
+
 Style guide: lists.agenda
 */
 .agenda-list {
@@ -4222,7 +4225,7 @@ Style guide: lists.cross-reference-3
 /* 
 Link List
 
-A simple unordered list of links.
+A simple unordered list of links. Several helper modifiers provided.
 
 Weight: 20
 
@@ -4428,11 +4431,13 @@ Style guide: lists.tags
 /* 
 Standard Unordered List
 
-A standard unordered list with bullets.
+A standard unordered list with bullets. Gray background applied in order to make sure light colored bullets show up.
 
 Weight: 10
 
 Markup: list.hbs
+
+Bgcolor: #ccc
 
 .list-negative - Light colored bullets.
 
@@ -4539,6 +4544,8 @@ Markup: icon.hbs
 .icon--social-instagram - social-instagram icon
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
+.icon--arrow-left - arrow-left icon
+.icon--arrow-right - arrow-right icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--download - download icon
 .icon--laptop - laptop icon
@@ -4555,8 +4562,8 @@ Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
-  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
+  src: url("../fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.eot?22382b18992c6d1b2b84aa042655f841");
+  src: url("../fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.woff?22382b18992c6d1b2b84aa042655f841") format("woff"), url("../fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.ttf?22382b18992c6d1b2b84aa042655f841") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -4605,20 +4612,28 @@ Style Guide: media.icons
   content: "\f107";
 }
 
-.icon--cursor-cloud:before {
+.icon--arrow-left:before {
   content: "\f108";
 }
 
-.icon--download:before {
+.icon--arrow-right:before {
   content: "\f109";
 }
 
-.icon--laptop:before {
+.icon--cursor-cloud:before {
   content: "\f10a";
 }
 
-.icon--link:before {
+.icon--download:before {
   content: "\f10b";
+}
+
+.icon--laptop:before {
+  content: "\f10c";
+}
+
+.icon--link:before {
+  content: "\f10d";
 }
 
 .icon--people:before {
@@ -4626,27 +4641,27 @@ Style Guide: media.icons
 }
 
 .icon--share:before {
-  content: "\f10c";
-}
-
-.icon--tableau-logo:before {
-  content: "\f10d";
-}
-
-.icon--triangle-down:before {
   content: "\f10e";
 }
 
-.icon--triangle-left:before {
+.icon--tableau-logo:before {
   content: "\f10f";
 }
 
-.icon--triangle-right:before {
+.icon--triangle-down:before {
   content: "\f110";
 }
 
-.icon--triangle-up:before {
+.icon--triangle-left:before {
   content: "\f111";
+}
+
+.icon--triangle-right:before {
+  content: "\f112";
+}
+
+.icon--triangle-up:before {
+  content: "\f113";
 }
 
 /*

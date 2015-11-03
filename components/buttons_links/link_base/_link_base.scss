@@ -12,6 +12,7 @@ Style guide: buttons-links.link-base
 
 a {
   text-decoration: none;
+  color: $text-link;
 
   &:hover {
     text-decoration: underline;
