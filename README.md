@@ -88,7 +88,7 @@ components. A component may contain the following parts:
 * State
 
 #### Class Name Structure
-```
+``` css
 .the-component             # Component
 .the-component__an-element # Sub-element
 .the-component--modifier   # Modifier
@@ -97,13 +97,15 @@ components. A component may contain the following parts:
 
 #### KSS Comments
 We use KSS style comments in order to facilitate the automatic generation of the
-style guide. Here is an example component declaration.
+style guide. Here is an example component declaration. This comment block should
+live at the top of the SASS file for a component and be followed by the SASS 
+code.
 
-```
+``` css
 /*
 Component Name
 
-Description of the component. This can use HTML or github flavored markdown for
+Description of the component. This can use HTML or Github flavored markdown for
 highlighting code snippets such as when mentioning a `.class-name`.
 
 Markup: template-file.hbs
@@ -119,28 +121,97 @@ Style guide: section.component
 
 ##### Notes:
 
-* The weight field is optional and is used solely used for ordering the
-component within a generated style guide via kss-node.
-* There can be as many modifiers as needed and the placeholder
-`{{modifier_class}}` can be used in the handlebars template so that the
-generated style guide displays each variation properly.
+* The weight field is used for ordering the component within the generated style
+guide. This affects both navigation as well as the order in which the component
+shows up on the corresponding page. Weights are relative to the section in which
+the component lives.
+* There can be as many modifiers as needed and each one will will be displayed 
+as a separate example in the style guide.
 * The "Style guide" field determines the section and nesting in which the
 component will be displayed in the generated style guide.
-* To prevent the code exmaple from rendering for a component, add a 
+* To prevent the code example from rendering for a component, add a 
 `Nocode: true` tag to the KSS comment.
-* To prevent the the default exmaple from rendering for a component, add a 
+* To prevent the the default example from rendering for a component, add a 
 `Nodefault: true` tag to the KSS comment.
 * To prevent the entire component from rendering in the style guide altogether, 
 add a `Hidden: true` tag to the KSS comment. This is useful in cases where the 
 component is not yet ready to be added to the style guide or when a handlebars 
 template is needed as a partial, but doesn't correspond to an actual component.
 * To alter the background color of an example, add a `Bgcolor: #333333` tag to 
-the KSS comment where the value can be any CSS valid color (hexidecimal, rgb, or
+the KSS comment where the value can be any CSS valid color (hexadecimal, rgb, or
 color keyword). This is useful in the case that a component is meant to only be 
 shown on a darker background, for instance.
 
-### Scaffold a component
-We've built a tool to help scafold out new components using [grunt-init](http://gruntjs.com/project-scaffolding)
+### The Handlebars Template
+
+Each component has a [handlebars template](http://handlebarsjs.com/) to define 
+the HTML structure of the component. Templates will have the corresponding JSON
+file as the context so all content and objects in the JSON is readily available
+to the template. Additionally, all templates have a special `{{modifier_class}}`
+placeholder available that KSS uses when creating each example of a component 
+with all available modifiers. This placeholder should always be injected as a 
+class on the component wrapper element.
+
+#### Example:
+``` html
+<div class="the-component {{modifier_class}}">
+  {{#with name}}
+    <h3 class="the-component__an-element">{{ name }}</h3>
+  {{/with}}
+  {{#with src}}
+    <p>
+      <img src="{{ src }}">
+    </p>
+  {{/with}}
+  {{#if items}}
+    <ul class="the-component__another-element">
+      {{#each items}}
+        <li>{{ label }}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>
+```
+
+### The JSON
+
+Each component has a JSON file that serves two purposes. First, it defines the 
+data structure of the component which can be consumed by external systems to 
+discover the structure of how to populate the template. Secondly, it also 
+provides the style guide with example content to populate the rendered component
+with. We're pretty fond of [placecage.com](http://www.placecage.com/) for 
+placeholder images.
+
+#### Example:
+``` javascript
+{
+  "name": "Nicolas Cage",
+  "src": "http://www.placecage.com/200/300"
+  "items": [
+    {
+      "label": "Ghost Rider"
+    },
+    {
+      "label": "Face/Off"
+    },
+    {
+      "label": "National Treasure"
+    }
+  ]
+}
+```
+
+### The Javascript
+
+Some components may require javascript in order to implement interaction or 
+other special functionality. Any `.js` files within a component will get 
+concatenated into a single `scripts.js` file. 
+
+## Helper Components
+# @todo
+
+## Scaffold a component
+We've built a tool to help scaffold out new components using [grunt-init](http://gruntjs.com/project-scaffolding)
 See the [spawn-component](https://github.com/tableau-mkt/spawn-component) repo
 to use this tool.
 
