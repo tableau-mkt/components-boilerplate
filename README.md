@@ -22,7 +22,9 @@ This project uses Grunt to run build and setup process such as sass globbing and
 building the kss-node style guide. While developing components, run grunt watch 
 to have grunt listen to all file changes and run any necessary processes.
 
-```$ grunt watch```
+```
+$ grunt watch
+```
 
 #### Live Reload
 Grunt watch also provides live reload functionality to refresh your browser tab 
@@ -32,13 +34,18 @@ and follow the instructions to enable it in your working tab.
 
 #### Final build
 Once you are done with work on components and ready tyo commit changes, kill any
-running `grunt watch` process with `Ctrl+C` and run the following:
+running `grunt watch` process with `Ctrl+C` and run the following command in 
+order to run the build tasks with special options for optimization and better
+browser support.
 
-```$ grunt build```
+```
+$ grunt build
+```
 
 ## What is a Component?
 
 **Component**
+
 _noun_
 
 1. A reusable bundle of styles, markup, javascript, and other static resources 

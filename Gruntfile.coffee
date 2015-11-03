@@ -47,7 +47,7 @@ module.exports = (grunt) ->
       dist:
         options:
           sourceMap: true
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         files: [
           {
             expand: true
