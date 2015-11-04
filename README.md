@@ -67,14 +67,15 @@ of the component and provides example data to populate the handlebars template.
 
 ```
 ┌ components
-└─┬ component-name
-  ├── _component-name.scss
-  ├── component-name.hbs
-  ├── component-name.json
-  ├── component-name.js
-  └─┬ component-assets
-    ├── component-icon.svg
-    └── component-image.png
+└─┬ component-category
+  └─┬ component-name 
+    ├── _component-name.scss
+    ├── component-name.hbs
+    ├── component-name.json
+    ├── component-name.js
+    └─┬ component-assets
+      ├── component-icon.svg
+      └── component-image.png
 ```
 
 ### The SASS
@@ -186,7 +187,7 @@ placeholder images.
 ``` json
 {
   "name": "Nicolas Cage",
-  "src": "http://www.placecage.com/200/300"
+  "src": "http://www.placecage.com/200/300",
   "items": [
     {
       "label": "Ghost Rider"
@@ -218,10 +219,17 @@ The code for all of these helpers lives  within several folders prefixed with
 underscores within the `/components/` folder. 
 
 ### Base
+# @TODO
 
 ### Colors
+# @TODO
 
 ### Functions, Mixins, Variables
+
+A handful of functions, mixins, and global variables live within 
+[_helpers](/components/_helpers) in their respective folders and can be utilized
+within any component. Have a peek to see what's available and add things that 
+would be useful to have globally available. 
 
 ### Helper Classes & Placeholders
 
@@ -239,18 +247,18 @@ We use [breakpoint-sass](http://breakpoint-sass.com/) to handle media
 queries/breakpoints within components to support variations in components on
 different screen sizes. We utilize the following breakpoints:
 
-* Mobile - <940px
-* Tablet - 640px - 960px
-* Desktop - >960px
+* **Mobile** - <940px
+* **Tablet** - 640px - 960px
+* **Desktop** - >960px
 
 And we have the following SASS variables set so that we don't have to remember 
 these ranges when we need to set up a breakpoint:
 
-* `$mobile-max` or `$mobile-only` - Will only trigger on the Mobile breakpoint
-* `$tablet-min` - Will trigger on the Tablet and Desktop breakpoints
-* `$tablet-max` - Will trigger on the Tablet and Mobile breakpoints
-* `$tablet-only` - Will only trigger on the Tablet breakpoint
-* `$desktop-min` or `$desktop-only` - Will only trigger on the Desktop breakpoint
+* `$mobile-max` or `$mobile-only` - _Will only trigger on the Mobile breakpoint_
+* `$tablet-min` - _Will trigger on the Tablet and Desktop breakpoints_
+* `$tablet-max` - _Will trigger on the Tablet and Mobile breakpoints_
+* `$tablet-only` - _Will only trigger on the Tablet breakpoint_
+* `$desktop-min` or `$desktop-only` - _Will only trigger on the Desktop breakpoint_
 
 #### Example Usage
 ``` scss
@@ -270,7 +278,15 @@ these ranges when we need to set up a breakpoint:
 }
 ```
 
+#### Note:
+SASS `@extend`s are not compatible media queries because of how `@extends` are
+treated when compiled. This means you can't use `@extend` within a breakpoint.
+If you are encountering issues styles not obeying a breakpoint you have set, 
+this is likely the issue and you might need to rework your SASS to not include 
+an `@extend`.
+
 ### JS Plug-ins/helpers
+# @TODO
 
 
 ## Scaffold a component
