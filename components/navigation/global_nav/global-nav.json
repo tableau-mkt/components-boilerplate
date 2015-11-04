@@ -8,52 +8,52 @@
     "modifier_class": "link-list--inline",
     "items": [
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "Products"
-        },
-        "drawerId": "products"
+          "text": "Products",
+          "class": "expandable",
+          "drawerId": "products"
+        }
       },
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "Stories"
-        },
-        "drawerId": "stories"
+          "text": "Stories",
+          "class": "expandable",
+          "drawerId": "stories"
+        }
       },
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "Learning"
-        },
-        "drawerId": "learning"
+          "text": "Learning",
+          "class": "expandable",
+          "drawerId": "learning"
+        }
       },
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "Community"
-        },
-        "drawerId": "community"
+          "text": "Community",
+          "class": "expandable",
+          "drawerId": "community"
+        }
       },
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "Support"
-        },
-        "drawerId": "support"
+          "text": "Support",
+          "class": "expandable",
+          "drawerId": "support"
+        }
       },
       {
-        "class": "expandable",
         "link": {
           "href": "#",
-          "text": "About"
-        },
-        "drawerId": "about"
+          "text": "About",
+          "class": "expandable",
+          "drawerId": "about"
+        }
       }
     ]
   },
