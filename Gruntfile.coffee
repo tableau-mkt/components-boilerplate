@@ -128,6 +128,20 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
 
+    gh-pages:
+      options:
+        base: '.'
+      src: ['**']
+      travisDeploy:
+        options:
+          user:
+            name: 'Travis Deployment',
+            email: 'visualanalysis@tableau.com'
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git',
+          message: 'Auto-deploy via Travis CI',
+          silent: true
+        src: ['**']
+
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
 

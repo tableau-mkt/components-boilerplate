@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - '0.12'
+
+env:
+  global:
+    secure: OzNgsVe5k0OpzO+LsDyKXhm9M6CkyFrSoBjta9BqzibQoHnCePd7OU2myViTQhYoI6slu4xpDrbXy990N5nBSIpxLid8KfCFMKSMFhb9L53z6Zw/EzOjK5TYAdXrbe5/oicB23Uc62D5mbgaYLuH5yrRf6A1W/d7V9UXkjOZfKY=
+
+before_install:
+  - npm install -g grunt-cli
+
+script:
+  - npm test
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && grunt autoDeploy
