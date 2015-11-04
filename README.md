@@ -101,7 +101,7 @@ style guide. Here is an example component declaration. This comment block should
 live at the top of the SASS file for a component and be followed by the SASS 
 code.
 
-``` css
+``` scss
 /*
 Component Name
 
@@ -153,7 +153,7 @@ with all available modifiers. This placeholder should always be injected as a
 class on the component wrapper element.
 
 #### Example:
-``` html
+``` handlebars
 <div class="the-component {{modifier_class}}">
   {{#with name}}
     <h3 class="the-component__an-element">{{ name }}</h3>
@@ -183,7 +183,7 @@ with. We're pretty fond of [placecage.com](http://www.placecage.com/) for
 placeholder images.
 
 #### Example:
-``` javascript
+``` json
 {
   "name": "Nicolas Cage",
   "src": "http://www.placecage.com/200/300"
@@ -207,8 +207,71 @@ Some components may require javascript in order to implement interaction or
 other special functionality. Any `.js` files within a component will get 
 concatenated into a single `scripts.js` file. 
 
-## Helper Components
-# @todo
+## Helpers
+
+We have an handful of helper SCSS and JS that is made globally available within
+all components as well as some helper JS plug-ins and CSS classes that could 
+also be used outside of components on whatever system the component library is
+being used on (they are included in the compiled CSS and aggregated JS files).
+
+The code for all of these helpers lives  within several folders prefixed with
+underscores within the `/components/` folder. 
+
+### Base
+
+### Colors
+
+### Functions, Mixins, Variables
+
+### Helper Classes & Placeholders
+
+Lots of handy placeholders and helper classes are made available in the 
+[_helpers.scss](/components/_helpers/_helpers.scss) and 
+[_placeholders.scss](/components/_helpers/_placeholders.scss) files. Rather than 
+listing them all out here, take a look in the folders to check out what's 
+available for `@extend`'ing within components or including as classes within the
+component markup. The helper classes can also prove very handy when building out
+content on pages with static markup such as within a page in a CMS.
+
+### Breakpoints
+
+We use [breakpoint-sass](http://breakpoint-sass.com/) to handle media 
+queries/breakpoints within components to support variations in components on
+different screen sizes. We utilize the following breakpoints:
+
+* Mobile - <940px
+* Tablet - 640px - 960px
+* Desktop - >960px
+
+And we have the following SASS variables set so that we don't have to remember 
+these ranges when we need to set up a breakpoint:
+
+* `$mobile-max` or `$mobile-only` - Will only trigger on the Mobile breakpoint
+* `$tablet-min` - Will trigger on the Tablet and Desktop breakpoints
+* `$tablet-max` - Will trigger on the Tablet and Mobile breakpoints
+* `$tablet-only` - Will only trigger on the Tablet breakpoint
+* `$desktop-min` or `$desktop-only` - Will only trigger on the Desktop breakpoint
+
+#### Example Usage
+``` scss
+.the-component {
+  color: #f00;
+  margin: 3em;
+
+  // Reduce margin on Tablet and Mobile
+  @include breakpoint($tablet-max) {
+    margin: 2em;
+  }
+
+  // Change text color on Mobile
+  @include breakpoint($mobile-only) {
+    color: #0f0;
+  }
+}
+```
+
+### JS Plug-ins/helpers
+
 
 ## Scaffold a component
 We've built a tool to help scaffold out new components using [grunt-init](http://gruntjs.com/project-scaffolding)
