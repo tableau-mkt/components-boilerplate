@@ -1,18 +1,33 @@
 // Extend component to work with Drupal DOM.
 
-.group-event-details,
-.field--name-datetime-range,
-.field--name-field-agenda,
-.field--name-field-sponsors {
-  @extend .detail-field
+// "Sidebar" meta details.
+// .field--name-field-datetime-range,
+// .field--name-field-hashtag,
+// .field--name-field-sponsors
+// .sidebar--right .block--cck-blocks .detail-field {
+//   @extend .detail-field--secondary;
 
-  .field-label {
-    @extend .detail-field__label;
-  }
+//   .detail-field__label {
+//      @extend .text--label;
+//   }
+// }
+
+.field__label {
+  @extend .detail-field__label;
 }
 
-// "Sidebar" meta details.
-.group-event-details,
-.field--name-datetime-range {
-  @extend .detail-field--secondary;
+.field--name-field-sponsors,
+.field--name-field-hashtag {
+  // NOTE: Uses a breakpoint.
+  @extend .mobile-center;
+}
+
+@include breakpoint($mobile-max) {
+
+  .field--name-field-datetime-range,
+  .field-name-dynamic-field-time {
+    @extend .bg--light-gray-1;
+    float: left;
+    width: 50%;
+  }
 }

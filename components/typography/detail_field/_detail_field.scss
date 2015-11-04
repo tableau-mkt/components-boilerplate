@@ -13,11 +13,26 @@ Styleguide: typography.detail-field
 .detail-field {
 
   .detail-field__label {
-    @extend .text--label;
+    @extend .heading--x-small;
   }
 
+  // Right "sidebar" layout position.
   &.detail-field--secondary {
-    @extend .text--sub-nav;
+
+    .detail-field__items {
+      @extend .heading--label;
+      font-family: $text--benton-light;
+    }
+
+    padding-bottom: 10px;
     border-bottom: 1px solid $accent-dividers;
+
+    .detail-field__label {
+      @extend .text--label;
+    }
+
+    @include breakpoint($mobile-max) {
+      color: $text-dark-body;
+    }
   }
 }

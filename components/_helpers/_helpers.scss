@@ -8,11 +8,11 @@
 Proportionately resize iframes. Add class to a wrapper around the iframe. See
 also the responsive-placeholder mixin for custom sizes. These are just the two
 most common proportions for video players.
-*/ 
+*/
 .iframe-4-3,
 .iframe-16-9 {
   position: relative;
-  padding-bottom: 75%; /* 4:3 */ 
+  padding-bottom: 75%; /* 4:3 */
   height: 0;
 
   & iframe {
@@ -82,7 +82,7 @@ most common proportions for video players.
   @extend %plain-list;
 }
 
-// Same as .plain-list, but also makes list items inline-block.
+// Same as .plain-list, but also makes list items inline-block
 .inline-list {
   @extend %inline-list;
 }
@@ -107,6 +107,11 @@ most common proportions for video players.
   // Hide the element from display only on the mobile breakpoint
   .mobile-hide {
     display: none;
+  }
+
+  // Center element on mobile breakpoint
+  .mobile-center {
+    text-align: center;
   }
 }
 
@@ -134,9 +139,14 @@ most common proportions for video players.
   .desktop-hide {
     display: none;
   }
-  
+
   // Show element only on the tablet and mobile breakpoint
   .tablet-show {
     display: none;
+  }
+
+  // Center element on desktop breakpoint
+  .desktop-center {
+    text-align: center;
   }
 }
