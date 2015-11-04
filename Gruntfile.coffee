@@ -74,7 +74,9 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require('autoprefixer-core')({ browers: ['IE8', 'iOS', 'Opera'] })
+          require('autoprefixer-core')({
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+          })
         ]
       dist:
         src: 'build/css/*.css'
