@@ -211,7 +211,7 @@ concatenated into a single `scripts.js` file.
 ## Helpers
 
 We have an handful of helper SCSS and JS that is made globally available within
-all components as well as some helper JS plug-ins and CSS classes that could 
+all components as well as some helper JS plugins and CSS classes that could 
 also be used outside of components on whatever system the component library is
 being used on (they are included in the compiled CSS and aggregated JS files).
 
@@ -219,10 +219,29 @@ The code for all of these helpers lives  within several folders prefixed with
 underscores within the `/components/` folder. 
 
 ### Base
-# @TODO
+
+Several very base-level styles live within [_base.scss](/components/_helpers/_base.scss).
+These are very generic rules such as resets that need to happen globally on all 
+pages.
 
 ### Colors
-# @TODO
+
+Colors are defined as SASS variables within [_colors.scss](/components/_colors/_colors.scss)
+and can be used within any component. There are also several SASS maps available
+that list off sets of colors for use when a component needs modifiers for each 
+color within a set. An `@each` loop can be used within a component's SASS to
+iterate over all of the colors in a map and automatically build each of the 
+modifiers. 
+
+#### Example
+``` sass
+// Create modifiers for each available text color.
+@each $name, $color in $text-colors {
+  .text--#{"" + $name} {
+    color: $color;
+  }
+}
+```
 
 ### Functions, Mixins, Variables
 
@@ -285,8 +304,12 @@ If you are encountering issues styles not obeying a breakpoint you have set,
 this is likely the issue and you might need to rework your SASS to not include 
 an `@extend`.
 
-### JS Plug-ins/helpers
-# @TODO
+### JS Plugins/helpers
+Several useful Javascript helpers are available in [helpers.js](/components/_helpers/helpers.js)
+that can be utilized within any component-specific `.js` file. We also have 
+custom plugins available in [_js_plugins](/components/_js_plugins) for generic 
+functionality that needs to be available to multiple components. These plugins
+are written as jQuery plugins. See [jQuery's documentation](https://learn.jquery.com/plugins/basic-plugin-creation/) for a guide on writing new plugins.
 
 
 ## Scaffold a component
