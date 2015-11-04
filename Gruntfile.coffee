@@ -83,7 +83,7 @@ module.exports = (grunt) ->
 
     shell:
       kss:
-        command: 'kss-node --config template/config.json'
+        command: './node_modules/.bin/kss-node --config template/config.json'
 
     concat:
       options:
