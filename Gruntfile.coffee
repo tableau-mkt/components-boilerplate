@@ -134,7 +134,7 @@ module.exports = (grunt) ->
       options:
         base: 'styleguide'
         hostname: 'localhost'
-        livereload: true
+        livereload: false
         open: true
         useAvailablePort: true
 
