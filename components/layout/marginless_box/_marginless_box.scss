@@ -2,7 +2,7 @@
 Marginless marginless Boxes
 
 Percentage width boxes that butt up against eachother with no margin. Typically,
-a collored background would be applied with a <code>.box--{color}</code> class.
+a collored background would be applied with a <code>.bg--{color}</code> class.
 In a mobile layout, all stretchy boxes default to stacking one ontop of the other
 and in a tablet layout stretchy boxes default to a 50% split. A 
 <code>.box__stretchy--tablet-full</code> class can be applied to a box to force 

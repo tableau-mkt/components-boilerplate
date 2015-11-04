@@ -1,4 +1,9 @@
 /*
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
+
+/*
 Icons
 
 Custom icon webfont.
@@ -7,13 +12,24 @@ Nodefault: true
 
 Markup: icon.hbs
 
-.icon-people - people icon
-.icon-search - search icon
-.icon-social-facebook - social-facebook icon
-.icon-social-gplus - social-gplus icon
-.icon-social-instagram - social-instagram icon
-.icon-social-linkedin - social-linkedin icon
-.icon-social-twitter - social-twitter icon
+.icon--people - people icon
+.icon--search - search icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-twitter - social-twitter icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
+.icon--laptop - laptop icon
+.icon--link - link icon
+.icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
@@ -21,10 +37,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-a51b5eee274edddc9296cd566c0d3a22.eot?a51b5eee274edddc9296cd566c0d3a22");
-  src:url("../fonts/tableau-icons-a51b5eee274edddc9296cd566c0d3a22.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-a51b5eee274edddc9296cd566c0d3a22.woff?a51b5eee274edddc9296cd566c0d3a22") format("woff"),
-		url("../fonts/tableau-icons-a51b5eee274edddc9296cd566c0d3a22.ttf?a51b5eee274edddc9296cd566c0d3a22") format("truetype");
+  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"),
+		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -48,36 +64,91 @@ Style Guide: media.icons
 // Icons
 
 
-.icon-people:before {
+.icon--people:before {
   content:"\f101";
 }
 
 
-.icon-search:before {
+.icon--search:before {
   content:"\f102";
 }
 
 
-.icon-social-facebook:before {
+.icon--social-facebook:before {
   content:"\f103";
 }
 
 
-.icon-social-gplus:before {
+.icon--social-gplus:before {
   content:"\f104";
 }
 
 
-.icon-social-instagram:before {
+.icon--social-instagram:before {
   content:"\f105";
 }
 
 
-.icon-social-linkedin:before {
+.icon--social-linkedin:before {
   content:"\f106";
 }
 
 
-.icon-social-twitter:before {
+.icon--social-twitter:before {
   content:"\f107";
+}
+
+
+.icon--cursor-cloud:before {
+  content:"\f108";
+}
+
+
+.icon--download:before {
+  content:"\f109";
+}
+
+
+.icon--laptop:before {
+  content:"\f10a";
+}
+
+
+.icon--link:before {
+  content:"\f10b";
+}
+
+
+.icon--people:before {
+  content:"\f101";
+}
+
+
+.icon--share:before {
+  content:"\f10c";
+}
+
+
+.icon--tableau-logo:before {
+  content:"\f10d";
+}
+
+
+.icon--triangle-down:before {
+  content:"\f10e";
+}
+
+
+.icon--triangle-left:before {
+  content:"\f10f";
+}
+
+
+.icon--triangle-right:before {
+  content:"\f110";
+}
+
+
+.icon--triangle-up:before {
+  content:"\f111";
 }

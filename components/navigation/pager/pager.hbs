@@ -1,0 +1,7 @@
+<ul class="pager {{ modifier_class }}">
+  <li class="pager__endcap pager__endcap--previous pager__endcap--current"><a href="#">Prev</a></li>
+  {{#each pages}}
+    <li class="pager__page{{#if current}} pager__page--current{{/if}}"><a href="#">{{ number }}</a></li>
+  {{/each}}
+  <li class="pager__endcap pager__endcap--next"><a href="#">Next</a></li>
+</ul>

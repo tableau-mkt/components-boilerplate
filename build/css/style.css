@@ -194,17 +194,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .pager, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -483,17 +483,17 @@ most common proportions for video players.
  *
  * Using placeholders results in CSS rule combining for selectors.
  */
-.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
+.plain-list, .inline-list, .tabs__tabs, .link-list.link-list--inline, .tags-list, .pager, .topic-nav .topic-nav__tabs, .context-switcher .context-switcher__list, .agenda-list, .link-list.link-list--plain, .link-list.video-chapters, .people-list, .topic-nav .topic-nav__topic-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
+.plain-list li, .inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li, .context-switcher .context-switcher__list li, .agenda-list li, .link-list.link-list--plain li, .link-list.video-chapters li, .people-list li, .topic-nav .topic-nav__topic-list li {
   list-style: none;
 }
 
-.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .topic-nav .topic-nav__tabs li {
+.inline-list li, .tabs__tabs li, .link-list.link-list--inline li, .tags-list li, .pager li, .topic-nav .topic-nav__tabs li {
   display: inline-block;
 }
 
@@ -836,6 +836,14 @@ Style guide: buttons-links.cta
   vertical-align: middle;
 }
 
+.cta.cta--download:after, .form__wrapper input.cta--download[type="submit"]:after {
+  content: "\f109";
+  height: 10px;
+  padding-left: 1em;
+  font-size: 1.5em;
+  text-decoration: none !important;
+}
+
 .cta.cta--secondary, .form__wrapper input[type="submit"] {
   border: 2px solid #eb912c;
   padding: 15px 23px;
@@ -941,7 +949,7 @@ Style guide: buttons-links.data-source
 .data-source-link .data-source-link__number {
   font-family: "Benton Sans Thin", Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 3.5714285714em;
+  font-size: 3.125em;
   line-height: 66px;
 }
 
@@ -1086,38 +1094,66 @@ Weight: 20
 
 Style guide: buttons-links.link-formatted
 */
-.link, .video-chapters__toggle-wrapper .video-chapters__toggle {
-  font-size: 0.7857142857em;
+.link, .topic-link, .video-chapters__toggle-wrapper .video-chapters__toggle {
+  font-size: 0.6875em;
   letter-spacing: 1px;
   color: #eb912c;
   text-transform: uppercase;
 }
 
-.link.link--arrow:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
+.link.link--arrow:after, .link--arrow.topic-link:after, .video-chapters__toggle-wrapper .link--arrow.video-chapters__toggle:after {
   content: url(../images/icons/icon-arrow-orange.png);
   padding-left: 1em;
 }
 
 .link.link--expand:before,
+.link--expand.topic-link:before,
 .video-chapters__toggle-wrapper .video-chapters__toggle:before,
 .link.link--collapse:before,
+.link--collapse.topic-link:before,
 .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before,
-.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+.link.link--share:before, .link--share.topic-link:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding-right: 1em;
+  line-height: 1;
 }
 
-.link.link--expand:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
+.link.link--expand:before, .link--expand.topic-link:before, .video-chapters__toggle-wrapper .video-chapters__toggle:before {
   content: url(../images/icons/expand.png);
 }
 
-.link.link--collapse:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
+.link.link--collapse:before, .link--collapse.topic-link:before, .video-chapters__toggle-wrapper .link--collapse.video-chapters__toggle:before {
   content: url(../images/icons/collapse.png);
 }
 
-.link.link--share:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
+.link.link--share:before, .link--share.topic-link:before, .video-chapters__toggle-wrapper .link--share.video-chapters__toggle:before {
   content: url(../images/icons/share.png);
+}
+
+/*
+Topic Link
+
+Links to a topic that a piece of content was tagged with. Meant to be used on a
+a full content view page as the primary topic that the piece of content is 
+tagged with.
+
+Markup: topic-link.hbs
+
+Style guide: buttons-links.topic-link
+*/
+.topic-link {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  color: #333;
+  -webkit-transition: border-color 0.25s;
+          transition: border-color 0.25s;
+}
+
+.topic-link:hover {
+  border-color: #dedede;
 }
 
 /*
@@ -1199,7 +1235,7 @@ textarea,
   padding: 1.7em 0.5em 0.3em;
   background: #fff;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
   text-align: left;
 }
@@ -1735,7 +1771,7 @@ Style guide: interactive.reveal
   height: 45px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
   color: #fff;
   text-align: center;
   font-weight: bold;
@@ -1789,6 +1825,17 @@ Style guide: interactive.social-share
   color: #eb912c;
 }
 
+.social-share:hover {
+  text-decoration: none;
+}
+
+.social-share .icon, .social-share .cta.cta--download:after, .social-share .form__wrapper input.cta--download[type="submit"]:after, .form__wrapper .social-share input.cta--download[type="submit"]:after, .social-share .pager .pager__endcap.pager__endcap--previous a:before, .pager .pager__endcap.pager__endcap--previous .social-share a:before,
+.social-share .pager .pager__endcap.pager__endcap--next a:after, .pager .pager__endcap.pager__endcap--next .social-share a:after {
+  font-size: 16px;
+  line-height: 13px;
+  vertical-align: top;
+}
+
 .social-share__widgets {
   position: relative;
   overflow: hidden;
@@ -1812,6 +1859,52 @@ Style guide: interactive.social-share
 }
 
 /*
+Sticky elements
+
+Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
+once they get scrolled to and are about to go out of view.
+
+Markup: sticky.hbs
+
+.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
+
+Style guide: interactive.sticky
+*/
+.stuck {
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 961px) {
+  .sticky--desktop.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .sticky--tablet.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .sticky--mobile.stuck {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/*
 Content Tabs
 
 Tabbed content sections where one section is visible at a time.
@@ -1828,11 +1921,11 @@ Style guide: interactive.tabs
   font-weight: bold;
 }
 
-.box--data-sources .tabs__tab-link, .card.card--quote .tabs__tab-link {
+.bg--data-sources .tabs__tab-link, .card.card--quote .tabs__tab-link {
   color: #a3b9cb;
 }
 
-.box--data-sources .tabs__tab-link.active, .card.card--quote .tabs__tab-link.active {
+.bg--data-sources .tabs__tab-link.active, .card.card--quote .tabs__tab-link.active {
   color: #fff;
 }
 
@@ -1957,417 +2050,432 @@ Style guide: interactive.viz-slideshow
 }
 
 /* 
-Colored Backgrounds
+Background Colors
 
 These classes will apply a background to any container div. It does not apply
 any other styles, except the background-color and a text color if needed for 
-legibility. <code>.grid-6</code> and <code>.box-__added</code> are used here
-just to make the examples look better.
-@TODO - Rename this component and do away with the 'box' base element. Rename to
-bg--{color-name} or something similar.
+legibility. 
 
-Markup: box_colored.hbs
+Markup: bg_color.hbs
 
 Nodefault: true
 
+Nocode: true
+
 Weight: 2
 
-.box--white - White BG colored box - (#fff)
-.box--light-gray-1 - Light Gray 1 colored box - (#fafafa)
-.box--light-gray-2 - Light Gray 2 colored box - (#ebebeb)
-.box--dark-gray-1 - Dk Gray 1 colored box - (#464646)
-.box--dark-gray-2 - Dk Gray 2 colored box - (#333)
-.box--dark-gray-3 - Dk Gray 3 colored box - (#1b1b1b)
-.box--about-featured - About/Feat colored box - (#457387)
-.box--data-sources - Data Sources colored box - (#2e4c65)
-.box--desktop - Desktop product colored box - (#23529c)
-.box--server - Server product colored box - (#7fa9bb)
-.box--online - Online product colored box - (#58a3b9)
-.box--public - Public product colored box - (#324E7A)
-.box--reader - Reader product colored box - (#B28CCF)
-.box--mobile - Mobile product colored box - (#DB8E6A)
-.box--nav-drawer-gray-1 - Global nav drawer primary colored box - (#f0f0f0)
-.box--nav-drawer-gray-2 - Global nav drawer secondary colored box - (#ddd)
+.bg--white - White background color. - (#fff)
+.bg--light-gray-1 - Light Gray 1 background color - (#fafafa)
+.bg--light-gray-2 - Light Gray 2 background color - (#ebebeb)
+.bg--dark-gray-1 - Dk Gray 1 background color - (#464646)
+.bg--dark-gray-2 - Dk Gray 2 background color - (#333)
+.bg--dark-gray-3 - Dk Gray 3 background color - (#1b1b1b)
+.bg--about-featured - About/Feat background color - (#457387)
+.bg--data-sources - Data Sources background color - (#2e4c65)
+.bg--desktop - Desktop product background color - (#23529c)
+.bg--server - Server product background color - (#7fa9bb)
+.bg--online - Online product background color - (#58a3b9)
+.bg--public - Public product background color - (#324E7A)
+.bg--reader - Reader product background color - (#B28CCF)
+.bg--mobile - Mobile product background color - (#DB8E6A)
+.bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
+.bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
+.bg--media-shade - Dark gradient background for sections of content containing media (vizzes, videos) - (#464646 - #1b1b1b)
 
 Style guide: layout.colored
 */
 /* Create a class for each background color */
-.box--white {
+.bg--white {
   background-color: #fff;
   color: #333;
 }
 
-.box--white h1, .box--white .heading--homepage, .box--white .heading--product, .box--white .heading--download, .box--white .heading--h1,
-.box--white h2, .box--white .heading--medium, .box--white .heading--h2,
-.box--white h3, .box--white .heading--small, .box--white .heading--h3,
-.box--white h4, .box--white .heading--x-small, .box--white .heading--h4,
-.box--white h5, .box--white .heading--label, .box--white .heading--h5,
-.box--white h6, .box--white .heading--h6 {
+.bg--white h1, .bg--white .heading--homepage, .bg--white .heading--product, .bg--white .heading--h1,
+.bg--white h2, .bg--white .heading--medium, .bg--white .heading--h2,
+.bg--white h3, .bg--white .heading--h3,
+.bg--white h4, .bg--white .heading--h4,
+.bg--white h5, .bg--white .heading--label, .bg--white .heading--h5,
+.bg--white h6, .bg--white .heading--h6 {
   color: #000;
 }
 
-.box--white h1 a, .box--white .heading--homepage a, .box--white .heading--product a, .box--white .heading--download a, .box--white .heading--h1 a,
-.box--white h2 a, .box--white .heading--medium a, .box--white .heading--h2 a,
-.box--white h3 a, .box--white .heading--small a, .box--white .heading--h3 a,
-.box--white h4 a, .box--white .heading--x-small a, .box--white .heading--h4 a,
-.box--white h5 a, .box--white .heading--label a, .box--white .heading--h5 a,
-.box--white h6 a, .box--white .heading--h6 a {
+.bg--white h1 a, .bg--white .heading--homepage a, .bg--white .heading--product a, .bg--white .heading--h1 a,
+.bg--white h2 a, .bg--white .heading--medium a, .bg--white .heading--h2 a,
+.bg--white h3 a, .bg--white .heading--h3 a,
+.bg--white h4 a, .bg--white .heading--h4 a,
+.bg--white h5 a, .bg--white .heading--label a, .bg--white .heading--h5 a,
+.bg--white h6 a, .bg--white .heading--h6 a {
   color: #000;
 }
 
-.box--light-gray-1 {
+.bg--light-gray-1 {
   background-color: #fafafa;
   color: #333;
 }
 
-.box--light-gray-1 h1, .box--light-gray-1 .heading--homepage, .box--light-gray-1 .heading--product, .box--light-gray-1 .heading--download, .box--light-gray-1 .heading--h1,
-.box--light-gray-1 h2, .box--light-gray-1 .heading--medium, .box--light-gray-1 .heading--h2,
-.box--light-gray-1 h3, .box--light-gray-1 .heading--small, .box--light-gray-1 .heading--h3,
-.box--light-gray-1 h4, .box--light-gray-1 .heading--x-small, .box--light-gray-1 .heading--h4,
-.box--light-gray-1 h5, .box--light-gray-1 .heading--label, .box--light-gray-1 .heading--h5,
-.box--light-gray-1 h6, .box--light-gray-1 .heading--h6 {
+.bg--light-gray-1 h1, .bg--light-gray-1 .heading--homepage, .bg--light-gray-1 .heading--product, .bg--light-gray-1 .heading--h1,
+.bg--light-gray-1 h2, .bg--light-gray-1 .heading--medium, .bg--light-gray-1 .heading--h2,
+.bg--light-gray-1 h3, .bg--light-gray-1 .heading--h3,
+.bg--light-gray-1 h4, .bg--light-gray-1 .heading--h4,
+.bg--light-gray-1 h5, .bg--light-gray-1 .heading--label, .bg--light-gray-1 .heading--h5,
+.bg--light-gray-1 h6, .bg--light-gray-1 .heading--h6 {
   color: #000;
 }
 
-.box--light-gray-1 h1 a, .box--light-gray-1 .heading--homepage a, .box--light-gray-1 .heading--product a, .box--light-gray-1 .heading--download a, .box--light-gray-1 .heading--h1 a,
-.box--light-gray-1 h2 a, .box--light-gray-1 .heading--medium a, .box--light-gray-1 .heading--h2 a,
-.box--light-gray-1 h3 a, .box--light-gray-1 .heading--small a, .box--light-gray-1 .heading--h3 a,
-.box--light-gray-1 h4 a, .box--light-gray-1 .heading--x-small a, .box--light-gray-1 .heading--h4 a,
-.box--light-gray-1 h5 a, .box--light-gray-1 .heading--label a, .box--light-gray-1 .heading--h5 a,
-.box--light-gray-1 h6 a, .box--light-gray-1 .heading--h6 a {
+.bg--light-gray-1 h1 a, .bg--light-gray-1 .heading--homepage a, .bg--light-gray-1 .heading--product a, .bg--light-gray-1 .heading--h1 a,
+.bg--light-gray-1 h2 a, .bg--light-gray-1 .heading--medium a, .bg--light-gray-1 .heading--h2 a,
+.bg--light-gray-1 h3 a, .bg--light-gray-1 .heading--h3 a,
+.bg--light-gray-1 h4 a, .bg--light-gray-1 .heading--h4 a,
+.bg--light-gray-1 h5 a, .bg--light-gray-1 .heading--label a, .bg--light-gray-1 .heading--h5 a,
+.bg--light-gray-1 h6 a, .bg--light-gray-1 .heading--h6 a {
   color: #000;
 }
 
-.box--light-gray-2 {
+.bg--light-gray-2 {
   background-color: #ebebeb;
   color: #333;
 }
 
-.box--light-gray-2 h1, .box--light-gray-2 .heading--homepage, .box--light-gray-2 .heading--product, .box--light-gray-2 .heading--download, .box--light-gray-2 .heading--h1,
-.box--light-gray-2 h2, .box--light-gray-2 .heading--medium, .box--light-gray-2 .heading--h2,
-.box--light-gray-2 h3, .box--light-gray-2 .heading--small, .box--light-gray-2 .heading--h3,
-.box--light-gray-2 h4, .box--light-gray-2 .heading--x-small, .box--light-gray-2 .heading--h4,
-.box--light-gray-2 h5, .box--light-gray-2 .heading--label, .box--light-gray-2 .heading--h5,
-.box--light-gray-2 h6, .box--light-gray-2 .heading--h6 {
+.bg--light-gray-2 h1, .bg--light-gray-2 .heading--homepage, .bg--light-gray-2 .heading--product, .bg--light-gray-2 .heading--h1,
+.bg--light-gray-2 h2, .bg--light-gray-2 .heading--medium, .bg--light-gray-2 .heading--h2,
+.bg--light-gray-2 h3, .bg--light-gray-2 .heading--h3,
+.bg--light-gray-2 h4, .bg--light-gray-2 .heading--h4,
+.bg--light-gray-2 h5, .bg--light-gray-2 .heading--label, .bg--light-gray-2 .heading--h5,
+.bg--light-gray-2 h6, .bg--light-gray-2 .heading--h6 {
   color: #000;
 }
 
-.box--light-gray-2 h1 a, .box--light-gray-2 .heading--homepage a, .box--light-gray-2 .heading--product a, .box--light-gray-2 .heading--download a, .box--light-gray-2 .heading--h1 a,
-.box--light-gray-2 h2 a, .box--light-gray-2 .heading--medium a, .box--light-gray-2 .heading--h2 a,
-.box--light-gray-2 h3 a, .box--light-gray-2 .heading--small a, .box--light-gray-2 .heading--h3 a,
-.box--light-gray-2 h4 a, .box--light-gray-2 .heading--x-small a, .box--light-gray-2 .heading--h4 a,
-.box--light-gray-2 h5 a, .box--light-gray-2 .heading--label a, .box--light-gray-2 .heading--h5 a,
-.box--light-gray-2 h6 a, .box--light-gray-2 .heading--h6 a {
+.bg--light-gray-2 h1 a, .bg--light-gray-2 .heading--homepage a, .bg--light-gray-2 .heading--product a, .bg--light-gray-2 .heading--h1 a,
+.bg--light-gray-2 h2 a, .bg--light-gray-2 .heading--medium a, .bg--light-gray-2 .heading--h2 a,
+.bg--light-gray-2 h3 a, .bg--light-gray-2 .heading--h3 a,
+.bg--light-gray-2 h4 a, .bg--light-gray-2 .heading--h4 a,
+.bg--light-gray-2 h5 a, .bg--light-gray-2 .heading--label a, .bg--light-gray-2 .heading--h5 a,
+.bg--light-gray-2 h6 a, .bg--light-gray-2 .heading--h6 a {
   color: #000;
 }
 
-.box--dark-gray-1 {
+.bg--dark-gray-1 {
   background-color: #464646;
   color: #bbb;
 }
 
-.box--dark-gray-1 h1, .box--dark-gray-1 .heading--homepage, .box--dark-gray-1 .heading--product, .box--dark-gray-1 .heading--download, .box--dark-gray-1 .heading--h1,
-.box--dark-gray-1 h2, .box--dark-gray-1 .heading--medium, .box--dark-gray-1 .heading--h2,
-.box--dark-gray-1 h3, .box--dark-gray-1 .heading--small, .box--dark-gray-1 .heading--h3,
-.box--dark-gray-1 h4, .box--dark-gray-1 .heading--x-small, .box--dark-gray-1 .heading--h4,
-.box--dark-gray-1 h5, .box--dark-gray-1 .heading--label, .box--dark-gray-1 .heading--h5,
-.box--dark-gray-1 h6, .box--dark-gray-1 .heading--h6 {
+.bg--dark-gray-1 h1, .bg--dark-gray-1 .heading--homepage, .bg--dark-gray-1 .heading--product, .bg--dark-gray-1 .heading--h1,
+.bg--dark-gray-1 h2, .bg--dark-gray-1 .heading--medium, .bg--dark-gray-1 .heading--h2,
+.bg--dark-gray-1 h3, .bg--dark-gray-1 .heading--h3,
+.bg--dark-gray-1 h4, .bg--dark-gray-1 .heading--h4,
+.bg--dark-gray-1 h5, .bg--dark-gray-1 .heading--label, .bg--dark-gray-1 .heading--h5,
+.bg--dark-gray-1 h6, .bg--dark-gray-1 .heading--h6 {
   color: #fff;
 }
 
-.box--dark-gray-1 h1 a, .box--dark-gray-1 .heading--homepage a, .box--dark-gray-1 .heading--product a, .box--dark-gray-1 .heading--download a, .box--dark-gray-1 .heading--h1 a,
-.box--dark-gray-1 h2 a, .box--dark-gray-1 .heading--medium a, .box--dark-gray-1 .heading--h2 a,
-.box--dark-gray-1 h3 a, .box--dark-gray-1 .heading--small a, .box--dark-gray-1 .heading--h3 a,
-.box--dark-gray-1 h4 a, .box--dark-gray-1 .heading--x-small a, .box--dark-gray-1 .heading--h4 a,
-.box--dark-gray-1 h5 a, .box--dark-gray-1 .heading--label a, .box--dark-gray-1 .heading--h5 a,
-.box--dark-gray-1 h6 a, .box--dark-gray-1 .heading--h6 a {
+.bg--dark-gray-1 h1 a, .bg--dark-gray-1 .heading--homepage a, .bg--dark-gray-1 .heading--product a, .bg--dark-gray-1 .heading--h1 a,
+.bg--dark-gray-1 h2 a, .bg--dark-gray-1 .heading--medium a, .bg--dark-gray-1 .heading--h2 a,
+.bg--dark-gray-1 h3 a, .bg--dark-gray-1 .heading--h3 a,
+.bg--dark-gray-1 h4 a, .bg--dark-gray-1 .heading--h4 a,
+.bg--dark-gray-1 h5 a, .bg--dark-gray-1 .heading--label a, .bg--dark-gray-1 .heading--h5 a,
+.bg--dark-gray-1 h6 a, .bg--dark-gray-1 .heading--h6 a {
   color: #fff;
 }
 
-.box--dark-gray-2 {
+.bg--dark-gray-2 {
   background-color: #333;
   color: #bbb;
 }
 
-.box--dark-gray-2 h1, .box--dark-gray-2 .heading--homepage, .box--dark-gray-2 .heading--product, .box--dark-gray-2 .heading--download, .box--dark-gray-2 .heading--h1,
-.box--dark-gray-2 h2, .box--dark-gray-2 .heading--medium, .box--dark-gray-2 .heading--h2,
-.box--dark-gray-2 h3, .box--dark-gray-2 .heading--small, .box--dark-gray-2 .heading--h3,
-.box--dark-gray-2 h4, .box--dark-gray-2 .heading--x-small, .box--dark-gray-2 .heading--h4,
-.box--dark-gray-2 h5, .box--dark-gray-2 .heading--label, .box--dark-gray-2 .heading--h5,
-.box--dark-gray-2 h6, .box--dark-gray-2 .heading--h6 {
+.bg--dark-gray-2 h1, .bg--dark-gray-2 .heading--homepage, .bg--dark-gray-2 .heading--product, .bg--dark-gray-2 .heading--h1,
+.bg--dark-gray-2 h2, .bg--dark-gray-2 .heading--medium, .bg--dark-gray-2 .heading--h2,
+.bg--dark-gray-2 h3, .bg--dark-gray-2 .heading--h3,
+.bg--dark-gray-2 h4, .bg--dark-gray-2 .heading--h4,
+.bg--dark-gray-2 h5, .bg--dark-gray-2 .heading--label, .bg--dark-gray-2 .heading--h5,
+.bg--dark-gray-2 h6, .bg--dark-gray-2 .heading--h6 {
   color: #fff;
 }
 
-.box--dark-gray-2 h1 a, .box--dark-gray-2 .heading--homepage a, .box--dark-gray-2 .heading--product a, .box--dark-gray-2 .heading--download a, .box--dark-gray-2 .heading--h1 a,
-.box--dark-gray-2 h2 a, .box--dark-gray-2 .heading--medium a, .box--dark-gray-2 .heading--h2 a,
-.box--dark-gray-2 h3 a, .box--dark-gray-2 .heading--small a, .box--dark-gray-2 .heading--h3 a,
-.box--dark-gray-2 h4 a, .box--dark-gray-2 .heading--x-small a, .box--dark-gray-2 .heading--h4 a,
-.box--dark-gray-2 h5 a, .box--dark-gray-2 .heading--label a, .box--dark-gray-2 .heading--h5 a,
-.box--dark-gray-2 h6 a, .box--dark-gray-2 .heading--h6 a {
+.bg--dark-gray-2 h1 a, .bg--dark-gray-2 .heading--homepage a, .bg--dark-gray-2 .heading--product a, .bg--dark-gray-2 .heading--h1 a,
+.bg--dark-gray-2 h2 a, .bg--dark-gray-2 .heading--medium a, .bg--dark-gray-2 .heading--h2 a,
+.bg--dark-gray-2 h3 a, .bg--dark-gray-2 .heading--h3 a,
+.bg--dark-gray-2 h4 a, .bg--dark-gray-2 .heading--h4 a,
+.bg--dark-gray-2 h5 a, .bg--dark-gray-2 .heading--label a, .bg--dark-gray-2 .heading--h5 a,
+.bg--dark-gray-2 h6 a, .bg--dark-gray-2 .heading--h6 a {
   color: #fff;
 }
 
-.box--dark-gray-3 {
+.bg--dark-gray-3, .bg--media-shade {
   background-color: #1b1b1b;
   color: #bbb;
 }
 
-.box--dark-gray-3 h1, .box--dark-gray-3 .heading--homepage, .box--dark-gray-3 .heading--product, .box--dark-gray-3 .heading--download, .box--dark-gray-3 .heading--h1,
-.box--dark-gray-3 h2, .box--dark-gray-3 .heading--medium, .box--dark-gray-3 .heading--h2,
-.box--dark-gray-3 h3, .box--dark-gray-3 .heading--small, .box--dark-gray-3 .heading--h3,
-.box--dark-gray-3 h4, .box--dark-gray-3 .heading--x-small, .box--dark-gray-3 .heading--h4,
-.box--dark-gray-3 h5, .box--dark-gray-3 .heading--label, .box--dark-gray-3 .heading--h5,
-.box--dark-gray-3 h6, .box--dark-gray-3 .heading--h6 {
+.bg--dark-gray-3 h1, .bg--media-shade h1, .bg--dark-gray-3 .heading--homepage, .bg--media-shade .heading--homepage, .bg--dark-gray-3 .heading--product, .bg--media-shade .heading--product, .bg--dark-gray-3 .heading--h1,
+.bg--media-shade .heading--h1,
+.bg--dark-gray-3 h2, .bg--media-shade h2, .bg--dark-gray-3 .heading--medium, .bg--media-shade .heading--medium, .bg--dark-gray-3 .heading--h2,
+.bg--media-shade .heading--h2,
+.bg--dark-gray-3 h3, .bg--media-shade h3, .bg--dark-gray-3 .heading--h3,
+.bg--media-shade .heading--h3,
+.bg--dark-gray-3 h4, .bg--media-shade h4, .bg--dark-gray-3 .heading--h4,
+.bg--media-shade .heading--h4,
+.bg--dark-gray-3 h5, .bg--media-shade h5, .bg--dark-gray-3 .heading--label, .bg--media-shade .heading--label, .bg--dark-gray-3 .heading--h5,
+.bg--media-shade .heading--h5,
+.bg--dark-gray-3 h6, .bg--media-shade h6, .bg--dark-gray-3 .heading--h6, .bg--media-shade .heading--h6 {
   color: #fff;
 }
 
-.box--dark-gray-3 h1 a, .box--dark-gray-3 .heading--homepage a, .box--dark-gray-3 .heading--product a, .box--dark-gray-3 .heading--download a, .box--dark-gray-3 .heading--h1 a,
-.box--dark-gray-3 h2 a, .box--dark-gray-3 .heading--medium a, .box--dark-gray-3 .heading--h2 a,
-.box--dark-gray-3 h3 a, .box--dark-gray-3 .heading--small a, .box--dark-gray-3 .heading--h3 a,
-.box--dark-gray-3 h4 a, .box--dark-gray-3 .heading--x-small a, .box--dark-gray-3 .heading--h4 a,
-.box--dark-gray-3 h5 a, .box--dark-gray-3 .heading--label a, .box--dark-gray-3 .heading--h5 a,
-.box--dark-gray-3 h6 a, .box--dark-gray-3 .heading--h6 a {
+.bg--dark-gray-3 h1 a, .bg--media-shade h1 a, .bg--dark-gray-3 .heading--homepage a, .bg--media-shade .heading--homepage a, .bg--dark-gray-3 .heading--product a, .bg--media-shade .heading--product a, .bg--dark-gray-3 .heading--h1 a,
+.bg--media-shade .heading--h1 a,
+.bg--dark-gray-3 h2 a, .bg--media-shade h2 a, .bg--dark-gray-3 .heading--medium a, .bg--media-shade .heading--medium a, .bg--dark-gray-3 .heading--h2 a,
+.bg--media-shade .heading--h2 a,
+.bg--dark-gray-3 h3 a, .bg--media-shade h3 a, .bg--dark-gray-3 .heading--h3 a,
+.bg--media-shade .heading--h3 a,
+.bg--dark-gray-3 h4 a, .bg--media-shade h4 a, .bg--dark-gray-3 .heading--h4 a,
+.bg--media-shade .heading--h4 a,
+.bg--dark-gray-3 h5 a, .bg--media-shade h5 a, .bg--dark-gray-3 .heading--label a, .bg--media-shade .heading--label a, .bg--dark-gray-3 .heading--h5 a,
+.bg--media-shade .heading--h5 a,
+.bg--dark-gray-3 h6 a, .bg--media-shade h6 a, .bg--dark-gray-3 .heading--h6 a, .bg--media-shade .heading--h6 a {
   color: #fff;
 }
 
-.box--about-featured {
+.bg--about-featured {
   background-color: #457387;
   color: #fff;
 }
 
-.box--about-featured h1, .box--about-featured .heading--homepage, .box--about-featured .heading--product, .box--about-featured .heading--download, .box--about-featured .heading--h1,
-.box--about-featured h2, .box--about-featured .heading--medium, .box--about-featured .heading--h2,
-.box--about-featured h3, .box--about-featured .heading--small, .box--about-featured .heading--h3,
-.box--about-featured h4, .box--about-featured .heading--x-small, .box--about-featured .heading--h4,
-.box--about-featured h5, .box--about-featured .heading--label, .box--about-featured .heading--h5,
-.box--about-featured h6, .box--about-featured .heading--h6 {
+.bg--about-featured h1, .bg--about-featured .heading--homepage, .bg--about-featured .heading--product, .bg--about-featured .heading--h1,
+.bg--about-featured h2, .bg--about-featured .heading--medium, .bg--about-featured .heading--h2,
+.bg--about-featured h3, .bg--about-featured .heading--h3,
+.bg--about-featured h4, .bg--about-featured .heading--h4,
+.bg--about-featured h5, .bg--about-featured .heading--label, .bg--about-featured .heading--h5,
+.bg--about-featured h6, .bg--about-featured .heading--h6 {
   color: #fff;
 }
 
-.box--about-featured h1 a, .box--about-featured .heading--homepage a, .box--about-featured .heading--product a, .box--about-featured .heading--download a, .box--about-featured .heading--h1 a,
-.box--about-featured h2 a, .box--about-featured .heading--medium a, .box--about-featured .heading--h2 a,
-.box--about-featured h3 a, .box--about-featured .heading--small a, .box--about-featured .heading--h3 a,
-.box--about-featured h4 a, .box--about-featured .heading--x-small a, .box--about-featured .heading--h4 a,
-.box--about-featured h5 a, .box--about-featured .heading--label a, .box--about-featured .heading--h5 a,
-.box--about-featured h6 a, .box--about-featured .heading--h6 a {
+.bg--about-featured h1 a, .bg--about-featured .heading--homepage a, .bg--about-featured .heading--product a, .bg--about-featured .heading--h1 a,
+.bg--about-featured h2 a, .bg--about-featured .heading--medium a, .bg--about-featured .heading--h2 a,
+.bg--about-featured h3 a, .bg--about-featured .heading--h3 a,
+.bg--about-featured h4 a, .bg--about-featured .heading--h4 a,
+.bg--about-featured h5 a, .bg--about-featured .heading--label a, .bg--about-featured .heading--h5 a,
+.bg--about-featured h6 a, .bg--about-featured .heading--h6 a {
   color: #fff;
 }
 
-.box--data-sources, .card.card--quote {
+.bg--data-sources, .card.card--quote {
   background-color: #2e4c65;
   color: #fff;
 }
 
-.box--data-sources h1, .card.card--quote h1, .box--data-sources .heading--homepage, .card.card--quote .heading--homepage, .box--data-sources .heading--product, .card.card--quote .heading--product, .box--data-sources .heading--download, .card.card--quote .heading--download, .box--data-sources .heading--h1,
+.bg--data-sources h1, .card.card--quote h1, .bg--data-sources .heading--homepage, .card.card--quote .heading--homepage, .bg--data-sources .heading--product, .card.card--quote .heading--product, .bg--data-sources .heading--h1,
 .card.card--quote .heading--h1,
-.box--data-sources h2, .card.card--quote h2, .box--data-sources .heading--medium, .card.card--quote .heading--medium, .box--data-sources .heading--h2,
+.bg--data-sources h2, .card.card--quote h2, .bg--data-sources .heading--medium, .card.card--quote .heading--medium, .bg--data-sources .heading--h2,
 .card.card--quote .heading--h2,
-.box--data-sources h3, .card.card--quote h3, .box--data-sources .heading--small, .card.card--quote .heading--small, .box--data-sources .heading--h3,
+.bg--data-sources h3, .card.card--quote h3, .bg--data-sources .heading--h3,
 .card.card--quote .heading--h3,
-.box--data-sources h4, .card.card--quote h4, .box--data-sources .heading--x-small, .card.card--quote .heading--x-small, .box--data-sources .heading--h4,
+.bg--data-sources h4, .card.card--quote h4, .bg--data-sources .heading--h4,
 .card.card--quote .heading--h4,
-.box--data-sources h5, .card.card--quote h5, .box--data-sources .heading--label, .card.card--quote .heading--label, .box--data-sources .heading--h5,
+.bg--data-sources h5, .card.card--quote h5, .bg--data-sources .heading--label, .card.card--quote .heading--label, .bg--data-sources .heading--h5,
 .card.card--quote .heading--h5,
-.box--data-sources h6, .card.card--quote h6, .box--data-sources .heading--h6, .card.card--quote .heading--h6 {
+.bg--data-sources h6, .card.card--quote h6, .bg--data-sources .heading--h6, .card.card--quote .heading--h6 {
   color: #fff;
 }
 
-.box--data-sources h1 a, .card.card--quote h1 a, .box--data-sources .heading--homepage a, .card.card--quote .heading--homepage a, .box--data-sources .heading--product a, .card.card--quote .heading--product a, .box--data-sources .heading--download a, .card.card--quote .heading--download a, .box--data-sources .heading--h1 a,
+.bg--data-sources h1 a, .card.card--quote h1 a, .bg--data-sources .heading--homepage a, .card.card--quote .heading--homepage a, .bg--data-sources .heading--product a, .card.card--quote .heading--product a, .bg--data-sources .heading--h1 a,
 .card.card--quote .heading--h1 a,
-.box--data-sources h2 a, .card.card--quote h2 a, .box--data-sources .heading--medium a, .card.card--quote .heading--medium a, .box--data-sources .heading--h2 a,
+.bg--data-sources h2 a, .card.card--quote h2 a, .bg--data-sources .heading--medium a, .card.card--quote .heading--medium a, .bg--data-sources .heading--h2 a,
 .card.card--quote .heading--h2 a,
-.box--data-sources h3 a, .card.card--quote h3 a, .box--data-sources .heading--small a, .card.card--quote .heading--small a, .box--data-sources .heading--h3 a,
+.bg--data-sources h3 a, .card.card--quote h3 a, .bg--data-sources .heading--h3 a,
 .card.card--quote .heading--h3 a,
-.box--data-sources h4 a, .card.card--quote h4 a, .box--data-sources .heading--x-small a, .card.card--quote .heading--x-small a, .box--data-sources .heading--h4 a,
+.bg--data-sources h4 a, .card.card--quote h4 a, .bg--data-sources .heading--h4 a,
 .card.card--quote .heading--h4 a,
-.box--data-sources h5 a, .card.card--quote h5 a, .box--data-sources .heading--label a, .card.card--quote .heading--label a, .box--data-sources .heading--h5 a,
+.bg--data-sources h5 a, .card.card--quote h5 a, .bg--data-sources .heading--label a, .card.card--quote .heading--label a, .bg--data-sources .heading--h5 a,
 .card.card--quote .heading--h5 a,
-.box--data-sources h6 a, .card.card--quote h6 a, .box--data-sources .heading--h6 a, .card.card--quote .heading--h6 a {
+.bg--data-sources h6 a, .card.card--quote h6 a, .bg--data-sources .heading--h6 a, .card.card--quote .heading--h6 a {
   color: #fff;
 }
 
-.box--desktop {
+.bg--desktop {
   background-color: #23529c;
   color: #fff;
 }
 
-.box--desktop h1, .box--desktop .heading--homepage, .box--desktop .heading--product, .box--desktop .heading--download, .box--desktop .heading--h1,
-.box--desktop h2, .box--desktop .heading--medium, .box--desktop .heading--h2,
-.box--desktop h3, .box--desktop .heading--small, .box--desktop .heading--h3,
-.box--desktop h4, .box--desktop .heading--x-small, .box--desktop .heading--h4,
-.box--desktop h5, .box--desktop .heading--label, .box--desktop .heading--h5,
-.box--desktop h6, .box--desktop .heading--h6 {
+.bg--desktop h1, .bg--desktop .heading--homepage, .bg--desktop .heading--product, .bg--desktop .heading--h1,
+.bg--desktop h2, .bg--desktop .heading--medium, .bg--desktop .heading--h2,
+.bg--desktop h3, .bg--desktop .heading--h3,
+.bg--desktop h4, .bg--desktop .heading--h4,
+.bg--desktop h5, .bg--desktop .heading--label, .bg--desktop .heading--h5,
+.bg--desktop h6, .bg--desktop .heading--h6 {
   color: #fff;
 }
 
-.box--desktop h1 a, .box--desktop .heading--homepage a, .box--desktop .heading--product a, .box--desktop .heading--download a, .box--desktop .heading--h1 a,
-.box--desktop h2 a, .box--desktop .heading--medium a, .box--desktop .heading--h2 a,
-.box--desktop h3 a, .box--desktop .heading--small a, .box--desktop .heading--h3 a,
-.box--desktop h4 a, .box--desktop .heading--x-small a, .box--desktop .heading--h4 a,
-.box--desktop h5 a, .box--desktop .heading--label a, .box--desktop .heading--h5 a,
-.box--desktop h6 a, .box--desktop .heading--h6 a {
+.bg--desktop h1 a, .bg--desktop .heading--homepage a, .bg--desktop .heading--product a, .bg--desktop .heading--h1 a,
+.bg--desktop h2 a, .bg--desktop .heading--medium a, .bg--desktop .heading--h2 a,
+.bg--desktop h3 a, .bg--desktop .heading--h3 a,
+.bg--desktop h4 a, .bg--desktop .heading--h4 a,
+.bg--desktop h5 a, .bg--desktop .heading--label a, .bg--desktop .heading--h5 a,
+.bg--desktop h6 a, .bg--desktop .heading--h6 a {
   color: #fff;
 }
 
-.box--server {
+.bg--server {
   background-color: #7fa9bb;
   color: #fff;
 }
 
-.box--server h1, .box--server .heading--homepage, .box--server .heading--product, .box--server .heading--download, .box--server .heading--h1,
-.box--server h2, .box--server .heading--medium, .box--server .heading--h2,
-.box--server h3, .box--server .heading--small, .box--server .heading--h3,
-.box--server h4, .box--server .heading--x-small, .box--server .heading--h4,
-.box--server h5, .box--server .heading--label, .box--server .heading--h5,
-.box--server h6, .box--server .heading--h6 {
+.bg--server h1, .bg--server .heading--homepage, .bg--server .heading--product, .bg--server .heading--h1,
+.bg--server h2, .bg--server .heading--medium, .bg--server .heading--h2,
+.bg--server h3, .bg--server .heading--h3,
+.bg--server h4, .bg--server .heading--h4,
+.bg--server h5, .bg--server .heading--label, .bg--server .heading--h5,
+.bg--server h6, .bg--server .heading--h6 {
   color: #fff;
 }
 
-.box--server h1 a, .box--server .heading--homepage a, .box--server .heading--product a, .box--server .heading--download a, .box--server .heading--h1 a,
-.box--server h2 a, .box--server .heading--medium a, .box--server .heading--h2 a,
-.box--server h3 a, .box--server .heading--small a, .box--server .heading--h3 a,
-.box--server h4 a, .box--server .heading--x-small a, .box--server .heading--h4 a,
-.box--server h5 a, .box--server .heading--label a, .box--server .heading--h5 a,
-.box--server h6 a, .box--server .heading--h6 a {
+.bg--server h1 a, .bg--server .heading--homepage a, .bg--server .heading--product a, .bg--server .heading--h1 a,
+.bg--server h2 a, .bg--server .heading--medium a, .bg--server .heading--h2 a,
+.bg--server h3 a, .bg--server .heading--h3 a,
+.bg--server h4 a, .bg--server .heading--h4 a,
+.bg--server h5 a, .bg--server .heading--label a, .bg--server .heading--h5 a,
+.bg--server h6 a, .bg--server .heading--h6 a {
   color: #fff;
 }
 
-.box--online {
+.bg--online {
   background-color: #58a3b9;
   color: #fff;
 }
 
-.box--online h1, .box--online .heading--homepage, .box--online .heading--product, .box--online .heading--download, .box--online .heading--h1,
-.box--online h2, .box--online .heading--medium, .box--online .heading--h2,
-.box--online h3, .box--online .heading--small, .box--online .heading--h3,
-.box--online h4, .box--online .heading--x-small, .box--online .heading--h4,
-.box--online h5, .box--online .heading--label, .box--online .heading--h5,
-.box--online h6, .box--online .heading--h6 {
+.bg--online h1, .bg--online .heading--homepage, .bg--online .heading--product, .bg--online .heading--h1,
+.bg--online h2, .bg--online .heading--medium, .bg--online .heading--h2,
+.bg--online h3, .bg--online .heading--h3,
+.bg--online h4, .bg--online .heading--h4,
+.bg--online h5, .bg--online .heading--label, .bg--online .heading--h5,
+.bg--online h6, .bg--online .heading--h6 {
   color: #fff;
 }
 
-.box--online h1 a, .box--online .heading--homepage a, .box--online .heading--product a, .box--online .heading--download a, .box--online .heading--h1 a,
-.box--online h2 a, .box--online .heading--medium a, .box--online .heading--h2 a,
-.box--online h3 a, .box--online .heading--small a, .box--online .heading--h3 a,
-.box--online h4 a, .box--online .heading--x-small a, .box--online .heading--h4 a,
-.box--online h5 a, .box--online .heading--label a, .box--online .heading--h5 a,
-.box--online h6 a, .box--online .heading--h6 a {
+.bg--online h1 a, .bg--online .heading--homepage a, .bg--online .heading--product a, .bg--online .heading--h1 a,
+.bg--online h2 a, .bg--online .heading--medium a, .bg--online .heading--h2 a,
+.bg--online h3 a, .bg--online .heading--h3 a,
+.bg--online h4 a, .bg--online .heading--h4 a,
+.bg--online h5 a, .bg--online .heading--label a, .bg--online .heading--h5 a,
+.bg--online h6 a, .bg--online .heading--h6 a {
   color: #fff;
 }
 
-.box--public {
+.bg--public {
   background-color: #324E7A;
   color: #fff;
 }
 
-.box--public h1, .box--public .heading--homepage, .box--public .heading--product, .box--public .heading--download, .box--public .heading--h1,
-.box--public h2, .box--public .heading--medium, .box--public .heading--h2,
-.box--public h3, .box--public .heading--small, .box--public .heading--h3,
-.box--public h4, .box--public .heading--x-small, .box--public .heading--h4,
-.box--public h5, .box--public .heading--label, .box--public .heading--h5,
-.box--public h6, .box--public .heading--h6 {
+.bg--public h1, .bg--public .heading--homepage, .bg--public .heading--product, .bg--public .heading--h1,
+.bg--public h2, .bg--public .heading--medium, .bg--public .heading--h2,
+.bg--public h3, .bg--public .heading--h3,
+.bg--public h4, .bg--public .heading--h4,
+.bg--public h5, .bg--public .heading--label, .bg--public .heading--h5,
+.bg--public h6, .bg--public .heading--h6 {
   color: #fff;
 }
 
-.box--public h1 a, .box--public .heading--homepage a, .box--public .heading--product a, .box--public .heading--download a, .box--public .heading--h1 a,
-.box--public h2 a, .box--public .heading--medium a, .box--public .heading--h2 a,
-.box--public h3 a, .box--public .heading--small a, .box--public .heading--h3 a,
-.box--public h4 a, .box--public .heading--x-small a, .box--public .heading--h4 a,
-.box--public h5 a, .box--public .heading--label a, .box--public .heading--h5 a,
-.box--public h6 a, .box--public .heading--h6 a {
+.bg--public h1 a, .bg--public .heading--homepage a, .bg--public .heading--product a, .bg--public .heading--h1 a,
+.bg--public h2 a, .bg--public .heading--medium a, .bg--public .heading--h2 a,
+.bg--public h3 a, .bg--public .heading--h3 a,
+.bg--public h4 a, .bg--public .heading--h4 a,
+.bg--public h5 a, .bg--public .heading--label a, .bg--public .heading--h5 a,
+.bg--public h6 a, .bg--public .heading--h6 a {
   color: #fff;
 }
 
-.box--reader {
+.bg--reader {
   background-color: #B28CCF;
   color: #fff;
 }
 
-.box--reader h1, .box--reader .heading--homepage, .box--reader .heading--product, .box--reader .heading--download, .box--reader .heading--h1,
-.box--reader h2, .box--reader .heading--medium, .box--reader .heading--h2,
-.box--reader h3, .box--reader .heading--small, .box--reader .heading--h3,
-.box--reader h4, .box--reader .heading--x-small, .box--reader .heading--h4,
-.box--reader h5, .box--reader .heading--label, .box--reader .heading--h5,
-.box--reader h6, .box--reader .heading--h6 {
+.bg--reader h1, .bg--reader .heading--homepage, .bg--reader .heading--product, .bg--reader .heading--h1,
+.bg--reader h2, .bg--reader .heading--medium, .bg--reader .heading--h2,
+.bg--reader h3, .bg--reader .heading--h3,
+.bg--reader h4, .bg--reader .heading--h4,
+.bg--reader h5, .bg--reader .heading--label, .bg--reader .heading--h5,
+.bg--reader h6, .bg--reader .heading--h6 {
   color: #fff;
 }
 
-.box--reader h1 a, .box--reader .heading--homepage a, .box--reader .heading--product a, .box--reader .heading--download a, .box--reader .heading--h1 a,
-.box--reader h2 a, .box--reader .heading--medium a, .box--reader .heading--h2 a,
-.box--reader h3 a, .box--reader .heading--small a, .box--reader .heading--h3 a,
-.box--reader h4 a, .box--reader .heading--x-small a, .box--reader .heading--h4 a,
-.box--reader h5 a, .box--reader .heading--label a, .box--reader .heading--h5 a,
-.box--reader h6 a, .box--reader .heading--h6 a {
+.bg--reader h1 a, .bg--reader .heading--homepage a, .bg--reader .heading--product a, .bg--reader .heading--h1 a,
+.bg--reader h2 a, .bg--reader .heading--medium a, .bg--reader .heading--h2 a,
+.bg--reader h3 a, .bg--reader .heading--h3 a,
+.bg--reader h4 a, .bg--reader .heading--h4 a,
+.bg--reader h5 a, .bg--reader .heading--label a, .bg--reader .heading--h5 a,
+.bg--reader h6 a, .bg--reader .heading--h6 a {
   color: #fff;
 }
 
-.box--mobile {
+.bg--mobile {
   background-color: #DB8E6A;
   color: #fff;
 }
 
-.box--mobile h1, .box--mobile .heading--homepage, .box--mobile .heading--product, .box--mobile .heading--download, .box--mobile .heading--h1,
-.box--mobile h2, .box--mobile .heading--medium, .box--mobile .heading--h2,
-.box--mobile h3, .box--mobile .heading--small, .box--mobile .heading--h3,
-.box--mobile h4, .box--mobile .heading--x-small, .box--mobile .heading--h4,
-.box--mobile h5, .box--mobile .heading--label, .box--mobile .heading--h5,
-.box--mobile h6, .box--mobile .heading--h6 {
+.bg--mobile h1, .bg--mobile .heading--homepage, .bg--mobile .heading--product, .bg--mobile .heading--h1,
+.bg--mobile h2, .bg--mobile .heading--medium, .bg--mobile .heading--h2,
+.bg--mobile h3, .bg--mobile .heading--h3,
+.bg--mobile h4, .bg--mobile .heading--h4,
+.bg--mobile h5, .bg--mobile .heading--label, .bg--mobile .heading--h5,
+.bg--mobile h6, .bg--mobile .heading--h6 {
   color: #fff;
 }
 
-.box--mobile h1 a, .box--mobile .heading--homepage a, .box--mobile .heading--product a, .box--mobile .heading--download a, .box--mobile .heading--h1 a,
-.box--mobile h2 a, .box--mobile .heading--medium a, .box--mobile .heading--h2 a,
-.box--mobile h3 a, .box--mobile .heading--small a, .box--mobile .heading--h3 a,
-.box--mobile h4 a, .box--mobile .heading--x-small a, .box--mobile .heading--h4 a,
-.box--mobile h5 a, .box--mobile .heading--label a, .box--mobile .heading--h5 a,
-.box--mobile h6 a, .box--mobile .heading--h6 a {
+.bg--mobile h1 a, .bg--mobile .heading--homepage a, .bg--mobile .heading--product a, .bg--mobile .heading--h1 a,
+.bg--mobile h2 a, .bg--mobile .heading--medium a, .bg--mobile .heading--h2 a,
+.bg--mobile h3 a, .bg--mobile .heading--h3 a,
+.bg--mobile h4 a, .bg--mobile .heading--h4 a,
+.bg--mobile h5 a, .bg--mobile .heading--label a, .bg--mobile .heading--h5 a,
+.bg--mobile h6 a, .bg--mobile .heading--h6 a {
   color: #fff;
 }
 
-.box--nav-drawer-gray-1 {
+.bg--nav-drawer-gray-1 {
   background-color: #f0f0f0;
   color: #333;
 }
 
-.box--nav-drawer-gray-1 h1, .box--nav-drawer-gray-1 .heading--homepage, .box--nav-drawer-gray-1 .heading--product, .box--nav-drawer-gray-1 .heading--download, .box--nav-drawer-gray-1 .heading--h1,
-.box--nav-drawer-gray-1 h2, .box--nav-drawer-gray-1 .heading--medium, .box--nav-drawer-gray-1 .heading--h2,
-.box--nav-drawer-gray-1 h3, .box--nav-drawer-gray-1 .heading--small, .box--nav-drawer-gray-1 .heading--h3,
-.box--nav-drawer-gray-1 h4, .box--nav-drawer-gray-1 .heading--x-small, .box--nav-drawer-gray-1 .heading--h4,
-.box--nav-drawer-gray-1 h5, .box--nav-drawer-gray-1 .heading--label, .box--nav-drawer-gray-1 .heading--h5,
-.box--nav-drawer-gray-1 h6, .box--nav-drawer-gray-1 .heading--h6 {
+.bg--nav-drawer-gray-1 h1, .bg--nav-drawer-gray-1 .heading--homepage, .bg--nav-drawer-gray-1 .heading--product, .bg--nav-drawer-gray-1 .heading--h1,
+.bg--nav-drawer-gray-1 h2, .bg--nav-drawer-gray-1 .heading--medium, .bg--nav-drawer-gray-1 .heading--h2,
+.bg--nav-drawer-gray-1 h3, .bg--nav-drawer-gray-1 .heading--h3,
+.bg--nav-drawer-gray-1 h4, .bg--nav-drawer-gray-1 .heading--h4,
+.bg--nav-drawer-gray-1 h5, .bg--nav-drawer-gray-1 .heading--label, .bg--nav-drawer-gray-1 .heading--h5,
+.bg--nav-drawer-gray-1 h6, .bg--nav-drawer-gray-1 .heading--h6 {
   color: #000;
 }
 
-.box--nav-drawer-gray-1 h1 a, .box--nav-drawer-gray-1 .heading--homepage a, .box--nav-drawer-gray-1 .heading--product a, .box--nav-drawer-gray-1 .heading--download a, .box--nav-drawer-gray-1 .heading--h1 a,
-.box--nav-drawer-gray-1 h2 a, .box--nav-drawer-gray-1 .heading--medium a, .box--nav-drawer-gray-1 .heading--h2 a,
-.box--nav-drawer-gray-1 h3 a, .box--nav-drawer-gray-1 .heading--small a, .box--nav-drawer-gray-1 .heading--h3 a,
-.box--nav-drawer-gray-1 h4 a, .box--nav-drawer-gray-1 .heading--x-small a, .box--nav-drawer-gray-1 .heading--h4 a,
-.box--nav-drawer-gray-1 h5 a, .box--nav-drawer-gray-1 .heading--label a, .box--nav-drawer-gray-1 .heading--h5 a,
-.box--nav-drawer-gray-1 h6 a, .box--nav-drawer-gray-1 .heading--h6 a {
+.bg--nav-drawer-gray-1 h1 a, .bg--nav-drawer-gray-1 .heading--homepage a, .bg--nav-drawer-gray-1 .heading--product a, .bg--nav-drawer-gray-1 .heading--h1 a,
+.bg--nav-drawer-gray-1 h2 a, .bg--nav-drawer-gray-1 .heading--medium a, .bg--nav-drawer-gray-1 .heading--h2 a,
+.bg--nav-drawer-gray-1 h3 a, .bg--nav-drawer-gray-1 .heading--h3 a,
+.bg--nav-drawer-gray-1 h4 a, .bg--nav-drawer-gray-1 .heading--h4 a,
+.bg--nav-drawer-gray-1 h5 a, .bg--nav-drawer-gray-1 .heading--label a, .bg--nav-drawer-gray-1 .heading--h5 a,
+.bg--nav-drawer-gray-1 h6 a, .bg--nav-drawer-gray-1 .heading--h6 a {
   color: #000;
 }
 
-.box--nav-drawer-gray-2 {
+.bg--nav-drawer-gray-2 {
   background-color: #ddd;
   color: #333;
 }
 
-.box--nav-drawer-gray-2 h1, .box--nav-drawer-gray-2 .heading--homepage, .box--nav-drawer-gray-2 .heading--product, .box--nav-drawer-gray-2 .heading--download, .box--nav-drawer-gray-2 .heading--h1,
-.box--nav-drawer-gray-2 h2, .box--nav-drawer-gray-2 .heading--medium, .box--nav-drawer-gray-2 .heading--h2,
-.box--nav-drawer-gray-2 h3, .box--nav-drawer-gray-2 .heading--small, .box--nav-drawer-gray-2 .heading--h3,
-.box--nav-drawer-gray-2 h4, .box--nav-drawer-gray-2 .heading--x-small, .box--nav-drawer-gray-2 .heading--h4,
-.box--nav-drawer-gray-2 h5, .box--nav-drawer-gray-2 .heading--label, .box--nav-drawer-gray-2 .heading--h5,
-.box--nav-drawer-gray-2 h6, .box--nav-drawer-gray-2 .heading--h6 {
+.bg--nav-drawer-gray-2 h1, .bg--nav-drawer-gray-2 .heading--homepage, .bg--nav-drawer-gray-2 .heading--product, .bg--nav-drawer-gray-2 .heading--h1,
+.bg--nav-drawer-gray-2 h2, .bg--nav-drawer-gray-2 .heading--medium, .bg--nav-drawer-gray-2 .heading--h2,
+.bg--nav-drawer-gray-2 h3, .bg--nav-drawer-gray-2 .heading--h3,
+.bg--nav-drawer-gray-2 h4, .bg--nav-drawer-gray-2 .heading--h4,
+.bg--nav-drawer-gray-2 h5, .bg--nav-drawer-gray-2 .heading--label, .bg--nav-drawer-gray-2 .heading--h5,
+.bg--nav-drawer-gray-2 h6, .bg--nav-drawer-gray-2 .heading--h6 {
   color: #000;
 }
 
-.box--nav-drawer-gray-2 h1 a, .box--nav-drawer-gray-2 .heading--homepage a, .box--nav-drawer-gray-2 .heading--product a, .box--nav-drawer-gray-2 .heading--download a, .box--nav-drawer-gray-2 .heading--h1 a,
-.box--nav-drawer-gray-2 h2 a, .box--nav-drawer-gray-2 .heading--medium a, .box--nav-drawer-gray-2 .heading--h2 a,
-.box--nav-drawer-gray-2 h3 a, .box--nav-drawer-gray-2 .heading--small a, .box--nav-drawer-gray-2 .heading--h3 a,
-.box--nav-drawer-gray-2 h4 a, .box--nav-drawer-gray-2 .heading--x-small a, .box--nav-drawer-gray-2 .heading--h4 a,
-.box--nav-drawer-gray-2 h5 a, .box--nav-drawer-gray-2 .heading--label a, .box--nav-drawer-gray-2 .heading--h5 a,
-.box--nav-drawer-gray-2 h6 a, .box--nav-drawer-gray-2 .heading--h6 a {
+.bg--nav-drawer-gray-2 h1 a, .bg--nav-drawer-gray-2 .heading--homepage a, .bg--nav-drawer-gray-2 .heading--product a, .bg--nav-drawer-gray-2 .heading--h1 a,
+.bg--nav-drawer-gray-2 h2 a, .bg--nav-drawer-gray-2 .heading--medium a, .bg--nav-drawer-gray-2 .heading--h2 a,
+.bg--nav-drawer-gray-2 h3 a, .bg--nav-drawer-gray-2 .heading--h3 a,
+.bg--nav-drawer-gray-2 h4 a, .bg--nav-drawer-gray-2 .heading--h4 a,
+.bg--nav-drawer-gray-2 h5 a, .bg--nav-drawer-gray-2 .heading--label a, .bg--nav-drawer-gray-2 .heading--h5 a,
+.bg--nav-drawer-gray-2 h6 a, .bg--nav-drawer-gray-2 .heading--h6 a {
   color: #000;
+}
+
+.bg--media-shade {
+  background: -webkit-linear-gradient(top, #464646, #1b1b1b);
+  background: linear-gradient(to bottom, #464646, #1b1b1b);
 }
 
 /*
@@ -2507,7 +2615,7 @@ Style guide: layout.divider-vertical
 .vertical-divider p:first-child,
 .vertical-divider h2:first-child,
 .vertical-divider .heading--medium:first-child,
-.vertical-divider h3:first-child, .vertical-divider .heading--small:first-child {
+.vertical-divider h3:first-child {
   margin-top: 0;
 }
 
@@ -3321,10 +3429,10 @@ Style guide: layout.hero
   .hero .hero__content .hero__content__inner {
     width: 100%;
   }
-  .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product, .hero .hero__content .heading--download {
+  .hero .hero__content h1, .hero .hero__content .heading--homepage, .hero .hero__content .heading--product {
     margin: 0;
   }
-  .hero .hero__content h4 + .hero__content__headline, .hero .hero__content .heading--x-small + .hero__content__headline {
+  .hero .hero__content h4 + .hero__content__headline {
     margin-top: .5em;
   }
   .hero .hero__content .hero__content__cta {
@@ -3369,196 +3477,198 @@ Style guide: layout.hero
   }
 }
 
-.box--white .hero__background:before,
-.box--white .hero__video:before {
+.bg--white .hero__background:before,
+.bg--white .hero__video:before {
   background-image: -webkit-linear-gradient(left, #fff, transparent);
   background-image: linear-gradient(to right, #fff, transparent);
 }
 
-.box--white .hero__background:after,
-.box--white .hero__video:after {
+.bg--white .hero__background:after,
+.bg--white .hero__video:after {
   background-image: -webkit-linear-gradient(right, #fff, transparent);
   background-image: linear-gradient(to left, #fff, transparent);
 }
 
-.box--light-gray-1 .hero__background:before,
-.box--light-gray-1 .hero__video:before {
+.bg--light-gray-1 .hero__background:before,
+.bg--light-gray-1 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #fafafa, transparent);
   background-image: linear-gradient(to right, #fafafa, transparent);
 }
 
-.box--light-gray-1 .hero__background:after,
-.box--light-gray-1 .hero__video:after {
+.bg--light-gray-1 .hero__background:after,
+.bg--light-gray-1 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #fafafa, transparent);
   background-image: linear-gradient(to left, #fafafa, transparent);
 }
 
-.box--light-gray-2 .hero__background:before,
-.box--light-gray-2 .hero__video:before {
+.bg--light-gray-2 .hero__background:before,
+.bg--light-gray-2 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #ebebeb, transparent);
   background-image: linear-gradient(to right, #ebebeb, transparent);
 }
 
-.box--light-gray-2 .hero__background:after,
-.box--light-gray-2 .hero__video:after {
+.bg--light-gray-2 .hero__background:after,
+.bg--light-gray-2 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #ebebeb, transparent);
   background-image: linear-gradient(to left, #ebebeb, transparent);
 }
 
-.box--dark-gray-1 .hero__background:before,
-.box--dark-gray-1 .hero__video:before {
+.bg--dark-gray-1 .hero__background:before,
+.bg--dark-gray-1 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #464646, transparent);
   background-image: linear-gradient(to right, #464646, transparent);
 }
 
-.box--dark-gray-1 .hero__background:after,
-.box--dark-gray-1 .hero__video:after {
+.bg--dark-gray-1 .hero__background:after,
+.bg--dark-gray-1 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #464646, transparent);
   background-image: linear-gradient(to left, #464646, transparent);
 }
 
-.box--dark-gray-2 .hero__background:before,
-.box--dark-gray-2 .hero__video:before {
+.bg--dark-gray-2 .hero__background:before,
+.bg--dark-gray-2 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #333, transparent);
   background-image: linear-gradient(to right, #333, transparent);
 }
 
-.box--dark-gray-2 .hero__background:after,
-.box--dark-gray-2 .hero__video:after {
+.bg--dark-gray-2 .hero__background:after,
+.bg--dark-gray-2 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #333, transparent);
   background-image: linear-gradient(to left, #333, transparent);
 }
 
-.box--dark-gray-3 .hero__background:before,
-.box--dark-gray-3 .hero__video:before {
+.bg--dark-gray-3 .hero__background:before,
+.bg--media-shade .hero__background:before,
+.bg--dark-gray-3 .hero__video:before, .bg--media-shade .hero__video:before {
   background-image: -webkit-linear-gradient(left, #1b1b1b, transparent);
   background-image: linear-gradient(to right, #1b1b1b, transparent);
 }
 
-.box--dark-gray-3 .hero__background:after,
-.box--dark-gray-3 .hero__video:after {
+.bg--dark-gray-3 .hero__background:after,
+.bg--media-shade .hero__background:after,
+.bg--dark-gray-3 .hero__video:after, .bg--media-shade .hero__video:after {
   background-image: -webkit-linear-gradient(right, #1b1b1b, transparent);
   background-image: linear-gradient(to left, #1b1b1b, transparent);
 }
 
-.box--about-featured .hero__background:before,
-.box--about-featured .hero__video:before {
+.bg--about-featured .hero__background:before,
+.bg--about-featured .hero__video:before {
   background-image: -webkit-linear-gradient(left, #457387, transparent);
   background-image: linear-gradient(to right, #457387, transparent);
 }
 
-.box--about-featured .hero__background:after,
-.box--about-featured .hero__video:after {
+.bg--about-featured .hero__background:after,
+.bg--about-featured .hero__video:after {
   background-image: -webkit-linear-gradient(right, #457387, transparent);
   background-image: linear-gradient(to left, #457387, transparent);
 }
 
-.box--data-sources .hero__background:before,
+.bg--data-sources .hero__background:before,
 .card.card--quote .hero__background:before,
-.box--data-sources .hero__video:before, .card.card--quote .hero__video:before {
+.bg--data-sources .hero__video:before, .card.card--quote .hero__video:before {
   background-image: -webkit-linear-gradient(left, #2e4c65, transparent);
   background-image: linear-gradient(to right, #2e4c65, transparent);
 }
 
-.box--data-sources .hero__background:after,
+.bg--data-sources .hero__background:after,
 .card.card--quote .hero__background:after,
-.box--data-sources .hero__video:after, .card.card--quote .hero__video:after {
+.bg--data-sources .hero__video:after, .card.card--quote .hero__video:after {
   background-image: -webkit-linear-gradient(right, #2e4c65, transparent);
   background-image: linear-gradient(to left, #2e4c65, transparent);
 }
 
-.box--desktop .hero__background:before,
-.box--desktop .hero__video:before {
+.bg--desktop .hero__background:before,
+.bg--desktop .hero__video:before {
   background-image: -webkit-linear-gradient(left, #23529c, transparent);
   background-image: linear-gradient(to right, #23529c, transparent);
 }
 
-.box--desktop .hero__background:after,
-.box--desktop .hero__video:after {
+.bg--desktop .hero__background:after,
+.bg--desktop .hero__video:after {
   background-image: -webkit-linear-gradient(right, #23529c, transparent);
   background-image: linear-gradient(to left, #23529c, transparent);
 }
 
-.box--server .hero__background:before,
-.box--server .hero__video:before {
+.bg--server .hero__background:before,
+.bg--server .hero__video:before {
   background-image: -webkit-linear-gradient(left, #7fa9bb, transparent);
   background-image: linear-gradient(to right, #7fa9bb, transparent);
 }
 
-.box--server .hero__background:after,
-.box--server .hero__video:after {
+.bg--server .hero__background:after,
+.bg--server .hero__video:after {
   background-image: -webkit-linear-gradient(right, #7fa9bb, transparent);
   background-image: linear-gradient(to left, #7fa9bb, transparent);
 }
 
-.box--online .hero__background:before,
-.box--online .hero__video:before {
+.bg--online .hero__background:before,
+.bg--online .hero__video:before {
   background-image: -webkit-linear-gradient(left, #58a3b9, transparent);
   background-image: linear-gradient(to right, #58a3b9, transparent);
 }
 
-.box--online .hero__background:after,
-.box--online .hero__video:after {
+.bg--online .hero__background:after,
+.bg--online .hero__video:after {
   background-image: -webkit-linear-gradient(right, #58a3b9, transparent);
   background-image: linear-gradient(to left, #58a3b9, transparent);
 }
 
-.box--public .hero__background:before,
-.box--public .hero__video:before {
+.bg--public .hero__background:before,
+.bg--public .hero__video:before {
   background-image: -webkit-linear-gradient(left, #324E7A, transparent);
   background-image: linear-gradient(to right, #324E7A, transparent);
 }
 
-.box--public .hero__background:after,
-.box--public .hero__video:after {
+.bg--public .hero__background:after,
+.bg--public .hero__video:after {
   background-image: -webkit-linear-gradient(right, #324E7A, transparent);
   background-image: linear-gradient(to left, #324E7A, transparent);
 }
 
-.box--reader .hero__background:before,
-.box--reader .hero__video:before {
+.bg--reader .hero__background:before,
+.bg--reader .hero__video:before {
   background-image: -webkit-linear-gradient(left, #B28CCF, transparent);
   background-image: linear-gradient(to right, #B28CCF, transparent);
 }
 
-.box--reader .hero__background:after,
-.box--reader .hero__video:after {
+.bg--reader .hero__background:after,
+.bg--reader .hero__video:after {
   background-image: -webkit-linear-gradient(right, #B28CCF, transparent);
   background-image: linear-gradient(to left, #B28CCF, transparent);
 }
 
-.box--mobile .hero__background:before,
-.box--mobile .hero__video:before {
+.bg--mobile .hero__background:before,
+.bg--mobile .hero__video:before {
   background-image: -webkit-linear-gradient(left, #DB8E6A, transparent);
   background-image: linear-gradient(to right, #DB8E6A, transparent);
 }
 
-.box--mobile .hero__background:after,
-.box--mobile .hero__video:after {
+.bg--mobile .hero__background:after,
+.bg--mobile .hero__video:after {
   background-image: -webkit-linear-gradient(right, #DB8E6A, transparent);
   background-image: linear-gradient(to left, #DB8E6A, transparent);
 }
 
-.box--nav-drawer-gray-1 .hero__background:before,
-.box--nav-drawer-gray-1 .hero__video:before {
+.bg--nav-drawer-gray-1 .hero__background:before,
+.bg--nav-drawer-gray-1 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #f0f0f0, transparent);
   background-image: linear-gradient(to right, #f0f0f0, transparent);
 }
 
-.box--nav-drawer-gray-1 .hero__background:after,
-.box--nav-drawer-gray-1 .hero__video:after {
+.bg--nav-drawer-gray-1 .hero__background:after,
+.bg--nav-drawer-gray-1 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #f0f0f0, transparent);
   background-image: linear-gradient(to left, #f0f0f0, transparent);
 }
 
-.box--nav-drawer-gray-2 .hero__background:before,
-.box--nav-drawer-gray-2 .hero__video:before {
+.bg--nav-drawer-gray-2 .hero__background:before,
+.bg--nav-drawer-gray-2 .hero__video:before {
   background-image: -webkit-linear-gradient(left, #ddd, transparent);
   background-image: linear-gradient(to right, #ddd, transparent);
 }
 
-.box--nav-drawer-gray-2 .hero__background:after,
-.box--nav-drawer-gray-2 .hero__video:after {
+.bg--nav-drawer-gray-2 .hero__background:after,
+.bg--nav-drawer-gray-2 .hero__video:after {
   background-image: -webkit-linear-gradient(right, #ddd, transparent);
   background-image: linear-gradient(to left, #ddd, transparent);
 }
@@ -3579,7 +3689,7 @@ Style guide: layout.hero
 }
 
 @media (max-width: 639px) {
-  .hero h1, .hero .heading--homepage, .hero .heading--product, .hero .heading--download, .hero h4.heading--label, .hero .heading--label.heading--x-small {
+  .hero h1, .hero .heading--homepage, .hero .heading--product, .hero h4.heading--label {
     color: #333;
   }
   .hero .hero__content {
@@ -3595,9 +3705,9 @@ Style guide: layout.hero
     display: block;
     text-align: center;
   }
-  .box--dark-gray-1 .hero,
-  .box--dark-gray-2 .hero,
-  .box--dark-gray-3 .hero {
+  .bg--dark-gray-1 .hero,
+  .bg--dark-gray-2 .hero,
+  .bg--dark-gray-3 .hero, .bg--media-shade .hero {
     background: #fff;
     color: #333;
   }
@@ -3607,7 +3717,7 @@ Style guide: layout.hero
 Marginless marginless Boxes
 
 Percentage width boxes that butt up against eachother with no margin. Typically,
-a collored background would be applied with a <code>.box--{color}</code> class.
+a collored background would be applied with a <code>.bg--{color}</code> class.
 In a mobile layout, all stretchy boxes default to stacking one ontop of the other
 and in a tablet layout stretchy boxes default to a 50% split. A 
 <code>.box__stretchy--tablet-full</code> class can be applied to a box to force 
@@ -3662,11 +3772,12 @@ Style guide: layout.marginless-box
 /*
 Padded box
 
-Adds padding to a container element. The `.box--dark-gray-1` class is used to 
-differentiate the box from the background. You will usually want to use a padded
+Adds padding to a container element. You will usually want to use a padded
 box on a container with a background color.
 
-Markup: box_padded.hbs
+Markup: padded-box.hbs
+
+Nocode: true
 
 Weight: 1
 
@@ -3703,8 +3814,9 @@ Markup: section-kss.hbs
 
 Weight: 40
 
-.section--padded-one - Section with 2em of vertical padding
+.section--padded-one - Section with 1em of vertical padding
 .section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-three - Section with 3em of vertical padding (1em on mobile)
 .section--padded-four - Section with 4em of vertical padding (2em on mobile)
 .section--padded-six - Section with 6em of vertical padding (3em on mobile)
 .section--padding-top-none - Cancels out all top padding
@@ -3726,6 +3838,11 @@ Style guide layout.section
 .section.section--padded-two {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.section.section--padded-three {
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .section.section--padded-four {
@@ -4152,6 +4269,7 @@ Style guide: lists.table-list
     border-top: 0;
     padding: 0;
     text-align: center;
+    min-width: 150px;
   }
   .table-list .table-list__link a {
     position: absolute;
@@ -4278,7 +4396,7 @@ Style guide: media.video-chapters
 .video-chapters__chapter:before {
   position: absolute;
   display: inline-block;
-  font-size: 0.5714285714em;
+  font-size: 0.5em;
   left: -1.6em;
   top: 0.6em;
   content: '\25B6';
@@ -4304,6 +4422,25 @@ Nocode: true
 Style guide: media.video-chapters-demo
 */
 /*
+Formatted Icons
+
+Different formatting/style options for icons
+
+Markup: icon-formatted.hbs
+
+.icon--big - A big icon.
+
+Style guide: media.icon-formatted
+*/
+.icon--big {
+  font-size: 3em;
+}
+
+/* 
+DO NOT EDIT _tableau-icons.scss. This is a generated file.
+@see tableau-icons.template.css
+*/
+/*
 Icons
 
 Custom icon webfont.
@@ -4312,25 +4449,37 @@ Nodefault: true
 
 Markup: icon.hbs
 
-.icon-people - people icon
-.icon-search - search icon
-.icon-social-facebook - social-facebook icon
-.icon-social-gplus - social-gplus icon
-.icon-social-instagram - social-instagram icon
-.icon-social-linkedin - social-linkedin icon
-.icon-social-twitter - social-twitter icon
+.icon--people - people icon
+.icon--search - search icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-twitter - social-twitter icon
+.icon--cursor-cloud - cursor-cloud icon
+.icon--download - download icon
+.icon--laptop - laptop icon
+.icon--link - link icon
+.icon--people - people icon
+.icon--share - share icon
+.icon--tableau-logo - tableau-logo icon
+.icon--triangle-down - triangle-down icon
+.icon--triangle-left - triangle-left icon
+.icon--triangle-right - triangle-right icon
+.icon--triangle-up - triangle-up icon
 
 Style Guide: media.icons
 */
 @font-face {
   font-family: "tableau-icons";
-  src: url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.eot?bfaa1091b0d2e85c1a98449168933126");
-  src: url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.woff?bfaa1091b0d2e85c1a98449168933126") format("woff"), url("../fonts/tableau-icons-bfaa1091b0d2e85c1a98449168933126.ttf?bfaa1091b0d2e85c1a98449168933126") format("truetype");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
+  src: url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"), url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.icon {
+.icon, .cta.cta--download:after, .form__wrapper input.cta--download[type="submit"]:after, .pager .pager__endcap.pager__endcap--previous a:before,
+.pager .pager__endcap.pager__endcap--next a:after {
   font-family: "tableau-icons";
   display: inline-block;
   vertical-align: middle;
@@ -4345,32 +4494,76 @@ Style Guide: media.icons
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-people:before {
+.icon--people:before {
   content: "\f101";
 }
 
-.icon-search:before {
+.icon--search:before {
   content: "\f102";
 }
 
-.icon-social-facebook:before {
+.icon--social-facebook:before {
   content: "\f103";
 }
 
-.icon-social-gplus:before {
+.icon--social-gplus:before {
   content: "\f104";
 }
 
-.icon-social-instagram:before {
+.icon--social-instagram:before {
   content: "\f105";
 }
 
-.icon-social-linkedin:before {
+.icon--social-linkedin:before {
   content: "\f106";
 }
 
-.icon-social-twitter:before {
+.icon--social-twitter:before {
   content: "\f107";
+}
+
+.icon--cursor-cloud:before {
+  content: "\f108";
+}
+
+.icon--download:before {
+  content: "\f109";
+}
+
+.icon--laptop:before {
+  content: "\f10a";
+}
+
+.icon--link:before {
+  content: "\f10b";
+}
+
+.icon--people:before {
+  content: "\f101";
+}
+
+.icon--share:before {
+  content: "\f10c";
+}
+
+.icon--tableau-logo:before {
+  content: "\f10d";
+}
+
+.icon--triangle-down:before {
+  content: "\f10e";
+}
+
+.icon--triangle-left:before {
+  content: "\f10f";
+}
+
+.icon--triangle-right:before {
+  content: "\f110";
+}
+
+.icon--triangle-up:before {
+  content: "\f111";
 }
 
 /*
@@ -4542,7 +4735,7 @@ Style guide: navigation.global
 .global-nav__top {
   position: relative;
   height: 100px;
-  padding: 2em 0;
+  padding: 1.75em 0;
   background: #fff;
 }
 
@@ -4577,6 +4770,11 @@ Style guide: navigation.global
   }
   .global-nav__top .global-nav__primary-menu ul {
     margin: 0.8em 0 0 3em;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__top .global-nav__primary-menu ul li {
+    display: inline-block;
   }
   .global-nav__top .global-nav__primary-menu li a {
     position: relative;
@@ -4616,14 +4814,14 @@ Style guide: navigation.global
     padding-right: 45px;
     text-align: right;
   }
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.topic-link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px;
     color: #000;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1300px) {
-  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
+  .global-nav__top .global-nav__secondary-menu li a.link, .global-nav__top .global-nav__secondary-menu li a.topic-link, .global-nav__top .global-nav__secondary-menu li .video-chapters__toggle-wrapper a.video-chapters__toggle, .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu li a.video-chapters__toggle {
     padding: 10px 8px;
   }
 }
@@ -4640,6 +4838,7 @@ Style guide: navigation.global
     -webkit-transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1);
             transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1);
   }
+  .global-nav__top .global-nav__search input[type='text'],
   .global-nav__top .global-nav__search input[type='search'] {
     position: absolute;
     right: 0;
@@ -4656,15 +4855,24 @@ Style guide: navigation.global
     -webkit-transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1);
             transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1);
   }
+  .global-nav__top .global-nav__search input[type='text']:focus,
   .global-nav__top .global-nav__search input[type='search']:focus {
     outline: none;
   }
+  .global-nav__top .global-nav__search input[type='text'] ::-webkit-input-placeholder,
+  .global-nav__top .global-nav__search input[type='text'] :-moz-placeholder,
+  .global-nav__top .global-nav__search input[type='text'] ::-moz-placeholder,
+  .global-nav__top .global-nav__search input[type='text'] :-ms-input-placeholder,
   .global-nav__top .global-nav__search input[type='search'] ::-webkit-input-placeholder,
   .global-nav__top .global-nav__search input[type='search'] :-moz-placeholder,
   .global-nav__top .global-nav__search input[type='search'] ::-moz-placeholder,
   .global-nav__top .global-nav__search input[type='search'] :-ms-input-placeholder {
     color: #787878;
   }
+  .global-nav__top .global-nav__search input[type='text']::-webkit-search-decoration,
+  .global-nav__top .global-nav__search input[type='text']::-webkit-search-cancel-button,
+  .global-nav__top .global-nav__search input[type='text']::-webkit-search-results-button,
+  .global-nav__top .global-nav__search input[type='text']::-webkit-search-results-decoration,
   .global-nav__top .global-nav__search input[type='search']::-webkit-search-decoration,
   .global-nav__top .global-nav__search input[type='search']::-webkit-search-cancel-button,
   .global-nav__top .global-nav__search input[type='search']::-webkit-search-results-button,
@@ -4751,7 +4959,7 @@ Style guide: navigation.global
     border-bottom: 1px solid #ddd;
     color: #212535;
     font-family: "Benton Sans Light", Helvetica, sans-serif;
-    font-size: 1.7142857143em;
+    font-size: 1.5em;
     color: #333;
   }
   .global-nav__top .global-nav__primary-menu li:last-child a {
@@ -4770,6 +4978,7 @@ Style guide: navigation.global
     display: block;
   }
   .global-nav__top .global-nav__secondary-menu a.link,
+  .global-nav__top .global-nav__secondary-menu a.topic-link,
   .global-nav__top .global-nav__secondary-menu .video-chapters__toggle-wrapper a.video-chapters__toggle,
   .video-chapters__toggle-wrapper .global-nav__top .global-nav__secondary-menu a.video-chapters__toggle, .global-nav__top .global-nav__secondary-menu a.search {
     padding: 12px;
@@ -5009,6 +5218,87 @@ Style guide navigation.hamburger
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+/*
+Pager
+
+Used to navigate between the different pages of content that uses pagination.
+
+Markup: pager.hbs
+
+Style guide: navigation.pager
+*/
+.pager {
+  margin: 1em 0;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.pager .pager__endcap a {
+  color: #787878;
+  padding: 0.5em 1em;
+}
+
+.pager .pager__endcap.pager__endcap--current a {
+  color: #bbb;
+}
+
+.pager .pager__endcap.pager__endcap--previous a:before,
+.pager .pager__endcap.pager__endcap--next a:after {
+  text-decoration: none;
+}
+
+.pager .pager__endcap.pager__endcap--previous a:before {
+  content: "\f10e";
+  padding-right: 0.5em;
+}
+
+.pager .pager__endcap.pager__endcap--next a:after {
+  content: "\f10f";
+  padding-left: 0.5em;
+}
+
+.pager .pager__page {
+  margin: 0 0.1em;
+}
+
+.pager .pager__page a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Benton Sans Medium", Helvetica, sans-serif;
+  color: #787878;
+  font-size: 0.75em;
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+
+.pager .pager__page a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.pager .pager__page.pager__page--current a {
+  color: #333;
+  border: 1px solid #333;
+}
+
+@media (max-width: 960px) {
+  .pager {
+    line-height: 2.25em;
+  }
+  .pager .pager__endcap a {
+    padding: 1em 1em;
+  }
+  .pager .pager__page a {
+    width: 2.25em;
+    height: 2.25em;
+    font-size: 1em;
+  }
 }
 
 /*
@@ -5448,9 +5738,11 @@ Image based icons
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  line-height: 200px;
   display: inline-block;
   font-size: 7.5em;
   background: #ededed;
+  text-decoration: none;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -5506,17 +5798,17 @@ Style Guide: teasers.card
   line-height: 1.4;
 }
 
-.card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+.card .card__title, .card.card--quote h3.card__quote {
   position: relative;
   max-height: 4.8em;
   overflow: hidden;
   margin: 1em 0;
-  font-size: 1.43em;
+  font-size: 1.25em;
   line-height: 1.6;
 }
 
 .card .card__title a,
-.card.card--quote h3.card__quote a, .card.card--quote .card__quote.heading--small a, .card .card__quote a,
+.card.card--quote h3.card__quote a, .card .card__quote a,
 .card .card__summary a {
   display: block;
 }
@@ -5556,10 +5848,10 @@ Weight: 60
 
 Style Guide: teasers.card-wide
 */
-.card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote, .card.card--wide .card.card--quote .card__quote.heading--small, .card.card--quote .card.card--wide .card__quote.heading--small {
+.card.card--wide .card__title, .card.card--wide .card.card--quote h3.card__quote, .card.card--quote .card.card--wide h3.card__quote {
   max-height: 3.2em;
   margin: 0.66em 0;
-  font-size: 2.14em;
+  font-size: 1.875em;
 }
 
 @media (min-width: 640px) {
@@ -5610,16 +5902,16 @@ Style Guide: teasers.card-quote
   background-image: linear-gradient(to top, #2e4c65, transparent);
 }
 
-.card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+.card.card--quote h3.card__quote {
   max-height: inherit;
   height: 0;
   margin-top: 1.5em;
   padding-bottom: 140%;
-  font-size: 1.8571428571em;
+  font-size: 1.625em;
   color: #fff;
 }
 
-.card.card--quote h3.card__quote:after, .card.card--quote .card__quote.heading--small:after {
+.card.card--quote h3.card__quote:after {
   content: '\201E';
   display: block;
   margin-top: -0.5em;
@@ -5776,36 +6068,42 @@ Main body copy for longer chunks of content in the body of a page.
 
 Markup: body-copy.hbs
 
-Weight: 2
+Nodefault: true
 
-.text--body-large - Large body copy (15px)
-.text--body-medium - Medium body copy (14px)
-.text--body-small - Small body copy (12px)
+Weight: 10
+
+.text--body-base - Default base body copy (16px/30)
+.text--body-small - Small body copy (14px/26)
+.text--body-medium - Medium body copy (20px/35)
+.text--body-large - Large body copy (30px/46)
 
 Style guide: typography.body-copy
  */
 body,
-.kss-example-preview-wrapper,
-.text--body-large,
-.text--body-medium,
-.people-list__person .person__name,
-.text--body-small {
+.kss-example-preview-wrapper {
   font-family: "Merriweather", serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  line-height: 1.86;
+  line-height: 1.88;
   -webkit-font-smoothing: antialiased;
 }
 
-.text--body-large {
-  font-size: 1.0714285714em;
+.text--body-small, .global-footer .global-footer__first, .global-nav__top .global-nav__primary-menu, .global-nav__drawers .sub-nav__item__description,
+.global-nav__drawers .global-nav__drawer__link-list, .card.card--summary .card__summary, .teaser-item .teaser-item__description {
+  font-size: 0.875em;
+  line-height: 1.86;
 }
 
-.text--body-small {
-  font-size: 0.8571428571em;
-  line-height: 1.66;
+.text--body-medium, .people-list__person .person__name {
+  font-size: 1.25em;
+  line-height: 1.75;
+}
+
+.text--body-large {
+  font-size: 1.875em;
+  line-height: 1.53;
 }
 
 /*
@@ -5825,7 +6123,9 @@ Markup: fonts.hbs
 
 Nodefault: true
 
-Weight: 1
+Nocode: true
+
+Weight: 0
 
 .text--benton-thin - Benton Sans Thin
 .text--benton-light - Benton Sans Light
@@ -5844,7 +6144,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Light", Helvetica, sans-serif;
 }
 
-.text--benton-book, .cta, .form__wrapper input[type="submit"], .link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
+.text--benton-book, .cta, .form__wrapper input[type="submit"], .link, .topic-link, .video-chapters__toggle-wrapper .video-chapters__toggle, .global-footer .global-footer__language, .subnav .subnav__links li a {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
 }
 
@@ -5852,7 +6152,7 @@ Style guide: typography.fonts
   font-family: "Benton Sans Medium", Helvetica, sans-serif;
 }
 
-.text--merriweather-light, .card .card__title, .card.card--quote h3.card__quote, .card.card--quote .card__quote.heading--small {
+.text--merriweather-light, .card .card__title, .card.card--quote h3.card__quote {
   font-family: "Merriweather", serif;
 }
 
@@ -5861,7 +6161,7 @@ Formatted Text
 
 Markup: formatted.hbs
 
-Weight: 6
+Weight: 30
 
 .text--bold - Bold text for emphasis. Same as `<strong>`
 .text--light - Light text. Default for non-headings
@@ -5921,23 +6221,23 @@ em,
 }
 
 .text--huge {
-  font-size: 2.5714285714em;
+  font-size: 2.25em;
 }
 
 .text--big {
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
 }
 
 .text--base-size {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .text--small {
-  font-size: 0.8571428571em;
+  font-size: 0.75em;
 }
 
 .text--tiny {
-  font-size: 0.7142857143em;
+  font-size: 0.625em;
 }
 
 .text--lineheight-zero {
@@ -5953,7 +6253,7 @@ Markup: colored-text.hbs
 
 Bgcolor: #F7F9FB
 
-Weight: 7
+Weight: 32
 
 .text--negative - Negative Text colored text. `#fff;`
 .text--light-body - Negative/light Body colored text. `#bbb`
@@ -5983,80 +6283,440 @@ Style guide: typography.colors
   color: #fff !important;
 }
 
+.text--negative h1, .text--negative .heading--homepage, .text--negative .heading--product, .text--negative .heading--h1,
+.text--negative h2, .text--negative .heading--medium, .text--negative .heading--h2,
+.text--negative h3, .text--negative .heading--h3,
+.text--negative h4, .text--negative .heading--h4,
+.text--negative h5, .text--negative .heading--label, .text--negative .heading--h5,
+.text--negative h6, .text--negative .heading--h6 {
+  color: #fff;
+}
+
+.text--negative h1 a, .text--negative .heading--homepage a, .text--negative .heading--product a, .text--negative .heading--h1 a,
+.text--negative h2 a, .text--negative .heading--medium a, .text--negative .heading--h2 a,
+.text--negative h3 a, .text--negative .heading--h3 a,
+.text--negative h4 a, .text--negative .heading--h4 a,
+.text--negative h5 a, .text--negative .heading--label a, .text--negative .heading--h5 a,
+.text--negative h6 a, .text--negative .heading--h6 a {
+  color: #fff;
+}
+
 .text--light-body {
   color: #bbb !important;
+}
+
+.text--light-body h1, .text--light-body .heading--homepage, .text--light-body .heading--product, .text--light-body .heading--h1,
+.text--light-body h2, .text--light-body .heading--medium, .text--light-body .heading--h2,
+.text--light-body h3, .text--light-body .heading--h3,
+.text--light-body h4, .text--light-body .heading--h4,
+.text--light-body h5, .text--light-body .heading--label, .text--light-body .heading--h5,
+.text--light-body h6, .text--light-body .heading--h6 {
+  color: #bbb;
+}
+
+.text--light-body h1 a, .text--light-body .heading--homepage a, .text--light-body .heading--product a, .text--light-body .heading--h1 a,
+.text--light-body h2 a, .text--light-body .heading--medium a, .text--light-body .heading--h2 a,
+.text--light-body h3 a, .text--light-body .heading--h3 a,
+.text--light-body h4 a, .text--light-body .heading--h4 a,
+.text--light-body h5 a, .text--light-body .heading--label a, .text--light-body .heading--h5 a,
+.text--light-body h6 a, .text--light-body .heading--h6 a {
+  color: #bbb;
 }
 
 .text--medium-body {
   color: #787878 !important;
 }
 
+.text--medium-body h1, .text--medium-body .heading--homepage, .text--medium-body .heading--product, .text--medium-body .heading--h1,
+.text--medium-body h2, .text--medium-body .heading--medium, .text--medium-body .heading--h2,
+.text--medium-body h3, .text--medium-body .heading--h3,
+.text--medium-body h4, .text--medium-body .heading--h4,
+.text--medium-body h5, .text--medium-body .heading--label, .text--medium-body .heading--h5,
+.text--medium-body h6, .text--medium-body .heading--h6 {
+  color: #787878;
+}
+
+.text--medium-body h1 a, .text--medium-body .heading--homepage a, .text--medium-body .heading--product a, .text--medium-body .heading--h1 a,
+.text--medium-body h2 a, .text--medium-body .heading--medium a, .text--medium-body .heading--h2 a,
+.text--medium-body h3 a, .text--medium-body .heading--h3 a,
+.text--medium-body h4 a, .text--medium-body .heading--h4 a,
+.text--medium-body h5 a, .text--medium-body .heading--label a, .text--medium-body .heading--h5 a,
+.text--medium-body h6 a, .text--medium-body .heading--h6 a {
+  color: #787878;
+}
+
 .text--dark-body {
   color: #333 !important;
+}
+
+.text--dark-body h1, .text--dark-body .heading--homepage, .text--dark-body .heading--product, .text--dark-body .heading--h1,
+.text--dark-body h2, .text--dark-body .heading--medium, .text--dark-body .heading--h2,
+.text--dark-body h3, .text--dark-body .heading--h3,
+.text--dark-body h4, .text--dark-body .heading--h4,
+.text--dark-body h5, .text--dark-body .heading--label, .text--dark-body .heading--h5,
+.text--dark-body h6, .text--dark-body .heading--h6 {
+  color: #333;
+}
+
+.text--dark-body h1 a, .text--dark-body .heading--homepage a, .text--dark-body .heading--product a, .text--dark-body .heading--h1 a,
+.text--dark-body h2 a, .text--dark-body .heading--medium a, .text--dark-body .heading--h2 a,
+.text--dark-body h3 a, .text--dark-body .heading--h3 a,
+.text--dark-body h4 a, .text--dark-body .heading--h4 a,
+.text--dark-body h5 a, .text--dark-body .heading--label a, .text--dark-body .heading--h5 a,
+.text--dark-body h6 a, .text--dark-body .heading--h6 a {
+  color: #333;
 }
 
 .text--link {
   color: #eb912c !important;
 }
 
+.text--link h1, .text--link .heading--homepage, .text--link .heading--product, .text--link .heading--h1,
+.text--link h2, .text--link .heading--medium, .text--link .heading--h2,
+.text--link h3, .text--link .heading--h3,
+.text--link h4, .text--link .heading--h4,
+.text--link h5, .text--link .heading--label, .text--link .heading--h5,
+.text--link h6, .text--link .heading--h6 {
+  color: #eb912c;
+}
+
+.text--link h1 a, .text--link .heading--homepage a, .text--link .heading--product a, .text--link .heading--h1 a,
+.text--link h2 a, .text--link .heading--medium a, .text--link .heading--h2 a,
+.text--link h3 a, .text--link .heading--h3 a,
+.text--link h4 a, .text--link .heading--h4 a,
+.text--link h5 a, .text--link .heading--label a, .text--link .heading--h5 a,
+.text--link h6 a, .text--link .heading--h6 a {
+  color: #eb912c;
+}
+
 .text--headlines {
   color: #000 !important;
+}
+
+.text--headlines h1, .text--headlines .heading--homepage, .text--headlines .heading--product, .text--headlines .heading--h1,
+.text--headlines h2, .text--headlines .heading--medium, .text--headlines .heading--h2,
+.text--headlines h3, .text--headlines .heading--h3,
+.text--headlines h4, .text--headlines .heading--h4,
+.text--headlines h5, .text--headlines .heading--label, .text--headlines .heading--h5,
+.text--headlines h6, .text--headlines .heading--h6 {
+  color: #000;
+}
+
+.text--headlines h1 a, .text--headlines .heading--homepage a, .text--headlines .heading--product a, .text--headlines .heading--h1 a,
+.text--headlines h2 a, .text--headlines .heading--medium a, .text--headlines .heading--h2 a,
+.text--headlines h3 a, .text--headlines .heading--h3 a,
+.text--headlines h4 a, .text--headlines .heading--h4 a,
+.text--headlines h5 a, .text--headlines .heading--label a, .text--headlines .heading--h5 a,
+.text--headlines h6 a, .text--headlines .heading--h6 a {
+  color: #000;
 }
 
 .text--nav-items {
   color: #212535 !important;
 }
 
+.text--nav-items h1, .text--nav-items .heading--homepage, .text--nav-items .heading--product, .text--nav-items .heading--h1,
+.text--nav-items h2, .text--nav-items .heading--medium, .text--nav-items .heading--h2,
+.text--nav-items h3, .text--nav-items .heading--h3,
+.text--nav-items h4, .text--nav-items .heading--h4,
+.text--nav-items h5, .text--nav-items .heading--label, .text--nav-items .heading--h5,
+.text--nav-items h6, .text--nav-items .heading--h6 {
+  color: #212535;
+}
+
+.text--nav-items h1 a, .text--nav-items .heading--homepage a, .text--nav-items .heading--product a, .text--nav-items .heading--h1 a,
+.text--nav-items h2 a, .text--nav-items .heading--medium a, .text--nav-items .heading--h2 a,
+.text--nav-items h3 a, .text--nav-items .heading--h3 a,
+.text--nav-items h4 a, .text--nav-items .heading--h4 a,
+.text--nav-items h5 a, .text--nav-items .heading--label a, .text--nav-items .heading--h5 a,
+.text--nav-items h6 a, .text--nav-items .heading--h6 a {
+  color: #212535;
+}
+
 .text--data-sources {
   color: #a3b9cb !important;
+}
+
+.text--data-sources h1, .text--data-sources .heading--homepage, .text--data-sources .heading--product, .text--data-sources .heading--h1,
+.text--data-sources h2, .text--data-sources .heading--medium, .text--data-sources .heading--h2,
+.text--data-sources h3, .text--data-sources .heading--h3,
+.text--data-sources h4, .text--data-sources .heading--h4,
+.text--data-sources h5, .text--data-sources .heading--label, .text--data-sources .heading--h5,
+.text--data-sources h6, .text--data-sources .heading--h6 {
+  color: #a3b9cb;
+}
+
+.text--data-sources h1 a, .text--data-sources .heading--homepage a, .text--data-sources .heading--product a, .text--data-sources .heading--h1 a,
+.text--data-sources h2 a, .text--data-sources .heading--medium a, .text--data-sources .heading--h2 a,
+.text--data-sources h3 a, .text--data-sources .heading--h3 a,
+.text--data-sources h4 a, .text--data-sources .heading--h4 a,
+.text--data-sources h5 a, .text--data-sources .heading--label a, .text--data-sources .heading--h5 a,
+.text--data-sources h6 a, .text--data-sources .heading--h6 a {
+  color: #a3b9cb;
 }
 
 .text--stories {
   color: #847094 !important;
 }
 
+.text--stories h1, .text--stories .heading--homepage, .text--stories .heading--product, .text--stories .heading--h1,
+.text--stories h2, .text--stories .heading--medium, .text--stories .heading--h2,
+.text--stories h3, .text--stories .heading--h3,
+.text--stories h4, .text--stories .heading--h4,
+.text--stories h5, .text--stories .heading--label, .text--stories .heading--h5,
+.text--stories h6, .text--stories .heading--h6 {
+  color: #847094;
+}
+
+.text--stories h1 a, .text--stories .heading--homepage a, .text--stories .heading--product a, .text--stories .heading--h1 a,
+.text--stories h2 a, .text--stories .heading--medium a, .text--stories .heading--h2 a,
+.text--stories h3 a, .text--stories .heading--h3 a,
+.text--stories h4 a, .text--stories .heading--h4 a,
+.text--stories h5 a, .text--stories .heading--label a, .text--stories .heading--h5 a,
+.text--stories h6 a, .text--stories .heading--h6 a {
+  color: #847094;
+}
+
 .text--learning {
   color: #6f99a5 !important;
+}
+
+.text--learning h1, .text--learning .heading--homepage, .text--learning .heading--product, .text--learning .heading--h1,
+.text--learning h2, .text--learning .heading--medium, .text--learning .heading--h2,
+.text--learning h3, .text--learning .heading--h3,
+.text--learning h4, .text--learning .heading--h4,
+.text--learning h5, .text--learning .heading--label, .text--learning .heading--h5,
+.text--learning h6, .text--learning .heading--h6 {
+  color: #6f99a5;
+}
+
+.text--learning h1 a, .text--learning .heading--homepage a, .text--learning .heading--product a, .text--learning .heading--h1 a,
+.text--learning h2 a, .text--learning .heading--medium a, .text--learning .heading--h2 a,
+.text--learning h3 a, .text--learning .heading--h3 a,
+.text--learning h4 a, .text--learning .heading--h4 a,
+.text--learning h5 a, .text--learning .heading--label a, .text--learning .heading--h5 a,
+.text--learning h6 a, .text--learning .heading--h6 a {
+  color: #6f99a5;
 }
 
 .text--highlight {
   color: #53bd92 !important;
 }
 
+.text--highlight h1, .text--highlight .heading--homepage, .text--highlight .heading--product, .text--highlight .heading--h1,
+.text--highlight h2, .text--highlight .heading--medium, .text--highlight .heading--h2,
+.text--highlight h3, .text--highlight .heading--h3,
+.text--highlight h4, .text--highlight .heading--h4,
+.text--highlight h5, .text--highlight .heading--label, .text--highlight .heading--h5,
+.text--highlight h6, .text--highlight .heading--h6 {
+  color: #53bd92;
+}
+
+.text--highlight h1 a, .text--highlight .heading--homepage a, .text--highlight .heading--product a, .text--highlight .heading--h1 a,
+.text--highlight h2 a, .text--highlight .heading--medium a, .text--highlight .heading--h2 a,
+.text--highlight h3 a, .text--highlight .heading--h3 a,
+.text--highlight h4 a, .text--highlight .heading--h4 a,
+.text--highlight h5 a, .text--highlight .heading--label a, .text--highlight .heading--h5 a,
+.text--highlight h6 a, .text--highlight .heading--h6 a {
+  color: #53bd92;
+}
+
 .text--desktop {
   color: #23529c !important;
+}
+
+.text--desktop h1, .text--desktop .heading--homepage, .text--desktop .heading--product, .text--desktop .heading--h1,
+.text--desktop h2, .text--desktop .heading--medium, .text--desktop .heading--h2,
+.text--desktop h3, .text--desktop .heading--h3,
+.text--desktop h4, .text--desktop .heading--h4,
+.text--desktop h5, .text--desktop .heading--label, .text--desktop .heading--h5,
+.text--desktop h6, .text--desktop .heading--h6 {
+  color: #23529c;
+}
+
+.text--desktop h1 a, .text--desktop .heading--homepage a, .text--desktop .heading--product a, .text--desktop .heading--h1 a,
+.text--desktop h2 a, .text--desktop .heading--medium a, .text--desktop .heading--h2 a,
+.text--desktop h3 a, .text--desktop .heading--h3 a,
+.text--desktop h4 a, .text--desktop .heading--h4 a,
+.text--desktop h5 a, .text--desktop .heading--label a, .text--desktop .heading--h5 a,
+.text--desktop h6 a, .text--desktop .heading--h6 a {
+  color: #23529c;
 }
 
 .text--server {
   color: #7fa9bb !important;
 }
 
+.text--server h1, .text--server .heading--homepage, .text--server .heading--product, .text--server .heading--h1,
+.text--server h2, .text--server .heading--medium, .text--server .heading--h2,
+.text--server h3, .text--server .heading--h3,
+.text--server h4, .text--server .heading--h4,
+.text--server h5, .text--server .heading--label, .text--server .heading--h5,
+.text--server h6, .text--server .heading--h6 {
+  color: #7fa9bb;
+}
+
+.text--server h1 a, .text--server .heading--homepage a, .text--server .heading--product a, .text--server .heading--h1 a,
+.text--server h2 a, .text--server .heading--medium a, .text--server .heading--h2 a,
+.text--server h3 a, .text--server .heading--h3 a,
+.text--server h4 a, .text--server .heading--h4 a,
+.text--server h5 a, .text--server .heading--label a, .text--server .heading--h5 a,
+.text--server h6 a, .text--server .heading--h6 a {
+  color: #7fa9bb;
+}
+
 .text--online {
   color: #58a3b9 !important;
+}
+
+.text--online h1, .text--online .heading--homepage, .text--online .heading--product, .text--online .heading--h1,
+.text--online h2, .text--online .heading--medium, .text--online .heading--h2,
+.text--online h3, .text--online .heading--h3,
+.text--online h4, .text--online .heading--h4,
+.text--online h5, .text--online .heading--label, .text--online .heading--h5,
+.text--online h6, .text--online .heading--h6 {
+  color: #58a3b9;
+}
+
+.text--online h1 a, .text--online .heading--homepage a, .text--online .heading--product a, .text--online .heading--h1 a,
+.text--online h2 a, .text--online .heading--medium a, .text--online .heading--h2 a,
+.text--online h3 a, .text--online .heading--h3 a,
+.text--online h4 a, .text--online .heading--h4 a,
+.text--online h5 a, .text--online .heading--label a, .text--online .heading--h5 a,
+.text--online h6 a, .text--online .heading--h6 a {
+  color: #58a3b9;
 }
 
 .text--public {
   color: #324E7A !important;
 }
 
+.text--public h1, .text--public .heading--homepage, .text--public .heading--product, .text--public .heading--h1,
+.text--public h2, .text--public .heading--medium, .text--public .heading--h2,
+.text--public h3, .text--public .heading--h3,
+.text--public h4, .text--public .heading--h4,
+.text--public h5, .text--public .heading--label, .text--public .heading--h5,
+.text--public h6, .text--public .heading--h6 {
+  color: #324E7A;
+}
+
+.text--public h1 a, .text--public .heading--homepage a, .text--public .heading--product a, .text--public .heading--h1 a,
+.text--public h2 a, .text--public .heading--medium a, .text--public .heading--h2 a,
+.text--public h3 a, .text--public .heading--h3 a,
+.text--public h4 a, .text--public .heading--h4 a,
+.text--public h5 a, .text--public .heading--label a, .text--public .heading--h5 a,
+.text--public h6 a, .text--public .heading--h6 a {
+  color: #324E7A;
+}
+
 .text--reader {
   color: #B28CCF !important;
+}
+
+.text--reader h1, .text--reader .heading--homepage, .text--reader .heading--product, .text--reader .heading--h1,
+.text--reader h2, .text--reader .heading--medium, .text--reader .heading--h2,
+.text--reader h3, .text--reader .heading--h3,
+.text--reader h4, .text--reader .heading--h4,
+.text--reader h5, .text--reader .heading--label, .text--reader .heading--h5,
+.text--reader h6, .text--reader .heading--h6 {
+  color: #B28CCF;
+}
+
+.text--reader h1 a, .text--reader .heading--homepage a, .text--reader .heading--product a, .text--reader .heading--h1 a,
+.text--reader h2 a, .text--reader .heading--medium a, .text--reader .heading--h2 a,
+.text--reader h3 a, .text--reader .heading--h3 a,
+.text--reader h4 a, .text--reader .heading--h4 a,
+.text--reader h5 a, .text--reader .heading--label a, .text--reader .heading--h5 a,
+.text--reader h6 a, .text--reader .heading--h6 a {
+  color: #B28CCF;
 }
 
 .text--mobile {
   color: #DB8E6A !important;
 }
 
+.text--mobile h1, .text--mobile .heading--homepage, .text--mobile .heading--product, .text--mobile .heading--h1,
+.text--mobile h2, .text--mobile .heading--medium, .text--mobile .heading--h2,
+.text--mobile h3, .text--mobile .heading--h3,
+.text--mobile h4, .text--mobile .heading--h4,
+.text--mobile h5, .text--mobile .heading--label, .text--mobile .heading--h5,
+.text--mobile h6, .text--mobile .heading--h6 {
+  color: #DB8E6A;
+}
+
+.text--mobile h1 a, .text--mobile .heading--homepage a, .text--mobile .heading--product a, .text--mobile .heading--h1 a,
+.text--mobile h2 a, .text--mobile .heading--medium a, .text--mobile .heading--h2 a,
+.text--mobile h3 a, .text--mobile .heading--h3 a,
+.text--mobile h4 a, .text--mobile .heading--h4 a,
+.text--mobile h5 a, .text--mobile .heading--label a, .text--mobile .heading--h5 a,
+.text--mobile h6 a, .text--mobile .heading--h6 a {
+  color: #DB8E6A;
+}
+
 .text--mission-1 {
   color: #316cc8 !important;
+}
+
+.text--mission-1 h1, .text--mission-1 .heading--homepage, .text--mission-1 .heading--product, .text--mission-1 .heading--h1,
+.text--mission-1 h2, .text--mission-1 .heading--medium, .text--mission-1 .heading--h2,
+.text--mission-1 h3, .text--mission-1 .heading--h3,
+.text--mission-1 h4, .text--mission-1 .heading--h4,
+.text--mission-1 h5, .text--mission-1 .heading--label, .text--mission-1 .heading--h5,
+.text--mission-1 h6, .text--mission-1 .heading--h6 {
+  color: #316cc8;
+}
+
+.text--mission-1 h1 a, .text--mission-1 .heading--homepage a, .text--mission-1 .heading--product a, .text--mission-1 .heading--h1 a,
+.text--mission-1 h2 a, .text--mission-1 .heading--medium a, .text--mission-1 .heading--h2 a,
+.text--mission-1 h3 a, .text--mission-1 .heading--h3 a,
+.text--mission-1 h4 a, .text--mission-1 .heading--h4 a,
+.text--mission-1 h5 a, .text--mission-1 .heading--label a, .text--mission-1 .heading--h5 a,
+.text--mission-1 h6 a, .text--mission-1 .heading--h6 a {
+  color: #316cc8;
 }
 
 .text--mission-2 {
   color: #7dcdf1 !important;
 }
 
+.text--mission-2 h1, .text--mission-2 .heading--homepage, .text--mission-2 .heading--product, .text--mission-2 .heading--h1,
+.text--mission-2 h2, .text--mission-2 .heading--medium, .text--mission-2 .heading--h2,
+.text--mission-2 h3, .text--mission-2 .heading--h3,
+.text--mission-2 h4, .text--mission-2 .heading--h4,
+.text--mission-2 h5, .text--mission-2 .heading--label, .text--mission-2 .heading--h5,
+.text--mission-2 h6, .text--mission-2 .heading--h6 {
+  color: #7dcdf1;
+}
+
+.text--mission-2 h1 a, .text--mission-2 .heading--homepage a, .text--mission-2 .heading--product a, .text--mission-2 .heading--h1 a,
+.text--mission-2 h2 a, .text--mission-2 .heading--medium a, .text--mission-2 .heading--h2 a,
+.text--mission-2 h3 a, .text--mission-2 .heading--h3 a,
+.text--mission-2 h4 a, .text--mission-2 .heading--h4 a,
+.text--mission-2 h5 a, .text--mission-2 .heading--label a, .text--mission-2 .heading--h5 a,
+.text--mission-2 h6 a, .text--mission-2 .heading--h6 a {
+  color: #7dcdf1;
+}
+
 .text--mission-3 {
   color: #5facce !important;
+}
+
+.text--mission-3 h1, .text--mission-3 .heading--homepage, .text--mission-3 .heading--product, .text--mission-3 .heading--h1,
+.text--mission-3 h2, .text--mission-3 .heading--medium, .text--mission-3 .heading--h2,
+.text--mission-3 h3, .text--mission-3 .heading--h3,
+.text--mission-3 h4, .text--mission-3 .heading--h4,
+.text--mission-3 h5, .text--mission-3 .heading--label, .text--mission-3 .heading--h5,
+.text--mission-3 h6, .text--mission-3 .heading--h6 {
+  color: #5facce;
+}
+
+.text--mission-3 h1 a, .text--mission-3 .heading--homepage a, .text--mission-3 .heading--product a, .text--mission-3 .heading--h1 a,
+.text--mission-3 h2 a, .text--mission-3 .heading--medium a, .text--mission-3 .heading--h2 a,
+.text--mission-3 h3 a, .text--mission-3 .heading--h3 a,
+.text--mission-3 h4 a, .text--mission-3 .heading--h4 a,
+.text--mission-3 h5 a, .text--mission-3 .heading--label a, .text--mission-3 .heading--h5 a,
+.text--mission-3 h6 a, .text--mission-3 .heading--h6 a {
+  color: #5facce;
 }
 
 /*
@@ -6068,7 +6728,7 @@ Markup: context-headings.hbs
 
 Nodefault: true
 
-Weight: 5
+Weight: 31
 
 .text--large-copy - Large Copy
 .text--sub-nav - Sub Nav Mission
@@ -6078,28 +6738,29 @@ Weight: 5
 
 Style guide: typography.other
 */
-.text--large-copy, .global-nav__top .global-nav__search input[type='search'], .ui-autocomplete, .topic-nav .topic-nav__tabs {
+.text--large-copy, .global-nav__top .global-nav__search input[type='text'],
+.global-nav__top .global-nav__search input[type='search'], .ui-autocomplete, .topic-nav .topic-nav__tabs {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.7142857143em;
+  font-size: 1.5em;
   color: #333;
 }
 
 .text--sub-nav {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.5714285714em;
+  font-size: 1.375em;
   color: #000;
 }
 
 .text--dropdown {
   font-family: "Benton Sans Light", Helvetica, sans-serif;
-  font-size: 1.1428571429em;
+  font-size: 1em;
   color: #787878;
   line-height: 1.875;
 }
 
-.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
+.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .pager .pager__endcap, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
-  font-size: 0.7857142857em;
+  font-size: 0.6875em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -6118,14 +6779,14 @@ Used for title and prominent labels of content.
 
 Markup: headings-kss.hbs
 
-Weight: 3
+Weight: 20
 
 Styleguide typography.headings
 */
-h1, .heading--homepage, .heading--product, .heading--download, .heading--h1,
+h1, .heading--homepage, .heading--product, .heading--h1,
 h2, .heading--medium, .heading--h2,
-h3, .heading--small, .heading--h3,
-h4, .heading--x-small, .heading--h4,
+h3, .heading--h3,
+h4, .heading--h4,
 h5, .heading--label, .heading--h5,
 h6, .heading--h6 {
   margin: .5em 0;
@@ -6134,48 +6795,93 @@ h6, .heading--h6 {
   line-height: 1.2;
 }
 
-h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
-  font-size: 3.5714285714em;
+h1, .heading--homepage, .heading--product, .heading--h1 {
+  font-size: 3em;
+  line-height: 1.25;
+  color: #000;
+}
+
+h1 a, .heading--homepage a, .heading--product a, .heading--h1 a {
+  color: #000;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
-  h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
-    font-size: 3.2142857143em;
+  h1, .heading--homepage, .heading--product, .heading--h1 {
+    font-size: 2.8125em;
   }
 }
 
 @media (max-width: 639px) {
-  h1, .heading--homepage, .heading--product, .heading--download, .heading--h1 {
-    font-size: 2.2857142857em;
+  h1, .heading--homepage, .heading--product, .heading--h1 {
+    font-size: 2em;
   }
 }
 
 h2, .heading--medium, .heading--h2 {
-  font-size: 2.5714285714em;
+  font-size: 2.25em;
+  line-height: 1.39;
+  color: #000;
+}
+
+h2 a, .heading--medium a, .heading--h2 a {
+  color: #000;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
-  h2, .heading--medium, .heading--h2 {
-    font-size: 2.2857142857em;
-  }
-}
-
-@media (max-width: 639px) {
   h2, .heading--medium, .heading--h2 {
     font-size: 2em;
   }
 }
 
-h3, .heading--small, .heading--h3 {
-  font-size: 1.8571428571em;
+@media (max-width: 639px) {
+  h2, .heading--medium, .heading--h2 {
+    font-size: 1.75em;
+  }
 }
 
-h4, .heading--x-small, .heading--h4 {
-  font-size: 1.6428571429em;
+h3, .heading--h3 {
+  font-size: 1.625em;
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  color: #333;
+  -webkit-font-smoothing: auto;
+}
+
+h3 a, .heading--h3 a {
+  color: #333;
+}
+
+h4, .heading--h4 {
+  font-size: 1.4375em;
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
+  color: #333;
+}
+
+h4 a, .heading--h4 a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  h4, .heading--h4 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 639px) {
+  h4, .heading--h4 {
+    font-size: 1.125em;
+  }
 }
 
 h5, .heading--label, .heading--h5 {
   font-size: 1.25em;
+  font-family: "Benton Sans Light", Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  -webkit-font-smoothing: auto;
+}
+
+h5 a, .heading--label a, .heading--h5 a {
+  color: #333;
 }
 
 h6, .heading--h6 {
@@ -6204,153 +6910,47 @@ Nodefault: true
 
 Nocode: true
 
-Weight: 4
+Weight: 21
 
 .heading--homepage - Homepage Hero (70px) - uses `<h1>`
 .heading--product - Product Landing/Product Detail Hero (50px) - uses `<h1>`
-.heading--download - Download Success (48px) - uses `<h1>`
 .heading--medium - Medium headers (36px) - uses `<h2>`
-.heading--small - Small Headline/Product labels (26px) - uses `<h3>`
-.heading--x-small - XS Headline (23px) - uses `<h4>`
 .heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses `<h5>`
 
 Styleguide typography.context-headings
 */
 .heading--homepage {
-  font-family: "Benton Sans Thin", Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 5em;
+  font-size: 4.375em;
   line-height: 1;
-  color: #000;
-}
-
-.heading--homepage a {
-  color: #000;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .heading--homepage {
-    font-size: 3.2142857143em;
-  }
-}
-
-@media (max-width: 639px) {
-  .heading--homepage {
-    font-size: 2.2857142857em;
-  }
-}
-
-.heading--product {
-  font-family: "Benton Sans Thin", Helvetica, sans-serif;
-  font-weight: 100;
-  color: #000;
-}
-
-.heading--product a {
-  color: #000;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
   .heading--product {
-    font-size: 2.2857142857em;
-  }
-}
-
-@media (max-width: 639px) {
-  .heading--product {
-    font-size: 1.9285714286em;
-  }
-}
-
-.heading--download {
-  font-family: "Benton Sans Thin", Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 3.4285714286em;
-  line-height: 1.25;
-  color: #000;
-}
-
-.heading--download a {
-  color: #000;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .heading--download {
     font-size: 2em;
   }
 }
 
 @media (max-width: 639px) {
-  .heading--download {
-    font-size: 1.4285714286em;
+  .heading--product {
+    font-size: 1.6875em;
   }
-}
-
-.heading--medium {
-  font-family: "Benton Sans Thin", Helvetica, sans-serif;
-  font-weight: 100;
-  line-height: 1.39;
-  color: #000;
-}
-
-.heading--medium a {
-  color: #000;
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
   .heading--medium {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 
 @media (max-width: 639px) {
   .heading--medium {
-    font-size: 1.4285714286em;
-  }
-}
-
-.heading--small {
-  font-family: "Benton Sans Light", Helvetica, sans-serif;
-  color: #333;
-  -webkit-font-smoothing: auto;
-}
-
-.heading--small a {
-  color: #333;
-}
-
-.heading--x-small {
-  font-family: "Benton Sans Book", Helvetica, sans-serif;
-  color: #333;
-}
-
-.heading--x-small a {
-  color: #333;
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .heading--x-small {
-    font-size: 1.4285714286em;
-  }
-}
-
-@media (max-width: 639px) {
-  .heading--x-small {
-    font-size: 1.2857142857em;
+    font-size: 1.25em;
   }
 }
 
 .heading--label {
-  font-family: "Benton Sans Light", Helvetica, sans-serif;
   margin: 0;
-  font-size: 1.4285714286em;
-  color: #333;
-  line-height: 1.5;
-  -webkit-font-smoothing: auto;
-}
-
-.heading--label a {
-  color: #333;
+  font-size: 1.25em;
 }
 
 /*
@@ -6361,7 +6961,7 @@ related to a particular product.
 
 Markup: heading-highlight.hbs
 
-Weight: 5
+Weight: 50
 
 .heading-highlight--desktop - Desktop colored highlight
 .heading-highlight--server - Server colored highlight
@@ -6424,6 +7024,8 @@ Stylized quoted text such as a pull quote or testimonial.
 
 Markup: quote.hbs
 
+Weight: 40
+
 Style Guide: typography.quote
 */
 .quote .quote__text {
@@ -6474,273 +7076,5 @@ Style Guide: typography.quote
   }
   .quote .quote__byline:before {
     width: 20px;
-  }
-}
-
-/*
-Badges
-
-The branding system makes use of a location-specific badge, including the dates and associated conference hashtag. As the conference travels, the badge can be updated to reflect the new locations, adding a custom element to the branding system. An outlined badge uses the <code>badge-outlined</code> class.
-
-Markup: badge.hbs
-
-Weight: 4
-
-.badge--white - White BG colored badge.
-.badge--light-gray-1 - Light Gray 1 colored badge.
-.badge--light-gray-2 - Light Gray 2 colored badge.
-.badge--dark-gray-1 - Dk Gray 1 colored badge.
-.badge--dark-gray-2 - Dk Gray 2 colored badge.
-.badge--dark-gray-3 - Dk Gray 3 colored badge.
-.badge--about-featured - About/Feat colored badge.
-.badge--data-sources - Data Sources colored badge.
-
-################################################################################
-# Style guide: boxes.badge #####################################################
-################################################################################
- */
-.badge {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  padding: 20px;
-  background: #457387;
-  border: 3px solid #457387;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 0.7em;
-}
-
-.badge.badge--outlined {
-  background: none;
-}
-
-.badge.badge--white {
-  background: #fff;
-  border-color: #fff;
-  color: #333;
-}
-
-.badge.badge--white.badge--outlined {
-  background: none;
-  color: #fff;
-}
-
-.badge.badge--light-gray-1 {
-  background: #fafafa;
-  border-color: #fafafa;
-  color: #333;
-}
-
-.badge.badge--light-gray-1.badge--outlined {
-  background: none;
-  color: #fafafa;
-}
-
-.badge.badge--light-gray-2 {
-  background: #ebebeb;
-  border-color: #ebebeb;
-  color: #333;
-}
-
-.badge.badge--light-gray-2.badge--outlined {
-  background: none;
-  color: #ebebeb;
-}
-
-.badge.badge--dark-gray-1 {
-  background: #464646;
-  border-color: #464646;
-  color: #bbb;
-}
-
-.badge.badge--dark-gray-1.badge--outlined {
-  background: none;
-  color: #464646;
-}
-
-.badge.badge--dark-gray-2 {
-  background: #333;
-  border-color: #333;
-  color: #bbb;
-}
-
-.badge.badge--dark-gray-2.badge--outlined {
-  background: none;
-  color: #333;
-}
-
-.badge.badge--dark-gray-3 {
-  background: #1b1b1b;
-  border-color: #1b1b1b;
-  color: #bbb;
-}
-
-.badge.badge--dark-gray-3.badge--outlined {
-  background: none;
-  color: #1b1b1b;
-}
-
-.badge.badge--about-featured {
-  background: #457387;
-  border-color: #457387;
-  color: #fff;
-}
-
-.badge.badge--about-featured.badge--outlined {
-  background: none;
-  color: #457387;
-}
-
-.badge.badge--data-sources {
-  background: #2e4c65;
-  border-color: #2e4c65;
-  color: #fff;
-}
-
-.badge.badge--data-sources.badge--outlined {
-  background: none;
-  color: #2e4c65;
-}
-
-.badge.badge--desktop {
-  background: #23529c;
-  border-color: #23529c;
-  color: #fff;
-}
-
-.badge.badge--desktop.badge--outlined {
-  background: none;
-  color: #23529c;
-}
-
-.badge.badge--server {
-  background: #7fa9bb;
-  border-color: #7fa9bb;
-  color: #fff;
-}
-
-.badge.badge--server.badge--outlined {
-  background: none;
-  color: #7fa9bb;
-}
-
-.badge.badge--online {
-  background: #58a3b9;
-  border-color: #58a3b9;
-  color: #fff;
-}
-
-.badge.badge--online.badge--outlined {
-  background: none;
-  color: #58a3b9;
-}
-
-.badge.badge--public {
-  background: #324E7A;
-  border-color: #324E7A;
-  color: #fff;
-}
-
-.badge.badge--public.badge--outlined {
-  background: none;
-  color: #324E7A;
-}
-
-.badge.badge--reader {
-  background: #B28CCF;
-  border-color: #B28CCF;
-  color: #fff;
-}
-
-.badge.badge--reader.badge--outlined {
-  background: none;
-  color: #B28CCF;
-}
-
-.badge.badge--mobile {
-  background: #DB8E6A;
-  border-color: #DB8E6A;
-  color: #fff;
-}
-
-.badge.badge--mobile.badge--outlined {
-  background: none;
-  color: #DB8E6A;
-}
-
-.badge.badge--nav-drawer-gray-1 {
-  background: #f0f0f0;
-  border-color: #f0f0f0;
-  color: #333;
-}
-
-.badge.badge--nav-drawer-gray-1.badge--outlined {
-  background: none;
-  color: #f0f0f0;
-}
-
-.badge.badge--nav-drawer-gray-2 {
-  background: #ddd;
-  border-color: #ddd;
-  color: #333;
-}
-
-.badge.badge--nav-drawer-gray-2.badge--outlined {
-  background: none;
-  color: #ddd;
-}
-
-/*
-Sticky elements
-
-Uses waypoints.js and the sticky.js shortcut to make elements on the page stick 
-once they get scrolled to and are about to go out of view.
-
-Markup:
-<div class="grid-3">
-  <div class="sticky {$modifiers}">
-    <div class="box--green padded-box padded-box--one">
-      <p>Culpa doloribus cillum ac repellendus blandit elit illum! Eaque! Aenean excepturi conubia non eum, dolorum, quidem excepteur, quisque! Magni iaculis.</p>
-    </div>
-  </div>
-</div>
-
-.sticky--nospacing - Doesn't add any spacing between the menu and the stuck element
-
-Style guide: 6.2
-*/
-.stuck {
-  position: fixed;
-  z-index: 7;
-  top: 0;
-  width: 100%;
-}
-
-@media (min-width: 961px) {
-  .sticky--desktop.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 960px) {
-  .sticky--tablet.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
-  }
-}
-
-@media (max-width: 639px) {
-  .sticky--mobile.stuck {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    width: 100%;
   }
 }

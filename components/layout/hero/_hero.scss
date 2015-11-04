@@ -113,7 +113,7 @@ Style guide: layout.hero
 
 // Set up the gradient fades for wide screens for each background color.
 @each $name, $colors in $background-colors {
-  .box--#{"" + $name} {
+  .bg--#{"" + $name} {
     .hero__background:before,
     .hero__video:before {
       background-image: linear-gradient(to right, nth($colors, 1), transparent);
@@ -170,9 +170,9 @@ Style guide: layout.hero
     }
   }
 
-  .box--dark-gray-1 .hero,
-  .box--dark-gray-2 .hero,
-  .box--dark-gray-3 .hero {
+  .bg--dark-gray-1 .hero,
+  .bg--dark-gray-2 .hero,
+  .bg--dark-gray-3 .hero {
     background: #fff;
     color: $text-dark-body;
   }
