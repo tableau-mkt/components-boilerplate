@@ -127,6 +127,20 @@ module.exports = (grunt) ->
           relativeFontPath: '../fonts'
           fontFilename: 'tableau-icons-{hash}'
 
+    ###
+    Start a connect web server.
+    ###
+    connect:
+      options:
+        base: 'styleguide'
+        hostname: 'localhost'
+        livereload: true
+        open: true
+        useAvailablePort: true
+
+      styleguide:
+        options:
+          keepalive: true
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)

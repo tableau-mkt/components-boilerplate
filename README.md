@@ -15,6 +15,9 @@ $ bower install
 Starts up a grunt watch task by default.
 ```$ grunt```
 
+In another shell, you can start a simple webserver, using `grunt connect:styleguide`.
+
+
 ### Finish
 Produce the full style.css file, run it through css prefixer, and generate the kss-node based style guide.
 ```$ grunt build```
