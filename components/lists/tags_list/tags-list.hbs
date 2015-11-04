@@ -3,9 +3,9 @@
 
   {{#each tags}}
     <li class="tags-list__tag {{#if class}}{{ class }}{{/if}}">
-      {{# link}}
+      {{#with link}}
         {{> link-formatted}}
-      {{/ link}}
+      {{/with}}
     </li>
   {{/each}}
 </ul>

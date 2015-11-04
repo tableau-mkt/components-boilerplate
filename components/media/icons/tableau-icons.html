@@ -78,6 +78,7 @@ Markup: icon.hbs
 .icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
+.icon--nic-cage - nic-cage icon
 .icon--people - people icon
 .icon--share - share icon
 .icon--tableau-logo - tableau-logo icon
@@ -92,10 +93,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../../../build/fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.eot?22382b18992c6d1b2b84aa042655f841");
-  src:url("../../../build/fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.eot?#iefix") format("embedded-opentype"),
-		url("../../../build/fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.woff?22382b18992c6d1b2b84aa042655f841") format("woff"),
-		url("../../../build/fonts/tableau-icons-22382b18992c6d1b2b84aa042655f841.ttf?22382b18992c6d1b2b84aa042655f841") format("truetype");
+  src:url("../../../build/fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.eot?0b1270d2909dc2fd57c15658389b517b");
+  src:url("../../../build/fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.eot?#iefix") format("embedded-opentype"),
+		url("../../../build/fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.woff?0b1270d2909dc2fd57c15658389b517b") format("woff"),
+		url("../../../build/fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.ttf?0b1270d2909dc2fd57c15658389b517b") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -184,38 +185,43 @@ Style Guide: media.icons
 }
 
 
+.icon--nic-cage:before {
+  content:"\f10e";
+}
+
+
 .icon--people:before {
   content:"\f101";
 }
 
 
 .icon--share:before {
-  content:"\f10e";
-}
-
-
-.icon--tableau-logo:before {
   content:"\f10f";
 }
 
 
-.icon--triangle-down:before {
+.icon--tableau-logo:before {
   content:"\f110";
 }
 
 
-.icon--triangle-left:before {
+.icon--triangle-down:before {
   content:"\f111";
 }
 
 
-.icon--triangle-right:before {
+.icon--triangle-left:before {
   content:"\f112";
 }
 
 
-.icon--triangle-up:before {
+.icon--triangle-right:before {
   content:"\f113";
+}
+
+
+.icon--triangle-up:before {
+  content:"\f114";
 }
 
 		</style>
@@ -250,6 +256,8 @@ Style Guide: media.icons
 				<div class="icons__item" data-name="laptop"><i class="icon icon--laptop"></i> icon--laptop</div>
 			
 				<div class="icons__item" data-name="link"><i class="icon icon--link"></i> icon--link</div>
+			
+				<div class="icons__item" data-name="nic-cage"><i class="icon icon--nic-cage"></i> icon--nic-cage</div>
 			
 				<div class="icons__item" data-name="people"><i class="icon icon--people"></i> icon--people</div>
 			
