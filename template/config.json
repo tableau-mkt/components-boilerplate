@@ -1,16 +1,16 @@
 {
   "css": [
-    "../build/bower/slick.js/slick/slick.css",
-    "../build/bower/slick.js/slick/slick-theme.css",
+    "build/vendor/slick.js/slick/slick.css",
+    "build/vendor/slick.js/slick/slick-theme.css",
     "public/style.css",
-    "../build/css/styleguide.css"
+    "build/css/styleguide.css"
   ],
   "js": [
     "https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js",
-    "../build/js/vendor/jquery/dist/jquery.min.js",
-    "../build/js/vendor/jquery-ui/jquery-ui.min.js",
-    "../build/js/vendor/vendor.js",
-    "../build/js/scripts.js"
+    "build/vendor/jquery/dist/jquery.min.js",
+    "build/vendor/jquery-ui/jquery-ui.min.js",
+    "build/js/vendor.js",
+    "build/js/scripts.js"
   ],
   "custom": [
     "bgcolor",

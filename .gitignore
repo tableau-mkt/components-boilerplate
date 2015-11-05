@@ -42,6 +42,7 @@ sass/imports/
 bower_components/
 node_modules/
 template/node_modules/
+.grunt/
 
 # built assets #
 ################

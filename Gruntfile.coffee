@@ -93,7 +93,6 @@ module.exports = (grunt) ->
         dest: 'build/js/scripts.js'
       vendor:
         src: [
-          'bower_components/jquery-ui/jquery-ui.min.js'
           'bower_components/slick.js/slick/slick.min.js'
           'bower_components/hoverintent/jquery.hoverIntent.js'
           'bower_components/waypoints/lib/jquery.waypoints.min.js'
@@ -101,7 +100,7 @@ module.exports = (grunt) ->
           'bower_components/waypoints/lib/shortcuts/inview.min.js'
           'bower_components/underscore/underscore-min.js'
         ]
-        dest: 'build/js/vendor/vendor.js'
+        dest: 'build/js/vendor.js'
 
     copy:
       vendor:
@@ -110,13 +109,20 @@ module.exports = (grunt) ->
         src: [
           'jquery/dist/jquery.min.js'
           'jquery-ui/jquery-ui.min.js'
+          'slick.js/slick/slick.css'
+          'slick.js/slick/slick-theme.css'
         ]
-        dest: 'build/js/vendor'
+        dest: 'build/vendor'
       assets:
         expand: true
         cwd: 'components'
         src: '**/*.{jpg,gif,png}'
         dest: 'build/images'
+      styleguide:
+        expand: true
+        src: 'build/**'
+        dest: 'styleguide/'
+        
 
     webfont:
       icons:
@@ -137,7 +143,7 @@ module.exports = (grunt) ->
 
     'gh-pages':
       options:
-        base: '.'
+        base: 'styleguide'
       src: ['**']
       travisDeploy:
         options:
@@ -152,7 +158,7 @@ module.exports = (grunt) ->
     compress:
       build:
         options:
-          archive: 'tableau-components.zip'
+          archive: 'styleguide/tableau-components.zip'
         expand: true
         cwd: 'build/'
         src: '**/*'
@@ -172,6 +178,7 @@ module.exports = (grunt) ->
     'postcss:dist'
     'copy:vendor'
     'copy:assets'
+    'copy:styleguide'
     'concat:scripts'
     'concat:vendor'
   ]
@@ -185,8 +192,8 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'autoDeploy', [
-    'build',
-    'gh-pages:travisDeploy'
+    'build'
     'compress:build'
+    'gh-pages:testDeploy'
   ]
   return
