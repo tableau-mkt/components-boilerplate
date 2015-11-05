@@ -10,7 +10,7 @@ module.exports = (grunt) ->
           'assets/svg/*.svg',
           'components/{,**/}*.svg'
         ]
-        tasks: ['webfont:icons']
+        tasks: ['clean:icons', 'webfont:icons']
 
       sass:
         files: [
@@ -47,7 +47,7 @@ module.exports = (grunt) ->
       dist:
         options:
           sourceMap: true
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -74,7 +74,9 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require('autoprefixer-core')({ browers: ['IE8', 'iOS', 'Opera'] })
+          require('autoprefixer-core')({
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+          })
         ]
       dist:
         src: 'build/css/*.css'
@@ -83,7 +85,7 @@ module.exports = (grunt) ->
 
     shell:
       kss:
-        command: 'kss-node --config template/config.json'
+        command: './node_modules/.bin/kss-node --config template/config.json'
 
     concat:
       options:
@@ -140,6 +142,24 @@ module.exports = (grunt) ->
           relativeFontPath: '../fonts'
           fontFilename: 'tableau-icons-{hash}'
 
+    clean:
+      icons: 
+        src: ["build/fonts/tableau-icons-*"]
+
+    ###
+    Start a connect web server.
+    ###
+    connect:
+      options:
+        base: 'styleguide'
+        hostname: 'localhost'
+        livereload: false
+        open: true
+        useAvailablePort: true
+
+      styleguide:
+        options:
+          keepalive: true
 
     'gh-pages':
       options:
@@ -171,6 +191,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
+    'clean:icons'
     'webfont:icons'
     'sass_globbing'
     'sass:dist'

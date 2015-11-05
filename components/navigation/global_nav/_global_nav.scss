@@ -72,7 +72,7 @@ Style guide: navigation.global
         }
       }
 
-      li.expandable a:after {
+      li a.expandable:after {
         content: "";
         position: absolute;
         opacity: 0;
@@ -88,7 +88,7 @@ Style guide: navigation.global
         transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
       }
 
-      li.expanded a:after {
+      li a.expanded:after {
         opacity: 1;
       }
     }
@@ -159,7 +159,7 @@ Style guide: navigation.global
         position: absolute;
         opacity: 0;
         width: 0;
-        background-image: url('../images/global/x-close-nav.png');
+        background-image: url('../images/icons/x-close-nav.png');
         background-repeat: no-repeat;
         background-size: 18px;
         background-position: center center;
@@ -246,16 +246,15 @@ Style guide: navigation.global
           color: $text-dark-body;
         }
 
+        a.expandable:after {
+          content: url('../images/shame/icons/expand-right.png');
+          float: right;
+          margin-top: -2px;
+        }
 
         &:last-child a {
           border-bottom: 0;
         }
-      }
-
-      .expandable a:after {
-        content: url('../images/shame/icons/expand-right.png');
-        float: right;
-        margin-top: -2px;
       }
     }
 

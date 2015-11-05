@@ -1,0 +1,38 @@
+<div class="person-teaser {{ modifier_class }}">
+
+  {{!-- Person photo / avatar --}}
+  {{#if image}}
+  <div class="person-teaser__image">{{{ image }}}</div>
+  {{/if}}
+
+  {{!-- Wrapper for details about a person --}}
+  <div class="person-teaser__info">
+    {{!-- Person name --}}
+    {{#if title}}
+      <h4 class="person-teaser__name">{{ title }}</h4>
+    {{/if}}
+
+    {{!-- Person description / profile --}}
+    {{#if jobTitle}}
+    <div class="person-teaser__description">
+      {{ jobTitle }}
+    </div>
+    {{/if}}
+
+    {{#if bio}}
+    <div class="person-teaser__description">
+      {{{ bio }}}
+    </div>
+    {{/if}}
+
+    {{!-- Social links --}}
+    {{#if social}}
+      <div class="person-teaser__social">
+      {{#each social}}
+        <a class="link--social link--social-{{ name }}" href="{{ url }}"><i class="icon icon-social-{{ name }}"></i></a>
+      {{/each}}
+      </div>
+    {{/if}}
+  </div>
+
+</div>

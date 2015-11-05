@@ -14,9 +14,11 @@
           {{#with primary}}
             <ul>
               {{#each items}}
-                <li{{#if class}} class="{{ class }}"{{/if}}{{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}>
+                <li{{#if class}} class="{{ class }}"{{/if}}>
                   {{#with link}}
-                    {{> link-base}}
+                    <a href="{{ href }}" {{#if target}}target="{{ target }}"{{/if}} class="{{ modifier_class }}{{#if class }} {{ class }}{{/if}} {{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}">
+                      {{ text }}
+                    </a>
                   {{/with}}
                 </li>
               {{/each}}

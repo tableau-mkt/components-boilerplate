@@ -1,0 +1,38 @@
+/*
+Detail Field
+
+Field with a label.
+
+Markup: detail-field.hbs
+
+.detail-field--secondary - Secondary "sidebar" field.
+
+Styleguide: typography.detail-field
+*/
+
+.detail-field {
+
+  .detail-field__label {
+    @extend .heading--h5;
+  }
+
+  // Right "sidebar" layout position.
+  &.detail-field--secondary {
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid $accent-dividers;
+
+    .detail-field__items {
+      @extend .heading--label;
+      font-family: $text--benton-light;
+    }
+
+    .detail-field__label {
+      @extend .text--label;
+    }
+
+    @include breakpoint($mobile-max) {
+      color: $text-dark-body;
+    }
+  }
+}
