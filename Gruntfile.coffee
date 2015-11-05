@@ -173,4 +173,9 @@ module.exports = (grunt) ->
     'sass_globbing'
     'sass:dev'
   ]
+
+  grunt.registerTask 'autoDeploy', [
+    'build',
+    'gh-pages:travisDeploy'
+  ]
   return
