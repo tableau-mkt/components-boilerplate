@@ -22,4 +22,4 @@ script:
   - npm test
 
 after_success:
-  - grunt autoDeploy
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && grunt autoDeploy
