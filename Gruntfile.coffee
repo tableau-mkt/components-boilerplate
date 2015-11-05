@@ -10,7 +10,7 @@ module.exports = (grunt) ->
           'assets/svg/*.svg',
           'components/{,**/}*.svg'
         ]
-        tasks: ['webfont:icons']
+        tasks: ['clean:icons', 'webfont:icons']
 
       sass:
         files: [
@@ -47,7 +47,7 @@ module.exports = (grunt) ->
       dist:
         options:
           sourceMap: true
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -129,6 +129,11 @@ module.exports = (grunt) ->
           relativeFontPath: '../fonts'
           fontFilename: 'tableau-icons-{hash}'
 
+<<<<<<< HEAD
+    clean:
+      icons: 
+        src: ["build/fonts/tableau-icons-*"]
+=======
     ###
     Start a connect web server.
     ###
@@ -143,6 +148,7 @@ module.exports = (grunt) ->
       styleguide:
         options:
           keepalive: true
+>>>>>>> gh-pages
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
@@ -151,6 +157,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
+    'clean:icons'
     'webfont:icons'
     'sass_globbing'
     'sass:dist'

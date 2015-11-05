@@ -46,7 +46,7 @@
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-colors.html">
-            Color Palette
+            Colors
           </a>
         </li>
         <li class="kss-nav__menu-item">
@@ -57,6 +57,11 @@
         <li class="kss-nav__menu-item">
           <a href="section-buttons-links.html">
             Buttons &amp; Links
+          </a>
+        </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-labels.html">
+            Labels
           </a>
         </li>
         <li class="kss-nav__menu-item">
@@ -105,23 +110,68 @@
     <article role="main" class="kss-content kss-right">
       <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
          <h2 id="overview">Overview</h2>
-<p>Welcome to the the Tableau Components style guide! Use the navigation on the 
-left to browse through available components.</p>
-<p><img src="public/images/robot.gif" alt="Majestic Robot. Just because."></p>
-<h3 id="components-of-components">Components of... Components</h3>
-<ul>
-<li>Component</li>
-<li>Element</li>
-<li>Modifier</li>
-<li>State</li>
-<li>Skin</li>
-</ul>
-<h3 id="class-name-structure">Class Name Structure</h3>
-<pre><code>.the-component             # Component
-.the-component--modifier   # Modifier
-.the-component__an-element # Sub-element
-.the-component:hover       # State
+<p>Welcome to the the Tableau Style Guide! This style guide is a curated collection
+of components used to build websites and pages with the Tableau corporate brand.
+Explore the style guide with the navigation on the left to find working examples
+of components as well as any variations (modifiers) and markup examples. </p>
+<p>Please note that this is a living style guide which automatically reflects
+the latest updates and additions. Components will occasionally be updated, 
+added, and possibly even removed. </p>
+<p><img src="https://media.giphy.com/media/xTiTnHMbep19cuNnoY/giphy.gif" alt=""></p>
+<h2 id="installation">Installation</h2>
+<h4 id="download-the-assets">Download the Assets</h4>
+<p>Download a zip of the assets <a href="/tableau-components.zip">here</a>.</p>
+<h4 id="include-css-in-lt-head-gt-">Include CSS in &lt;head&gt;</h4>
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/vendor/slick.js/slick/slick.css&quot; media=&quot;all&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/vendor/slick.js/slick/slick-theme.css&quot; media=&quot;all&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/build/css/style.css&quot; media=&quot;all&quot; /&gt;
 </code></pre>
+</div>
+
+<h4 id="other-requirements-in-lt-head-gt-">Other Requirements in &lt;head&gt;</h4>
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;!-- Ensures proper page width and zoom level on mobile devices --&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+&lt;!-- Tableau Sparkle favicon --&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;/build/images/favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+&lt;!-- Web Fonts - New domains will need to be requested to be whitelisted --&gt;
+&lt;link href=&quot;//cloud.webtype.com/css/22656ecb-3391-46f0-80ba-dce1b9624199.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;link href=&#39;//fonts.googleapis.com/css?family=Merriweather:300italic,300,700,700italic&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;</code></pre>
+</div>
+
+
+<h4 id="scripts-at-bottom-of-html">Scripts at Bottom of HTML</h4>
+<p>We concatenate most of our third-party plugins and scripts into a <code>vendor.js</code> 
+file, but keep jQuery and jQuery UI separate in case your system already 
+includes them. </p>
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;script src=&quot;build/vendor/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/vendor/jquery-ui/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/js/vendor.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/js/scripts.js&quot;&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<h2 id="usage">Usage</h2>
+<p>Once all the assets above are included on the page/site, all of the components
+described in this style guide should work out of the box. If you&#39;re working with
+static markup on a page, it&#39;s as simple as copying the markup example from the 
+style guide and updating with your content. </p>
+<p>Applying styles to an existing 
+system takes a bit more work, however. Essentially classes and DOM will need to 
+be modified in any generated markup so that they match the structure and classes
+of the component in the style guide. </p>
+<p>Alternatively, if the system being integrated doesn&#39;t easily allow for inserting
+classes where needed or doesn&#39;t allow for manipulation of HTML output, there&#39;s 
+some more involved options that involve customizing the component library. For
+more information on this, see the Development section below and the linked 
+developemnt documentation.</p>
+<h2 id="development">Development</h2>
+<p>See the project <a href="https://github.com/tableau-mkt/components#tableau-components">README</a>
+for development guidelines for working with the style guide. If you don&#39;t have 
+access, please request it from <a href="mailto:marketing-webteam@tableau.com">marketing-webteam@tableau.com</a>.</p>
+
       </div>
     </article>
   </div>

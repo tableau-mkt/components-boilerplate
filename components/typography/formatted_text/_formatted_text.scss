@@ -13,11 +13,6 @@ Weight: 30
 .text--left - Left justified text
 .text--centered - Center justified text
 .text--justified - Justified text
-.text--huge - Huge text (36px)
-.text--big - Big text (24px)
-.text--base-size - Base size text (14px)
-.text--small - Small text (12px)
-.text--tiny - Tiny text - 10px
 .text--lineheight-zero - Line height set to zero.
 
 Style guide: typography.formatted
@@ -52,21 +47,6 @@ em,
 }
 .text--justified {
   text-align: justified;
-}
-.text--huge {
-  font-size: em(36px);
-}
-.text--big {
-  font-size: em(24px);
-}
-.text--base-size {
-  font-size: $base-font-size;
-}
-.text--small {
-  font-size: em(12px);
-}
-.text--tiny {
-  font-size: em(10px);
 }
 .text--lineheight-zero {
   line-height: 0;

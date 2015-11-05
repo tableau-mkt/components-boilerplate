@@ -63,18 +63,23 @@
           <a href="section-labels.html">
             Labels
           </a>
+          <ul class="kss-nav__menu-child">
+                <li class="kss-nav__menu-item">
+                  <a href="section-labels.html#kssref-labels-eyebrow-badge">
+                    Eyebrow Badge
+                  </a>
+                </li>
+                <li class="kss-nav__menu-item">
+                  <a href="section-labels.html#kssref-labels-tag">
+                    Tab Label
+                  </a>
+                </li>
+          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-images.html">
             Images
           </a>
-          <ul class="kss-nav__menu-child">
-                <li class="kss-nav__menu-item">
-                  <a href="section-images.html#kssref-images-thumbnail">
-                    Thumbnail Image
-                  </a>
-                </li>
-          </ul>
         </li>
         <li class="kss-nav__menu-item">
           <a href="section-media.html">
@@ -116,36 +121,36 @@
 
     <article role="main" class="kss-content kss-right">
 
-            <div id="kssref-images" class="kss-section kss-section--depth-1">
+            <div id="kssref-labels" class="kss-section kss-section--depth-1">
 
           <div class="kss-style">
             <h2 class="kss-title kss-title--level-1">
-              <!-- <a class="kss-title__permalink" href="#kssref-images"> -->
-                Images
+              <!-- <a class="kss-title__permalink" href="#kssref-labels"> -->
+                Labels
               <!-- </a> -->
             </h2>
 
 
             <div class="kss-description">
-              <p>Image assets displayed as thumbnails or within the content of a page.</p>
+              <p>Elements that are generally text based, non-interactive, and serve as indicators.</p>
 
             </div>
           </div>
 
 
             </div>
-            <section id="kssref-images-thumbnail" class="kss-section kss-section--depth-2">
+            <section id="kssref-labels-eyebrow-badge" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
             <h3 class="kss-title kss-title--level-2">
-              <!-- <a class="kss-title__permalink" href="#kssref-images-thumbnail"> -->
-                Thumbnail Image
+              <!-- <a class="kss-title__permalink" href="#kssref-labels-eyebrow-badge"> -->
+                Eyebrow Badge
               <!-- </a> -->
             </h3>
 
 
             <div class="kss-description">
-              <p>A small image that shows a preview of the content that it is linking to.</p>
+              <p>An stylized element that acts as a large, formatted badge to emphasize content.</p>
 
             </div>
           </div>
@@ -160,8 +165,10 @@
                 </div>
                 <div class="kss-example-preview">
                   <div class="kss-example-preview-wrapper">
-                    <div class="thumbnail [modifier class]">
-  <img src="http://www.placecage.com/300/300" alt="Nic Cage" />
+                    <div class="eyebrow-badge [modifier class]">
+  <span class="eyebrow-badge__label">Avril</span>
+
+  <span class="eyebrow-badge__text">88</span>
 </div>
 
                   </div>
@@ -171,16 +178,18 @@
                 <div class="kss-example">
                   <div class="kss-example-details">
                     <div class="kss-example-desc">
-                      <p>A play button superimposed over the middle of the thumbnail</p>
+                      <p>A date eyebrow badge, with a month and day</p>
                     </div>
                     <div class="kss-example-name">
-                      <p><code>.thumbnail--play</code></p>
+                      <p><code>.eyebrow-badge--date</code></p>
                     </div>
                   </div>
                   <div class="kss-example-preview">
                     <div class="kss-example-preview-wrapper">
-                      <div class="thumbnail thumbnail--play">
-  <img src="http://www.placecage.com/300/300" alt="Nic Cage" />
+                      <div class="eyebrow-badge eyebrow-badge--date">
+  <span class="eyebrow-badge__label">Avril</span>
+
+  <span class="eyebrow-badge__text">88</span>
 </div>
 
                     </div>
@@ -190,9 +199,68 @@
             
               <h4>Markup</h4>
               <div class="kss-markup">
-                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;thumbnail [modifier class]&quot;&gt;
-  &lt;img src=&quot;http://www.placecage.com/300/300&quot; alt=&quot;Nic Cage&quot; /&gt;
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;eyebrow-badge [modifier class]&quot;&gt;
+  &lt;span class=&quot;eyebrow-badge__label&quot;&gt;Avril&lt;/span&gt;
+
+  &lt;span class=&quot;eyebrow-badge__text&quot;&gt;88&lt;/span&gt;
 &lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
+            <section id="kssref-labels-tag" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-labels-tag"> -->
+                Tab Label
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>An inline indicator. This element helps identify an aspects about the item in consderation.</p>
+
+            </div>
+          </div>
+
+            <h4>Examples</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <h6>Default styling</h6>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <span class="label-tag [modifier class]">Featured</span>
+
+                  </div>
+                </div>
+              </div>
+             
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>A purple tag label</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.label-tag--purple</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <span class="label-tag label-tag--purple">Featured</span>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;span class=&quot;label-tag [modifier class]&quot;&gt;Featured&lt;/span&gt;
 </code></pre>
               </div>
 

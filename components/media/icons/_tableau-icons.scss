@@ -19,10 +19,13 @@ Markup: icon.hbs
 .icon--social-instagram - social-instagram icon
 .icon--social-linkedin - social-linkedin icon
 .icon--social-twitter - social-twitter icon
+.icon--arrow-left - arrow-left icon
+.icon--arrow-right - arrow-right icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--download - download icon
 .icon--laptop - laptop icon
 .icon--link - link icon
+.icon--nic-cage - nic-cage icon
 .icon--people - people icon
 .icon--share - share icon
 .icon--tableau-logo - tableau-logo icon
@@ -37,10 +40,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?062ee554e6128e455b209df41f228ebe");
-  src:url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.woff?062ee554e6128e455b209df41f228ebe") format("woff"),
-		url("../fonts/tableau-icons-062ee554e6128e455b209df41f228ebe.ttf?062ee554e6128e455b209df41f228ebe") format("truetype");
+  src:url("../fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.eot?0b1270d2909dc2fd57c15658389b517b");
+  src:url("../fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.woff?0b1270d2909dc2fd57c15658389b517b") format("woff"),
+		url("../fonts/tableau-icons-0b1270d2909dc2fd57c15658389b517b.ttf?0b1270d2909dc2fd57c15658389b517b") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -99,23 +102,38 @@ Style Guide: media.icons
 }
 
 
-.icon--cursor-cloud:before {
+.icon--arrow-left:before {
   content:"\f108";
 }
 
 
-.icon--download:before {
+.icon--arrow-right:before {
   content:"\f109";
 }
 
 
-.icon--laptop:before {
+.icon--cursor-cloud:before {
   content:"\f10a";
 }
 
 
-.icon--link:before {
+.icon--download:before {
   content:"\f10b";
+}
+
+
+.icon--laptop:before {
+  content:"\f10c";
+}
+
+
+.icon--link:before {
+  content:"\f10d";
+}
+
+
+.icon--nic-cage:before {
+  content:"\f10e";
 }
 
 
@@ -125,30 +143,30 @@ Style Guide: media.icons
 
 
 .icon--share:before {
-  content:"\f10c";
-}
-
-
-.icon--tableau-logo:before {
-  content:"\f10d";
-}
-
-
-.icon--triangle-down:before {
-  content:"\f10e";
-}
-
-
-.icon--triangle-left:before {
   content:"\f10f";
 }
 
 
-.icon--triangle-right:before {
+.icon--tableau-logo:before {
   content:"\f110";
 }
 
 
-.icon--triangle-up:before {
+.icon--triangle-down:before {
   content:"\f111";
+}
+
+
+.icon--triangle-left:before {
+  content:"\f112";
+}
+
+
+.icon--triangle-right:before {
+  content:"\f113";
+}
+
+
+.icon--triangle-up:before {
+  content:"\f114";
 }
