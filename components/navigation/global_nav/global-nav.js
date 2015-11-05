@@ -22,7 +22,7 @@
       $mobileDrawerClose = $('.global-nav__drawers__drawer__close'),
       animation = {
         duration: 750,
-        easing: "linear"
+        easing: "easeInOutQuart"
       };
 
     /* Desktop stuff */
