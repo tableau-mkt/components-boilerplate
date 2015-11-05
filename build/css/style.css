@@ -361,6 +361,9 @@ Background colors mapping in the form of:
 Product colors mapping in the form of:
   mdifier-name: $color
 */
+/**
+ * Label colors
+ */
 /* Base styles for general page setup */
 body {
   margin: 0;
@@ -617,6 +620,15 @@ Buttons and text links used to link to different pages ro trigger on-page intera
 Weight: 20
 
 Style guide: buttons-links
+*/
+/*
+Labels
+
+Elements that are generally text based, non-interactive, and serve as indicators.
+
+Weight: 21
+
+Style guide: labels
 */
 /*
 Images
@@ -2047,6 +2059,77 @@ Style guide: interactive.viz-slideshow
     margin-left: .5em;
     margin-right: .5em;
   }
+}
+
+/*
+Eyebrow Badge
+
+An stylized element that acts as a large, formatted badge to emphasize content.
+
+Markup: eyebrow-badge.hbs
+
+Weight: 0
+
+.eyebrow-badge--date - A date eyebrow badge, with a month and day
+
+Style guide: labels.eyebrow-badge
+*/
+.eyebrow-badge {
+  display: inline-block;
+  padding: 1em;
+  background: #7099a5;
+  color: #fff;
+  font-family: "Benton Sans Book", Helvetica, sans-serif;
+}
+
+.eyebrow-badge--date {
+  width: 3.5em;
+  height: 3.5em;
+  text-align: center;
+}
+
+.eyebrow-badge--date .eyebrow-badge__label {
+  display: block;
+}
+
+.eyebrow-badge--date .eyebrow-badge__text {
+  display: block;
+  font-family: "Benton Sans Thin", Helvetica, sans-serif;
+  font-size: 2.25em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/*
+Tab Label
+
+An inline indicator. This element helps identify an aspects about the item in consderation.
+
+Markup: label-tag.hbs
+
+Weight: 0
+
+.label-tag--purple - A purple tag label
+
+Style guide: labels.tag
+*/
+.label-tag {
+  display: inline-block;
+  padding: 0.25em 0.375em 0.1875em 0.5em;
+  margin-left: 0.375em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.label-tag--purple {
+  background-color: #847094;
+  color: #fff;
+}
+
+[dir="rtl"] .label-tag,
+.direction--rtl .label-tag {
+  margin-left: initial;
+  margin-right: 0.375em;
 }
 
 /* 
@@ -6758,7 +6841,7 @@ Style guide: typography.other
   line-height: 1.875;
 }
 
-.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .pager .pager__endcap, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
+.text--label, .form-field__label, .social-share, .tabs__tabs .tabs__tab-link, .eyebrow-badge--date .eyebrow-badge__label, .label-tag, .agenda-list__item .agenda__time, .table-list thead th, .tags-list, .video-chapters, .pager .pager__endcap, .text-teaser-item .text-teaser-item__type, .quote .quote__byline {
   font-family: "Benton Sans Book", Helvetica, sans-serif;
   font-size: 0.6875em;
   letter-spacing: 1px;

@@ -28,11 +28,11 @@ module.exports = (grunt) ->
 
       js:
         files: ['components/{,**/}*.js']
-        tasks: ['concat:dist']
+        tasks: ['concat:scripts']
 
       bower:
         files: ['bower_components/**.*']
-        tasks: ['copy:bower']
+        tasks: ['copy:vendor', 'concat:vendor']
 
     sass_globbing:
       all:
@@ -87,25 +87,31 @@ module.exports = (grunt) ->
 
     concat:
       options:
-        separator: ";\n"
-      dist:
+        separator: ';\n'
+      scripts:
         src: 'components/{,**/}*.js'
         dest: 'build/js/scripts.js'
+      vendor:
+        src: [
+          'bower_components/jquery-ui/jquery-ui.min.js'
+          'bower_components/slick.js/slick/slick.min.js'
+          'bower_components/hoverintent/jquery.hoverIntent.js'
+          'bower_components/waypoints/lib/jquery.waypoints.min.js'
+          'bower_components/waypoints/lib/shortcuts/sticky.min.js'
+          'bower_components/waypoints/lib/shortcuts/inview.min.js'
+          'bower_components/underscore/underscore-min.js'
+        ]
+        dest: 'build/js/vendor/vendor.js'
 
     copy:
-      bower:
+      vendor:
         expand: true
         cwd: 'bower_components'
         src: [
-          'jquery/**/*.*'
-          'jquery-ui/**/*.*'
-          'hoverintent/**/*.*'
-          'slick.js/**/*.*'
-          'waypoints/**/*.*'
-          'matchMedia/**/*.*'
-          'underscore/**/*.*'
+          'jquery/dist/jquery.min.js'
+          'jquery-ui/jquery-ui.min.js'
         ]
-        dest: 'build/bower'
+        dest: 'build/js/vendor'
       assets:
         expand: true
         src: 'components/**/*.{jpg,gif,png}'
@@ -128,7 +134,7 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
 
-    "gh-pages":
+    'gh-pages':
       options:
         base: '.'
       src: ['**']
@@ -154,7 +160,10 @@ module.exports = (grunt) ->
     'sass:dist'
     'shell:kss'
     'postcss:dist'
-    'concat:dist'
+    'copy:vendor'
+    'copy:assets'
+    'concat:scripts'
+    'concat:vendor'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'

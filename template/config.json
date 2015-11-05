@@ -7,14 +7,9 @@
   ],
   "js": [
     "https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js",
-    "../build/bower/jquery/dist/jquery.min.js",
-    "../build/bower/jquery-ui/jquery-ui.min.js",
-    "../build/bower/slick.js/slick/slick.min.js",
-    "../build/bower/hoverintent/jquery.hoverIntent.js",
-    "../build/bower/waypoints/lib/jquery.waypoints.min.js",
-    "../build/bower/waypoints/lib/shortcuts/sticky.min.js",
-    "../build/bower/waypoints/lib/shortcuts/inview.min.js",
-    "../build/bower/underscore/underscore-min.js",
+    "../build/js/vendor/jquery/dist/jquery.min.js",
+    "../build/js/vendor/jquery-ui/jquery-ui.min.js",
+    "../build/js/vendor/vendor.js",
     "../build/js/scripts.js"
   ],
   "custom": [
