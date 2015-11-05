@@ -11,10 +11,12 @@ guide (demo below) for usage instructions and guidelines.
 
 Clone this repo (or a fork of it) to your local machine for development. Once
 you have a local instance of the repo, install development and front-end 
-dependencies
+dependencies and initialize your first grunt build.
+
 ```
 $ npm install
 $ bower install
+$ grunt build
 ``` 
 
 ### Development workflow
@@ -26,7 +28,7 @@ to have grunt listen to all file changes and run any necessary processes.
 $ grunt watch
 ```
 
-### Running Style Guide Locally
+#### Running Style Guide Locally
 
 To run the style guide locally, there are several options. The easiest method is
 to to utilize grunt-connect to run a simple web server by running the following 
