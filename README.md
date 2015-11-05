@@ -19,6 +19,23 @@ $ bower install
 $ grunt build
 ``` 
 
+In addition, we use a Grunt task for automatically building an icon font out of
+SVG files which has several dependencies needed in order to successfully build 
+everything. Install them with one of the following:
+
+#### OS X
+```
+$ brew install ttfautohint fontforge --with-python
+```
+
+#### Linux
+```
+$ sudo apt-get install fontforge ttfautohint
+```
+
+#### Windows
+See details [here](https://github.com/sapegin/grunt-webfont#windows).
+
 ### Development workflow
 This project uses Grunt to run build and setup process such as sass globbing and
 building the kss-node style guide. While developing components, run grunt watch 
@@ -81,6 +98,8 @@ up the component.
 * **JSON data** - Defines the schema for the data fields that fill the content
 of the component and provides example data to populate the handlebars template.
 * **Javascript file** - Defines any interactions required by the component.
+* **Other static assets** - Any other assets such as images or SVGs to be used
+in the generated icon font.
 
 ### Example Component Structure:
 
@@ -226,6 +245,40 @@ placeholder images.
 Some components may require javascript in order to implement interaction or 
 other special functionality. Any `.js` files within a component will get 
 concatenated into a single `scripts.js` file. 
+
+### Other Assets
+
+Some components might need other assets such as images or icons. These can also 
+be included directly in the component folder or a sub-folder. 
+
+#### Images
+
+All jpg, png, and gif files get copied into the `build/` folder and are packaged
+in the downloadable ZIP of assets. When referencing an image in component code, 
+it must be referenced relative to `build/` using the following pattern:
+
+```
+/build/images/{component-section}/{component}/{optional sub-folder/}filename.png
+```
+
+#### Icons
+
+Including a new icon to the icon font is just a matter of including a properly 
+set up SVG file within your component. The build process will discover all SVG 
+files and automatically compile them into the icon font and display them as in 
+the style guide on the Icons component. SVG files should follow these 
+guidelines:
+
+Using Adobe Illustrator
+
+* Artboard size: 512 x 512 px
+  * Icon should be vertically and horizontally centered to the artboard
+  * Icon should be scaled down as appropriate given the square size restriction
+* **The SVG needs to be a single, filled shape object**
+  * This means we can't just have groups of shapes, they need to be combined into one shape object via illustrator's pathfinder tool
+  * The fill color should be #000000
+
+[Example icon](components/blob/master/components/media/icons/svg/people.svg)
 
 ## Helpers
 
