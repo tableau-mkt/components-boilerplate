@@ -1,19 +1,16 @@
 /*
-People List
+Person Teaser
 
-A list of people, showing their name and associated metadata.
+Quick peek at a person, showing their name and associated metadata.
 
 Weight: 60
 
-Markup: people-list.hbs
+Markup: person-teaser.hbs
 
-Style guide: lists.people-list
+Style guide: teasers.person-teaser
 */
-.people-list {
-  @extend %plain-list;
-}
 
-.people-list__person {
+.person-teaser {
   @extend %clearfix;
   position: relative;
   margin-top: 1em;
@@ -23,7 +20,7 @@ Style guide: lists.people-list
     margin-top: 0;
   }
 
-  .person__image {
+  .person-teaser__image {
     @include span(1 of 4);
 
     @include breakpoint($tablet-min) {
@@ -31,7 +28,7 @@ Style guide: lists.people-list
     }
   }
 
-  .person__info {
+  .person-teaser__info {
     // Isolated to keep the text wrap at the isolation column.
     @include span(isolate last 3 of 4 at 1);
 
@@ -41,14 +38,14 @@ Style guide: lists.people-list
     }
   }
 
-  .person__name {
+  .person-teaser__name {
     @extend .text--body-medium;
     margin-bottom: 0;
     margin-top: 0;
     color: $text-dark-body;
   }
 
-  .person__social {
+  .person-teaser__social {
     .link--social {
       display: inline-block;
       margin-right: 1em;

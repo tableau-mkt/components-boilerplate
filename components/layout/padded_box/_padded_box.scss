@@ -19,7 +19,7 @@ Style guide: layout.padded
 */
 .padded-box {
   padding: 2em;
-  
+
   &.padded-box--one {
     padding: 1em;
   }
@@ -29,6 +29,6 @@ Style guide: layout.padded
   }
 
   &.padded-box--four {
-    padding: 3em;
+    padding: 4em;
   }
 }

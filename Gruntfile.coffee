@@ -74,7 +74,9 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require('autoprefixer-core')({ browers: ['IE8', 'iOS', 'Opera'] })
+          require('autoprefixer-core')({
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+          })
         ]
       dist:
         src: 'build/css/*.css'
@@ -83,7 +85,7 @@ module.exports = (grunt) ->
 
     shell:
       kss:
-        command: 'kss-node --config template/config.json'
+        command: './node_modules/.bin/kss-node --config template/config.json'
 
     concat:
       options:
@@ -127,9 +129,26 @@ module.exports = (grunt) ->
           relativeFontPath: '../fonts'
           fontFilename: 'tableau-icons-{hash}'
 
+<<<<<<< HEAD
     clean:
       icons: 
         src: ["build/fonts/tableau-icons-*"]
+=======
+    ###
+    Start a connect web server.
+    ###
+    connect:
+      options:
+        base: 'styleguide'
+        hostname: 'localhost'
+        livereload: false
+        open: true
+        useAvailablePort: true
+
+      styleguide:
+        options:
+          keepalive: true
+>>>>>>> gh-pages
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)

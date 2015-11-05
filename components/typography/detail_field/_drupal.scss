@@ -1,0 +1,37 @@
+// Extend component to work with Drupal DOM.
+
+// "Sidebar" meta details.
+// .field--name-field-datetime-range,
+// .field--name-field-hashtag,
+// .field--name-field-sponsors
+// .sidebar--right .block--cck-blocks .detail-field {
+//   @extend .detail-field--secondary;
+
+//   .detail-field__label {
+//      @extend .text--label;
+//   }
+// }
+
+.field__label {
+  @extend .detail-field__label;
+}
+
+.field__items {
+  @extend .detail-field__items;
+}
+
+.field--name-field-sponsors,
+.field--name-field-hashtag {
+  // NOTE: Uses a breakpoint.
+  @extend .mobile-center;
+}
+
+@include breakpoint($mobile-max) {
+
+  .field--name-field-datetime-range,
+  .field-name-dynamic-field-time {
+    background: $bg-light-gray-1;
+    float: left;
+    width: 50%;
+  }
+}
