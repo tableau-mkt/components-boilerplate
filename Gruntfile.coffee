@@ -128,7 +128,7 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
 
-    gh-pages:
+    "gh-pages":
       options:
         base: '.'
       src: ['**']

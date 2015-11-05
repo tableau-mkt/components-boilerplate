@@ -25,12 +25,13 @@ Thumbs.db
 ._*
 
 # Vim generated files #
-######################
+#######################
 *.un~
 
 # SASS #
-##########
+########
 .sass-cache
+sass/imports/
 
 # Map files #
 #############
@@ -41,3 +42,7 @@ Thumbs.db
 bower_components/
 node_modules/
 template/node_modules/
+
+# built assets #
+################
+styleguide/
