@@ -148,10 +148,11 @@ module.exports = (grunt) ->
       travisDeploy:
         options:
           user:
-            name: 'Travis Deployment',
+            name: 'Travis Deployment'
             email: 'visualanalysis@tableau.com'
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git',
-          message: 'Auto-deploy via Travis CI',
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git'
+          branch: "pages-test"
+          message: 'Auto-deploy via Travis CI'
           silent: true
         src: ['**']
 

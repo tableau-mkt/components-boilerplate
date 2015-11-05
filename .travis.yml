@@ -8,9 +8,11 @@ env:
 
 before_install:
   - npm install -g grunt-cli
+  - npm install
+  - bower install
 
 script:
   - npm test
 
 after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && grunt autoDeploy
+  - grunt autoDeploy
