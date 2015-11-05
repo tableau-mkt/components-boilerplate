@@ -16,6 +16,10 @@
   @extend .detail-field__label;
 }
 
+.field__items {
+  @extend .detail-field__items;
+}
+
 .field--name-field-sponsors,
 .field--name-field-hashtag {
   // NOTE: Uses a breakpoint.
@@ -26,7 +30,7 @@
 
   .field--name-field-datetime-range,
   .field-name-dynamic-field-time {
-    @extend .bg--light-gray-1;
+    background: $bg-light-gray-1;
     float: left;
     width: 50%;
   }
