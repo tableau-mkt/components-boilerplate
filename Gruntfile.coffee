@@ -114,7 +114,8 @@ module.exports = (grunt) ->
         dest: 'build/js/vendor'
       assets:
         expand: true
-        src: 'components/**/*.{jpg,gif,png}'
+        cwd: 'components'
+        src: '**/*.{jpg,gif,png}'
         dest: 'build/images'
 
     webfont:
