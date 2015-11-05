@@ -11,23 +11,27 @@ added, and possibly even removed.
 
 ![](https://media.giphy.com/media/xTiTnHMbep19cuNnoY/giphy.gif)
 
-## Usage
+## Installation
 
-### Initial Setup
+#### Download the Assets
 
-In order to start using the styles and components available in the style guide, 
-the following need to be included on each page:
+Download a zip of the assets [here](/tableau-components.zip).
 
-##### HTML &lt;head&gt;
+#### Include CSS in &lt;head&gt;
+
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;link rel="stylesheet" href="/build/vendor/slick.js/slick/slick.css" media="all" /&gt;
+&lt;link rel="stylesheet" href="/build/vendor/slick.js/slick/slick-theme.css" media="all" /&gt;
+&lt;link rel="stylesheet" href="/build/css/style.css" media="all" /&gt;
+</code></pre>
+</div>
+
+#### Other Requirements in &lt;head&gt;
 
 <div class="kss-markup">
 <pre class="prettyprint lang-html"><code>&lt;meta charset="UTF-8"&gt;
 &lt;!-- Ensures proper page width and zoom level on mobile devices --&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-&lt;!-- CSS assets. Slick stylesheets are only required for slideshows --&gt;
-&lt;link rel="stylesheet" href="/build/bower/slick.js/slick/slick.css" media="all" /&gt;
-&lt;link rel="stylesheet" href="/build/bower/slick.js/slick/slick-theme.css" media="all" /&gt;
-&lt;link rel="stylesheet" href="/build/css/style.css" media="all" /&gt;
 &lt;!-- Tableau Sparkle favicon --&gt;
 &lt;link rel="icon" href="/build/images/favicon.ico" type="image/x-icon" /&gt;
 &lt;!-- Web Fonts - New domains will need to be requested to be whitelisted --&gt;
@@ -36,28 +40,36 @@ the following need to be included on each page:
 </div>
 
 
-##### Bottom of HTML document
+#### Scripts at Bottom of HTML
 
-The following libraries and scripts are needed for specific interactive 
-conponents to function properly. `jquery.min.js` and `scripts.js` are required
-as these are necessary for much of the basic interactive functionality.
+We concatenate most of our third-party plugins and scripts into a `vendor.js` 
+file, but keep jQuery and jQuery UI separate in case your system already 
+includes them. 
 
 <div class="kss-markup">
-<pre class="prettyprint lang-html"><code>&lt;script src="build/bower/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/jquery-ui/jquery-ui.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/slick.js/slick/slick.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/hoverintent/jquery.hoverIntent.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/waypoints/lib/jquery.waypoints.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/waypoints/lib/shortcuts/sticky.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/waypoints/lib/shortcuts/inview.min.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/matchMedia/matchMedia.js"&gt;&lt;/script&gt;
-&lt;script src="build/bower/underscore/underscore-min.js"&gt;&lt;/script&gt;
+<pre class="prettyprint lang-html"><code>&lt;script src="build/vendor/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="build/vendor/jquery-ui/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script src="build/js/vendor.js"&gt;&lt;/script&gt;
 &lt;script src="build/js/scripts.js"&gt;&lt;/script&gt;</code></pre>
 </div>
 
-### Using Components
-# @TODO this section
+## Usage
 
+Once all the assets above are included on the page/site, all of the components
+described in this style guide should work out of the box. If you're working with
+static markup on a page, it's as simple as copying the markup example from the 
+style guide and updating with your content. 
+
+Applying styles to an existing 
+system takes a bit more work, however. Essentially classes and DOM will need to 
+be modified in any generated markup so that they match the structure and classes
+of the component in the style guide. 
+
+Alternatively, if the system being integrated doesn't easily allow for inserting
+classes where needed or doesn't allow for manipulation of HTML output, there's 
+some more involved options that involve customizing the component library. For
+more information on this, see the Development section below and the linked 
+developemnt documentation.
 
 ## Development
 See the project [README](https://github.com/tableau-mkt/components#tableau-components)
