@@ -1,5 +1,5 @@
 {
-  "preview": "/build/images/components/gif_player/test-static.png",
-  "gif": "/build/images/components/gif_player/test.gif",
+  "preview": "/build/images/interactive/gif_player/test-static.png",
+  "gif": "/build/images/interactive/gif_player/test.gif",
   "alt": "Gif Player Test"
 }

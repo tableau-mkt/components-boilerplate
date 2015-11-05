@@ -38,6 +38,7 @@
 @import "../../components/layout/bg_color/bg_color";
 @import "../../components/layout/content_container/content_container";
 @import "../../components/layout/divider/divider";
+@import "../../components/layout/divider/drupal";
 @import "../../components/layout/grid/grid";
 @import "../../components/layout/hero/hero";
 @import "../../components/layout/marginless_box/marginless_box";
@@ -47,7 +48,6 @@
 @import "../../components/lists/agenda_list/agenda_list";
 @import "../../components/lists/cross_reference/cross_reference";
 @import "../../components/lists/link_list/link_list";
-@import "../../components/lists/people_list/people_list";
 @import "../../components/lists/table_list/table_list";
 @import "../../components/lists/tags_list/tags_list";
 @import "../../components/lists/unordered_list/list";
@@ -63,11 +63,15 @@
 @import "../../components/navigation/topic_nav/topic_nav";
 @import "../../components/shame/shame";
 @import "../../components/teasers/card/card";
+@import "../../components/teasers/person_teaser/person_teaser";
 @import "../../components/teasers/teaser_item/teaser_item";
 @import "../../components/teasers/text_teaser/text_teaser";
 @import "../../components/typography/body/body_copy";
+@import "../../components/typography/detail_field/detail_field";
+@import "../../components/typography/detail_field/drupal";
 @import "../../components/typography/fonts/fonts";
 @import "../../components/typography/formatted_text/formatted_text";
+@import "../../components/typography/heading/drupal";
 @import "../../components/typography/heading/heading";
 @import "../../components/typography/heading_highlight/heading_highlight";
 @import "../../components/typography/quote/quote";

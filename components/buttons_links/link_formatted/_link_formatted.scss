@@ -26,7 +26,7 @@ Style guide: buttons-links.link-formatted
   text-transform: uppercase;
 
   &.link--arrow:after {
-    content: url(../images/icons/icon-arrow-orange.png);
+    content: url(../images/shame/icons/icon-arrow-orange.png);
     padding-left: 1em;
   }
 
@@ -40,14 +40,14 @@ Style guide: buttons-links.link-formatted
   }
 
   &.link--expand:before {
-    content: url(../images/icons/expand.png);
+    content: url(../images/shame/icons/expand.png);
   }
 
   &.link--collapse:before {
-    content: url(../images/icons/collapse.png);
+    content: url(../images/shame/icons/collapse.png);
   }
 
   &.link--share:before {
-    content: url(../images/icons/share.png);
+    content: url(../images/shame/icons/share.png);
   }
 }

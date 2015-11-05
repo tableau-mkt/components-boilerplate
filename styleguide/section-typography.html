@@ -16,10 +16,10 @@
   <link href="//cloud.webtype.com/css/22656ecb-3391-46f0-80ba-dce1b9624199.css" rel="stylesheet" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Merriweather:300italic,300,700,700italic' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../build/bower/slick.js/slick/slick.css">
-<link rel="stylesheet" href="../build/bower/slick.js/slick/slick-theme.css">
+  <link rel="stylesheet" href="build/vendor/slick.js/slick/slick.css">
+<link rel="stylesheet" href="build/vendor/slick.js/slick/slick-theme.css">
 <link rel="stylesheet" href="public/style.css">
-<link rel="stylesheet" href="../build/css/styleguide.css">
+<link rel="stylesheet" href="build/css/styleguide.css">
 
 </head>
 <body class="kss">
@@ -54,6 +54,11 @@
             Typography
           </a>
           <ul class="kss-nav__menu-child">
+                <li class="kss-nav__menu-item">
+                  <a href="section-typography.html#kssref-typography-detail-field">
+                    Detail Field
+                  </a>
+                </li>
                 <li class="kss-nav__menu-item">
                   <a href="section-typography.html#kssref-typography-fonts">
                     Font Families
@@ -170,6 +175,102 @@
 
 
             </div>
+            <section id="kssref-typography-detail-field" class="kss-section kss-section--depth-2">
+
+          <div class="kss-style">
+            <h3 class="kss-title kss-title--level-2">
+              <!-- <a class="kss-title__permalink" href="#kssref-typography-detail-field"> -->
+                Detail Field
+              <!-- </a> -->
+            </h3>
+
+
+            <div class="kss-description">
+              <p>Field with a label.</p>
+
+            </div>
+          </div>
+
+            <h4>Examples</h4>
+            <div class="kss-examples">
+              <div class="kss-example kss-example__default">
+                <div class="kss-example-details">
+                  <div class="kss-example-desc">
+                    <h6>Default styling</h6>
+                  </div>
+                </div>
+                <div class="kss-example-preview">
+                  <div class="kss-example-preview-wrapper">
+                    <div class="detail-field [modifier class]">
+  <span class="detail-field__label">Movies</span>
+  <div class="detail-field__items">
+    <div class="detail-field__item">
+      ConAir
+    </div>
+    <div class="detail-field__item">
+      Honeymoon Las Vegas
+    </div>
+    <div class="detail-field__item">
+      Face/Off
+    </div>
+  </div>
+</div>
+
+                  </div>
+                </div>
+              </div>
+             
+                <div class="kss-example">
+                  <div class="kss-example-details">
+                    <div class="kss-example-desc">
+                      <p>Secondary &quot;sidebar&quot; field.</p>
+                    </div>
+                    <div class="kss-example-name">
+                      <p><code>.detail-field--secondary</code></p>
+                    </div>
+                  </div>
+                  <div class="kss-example-preview">
+                    <div class="kss-example-preview-wrapper">
+                      <div class="detail-field detail-field--secondary">
+  <span class="detail-field__label">Movies</span>
+  <div class="detail-field__items">
+    <div class="detail-field__item">
+      ConAir
+    </div>
+    <div class="detail-field__item">
+      Honeymoon Las Vegas
+    </div>
+    <div class="detail-field__item">
+      Face/Off
+    </div>
+  </div>
+</div>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+              <h4>Markup</h4>
+              <div class="kss-markup">
+                <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;detail-field [modifier class]&quot;&gt;
+  &lt;span class=&quot;detail-field__label&quot;&gt;Movies&lt;/span&gt;
+  &lt;div class=&quot;detail-field__items&quot;&gt;
+    &lt;div class=&quot;detail-field__item&quot;&gt;
+      ConAir
+    &lt;/div&gt;
+    &lt;div class=&quot;detail-field__item&quot;&gt;
+      Honeymoon Las Vegas
+    &lt;/div&gt;
+    &lt;div class=&quot;detail-field__item&quot;&gt;
+      Face/Off
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+
+            </section>
             <section id="kssref-typography-fonts" class="kss-section kss-section--depth-2">
 
           <div class="kss-style">
@@ -1426,18 +1527,10 @@ related to a particular product.</p>
     prettyPrint();
   </script>
   <script src="https://players.brightcove.net/3798483592001/ad8b15bd-b737-4c9b-a550-53c61ac31107_default/index.min.js"></script>
-<script src="../build/bower/jquery/dist/jquery.min.js"></script>
-<script src="../build/bower/jquery-ui/jquery-ui.min.js"></script>
-<script src="../build/bower/slick.js/slick/slick.min.js"></script>
-<script src="../build/bower/hoverintent/jquery.hoverIntent.js"></script>
-<script src="../build/bower/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="../build/bower/waypoints/lib/shortcuts/sticky.min.js"></script>
-<script src="../build/bower/waypoints/lib/shortcuts/inview.min.js"></script>
-<script src="../build/bower/underscore/underscore-min.js"></script>
-<script src="../build/js/scripts.js"></script>
-
-
-  <script src="//localhost:1234/livereload.js"></script>
+<script src="build/vendor/jquery/dist/jquery.min.js"></script>
+<script src="build/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="build/js/vendor.js"></script>
+<script src="build/js/scripts.js"></script>
 
   <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>

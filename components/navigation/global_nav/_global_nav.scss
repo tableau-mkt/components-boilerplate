@@ -128,7 +128,7 @@ Style guide: navigation.global
         border: none;
         cursor: pointer;
         padding: 0 0 0 45px;
-        background-image: url('../images/icons/icon-magnifying-glass.svg');
+        background-image: url('../images/shame/icons/icon-magnifying-glass.svg');
         background-repeat: no-repeat;
         background-size: 18px;
         background-position: 15px center;
@@ -247,7 +247,7 @@ Style guide: navigation.global
         }
 
         a.expandable:after {
-          content: url('../images/icons/expand-right.png');
+          content: url('../images/shame/icons/expand-right.png');
           float: right;
           margin-top: -2px;
         }

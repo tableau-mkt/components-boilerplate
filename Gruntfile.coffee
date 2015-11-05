@@ -28,11 +28,11 @@ module.exports = (grunt) ->
 
       js:
         files: ['components/{,**/}*.js']
-        tasks: ['concat:dist']
+        tasks: ['concat:scripts']
 
       bower:
         files: ['bower_components/**.*']
-        tasks: ['copy:bower']
+        tasks: ['copy:vendor', 'concat:vendor']
 
     sass_globbing:
       all:
@@ -89,29 +89,42 @@ module.exports = (grunt) ->
 
     concat:
       options:
-        separator: ";\n"
-      dist:
+        separator: ';\n'
+      scripts:
         src: 'components/{,**/}*.js'
         dest: 'build/js/scripts.js'
+      vendor:
+        src: [
+          'bower_components/slick.js/slick/slick.min.js'
+          'bower_components/hoverintent/jquery.hoverIntent.js'
+          'bower_components/waypoints/lib/jquery.waypoints.min.js'
+          'bower_components/waypoints/lib/shortcuts/sticky.min.js'
+          'bower_components/waypoints/lib/shortcuts/inview.min.js'
+          'bower_components/underscore/underscore-min.js'
+        ]
+        dest: 'build/js/vendor.js'
 
     copy:
-      bower:
+      vendor:
         expand: true
         cwd: 'bower_components'
         src: [
-          'jquery/**/*.*'
-          'jquery-ui/**/*.*'
-          'hoverintent/**/*.*'
-          'slick.js/**/*.*'
-          'waypoints/**/*.*'
-          'matchMedia/**/*.*'
-          'underscore/**/*.*'
+          'jquery/dist/jquery.min.js'
+          'jquery-ui/jquery-ui.min.js'
+          'slick.js/slick/slick.css'
+          'slick.js/slick/slick-theme.css'
         ]
-        dest: 'build/bower'
+        dest: 'build/vendor'
       assets:
         expand: true
-        src: 'components/**/*.{jpg,gif,png}'
+        cwd: 'components'
+        src: '**/*.{jpg,gif,png}'
         dest: 'build/images'
+      styleguide:
+        expand: true
+        src: 'build/**'
+        dest: 'styleguide/'
+        
 
     webfont:
       icons:
@@ -129,11 +142,10 @@ module.exports = (grunt) ->
           relativeFontPath: '../fonts'
           fontFilename: 'tableau-icons-{hash}'
 
-<<<<<<< HEAD
     clean:
       icons: 
         src: ["build/fonts/tableau-icons-*"]
-=======
+
     ###
     Start a connect web server.
     ###
@@ -148,7 +160,29 @@ module.exports = (grunt) ->
       styleguide:
         options:
           keepalive: true
->>>>>>> gh-pages
+
+    'gh-pages':
+      options:
+        base: 'styleguide'
+      src: ['**']
+      travisDeploy:
+        options:
+          user:
+            name: 'Travis Deployment'
+            email: 'visualanalysis@tableau.com'
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git'
+          message: 'Auto-deploy via Travis CI'
+          silent: true
+        src: ['**']
+
+    compress:
+      build:
+        options:
+          archive: 'styleguide/tableau-components.zip'
+        expand: true
+        cwd: 'build/'
+        src: '**/*'
+        dest: 'tableau-components/'
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
@@ -163,7 +197,11 @@ module.exports = (grunt) ->
     'sass:dist'
     'shell:kss'
     'postcss:dist'
-    'concat:dist'
+    'copy:vendor'
+    'copy:assets'
+    'copy:styleguide'
+    'concat:scripts'
+    'concat:vendor'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
@@ -172,5 +210,11 @@ module.exports = (grunt) ->
   grunt.registerTask 'style', [
     'sass_globbing'
     'sass:dev'
+  ]
+
+  grunt.registerTask 'autoDeploy', [
+    'build'
+    'compress:build'
+    'gh-pages:travisDeploy'
   ]
   return
