@@ -195,6 +195,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'autoDeploy', [
     'build'
     'compress:build'
-    'gh-pages:testDeploy'
+    'gh-pages:travisDeploy'
   ]
   return
