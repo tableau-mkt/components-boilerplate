@@ -11,6 +11,7 @@ before_install:
   - npm install -g grunt-cli
   - npm install
   - bower install
+  - apt-get install fontforge ttfautohint
 
 script:
   - npm test
