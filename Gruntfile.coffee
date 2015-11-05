@@ -148,6 +148,15 @@ module.exports = (grunt) ->
           silent: true
         src: ['**']
 
+    compress:
+      build:
+        options:
+          archive: 'tableau-components.zip'
+        expand: true
+        cwd: 'build/'
+        src: '**/*'
+        dest: 'tableau-components/'
+
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
 
@@ -177,5 +186,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'autoDeploy', [
     'build',
     'gh-pages:travisDeploy'
+    'compress:build'
   ]
   return
