@@ -11,7 +11,8 @@
     "build/vendor/jquery-ui/jquery-ui.min.js",
     "build/js/vendor.js",
     "build/js/styleguide.js",
-    "build/js/scripts.js"
+    "build/js/scripts.js",
+    "//localhost:1234/livereload.js"
   ],
   "custom": [
     "bgcolor",
