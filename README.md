@@ -195,14 +195,14 @@ class on the component wrapper element.
 #### Example:
 ``` handlebars
 <div class="the-component {{modifier_class}}">
-  {{#with name}}
+  {{#if name}}
     <h3 class="the-component__an-element">{{ name }}</h3>
-  {{/with}}
-  {{#with src}}
+  {{/if}}
+  {{#if src}}
     <p>
       <img src="{{ src }}">
     </p>
-  {{/with}}
+  {{/if}}
   {{#if items}}
     <ul class="the-component__another-element">
       {{#each items}}
@@ -279,7 +279,7 @@ Using Adobe Illustrator
   * This means we can't just have groups of shapes, they need to be combined into one shape object via illustrator's pathfinder tool
   * The fill color should be #000000
 
-[Example icon](components/blob/master/components/media/icons/svg/people.svg)
+[Example icon](/components/blob/master/components/media/icons/svg/people.svg)
 
 ## Helpers
 

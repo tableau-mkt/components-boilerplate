@@ -15,7 +15,7 @@ added, and possibly even removed.
 
 #### Download the Assets
 
-Download a zip of the assets [here](/tableau-components.zip).
+Download a zip of the assets [here](tableau-components.zip).
 
 #### Include CSS in &lt;head&gt;
 

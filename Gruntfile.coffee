@@ -189,9 +189,7 @@ module.exports = (grunt) ->
         options:
           archive: 'styleguide/tableau-components.zip'
         expand: true
-        cwd: 'build/'
-        src: '**/*'
-        dest: 'tableau-components/'
+        src: 'build/**/*'
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
