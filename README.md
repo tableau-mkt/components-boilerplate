@@ -245,7 +245,15 @@ placeholder images.
 
 Some components may require javascript in order to implement interaction or 
 other special functionality. Any `.js` files within a component will get 
-concatenated into a single `scripts.js` file. 
+concatenated into a single `scripts.js` file with the exception of javascript 
+files ending with `.styleguide.js`. 
+
+Files ending in `.styleguide.js` are separated out into a file that is only 
+loaded in the style guide and not included in built assets. The purpose of this
+is to allow for specific javascript that is only necessary in the context of the 
+style guide to demonstrate the component. For instance, it might be necessary to
+fake the triggering of an event that would normally happen on the system the 
+component is used on, but doesn't exist in the style guide.
 
 ### Other Assets
 
