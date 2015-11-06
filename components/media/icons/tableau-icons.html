@@ -81,6 +81,7 @@ Markup: icon.hbs
 .icon--link - link icon
 .icon--nic-cage - nic-cage icon
 .icon--people - people icon
+.icon--search - search icon
 .icon--share - share icon
 .icon--tableau-logo - tableau-logo icon
 .icon--triangle-down - triangle-down icon
@@ -88,7 +89,6 @@ Markup: icon.hbs
 .icon--triangle-right - triangle-right icon
 .icon--triangle-up - triangle-up icon
 .icon--icon-hamburger - icon-hamburger icon
-.icon--icon-magnifying-glass - icon-magnifying-glass icon
 
 Style Guide: media.icons
 */
@@ -96,10 +96,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../../../build/fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.eot?fa423c628aff5e5a940cb4cc03d892ab");
-  src:url("../../../build/fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.eot?#iefix") format("embedded-opentype"),
-		url("../../../build/fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.woff?fa423c628aff5e5a940cb4cc03d892ab") format("woff"),
-		url("../../../build/fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.ttf?fa423c628aff5e5a940cb4cc03d892ab") format("truetype");
+  src:url("../../../build/fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?76ec953dbf12c54f5c2496fdec902bb2");
+  src:url("../../../build/fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?#iefix") format("embedded-opentype"),
+		url("../../../build/fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.woff?76ec953dbf12c54f5c2496fdec902bb2") format("woff"),
+		url("../../../build/fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.ttf?76ec953dbf12c54f5c2496fdec902bb2") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -203,6 +203,11 @@ Style Guide: media.icons
 }
 
 
+.icon--search:before {
+  content:"\f102";
+}
+
+
 .icon--share:before {
   content:"\f110";
 }
@@ -235,11 +240,6 @@ Style Guide: media.icons
 
 .icon--icon-hamburger:before {
   content:"\f116";
-}
-
-
-.icon--icon-magnifying-glass:before {
-  content:"\f117";
 }
 
 		</style>
@@ -281,6 +281,8 @@ Style Guide: media.icons
 			
 				<div class="icons__item" data-name="people"><i class="icon icon--people"></i> icon--people</div>
 			
+				<div class="icons__item" data-name="search"><i class="icon icon--search"></i> icon--search</div>
+			
 				<div class="icons__item" data-name="share"><i class="icon icon--share"></i> icon--share</div>
 			
 				<div class="icons__item" data-name="tableau-logo"><i class="icon icon--tableau-logo"></i> icon--tableau-logo</div>
@@ -294,8 +296,6 @@ Style Guide: media.icons
 				<div class="icons__item" data-name="triangle-up"><i class="icon icon--triangle-up"></i> icon--triangle-up</div>
 			
 				<div class="icons__item" data-name="icon-hamburger"><i class="icon icon--icon-hamburger"></i> icon--icon-hamburger</div>
-			
-				<div class="icons__item" data-name="icon-magnifying-glass"><i class="icon icon--icon-magnifying-glass"></i> icon--icon-magnifying-glass</div>
 			
 		</div>
 

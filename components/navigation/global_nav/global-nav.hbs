@@ -16,7 +16,7 @@
               {{#each items}}
                 <li{{#if class}} class="{{ class }}"{{/if}}>
                   {{#with link}}
-                    <a href="{{ href }}" {{#if target}}target="{{ target }}"{{/if}} class="{{ modifier_class }}{{#if class }} {{ class }}{{/if}} {{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}">
+                    <a href="{{ href }}" {{#if target}}target="{{ target }}"{{/if}} class="{{ modifier_class }}{{#if class }} {{ class }}{{/if}}" {{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}>
                       {{ text }}
                     </a>
                   {{/with}}

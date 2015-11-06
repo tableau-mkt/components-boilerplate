@@ -119,6 +119,20 @@ Style guide: navigation.global
       height: 100%;
       transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
 
+      &:before {
+        @extend .icon;
+        @extend .icon--search;
+        position: absolute;
+        display: block;
+        height: 45px;
+        width: 45px;
+        z-index: 1;
+        cursor: pointer;
+        font-size: 1.5;
+        line-height: 45px;
+        text-align: center;
+      }
+
       input[type='text'],
       input[type='search'] {
         position: absolute;
@@ -128,10 +142,6 @@ Style guide: navigation.global
         border: none;
         cursor: pointer;
         padding: 0 0 0 45px;
-        background-image: url('../images/shame/icons/icon-magnifying-glass.svg');
-        background-repeat: no-repeat;
-        background-size: 18px;
-        background-position: 15px center;
         text-align: left;
         @extend .text--large-copy;
         transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
@@ -159,7 +169,7 @@ Style guide: navigation.global
         position: absolute;
         opacity: 0;
         width: 0;
-        background-image: url('../images/icons/x-close-nav.png');
+        background-image: url('../images/shame/icons/x-close-nav.png');
         background-repeat: no-repeat;
         background-size: 18px;
         background-position: center center;
