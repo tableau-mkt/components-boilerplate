@@ -9,72 +9,27 @@
       "name": "$button-orange-hover",
       "hex": "#ea8442",
       "rgb": "rgb(234, 132, 66)",
-      "description": "Button Orange"
+      "description": "Button Orange Hover"
     },{
       "name": "$button-final",
       "hex": "#c92434",
       "rgb": "rgb(201, 36, 52)",
       "description": "Final Progress"
     },{
-      "name": "$button-desktop",
-      "hex": "#324e7a",
-      "rgb": "rgb(50, 78, 122)",
-      "description": "Desktop Button"
+      "name": "$button-light",
+      "hex": "#fff",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "Button Light"
     },{
-      "name": "$button-desktop-hover",
-      "hex": "#23529c",
-      "rgb": "rgb(35, 82, 156)",
-      "description": "Desktop Button Hover"
+      "name": "$button-dark",
+      "hex": "#333",
+      "rgb": "rgb(51, 51, 51)",
+      "description": "Button Dark"
     },{
-      "name": "$button-server",
-      "hex": "#5e899b",
-      "rgb": "rgb(89, 135, 155)",
-      "description": "Server Button"
-    },{
-      "name": "$button-server-hover",
-      "hex": "#7fa9bb",
-      "rgb": "rgb(127, 169, 187)",
-      "description": "Server Button Hover"
-    },{
-      "name": "$button-online",
-      "hex": "#7099a5",
-      "rgb": "rgb(112, 170, 169)",
-      "description": "Online Button"
-    },{
-      "name": "$button-online-hover",
-      "hex": "#58a3b9",
-      "rgb": "rgb(88, 163, 185)",
-      "description": "Online Button Hover"
-    },{
-      "name": "$button-public",
-      "hex": "#2d4b65",
-      "rgb": "rgb(45, 75, 101)",
-      "description": "Public Button"
-    },{
-      "name": "$button-public-hover",
-      "hex": "#324E7A",
-      "rgb": "rgb(50, 78, 122)",
-      "description": "Public Button Hover"
-    },{
-      "name": "$button-reader",
-      "hex": "#9d7eb5",
-      "rgb": "rgb(157, 126, 181)",
-      "description": "Reader Button"
-    },{
-      "name": "$button-reader-hover",
-      "hex": "#B28CCF",
-      "rgb": "rgb(178, 140, 207)",
-      "description": "Reader Button Hover"
-    },{
-      "name": "$button-mobile",
-      "hex": "#c87e5b",
-      "rgb": "rgb(200, 126, 91)",
-      "description": "Mobile Button"
-    },{
-      "name": "$button-mobile-hover",
-      "hex": "#DB8E6A",
-      "rgb": "rgb(219, 142, 106)",
-      "description": "Mobile Button Hover"
+      "name": "$button-dark-hover",
+      "hex": "#444",
+      "rgb": "rgb(68, 68, 68)",
+      "description": "Button Dark Hover"
     }
   ]
 }

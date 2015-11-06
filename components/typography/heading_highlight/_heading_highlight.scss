@@ -8,12 +8,8 @@ Markup: heading-highlight.hbs
 
 Weight: 50
 
-.heading-highlight--desktop - Desktop colored highlight
-.heading-highlight--server - Server colored highlight
-.heading-highlight--online - Online colored highlight
-.heading-highlight--public - Public colored highlight
-.heading-highlight--reader - Reader colored highlight
-.heading-highlight--mobile - Mobile colored highlight
+Bgcolor: #eee
+
 .heading-highlight--negative - White colored highlight
 
 Style guide: typography.heading-highlight
@@ -31,13 +27,6 @@ Style guide: typography.heading-highlight
     height: 3px;
     top: 0;
     background: #cdcdcd;
-  }
-
-  /* Create a class for each product color */
-  @each $name, $color in $product-colors {
-    &.heading-highlight--#{"" + $name}:before {
-      background: $color;
-    }
   }
 
   &.heading-highlight--negative:before {

@@ -98,26 +98,19 @@ Style guide: colors.buttons
 */
 
 $button-orange: #e8762c;        // Button Orange - rgb(232, 118, 44)
-$button-orange-hover: #ea8442;  // Button Orange - rgb(234, 132, 66)
+$button-orange-hover: #ea8442;  // Button  Hover - rgb(234, 132, 66)
 $button-final: #c92434;         // Final Progress - rgb(201, 36, 52)
-$button-desktop: #324e7a;       // Desktop Button - rgb(50, 78, 122)
-$button-desktop-hover: #23529c; // Desktop Button Hover - rgb(35, 82, 156)
-$button-server: #5e899b;        // Server Button - rgb(89, 135, 155)
-$button-server-hover: #7fa9bb;  // Server Button Hover - rgb(127, 169, 187)
-$button-online: #7099a5;        // Online Button - rgb(112, 170, 169)
-$button-online-hover: #58a3b9;  // Online Button Hover - rgb(88, 163, 185)
-$button-public: #2d4b65;        // Public Button - rgb(45, 75, 101)
-$button-public-hover: #324E7A;  // Public Button Hover - rgb(50, 78, 122)
-$button-reader: #9d7eb5;        // Reader Button - rgb(157, 126, 181)
-$button-reader-hover: #B28CCF;  // Reader Button Hover - rgb(178, 140, 207)
-$button-mobile: #c87e5b;        // Mobile Button - rgb(200, 126, 91)
-$button-mobile-hover: #DB8E6A;  // Mobile Button Hover - rgb(219, 142, 106)
+$button-light: $text-negative;  // Light Button - rgb(255, 255, 255)
+$button-dark: $text-dark-body;  // Dark Button - rgb(51, 51, 51)
+$button-dark-hover: #444;  // Dark Button Hover - rgb(68, 68, 68)
 
 
 /*
 Product Colors
 
 Specific brand colors for Tableau products.
+
+Note: These colors have been deprecated and removed from the style guide.
 
 Markup: colors-product.hbs
 
@@ -127,15 +120,15 @@ Bgcolor: #F7F9FB
 
 Weight: 4
 
-Style guide: colors.product
+// Style guide: colors.product
 */
 
-$product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
-$product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
-$product-online: #58a3b9;     // Online - rgb(88, 163, 185)
-$product-public: #324E7A;     // Public - rgb(37, 88, 133)
-$product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
-$product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
+// $product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
+// $product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
+// $product-online: #58a3b9;     // Online - rgb(88, 163, 185)
+// $product-public: #324E7A;     // Public - rgb(37, 88, 133)
+// $product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
+// $product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
 
 
 /*
@@ -192,12 +185,6 @@ $text-colors: (
   stories: $text-stories,
   learning: $text-learning,
   highlight: $text-highlight,
-  desktop: $product-desktop,
-  server: $product-server,
-  online: $product-online,
-  public: $product-public,
-  reader: $product-reader,
-  mobile: $product-mobile,
   mission-1: $text-mission-1,
   mission-2: $text-mission-2,
   mission-3: $text-mission-3
@@ -211,12 +198,8 @@ Button colors mapping in the form of:
 
 $button-colors: (
   orange: ($button-orange, $button-orange-hover),
-  desktop: ($button-desktop, $button-desktop-hover),
-  server: ($button-server, $button-server-hover),
-  online: ($button-online, $button-online-hover),
-  public: ($button-public, $button-public-hover),
-  reader: ($button-reader, $button-reader-hover),
-  mobile: ($button-mobile, $button-mobile-hover)
+  light: ($button-light, $button-light),
+  dark: ($button-dark, $button-dark-hover)
 );
 
 
@@ -234,12 +217,6 @@ $background-colors: (
   dark-gray-3: ($bg-dark-gray-3, $text-light-body, $text-negative),
   about-featured: ($bg-about-featured, $text-negative, $text-negative),
   data-sources: ($bg-data-sources, $text-negative, $text-negative),
-  desktop: ($product-desktop, $text-negative, $text-negative),
-  server: ($product-server, $text-negative, $text-negative),
-  online: ($product-online, $text-negative, $text-negative),
-  public: ($product-public, $text-negative, $text-negative),
-  reader: ($product-reader, $text-negative, $text-negative),
-  mobile: ($product-mobile, $text-negative, $text-negative),
   nav-drawer-gray-1: ($nav-drawer-gray-1, $text-dark-body, $text-headlines),
   nav-drawer-gray-2: ($nav-drawer-gray-2, $text-dark-body, $text-headlines),
 );
@@ -248,16 +225,18 @@ $background-colors: (
 /*
 Product colors mapping in the form of:
   mdifier-name: $color
+
+Note: Deprecated color set.
 */
 
-$product-colors: (
-  desktop: $product-desktop,
-  server: $product-server,
-  online: $product-online,
-  public: $product-public,
-  reader: $product-reader,
-  mobile: $product-mobile,
-);
+// $product-colors: (
+//   desktop: $product-desktop,
+//   server: $product-server,
+//   online: $product-online,
+//   public: $product-public,
+//   reader: $product-reader,
+//   mobile: $product-mobile,
+// );
 
 
 /**

@@ -8,7 +8,8 @@
         "link": {
           "href": "#overview",
           "text": "Overview"
-        }
+        },
+        "class": "active"
       },
       {
         "link": {
