@@ -65,9 +65,8 @@ needs access to assets within /build/.
 
 #### Live Reload
 Grunt watch also provides live reload functionality to refresh your browser tab 
-whenever grunt runs a task. To enable this in your workflow, grab the browser 
-plugin for your browser of choice such as the [Google Chrome extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
-and follow the instructions to enable it in your working tab.
+whenever grunt runs a task. This should happen automatically whenever a 
+component file is modified.
 
 #### Final build
 Once you are done with work on components and ready tyo commit changes, kill any
