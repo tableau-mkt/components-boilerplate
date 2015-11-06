@@ -165,12 +165,21 @@ module.exports = (grunt) ->
       options:
         base: 'styleguide'
       src: ['**']
-      travisDeploy:
+      qaDeploy:
         options:
           user:
             name: 'Travis Deployment'
             email: 'visualanalysis@tableau.com'
           repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git'
+          message: 'Auto-deploy via Travis CI'
+          silent: true
+        src: ['**']
+      prodDeploy:
+        options:
+          user:
+            name: 'Travis Deployment'
+            email: 'visualanalysis@tableau.com'
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/styleguide.git'
           message: 'Auto-deploy via Travis CI'
           silent: true
         src: ['**']
@@ -212,9 +221,15 @@ module.exports = (grunt) ->
     'sass:dev'
   ]
 
-  grunt.registerTask 'autoDeploy', [
+  grunt.registerTask 'deployQA', [
     'build'
     'compress:build'
-    'gh-pages:travisDeploy'
+    'gh-pages:qaDeploy'
+  ]
+
+  grunt.registerTask 'deployProd', [
+    'build'
+    'compress:build'
+    'gh-pages:prodDeploy'
   ]
   return
