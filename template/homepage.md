@@ -15,7 +15,7 @@ added, and possibly even removed.
 
 #### Download the Assets
 
-Download a zip of the assets [here](/tableau-components.zip).
+Download a zip of the assets [here](tableau-components.zip).
 
 #### Include CSS in &lt;head&gt;
 
@@ -58,12 +58,13 @@ includes them.
 Once all the assets above are included on the page/site, all of the components
 described in this style guide should work out of the box. If you're working with
 static markup on a page, it's as simple as copying the markup example from the 
-style guide and updating with your content. 
+style guide and updating with your content. To get a basic page layout going, 
+check out the [Basic Page Layout](section-layout.html#kssref-layout-basic-page)
+component.
 
-Applying styles to an existing 
-system takes a bit more work, however. Essentially classes and DOM will need to 
-be modified in any generated markup so that they match the structure and classes
-of the component in the style guide. 
+Applying styles to an existing system takes a bit more work, however. 
+Essentially classes and DOM will need to be modified in any generated markup so 
+that they match the structure and classes of the component in the style guide. 
 
 Alternatively, if the system being integrated doesn't easily allow for inserting
 classes where needed or doesn't allow for manipulation of HTML output, there's 

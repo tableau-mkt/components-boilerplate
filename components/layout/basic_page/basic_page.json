@@ -1,0 +1,597 @@
+{
+  "section1": {
+    "title": "This is a Page Section",
+    "column1": "<p>Notice how page sections utilize the <a href='#kssref-layout-section'>Content Section</a> component to define a section of the page as well as the <a href='#kssref-layout-container'>Content Container</a> component to contain page content within a centered container to prevent content from spanning the entire screen width on larger screens.</p><p>Enjoy this picture of Nicolas Cage on the right. He's placed over there using the grid system.</p>",
+    "column2": "<p><img src='http://www.placecage.com/500/400' alt='Place Cage!'></p>"
+  },
+
+  "section2": {
+    "title": "Another Page Section",
+    "column1": "<p><img src='http://www.placecage.com/300/300' alt='Place Cage!'></p>",
+    "column2": "<p>Vitae tempora litora potenti? Consectetuer porta, aut, viverra. Ante voluptates laborum odio cupidatat? Laoreet, inventore animi accumsan unde assumenda nec, perferendis, condimentum, sapien corrupti, potenti, proin maxime labore, cupidatat est, sapiente! Fringilla lacus augue commodi fermentum, voluptates porta urna lorem, egestas provident! Tempus gravida minima sem fames corporis? Laboriosam dolorum.</p>"
+  },
+
+  "global-nav": {
+    "logo": {
+      "link": "#",
+      "src": "public/images/logo.png"
+    },
+
+    "primary": {
+      "modifier_class": "link-list--inline",
+      "items": [
+        {
+          "link": {
+            "href": "#",
+            "text": "Products",
+            "class": "expandable",
+            "drawerId": "products"
+          }
+        },
+        {
+          "link": {
+            "href": "#",
+            "text": "Stories",
+            "class": "expandable",
+            "drawerId": "stories"
+          }
+        },
+        {
+          "link": {
+            "href": "#",
+            "text": "Learning",
+            "class": "expandable",
+            "drawerId": "learning"
+          }
+        },
+        {
+          "link": {
+            "href": "#",
+            "text": "Community",
+            "class": "expandable",
+            "drawerId": "community"
+          }
+        },
+        {
+          "link": {
+            "href": "#",
+            "text": "Support",
+            "class": "expandable",
+            "drawerId": "support"
+          }
+        },
+        {
+          "link": {
+            "href": "#",
+            "text": "About",
+            "class": "expandable",
+            "drawerId": "about"
+          }
+        }
+      ]
+    },
+
+    "secondary": {
+      "modifier_class": "link-list--inline",
+      "items": [
+        {
+          "link": {
+            "href": "#",
+            "text": "Buy",
+            "class": "link"
+          }
+        },
+        {
+          "link": {
+            "href":"#",
+            "text": "Sign In",
+            "class": "link"
+          }
+        },
+        {
+          "link": {
+            "href":"#",
+            "text": "<i class='icon--magnifying-glass'></i>",
+            "class": "search tablet-show"
+          }
+        },
+        {
+          "link": {
+            "href":"#",
+            "text": "Free Trial",
+            "class": "cta"
+          }
+        }
+      ]
+    },
+    
+    "drawers": [
+      {
+        "drawerId": "products",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Tableau Desktop",
+              "level": "3",
+              "classes": "heading-highlight heading--small heading-highlight--desktop text--desktop",
+              "color": "desktop"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Business analytics anyone can use.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Tableau Server",
+              "level": "3",
+              "classes": "heading-highlight heading--small heading-highlight--server text--server",
+              "color": "server"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Rapid-fire business intelligence, today.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Tableau Online",
+              "level": "3",
+              "classes": "heading-highlight heading--small heading-highlight--online text--online",
+              "color": "online"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "The power of Tableau, in the cloud.",
+            "linkText": "Learn More"
+          }
+        ],
+
+        "secondaryItems": {
+          "title": "More Tableau Products",
+          "items": [
+            {
+              "title": "Tableau Mobile",
+              "description": "Tableau straight from your phone.",
+              "url": "#"
+            },
+            {
+              "title": "Tableau Public",
+              "description": "Publish interactive data online.",
+              "url": "#"
+            },
+            {
+              "title": "Tableau Reader",
+              "description": "Read saved files from Tableau Desktop.",
+              "url": "#"
+            }
+          ]
+        }
+      },
+      {
+        "drawerId": "stories",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Industries",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Visually analyze your data in a way that makes sense for your industry",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Activities",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Discover the most frequently used capabilities resulting in fast data insights.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Technology",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Analyze nearly any data source live or with Tableau's Data Engine",
+            "linkText": "Learn More"
+          }
+        ],
+
+        "secondaryItems": {
+          "items": [
+            {
+              "title": "Tableau Viz Gallery",
+              "thumbnail": "http://www.placecage.com/270/150",
+              "description": "Explore a wide range of visualizations to see what's possible in Tableau",
+              "url": "#"
+            }
+          ]
+        }
+      },
+      {
+        "drawerId": "learning",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Free Training Videos",
+              "level": "3",
+              "classes": "heading-highlight heading--small "
+            },
+            "url": "#",
+            "items": [
+              {
+                "link": {
+                  "text": "Getting Started",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "The Tableau Interface",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Distributing and Publishing",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Connecting To Data",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Visual Analytics",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Dashboards and Stories",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Mapping",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Calculations",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Tableau Server",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Tableau Online",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "Why is Tableau Doing That?",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              },
+              {
+                "link": {
+                  "text": "API's",
+                  "href": "#",
+                  "class": "text--dark-body"
+                }
+              }
+            ],
+            "linkText": "Learn More"
+          }
+        ],
+
+        "secondaryItems": {
+          "title": "More Ways to Learn",
+          "items": [
+            {
+              "title": "Free Webinars",
+              "description": "One hour online learning sessions scheduled with an instructor.",
+              "url": "#"
+            },
+            {
+              "title": "Paid Classroom Training",
+              "description": "Intensive multi-day courses offered at a location of your choice arond the world.",
+              "url": "#"
+            }
+          ]
+        }
+      },
+      {
+        "drawerId": "community",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Forums",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--3",
+            "url": "#",
+            "description": "Explore and contribute to the newest, most active, and engaging threads now.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Ideas",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--3",
+            "url": "#",
+            "description": "Vote on Tableau's Community best ideas and add your own to the mix.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Groups",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--3",
+            "url": "#",
+            "description": "Connect with Tableau users who are in your area and share your interests and expertise.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Events",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--3",
+            "url": "#",
+            "description": "With Tableay events across the globe, find an upcoming in-person event near you.",
+            "linkText": "Learn More"
+          }
+        ]
+      },
+      {
+        "drawerId": "support",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Tableau Desktop",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Business analytics anyone can use.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Tableau Server",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Rapid-fire business intelligence, today.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Tableau Online",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "The power of Tableau, in the cloud.",
+            "linkText": "Learn More"
+          }
+        ],
+
+        "secondaryItems": {
+          "title": "Quick Links & Resources",
+          "items": [
+            {
+              "title": "Drivers & Activation",
+              "url": "#"
+            },
+            {
+              "title": "Knowledge Base",
+              "url": "#"
+            },
+            {
+              "title": "Quick Start Guides",
+              "url": "#"
+            }
+          ]
+        }
+      },
+      {
+        "drawerId": "about",
+        "primaryItems": [
+          {
+            "title": {
+              "text": "Mission",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "See how we got here and where we're going to.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Leadership",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Learn about Tableau's world-class leadership team.",
+            "linkText": "Learn More"
+          },
+          {
+            "title": {
+              "text": "Press",
+              "level": "3",
+              "classes": "heading-highlight heading--small"
+            },
+            "classes": "grid--4",
+            "url": "#",
+            "description": "Keep up to date with the latest Tableau news.",
+            "linkText": "Learn More"
+          }
+        ],
+
+        "secondaryItems": {
+          "title": "More About Our Company",
+          "items": [
+            {
+              "title": "Investors",
+              "description": "Learn about the latest investor news and events.",
+              "url": "#"
+            },
+            {
+              "title": "Careers",
+              "description": "Check out our jobs and the benefits of working at Tableau",
+              "url": "#"
+            },
+            {
+              "title": "Contact us",
+              "description": "Get in touch.",
+              "url": "#"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "global-footer": {
+    "languages": [
+      {
+        "language": "English",
+        "code": false,
+        "selected": true
+      },
+      {
+        "language": "Español",
+        "code": "es-es"
+      },
+      {
+        "language": "Português",
+        "code": "pt-br"
+      },
+      {
+        "language": "日本語",
+        "code": "zh-cn"
+      },
+      {
+        "language": "Deutsch",
+        "code": "de-de"
+      },
+      {
+        "language": "Français",
+        "code": "fr-fr"
+      },
+      {
+        "language": "简体中文",
+        "code": "ja-jp"
+      },
+      {
+        "language": "한국어",
+        "code": "ko-kr"
+      }
+    ],
+
+    "menu": {
+      "modifier_class": "link-list--inline",
+      "items": [
+        {
+          "link": {
+            "text": "Blog",
+            "url": "#"
+          }
+        },
+        {
+          "link": {
+            "text": "Partners",
+            "url": "#"
+          }
+        },
+        {
+          "link": {
+            "text": "Contact Us",
+            "url": "#"
+          }
+        },
+        {
+          "link": {
+            "text": "Legal & Privacy",
+            "url": "#"
+          }
+        }
+      ]
+    },
+    
+    "social": {
+      "modifier_class": "link-list--inline",
+      "items": [
+        {
+          "link": {
+            "text": "<i class=\"icon icon--social-linkedin\"></i>",
+            "url": "http://www.linkedin.com/company/tableau-software"
+          }
+        },
+        {
+          "link": {
+            "text": "<i class=\"icon icon--social-facebook\"></i>",
+            "url": "http://www.facebook.com/tableausw"
+          }
+        },
+        {
+          "link": {
+            "text": "<i class=\"icon icon--social-twitter\"></i>",
+            "url": "http://www.twitter.com/tableau"
+          }
+        }
+      ]
+    },
+
+    "copyright": "© 2003-2015 Tableau Software. All Rights Reserved"
+  }
+}
+

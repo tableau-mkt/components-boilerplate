@@ -10,14 +10,14 @@ module.exports = (grunt) ->
           'assets/svg/*.svg',
           'components/{,**/}*.svg'
         ]
-        tasks: ['clean:icons', 'webfont:icons']
+        tasks: ['clean:icons', 'webfont:icons', 'copy:styleguide']
 
       sass:
         files: [
           'components/{,**/}*.{scss,sass}'
           'sass/{,**/}*.{scss,sass}'
         ]
-        tasks: ['sass_globbing','sass:dev', 'postcss:dist']
+        tasks: ['sass_globbing', 'sass:dev', 'postcss:dist', 'copy:styleguide']
 
       kss:
         files: [
@@ -27,8 +27,12 @@ module.exports = (grunt) ->
         tasks: ['shell:kss']
 
       js:
+        files: ['components/{,**/}*.{png,jpg,gif}']
+        tasks: ['copy:assets', 'copy:styleguide']
+
+      assets:
         files: ['components/{,**/}*.js']
-        tasks: ['concat:scripts']
+        tasks: ['concat:scripts', 'concat:sgScripts', 'copy:styleguide']
 
       bower:
         files: ['bower_components/**.*']
@@ -46,14 +50,33 @@ module.exports = (grunt) ->
     sass:
       dist:
         options:
-          sourceMap: true
+          sourceMap: false
           outputStyle: 'compressed'
         files: [
           {
             expand: true
             cwd: 'sass'
-            src: ['*.scss', '*.sass']
+            src: [
+              '*.scss'
+              '*.sass'
+              '!styleguide.scss'
+            ]
             dest: 'build/css'
+            ext: '.css'
+          }
+        ]
+      styleguide:
+        options:
+          sourceMap: false
+          outputStyle: 'compressed'
+        files: [
+          {
+            expand: true
+            cwd: 'sass'
+            src: [
+              'styleguide.scss'
+            ]
+            dest: 'styleguide/build/css'
             ext: '.css'
           }
         ]
@@ -91,8 +114,16 @@ module.exports = (grunt) ->
       options:
         separator: ';\n'
       scripts:
-        src: 'components/{,**/}*.js'
+        src: [
+          'components/{,**/}*.js'
+          '!components/{,**/}*.styleguide.js'
+        ]
         dest: 'build/js/scripts.js'
+      sgScripts:
+        src: [
+          'components/{,**/}*.styleguide.js'
+        ]
+        dest: 'styleguide/build/js/styleguide.js'
       vendor:
         src: [
           'bower_components/slick.js/slick/slick.min.js'
@@ -189,9 +220,7 @@ module.exports = (grunt) ->
         options:
           archive: 'styleguide/tableau-components.zip'
         expand: true
-        cwd: 'build/'
-        src: '**/*'
-        dest: 'tableau-components/'
+        src: 'build/**/*'
 
   # Load all grunt tasks as defined in package.json devDependencies
   require('load-grunt-tasks')(grunt)
@@ -204,13 +233,15 @@ module.exports = (grunt) ->
     'webfont:icons'
     'sass_globbing'
     'sass:dist'
-    'shell:kss'
+    'sass:styleguide'
     'postcss:dist'
+    'shell:kss'
+    'concat:scripts'
+    'concat:vendor'
+    'concat:sgScripts'
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'
-    'concat:scripts'
-    'concat:vendor'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
