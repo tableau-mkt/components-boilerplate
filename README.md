@@ -5,7 +5,8 @@ brand. This README focuses on development within the component library to create
 new and modify existing components. See the overview page of the generated style
 guide (demo below) for usage instructions and guidelines.
 
-### [Style Guide Demo](http://tableau-mkt.github.io/components/styleguide/)
+### [Production Style Guide](http://tableau-mkt.github.io/styleguide/)
+### [QA/Integration Style Guide](http://tableau-mkt.github.io/components/)
 
 ## Getting started
 
