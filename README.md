@@ -195,14 +195,14 @@ class on the component wrapper element.
 #### Example:
 ``` handlebars
 <div class="the-component {{modifier_class}}">
-  {{#with name}}
+  {{#if name}}
     <h3 class="the-component__an-element">{{ name }}</h3>
-  {{/with}}
-  {{#with src}}
+  {{/if}}
+  {{#if src}}
     <p>
       <img src="{{ src }}">
     </p>
-  {{/with}}
+  {{/if}}
   {{#if items}}
     <ul class="the-component__another-element">
       {{#each items}}
@@ -245,7 +245,15 @@ placeholder images.
 
 Some components may require javascript in order to implement interaction or 
 other special functionality. Any `.js` files within a component will get 
-concatenated into a single `scripts.js` file. 
+concatenated into a single `scripts.js` file with the exception of javascript 
+files ending with `.styleguide.js`. 
+
+Files ending in `.styleguide.js` are separated out into a file that is only 
+loaded in the style guide and not included in built assets. The purpose of this
+is to allow for specific javascript that is only necessary in the context of the 
+style guide to demonstrate the component. For instance, it might be necessary to
+fake the triggering of an event that would normally happen on the system the 
+component is used on, but doesn't exist in the style guide.
 
 ### Other Assets
 
@@ -279,7 +287,7 @@ Using Adobe Illustrator
   * This means we can't just have groups of shapes, they need to be combined into one shape object via illustrator's pathfinder tool
   * The fill color should be #000000
 
-[Example icon](components/blob/master/components/media/icons/svg/people.svg)
+[Example icon](/components/blob/master/components/media/icons/svg/people.svg)
 
 ## Helpers
 

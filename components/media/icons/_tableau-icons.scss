@@ -28,6 +28,7 @@ Markup: icon.hbs
 .icon--link - link icon
 .icon--nic-cage - nic-cage icon
 .icon--people - people icon
+.icon--search - search icon
 .icon--share - share icon
 .icon--tableau-logo - tableau-logo icon
 .icon--triangle-down - triangle-down icon
@@ -35,7 +36,6 @@ Markup: icon.hbs
 .icon--triangle-right - triangle-right icon
 .icon--triangle-up - triangle-up icon
 .icon--icon-hamburger - icon-hamburger icon
-.icon--icon-magnifying-glass - icon-magnifying-glass icon
 
 Style Guide: media.icons
 */
@@ -43,10 +43,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.eot?fa423c628aff5e5a940cb4cc03d892ab");
-  src:url("../fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.woff?fa423c628aff5e5a940cb4cc03d892ab") format("woff"),
-		url("../fonts/tableau-icons-fa423c628aff5e5a940cb4cc03d892ab.ttf?fa423c628aff5e5a940cb4cc03d892ab") format("truetype");
+  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?76ec953dbf12c54f5c2496fdec902bb2");
+  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.woff?76ec953dbf12c54f5c2496fdec902bb2") format("woff"),
+		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.ttf?76ec953dbf12c54f5c2496fdec902bb2") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -150,6 +150,11 @@ Style Guide: media.icons
 }
 
 
+.icon--search:before {
+  content:"\f102";
+}
+
+
 .icon--share:before {
   content:"\f110";
 }
@@ -182,9 +187,4 @@ Style Guide: media.icons
 
 .icon--icon-hamburger:before {
   content:"\f116";
-}
-
-
-.icon--icon-magnifying-glass:before {
-  content:"\f117";
 }
