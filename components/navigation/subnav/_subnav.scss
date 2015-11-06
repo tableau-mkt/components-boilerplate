@@ -1,8 +1,9 @@
 /*
 Subnavigation
 
-Each Product page on TableauSoftware.com uses a simplified navigation. It is has
-main categories throughout the page as jump links.
+A secondary navigation which sticks to the top of the page when scrolling and is
+used to navigate to anchors on the same page. Useful when a page is rather long 
+and broken up into distinct sections.
 
 Markup: subnav.hbs
 
@@ -66,7 +67,7 @@ Style guide: navigation.subnav
     }
 
     li.active a {
-      border-bottom: 2px solid $product-desktop;
+      border-bottom: 2px solid $text-negative;
       color: $text-negative;
     }
   }

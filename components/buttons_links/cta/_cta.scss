@@ -6,17 +6,17 @@ action is required.
 
 Markup: cta.hbs
 
-.cta--orange - Orange colored CTA button.
-.cta--desktop - Desktop colored CTA button.
-.cta--server - Server colored CTA button.
-.cta--online - Online colored CTA button.
-.cta--public - Public colored CTA button.
-.cta--reader - Reader colored CTA button.
-.cta--mobile - Mobile colored CTA button.
+Bgcolor: #F7F9FB
+
+.cta--orange - Orange colored CTA button used for Free Trial.
+.cta--light - Light colored CTA button for use on dark backgrounds.
+.cta--dark - Dark colored CTA button for use on light backgrounds.
 .cta--arrow - CTA button with arrow icon.
 .cta--play - CTA button with play icon.
-.cta--secondary - Secondary CTA buttons (Stroked Orange) should be used when multiple page actions are present, or somewhat important page actions are required.
-.cta--tertiary - Tertiary CTA buttons (Stroked alternate) should be used when a utility action, or an action not directly related to the page is required. When hovering over a Stroked button the copy is underlined.
+.cta--secondary - Secondary CTA buttons should be used when multiple page actions are present, or somewhat important page actions are required.
+.cta--secondary.cta--orange - Orange Secondary CTA
+.cta--secondary.cta--light - Light Secondary CTA button for use on dark backgrounds.
+.cta--secondary.cta--dark - Dark Secondary CTA button for use on light backgrounds.
 .cta--full-width - Full width CTA that fills the width of it's container.
 
 Style guide: buttons-links.cta
@@ -62,7 +62,16 @@ Style guide: buttons-links.cta
       &:focus {
         background-color: nth($colors, 2);
       }
+
+      &:active {
+        background-color: $button-final;
+        text-decoration: underline;
+      }
     }
+  }
+
+  &.cta--light {
+    color: $text-dark-body;
   }
 
   &.cta--arrow:after {
@@ -91,14 +100,16 @@ Style guide: buttons-links.cta
   }
 
   &.cta--secondary {
-    border: 2px solid $text-link;
+    border: 2px solid $button-orange;
     padding: 15px 23px;
     background: transparent;
-    color: $text-link;
+    color: $button-orange;
 
     &:hover,
     &:focus {
+      border-color: $button-orange-hover;
       background: transparent;
+      color: $button-orange-hover;
     }
 
     &:active {
@@ -111,23 +122,23 @@ Style guide: buttons-links.cta
       content: url(../images/shame/icons/icon-arrow-orange.png);
     }
 
-  }
+    @each $name, $colors in $button-colors {
+      &.cta--#{"" + $name} {
+        border-color: nth($colors, 1);
+        color: nth($colors, 1);
 
-  &.cta--tertiary {
-    border: 2px solid $button-orange;
-    padding: 15px 23px;
-    background: transparent;
-    color: $button-orange;
+        &:hover,
+        &:focus {
+          border-color: nth($colors, 2);
+          color: nth($colors, 2);
+        }
 
-    &:hover,
-    &:focus {
-      background: transparent;
-    }
-
-    &:active {
-      border-color: $button-final;
-      background: transparent;
-      color: $button-final;
+        &:active {
+          border-color: $button-final;
+          background: transparent;
+          color: $button-final;
+        }
+      }
     }
   }
 

@@ -100,7 +100,7 @@
           "title": {
             "text": "Tableau Desktop",
             "level": "3",
-            "classes": "heading-highlight heading--small heading-highlight--desktop text--desktop",
+            "classes": "heading-highlight heading--small",
             "color": "desktop"
           },
           "classes": "grid--4",
@@ -112,7 +112,7 @@
           "title": {
             "text": "Tableau Server",
             "level": "3",
-            "classes": "heading-highlight heading--small heading-highlight--server text--server",
+            "classes": "heading-highlight heading--small",
             "color": "server"
           },
           "classes": "grid--4",
@@ -124,7 +124,7 @@
           "title": {
             "text": "Tableau Online",
             "level": "3",
-            "classes": "heading-highlight heading--small heading-highlight--online text--online",
+            "classes": "heading-highlight heading--small",
             "color": "online"
           },
           "classes": "grid--4",
