@@ -15,7 +15,14 @@ added, and possibly even removed.
 
 #### Download the Assets
 
-Download a zip of the assets [here](tableau-components.zip).
+All assets including styles, javascript, and other files are packaged up in a 
+ZIP file. The ZIP will decompress into a `build` folder. If you rename this when
+adding it to your environment, make sure to update all paths below to be 
+relative to the renamed folder rather than `/build/`.
+
+<p class="kss-example-preview">
+  <a href="tableau-components.zip" class="cta">Download</a>
+</p>
 
 #### Include CSS in &lt;head&gt;
 
