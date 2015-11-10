@@ -10,11 +10,13 @@ Bgcolor: #F7F9FB;
 Style Guide: interactive.search-highlight
 */
 
-.search-highlight__search {
+.search-highlight {
+  display: inline-block;
   position: relative;
+  width: 100%;
   max-width: 300px;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fff;
 
   input[type=search] {
     width: 100%;
