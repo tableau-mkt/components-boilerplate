@@ -397,6 +397,19 @@ We've built a tool to help scaffold out new components using [grunt-init](http:/
 See the [spawn-component](https://github.com/tableau-mkt/spawn-component) repo
 to use this tool.
 
+## Release Notes & Bug Reports
+
+Each time we push new features, bug fixes, or any other changes to this project,
+we provide release notes detailing all changes made so you can be sure which 
+areas might need testing when upgrading to the latest version. Release notes 
+live in the [Release Notes](https://github.com/tableau-mkt/components/releases)
+section of the GitHub repo.
+
+All bug reports, issue tracking, and feature requests are handled through the 
+[Issues Queue](https://github.com/tableau-mkt/components/issues) in GitHub. 
+Please feel free to submit anything you find to the issue queue and we will 
+monitor and provide fixes where needed.
+
 ## Other info
 * The style guide generator used in this project is [kss-node](https://github.com/kss-node/kss-node).
 * The template used for kss-node is our custom-built [kss-template](https://github.com/tableau-mkt/kss-template).

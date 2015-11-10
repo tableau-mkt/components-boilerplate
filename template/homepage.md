@@ -72,7 +72,24 @@ some more involved options that involve customizing the component library. For
 more information on this, see the Development section below and the linked 
 developemnt documentation.
 
+## Release Notes & Bug Reports
+
+Each time we push new features, bug fixes, or any other changes to this project,
+we provide release notes detailing all changes made so you can be sure which 
+areas might need testing when upgrading to the latest version. Release notes 
+live in the [Release Notes](https://github.com/tableau-mkt/components/releases)
+section of the GitHub repo.
+
+All bug reports, issue tracking, and feature requests are handled through the 
+[Issues Queue](https://github.com/tableau-mkt/components/issues) in GitHub. 
+Please feel free to submit anything you find to the issue queue and we will 
+monitor and provide fixes where needed.
+
+If you don't have access to the GitHub repo yet, request it from 
+[marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).
+
 ## Development
+
 See the project [README](https://github.com/tableau-mkt/components#tableau-components)
 for development guidelines for working with the style guide. If you don't have 
-access, please request it from [marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com).
+access, please request it from [marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).
