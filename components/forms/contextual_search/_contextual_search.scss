@@ -1,0 +1,156 @@
+/*
+Contextual Search
+
+Contextual search (AKA section search) form for section-specific searches.
+
+Upon submitting (e.g., pressing ENTER or clicking the search submit icon) an
+intermediate search results list is shown in the context of the page (provided
+via AJAX).
+
+More results text, at the bottom of the intermediate search results list, allows
+you to continue to the full results page.
+
+Down/up arrow keys allow you to select a results row, and clicking outside the
+search component will close the search results.
+
+Markup: contextual-search.hbs
+
+Weight: 10
+
+Style guide: forms.contextual-search
+*/
+
+.contextual-search {
+  width: 60%;
+  position: relative;
+  margin: 32px auto;
+  min-height: 64px;
+  @include container;
+  @include breakpoint($mobile-only) {
+    width: 100%;
+  }
+
+  .contextual-search__ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $bg-light-gray-1;
+    box-shadow: 2px 2px 3px $accent-dividers inset;
+    border-radius: 32px;
+    z-index: 10;
+  }
+
+  .contextual-search__input {
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding: 18px 64px 18px 32px;
+    background: none;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    line-height: normal;
+    color: $text-medium-body;
+    font-family: $text--merriweather-light;
+
+    &::-webkit-input-placeholder {
+      color: $text-light-body;
+    }
+    /* we want additional behavior with our own cancel/reset button, so hide Chrome's cancel button */
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  .contextual-search__button {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1em;
+  }
+
+  .contextual-search__reset {
+    display: none;
+  }
+
+  /* when component is open */
+  &.is-open {
+    .contextual-search__ui {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+    .contextual-search__reset {
+      display: block;
+    }
+    .contextual-search__submit {
+      display: none;
+    }
+  }
+
+  .contextual-search__results {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  &.is-open .contextual-search__results {
+    display: block;
+  }
+
+  .contextual-search__results-row {
+    display: block;
+    padding: 18px 32px;
+    color: inherit;
+    @include break;
+    @extend %clearfix;
+    border-bottom: 1px solid $accent-dividers;
+    font-family: $text--benton-book;
+    font-size: 11px;
+    background: rgba($bg-light-gray-2, 0.5);
+    text-decoration: none;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &.is-selected,
+    &:hover {
+      background: $bg-white;
+    }
+  }
+
+  .contextual-search__title {
+    @include span(9);
+    font-family: $text--merriweather-light;
+    font-size: 15px;
+  }
+
+  .contextual-search__meta {
+    display: table-cell;
+    @include span(3 at 0 isolate rtl);
+    @extend %allcaps;
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  .contextual-search__category {
+    @extend %allcaps;
+    @include span(9);
+  }
+
+  .contextual-search__more {
+    display: block;
+    @extend %allcaps;
+    text-align: center;
+    color: $text-link;
+    border-radius: 0 0 30px 30px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

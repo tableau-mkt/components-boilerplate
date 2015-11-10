@@ -1,0 +1,24 @@
+<div class="contextual-search">
+  <div class="contextual-search__ui">
+    <form class="contextual-search__form" autocomplete="off">
+      <input class="contextual-search__input" type="search" name="{{ id }}" placeholder="{{ placeholder }}">
+      <button class="contextual-search__button contextual-search__submit" type="submit" name="{{ id }}Submit"><i class="icon icon--search"></i></button>
+      {{!-- @todo replace nic cage with close icon --}}
+      <button class="contextual-search__button contextual-search__reset" type="reset" name="{{ id }}Reset"><i class="icon icon--nic-cage"></i></button>
+    </form>
+    <div class="contextual-search__results">
+      {{#each results}}
+      <a href="#row{{@index}}" class="contextual-search__results-row">
+        <div class="contextual-search__title">{{ title }}</div>
+        <div class="contextual-search__meta">{{ meta }}</div>
+        <div class="contextual-search__category">{{ category }}</div>
+      </a>
+      {{/each}}
+      <a href="#more" class="contextual-search__results-row contextual-search__more">
+        {{ moreResultsText }}
+      </a>
+    </div>
+  </div>
+</div>
+
+<img src="https://www.placecage.com/600/300" alt="Optional image of Nicolas Cage">

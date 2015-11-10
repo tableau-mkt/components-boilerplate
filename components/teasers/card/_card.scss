@@ -58,7 +58,7 @@ Style Guide: teasers.card
       // http://www.mobify.com/blog/multiline-ellipsis-in-pure-css/
       // content: "\2026";
       // position: absolute;
-      // bottom: 0; 
+      // bottom: 0;
       // right: 0;
       // background: $white;
     }
@@ -83,10 +83,10 @@ Style Guide: teasers.card
       margin-bottom: 16em;
     }
   }
-  
+
   @include breakpoint($tablet-min) {
     @include span(4);
-    
+
     &.card--row-end {
       margin-right: 0;
     }
@@ -120,7 +120,7 @@ Style Guide: teasers.card-wide
       padding-bottom: 48.5437%;
     }
   }
-  
+
   @include breakpoint($tablet-min) {
     @include span(8);
 
@@ -160,7 +160,7 @@ Style Guide: teasers.card-quote
       bottom: -14.4em;
       width: 100%;
       height: 12em;
-      background-image: linear-gradient(to top, $bg-data-sources, transparent); 
+      background-image: linear-gradient(to top, $bg-data-sources, transparent);
     }
   }
 
@@ -202,7 +202,7 @@ Style Guide: teasers.card-quote
     }
 
     a {
-      color: $text-negative;        
+      color: $text-negative;
     }
   }
 
@@ -251,7 +251,7 @@ Style Guide: teasers.card-summary
       width: 100%;
       height: 10em;
       pointer-events: none;
-      background-image: linear-gradient(to top, $white, transparent); 
+      background-image: linear-gradient(to top, $white, transparent);
     }
   }
 }

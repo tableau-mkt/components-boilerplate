@@ -1,0 +1,22 @@
+{
+  "id": "exampleSearch",
+  "placeholder": "Search this section",
+  "results": [
+    {
+      "title": "Google Analytics",
+      "meta": "3 MIN",
+      "category": "TOPICS > CONNECTING TO DATA"
+    },
+    {
+      "title": "Google Sheets API",
+      "meta": "2 MIN",
+      "category": "TOPICS > CONNECTING TO DATA"
+    },
+    {
+      "title": "Good Storytelling with Data",
+      "meta": "3 MIN",
+      "category": "TOPICS > DASHBOARDS & STORIES"
+    }
+  ],
+  "moreResultsText": "65 results for \"goo\" sitewide"
+}
