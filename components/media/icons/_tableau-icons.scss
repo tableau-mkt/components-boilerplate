@@ -35,7 +35,6 @@ Markup: icon.hbs
 .icon--triangle-left - triangle-left icon
 .icon--triangle-right - triangle-right icon
 .icon--triangle-up - triangle-up icon
-.icon--icon-hamburger - icon-hamburger icon
 
 Style Guide: media.icons
 */
@@ -43,10 +42,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?76ec953dbf12c54f5c2496fdec902bb2");
-  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.woff?76ec953dbf12c54f5c2496fdec902bb2") format("woff"),
-		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.ttf?76ec953dbf12c54f5c2496fdec902bb2") format("truetype");
+  src:url("../fonts/tableau-icons-bc8b13aecc0da1947871d8df63b58294.eot?bc8b13aecc0da1947871d8df63b58294");
+  src:url("../fonts/tableau-icons-bc8b13aecc0da1947871d8df63b58294.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-bc8b13aecc0da1947871d8df63b58294.woff?bc8b13aecc0da1947871d8df63b58294") format("woff"),
+		url("../fonts/tableau-icons-bc8b13aecc0da1947871d8df63b58294.ttf?bc8b13aecc0da1947871d8df63b58294") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -182,9 +181,4 @@ Style Guide: media.icons
 
 .icon--triangle-up:before {
   content:"\f115";
-}
-
-
-.icon--icon-hamburger:before {
-  content:"\f116";
 }

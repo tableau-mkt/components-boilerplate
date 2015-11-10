@@ -1,5 +1,9 @@
-<div class="bg--desktop">
-  <input type="search" class="search-highlight" data-content="{{ contentId }}" data-highlight-class="{{ highlightClass }}"/>
+<div class="search-highlight {{ modifier_class }}">
+
+  <div class="search-highlight__search">
+    <input type="search" data-content="{{ contentId }}" data-highlight-class="{{ highlightClass }}"/>
+    <button><i class="icon icon--search"></i></button>
+  </div>
 
   <div id="{{ contentId }}">
     {{#with list}}
