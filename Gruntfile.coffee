@@ -51,7 +51,6 @@ module.exports = (grunt) ->
       dist:
         options:
           sourceMap: false
-          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -68,7 +67,6 @@ module.exports = (grunt) ->
       styleguide:
         options:
           sourceMap: false
-          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -104,7 +102,15 @@ module.exports = (grunt) ->
       dist:
         src: 'build/css/*.css'
 
-
+    cssmin:
+      dist:
+        files: [
+          expand: true,
+          cwd: 'build/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'build/css',
+          ext: '.min.css'
+        ]
 
     shell:
       kss:
@@ -155,7 +161,7 @@ module.exports = (grunt) ->
         expand: true
         src: 'build/**'
         dest: 'styleguide/'
-        
+
 
     webfont:
       icons:
@@ -174,7 +180,7 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
     clean:
-      icons: 
+      icons:
         src: ["build/fonts/tableau-icons-*"]
 
     ###
@@ -235,6 +241,7 @@ module.exports = (grunt) ->
     'sass:dist'
     'sass:styleguide'
     'postcss:dist'
+    'cssmin:dist'
     'shell:kss'
     'concat:scripts'
     'concat:vendor'

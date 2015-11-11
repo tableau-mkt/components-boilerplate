@@ -2,7 +2,7 @@
   $(document).ready(function(){
     var $heroSlideShow = $('.hero-slideshow');
 
-    if($heroSlideShow) {
+    if($heroSlideShow.length) {
       $heroSlideShow.slick({
         dots: true,
         arrows: true,
