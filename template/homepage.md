@@ -15,7 +15,14 @@ added, and possibly even removed.
 
 #### Download the Assets
 
-Download a zip of the assets [here](tableau-components.zip).
+All assets including styles, javascript, and other files are packaged up in a 
+ZIP file. The ZIP will decompress into a `build` folder. If you rename this when
+adding it to your environment, make sure to update all paths below to be 
+relative to the renamed folder rather than `/build/`.
+
+<p class="kss-example-preview">
+  <a href="tableau-components.zip" class="cta">Download</a>
+</p>
 
 #### Include CSS in &lt;head&gt;
 
@@ -74,15 +81,14 @@ developemnt documentation.
 
 ## Release Notes & Bug Reports
 
-Each time we push new features, bug fixes, or any other changes to this project,
-we provide release notes detailing all changes made so you can be sure which 
-areas might need testing when upgrading to the latest version. Release notes 
-live in the [Release Notes](https://github.com/tableau-mkt/components/releases)
-section of the GitHub repo.
+When we release new features, bug fixes, or any other changes to this project,
+we provide notes detailing all changes made. Use these to inform your testing
+as you update to the latest version.  Release notes live in the [Release Notes]
+(https://github.com/tableau-mkt/components/releases) section on GitHub.
 
-All bug reports, issue tracking, and feature requests are handled through the 
-[Issues Queue](https://github.com/tableau-mkt/components/issues) in GitHub. 
-Please feel free to submit anything you find to the issue queue and we will 
+All bug reports, feature requests, and issue tracking are handled through the 
+[Issue Queue](https://github.com/tableau-mkt/components/issues) on GitHub. 
+Please feel free to submit anything you find to the issue queue; we will 
 monitor and provide fixes where needed.
 
 If you don't have access to the GitHub repo yet, request it from 
