@@ -75,6 +75,8 @@ Markup: icon.hbs
 .icon--plus-circle - plus-circle icon
 .icon--arrow-left - arrow-left icon
 .icon--arrow-right - arrow-right icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--download - download icon
 .icon--laptop - laptop icon
@@ -96,10 +98,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../../../build/fonts/tableau-icons-831e45e8797e63bc2b5679f3e5704c7d.eot?831e45e8797e63bc2b5679f3e5704c7d");
-  src:url("../../../build/fonts/tableau-icons-831e45e8797e63bc2b5679f3e5704c7d.eot?#iefix") format("embedded-opentype"),
-		url("../../../build/fonts/tableau-icons-831e45e8797e63bc2b5679f3e5704c7d.woff?831e45e8797e63bc2b5679f3e5704c7d") format("woff"),
-		url("../../../build/fonts/tableau-icons-831e45e8797e63bc2b5679f3e5704c7d.ttf?831e45e8797e63bc2b5679f3e5704c7d") format("truetype");
+  src:url("../../../build/fonts/tableau-icons-afa686cfb7db73d46bd2898cbe8bd632.eot?afa686cfb7db73d46bd2898cbe8bd632");
+  src:url("../../../build/fonts/tableau-icons-afa686cfb7db73d46bd2898cbe8bd632.eot?#iefix") format("embedded-opentype"),
+		url("../../../build/fonts/tableau-icons-afa686cfb7db73d46bd2898cbe8bd632.woff?afa686cfb7db73d46bd2898cbe8bd632") format("woff"),
+		url("../../../build/fonts/tableau-icons-afa686cfb7db73d46bd2898cbe8bd632.ttf?afa686cfb7db73d46bd2898cbe8bd632") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -183,34 +185,46 @@ $icon--arrow-left: "\f109";
 $icon--arrow-right: "\f10a";
 
 
-.icon--cursor-cloud:before {
+.icon--chevron-left:before {
   content:"\f10b";
 }
-$icon--cursor-cloud: "\f10b";
+$icon--chevron-left: "\f10b";
+
+
+.icon--chevron-right:before {
+  content:"\f10c";
+}
+$icon--chevron-right: "\f10c";
+
+
+.icon--cursor-cloud:before {
+  content:"\f10d";
+}
+$icon--cursor-cloud: "\f10d";
 
 
 .icon--download:before {
-  content:"\f10c";
+  content:"\f10e";
 }
-$icon--download: "\f10c";
+$icon--download: "\f10e";
 
 
 .icon--laptop:before {
-  content:"\f10d";
+  content:"\f10f";
 }
-$icon--laptop: "\f10d";
+$icon--laptop: "\f10f";
 
 
 .icon--link:before {
-  content:"\f10e";
+  content:"\f110";
 }
-$icon--link: "\f10e";
+$icon--link: "\f110";
 
 
 .icon--nic-cage:before {
-  content:"\f10f";
+  content:"\f111";
 }
-$icon--nic-cage: "\f10f";
+$icon--nic-cage: "\f111";
 
 
 .icon--people:before {
@@ -226,45 +240,45 @@ $icon--search: "\f102";
 
 
 .icon--share:before {
-  content:"\f110";
+  content:"\f112";
 }
-$icon--share: "\f110";
+$icon--share: "\f112";
 
 
 .icon--tableau-logo:before {
-  content:"\f111";
+  content:"\f113";
 }
-$icon--tableau-logo: "\f111";
+$icon--tableau-logo: "\f113";
 
 
 .icon--triangle-down:before {
-  content:"\f112";
+  content:"\f114";
 }
-$icon--triangle-down: "\f112";
+$icon--triangle-down: "\f114";
 
 
 .icon--triangle-left:before {
-  content:"\f113";
+  content:"\f115";
 }
-$icon--triangle-left: "\f113";
+$icon--triangle-left: "\f115";
 
 
 .icon--triangle-right:before {
-  content:"\f114";
+  content:"\f116";
 }
-$icon--triangle-right: "\f114";
+$icon--triangle-right: "\f116";
 
 
 .icon--triangle-up:before {
-  content:"\f115";
+  content:"\f117";
 }
-$icon--triangle-up: "\f115";
+$icon--triangle-up: "\f117";
 
 
 .icon--icon-hamburger:before {
-  content:"\f116";
+  content:"\f118";
 }
-$icon--icon-hamburger: "\f116";
+$icon--icon-hamburger: "\f118";
 
 		</style>
 	</head>
@@ -292,6 +306,10 @@ $icon--icon-hamburger: "\f116";
 				<div class="icons__item" data-name="arrow-left"><i class="icon icon--arrow-left"></i> icon--arrow-left</div>
 			
 				<div class="icons__item" data-name="arrow-right"><i class="icon icon--arrow-right"></i> icon--arrow-right</div>
+			
+				<div class="icons__item" data-name="chevron-left"><i class="icon icon--chevron-left"></i> icon--chevron-left</div>
+			
+				<div class="icons__item" data-name="chevron-right"><i class="icon icon--chevron-right"></i> icon--chevron-right</div>
 			
 				<div class="icons__item" data-name="cursor-cloud"><i class="icon icon--cursor-cloud"></i> icon--cursor-cloud</div>
 			
