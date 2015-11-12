@@ -59,6 +59,11 @@ most common proportions for video players.
   margin-right: auto;
 }
 
+// Vertically center an element. This assumes the parent is position: relative;
+.vertical-centered {
+  @extend %vertical-centered;
+}
+
 // Float element to the right
 .float-right {
   float: right;
@@ -90,7 +95,7 @@ most common proportions for video players.
 // Use in cases where a link should not get an underline, e.g. on a navigation
 // arrow.
 .underline-none {
-  text-decoration: none;
+  @extend %underline-none;
 }
 
 // Hide inner text of an element
