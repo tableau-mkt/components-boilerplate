@@ -1,0 +1,129 @@
+/*
+Video Playlist
+
+A playlist of related Brightcove videos.
+
+Markup: video_playlist.hbs
+
+Bgcolor: #111111;
+width: 370px;
+border: 2.5em solid black;
+
+Style guide: media.video-playlist
+*/
+
+.video-playlist-container {
+  background-color: $bg-light-gray-1;
+}
+
+.video-playlist__header-wrapper{
+  position: relative;
+  padding: 2.5em 2.5em 1.75em 2.5em;
+  border-top: 1px solid $accent-dividers;
+  border-bottom: 1px solid $accent-dividers;
+}
+
+.video-playlist__topic-label {
+  @extend .text--label;
+  @extend .float-left;
+}
+
+.video-playlist__all {
+  @extend .text--label;
+  @extend .float-right;
+}
+
+.video-playlist__topic {
+  margin: 0;
+}
+
+.video-playlist {
+  // _link_list.scss
+  @extend .link-list;
+  @extend .link-list--plain;
+  padding: 1.75em 0;
+}
+
+.video-playlist__item-wrapper {
+  padding: 0 2.5em;
+
+  &:first-child {
+    .video-playlist__item {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}
+
+.video-playlist__item-wrapper.active {
+  background-color: $bg-light-gray-2;
+  position:relative;
+
+  .video-playlist__item,
+  & + .video-playlist__item-wrapper .video-playlist__item {
+    border-top: none;
+  }
+
+  /* Only show arrow on desktops. */
+  @include breakpoint($desktop-only) {
+    &:before,
+    &:after {
+      width: 1em;
+      height: 50%;
+      position: absolute;
+      left: -1em;
+      content: "";
+    }
+
+    &:before {
+      top: 0;
+      background: linear-gradient(to left top, $bg-light-gray-2 50%, transparent 54%)
+    }
+
+    &:after {
+      top: 50%;
+      background: linear-gradient(to left bottom, $bg-light-gray-2 50%, transparent 54%)
+    }
+  }
+
+  .video-playlist__item {
+    &:before {
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 0.7em);
+      content: url(../images/shame/icons/icon-play-orange.png);
+      left: 0.6em;
+    }
+  }
+}
+
+.video-playlist__item {
+  clear: both;
+  display: table;
+  width: 100%;
+  padding: 0.5em 0;
+  border-top: 1px solid $accent-dividers;
+}
+
+.video-playlist__link {
+  @extend .text--body-small;
+  display: table-cell;
+}
+
+.video-playlist__watched {
+  width: 2em;
+  display: table-cell;
+  text-align: center;
+}
+
+.video-playlist__length {
+  @extend .text--right;
+  @extend .text--label;
+
+  width: 4em;
+  display: table-cell;
+}
+
+.video-playlist__link a {
+  color: $text-medium-body;
+}

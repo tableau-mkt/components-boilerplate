@@ -1,0 +1,38 @@
+{{#with sidebar }}
+  <div class="video-playlist-container">
+    <div class="video-playlist__header-wrapper">
+      <div class="clearfix">
+        <span class="video-playlist__topic-label">
+          {{{label}}}
+        </span>
+        <span class="video-playlist__all">
+          {{#with link}}
+            {{> link-base}}
+          {{/with}}
+        </span>
+      </div>
+      <h5 class="video-playlist__topic">
+        {{{title}}}
+      </h5>
+    </div>
+
+    {{#with playlist }}
+      <ul id="{{id}}" class="video-playlist">
+        {{#each list}}
+          <li class="video-playlist__item-wrapper {{#if active}}active{{/if}}">
+            <div class ="video-playlist__item">
+              <div class="video-playlist__link">
+                {{#with link}}
+                  {{> link-base}}
+                {{/with}}
+              </div>
+              <div class="video-playlist__watched">{{#unless watched}}<i class="icon--circle-filled-orange"></i>{{/unless}}</div>
+              <div class="video-playlist__length">{{{length}}}</div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{/with }}
+  </div>
+{{/with }}
+
