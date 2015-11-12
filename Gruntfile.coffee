@@ -161,6 +161,9 @@ module.exports = (grunt) ->
         expand: true
         src: 'build/**'
         dest: 'styleguide/'
+      favicon:
+        src: 'favicon.ico'
+        dest: 'build/images/'
 
 
     webfont:
@@ -249,6 +252,7 @@ module.exports = (grunt) ->
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'
+    'copy:favicon'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
