@@ -52,6 +52,13 @@ most common proportions for video players.
   padding: 0;
 }
 
+// Center an element using auto margins, because using text-align: center on the
+// parent is not always enough. Example, tableau viz embeds.
+.element-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Float element to the right
 .float-right {
   float: right;
@@ -70,6 +77,20 @@ most common proportions for video players.
 // Set the overflow of an element to hidden
 .overflow-hidden {
   overflow: hidden;
+}
+
+// Trigger lazy momentum scroll, which allows a block element containing an
+// interactive thing, such as a viz, to be scrolled.
+.overflow-touch-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Use in cases where a link should not get an underline, e.g. on a navigation
+// arrow.
+.underline-none {
+  text-decoration: none;
 }
 
 // Hide inner text of an element
