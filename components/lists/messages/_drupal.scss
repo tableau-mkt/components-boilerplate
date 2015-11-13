@@ -1,0 +1,7 @@
+
+.messages.error {
+  @extend .messages--error;
+}
+.messages.warning {
+  @extend .messages--warning;
+}

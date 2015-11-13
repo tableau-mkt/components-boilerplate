@@ -20,6 +20,10 @@
   @extend .detail-field__items;
 }
 
+.sidebar--right .block__title {
+  @extend .text--label;
+}
+
 .field--name-field-sponsors,
 .field--name-field-hashtag {
   // NOTE: Uses a breakpoint.

@@ -1,0 +1,35 @@
+/*
+Messages
+
+Display special messages to the user.
+
+Markup: messages.hbs
+
+.messages--error
+.messages--warning
+
+Weight: 30
+
+Style guide: lists.messages
+*/
+
+.messages {
+
+  padding: 10px;
+  border: 1px solid green;
+  background-color: #ccc;
+
+  ul {
+    @extend %plain-list;
+  }
+
+  .messages--error {
+    border-color: red;
+    background-color: #ccc;
+  }
+
+  .messages--warning {
+    border-color: yellow;
+    background-color: #ccc;
+  }
+}
