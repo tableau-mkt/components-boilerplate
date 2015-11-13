@@ -11,8 +11,6 @@ Style guide: navigation.pager-simple
 */
 
 .pager-simple {
-  @extend %inline-list;
-
   .pager-simple__prev,
   .pager-simple__next {
     @extend %vertical-centered;
