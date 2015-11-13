@@ -51,7 +51,6 @@ module.exports = (grunt) ->
       dist:
         options:
           sourceMap: false
-          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -68,7 +67,6 @@ module.exports = (grunt) ->
       styleguide:
         options:
           sourceMap: false
-          outputStyle: 'compressed'
         files: [
           {
             expand: true
@@ -104,7 +102,15 @@ module.exports = (grunt) ->
       dist:
         src: 'build/css/*.css'
 
-
+    cssmin:
+      dist:
+        files: [
+          expand: true,
+          cwd: 'build/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'build/css',
+          ext: '.min.css'
+        ]
 
     shell:
       kss:
@@ -144,6 +150,8 @@ module.exports = (grunt) ->
           'jquery-ui/jquery-ui.min.js'
           'slick.js/slick/slick.css'
           'slick.js/slick/slick-theme.css'
+          'slick.js/slick/ajax-loader.gif'
+          'slick.js/slick/fonts/**'
         ]
         dest: 'build/vendor'
       assets:
@@ -155,7 +163,10 @@ module.exports = (grunt) ->
         expand: true
         src: 'build/**'
         dest: 'styleguide/'
-        
+      favicon:
+        src: 'favicon.ico'
+        dest: 'build/images/'
+
 
     webfont:
       icons:
@@ -165,7 +176,7 @@ module.exports = (grunt) ->
         ]
         dest: 'build/fonts'
         destCss: 'components/media/icons'
-        htmlDemo: true
+        htmlDemo: false
         options:
           font: 'tableau-icons'
           stylesheet: 'scss'
@@ -174,7 +185,7 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
     clean:
-      icons: 
+      icons:
         src: ["build/fonts/tableau-icons-*"]
 
     ###
@@ -235,6 +246,7 @@ module.exports = (grunt) ->
     'sass:dist'
     'sass:styleguide'
     'postcss:dist'
+    'cssmin:dist'
     'shell:kss'
     'concat:scripts'
     'concat:vendor'
@@ -242,6 +254,7 @@ module.exports = (grunt) ->
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'
+    'copy:favicon'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'

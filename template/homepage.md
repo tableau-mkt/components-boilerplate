@@ -15,7 +15,14 @@ added, and possibly even removed.
 
 #### Download the Assets
 
-Download a zip of the assets [here](tableau-components.zip).
+All assets including styles, javascript, and other files are packaged up in a 
+ZIP file. The ZIP will decompress into a `build` folder. If you rename this when
+adding it to your environment, make sure to update all paths below to be 
+relative to the renamed folder rather than `/build/`.
+
+<p class="kss-example-preview">
+  <a href="tableau-components.zip" class="cta">Download</a>
+</p>
 
 #### Include CSS in &lt;head&gt;
 
@@ -72,7 +79,23 @@ some more involved options that involve customizing the component library. For
 more information on this, see the Development section below and the linked 
 developemnt documentation.
 
+## Release Notes & Bug Reports
+
+When we release new features, bug fixes, or any other changes to this project,
+we provide notes detailing all changes made. Use these to inform your testing
+as you update to the latest version.  Release notes live in the [Release Notes]
+(https://github.com/tableau-mkt/components/releases) section on GitHub.
+
+All bug reports, feature requests, and issue tracking are handled through the 
+[Issue Queue](https://github.com/tableau-mkt/components/issues) on GitHub. 
+Please feel free to submit anything you find to the issue queue; we will 
+monitor and provide fixes where needed.
+
+If you don't have access to the GitHub repo yet, request it from 
+[marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).
+
 ## Development
+
 See the project [README](https://github.com/tableau-mkt/components#tableau-components)
 for development guidelines for working with the style guide. If you don't have 
-access, please request it from [marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com).
+access, please request it from [marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).

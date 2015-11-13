@@ -1,13 +1,13 @@
 /*
 Content Container
 
-A wrapper elemnt to go around content to keep it in a centered column on the 
-page.
+A wrapper element around content to keep it in a centered column on the page.
 
 Markup: content_container.hbs
 
 Weight: 30
 
+.content-container--narrow - A narrower content container
 .content-container--wide - An extra wide content container
 
 Style guide: layout.container
@@ -27,22 +27,29 @@ Style guide: layout.container
     margin-bottom: .75em;
   }
 
+  &.content-container--narrow {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+
   &.content-container--wide {
     padding-left: 3%;
     padding-right: 3%;
   }
-
 }
 
-.content-container,
-.content-container.content-container--wide {
-  @include breakpoint($tablet-max) {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+// Mobile padding resets.
+.content-container {
+  &.content-container--wide,
+  &.content-container--narrow {
+    @include breakpoint($tablet-max) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
 
-  @include breakpoint($mobile-only) {
-    padding-left: 1em;
-    padding-right: 1em;
+    @include breakpoint($mobile-only) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
 }

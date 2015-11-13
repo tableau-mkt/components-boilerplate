@@ -1,4 +1,4 @@
-/* 
+/*
 DO NOT EDIT _tableau-icons.scss. This is a generated file.
 @see tableau-icons.template.css
 */
@@ -22,6 +22,8 @@ Markup: icon.hbs
 .icon--plus-circle - plus-circle icon
 .icon--arrow-left - arrow-left icon
 .icon--arrow-right - arrow-right icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
 .icon--cursor-cloud - cursor-cloud icon
 .icon--download - download icon
 .icon--laptop - laptop icon
@@ -35,7 +37,6 @@ Markup: icon.hbs
 .icon--triangle-left - triangle-left icon
 .icon--triangle-right - triangle-right icon
 .icon--triangle-up - triangle-up icon
-.icon--icon-hamburger - icon-hamburger icon
 
 Style Guide: media.icons
 */
@@ -43,10 +44,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?76ec953dbf12c54f5c2496fdec902bb2");
-  src:url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.woff?76ec953dbf12c54f5c2496fdec902bb2") format("woff"),
-		url("../fonts/tableau-icons-76ec953dbf12c54f5c2496fdec902bb2.ttf?76ec953dbf12c54f5c2496fdec902bb2") format("truetype");
+  src:url("../fonts/tableau-icons-e21640258d5e56c5846071616e8f08f9.eot?e21640258d5e56c5846071616e8f08f9");
+  src:url("../fonts/tableau-icons-e21640258d5e56c5846071616e8f08f9.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-e21640258d5e56c5846071616e8f08f9.woff?e21640258d5e56c5846071616e8f08f9") format("woff"),
+		url("../fonts/tableau-icons-e21640258d5e56c5846071616e8f08f9.ttf?e21640258d5e56c5846071616e8f08f9") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -73,118 +74,148 @@ Style Guide: media.icons
 .icon--people:before {
   content:"\f101";
 }
+$icon--people: "\f101";
 
 
 .icon--search:before {
   content:"\f102";
 }
+$icon--search: "\f102";
 
 
 .icon--social-facebook:before {
   content:"\f103";
 }
+$icon--social-facebook: "\f103";
 
 
 .icon--social-gplus:before {
   content:"\f104";
 }
+$icon--social-gplus: "\f104";
 
 
 .icon--social-instagram:before {
   content:"\f105";
 }
+$icon--social-instagram: "\f105";
 
 
 .icon--social-linkedin:before {
   content:"\f106";
 }
+$icon--social-linkedin: "\f106";
 
 
 .icon--social-twitter:before {
   content:"\f107";
 }
+$icon--social-twitter: "\f107";
 
 
 .icon--plus-circle:before {
   content:"\f108";
 }
+$icon--plus-circle: "\f108";
 
 
 .icon--arrow-left:before {
   content:"\f109";
 }
+$icon--arrow-left: "\f109";
 
 
 .icon--arrow-right:before {
   content:"\f10a";
 }
+$icon--arrow-right: "\f10a";
+
+
+.icon--chevron-left:before {
+  content:"\f10b";
+}
+$icon--chevron-left: "\f10b";
+
+
+.icon--chevron-right:before {
+  content:"\f10c";
+}
+$icon--chevron-right: "\f10c";
 
 
 .icon--cursor-cloud:before {
-  content:"\f10b";
+  content:"\f10d";
 }
+$icon--cursor-cloud: "\f10d";
 
 
 .icon--download:before {
-  content:"\f10c";
+  content:"\f10e";
 }
+$icon--download: "\f10e";
 
 
 .icon--laptop:before {
-  content:"\f10d";
+  content:"\f10f";
 }
+$icon--laptop: "\f10f";
 
 
 .icon--link:before {
-  content:"\f10e";
+  content:"\f110";
 }
+$icon--link: "\f110";
 
 
 .icon--nic-cage:before {
-  content:"\f10f";
+  content:"\f111";
 }
+$icon--nic-cage: "\f111";
 
 
 .icon--people:before {
   content:"\f101";
 }
+$icon--people: "\f101";
 
 
 .icon--search:before {
   content:"\f102";
 }
+$icon--search: "\f102";
 
 
 .icon--share:before {
-  content:"\f110";
+  content:"\f112";
 }
+$icon--share: "\f112";
 
 
 .icon--tableau-logo:before {
-  content:"\f111";
+  content:"\f113";
 }
+$icon--tableau-logo: "\f113";
 
 
 .icon--triangle-down:before {
-  content:"\f112";
+  content:"\f114";
 }
+$icon--triangle-down: "\f114";
 
 
 .icon--triangle-left:before {
-  content:"\f113";
+  content:"\f115";
 }
+$icon--triangle-left: "\f115";
 
 
 .icon--triangle-right:before {
-  content:"\f114";
+  content:"\f116";
 }
+$icon--triangle-right: "\f116";
 
 
 .icon--triangle-up:before {
-  content:"\f115";
+  content:"\f117";
 }
-
-
-.icon--icon-hamburger:before {
-  content:"\f116";
-}
+$icon--triangle-up: "\f117";

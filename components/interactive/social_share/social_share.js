@@ -3,7 +3,7 @@
  *
  * This is a simple hover based reveal for the social share display.
  */
-(function ($, window) {
+(function ($) {
   $(document).ready(function () {
     var $socialShare = $('.social-share__wrapper');
 
@@ -22,7 +22,7 @@
             easing: "easeInOutQuart"
           };
 
-      $this.hover(
+      $this.hoverIntent(
         function socialHoverOn() {
           $widgets.slideHeight('down', animation);
         },
@@ -33,4 +33,4 @@
     });
 
   });
-})(jQuery, window);
+})(jQuery);

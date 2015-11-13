@@ -30,10 +30,16 @@
       </h3>
     {{/if}}
 
+    {{#if label}}
+      <p class="teaser-item__label">
+        {{{ label }}}
+      </p>
+    {{/if}}
+
     {{#if description}}
-    <p class="teaser-item__description">
-      {{{ description }}}
-    </p>
+      <p class="teaser-item__description">
+        {{{ description }}}
+      </p>
     {{/if}}
 
     {{#with tags}}
@@ -41,9 +47,9 @@
     {{/with}}
 
     {{#with link}}
-    <p class="teaser-item__link">
-      {{> link-formatted}}
-    </p>
+      <p class="teaser-item__link">
+        {{> link-formatted}}
+      </p>
     {{/with}}
   </div>
 </div>

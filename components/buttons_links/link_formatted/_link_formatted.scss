@@ -3,7 +3,7 @@
 /*
 Formatted Text Links
 
-Text-based links, unlike CTA buttons, don't have a colored box around them, 
+Text-based links, unlike CTA buttons, don't have a colored box around them,
 although they can have an accompanying icon similar to CTAs. All links underline
 on hover.
 
@@ -12,6 +12,7 @@ Markup: link-formatted.hbs
 Weight: 20
 
 .link--arrow - Link with an arrow icon
+.link--arrow-before - Link with a preceding arrow icon
 .link--expand - Link with an expand icon
 .link--collapse - Link with an collapse icon
 
@@ -28,6 +29,11 @@ Style guide: buttons-links.link-formatted
   &.link--arrow:after {
     content: url(../images/shame/icons/icon-arrow-orange.png);
     padding-left: 1em;
+  }
+
+  &.link--arrow-before:before {
+    content: url(../images/shame/icons/icon-arrow-orange-left.png);
+    padding-right: 1em;
   }
 
   &.link--expand:before,
