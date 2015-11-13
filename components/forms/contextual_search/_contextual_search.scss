@@ -41,6 +41,10 @@ Style guide: forms.contextual-search
     z-index: 10;
   }
 
+  .contextual-search__form {
+    position: relative;
+  }
+
   .contextual-search__input {
     width: 100%;
     height: 64px;
