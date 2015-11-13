@@ -176,7 +176,7 @@ module.exports = (grunt) ->
         ]
         dest: 'build/fonts'
         destCss: 'components/media/icons'
-        htmlDemo: true
+        htmlDemo: false
         options:
           font: 'tableau-icons'
           stylesheet: 'scss'

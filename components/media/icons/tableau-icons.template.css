@@ -1,4 +1,4 @@
-/* 
+/*
 DO NOT EDIT _tableau-icons.scss. This is a generated file.
 @see tableau-icons.template.css
 */
@@ -69,4 +69,5 @@ Style Guide: media.icons
 <% } %>
 .<%= classPrefix %><%= glyphs[glyphIdx] %>:before {
   content:"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
-}<% } } } %>
+}
+$<%= classPrefix %><%= glyphs[glyphIdx] %>: "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";<% } } } %>

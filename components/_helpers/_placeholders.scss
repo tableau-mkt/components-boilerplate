@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  
+
   li {
     list-style: none;
   }
@@ -55,6 +55,13 @@
   right: 0;
 }
 
+// Vertically center an element. This assumes the parent is position: relative;
+%vertical-centered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // Apply a transsition on transform rules
 %transition-transform {
   -webkit-transition: -webkit-transform   150ms;
@@ -87,6 +94,15 @@
 // Remove text transforming
 %no-text-transform {
   text-transform: none;
+}
+
+// Remove text underline behavior for anchor links
+%underline-none {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // Hide inner text of an element
