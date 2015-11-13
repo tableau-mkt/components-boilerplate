@@ -48,6 +48,10 @@ Style guide: teasers.teaser-item
     @extend .text--body-small;
   }
 
+  .teaser-item__label {
+    @extend .text--label;
+  }
+
   .teaser-item__link {
     margin-top: 0.5em;
     margin-bottom: 0;

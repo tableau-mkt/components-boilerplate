@@ -5,21 +5,40 @@ Searches through a list of items and highlights items that match the term.
 
 Markup: search-highlight.hbs
 
+Bgcolor: #F7F9FB;
+
 Style Guide: interactive.search-highlight
 */
 
-input[type=search].search-highlight {
+.search-highlight {
+  display: inline-block;
+  position: relative;
   width: 100%;
   max-width: 300px;
-  padding-right: 3em;  
-  border: 0;
   border-radius: 30px;
-  background-image: url('../images/shame/icons/icon-magnifying-glass.svg');
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: right 15px center;
+  background-color: #fff;
 
-  &:focus {
-    outline: 0;
+  input[type=search] {
+    width: 100%;
+    padding: 1em 3em 1em 1em;
+    border: 0;
+    background: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+    border: 0;
+    background: none;
+    font-size: 1em;
+
+    &:focus {
+      outline: 0;
+    }
   }
 }

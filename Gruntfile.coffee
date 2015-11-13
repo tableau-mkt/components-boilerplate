@@ -150,6 +150,8 @@ module.exports = (grunt) ->
           'jquery-ui/jquery-ui.min.js'
           'slick.js/slick/slick.css'
           'slick.js/slick/slick-theme.css'
+          'slick.js/slick/ajax-loader.gif'
+          'slick.js/slick/fonts/**'
         ]
         dest: 'build/vendor'
       assets:
@@ -161,6 +163,9 @@ module.exports = (grunt) ->
         expand: true
         src: 'build/**'
         dest: 'styleguide/'
+      favicon:
+        src: 'favicon.ico'
+        dest: 'build/images/'
 
 
     webfont:
@@ -249,6 +254,7 @@ module.exports = (grunt) ->
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'
+    'copy:favicon'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
