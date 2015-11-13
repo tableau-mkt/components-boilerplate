@@ -33,7 +33,7 @@
 @include breakpoint($mobile-max) {
 
   .field--name-field-datetime-range,
-  .field-name-dynamic-field-time {
+  .field--name-dynamic-field-time {
     background: $bg-light-gray-1;
     float: left;
     width: 50%;
