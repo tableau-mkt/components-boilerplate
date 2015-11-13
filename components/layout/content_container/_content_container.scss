@@ -1,13 +1,13 @@
 /*
 Content Container
 
-A wrapper elemnt to go around content to keep it in a centered column on the 
-page.
+A wrapper element around content to keep it in a centered column on the page.
 
 Markup: content_container.hbs
 
 Weight: 30
 
+.content-container--narrow - A narrower content container
 .content-container--wide - An extra wide content container
 
 Style guide: layout.container
@@ -25,6 +25,11 @@ Style guide: layout.container
   h2:first-child {
     margin-top: 0;
     margin-bottom: .75em;
+  }
+
+  &.content-container--narrow {
+    padding-left: 16%;
+    padding-right: 16%;
   }
 
   &.content-container--wide {
