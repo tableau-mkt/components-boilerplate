@@ -66,7 +66,21 @@ Style guide: media.video-playlist
 
   /* Only show arrow on desktops. */
   @include breakpoint($desktop-only) {
-    &:before,
+    /* SVG implementation. */
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -17px;
+      content: "";
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='100%' height='100%' preserveAspectRatio='none' style='-webkit-backface-visibility: hidden;' viewBox='0 0 512 512'%3E %3Cpolygon fill='%23EBEBEB' points='512,0 0,256 512,512 '/%3E %3C/svg%3E");
+      background-size: 100% 100%;
+      width: 17px;
+      height: 100%;
+    }
+
+
+    /* Linear gradient implementation. */
+    /*&:before,
     &:after {
       width: 15px;
       height: 50%;
@@ -77,13 +91,13 @@ Style guide: media.video-playlist
 
     &:before {
       top: 0;
-      background: linear-gradient(to left top, $bg-light-gray-2 50%, transparent 54%)
+      background: linear-gradient(to left top, $bg-light-gray-2 50%, transparent 50%)
     }
 
     &:after {
       top: 50%;
-      background: linear-gradient(to left bottom, $bg-light-gray-2 50%, transparent 54%)
-    }
+      background: linear-gradient(to left bottom, $bg-light-gray-2 50%, transparent 50%)
+    }*/
   }
 
   .video-playlist__item {
