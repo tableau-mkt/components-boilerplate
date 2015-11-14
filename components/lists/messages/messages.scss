@@ -16,20 +16,17 @@ Style guide: lists.messages
 .messages {
 
   padding: 10px;
-  border: 1px solid green;
-  background-color: #ccc;
+  border: none;
+  background-color: $msg-default-bg;
+  color: $msg-default-text;
 
-  ul {
-    @extend %plain-list;
+  &.messages--warning {
+    color: $msg-warning-text;
+    background-color: $msg-warning-bg;
   }
 
-  .messages--error {
-    border-color: red;
-    background-color: #ccc;
-  }
-
-  .messages--warning {
-    border-color: yellow;
-    background-color: #ccc;
+  &.messages--error {
+    color: $msg-error-text;
+    background-color: $msg-error-bg;
   }
 }

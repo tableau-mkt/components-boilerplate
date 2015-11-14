@@ -1,25 +1,33 @@
 // Extend component to work with Drupal DOM.
 
-.l-region--content-top.bg-cover {
-  min-height: 200px;
-  text-align: center;
-  position: relative;
-}
+.l-region--content-top {
 
-.l-region--content-top.bg-cover .hero__bg-cover-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.4;
-  background-color: #333;
-}
+  &.bg-cover {
+    text-align: center;
+    position: relative;
 
-.l-region--content-top.bg-cover .content-inner {
-  padding: 2em 0;
-}
+    .content-inner {
+      padding: 2em 0;
+    }
+  }
 
-.l-region--content-top.bg-cover,
-.l-region--content-top.bg-cover h1 {
-  color: $text-negative;
-  font-family: $text--benton-light;
+  &.bg-cover,
+  &.bg-cover h1 {
+    color: $text-negative;
+    font-family: $text--benton-light;
+  }
+
+  &.bg-overlay .hero__bg-cover-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background-color: #333;
+
+    ~ * {
+      position: relative;
+    }
+  }
 }
