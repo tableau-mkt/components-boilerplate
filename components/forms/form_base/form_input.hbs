@@ -3,6 +3,12 @@
   <input type="text" name="text-field" id="text-field" placeholder="text">
 </div>
 
+<div class="form-field__wrapper">
+  <label class="form-field__label" for="text-field-2">Text Field (No Placeholder)</label>
+  <br>
+  <input type="text" name="text-field-2" id="text-field-2">
+</div>
+
 <div class="form-field__wrapper has-float-label">
   <label class="form-field__label" for="email-field">Email Field:</label>
   <input type="email" name="email-field" id="email-field" placeholder="email">
@@ -13,19 +19,41 @@
   <input type="password" name="password-field" id="password-field" placeholder="password">
 </div>
 
-<div class="form-field__wrapper  has-float-label">
+<div class="form-field__wrapper has-float-label">
   <label class="form-field__label" for="sample-textarea">Long text</label>
   <textarea rows="5" name="sample-textarea" placeholder="Long text here..."></textarea>
 </div>
 
+<div class="form-field__wrapper">
+  <label class="form-field__label" for="sample-textarea">Long text (No Placeholder)</label>
+  <br>
+  <textarea rows="5" name="sample-textarea"></textarea>
+</div>
+
 <div class="form-field__wrapper has-float-label">
-  <label class="form-field__label" for="sample-select">Industries</label>
+  <label class="form-field__label" for="sample-select">Select List</label>
 
   <div class="form__select">
     <select name="sample-select">
-      <option class="select-placeholder" value="_none" disabled selected>Industries</option>
-      <option value="bar">Other Choices</option>
-      <option value="bars">Other Choices</option>
+      <option class="select-placeholder" value="_none" disabled selected>Select List</option>
+      <option value="one">Choice One</option>
+      <option value="two">Choice Two</option>
+      <option value="three">Choice Three</option>
+      <option value="four">Choice Four</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-field__wrapper">
+  <label class="form-field__label" for="sample-select">Select List (No Placeholder)</label>
+  <br>
+  <div class="form__select">
+    <select name="sample-select">
+      <option selected>--</option>
+      <option value="one">Choice One</option>
+      <option value="two">Choice Two</option>
+      <option value="three">Choice Three</option>
+      <option value="four">Choice Four</option>
     </select>
   </div>
 </div>
