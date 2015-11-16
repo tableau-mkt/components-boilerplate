@@ -38,7 +38,7 @@ Style guide: forms.contextual-search
     background: $bg-light-gray-1;
     box-shadow: 2px 2px 3px $accent-dividers inset;
     border-radius: 32px;
-    z-index: 10;
+    z-index: $zindex-dropdown;
   }
 
   .contextual-search__form {

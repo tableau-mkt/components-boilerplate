@@ -1,0 +1,21 @@
+// ----------------------
+// == Z-index scale (inspired by https://gist.github.com/fat/1f6da6b3bd0311a1f8a0)
+// ----------------------
+
+// Z-Index Scale (private vars)
+// --------------------------------------------------
+$zindex-1:   10;
+$zindex-2:   20;
+$zindex-3:   30;
+$zindex-4:   40;
+$zindex-5:   50;
+$zindex-6:   60;
+$zindex-7:   70;
+$zindex-8:   80;
+$zindex-9:   90;
+$zindex-10:  100;
+
+
+// Z-Index Applications
+// --------------------------------------------------
+$zindex-dropdown: $zindex-1;
