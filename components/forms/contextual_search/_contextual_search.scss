@@ -58,7 +58,7 @@ Style guide: forms.contextual-search
     color: $text-medium-body;
     font-family: $text--merriweather-light;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $text-light-body;
     }
     /* we want additional behavior with our own cancel/reset button, so hide Chrome's cancel button */

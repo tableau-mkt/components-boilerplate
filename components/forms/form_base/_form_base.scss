@@ -102,10 +102,7 @@ textarea,
   }
 }
 
-input::input-placeholder,
-input::-webkit-input-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder {
+input::placeholder {
   color: $text-medium-body;
 }
 

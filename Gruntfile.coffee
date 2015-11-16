@@ -96,7 +96,7 @@ module.exports = (grunt) ->
       options:
         processors: [
           require('autoprefixer-core')({
-            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions', 'last 2 Firefox versions']
           })
         ]
       dist:
