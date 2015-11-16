@@ -61,8 +61,13 @@ Style guide: forms.contextual-search
     &::placeholder {
       color: $text-light-body;
     }
-    /* we want additional behavior with our own cancel/reset button, so hide Chrome's cancel button */
+    // We want additional behavior with our own cancel/reset button, so hide
+    // Chrome's cancel button.
     &::-webkit-search-cancel-button {
+      display: none;
+    }
+    // This must be separate to work. Go figure.
+    &::-ms-clear {
       display: none;
     }
   }
