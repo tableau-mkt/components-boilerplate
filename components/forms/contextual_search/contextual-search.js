@@ -21,16 +21,17 @@ Tabia.contextualSearch = {};
 Tabia.contextualSearch.ready = function ($) {
   // Set up all the section search components on the page.
   $('.contextual-search').each(function () {
-    // Initialze a data object for this instance.
-    var search = {
-      selectionIndex: -1
-    };
+    var $this = $(this),
+        // Initialze a data object for this instance.
+        search = {
+          selectionIndex: -1
+        };
     // Save a reference to this element.
     search.element = this;
     // Attach keydown handler with our data context.
-    $(this).keydown($.proxy(Tabia.contextualSearch.keydownHandler, search));
+    $this.keydown($.proxy(Tabia.contextualSearch.keydownHandler, search));
     // Attach UI click handler. Don't propagate clicks to document.
-    $(this).find('.contextual-search__ui').click(function (event) {
+    $this.find('.contextual-search__ui').click(function (event) {
       event.stopPropagation();
     });
     // Attach document click handler to close (blur) the results list.
@@ -38,7 +39,7 @@ Tabia.contextualSearch.ready = function ($) {
       $(search.element).removeClass('is-open');
     });
     // Attach reset handler.
-    $(this).find('.contextual-search__reset').click(function contextualSearchReset() {
+    $this.find('.contextual-search__reset').click(function contextualSearchReset() {
       $(search.element).removeClass('is-open');
     });
   });
