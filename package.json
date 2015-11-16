@@ -10,7 +10,7 @@
     "url": "https://github.com/tableau-mkt/components/issues"
   },
   "homepage": "https://github.com/tableau-mkt/components",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer-core": "^5.2.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
