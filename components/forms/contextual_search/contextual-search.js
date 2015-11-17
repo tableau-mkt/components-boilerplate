@@ -51,24 +51,22 @@ Tabia.contextualSearch.ready = function ($) {
  * @param {Object} event
  */
 Tabia.contextualSearch.keydownHandler = function (event) {
-  var keyCode = $.ui.keyCode;
-
   // Only handle keys when the results list is open.
   if (!$(this.element).hasClass('is-open')) {
     return;
   }
 
   switch (event.keyCode) {
-    case keyCode.UP:
+    case 38: // UP
       Tabia.contextualSearch.select.call(this, -1);
       break;
-    case keyCode.DOWN:
+    case 40: // DOWN
       Tabia.contextualSearch.select.call(this, 1);
       break;
-    case keyCode.ESCAPE:
+    case 27: // ESCAPE
       $(this.element).removeClass('is-open');
       break;
-    case keyCode.ENTER:
+    case 13: // ENTER
       Tabia.contextualSearch.select(0);
       this.$rows.get(this.selectionIndex).click();
       event.preventDefault();
