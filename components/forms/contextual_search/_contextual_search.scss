@@ -121,7 +121,6 @@ Style guide: forms.contextual-search
     @extend %clearfix;
     border-bottom: 1px solid $accent-dividers;
     font-family: $text--benton-book;
-    font-size: 11px;
     background: rgba($bg-light-gray-2, 0.5);
     text-decoration: none;
     &:last-child {
@@ -136,28 +135,27 @@ Style guide: forms.contextual-search
   .contextual-search__title {
     @include span(9);
     font-family: $text--merriweather-light;
-    font-size: 15px;
   }
 
   .contextual-search__meta {
     display: table-cell;
     @include span(3 at 0 isolate rtl);
-    @extend %allcaps;
     text-align: right;
     vertical-align: middle;
+    @extend .text--label;
   }
 
   .contextual-search__category {
-    @extend %allcaps;
     @include span(9);
+    @extend .text--label;
   }
 
   .contextual-search__more {
     display: block;
-    @extend %allcaps;
     text-align: center;
     color: $text-link;
     border-radius: 0 0 30px 30px;
+    @extend .text--label;
     &:hover {
       text-decoration: none;
     }
