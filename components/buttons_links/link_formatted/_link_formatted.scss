@@ -3,7 +3,7 @@
 /*
 Formatted Text Links
 
-Text-based links, unlike CTA buttons, don't have a colored box around them, 
+Text-based links, unlike CTA buttons, don't have a colored box around them,
 although they can have an accompanying icon similar to CTAs. All links underline
 on hover.
 
@@ -49,5 +49,10 @@ Style guide: buttons-links.link-formatted
 
   &.link--share:before {
     content: url(../images/shame/icons/share.png);
+  }
+
+  .icon {
+    font-size: 1.5em;
+
   }
 }
