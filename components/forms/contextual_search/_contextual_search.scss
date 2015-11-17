@@ -134,7 +134,7 @@ Style guide: forms.contextual-search
 
   .contextual-search__title {
     @include span(9);
-    font-family: $text--merriweather-light;
+    @extend .text--body-base;
   }
 
   .contextual-search__meta {
