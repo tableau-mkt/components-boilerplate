@@ -48,6 +48,8 @@ module.exports = (grunt) ->
           'sass/imports/_componentsMap.scss': 'components/**/*.scss'
 
     sass:
+      options:
+        precision: 5 # decimal places of precision when rounding
       dist:
         options:
           sourceMap: false
