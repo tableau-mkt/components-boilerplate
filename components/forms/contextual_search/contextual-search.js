@@ -56,7 +56,7 @@ Tabia.contextualSearch.keydownHandler = function (event) {
     return;
   }
 
-  switch (event.keyCode) {
+  switch (event.which) {
     case 38: // UP
       Tabia.contextualSearch.select.call(this, -1);
       break;
