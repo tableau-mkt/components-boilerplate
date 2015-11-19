@@ -255,6 +255,7 @@ module.exports = (grunt) ->
   ]
   grunt.registerTask 'build', [
     'clean:icons'
+    'clean:partials'
     'webfont:icons'
     'sass_globbing'
     'sass:dist'
@@ -265,6 +266,7 @@ module.exports = (grunt) ->
     'concat:scripts'
     'concat:vendor'
     'concat:sgScripts'
+    'copy:partials'
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'
