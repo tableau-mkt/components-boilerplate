@@ -4,18 +4,14 @@
 
 // Z-Index Scale (private vars)
 // --------------------------------------------------
-$zindex-1:   10;
-$zindex-2:   20;
-$zindex-3:   30;
-$zindex-4:   40;
-$zindex-5:   50;
-$zindex-6:   60;
-$zindex-7:   70;
-$zindex-8:   80;
-$zindex-9:   90;
-$zindex-10:  100;
+$zindex-1:   1;
+$zindex-2:   10;
+$zindex-3:   100;
+$zindex-4:   1000;
+$zindex-5:   10000;
 
 
-// Z-Index Applications
+// Z-Index Applications (1-5)
 // --------------------------------------------------
 $zindex-dropdown: $zindex-1;
+$zindex-nav: $zindex-5;
