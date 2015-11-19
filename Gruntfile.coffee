@@ -26,6 +26,12 @@ module.exports = (grunt) ->
         ]
         tasks: ['shell:kss']
 
+      partials:
+        files: [
+          'components/{,**/}*.hbs'
+        ]
+        tasks: ['clean:partials', 'copy:partials']
+
       js:
         files: ['components/{,**/}*.{png,jpg,gif}']
         tasks: ['copy:assets', 'copy:styleguide']
@@ -154,6 +160,12 @@ module.exports = (grunt) ->
           'slick.js/slick/fonts/**'
         ]
         dest: 'build/vendor'
+      partials:
+        cwd: 'components'
+        expand: true
+        flatten: true
+        src: '**/*.hbs'
+        dest: 'template/_partials'
       assets:
         expand: true
         cwd: 'components'
@@ -187,6 +199,8 @@ module.exports = (grunt) ->
     clean:
       icons:
         src: ["build/fonts/tableau-icons-*"]
+      partials:
+        src: ["template/_partials/*.hbs"]
 
     ###
     Start a connect web server.
