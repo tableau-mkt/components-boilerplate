@@ -7,7 +7,7 @@ Weight: 80
 
 Markup: location.hbs
 
-Style guide: gizmos.location
+Style guide: compound.location
 */
 
 .location {
@@ -19,10 +19,15 @@ Style guide: gizmos.location
 
   .location__map-image {
     float: left;
-    margin: 25px 25px 0 0;
+    margin: 0 20px 0 0;
   }
 
   .location__address {
+    @extend .text--body-small;
     float: left;
+
+    p {
+      margin: 0.25em;
+    }
   }
 }
