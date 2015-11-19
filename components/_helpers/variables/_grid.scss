@@ -1,0 +1,7 @@
+$grid-columns: 12;
+$susy: (
+  columns: $grid-columns,
+  gutters: 1/3,
+  gutter-position: after
+);
+$susy-defaults-copy: $susy;

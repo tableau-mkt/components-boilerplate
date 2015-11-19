@@ -1,11 +1,11 @@
 /*
 Global Navigation
 
-The global navigation bar that sits at the top of each page. Contains primary, 
+The global navigation bar that sits at the top of each page. Contains primary,
 secondary, and sub navigation as well as the global search bar.
 
-**NOTE: The global nav and footer are not yet ready for consumption. We will be 
-updating interactions and providing more details on how to implement these 
+**NOTE: The global nav and footer are not yet ready for consumption. We will be
+updating interactions and providing more details on how to implement these
 components very soon in an upcoming release**
 
 Markup: global-nav.hbs
@@ -22,7 +22,7 @@ Style guide: navigation.global
   height: 100px;
   padding: em(28px) 0;
   background: #fff;
- 
+
   .global-nav__logo {
     max-width: 200px;
     float: left;
@@ -31,7 +31,7 @@ Style guide: navigation.global
       max-width: 140px;
       margin-top: 6px;
     }
-    
+
     a {
       display: block;
       line-height: 0;
@@ -50,7 +50,7 @@ Style guide: navigation.global
     .global-nav__secondary-menu {
       float: right;
     }
-  
+
 
     .global-nav__primary-menu {
       @extend .text--body-small;
@@ -59,12 +59,12 @@ Style guide: navigation.global
         margin: 0.8em 0 0 3em;
         padding: 0;
         list-style: none;
-        
+
         li {
           display: inline-block;
         }
       }
-      
+
       li a {
         position: relative;
         padding: 10px;
@@ -96,7 +96,7 @@ Style guide: navigation.global
         opacity: 1;
       }
     }
-    
+
     .global-nav__secondary-menu {
       padding-right: 45px;
       text-align: right;
@@ -114,7 +114,7 @@ Style guide: navigation.global
         margin: 0 0 0 10px;
       }
     }
-  
+
     // Global Search Bar Styles
     .global-nav__search {
       position: absolute;
@@ -157,15 +157,15 @@ Style guide: navigation.global
         ::-webkit-input-placeholder,
         :-moz-placeholder,
         ::-moz-placeholder,
-        :-ms-input-placeholder {  
+        :-ms-input-placeholder {
           color: $text-medium-body;
         }
-        
+
         &::-webkit-search-decoration,
         &::-webkit-search-cancel-button,
         &::-webkit-search-results-button,
-        &::-webkit-search-results-decoration { 
-          display: none; 
+        &::-webkit-search-results-decoration {
+          display: none;
         }
       }
 
@@ -186,16 +186,16 @@ Style guide: navigation.global
 
   // Tweaks for when the search bar is shown
   &.global-nav--search-shown {
-    
+
     .global-nav__search {
       width: 100%;
-      
+
       input[type='search'] {
         width: 100%;
         padding-left: 2em;
         cursor: inherit;
       }
-      
+
       .global-nav__search__close {
         opacity: 1;
         width: 45px;
@@ -225,7 +225,7 @@ Style guide: navigation.global
       top: 64px;
       left: 0;
       width: 100%;
-      z-index: 10;
+      z-index: $zindex-nav;
       background: $nav-drawer-gray-1;
     }
 
@@ -249,7 +249,7 @@ Style guide: navigation.global
       li {
         display: block;
         padding: 0 1em;
-       
+
         a {
           display: block;
           padding: 6px 0.5em;
@@ -326,18 +326,18 @@ Style guide: navigation.global
   .global-nav__drawers {
     position: absolute;
     overflow: hidden;
-    z-index: 10;
+    z-index: $zindex-nav;
     width: 100%;
-    
+
     .global-nav__drawers__drawer {
       display: none;
     }
-    
+
     .global-nav__drawer__inner {
       display: flex;
       align-items: center;
     }
-    
+
     .global-nav__drawer__inner,
     .global-nav__drawer__secondary {
       min-height: 275px;
@@ -381,7 +381,7 @@ Style guide: navigation.global
         z-index: 2;
         position: relative;
       }
-      
+
       .sub-nav__item__title,
       .sub-nav__item__description {
         margin: 0;
@@ -434,7 +434,7 @@ Style guide: navigation.global
       clear: both;
       margin: 0;
     }
-    
+
 
     .sub-nav__item {
       border-bottom: 1px solid $nav-drawer-gray-2;
@@ -484,7 +484,7 @@ Style guide: navigation.global
 .ui-autocomplete {
   display: block;
   position: absolute;
-  z-index: 20;
+  z-index: $zindex-nav;
   padding: 10px 45px;
   list-style: none;
 

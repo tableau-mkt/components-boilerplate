@@ -48,6 +48,8 @@ module.exports = (grunt) ->
           'sass/imports/_componentsMap.scss': 'components/**/*.scss'
 
     sass:
+      options:
+        precision: 5 # decimal places of precision when rounding
       dist:
         options:
           sourceMap: false
@@ -96,7 +98,7 @@ module.exports = (grunt) ->
       options:
         processors: [
           require('autoprefixer-core')({
-            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions', 'last 2 Firefox versions']
           })
         ]
       dist:
