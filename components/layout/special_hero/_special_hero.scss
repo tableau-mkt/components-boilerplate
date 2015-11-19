@@ -21,34 +21,25 @@ Style guide: layout.special-hero
   width: 100%;
   overflow: hidden;
 
-  .special-hero__background {
-    position: relative;
-    max-width: $layout-max;
-    margin: 0 auto;
-
-    .special-hero__background-inner {
-      height: 0;
-      padding-bottom: 33%;
-      background-size: cover;
-    }
-
-    img {
-      position: absolute;
-      width: 100%;
-    }
-  }
-
+  .special-hero__background,
   .special-hero__video {
     position: relative;
-    line-height: 0;
     max-width: $layout-max;
     margin: 0 auto;
-
-    video {
-      width: 100%;
-    }
+    line-height: 0;
   }
 
+  .special-hero__background .special-hero__background-inner {
+    height: 0;
+    padding-bottom: 33%;
+    background-size: cover;
+  }
+
+  .special-hero__video video {
+    width: 100%;
+  }
+
+  // If a  video is present, hide the background image.
   .special-hero__video + .special-hero__background {
     display: none;
   }
@@ -62,7 +53,6 @@ Style guide: layout.special-hero
       // @todo add fallback for older browsers
       display: flex;
       align-items: center;
-      color: $text-negative;
 
       .special-hero__content__inner {
         width: 100%;
@@ -110,25 +100,8 @@ Style guide: layout.special-hero
       right: 0;
     }
   }
-}
 
-// Set up the gradient fades for wide screens for each background color.
-@each $name, $colors in $background-colors {
-  .bg--#{"" + $name} {
-    .special-hero__background:before,
-    .special-hero__video:before {
-      background-image: linear-gradient(to right, nth($colors, 1), transparent);
-    }
-
-    .special-hero__background:after,
-    .special-hero__video:after {
-      background-image: linear-gradient(to left, nth($colors, 1), transparent);
-    }
-  }
-}
-
-@include breakpoint($tablet-max) {
-  .special-hero {
+  @include breakpoint($tablet-max) {
     .special-hero__video {
       display: none;
     }
@@ -145,10 +118,11 @@ Style guide: layout.special-hero
       display: none;
     }
   }
-}
 
-@include breakpoint($mobile-only) {
-  .special-hero {
+  @include breakpoint($mobile-only) {
+    background: $bg-white;
+    color: $text-dark-body;
+
     h1, h4.heading--label {
       color: $text-dark-body;
     }
@@ -167,14 +141,18 @@ Style guide: layout.special-hero
       .cta {
         display: block;
         text-align: center;
+
+        &.cta--light {
+          background-color: $text-dark-body;
+          color: $text-negative;
+
+          &.cta--secondary {
+            background-color: transparent;
+            border-color: $text-dark-body;
+            color: $text-dark-body;
+          }
+        }
       }
     }
-  }
-
-  .bg--dark-gray-1 .special-hero,
-  .bg--dark-gray-2 .special-hero,
-  .bg--dark-gray-3 .special-hero {
-    background: #fff;
-    color: $text-dark-body;
   }
 }
