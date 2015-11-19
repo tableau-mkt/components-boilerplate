@@ -1,7 +1,7 @@
 /*
 Contextual Search
 
-Contextual search (AKA section search) form for section-specific searches.
+Contextual search form for section-specific searches.
 
 Upon submitting (e.g., pressing ENTER or clicking the search submit icon) an
 intermediate search results list is shown in the context of the page (provided
@@ -21,28 +21,28 @@ Style guide: forms.contextual-search
 */
 
 .contextual-search {
+  @include breakpoint($mobile-only) {
+    width: 100%;
+  }
   position: relative;
   margin: 2em auto;
   width: 60%;
   max-width: 650px;
   min-height: 4em;
-  @include breakpoint($mobile-only) {
-    width: 100%;
-  }
 
   .contextual-search__ui {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: $bg-light-gray-1;
-    box-shadow: 2px 2px 3px $accent-dividers inset;
-    border-radius: 2em;
-    z-index: $zindex-dropdown;
     @include breakpoint($mobile-only) {
       left: 1em;
       right: 1em;
     }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-dropdown;
+    background: $bg-light-gray-1;
+    border-radius: 2em;
+    box-shadow: 2px 2px 3px $accent-dividers inset;
   }
 
   .contextual-search__form {
@@ -51,15 +51,15 @@ Style guide: forms.contextual-search
 
   .contextual-search__input {
     $base: 20px;
-    width: 100%;
-    height: em(64px, $base);
     margin: 0;
     padding: em(18px, $base) em(64px, $base) em(18px, $base) em(32px, $base);
+    width: 100%;
+    height: em(64px, $base);
+    line-height: normal;
     background: none;
     outline: 0;
     border: 0;
     font-size: em($base);
-    line-height: normal;
     color: $text-medium-body;
     font-family: $text--merriweather-light;
 
@@ -83,14 +83,14 @@ Style guide: forms.contextual-search
     position: absolute;
     top: 0;
     right: em(5px, $base);
+    border: 0;
+    padding: 0;
     width: em(64px, $base);
     height: em(64px, $base);
-    padding: 0;
-    border: 0;
+    line-height: 1;
+    font-size: em($base);
     outline: 0;
     background: transparent;
-    font-size: em($base);
-    line-height: 1;
     cursor: pointer;
   }
 
@@ -112,9 +112,9 @@ Style guide: forms.contextual-search
   }
 
   .contextual-search__results {
+    display: none;
     margin: 0;
     padding: 0;
-    display: none;
   }
 
   &.is-open .contextual-search__results {
@@ -122,13 +122,13 @@ Style guide: forms.contextual-search
   }
 
   .contextual-search__results-row {
-    display: block;
-    padding: em(18px) em(32px);
-    color: inherit;
+    @include transition(background .25s ease-in-out);
     @include break;
     @extend %clearfix;
+    display: block;
+    padding: em(18px) em(32px);
     border-bottom: 1px solid $accent-dividers;
-    font-family: $text--benton-book;
+    color: inherit;
     background: rgba($bg-light-gray-2, 0.5);
     text-decoration: none;
     &:last-child {
@@ -146,11 +146,11 @@ Style guide: forms.contextual-search
   }
 
   .contextual-search__meta {
-    display: table-cell;
     @include span(3 at 0 isolate rtl);
+    @extend .text--label;
+    display: table-cell;
     text-align: right;
     vertical-align: middle;
-    @extend .text--label;
   }
 
   .contextual-search__category {
@@ -160,12 +160,12 @@ Style guide: forms.contextual-search
 
   .contextual-search__more {
     $base: 11px;
+    @extend .text--label;
     display: block;
     padding: em(18px, $base) em(32px, $base);
     border-radius: 0 0 em(32px, $base) em(32px, $base);
-    text-align: center;
     color: $text-link;
-    @extend .text--label;
+    text-align: center;
     &:hover {
       text-decoration: none;
     }
