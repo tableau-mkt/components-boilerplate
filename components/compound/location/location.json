@@ -1,0 +1,18 @@
+{
+  "city": "Las Vegas",
+  "state": "NV",
+  "country": "US",
+  "place": "Bellagio",
+  "address": "123 Main St.",
+  "link-base": {
+    "href": "https://www.google.com/maps/@36.1488957,-115.1411018,12.02z",
+    "text": "Get Directions",
+    "target": "_blank",
+    "class": "location__link link--arrow"
+  },
+  "mapImg" : {
+    "src": "http://www.placecage.com/150/140",
+    "width": 150,
+    "height": 140
+  }
+}

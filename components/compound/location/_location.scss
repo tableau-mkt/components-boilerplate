@@ -1,0 +1,33 @@
+/*
+Location
+
+Details about a geo-graphic location, with a map.
+
+Weight: 80
+
+Markup: location.hbs
+
+Style guide: compound.location
+*/
+
+.location {
+  @extend %clearfix;
+
+  .location__general {
+    @extend .heading--h5;
+  }
+
+  .location__map-image {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+
+  .location__address {
+    @extend .text--body-small;
+    float: left;
+
+    p {
+      margin: 0.25em;
+    }
+  }
+}

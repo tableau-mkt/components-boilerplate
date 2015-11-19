@@ -1,0 +1,32 @@
+/*
+Messages
+
+Display special messages to the user. Recommend putting multiple messages in `<li>` tags.
+
+Markup: messages.hbs
+
+.messages--error
+.messages--warning
+
+Weight: 30
+
+Style guide: compound.messages
+*/
+
+.messages {
+
+  padding: 10px;
+  border: none;
+  background-color: $msg-default-bg;
+  color: $msg-default-text;
+
+  &.messages--warning {
+    color: $msg-warning-text;
+    background-color: $msg-warning-bg;
+  }
+
+  &.messages--error {
+    color: $msg-error-text;
+    background-color: $msg-error-bg;
+  }
+}
