@@ -1,0 +1,58 @@
+/*
+Feature Highlight
+
+A side-by-side text blurb and image highlighting a feature or important key
+piece of content.
+
+Markup: feature-highlight.hbs
+
+.feature-highlight--image-left - Image on the left side
+
+Style guide: compound.feature-highlight
+*/
+
+.feature-highlight {
+  @extend %clearfix;
+
+  @include breakpoint($tablet-min) {
+    display: flex;
+    align-items: center;
+    // @TODO add in a float fallback for <IE10
+
+    .feature-highlight__image {
+      order: 2;
+      width: 70%;
+      margin-left: 5%;
+      margin-right: -10%;
+      text-align: right;
+      line-height: 0;
+    }
+
+    .feature-highlight__copy {
+      order: 1;
+      width: 35%;
+    }
+
+    &.feature-highlight--image-left {
+      .feature-highlight__image {
+        order: 1;
+        margin-left: -10%;
+        margin-right: 5%;
+      }
+
+      .feature-highlight__copy {
+        order: 2;
+      }
+    }
+  }
+
+  @include breakpoint($desktop-only) {
+    .feature-highlight__image {
+      width: 80%;
+    }
+
+    .feature-highlight__copy {
+      width: 25%;
+    }
+  }
+}
