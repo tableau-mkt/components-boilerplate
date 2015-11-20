@@ -16,7 +16,6 @@ Style guide: compound.special-hero
 */
 
 .special-hero {
-  @extend .bg--dark-gray-3;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -45,6 +44,13 @@ Style guide: compound.special-hero
   }
 
   @include breakpoint($tablet-min) {
+    background-color: $bg-dark-gray-3;
+    color: $text-negative;
+
+    h1, h4.heading--label {
+      color: $text-negative;
+    }
+
     .special-hero__content {
       position: absolute;
       top: 0;
@@ -120,7 +126,7 @@ Style guide: compound.special-hero
   }
 
   @include breakpoint($mobile-only) {
-    background: $bg-white;
+    background-color: $bg-white;
     color: $text-dark-body;
 
     h1, h4.heading--label {

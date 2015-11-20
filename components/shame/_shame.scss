@@ -2,22 +2,6 @@
 Shameful hacks that should be fixed
 */
 
-/* hack for Desktop additional features on mobile */
-@include breakpoint($mobile-only) {
-  .shame__additional-features {
-    .grid--1 {
-      float: left;
-    }
-
-    .grid--5 {
-      margin-left: 4em;
-    }
-  }
-}
-.shame__additional-features:nth-of-type(odd) {
-  clear: left;
-}
-
 
 /* Used on Desktop Pricing seciton */
 .shame__links a {
