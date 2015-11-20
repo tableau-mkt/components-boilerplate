@@ -68,6 +68,7 @@ Image based icons
 @TODO get design to make SVGs and migrate to iconfont generation.
 */
 
+.icon--circle-filled-orange,
 .icon--product-mobile,
 .icon--product-public,
 .icon--product-reader,
@@ -85,6 +86,10 @@ Image based icons
 .icon--slideshow-next-dark,
 .icon--magnifying-glass {
   display: inline-block;
+}
+
+.icon--circle-filled-orange:before {
+  content: url(../images/shame/icons/icon-circle-filled-orange.png);
 }
 
 .icon--product-mobile:before {
