@@ -178,9 +178,9 @@ module.exports = (grunt) ->
         ]
         dest: 'build/fonts'
         destCss: 'components/media/icons'
-        htmlDemo: false
         options:
           font: 'tableau-icons'
+          htmlDemo: false
           stylesheet: 'scss'
           template: 'components/media/icons/tableau-icons.template.css'
           relativeFontPath: '../fonts'

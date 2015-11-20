@@ -39,17 +39,16 @@ Style guide: layout.container
 }
 
 // Mobile padding resets.
-.content-container {
-  &.content-container--wide,
-  &.content-container--narrow {
-    @include breakpoint($tablet-max) {
-      padding-left: 2em;
-      padding-right: 2em;
-    }
+.content-container,
+.content-container--wide,
+.content-container--narrow {
+  @include breakpoint($tablet-max) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 
-    @include breakpoint($mobile-only) {
-      padding-left: 1em;
-      padding-right: 1em;
-    }
+  @include breakpoint($mobile-only) {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
