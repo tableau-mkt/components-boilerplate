@@ -82,6 +82,29 @@ $bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
 
 
 /*
+Message colors
+
+Colors used for message backgrounds.
+
+Markup: colors-background.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 2
+
+Style guide: colors.background
+*/
+$msg-default-bg: #E8F7F1;    // Green background - rgb(232, 247, 241)
+$msg-default-text: #47B282;  // Green text - rgb(71, 178, 128)
+$msg-warning-bg: #fff6b6;    // Yellow background, TEMPORARY
+$msg-warning-text: #8f8017;  // Yellow text, TEMPORARY
+$msg-error-bg: #f9e4e4;      // Red background - rgb()
+$msg-error-text: #c92434;    // Red text - rgb(201, 36, 52)
+
+
+/*
 Button Colors
 
 Colors used for buttons.

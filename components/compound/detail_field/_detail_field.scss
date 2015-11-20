@@ -9,7 +9,7 @@ Weight: 60
 
 .detail-field--secondary - Secondary "sidebar" field.
 
-Styleguide: typography.detail-field
+Styleguide: compound.detail-field
 */
 
 .detail-field {
@@ -22,6 +22,7 @@ Styleguide: typography.detail-field
   &.detail-field--secondary {
 
     padding-bottom: 10px;
+    margin-bottom: 20px;
     border-bottom: 1px solid $accent-dividers;
 
     .detail-field__items {

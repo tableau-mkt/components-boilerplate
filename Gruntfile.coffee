@@ -26,6 +26,12 @@ module.exports = (grunt) ->
         ]
         tasks: ['shell:kss']
 
+      partials:
+        files: [
+          'components/{,**/}*.hbs'
+        ]
+        tasks: ['clean:partials', 'copy:partials']
+
       js:
         files: ['components/{,**/}*.{png,jpg,gif}']
         tasks: ['copy:assets', 'copy:styleguide']
@@ -48,6 +54,8 @@ module.exports = (grunt) ->
           'sass/imports/_componentsMap.scss': 'components/**/*.scss'
 
     sass:
+      options:
+        precision: 5 # decimal places of precision when rounding
       dist:
         options:
           sourceMap: false
@@ -96,7 +104,7 @@ module.exports = (grunt) ->
       options:
         processors: [
           require('autoprefixer-core')({
-            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions']
+            browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions', 'last 2 Firefox versions']
           })
         ]
       dist:
@@ -154,6 +162,12 @@ module.exports = (grunt) ->
           'slick.js/slick/fonts/**'
         ]
         dest: 'build/vendor'
+      partials:
+        cwd: 'components'
+        expand: true
+        flatten: true
+        src: '**/*.hbs'
+        dest: 'template/_partials'
       assets:
         expand: true
         cwd: 'components'
@@ -176,9 +190,9 @@ module.exports = (grunt) ->
         ]
         dest: 'build/fonts'
         destCss: 'components/media/icons'
-        htmlDemo: false
         options:
           font: 'tableau-icons'
+          htmlDemo: false
           stylesheet: 'scss'
           template: 'components/media/icons/tableau-icons.template.css'
           relativeFontPath: '../fonts'
@@ -187,6 +201,8 @@ module.exports = (grunt) ->
     clean:
       icons:
         src: ["build/fonts/tableau-icons-*"]
+      partials:
+        src: ["template/_partials/*.hbs"]
 
     ###
     Start a connect web server.
@@ -241,6 +257,7 @@ module.exports = (grunt) ->
   ]
   grunt.registerTask 'build', [
     'clean:icons'
+    'clean:partials'
     'webfont:icons'
     'sass_globbing'
     'sass:dist'
@@ -251,6 +268,7 @@ module.exports = (grunt) ->
     'concat:scripts'
     'concat:vendor'
     'concat:sgScripts'
+    'copy:partials'
     'copy:vendor'
     'copy:assets'
     'copy:styleguide'

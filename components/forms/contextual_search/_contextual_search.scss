@@ -1,0 +1,173 @@
+/*
+Contextual Search
+
+Contextual search form for section-specific searches.
+
+Upon submitting (e.g., pressing ENTER or clicking the search submit icon) an
+intermediate search results list is shown in the context of the page (provided
+via AJAX).
+
+More results text, at the bottom of the intermediate search results list, allows
+you to continue to the full results page.
+
+Down/up arrow keys allow you to select a results row, and clicking outside the
+search component will close the search results.
+
+Markup: contextual-search.hbs
+
+Weight: 10
+
+Style guide: forms.contextual-search
+*/
+
+.contextual-search {
+  @include breakpoint($mobile-only) {
+    width: 100%;
+  }
+  position: relative;
+  margin: 2em auto;
+  width: 60%;
+  max-width: 650px;
+  min-height: 4em;
+
+  .contextual-search__ui {
+    @include breakpoint($mobile-only) {
+      left: 1em;
+      right: 1em;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-dropdown;
+    background: $bg-light-gray-1;
+    border-radius: 2em;
+    box-shadow: 2px 2px 3px $accent-dividers inset;
+  }
+
+  .contextual-search__form {
+    position: relative;
+  }
+
+  .contextual-search__input {
+    $base: 20px;
+    margin: 0;
+    padding: em(18px, $base) em(64px, $base) em(18px, $base) em(32px, $base);
+    width: 100%;
+    height: em(64px, $base);
+    line-height: normal;
+    background: none;
+    outline: 0;
+    border: 0;
+    font-size: em($base);
+    color: $text-medium-body;
+    font-family: $text--merriweather-light;
+
+    &::placeholder {
+      color: $text-light-body;
+    }
+    // We want additional behavior with our own cancel/reset button, so hide
+    // Chrome's cancel button.
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    // This must be separate to work. Go figure.
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  .contextual-search__button {
+    // Define the base font size, scoped to this selector.
+    $base: 24px;
+    position: absolute;
+    top: 0;
+    right: em(5px, $base);
+    border: 0;
+    padding: 0;
+    width: em(64px, $base);
+    height: em(64px, $base);
+    line-height: 1;
+    font-size: em($base);
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .contextual-search__reset {
+    display: none;
+  }
+
+  /* when component is open */
+  &.is-open {
+    .contextual-search__ui {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+    .contextual-search__reset {
+      display: block;
+    }
+    .contextual-search__submit {
+      display: none;
+    }
+  }
+
+  .contextual-search__results {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.is-open .contextual-search__results {
+    display: block;
+  }
+
+  .contextual-search__results-row {
+    @include transition(background .25s ease-in-out);
+    @include break;
+    @extend %clearfix;
+    display: block;
+    padding: em(18px) em(32px);
+    border-bottom: 1px solid $accent-dividers;
+    color: inherit;
+    background: rgba($bg-light-gray-2, 0.5);
+    text-decoration: none;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &.is-selected,
+    &:hover {
+      background: $bg-white;
+    }
+  }
+
+  .contextual-search__title {
+    @include span(9);
+    @extend .text--body-base;
+  }
+
+  .contextual-search__meta {
+    @include span(3 at 0 isolate rtl);
+    @extend .text--label;
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  .contextual-search__category {
+    @include span(9);
+    @extend .text--label;
+  }
+
+  .contextual-search__more {
+    $base: 11px;
+    @extend .text--label;
+    display: block;
+    padding: em(18px, $base) em(32px, $base);
+    border-radius: 0 0 em(32px, $base) em(32px, $base);
+    color: $text-link;
+    text-align: center;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 /*
 Body Copy
 
-Default copy formatting for body copy and other areas with longer chunks of 
-copy. 
+Default copy formatting for body copy and other areas with longer chunks of
+copy.
 
 Markup: body-copy.hbs
 
@@ -21,6 +21,7 @@ Style guide: typography.body-copy
 $base-font-size: 16px;
 
 body,
+.text--body-base,
 .kss-example-preview-wrapper {
   font-family: $text--merriweather-light;
   font-weight: normal;

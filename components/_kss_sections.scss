@@ -52,7 +52,7 @@ Style guide: media
 
 
 /*
-Content Lists
+Lists
 
 Lists of content that generally have a title, thumbnail and/or a description and
 link through to the full version of the content.
@@ -64,7 +64,7 @@ Style guide: lists
 
 
 /*
-Content Teasers
+Teasers
 
 Breif teasers of content used individually or in lists to link to the full
 view of the content.
@@ -76,12 +76,23 @@ Style guide: teasers
 
 
 /*
+Compound
+
+Multi-facetted, styled (non-interactive) content display widget.
+
+Weight: 60
+
+Style guide: compound
+*/
+
+
+/*
 Forms
 
 Form elements such as text fields and submit buttons used to make forms that the
 user can submit information through. Here's an example form:
 
-Weight: 60
+Weight: 70
 
 Style guide: forms
 */
@@ -92,19 +103,19 @@ Navigation
 
 Navigational tools used across the site
 
-Weight: 70
+Weight: 80
 
 Style guide: navigation
 */
 
 
 /*
-Interactive Components
+Interactive
 
 This section displays examples of components that have interactivity. Most
 Interactivity is defined via Javascript.
 
-Weight: 80
+Weight: 90
 
 Style guide: interactive
 */
@@ -115,7 +126,7 @@ Layout
 
 Components used for page layout
 
-Weight: 90
+Weight: 100
 
 Style guide layout
 */
