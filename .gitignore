@@ -48,3 +48,7 @@ template/node_modules/
 ################
 styleguide/
 build/
+
+# Utilities #
+#############
+template/_partials
