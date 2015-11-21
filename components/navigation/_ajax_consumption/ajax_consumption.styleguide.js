@@ -1,7 +1,7 @@
 (function($) {
   $(document).ready(function() {
     var domain = 'redesign-tableau.gotpantheon.com',//replace with cdn.tableau.com
-        lang = $('html').attr('lang') ? $('html').attr('lang') : 'en',
+        lang = $('html').attr('lang') || 'en',
         lang_map = {
           'en' : '',
           'fr' : 'fr-fr/',
@@ -12,7 +12,7 @@
           'ja' : 'ja-jp/',
           'ko' : 'ko-kr/'
         },
-        protocol = document.location.protocol == 'https' ? 'https' : 'http';
+        protocol = location.protocol;
 
     // An example of loading the menus via AJAX (json).
     // Prepend the language if appropriate.
@@ -21,9 +21,9 @@
       type: 'GET',
       dataType: 'json',
       success: tabAjaxMegaMenu,
-      error: function(xhr, ajaxOptions, thrownError) {
+      error: function(xhr, ajaxOptions, error) {
         console.log(xhr.status);
-        console.log(thrownError);
+        console.log(error);
       }
     });*/
 
@@ -32,11 +32,7 @@
     $.ajax({
         url: protocol + '://' + domain + '/' + lang_map[lang] + 'ajax/megamenu' + '/jsonp/' + 'tabAjaxMegaMenu',
         type: 'POST',
-        dataType: 'jsonp',
-        error: function(xhr, ajaxOptions, thrownError) {
-          console.log(xhr.status);
-          console.log(thrownError);
-        }
+        dataType: 'jsonp'
     });
   });
 })(jQuery);
