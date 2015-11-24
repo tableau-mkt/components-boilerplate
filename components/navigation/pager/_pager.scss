@@ -24,21 +24,35 @@ Style guide: navigation.pager
 
     &.pager__endcap--current a {
       color: $text-light-body;
+      cursor: default;
+      pointer-events: none;
     }
 
+    &.pager__endcap--first a:before,
     &.pager__endcap--previous a:before,
-    &.pager__endcap--next a:after {
+    &.pager__endcap--next a:after,
+    &.pager__endcap--last a:after {
       @extend .icon;
       height: 1.3em;
       text-decoration: none;
     }
     
+    &.pager__endcap--first a:before {
+      @extend .icon--triangle-left;
+      padding-right: 0.5em;
+    }
+
     &.pager__endcap--previous a:before {
       @extend .icon--triangle-left;
       padding-right: 0.5em;
     }
 
     &.pager__endcap--next a:after {
+      @extend .icon--triangle-right:before;
+      padding-left: 0.5em;
+    }
+
+    &.pager__endcap--last a:after {
       @extend .icon--triangle-right:before;
       padding-left: 0.5em;
     }
