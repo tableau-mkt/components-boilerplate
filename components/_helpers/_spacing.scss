@@ -12,20 +12,20 @@ $properties: (
 );
 
 $multipliers: (
-  '-0': 0,
-  '': 1,
-  -md: 1.5,
-  -lg: 3,
+  -zero: 0,
+  -one: 1,
+  -two: 2,
+  -three: 3,
 );
 
 $margins: (
-  a: '',
-  t: -top,
-  r: -right,
-  b: -bottom,
-  l: -left,
-  x: (-right, -left),
-  y: (-top, -bottom),
+  '': '',
+  -t: -top,
+  -r: -right,
+  -b: -bottom,
+  -l: -left,
+  -x: (-right, -left),
+  -y: (-top, -bottom),
 );
 
 @each $property in $properties {
@@ -33,9 +33,9 @@ $margins: (
   @each $label, $multiple in $multipliers {
     // Loop sides.
     @each $identifier, $sides in $margins {
-      .#{$property}-#{$identifier}#{$label} {
+      .#{$property}#{$identifier}#{$label} {
         @each $side in $sides {
-          margin#{$side}: $spacer * $multiple !important;
+          #{$property}#{$side}: $spacer * $multiple !important;
         }
       }
     }
@@ -45,27 +45,28 @@ $margins: (
 
 // Examples...
 /*
-.margin-a-0 { margin: 0em !important; }
-.margin-t-0 { margin-top: 0em !important; }
-.margin-r-0 { margin-right: 0em !important; }
+.margin-zero { margin: 0em !important; }
+.margin-t-zero { margin-top: 0em !important; }
+.margin-r-zero { margin-right: 0em !important; }
 
-.margin-b { margin-bottom: 1em !important; }
-.margin-l { margin-left: 1em !important; }
+.margin-b-one { margin-bottom: 1em !important; }
+.margin-l-one { margin-left: 1em !important; }
 
-.margin-x-md {
-  margin-right: 1.5em !important;
-  margin-left: 1.5em !important;
+.margin-x-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
 }
-.margin-y-md {
-  margin-top: 1.5em !important;
-  margin-bottom: 1.5em !important;
+.margin-y-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
 }
 
-.padding-a-lg { margin: 3em !important; }
-.padding-t-lg { margin-top: 3em !important; }
+.padding-zero { padding: 0em !important; }
 
-.padding-y-lg {
-  margin-top: 3em !important;
-  margin-bottom: 3em !important;
+.padding-t-two { padding-top: 2em !important; }
+
+.padding-y-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
 }
 */
