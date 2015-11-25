@@ -1,0 +1,71 @@
+/**
+ * Spacing
+ *
+ * Add margin/padding to a component or element with shorthand classes.
+ */
+
+$spacer: 1em !default;
+
+$properties: (
+  margin,
+  padding,
+);
+
+$multipliers: (
+  '-0': 0,
+  '': 1,
+  -md: 1.5,
+  -lg: 3,
+);
+
+$margins: (
+  a: '',
+  t: -top,
+  r: -right,
+  b: -bottom,
+  l: -left,
+  x: (-right, -left),
+  y: (-top, -bottom),
+);
+
+@each $property in $properties {
+  // Loop sizes.
+  @each $label, $multiple in $multipliers {
+    // Loop sides.
+    @each $identifier, $sides in $margins {
+      .#{$property}-#{$identifier}#{$label} {
+        @each $side in $sides {
+          margin#{$side}: $spacer * $multiple !important;
+        }
+      }
+    }
+  }
+}
+
+
+// Examples...
+/*
+.margin-a-0 { margin: 0em !important; }
+.margin-t-0 { margin-top: 0em !important; }
+.margin-r-0 { margin-right: 0em !important; }
+
+.margin-b { margin-bottom: 1em !important; }
+.margin-l { margin-left: 1em !important; }
+
+.margin-x-md {
+  margin-right: 1.5em !important;
+  margin-left: 1.5em !important;
+}
+.margin-y-md {
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+.padding-a-lg { margin: 3em !important; }
+.padding-t-lg { margin-top: 3em !important; }
+
+.padding-y-lg {
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
+}
+*/
