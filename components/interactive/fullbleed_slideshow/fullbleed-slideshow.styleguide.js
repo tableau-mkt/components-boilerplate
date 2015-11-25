@@ -1,5 +1,5 @@
 (function($){
-  var $vizSlideshow = $('.viz-slideshow__slides');
+  var $vizSlideshow = $('.fullbleed-slideshow');
 
   $(document).ready(function(){
     if ($vizSlideshow.length) {
@@ -10,9 +10,9 @@
         arrows: true,
         speed: 650,
         easing: "easeInOutQuart",
-        slide: '.viz-slideshow__slide',
-        prevArrow: $(this).find('.viz-slideshow__arrow--prev'),
-        nextArrow: $(this).find('.viz-slideshow__arrow--next'),
+        slide: '.large-teaser',
+        prevArrow: "<button class='fullbleed-slideshow__arrow fullbleed-slideshow__arrow--prev'><i class='icon icon--slideshow-prev'>Previous</i></button>",
+        nextArrow: "<button class='fullbleed-slideshow__arrow fullbleed-slideshow__arrow--next'><i class='icon icon--slideshow-next'>Next</i></button>",
         responsive: [
           {
             breakpoint: 940,
