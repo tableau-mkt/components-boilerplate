@@ -29,12 +29,13 @@ $heights: (
 
 .spacer {
   clear: both;
+  margin: 1em 0;
   padding: 0;
   border: 0;
 
   @each $height, $value in $heights {
     &.spacer--#{$height} {
-      margin: ($value/2) 0 ($value/2) 0;
+      margin: ($value/2) 0;
     }
   }
 }
