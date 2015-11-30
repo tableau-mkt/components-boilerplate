@@ -1,0 +1,38 @@
+/*
+Split Label
+
+A label split by a vertical divider.
+
+Markup: split_label.hbs
+
+Weight: 61
+
+.split-label - Split label.
+
+Styleguide: labels.split-label
+*/
+
+.split-label {
+  position: relative;
+
+  .split-label__left {
+    margin: 0;
+    padding: 0;
+  }
+
+  .split-label__right {
+    font-family: $text--merriweather-light;
+    margin-left: 1em;
+    padding: 0;
+
+    &:before {
+      content:" ";
+      margin: 0 -0.5em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: $accent-dividers;
+    }
+  }
+}
