@@ -38,22 +38,22 @@ Style guide: navigation.pager
     }
     
     &.pager__endcap--first a:before {
-      @extend .icon--triangle-left;
+      content: $icon--arrow-left;
       padding-right: 0.5em;
     }
 
     &.pager__endcap--previous a:before {
-      @extend .icon--triangle-left;
+      content: $icon--arrow-left;
       padding-right: 0.5em;
     }
 
     &.pager__endcap--next a:after {
-      @extend .icon--triangle-right:before;
+      content: $icon--arrow-right;
       padding-left: 0.5em;
     }
 
     &.pager__endcap--last a:after {
-      @extend .icon--triangle-right:before;
+      content: $icon--arrow-right;
       padding-left: 0.5em;
     }
   }
