@@ -17,27 +17,25 @@ Style Guide: teasers.summary-teaser
 */
 
 .summary-teaser {
+  background-color: $white;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: linear-gradient(to top, $white, transparent);
+  }
+
   @each $name, $colors in $background-colors {
-    background-color: $white;
+    &--#{"" + $name} {
+      background-color: nth($colors, 1);
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background-image: linear-gradient(to top, $white, transparent);
-    }
-
-    @each $name, $colors in $background-colors {
-      &--#{"" + $name} {
-        background-color: nth($colors, 1);
-
-        &:after {
-          background-image: linear-gradient(to top, nth($colors, 1), transparent);
-        }
+      &:after {
+        background-image: linear-gradient(to top, nth($colors, 1), transparent);
       }
     }
   }
