@@ -67,14 +67,6 @@ Style guide: compound.special-hero
       h1 {
         margin: 0;
       }
-
-      h4 + .special-hero__content-headline {
-        margin-top: .5em;
-      }
-
-      .special-hero__content__cta {
-        margin-top: 1em;
-      }
     }
   }
 
@@ -118,10 +110,6 @@ Style guide: compound.special-hero
 
     .special-hero__background-inner {
       padding-bottom: 50%;
-    }
-
-    .special-hero__content h1.heading--homepage br {
-      display: none;
     }
   }
 
