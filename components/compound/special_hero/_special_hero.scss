@@ -1,9 +1,9 @@
 /*
 Special Hero
 
-Heroes on need to accomplish two main tasks. First, they need to convey a
-specific story as simply and beautifully as they can in order to drive traffic.
-Secondly, they need to set the tone for the page they are setting up.
+Heroes need to accomplish two main tasks. First, they need to convey a specific
+story as simply and beautifully as they can in order to drive traffic. Secondly,
+they need to set the tone for the page they are setting up.
 
 Very simple type and imagery treatments can create different feels for pages
 that need to stand on their own.
@@ -28,7 +28,7 @@ Style guide: compound.special-hero
     line-height: 0;
   }
 
-  .special-hero__background .special-hero__background-inner {
+  .special-hero__background-inner {
     height: 0;
     padding-bottom: 33%;
     background-size: cover;
@@ -60,7 +60,7 @@ Style guide: compound.special-hero
       display: flex;
       align-items: center;
 
-      .special-hero__content__inner {
+      .special-hero__content-inner {
         width: 100%;
       }
 
@@ -68,7 +68,7 @@ Style guide: compound.special-hero
         margin: 0;
       }
 
-      h4 + .special-hero__content__headline {
+      h4 + .special-hero__content-headline {
         margin-top: .5em;
       }
 
@@ -116,7 +116,7 @@ Style guide: compound.special-hero
       display: block;
     }
 
-    .special-hero__background .special-hero__background-inner {
+    .special-hero__background-inner {
       padding-bottom: 50%;
     }
 

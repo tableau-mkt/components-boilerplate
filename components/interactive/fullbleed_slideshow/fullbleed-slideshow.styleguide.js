@@ -9,10 +9,10 @@
         slidesToShow: 1,
         arrows: true,
         speed: 650,
-        easing: "easeInOutQuart",
+        easing: 'easeInOutQuart',
         slide: '.large-teaser',
-        prevArrow: "<button class='fullbleed-slideshow__arrow fullbleed-slideshow__arrow--prev'><i class='icon icon--slideshow-prev'>Previous</i></button>",
-        nextArrow: "<button class='fullbleed-slideshow__arrow fullbleed-slideshow__arrow--next'><i class='icon icon--slideshow-next'>Next</i></button>",
+        prevArrow: '<button class="fullbleed-slideshow__arrow fullbleed-slideshow__arrow--prev"><i class="icon icon--slideshow-prev">Previous</i></button>',
+        nextArrow: '<button class="fullbleed-slideshow__arrow fullbleed-slideshow__arrow--next"><i class="icon icon--slideshow-next">Next</i></button>',
         responsive: [
           {
             breakpoint: 940,

@@ -1,14 +1,14 @@
-/** 
+/**
  * Flyout content utility
  */
 (function($){
-  
+
   $(document).ready(function(){
     var $triggers = $('.flyout__trigger'),
         $contents = $('.flyout__content'),
         animation = {
           duration: 1000,
-          easing: "easeInOutQuart"
+          easing: 'easeInOutQuart'
         };
 
     if ($triggers.length && $contents.length) {
@@ -79,7 +79,7 @@
         marginLeft: '+=100%',
       }, animation);
 
-      // Reset height of $parent to inherit in case of screen resizing that would 
+      // Reset height of $parent to inherit in case of screen resizing that would
       // need to adjust the height.
       setTimeout(function() {
         $parent.css('height', 'inherit');
@@ -90,7 +90,7 @@
     function setup() {
       // Add flyout-state data
       $contents.data('flyoutState', 'closed');
-      
+
       // Link content back to it's corresponding trigger
       $triggers.each(function(index, el) {
         var $target = $('#' + $(this).data('flyoutTarget'));
