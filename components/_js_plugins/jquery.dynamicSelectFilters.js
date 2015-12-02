@@ -29,7 +29,7 @@
   // Set plugin method name and defaults
   var pluginName = 'dynamicSelectFilters',
       defaults = {
-        // A DOM selector of the container to place the dyanmic <select> elements.
+        // A DOM selector of the container to place the dynamic <select> elements.
         // If not defined, one will be generated and placed before the first
         // option group found.
         container: false,
