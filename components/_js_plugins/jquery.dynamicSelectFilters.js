@@ -4,8 +4,8 @@
  * jQuery Dynamic Select Filters
  *
  * Given a set of input radio options, generate a corresponding select list per
- * option group and binds change events so that using the select performs the
- * triggers the original option inputs, which may now be hidden.
+ * option group and binds change events so that using the select triggers the
+ * original option inputs, which may now be hidden.
  *
  * The javascript init, with options thrown in:
  *
