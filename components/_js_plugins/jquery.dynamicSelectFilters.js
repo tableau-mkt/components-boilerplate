@@ -57,7 +57,7 @@
     Plugin.prototype.init = function () {
       var _options = this.options,
           $radioGroups = this._element,
-          $selectContainer = $(this.container);
+          $selectContainer = $(_options.container);
 
       if (!$radioGroups.length) {
         return;
