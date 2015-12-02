@@ -1,17 +1,41 @@
 {
+  "first": {
+    "label": "First",
+    "href": "#",
+    "first": true
+  },
+  "prev": {
+    "label": "Previous",
+    "href": "#",
+    "first": true
+  },
+  "next": {
+    "label": "Next",
+    "href": "#",
+    "last": false
+  },
+  "last": {
+    "label": "Last",
+    "href": "#",
+    "last": false
+  },
   "pages": [
     {
       "number": "1",
+      "href": "#",
       "current": true
     },
     {
-      "number": "2"
+      "number": "2",
+      "href": "#"
     },
     {
-      "number": "3"
+      "number": "3",
+      "href": "#"
     },
     {
-      "number": "4"
+      "number": "4",
+      "href": "#"
     }
   ]
 }

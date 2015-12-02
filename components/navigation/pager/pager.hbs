@@ -1,7 +1,28 @@
 <ul class="pager {{ modifier_class }}">
-  <li class="pager__endcap pager__endcap--previous pager__endcap--current"><a href="#">Prev</a></li>
+  {{#with first}}
+    <li class="pager__endcap pager__endcap--first{{#if first}} pager__endcap--current{{/if}}">
+      <a href="{{ href }}">{{ label }}</a>
+    </li>
+  {{/with}}
+  {{#with prev}}
+  <li class="pager__endcap pager__endcap--previous{{#if first}} pager__endcap--current{{/if}}">
+      <a href="{{ href }}">{{ label }}</a>
+  </li>
+  {{/with}}
+
   {{#each pages}}
-    <li class="pager__page{{#if current}} pager__page--current{{/if}}"><a href="#">{{ number }}</a></li>
+    <li class="pager__page{{#if current}} pager__page--current{{/if}}"><a href="{{ href }}">{{ number }}</a></li>
   {{/each}}
-  <li class="pager__endcap pager__endcap--next"><a href="#">Next</a></li>
+
+  {{#with next}}
+  <li class="pager__endcap pager__endcap--next{{#if last}} pager__endcap--current{{/if}}">
+      <a href="{{ href }}">{{ label }}</a>
+  </li>
+  {{/with}}
+
+  {{#with last}}
+  <li class="pager__endcap pager__endcap--last{{#if last}} pager__endcap--current{{/if}}">
+      <a href="{{ href }}">{{ label }}</a>
+  </li>
+  {{/with}}
 </ul>
