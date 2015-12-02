@@ -3,8 +3,8 @@
  *
  * Just for the styleguide.
  */
-(function($) {
-  $(window).load(function() {
+(function ($) {
+  $(document).ready(function () {
     $('.filter-set').dynamicSelectFilters({
       container: '.mobile-filter-set',
       groupHeading: '.filter-set__heading',
