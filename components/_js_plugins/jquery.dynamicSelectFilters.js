@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * jQuery Dynamic Filters
@@ -85,7 +85,7 @@
         // If given a groupHeading element, use it to create a placeholder-esque
         // option for the current <select>
         if (groupHeading.length) {
-          selectOptions = '<option class="select-placeholder" disabled selected>' + groupHeading.text().trim().replace(/\:$/, '') + '</option>'
+          selectOptions = '<option class="select-placeholder" disabled selected>' + groupHeading.text().trim().replace(/\:$/, '') + '</option>';
         }
 
         // Continue building out the select options using all the radio/checkbox inputs.
