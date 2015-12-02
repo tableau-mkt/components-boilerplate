@@ -1,0 +1,14 @@
+<div class="mobile-filter-set">
+
+</div>
+
+<div class="filter-set">
+  <span class="filter-set__heading">{{ heading }}</span>
+
+  {{#each inputs}}
+    <div class="form-field__wrapper">
+      <input class="form-field" type="radio" id="radio-{{id}}" name="filter_group" value="{{value}}" {{#if checked}}checked="checked"{{/if}}>
+      <label class="form-field__label" for="radio-{{id}}">{{label}}</label>
+    </div>
+  {{/each}}
+</div>
