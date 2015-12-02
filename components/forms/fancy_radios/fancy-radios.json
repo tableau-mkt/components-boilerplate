@@ -1,4 +1,5 @@
 {
+  "group": "fanciness",
   "inputs": [
     {
       "id" : "all",

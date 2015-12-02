@@ -7,7 +7,7 @@
 
   {{#each inputs}}
     <div class="form-field__wrapper">
-      <input class="form-field" type="radio" id="radio-{{id}}" name="filter_group" value="{{value}}" {{#if checked}}checked="checked"{{/if}}>
+      <input class="form-field" type="radio" id="radio-{{id}}" name="{{../group}}" value="{{value}}" {{#if checked}}checked{{/if}}>
       <label class="form-field__label" for="radio-{{id}}">{{label}}</label>
     </div>
   {{/each}}

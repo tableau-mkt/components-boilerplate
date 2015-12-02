@@ -15,6 +15,7 @@ Weight: 100
   .form-field__label {
     position: relative;
     cursor: pointer;
+    color: $text-light-body;
   }
 
   input[type="radio"],
@@ -23,6 +24,8 @@ Weight: 100
 
     &:checked + label,
     &:checked + .form-field__label {
+      color: $text-dark-body;
+
       // Utilize the pseudo element on the label for an active indicator.
       &:before {
         content: '';
