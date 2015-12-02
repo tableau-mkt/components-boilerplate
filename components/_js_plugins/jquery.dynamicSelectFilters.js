@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * jQuery Dynamic Filters
+ * jQuery Dynamic Select Filters
  *
- * Given a set of input radio options, generates a correpsonding select list per
- * option group and binds change events so that using the select performs the same
- * actions as using the original option inputs.
+ * Given a set of input radio options, generate a corresponding select list per
+ * option group and binds change events so that using the select performs the
+ * triggers the original option inputs, which may now be hidden.
  *
  * The javascript init, with options thrown in:
  *
@@ -16,6 +16,11 @@
     onCreateSelectCallback: function () {
       // 'this' is the jQuery wrapped select element, created per group set.
       this.wrap('<div class="form-field__wrapper"><div class="form__select"></div></div>');
+
+      // Perform additional event bindings as needed.
+      this.on('click.namespace', function myCoolEvent(e) {
+        doMyThings();
+      });
     }
   });
 
