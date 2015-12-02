@@ -73,7 +73,7 @@
         var $this = $(this),
             // Grouping label, generated as a disabled option within the select to
             // act as a label.
-            groupHeading = $this.find(_options.groupHeading);
+            groupHeading = $this.find(_options.groupHeading),
             $input = $this.find('input[type="radio"]'),
             $select = $('<select>'),
             selectOptions = '';
