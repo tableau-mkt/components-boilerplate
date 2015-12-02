@@ -1,6 +1,12 @@
 {
   "inputs": [
     {
+      "id" : "all",
+      "label": "All or things",
+      "value": "value-all",
+      "checked": true
+    },
+    {
       "id" : "one",
       "label": "Edward Maulis",
       "value": "value-1"
