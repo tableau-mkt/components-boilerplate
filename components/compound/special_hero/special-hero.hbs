@@ -1,0 +1,33 @@
+<div class="special-hero {{ modifier_class }}">
+  <div id="{{ heroId }}">
+    {{#if video}}
+      <div class="special-hero__video">
+        <video autoplay="" loop="">
+          <source src="{{ video }}" type="video/mp4">
+          <img src="{{ background }}">
+        </video>
+      </div>
+    {{/if}}
+
+    {{#if background}}
+      <div class="special-hero__background">
+        <div class="special-hero__background-inner" style="background-image: url({{ background }});">
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if content}}
+      <div class="special-hero__content">
+        <div class="special-hero__content-inner content-container">
+          {{{ content }}}
+        </div>
+      </div>
+    {{/if}}
+  </div>
+
+  {{#if revealContent}}
+    <div class="reveal__content" id="{{ revealId }}">
+      {{{ revealContent}}}
+    </div>
+  {{/if}}
+</div>

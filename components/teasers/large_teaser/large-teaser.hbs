@@ -1,0 +1,34 @@
+<div class="large-teaser">
+  {{#if thumbnail}}
+    <div class="large-teaser__thumbnail thumbnail">
+      <a href="{{ path }}">
+        <img src="{{ thumbnail }}"/>
+      </a>
+    </div>
+  {{/if}}
+
+  <div class="large-teaser__copy">
+    {{#if title}}
+      <div class="large-teaser__title">
+        <h4>
+          <a href="{{ path }}">{{ title }}</a>
+        </h4>
+      </div>
+    {{/if}}
+
+    <div class="large-teaser__description">
+      {{#if description}}
+        <p>{{ description }}</p>
+      {{/if}}
+
+      {{#with link}}
+        <p class="large-teaser__link">
+          <a href="{{ href }}" class="link {{ class }}">{{ text }}</a>
+          {{#if suffix}}
+            <span class="text--label"> {{ suffix }}</span>
+          {{/if}}
+        </p>
+      {{/with}}
+    </div>
+  </div>
+</div>

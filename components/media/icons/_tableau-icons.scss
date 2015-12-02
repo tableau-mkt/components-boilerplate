@@ -31,6 +31,8 @@ Markup: icon.hbs
 .icon--people - people icon
 .icon--search - search icon
 .icon--share - share icon
+.icon--slideshow-next - slideshow-next icon
+.icon--slideshow-prev - slideshow-prev icon
 .icon--tableau-logo - tableau-logo icon
 .icon--triangle-down - triangle-down icon
 .icon--triangle-left - triangle-left icon
@@ -43,10 +45,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-fb6afbf05482accef0f58c7892aec597.eot?fb6afbf05482accef0f58c7892aec597");
-  src:url("../fonts/tableau-icons-fb6afbf05482accef0f58c7892aec597.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-fb6afbf05482accef0f58c7892aec597.woff?fb6afbf05482accef0f58c7892aec597") format("woff"),
-		url("../fonts/tableau-icons-fb6afbf05482accef0f58c7892aec597.ttf?fb6afbf05482accef0f58c7892aec597") format("truetype");
+  src:url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.eot?408d7ddb7ab204e8a28cd0e65c18fce5");
+  src:url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.woff?408d7ddb7ab204e8a28cd0e65c18fce5") format("woff"),
+		url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.ttf?408d7ddb7ab204e8a28cd0e65c18fce5") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -184,31 +186,43 @@ $icon--search: "\f111";
 $icon--share: "\f112";
 
 
-.icon--tableau-logo:before {
+.icon--slideshow-next:before {
   content:"\f113";
 }
-$icon--tableau-logo: "\f113";
+$icon--slideshow-next: "\f113";
+
+
+.icon--slideshow-prev:before {
+  content:"\f114";
+}
+$icon--slideshow-prev: "\f114";
+
+
+.icon--tableau-logo:before {
+  content:"\f115";
+}
+$icon--tableau-logo: "\f115";
 
 
 .icon--triangle-down:before {
-  content:"\f114";
+  content:"\f116";
 }
-$icon--triangle-down: "\f114";
+$icon--triangle-down: "\f116";
 
 
 .icon--triangle-left:before {
-  content:"\f115";
+  content:"\f117";
 }
-$icon--triangle-left: "\f115";
+$icon--triangle-left: "\f117";
 
 
 .icon--triangle-right:before {
-  content:"\f116";
+  content:"\f118";
 }
-$icon--triangle-right: "\f116";
+$icon--triangle-right: "\f118";
 
 
 .icon--triangle-up:before {
-  content:"\f117";
+  content:"\f119";
 }
-$icon--triangle-up: "\f117";
+$icon--triangle-up: "\f119";

@@ -5,10 +5,13 @@ Display special messages to the user. Recommend putting multiple messages in `<l
 
 Markup: messages.hbs
 
-.messages--error
-.messages--warning
+Weight: 10
 
-Weight: 30
+Nodefault: true
+
+.messages--notice - Notice message (Default)
+.messages--error - Error message
+.messages--warning - Warning Message
 
 Style guide: compound.messages
 */
