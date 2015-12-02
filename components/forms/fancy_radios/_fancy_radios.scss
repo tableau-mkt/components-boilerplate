@@ -18,7 +18,7 @@ Weight: 100
   }
 
   input[type="radio"],
-  .form-field {
+  .fancy-radios__radio {
     display: none;
 
     &:checked + label,
