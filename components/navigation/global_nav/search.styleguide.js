@@ -1,4 +1,4 @@
-/** 
+/**
  * Global search bar interaction
  */
 (function($){
@@ -30,7 +30,7 @@
       e.preventDefault();
       $search.parents('.global-nav__top').removeClass('global-nav--search-shown');
     });
-    
+
     // Search auto-complete for demo purposes. Requires jQuery UI Autocomplete
     // @todo add support for highlighting the searched characters in the list
     //    http://stackoverflow.com/questions/2435964/jqueryui-how-can-i-custom-format-the-autocomplete-plug-in-results
