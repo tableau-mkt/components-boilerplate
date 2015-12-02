@@ -78,6 +78,7 @@
           // act as a label.
           groupHeading = $this.find(_options.groupHeading),
           $input = $this.find('input[type="radio"]'),
+          $label = $this.find('label'),
           $select = $('<select>'),
           selectOptions = '';
 
@@ -93,11 +94,18 @@
 
       // Continue building out the select options using all the radio/checkbox inputs.
       $input.each(function buildSelectOptions() {
-        var $label = $(this).next('label'),
-            triggerElement = $(this).attr('id').trim();
+        var $this = $(this),
+            $label = $this.next('label'),
+            triggerElement = '#' + $this.attr('id').trim(),
+            isSelected = ($this.is(':checked')) ? 'selected' : '';
 
         // Let the option value be the input element to trigger, by DOM id.
-        selectOptions += '<option value="#' + triggerElement + '">' + $label.text() + '</option>';
+        selectOptions += '<option value="' + triggerElement + '" ' + isSelected + '>' + $label.text() + '</option>';
+
+        // Sync the select state when the option input is used.
+        $this.on('change.dynamicfilter', function twoWayValueBind() {
+          $select.find('option[value="' + triggerElement + '"]').prop('selected', true);
+        });
       });
 
       // Flesh out the select, and enact bindings.
