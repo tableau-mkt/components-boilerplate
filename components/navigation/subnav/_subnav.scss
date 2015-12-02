@@ -2,7 +2,7 @@
 Subnavigation
 
 A secondary navigation which sticks to the top of the page when scrolling and is
-used to navigate to anchors on the same page. Useful when a page is rather long 
+used to navigate to anchors on the same page. Useful when a page is rather long
 and broken up into distinct sections.
 
 Markup: subnav.hbs
@@ -19,8 +19,7 @@ Style guide: navigation.subnav
   }
 
   .subnav__title,
-  .subnav__links,
-  .subnav__cta {
+  .subnav__links {
     float: left;
   }
 
@@ -47,10 +46,10 @@ Style guide: navigation.subnav
   .subnav__links {
     margin: 0.8em 0 0 2em;
     padding: 0;
-    
+
     li {
       padding: 0 10px;
-      
+
       a {
         position: relative;
         padding: 2px;
@@ -76,7 +75,7 @@ Style guide: navigation.subnav
     .subnav__links {
       margin: 0.8em 0 0 1em;
       padding: 0;
-      
+
       li {
         padding: 0 6px;
       }
