@@ -9,7 +9,7 @@
         </div>
       {{/with}}
 
-      <div class="global-nav__mobile-wrapper tablet-hide">
+      <div class="global-nav__mobile-wrapper">
         <nav class="global-nav__primary-menu">
           {{#with primary}}
             <ul>
@@ -34,7 +34,7 @@
           {{/with}}
         </nav>
 
-        <div class="global-nav__search tablet-hide">
+        <div class="global-nav__search">
           <input type="search" placeholder="Search" name="q" autocomplete="off">
           <a href="#" class="global-nav__search__close"></a>
           <div id="predictive-container">
@@ -43,7 +43,7 @@
         </div>
       </div>
 
-      <div class="global-nav__hamburger tablet-show">
+      <div class="global-nav__hamburger">
         {{> hamburger }}
       </div>
     </div>
@@ -52,7 +52,7 @@
   <div class="global-nav__drawers">
     {{#each drawers}}
       <div class="global-nav__drawers__drawer" id="{{ drawerId }}">
-        <div class="global-nav__drawers__drawer__controls desktop-hide">
+        <div class="global-nav__drawers__drawer__controls">
           <span>
             <a class="link link--arrow-left global-nav__drawers__drawer__close" href="#">Back</a>
           </span>

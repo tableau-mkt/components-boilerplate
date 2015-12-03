@@ -79,7 +79,7 @@ Style guide: navigation.global
               border-right: 20px solid transparent;
               border-bottom: 20px solid $bg-light-gray-2;
               pointer-events: none;
-              transition: opacity 100ms linear;
+              transition: opacity 250ms linear;
             }
 
             &.is-open {
@@ -87,6 +87,7 @@ Style guide: navigation.global
 
               &:after {
                 opacity: 1;
+                transition: opacity 150ms linear;
               }
             }
           }
@@ -115,6 +116,7 @@ Style guide: navigation.global
     // Global Search Bar Styles
     .global-nav__search {
       position: absolute;
+      z-index: $zindex-nav + 1;
       right: 0;
       width: 45px;
       height: 100%;
@@ -178,6 +180,10 @@ Style guide: navigation.global
         right: 0;
         transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
       }
+    }
+
+    .global-nav__hamburger {
+      display: none;
     }
   }
 
@@ -326,6 +332,10 @@ Style guide: navigation.global
     width: 100%;
     background: $bg-light-gray-2;
 
+    .global-nav__drawers__drawer__controls {
+      display: none;
+    }
+
     .global-nav__drawers__drawer {
       // display: none;
       position: absolute;
@@ -410,6 +420,11 @@ Style guide: navigation.global
 }
 
 @include breakpoint($tablet-max) {
+  .global-nav__mobile-wrapper,
+  .global-nav__search {
+    display: none;
+  }
+
   .global-nav__drawers {
     position: absolute;
     width: 100%;
@@ -421,6 +436,7 @@ Style guide: navigation.global
       margin-left: 100%;
       position: relative;
       z-index: 15;
+      background: $bg-light-gray-2;
 
     }
 
@@ -431,6 +447,7 @@ Style guide: navigation.global
     .global-nav__drawers__drawer__controls {
       padding:1em 2em 0;
     }
+
     .global-nav__drawer__primary,
     .global-nav__drawer__secondary {
       padding: 2em;
