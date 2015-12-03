@@ -8,7 +8,7 @@
           </a>
         </div>
       {{/with}}
-      
+
       <div class="global-nav__mobile-wrapper tablet-hide">
         <nav class="global-nav__primary-menu">
           {{#with primary}}
@@ -42,16 +42,16 @@
           </div>
         </div>
       </div>
-      
+
       <div class="global-nav__hamburger tablet-show">
         {{> hamburger }}
       </div>
     </div>
   </div>
-  
+
   <div class="global-nav__drawers">
     {{#each drawers}}
-      <div class="global-nav__drawers__drawer bg--light-gray-2" id="{{ drawerId }}">
+      <div class="global-nav__drawers__drawer" id="{{ drawerId }}">
         <div class="global-nav__drawers__drawer__controls desktop-hide">
           <span>
             <a class="link link--arrow-left global-nav__drawers__drawer__close" href="#">Back</a>
@@ -63,13 +63,13 @@
         <div class="global-nav__drawer__inner content-container content-container--wide">
           <div class="global-nav__drawer__primary {{#if secondaryItems}}grid--8{{/if}}">
             {{#each primaryItems}}
-              <div class="sub-nav__item {{ classes }}">  
+              <div class="sub-nav__item {{ classes }}">
                 {{#with title}}
                   <h3 class="sub-nav__item__title {{ classes }}">
                     <a href="{{ ../url }}" class="text--{{ color  }}">{{ text }}</a>
                   </h3>
                 {{/with}}
-                
+
                 {{#if description }}
                   <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
                 {{/if}}
@@ -87,7 +87,7 @@
           </div>
 
           {{#with secondaryItems}}
-          <div class="global-nav__drawer__secondary grid--4 grid--last bg--nav-drawer-gray-2 padded-box padded-bg--three">           
+          <div class="global-nav__drawer__secondary">
             {{#if title }}
               <h3 class="text--label">{{ title }}</h3>
             {{/if}}

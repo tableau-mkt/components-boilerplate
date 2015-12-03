@@ -4,30 +4,22 @@ Global Navigation
 The global navigation bar that sits at the top of each page. Contains primary,
 secondary, and sub navigation as well as the global search bar.
 
-**NOTE: The global nav and footer are not yet ready for consumption. We will be
-updating interactions and providing more details on how to implement these
-components very soon in an upcoming release**
-
 Markup: global-nav.hbs
 
 Style guide: navigation.global
 */
 
-.global-nav {
-
-}
-
 .global-nav__top {
   position: relative;
   height: 100px;
   padding: em(28px) 0;
-  background: #fff;
+  background: $bg-white;
 
   .global-nav__logo {
     max-width: 200px;
     float: left;
 
-    @include breakpoint(max-width 1300px) {
+    @include breakpoint(max-width $content-max) {
       max-width: 140px;
       margin-top: 6px;
     }
@@ -51,7 +43,6 @@ Style guide: navigation.global
       float: right;
     }
 
-
     .global-nav__primary-menu {
       @extend .text--body-small;
 
@@ -62,38 +53,44 @@ Style guide: navigation.global
 
         li {
           display: inline-block;
+          // Remove the spacing between items due to letter spacing.
+          margin-right: -4px;
+
+          a {
+            position: relative;
+            padding: 10px 12px;
+            color: $text-nav-items;
+            font-family: $text--benton-book;
+
+            @include breakpoint(max-width $content-max) {
+              padding: 10px 8px;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              opacity: 0;
+              width: 0;
+              height: 0;
+              top: 47px;
+              left: 50%;
+              margin-left: -20px;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-bottom: 20px solid $bg-light-gray-2;
+              pointer-events: none;
+              transition: opacity 100ms linear;
+            }
+
+            &.is-open {
+              padding-bottom: 40px;
+
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
         }
-      }
-
-      li a {
-        position: relative;
-        padding: 10px;
-        color: $text-nav-items;
-        font-family: $text--benton-book;
-
-        @include breakpoint(max-width 1300px) {
-          padding: 10px 8px;
-        }
-      }
-
-      li a.expandable:after {
-        content: "";
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-        top: 47px;
-        left: 50%;
-        margin-left: -20px;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 20px solid $bg-light-gray-2;
-        pointer-events: none;
-        transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
-      }
-
-      li a.expanded:after {
-        opacity: 1;
       }
     }
 
@@ -324,13 +321,27 @@ Style guide: navigation.global
 
 @include breakpoint($desktop-only) {
   .global-nav__drawers {
-    position: absolute;
-    overflow: hidden;
+    position: relative;
     z-index: $zindex-nav;
     width: 100%;
+    background: $bg-light-gray-2;
 
     .global-nav__drawers__drawer {
-      display: none;
+      // display: none;
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      background: $bg-light-gray-2;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 250ms linear, opacity 250ms linear;
+
+      &.is-open {
+        visibility: visible;
+        opacity: 1;
+        z-index: $zindex-nav + 1;
+        transition: visibility 150ms linear, opacity 150ms linear;
+      }
     }
 
     .global-nav__drawer__inner {
@@ -363,7 +374,10 @@ Style guide: navigation.global
     }
 
     .global-nav__drawer__secondary {
+      @include span(last 4);
       position: relative;
+      padding: 2em;
+      background: $nav-drawer-gray-2;
 
       &:after {
         content: "";
