@@ -14,8 +14,6 @@ Style guide: lists.cross-reference-1
   @include breakpoint($tablet-min) {
     @include span(10);
     @include pre(1);
-    display: flex;
-    align-items: center;
 
     .cross-reference-1__image,
     .cross-reference-1__copy {
@@ -28,7 +26,7 @@ Style guide: lists.cross-reference-1
       line-height: 0;
       text-align: right;
     }
-    
+
     .cross-reference-1__copy {
       margin-left: 140px;
       padding-left: gutter();
@@ -59,10 +57,6 @@ Style guide: lists.cross-reference-2
 
 .cross-reference-2 {
   @include breakpoint($desktop-only) {
-    .cross-reference-2__item {
-      display: flex;
-      align-items: center;
-    }
 
     .cross-reference-2__image,
     .cross-reference-2__copy {
@@ -75,7 +69,7 @@ Style guide: lists.cross-reference-2
       line-height: 0;
       text-align: right;
     }
-    
+
     .cross-reference-2__copy {
       margin-left: 140px;
       padding-left: gutter() * 2;
@@ -140,7 +134,7 @@ Style guide: lists.cross-reference-3
         margin-left: -25px;
       }
     }
-   
+
     .cross-reference-3__title,
     .cross-reference-3__items {
       width: 100%;
