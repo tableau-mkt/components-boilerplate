@@ -1,7 +1,7 @@
-/** 
+/**
  * Content Reveal utility
  *
- * Set a wrapper around content as a revealable region. Assign a "trigger" 
+ * Set a wrapper around content as a revealable region. Assign a "trigger"
  * element as the toggle to expand and collapse the content region.
  *
  * Options:
@@ -15,7 +15,7 @@
  *    triggers: $('.triggers-selector')
  *  });
  *
- * @TODO: Can still use some cleanup and work to be a more agnostic plugin 
+ * @TODO: Can still use some cleanup and work to be a more agnostic plugin
  */
 
 (function ( $ ) {
@@ -70,11 +70,11 @@
       if (hideText != "") {
         $trigger.text(hideText);
       }
-      
+
       // Video players break when we display none so using a custom reimplementation
       // of slideDown. See helpers.js.
       $target.slideHeight('down', customAnimation);
-      
+
       $curtain.slideUp(customAnimation);
 
       if (media == "video") {
@@ -100,9 +100,9 @@
           media = data.revealMedia;
 
       $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
-      
+
       $target.slideHeight('up', settings.animation);
-      
+
       $curtain.slideDown(settings.animation);
 
       if (media == "video") {
@@ -115,11 +115,11 @@
     function setup() {
       // Add reveal-state data
       settings.triggers.data('revealState', 'closed');
-      
+
       settings.triggers.each(function(index, el) {
         var $target = $('#' + $(this).data('revealTarget')),
             showText = $(this).text();
-        
+
         // Link content back to it's corresponding trigger
         $target.data('revealTrigger', $(this));
 
@@ -128,8 +128,8 @@
       });
 
       // // Set initial margin on content if there is a curtain
-      // // @TODO this is for naimating the reveal as if the content is 
-      // // stationary and the elements above and below are revealing it. 
+      // // @TODO this is for naimating the reveal as if the content is
+      // // stationary and the elements above and below are revealing it.
       // // Currently, the content moves up as the curtain slides up.
       // settings.contents.each(function(index, el) {
       //   var data = $($(this).data('revealTrigger')).data(),
