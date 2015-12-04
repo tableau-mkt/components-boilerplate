@@ -39,18 +39,18 @@ Style Guide: compound.quote
       background: $text-light-body;
     }
 
-    .quote__byline__title {
+    .quote__byline-detail {
       color: $text-medium-body;
     }
   }
 
   &.quote--light {
     .quote__byline {
-      .quote__byline__name {
+      .quote__byline-name {
         color: $text-negative;
       }
 
-      .quote__byline__title {
+      .quote__byline-detail {
         color: $text-light-body;
       }
 
