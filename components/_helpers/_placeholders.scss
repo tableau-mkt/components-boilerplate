@@ -127,3 +127,11 @@
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+// Set an element to an initially hidden state but to be revealed later.
+// @see _reveal.scss, jquery.contentReveal.js
+%reveal-hidden {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
