@@ -9,7 +9,7 @@
     "items": [
       {
         "link": {
-          "href": "#",
+          "href": "/products",
           "text": "Products",
           "class": "expandable",
           "drawerId": "products"
@@ -17,7 +17,7 @@
       },
       {
         "link": {
-          "href": "#",
+          "href": "/stories",
           "text": "Stories",
           "class": "expandable",
           "drawerId": "stories"
@@ -25,7 +25,7 @@
       },
       {
         "link": {
-          "href": "#",
+          "href": "/learn",
           "text": "Learning",
           "class": "expandable",
           "drawerId": "learning"
@@ -33,7 +33,7 @@
       },
       {
         "link": {
-          "href": "#",
+          "href": "/community",
           "text": "Community",
           "class": "expandable",
           "drawerId": "community"
@@ -41,7 +41,7 @@
       },
       {
         "link": {
-          "href": "#",
+          "href": "/support",
           "text": "Support",
           "class": "expandable",
           "drawerId": "support"
@@ -49,7 +49,7 @@
       },
       {
         "link": {
-          "href": "#",
+          "href": "/about",
           "text": "About",
           "class": "expandable",
           "drawerId": "about"
@@ -91,7 +91,7 @@
       }
     ]
   },
-  
+
   "drawers": [
     {
       "drawerId": "products",
@@ -104,7 +104,7 @@
             "color": "desktop"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/products/desktop",
           "description": "Business analytics anyone can use.",
           "linkText": "Learn More"
         },
@@ -116,7 +116,7 @@
             "color": "server"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/products/server",
           "description": "Rapid-fire business intelligence, today.",
           "linkText": "Learn More"
         },
@@ -128,7 +128,7 @@
             "color": "online"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/products/online",
           "description": "The power of Tableau, in the cloud.",
           "linkText": "Learn More"
         }
@@ -140,17 +140,22 @@
           {
             "title": "Tableau Mobile",
             "description": "Tableau straight from your phone.",
-            "url": "#"
+            "url": "/products/mobile"
           },
           {
             "title": "Tableau Public",
             "description": "Publish interactive data online.",
-            "url": "#"
+            "url": "/produtcs/public"
           },
           {
             "title": "Tableau Reader",
             "description": "Read saved files from Tableau Desktop.",
-            "url": "#"
+            "url": "/products/reader"
+          },
+          {
+            "title": "Vizable",
+            "description": "[VIZABLE DESCRIPTION]",
+            "url": "/products/vizable"
           }
         ]
       }
@@ -165,7 +170,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/stories/industries",
           "description": "Visually analyze your data in a way that makes sense for your industry",
           "linkText": "Learn More"
         },
@@ -176,7 +181,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/stories/activities",
           "description": "Discover the most frequently used capabilities resulting in fast data insights.",
           "linkText": "Learn More"
         },
@@ -187,7 +192,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/stories/technology",
           "description": "Analyze nearly any data source live or with Tableau's Data Engine",
           "linkText": "Learn More"
         }
@@ -199,7 +204,7 @@
             "title": "Tableau Viz Gallery",
             "thumbnail": "http://www.placecage.com/270/150",
             "description": "Explore a wide range of visualizations to see what's possible in Tableau",
-            "url": "#"
+            "url": "/stories/galleru"
           }
         ]
       }
@@ -310,12 +315,12 @@
           {
             "title": "Free Webinars",
             "description": "One hour online learning sessions scheduled with an instructor.",
-            "url": "#"
+            "url": "/learn/webinars"
           },
           {
             "title": "Paid Classroom Training",
             "description": "Intensive multi-day courses offered at a location of your choice arond the world.",
-            "url": "#"
+            "url": "/learn/classroom"
           }
         ]
       }
@@ -330,7 +335,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--3",
-          "url": "#",
+          "url": "http://community.tableau.com/community/forums",
           "description": "Explore and contribute to the newest, most active, and engaging threads now.",
           "linkText": "Learn More"
         },
@@ -341,7 +346,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--3",
-          "url": "#",
+          "url": "http://community.tableau.com/community/ideas",
           "description": "Vote on Tableau's Community best ideas and add your own to the mix.",
           "linkText": "Learn More"
         },
@@ -352,7 +357,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--3",
-          "url": "#",
+          "url": "http://community.tableau.com/community/groups",
           "description": "Connect with Tableau users who are in your area and share your interests and expertise.",
           "linkText": "Learn More"
         },
@@ -363,7 +368,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--3",
-          "url": "#",
+          "url": "/events",
           "description": "With Tableay events across the globe, find an upcoming in-person event near you.",
           "linkText": "Learn More"
         }
@@ -412,15 +417,15 @@
         "items": [
           {
             "title": "Drivers & Activation",
-            "url": "#"
+            "url": "/support/drivers"
           },
           {
             "title": "Knowledge Base",
-            "url": "#"
+            "url": "http://kb.tableau.com/?lang=en-us"
           },
           {
             "title": "Quick Start Guides",
-            "url": "#"
+            "url": "/support/manuals/quickstart"
           }
         ]
       }
@@ -435,7 +440,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/about/mission",
           "description": "See how we got here and where we're going to.",
           "linkText": "Learn More"
         },
@@ -446,7 +451,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/about/leadership",
           "description": "Learn about Tableau's world-class leadership team.",
           "linkText": "Learn More"
         },
@@ -457,7 +462,7 @@
             "classes": "heading-highlight heading--small"
           },
           "classes": "grid--4",
-          "url": "#",
+          "url": "/about/press",
           "description": "Keep up to date with the latest Tableau news.",
           "linkText": "Learn More"
         }
@@ -469,17 +474,17 @@
           {
             "title": "Investors",
             "description": "Learn about the latest investor news and events.",
-            "url": "#"
+            "url": "http://investors.tableau.com/"
           },
           {
             "title": "Careers",
             "description": "Check out our jobs and the benefits of working at Tableau",
-            "url": "#"
+            "url": "http://careers.tableau.com/"
           },
           {
             "title": "Contact us",
             "description": "Get in touch.",
-            "url": "#"
+            "url": "/about/contact"
           }
         ]
       }

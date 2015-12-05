@@ -4,7 +4,7 @@
 (function($){
   $(document).ready(function(){
     var $search = $('.global-nav__search'),
-        $closeSearch = $search.find('.global-nav__search__close');
+        $closeSearch = $search.find('.global-nav__search-close');
 
     $search.on('click', function(e){
       e.preventDefault();

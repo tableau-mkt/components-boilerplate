@@ -168,7 +168,7 @@ Style guide: navigation.global
         }
       }
 
-      .global-nav__search__close {
+      .global-nav__search-close {
         position: absolute;
         opacity: 0;
         width: 0;
@@ -199,7 +199,7 @@ Style guide: navigation.global
         cursor: inherit;
       }
 
-      .global-nav__search__close {
+      .global-nav__search-close {
         opacity: 1;
         width: 45px;
         height: 45px;
@@ -332,11 +332,11 @@ Style guide: navigation.global
     width: 100%;
     background: $bg-light-gray-2;
 
-    .global-nav__drawers__drawer__controls {
+    .global-nav__drawer-controls {
       display: none;
     }
 
-    .global-nav__drawers__drawer {
+    .global-nav__drawer {
       // display: none;
       position: absolute;
       overflow: hidden;
@@ -354,26 +354,27 @@ Style guide: navigation.global
       }
     }
 
-    .global-nav__drawer__inner {
+    .global-nav__drawer-inner {
       display: flex;
       align-items: center;
     }
 
-    .global-nav__drawer__inner,
-    .global-nav__drawer__secondary {
+    .global-nav__drawer-inner,
+    .global-nav__drawer-secondary {
       min-height: 275px;
+      box-sizing: border-box;
     }
 
-    .sub-nav__item__description,
-    .global-nav__drawer__link-list {
+    .sub-nav__item-description,
+    .global-nav__drawer-link-list {
       @extend .text--body-small;
     }
 
-    .sub-nav__item__link {
+    .sub-nav__item-link {
       margin-bottom: 0;
     }
 
-    .global-nav__drawer__link-list ul {
+    .global-nav__drawer-link-list ul {
       // @TODO provide support for IE <10 - https://github.com/BetleyWhitehorne/CSS3MultiColumn
       -webkit-column-count: 3;
       -moz-column-count:    3;
@@ -383,8 +384,8 @@ Style guide: navigation.global
       column-gap:           4em;
     }
 
-    .global-nav__drawer__secondary {
-      @include span(last 4);
+    .global-nav__drawer-secondary {
+      @include span(4 last);
       position: relative;
       padding: 2em;
       background: $nav-drawer-gray-2;
@@ -406,8 +407,8 @@ Style guide: navigation.global
         position: relative;
       }
 
-      .sub-nav__item__title,
-      .sub-nav__item__description {
+      .sub-nav__item-title,
+      .sub-nav__item-description {
         margin: 0;
         line-height: 1.5;
       }
@@ -430,7 +431,7 @@ Style guide: navigation.global
     width: 100%;
     overflow: hidden;
 
-    .global-nav__drawers__drawer {
+    .global-nav__drawer {
       display: none;
       width: 100%;
       margin-left: 100%;
@@ -444,21 +445,21 @@ Style guide: navigation.global
       padding: 0;
     }
 
-    .global-nav__drawers__drawer__controls {
+    .global-nav__drawer-controls {
       padding:1em 2em 0;
     }
 
-    .global-nav__drawer__primary,
-    .global-nav__drawer__secondary {
+    .global-nav__drawer-primary,
+    .global-nav__drawer-secondary {
       padding: 2em;
     }
 
-    .global-nav__drawer__primary {
+    .global-nav__drawer-primary {
       padding-top: 1em;
     }
 
-    .global-nav__drawer__primary,
-    .global-nav__drawer__secondary,
+    .global-nav__drawer-primary,
+    .global-nav__drawer-secondary,
     .sub-nav__item {
       width: auto;
       float: none;
@@ -474,7 +475,7 @@ Style guide: navigation.global
         border-bottom: 0;
       }
 
-      .sub-nav__item__title {
+      .sub-nav__item-title {
         margin: .5em 0;
         padding: 0;
 
@@ -484,7 +485,7 @@ Style guide: navigation.global
       }
     }
 
-    .global-nav__drawer__secondary .sub-nav__item {
+    .global-nav__drawer-secondary .sub-nav__item {
       border-bottom-color: $text-light-body;
     }
 
@@ -493,16 +494,16 @@ Style guide: navigation.global
 
 @include breakpoint($tablet-only) {
   .global-nav__drawers .sub-nav__item {
-    .sub-nav__item__title {
+    .sub-nav__item-title {
       display: inline-block;
       width: 250px;
     }
 
-    .sub-nav__item__description {
+    .sub-nav__item-description {
       display: inline-block;
     }
 
-    .global-nav__drawer__link-list ul {
+    .global-nav__drawer-link-list ul {
       -webkit-column-count: 2;
       -moz-column-count:    2;
       column-count:         2;

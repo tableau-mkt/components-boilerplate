@@ -2,7 +2,7 @@
 
 .global-nav__top  .global-nav__search {
   h2.element-invisible {
-    display: none;
+    width: 0;
   }
 
   input[type='search'] {

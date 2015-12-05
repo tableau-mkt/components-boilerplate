@@ -16,13 +16,13 @@
     var $globalNav = $('.global-nav__top'),
       $menu = $globalNav.find('.global-nav__primary-menu'),
       $expandableLinks = $menu.find('li a.expandable'),
-      $drawers = $('.global-nav__drawers__drawer'),
+      $drawers = $('.global-nav__drawer'),
       $hamburger = $globalNav.find('.hamburger'),
       $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
-      $mobileDrawerClose = $('.global-nav__drawers__drawer__close'),
+      $mobileDrawerClose = $('.global-nav__drawer-close'),
       animation = {
         duration: 150,
-        easing: "linear"
+        easing: 'linear'
       };
     /* Desktop stuff */
     if (matchMedia('(min-width: 961px)').matches) {
@@ -33,6 +33,9 @@
             $drawer = $drawers.filter('#' + $link.data('drawer-id')),
             $both = $link.add($drawer);
 
+        // Handling for hover interaction of drawers. Uses the doTimeout jquery
+        // utility to handle throttling and waiting on a small delay before
+        // showing the drawer (essentially hoverintent)
         $both.hover(function () {
           $both.doTimeout( 'open', 200, function() {
             $both.addClass('is-open');
@@ -74,7 +77,7 @@
     }
 
     $mobileDrawerClose.on('click.nav', function(e) {
-      var $drawer = $(this).closest('.global-nav__drawers__drawer');
+      var $drawer = $(this).closest('.global-nav__drawer');
 
       closeDrawerMobile($drawer);
 

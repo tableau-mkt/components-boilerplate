@@ -36,7 +36,7 @@
 
         <div class="global-nav__search">
           <input type="search" placeholder="Search" name="q" autocomplete="off">
-          <a href="#" class="global-nav__search__close"></a>
+          <a href="#" class="global-nav__search-close"></a>
           <div id="predictive-container">
             <ul id="predictive-terms"></ul>
           </div>
@@ -51,35 +51,35 @@
 
   <div class="global-nav__drawers">
     {{#each drawers}}
-      <div class="global-nav__drawers__drawer" id="{{ drawerId }}">
-        <div class="global-nav__drawers__drawer__controls">
+      <div class="global-nav__drawer" id="{{ drawerId }}">
+        <div class="global-nav__drawer-controls">
           <span>
-            <a class="link link--arrow-left global-nav__drawers__drawer__close" href="#">Back</a>
+            <a class="link link--arrow-left global-nav__drawer-close" href="#">Back</a>
           </span>
           <span class="float-right">
             <a class="link" href="/{{ drawerId }}">View All</a>
           </span>
         </div>
-        <div class="global-nav__drawer__inner content-container content-container--wide">
-          <div class="global-nav__drawer__primary {{#if secondaryItems}}grid--8{{/if}}">
+        <div class="global-nav__drawer-inner content-container content-container--wide">
+          <div class="global-nav__drawer-primary {{#if secondaryItems}}grid--8{{/if}}">
             {{#each primaryItems}}
               <div class="sub-nav__item {{ classes }}">
                 {{#with title}}
-                  <h3 class="sub-nav__item__title {{ classes }}">
+                  <h3 class="sub-nav__item-title {{ classes }}">
                     <a href="{{ ../url }}" class="text--{{ color  }}">{{ text }}</a>
                   </h3>
                 {{/with}}
 
                 {{#if description }}
-                  <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
+                  <p class="sub-nav__item-description mobile-hide">{{ description }}</p>
                 {{/if}}
 
                 {{#if items}}
-                  <div class="global-nav__drawer__link-list">
+                  <div class="global-nav__drawer-link-list">
                     {{> link-list}}
                   </div>
                 {{/if}}
-                <p class="sub-nav__item__link tablet-hide">
+                <p class="sub-nav__item-link tablet-hide">
                   <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
                 </p>
               </div>
@@ -87,7 +87,7 @@
           </div>
 
           {{#with secondaryItems}}
-          <div class="global-nav__drawer__secondary">
+          <div class="global-nav__drawer-secondary">
             {{#if title }}
               <h3 class="text--label">{{ title }}</h3>
             {{/if}}
@@ -101,10 +101,10 @@
                       </a>
                     </div>
                   {{/if}}
-                  <h5 class="sub-nav__item__title text--dropdown text--bold">
+                  <h5 class="sub-nav__item-title text--dropdown text--bold">
                     <a class="text--dark-body" href="{{ url }}">{{ title }}</a>
                   </h5>
-                  <p class="sub-nav__item__description mobile-hide">{{ description }}</p>
+                  <p class="sub-nav__item-description mobile-hide">{{ description }}</p>
                 </li>
               {{/each}}
             </ul>
