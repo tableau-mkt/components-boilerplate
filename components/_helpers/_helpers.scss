@@ -123,6 +123,11 @@ most common proportions for video players.
   display: none;
 }
 
+// Set an element to an initially hidden state but to be revealed later.
+.reveal-hidden {
+  @extend %reveal-hidden;
+}
+
 // Apply styles for a background image to cover the container
 .bg-cover {
   background-size: cover;
