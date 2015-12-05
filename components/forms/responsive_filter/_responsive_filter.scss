@@ -1,0 +1,15 @@
+/*
+Responsive Filters
+
+Given sets of filter options as checkboxes or radio buttons, generate dynamic
+mobile equivalents wrapped into a select elements and bind the same filtering
+behavior to them. The example below is shown by default, but in practice, the
+filters could be hidden by adding specific classes / media query controls, such
+as <code>.desktop-hide</code>
+
+Markup: responsive-filter.hbs
+
+Style Guide: forms.responsive-filter
+
+Weight: 100
+*/
