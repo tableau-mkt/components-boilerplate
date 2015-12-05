@@ -1,4 +1,4 @@
-/** 
+/**
  * Global gavigation interactions
  */
 (function($){
@@ -16,49 +16,48 @@
     var $globalNav = $('.global-nav__top'),
       $menu = $globalNav.find('.global-nav__primary-menu'),
       $expandableLinks = $menu.find('li a.expandable'),
-      $drawers = $('.global-nav__drawers__drawer'),
+      $drawers = $('.global-nav__drawer'),
       $hamburger = $globalNav.find('.hamburger'),
       $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
-      $mobileDrawerClose = $('.global-nav__drawers__drawer__close'),
+      $mobileDrawerClose = $('.global-nav__drawer-close'),
       animation = {
-        duration: 750,
-        easing: "easeInOutQuart"
+        duration: 150,
+        easing: 'linear'
       };
-
     /* Desktop stuff */
     if (matchMedia('(min-width: 961px)').matches) {
       // Drawer Expanding interaction
-      // @todo needs lots of work here.
-      
-      var throttle = _.throttle(function($link) {
-        openDrawer($link);
-      }, animation.duration);
 
-      $expandableLinks.hover( 
-        function() {
-          throttle($(this));
-        }, function() {
-          var $link = $(this),
-              $hoverElements = $globalNav.closest('.global-nav').siblings(),
-              $navLinks = $globalNav.find('a').not($link);
+      $expandableLinks.each(function (){
+        var $link = $(this),
+            $drawer = $drawers.filter('#' + $link.data('drawer-id')),
+            $both = $link.add($drawer);
 
-          $hoverElements.add($navLinks).hover(function() {
-            closeDrawer($link);
+        // Handling for hover interaction of drawers. Uses the doTimeout jquery
+        // utility to handle throttling and waiting on a small delay before
+        // showing the drawer (essentially hoverintent)
+        $both.hover(function () {
+          $both.doTimeout( 'open', 200, function() {
+            $both.addClass('is-open');
           });
-        }
-      );
+        }, function () {
+          $both.doTimeout( 'open', 200, function() {
+            $both.removeClass('is-open');
+          });
+        });
+      });
 
       $drawers.click(function(e) {
         e.stopPropagation();
       });
     }
 
-    /* Tablet/mobile stuff */ 
+    /* Tablet/mobile stuff */
     if (matchMedia('(max-width: 960px)').matches) {
 
       // Set the height of the dropdown content
       mobileHeightAdjust();
-      
+
       $(window).resize(function(e) {
         mobileHeightAdjust()
       });
@@ -66,22 +65,22 @@
       $expandableLinks.on('click.nav', function(e) {
         var $link = $(this),
             $drawer = $('#' + $link.data('drawer-id'));
-        
+
         $drawer.show().addClass('open');
 
         $drawer.add($mobileWrapper).animate({
           marginLeft: '-=100%'
         }, animation);
-       
+
         e.preventDefault();
       });
     }
 
     $mobileDrawerClose.on('click.nav', function(e) {
-      var $drawer = $(this).closest('.global-nav__drawers__drawer');
+      var $drawer = $(this).closest('.global-nav__drawer');
 
       closeDrawerMobile($drawer);
-      
+
       e.preventDefault();
     });
 
@@ -103,24 +102,6 @@
       $hamburger.parent().toggleClass('open');
       e.preventDefault();
     });
-
-    function openDrawer($link) {
-      var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
-
-      if (!$drawers.hasClass('expanded')) {
-        $link.add($drawer).addClass('expanded');
-        $drawers.filter('#' + $link.data('drawer-id')).slideDown(animation);
-      }
-    }
-
-    function closeDrawer($link) {
-      var $drawer = $drawers.filter('#' + $link.data('drawer-id'));
-
-      if ($drawer.hasClass('expanded')) {
-        $link.add($drawer).removeClass('expanded');
-        $drawers.filter('#' + $link.data('drawer-id')).slideUp(animation);
-      }
-    }
 
     function closeDrawerMobile($drawer) {
       $drawer.add($mobileWrapper).animate({
