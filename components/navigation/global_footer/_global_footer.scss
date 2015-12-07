@@ -4,9 +4,8 @@ Global Footer
 The global footer that is displayed at the bottom of each page. Contains several
 navigation links, the language selector, social buttons, and a copyright line.
 
-**NOTE: The global nav and footer are not yet ready for consumption. We will be 
-updating interactions and providing more details on how to implement these 
-components very soon in an upcoming release**
+Check out [the documentation](section-documentation.html#kssref-documentation-global-nav-ajax)
+for consuming the content for the global footer via ajax.
 
 Markup: global-footer.hbs
 
@@ -16,7 +15,7 @@ Style Guide: navigation.footer
 */
 
 .global-footer {
-  
+
   .global-footer__language,
   .global-footer__menu {
     float: left;
@@ -93,7 +92,7 @@ Style Guide: navigation.footer
   .global-footer__menu li {
     padding: 0 1em;
     line-height: 30px;
-    
+
     a {
       color: $text-light-body;
       font-family: $text--benton-book;

@@ -1,0 +1,15 @@
+<div class="feature-list">
+ {{#each features}}
+  <div class="feature-list__feature">
+    <div class="feature-list__icon">
+      <span><i class="icon--{{ icon }}"></i></span>
+    </div>
+    <div class="feature-list__copy">
+      <h3 class="feature-list__title">{{ title }}</h3>
+      <div class="feature-list__description">
+        {{{ description }}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

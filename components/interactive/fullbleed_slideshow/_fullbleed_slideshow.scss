@@ -1,26 +1,26 @@
 /*
-Viz Slideshow
+Full Bleed Slideshow
 
-A slideshow of vizzes
+A slideshow that spans full bleed across the page
 
-Markup: viz-slideshow.hbs
+Markup: fullbleed-slideshow.hbs
 
-Style guide: interactive.viz-slideshow
+Style guide: interactive.fullbleed-slideshow
 */
 
-.viz-slideshow {
+.fullbleed-slideshow {
   position: relative;
   margin: 0 auto;
-  max-width: 1520px;
+  max-width: $content-max;
 
-  .viz-slideshow__slide {
+  .large-teaser {
     margin-left: 50px;
     margin-right: 50px;
   }
 
 
   // Arrow Controls
-  .viz-slideshow__arrow {
+  .fullbleed-slideshow__arrow {
     position: absolute;
     display: block;
     height: 26px;
@@ -37,25 +37,27 @@ Style guide: interactive.viz-slideshow
     border: none;
     outline: none;
 
-    i {
+    .icon:before {
       vertical-align: middle;
+      color: $text-dark-body;
+      font-size: $base-font-size * 1.5;
     }
 
-    &.viz-slideshow__arrow--prev {
+    &.fullbleed-slideshow__arrow--prev {
       left: 187px;
     }
 
-    &.viz-slideshow__arrow--next {
+    &.fullbleed-slideshow__arrow--next {
       right: 187px;
     }
   }
 
-  .viz-slideshow__slide__copy {
+  .large-teaser__copy {
     opacity: 0;
     transition: opacity 650ms;
   }
 
-  .slick-active .viz-slideshow__slide__copy {
+  .slick-active .large-teaser__copy {
     opacity: 1;
   }
 
@@ -86,23 +88,23 @@ Style guide: interactive.viz-slideshow
 
   @include breakpoint($tablet-only) {
 
-    .viz-slideshow__slide {
+    .large-teaser {
       margin-left: 1.5em;
       margin-right: 1.5em;
     }
 
-    .viz-slideshow__arrow.viz-slideshow__arrow--prev {
+    .fullbleed-slideshow__arrow.fullbleed-slideshow__arrow--prev {
       left: 37px;
     }
 
-    .viz-slideshow__arrow.viz-slideshow__arrow--next {
+    .fullbleed-slideshow__arrow.fullbleed-slideshow__arrow--next {
       right: 37px;
     }
   }
 
   @include breakpoint($mobile-max) {
 
-    .viz-slideshow__slide {
+    .large-teaser {
       margin-left: .5em;
       margin-right: .5em;
     }

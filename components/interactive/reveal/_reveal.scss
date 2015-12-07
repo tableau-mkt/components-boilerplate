@@ -12,9 +12,7 @@ Markup: reveal.hbs
 Style guide: interactive.reveal
 */
 .reveal__content {
-  position: relative;
-  height: 0;
-  overflow: hidden;
+  @extend %reveal-hidden;
 
   video {
     width: 100%;

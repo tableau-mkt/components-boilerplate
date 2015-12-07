@@ -1,0 +1,32 @@
+// Drupal-specific fixes.
+
+.global-nav__top  .global-nav__search {
+  h2.element-invisible {
+    width: 0;
+  }
+
+  input[type='search'] {
+    background-image: none;
+  }
+
+  #autocomplete {
+    @extend .text--large-copy;
+    display: block;
+    position: absolute;
+    z-index: $zindex-nav;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    background: $bg-light-gray-1;
+
+    li {
+      padding: 10px 45px;
+    }
+
+    .selected {
+      background: $bg-dark-gray-2;
+      color: $text-negative;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*
+Summary Teaser
+
+A summary teaser item, used for displaying a teaser for a long summary. Fades
+away at the bottom.
+
+Markup: summary_teaser.hbs
+
+bgcolor: white;
+border: 0
+
+Weight: 50
+
+.summary-teaser--light-gray-1 - A teaser for the light-gray-1 background color.
+
+Style Guide: teasers.summary-teaser
+*/
+
+.summary-teaser {
+  background-color: $white;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: linear-gradient(to top, $white, transparent);
+  }
+
+  @each $name, $colors in $background-colors {
+    &--#{"" + $name} {
+      background-color: nth($colors, 1);
+
+      &:after {
+        background-image: linear-gradient(to top, nth($colors, 1), transparent);
+      }
+    }
+  }
+}

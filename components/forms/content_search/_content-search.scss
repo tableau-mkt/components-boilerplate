@@ -1,0 +1,70 @@
+/*
+Content Search
+
+Search component for use within content (i.e. not header or footer)
+
+Markup: content-search.hbs
+
+Weight: 10
+
+Style guide: forms.content-search
+*/
+
+.content-search {
+  position: relative;
+  margin: 2em auto;
+  width: 60%;
+  max-width: 650px;
+  background: $bg-light-gray-1;
+  border-radius: 2em;
+  box-shadow: 2px 2px 3px $accent-dividers inset;
+  @include breakpoint($mobile-only) {
+    width: auto;
+    margin: 2em 1em;
+  }
+
+  .content-search__input {
+    $base: 20px;
+    margin: 0;
+    padding: em(18px, $base) em(64px, $base) em(18px, $base) em(32px, $base);
+    width: 100%;
+    height: em(64px, $base);
+    line-height: normal;
+    background: none;
+    outline: 0;
+    border: 0;
+    font-size: em($base);
+    color: $text-medium-body;
+    font-family: $text--merriweather-light;
+
+    &::placeholder {
+      color: $text-light-body;
+    }
+    // We want additional behavior with our own cancel/reset button, so hide
+    // Chrome's cancel button.
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    // This must be separate to work. Go figure.
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  .content-search__button {
+    // Define the base font size, scoped to this selector.
+    $base: 24px;
+    position: absolute;
+    top: 0;
+    right: em(5px, $base);
+    border: 0;
+    padding: 0;
+    width: em(64px, $base);
+    height: em(64px, $base);
+    line-height: 1;
+    font-size: em($base);
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,47 @@
+/*
+Feature List
+
+A list of specific features
+
+Markup: feature-list.hbs
+
+Style guide: lists.feature-list
+*/
+
+.feature-list {
+
+  .feature-list__feature {
+    @extend %clearfix;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    .feature-list__icon {
+      @include span(1 of 6);
+      text-align: center;
+    }
+
+    .feature-list__copy {
+      @include span(5 of 6);
+      @include last;
+      @extend .vertical-divider;
+      box-sizing: border-box;
+    }
+
+    @include breakpoint($mobile-only) {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    @include breakpoint($tablet-min) {
+      @include span(6);
+
+      &:nth-child(even) {
+        @include last;
+      }
+
+      .feature-list__copy {
+        @extend .vertical-divider--mobile;
+      }
+    }
+  }
+}

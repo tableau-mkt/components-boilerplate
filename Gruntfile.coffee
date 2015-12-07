@@ -146,6 +146,7 @@ module.exports = (grunt) ->
           'bower_components/waypoints/lib/shortcuts/sticky.min.js'
           'bower_components/waypoints/lib/shortcuts/inview.min.js'
           'bower_components/underscore/underscore-min.js'
+          'bower_components/Boxer/jquery.ba-dotimeout.min.js'
         ]
         dest: 'build/js/vendor.js'
 

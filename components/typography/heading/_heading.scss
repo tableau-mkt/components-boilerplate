@@ -44,7 +44,7 @@ h2, .heading--h2 {
   font-size: em(36px);
   line-height: 1.39;
   color: $text-headlines;
-  
+
   a {
     color: $text-headlines;
   }
@@ -63,7 +63,7 @@ h3, .heading--h3 {
   font-family: $text--benton-light;
   color: $text-dark-body;
   -webkit-font-smoothing: auto;
-  
+
   a {
     color: $text-dark-body;
   }
@@ -73,7 +73,7 @@ h4, .heading--h4 {
   font-size: em(23px);
   font-family: $text--benton-book;
   color: $text-dark-body;
-  
+
   a {
     color: $text-dark-body;
   }
@@ -93,7 +93,7 @@ h5, .heading--h5 {
   color: $text-dark-body;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
-  
+
   a {
     color: $text-dark-body;
   }
@@ -145,7 +145,7 @@ Styleguide typography.context-headings
 
 .heading--product {
   @extend h1;
-  
+
   @include breakpoint($tablet-only) {
     font-size: em(32px);
   }

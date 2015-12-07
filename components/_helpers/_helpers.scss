@@ -123,6 +123,11 @@ most common proportions for video players.
   display: none;
 }
 
+// Set an element to an initially hidden state but to be revealed later.
+.reveal-hidden {
+  @extend %reveal-hidden;
+}
+
 // Apply styles for a background image to cover the container
 .bg-cover {
   background-size: cover;
@@ -132,7 +137,7 @@ most common proportions for video players.
 @include breakpoint($mobile-only) {
   // Hide the element from display only on the mobile breakpoint
   .mobile-hide {
-    display: none;
+    display: none !important;
   }
 
   // Center element on mobile breakpoint
@@ -144,31 +149,31 @@ most common proportions for video players.
 @include breakpoint($tablet-min) {
   // Show element only on the mobile breakpoint
   .mobile-show {
-    display: none;
+    display: none !important;
   }
 }
 
 @include breakpoint($tablet-max) {
   // Hide the element from display only on the tablet breakpoint
   .tablet-hide {
-    display: none;
+    display: none !important;
   }
 
   // Show element only on the desktop breakpoint
   .desktop-show {
-    display: none;
+    display: none !important;
   }
 }
 
 @include breakpoint($desktop-only) {
   // Hide the element from display only on the desktop breakpoint
   .desktop-hide {
-    display: none;
+    display: none !important;
   }
 
   // Show element only on the tablet and mobile breakpoint
   .tablet-show {
-    display: none;
+    display: none !important;
   }
 
   // Center element on desktop breakpoint

@@ -1,0 +1,36 @@
+{
+  "group": "fanciness",
+  "inputs": [
+    {
+      "id" : "all",
+      "label": "All or things",
+      "value": "value-all",
+      "checked": true
+    },
+    {
+      "id" : "one",
+      "label": "Edward Maulis",
+      "value": "value-1"
+    },
+    {
+      "id" : "two",
+      "label": "Dr. Stanley Goodspeed",
+      "value": "value-2"
+    },
+    {
+      "id" : "three",
+      "label": "Randall 'Memphis' Raines",
+      "value": "value-3"
+    },
+    {
+      "id" : "four",
+      "label": "Cameron Poe",
+      "value": "value-4"
+    },
+    {
+      "id" : "five",
+      "label": "Yuri Orlov",
+      "value": "value-5"
+    }
+  ]
+}

@@ -4,9 +4,9 @@
  * Searches through a list of items and highlights items that match the term.
  */
 (function($){
-  var $searches = $('.search-highlight input[type="search"]');
-  
   $(document).ready(function(){
+    var $searches = $('.search-highlight input[type="search"]');
+    
     if ($searches.length) {
       $searches.each(function(index, el) {
         var $search = $(el),

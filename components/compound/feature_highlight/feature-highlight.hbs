@@ -1,0 +1,20 @@
+<div class="feature-highlight {{ modifier_class }}">
+
+  <div class="feature-highlight__image">
+    {{#if image.preview}}
+      {{> gif-player image}}
+    {{else}}
+      <img src="{{ image.src }}" alt="{{ image.alt }}" />
+    {{/if}}
+  </div>
+
+  <div class="feature-highlight__copy">
+    {{#if heading}}
+      <h3 class="heading-highlight">{{ heading }}</h3>
+    {{/if}}
+
+    {{#if copy}}
+      {{{ copy }}}
+    {{/if}}
+  </div>
+</div>
