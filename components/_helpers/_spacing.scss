@@ -12,20 +12,21 @@ $properties: (
 );
 
 $multipliers: (
-  -zero: 0,
+  -none: 0,
   -one: 1,
   -two: 2,
   -three: 3,
+  -four: 4,
 );
 
 $margins: (
   '': '',
-  -t: -top,
-  -r: -right,
-  -b: -bottom,
-  -l: -left,
-  -x: (-right, -left),
-  -y: (-top, -bottom),
+  -top: -top,
+  -right: -right,
+  -bottom: -bottom,
+  -left: -left,
+  -horz: (-right, -left),
+  -vert: (-top, -bottom),
 );
 
 @each $property in $properties {
@@ -45,27 +46,27 @@ $margins: (
 
 // Examples...
 /*
-.margin-zero { margin: 0em !important; }
-.margin-t-zero { margin-top: 0em !important; }
-.margin-r-zero { margin-right: 0em !important; }
+.margin-none { margin: 0em !important; }
+.margin-top-none { margin-top: 0em !important; }
+.margin-right-none { margin-right: 0em !important; }
 
-.margin-b-one { margin-bottom: 1em !important; }
-.margin-l-one { margin-left: 1em !important; }
+.margin-bottom-one { margin-bottom: 1em !important; }
+.margin-left-one { margin-left: 1em !important; }
 
-.margin-x-two {
+.margin-horz-two {
   margin-right: 2em !important;
   margin-left: 2em !important;
 }
-.margin-y-two {
+.margin-vert-two {
   margin-top: 2em !important;
   margin-bottom: 2em !important;
 }
 
-.padding-zero { padding: 0em !important; }
+.padding-none { padding: 0em !important; }
 
-.padding-t-two { padding-top: 2em !important; }
+.padding-top-two { padding-top: 2em !important; }
 
-.padding-y-three {
+.padding-vert-three {
   padding-top: 3em !important;
   padding-bottom: 3em !important;
 }
