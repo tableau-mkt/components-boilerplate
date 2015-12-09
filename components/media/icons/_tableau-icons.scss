@@ -12,32 +12,109 @@ Nodefault: true
 
 Markup: icon.hbs
 
-.icon--people - people icon
-.icon--social-facebook - social-facebook icon
-.icon--social-gplus - social-gplus icon
-.icon--social-instagram - social-instagram icon
-.icon--social-linkedin - social-linkedin icon
-.icon--social-twitter - social-twitter icon
-.icon--plus-circle - plus-circle icon
+.icon--adobe-pdf - adobe-pdf icon
+.icon--alliance - alliance icon
+.icon--answered - answered icon
+.icon--apple - apple icon
+.icon--arrow-down-style2 - arrow-down-style2 icon
+.icon--arrow-down-style3 - arrow-down-style3 icon
+.icon--arrow-down - arrow-down icon
+.icon--arrow-left-style2 - arrow-left-style2 icon
+.icon--arrow-left-style3 - arrow-left-style3 icon
+.icon--arrow-left-style4 - arrow-left-style4 icon
 .icon--arrow-left - arrow-left icon
+.icon--arrow-right-style2 - arrow-right-style2 icon
+.icon--arrow-right-style3 - arrow-right-style3 icon
+.icon--arrow-right-style4 - arrow-right-style4 icon
 .icon--arrow-right - arrow-right icon
-.icon--chevron-left - chevron-left icon
-.icon--chevron-right - chevron-right icon
-.icon--cursor-cloud - cursor-cloud icon
+.icon--arrow-up-style2 - arrow-up-style2 icon
+.icon--arrow-up-style3 - arrow-up-style3 icon
+.icon--arrow-up - arrow-up icon
+.icon--best-practices - best-practices icon
+.icon--blog-post - blog-post icon
+.icon--bookmark - bookmark icon
+.icon--calculations-library - calculations-library icon
+.icon--calendar - calendar icon
+.icon--carrot-down-style2 - carrot-down-style2 icon
+.icon--carrot-down - carrot-down icon
+.icon--carrot-left-style2 - carrot-left-style2 icon
+.icon--carrot-left - carrot-left icon
+.icon--carrot-right-style2 - carrot-right-style2 icon
+.icon--carrot-right - carrot-right icon
+.icon--carrot-up-style2 - carrot-up-style2 icon
+.icon--carrot-up - carrot-up icon
+.icon--certification-program - certification-program icon
+.icon--classroom - classroom icon
+.icon--clock - clock icon
+.icon--close-window-style2 - close-window-style2 icon
+.icon--close-window - close-window icon
+.icon--community-canvas - community-canvas icon
+.icon--contact-us - contact-us icon
+.icon--dashboard - dashboard icon
+.icon--deep-statistics - deep-statistics icon
+.icon--developer-corner - developer-corner icon
+.icon--discussion - discussion icon
 .icon--download - download icon
-.icon--laptop - laptop icon
-.icon--link - link icon
+.icon--email - email icon
+.icon--exercise-solutions - exercise-solutions icon
+.icon--experts-ondemand - experts-ondemand icon
+.icon--export - export icon
+.icon--faster-adoption - faster-adoption icon
+.icon--featured-vizz - featured-vizz icon
+.icon--find-training - find-training icon
+.icon--folder - folder icon
+.icon--forums - forums icon
+.icon--globe - globe icon
+.icon--ideas - ideas icon
+.icon--invite-people - invite-people icon
+.icon--knowledge-base - knowledge-base icon
+.icon--like - like icon
+.icon--location-style2 - location-style2 icon
+.icon--location - location icon
+.icon--matadata-management - matadata-management icon
+.icon--mobile-menu - mobile-menu icon
+.icon--mobile - mobile icon
+.icon--newsletter - newsletter icon
 .icon--nic-cage - nic-cage icon
+.icon--oem - oem icon
+.icon--online-classes - online-classes icon
 .icon--people - people icon
+.icon--play-button - play-button icon
+.icon--poll - poll icon
+.icon--query-without-code - query-without-code icon
+.icon--quickstart-guide - quickstart-guide icon
+.icon--quotes-closed-style2 - quotes-closed-style2 icon
+.icon--quotes-closed - quotes-closed icon
+.icon--quotes-open-style2 - quotes-open-style2 icon
+.icon--quotes-open - quotes-open icon
+.icon--report-abuse - report-abuse icon
+.icon--reseller - reseller icon
+.icon--restart - restart icon
+.icon--results-up - results-up icon
 .icon--search - search icon
+.icon--self-suffiency - self-suffiency icon
+.icon--server-admin - server-admin icon
 .icon--share - share icon
-.icon--slideshow-next - slideshow-next icon
-.icon--slideshow-prev - slideshow-prev icon
+.icon--social-rss - social-rss icon
+.icon--space - space icon
+.icon--tableau-dekstop - tableau-dekstop icon
 .icon--tableau-logo - tableau-logo icon
-.icon--triangle-down - triangle-down icon
-.icon--triangle-left - triangle-left icon
-.icon--triangle-right - triangle-right icon
-.icon--triangle-up - triangle-up icon
+.icon--tableau-online - tableau-online icon
+.icon--tableau-public - tableau-public icon
+.icon--tableau-reader - tableau-reader icon
+.icon--tableau-server - tableau-server icon
+.icon--tailor-content - tailor-content icon
+.icon--technology - technology icon
+.icon--unanswered - unanswered icon
+.icon--upload - upload icon
+.icon--user-groups - user-groups icon
+.icon--view-less - view-less icon
+.icon--view-more - view-more icon
+.icon--wikis - wikis icon
+.icon--windows - windows icon
+.icon--workbook-library - workbook-library icon
+.icon--write - write icon
+.icon--youtube - youtube icon
 
 Style Guide: media.icons
 */
@@ -45,10 +122,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.eot?408d7ddb7ab204e8a28cd0e65c18fce5");
-  src:url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.woff?408d7ddb7ab204e8a28cd0e65c18fce5") format("woff"),
-		url("../fonts/tableau-icons-408d7ddb7ab204e8a28cd0e65c18fce5.ttf?408d7ddb7ab204e8a28cd0e65c18fce5") format("truetype");
+  src:url("../fonts/tableau-icons-7c3430fd5afbaf52f0c7cfa2c1213024.eot?7c3430fd5afbaf52f0c7cfa2c1213024");
+  src:url("../fonts/tableau-icons-7c3430fd5afbaf52f0c7cfa2c1213024.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-7c3430fd5afbaf52f0c7cfa2c1213024.woff?7c3430fd5afbaf52f0c7cfa2c1213024") format("woff"),
+		url("../fonts/tableau-icons-7c3430fd5afbaf52f0c7cfa2c1213024.ttf?7c3430fd5afbaf52f0c7cfa2c1213024") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -72,157 +149,619 @@ Style Guide: media.icons
 // Icons
 
 
-.icon--people:before {
+.icon--adobe-pdf:before {
   content:"\f101";
 }
-$icon--people: "\f101";
+$icon--adobe-pdf: "\f101";
 
 
-.icon--social-facebook:before {
+.icon--alliance:before {
   content:"\f102";
 }
-$icon--social-facebook: "\f102";
+$icon--alliance: "\f102";
 
 
-.icon--social-gplus:before {
+.icon--answered:before {
   content:"\f103";
 }
-$icon--social-gplus: "\f103";
+$icon--answered: "\f103";
 
 
-.icon--social-instagram:before {
+.icon--apple:before {
   content:"\f104";
 }
-$icon--social-instagram: "\f104";
+$icon--apple: "\f104";
 
 
-.icon--social-linkedin:before {
+.icon--arrow-down-style2:before {
   content:"\f105";
 }
-$icon--social-linkedin: "\f105";
+$icon--arrow-down-style2: "\f105";
 
 
-.icon--social-twitter:before {
+.icon--arrow-down-style3:before {
   content:"\f106";
 }
-$icon--social-twitter: "\f106";
+$icon--arrow-down-style3: "\f106";
 
 
-.icon--plus-circle:before {
+.icon--arrow-down:before {
   content:"\f107";
 }
-$icon--plus-circle: "\f107";
+$icon--arrow-down: "\f107";
+
+
+.icon--arrow-left-style2:before {
+  content:"\f108";
+}
+$icon--arrow-left-style2: "\f108";
+
+
+.icon--arrow-left-style3:before {
+  content:"\f109";
+}
+$icon--arrow-left-style3: "\f109";
+
+
+.icon--arrow-left-style4:before {
+  content:"\f10a";
+}
+$icon--arrow-left-style4: "\f10a";
 
 
 .icon--arrow-left:before {
-  content:"\f108";
+  content:"\f10b";
 }
-$icon--arrow-left: "\f108";
+$icon--arrow-left: "\f10b";
+
+
+.icon--arrow-right-style2:before {
+  content:"\f10c";
+}
+$icon--arrow-right-style2: "\f10c";
+
+
+.icon--arrow-right-style3:before {
+  content:"\f10d";
+}
+$icon--arrow-right-style3: "\f10d";
+
+
+.icon--arrow-right-style4:before {
+  content:"\f10e";
+}
+$icon--arrow-right-style4: "\f10e";
 
 
 .icon--arrow-right:before {
-  content:"\f109";
+  content:"\f10f";
 }
-$icon--arrow-right: "\f109";
+$icon--arrow-right: "\f10f";
 
 
-.icon--chevron-left:before {
-  content:"\f10a";
+.icon--arrow-up-style2:before {
+  content:"\f110";
 }
-$icon--chevron-left: "\f10a";
+$icon--arrow-up-style2: "\f110";
 
 
-.icon--chevron-right:before {
-  content:"\f10b";
+.icon--arrow-up-style3:before {
+  content:"\f111";
 }
-$icon--chevron-right: "\f10b";
+$icon--arrow-up-style3: "\f111";
 
 
-.icon--cursor-cloud:before {
-  content:"\f10c";
+.icon--arrow-up:before {
+  content:"\f112";
 }
-$icon--cursor-cloud: "\f10c";
+$icon--arrow-up: "\f112";
+
+
+.icon--best-practices:before {
+  content:"\f113";
+}
+$icon--best-practices: "\f113";
+
+
+.icon--blog-post:before {
+  content:"\f114";
+}
+$icon--blog-post: "\f114";
+
+
+.icon--bookmark:before {
+  content:"\f115";
+}
+$icon--bookmark: "\f115";
+
+
+.icon--calculations-library:before {
+  content:"\f116";
+}
+$icon--calculations-library: "\f116";
+
+
+.icon--calendar:before {
+  content:"\f117";
+}
+$icon--calendar: "\f117";
+
+
+.icon--carrot-down-style2:before {
+  content:"\f118";
+}
+$icon--carrot-down-style2: "\f118";
+
+
+.icon--carrot-down:before {
+  content:"\f119";
+}
+$icon--carrot-down: "\f119";
+
+
+.icon--carrot-left-style2:before {
+  content:"\f11a";
+}
+$icon--carrot-left-style2: "\f11a";
+
+
+.icon--carrot-left:before {
+  content:"\f11b";
+}
+$icon--carrot-left: "\f11b";
+
+
+.icon--carrot-right-style2:before {
+  content:"\f11c";
+}
+$icon--carrot-right-style2: "\f11c";
+
+
+.icon--carrot-right:before {
+  content:"\f11d";
+}
+$icon--carrot-right: "\f11d";
+
+
+.icon--carrot-up-style2:before {
+  content:"\f11e";
+}
+$icon--carrot-up-style2: "\f11e";
+
+
+.icon--carrot-up:before {
+  content:"\f11f";
+}
+$icon--carrot-up: "\f11f";
+
+
+.icon--certification-program:before {
+  content:"\f120";
+}
+$icon--certification-program: "\f120";
+
+
+.icon--classroom:before {
+  content:"\f121";
+}
+$icon--classroom: "\f121";
+
+
+.icon--clock:before {
+  content:"\f122";
+}
+$icon--clock: "\f122";
+
+
+.icon--close-window-style2:before {
+  content:"\f123";
+}
+$icon--close-window-style2: "\f123";
+
+
+.icon--close-window:before {
+  content:"\f124";
+}
+$icon--close-window: "\f124";
+
+
+.icon--community-canvas:before {
+  content:"\f125";
+}
+$icon--community-canvas: "\f125";
+
+
+.icon--contact-us:before {
+  content:"\f126";
+}
+$icon--contact-us: "\f126";
+
+
+.icon--dashboard:before {
+  content:"\f127";
+}
+$icon--dashboard: "\f127";
+
+
+.icon--deep-statistics:before {
+  content:"\f128";
+}
+$icon--deep-statistics: "\f128";
+
+
+.icon--developer-corner:before {
+  content:"\f129";
+}
+$icon--developer-corner: "\f129";
+
+
+.icon--discussion:before {
+  content:"\f12a";
+}
+$icon--discussion: "\f12a";
 
 
 .icon--download:before {
-  content:"\f10d";
+  content:"\f12b";
 }
-$icon--download: "\f10d";
+$icon--download: "\f12b";
 
 
-.icon--laptop:before {
-  content:"\f10e";
+.icon--email:before {
+  content:"\f12c";
 }
-$icon--laptop: "\f10e";
+$icon--email: "\f12c";
 
 
-.icon--link:before {
-  content:"\f10f";
+.icon--exercise-solutions:before {
+  content:"\f12d";
 }
-$icon--link: "\f10f";
+$icon--exercise-solutions: "\f12d";
+
+
+.icon--experts-ondemand:before {
+  content:"\f12e";
+}
+$icon--experts-ondemand: "\f12e";
+
+
+.icon--export:before {
+  content:"\f12f";
+}
+$icon--export: "\f12f";
+
+
+.icon--faster-adoption:before {
+  content:"\f130";
+}
+$icon--faster-adoption: "\f130";
+
+
+.icon--featured-vizz:before {
+  content:"\f131";
+}
+$icon--featured-vizz: "\f131";
+
+
+.icon--find-training:before {
+  content:"\f132";
+}
+$icon--find-training: "\f132";
+
+
+.icon--folder:before {
+  content:"\f133";
+}
+$icon--folder: "\f133";
+
+
+.icon--forums:before {
+  content:"\f134";
+}
+$icon--forums: "\f134";
+
+
+.icon--globe:before {
+  content:"\f135";
+}
+$icon--globe: "\f135";
+
+
+.icon--ideas:before {
+  content:"\f136";
+}
+$icon--ideas: "\f136";
+
+
+.icon--invite-people:before {
+  content:"\f137";
+}
+$icon--invite-people: "\f137";
+
+
+.icon--knowledge-base:before {
+  content:"\f138";
+}
+$icon--knowledge-base: "\f138";
+
+
+.icon--like:before {
+  content:"\f139";
+}
+$icon--like: "\f139";
+
+
+.icon--location-style2:before {
+  content:"\f13a";
+}
+$icon--location-style2: "\f13a";
+
+
+.icon--location:before {
+  content:"\f13b";
+}
+$icon--location: "\f13b";
+
+
+.icon--matadata-management:before {
+  content:"\f13c";
+}
+$icon--matadata-management: "\f13c";
+
+
+.icon--mobile-menu:before {
+  content:"\f13d";
+}
+$icon--mobile-menu: "\f13d";
+
+
+.icon--mobile:before {
+  content:"\f13e";
+}
+$icon--mobile: "\f13e";
+
+
+.icon--newsletter:before {
+  content:"\f13f";
+}
+$icon--newsletter: "\f13f";
 
 
 .icon--nic-cage:before {
-  content:"\f110";
+  content:"\f140";
 }
-$icon--nic-cage: "\f110";
+$icon--nic-cage: "\f140";
+
+
+.icon--oem:before {
+  content:"\f141";
+}
+$icon--oem: "\f141";
+
+
+.icon--online-classes:before {
+  content:"\f142";
+}
+$icon--online-classes: "\f142";
 
 
 .icon--people:before {
-  content:"\f101";
+  content:"\f143";
 }
-$icon--people: "\f101";
+$icon--people: "\f143";
+
+
+.icon--play-button:before {
+  content:"\f144";
+}
+$icon--play-button: "\f144";
+
+
+.icon--poll:before {
+  content:"\f145";
+}
+$icon--poll: "\f145";
+
+
+.icon--query-without-code:before {
+  content:"\f146";
+}
+$icon--query-without-code: "\f146";
+
+
+.icon--quickstart-guide:before {
+  content:"\f147";
+}
+$icon--quickstart-guide: "\f147";
+
+
+.icon--quotes-closed-style2:before {
+  content:"\f148";
+}
+$icon--quotes-closed-style2: "\f148";
+
+
+.icon--quotes-closed:before {
+  content:"\f149";
+}
+$icon--quotes-closed: "\f149";
+
+
+.icon--quotes-open-style2:before {
+  content:"\f14a";
+}
+$icon--quotes-open-style2: "\f14a";
+
+
+.icon--quotes-open:before {
+  content:"\f14b";
+}
+$icon--quotes-open: "\f14b";
+
+
+.icon--report-abuse:before {
+  content:"\f14c";
+}
+$icon--report-abuse: "\f14c";
+
+
+.icon--reseller:before {
+  content:"\f14d";
+}
+$icon--reseller: "\f14d";
+
+
+.icon--restart:before {
+  content:"\f14e";
+}
+$icon--restart: "\f14e";
+
+
+.icon--results-up:before {
+  content:"\f14f";
+}
+$icon--results-up: "\f14f";
 
 
 .icon--search:before {
-  content:"\f111";
+  content:"\f150";
 }
-$icon--search: "\f111";
+$icon--search: "\f150";
+
+
+.icon--self-suffiency:before {
+  content:"\f151";
+}
+$icon--self-suffiency: "\f151";
+
+
+.icon--server-admin:before {
+  content:"\f152";
+}
+$icon--server-admin: "\f152";
 
 
 .icon--share:before {
-  content:"\f112";
+  content:"\f153";
 }
-$icon--share: "\f112";
+$icon--share: "\f153";
 
 
-.icon--slideshow-next:before {
-  content:"\f113";
+.icon--social-rss:before {
+  content:"\f154";
 }
-$icon--slideshow-next: "\f113";
+$icon--social-rss: "\f154";
 
 
-.icon--slideshow-prev:before {
-  content:"\f114";
+.icon--space:before {
+  content:"\f155";
 }
-$icon--slideshow-prev: "\f114";
+$icon--space: "\f155";
+
+
+.icon--tableau-dekstop:before {
+  content:"\f156";
+}
+$icon--tableau-dekstop: "\f156";
 
 
 .icon--tableau-logo:before {
-  content:"\f115";
+  content:"\f157";
 }
-$icon--tableau-logo: "\f115";
+$icon--tableau-logo: "\f157";
 
 
-.icon--triangle-down:before {
-  content:"\f116";
+.icon--tableau-online:before {
+  content:"\f158";
 }
-$icon--triangle-down: "\f116";
+$icon--tableau-online: "\f158";
 
 
-.icon--triangle-left:before {
-  content:"\f117";
+.icon--tableau-public:before {
+  content:"\f159";
 }
-$icon--triangle-left: "\f117";
+$icon--tableau-public: "\f159";
 
 
-.icon--triangle-right:before {
-  content:"\f118";
+.icon--tableau-reader:before {
+  content:"\f15a";
 }
-$icon--triangle-right: "\f118";
+$icon--tableau-reader: "\f15a";
 
 
-.icon--triangle-up:before {
-  content:"\f119";
+.icon--tableau-server:before {
+  content:"\f15b";
 }
-$icon--triangle-up: "\f119";
+$icon--tableau-server: "\f15b";
+
+
+.icon--tailor-content:before {
+  content:"\f15c";
+}
+$icon--tailor-content: "\f15c";
+
+
+.icon--technology:before {
+  content:"\f15d";
+}
+$icon--technology: "\f15d";
+
+
+.icon--unanswered:before {
+  content:"\f15e";
+}
+$icon--unanswered: "\f15e";
+
+
+.icon--upload:before {
+  content:"\f15f";
+}
+$icon--upload: "\f15f";
+
+
+.icon--user-groups:before {
+  content:"\f160";
+}
+$icon--user-groups: "\f160";
+
+
+.icon--view-less:before {
+  content:"\f161";
+}
+$icon--view-less: "\f161";
+
+
+.icon--view-more:before {
+  content:"\f162";
+}
+$icon--view-more: "\f162";
+
+
+.icon--wikis:before {
+  content:"\f163";
+}
+$icon--wikis: "\f163";
+
+
+.icon--windows:before {
+  content:"\f164";
+}
+$icon--windows: "\f164";
+
+
+.icon--workbook-library:before {
+  content:"\f165";
+}
+$icon--workbook-library: "\f165";
+
+
+.icon--write:before {
+  content:"\f166";
+}
+$icon--write: "\f166";
+
+
+.icon--youtube:before {
+  content:"\f167";
+}
+$icon--youtube: "\f167";

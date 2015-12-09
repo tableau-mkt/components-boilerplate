@@ -185,10 +185,7 @@ module.exports = (grunt) ->
 
     webfont:
       icons:
-        src: [
-          'assets/svg/*.svg',
-          'components/{,**/}*.svg'
-        ]
+        src: 'components/media/icons/svg/{,**/}*.svg'
         dest: 'build/fonts'
         destCss: 'components/media/icons'
         options:
