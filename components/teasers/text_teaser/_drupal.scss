@@ -1,0 +1,12 @@
+// Extend component to work with Drupal DOM.
+
+.block-liftigniter-widget-learn-recs-li .content {
+  min-height: 100px;
+}
+
+#li-recommendation-learn-recs-li {
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
