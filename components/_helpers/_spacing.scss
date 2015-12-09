@@ -1,0 +1,73 @@
+/**
+ * Spacing
+ *
+ * Add margin/padding to a component or element with shorthand classes.
+ */
+
+$spacer: 1em !default;
+
+$properties: (
+  margin,
+  padding,
+);
+
+$multipliers: (
+  -none: 0,
+  -one: 1,
+  -two: 2,
+  -three: 3,
+  -four: 4,
+);
+
+$margins: (
+  '': '',
+  -top: -top,
+  -right: -right,
+  -bottom: -bottom,
+  -left: -left,
+  -horz: (-right, -left),
+  -vert: (-top, -bottom),
+);
+
+@each $property in $properties {
+  // Loop sizes.
+  @each $label, $multiple in $multipliers {
+    // Loop sides.
+    @each $identifier, $sides in $margins {
+      .#{$property}#{$identifier}#{$label} {
+        @each $side in $sides {
+          #{$property}#{$side}: $spacer * $multiple !important;
+        }
+      }
+    }
+  }
+}
+
+
+// Examples...
+/*
+.margin-none { margin: 0em !important; }
+.margin-top-none { margin-top: 0em !important; }
+.margin-right-none { margin-right: 0em !important; }
+
+.margin-bottom-one { margin-bottom: 1em !important; }
+.margin-left-one { margin-left: 1em !important; }
+
+.margin-horz-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
+}
+.margin-vert-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+.padding-none { padding: 0em !important; }
+
+.padding-top-two { padding-top: 2em !important; }
+
+.padding-vert-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+*/
