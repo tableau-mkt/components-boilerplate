@@ -67,4 +67,18 @@ Style guide: forms.content-search
     background: transparent;
     cursor: pointer;
   }
+
+  .content-search__reset {
+    display: none;
+  }
+
+  /* when component is open */
+  &.is-populated {
+    .contextual-search__reset {
+      display: block;
+    }
+    .contextual-search__submit {
+      display: none;
+    }
+  }
 }
