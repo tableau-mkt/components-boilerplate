@@ -51,7 +51,7 @@ module.exports = (grunt) ->
           'sass/imports/_functionsMap.scss': 'components/_helpers/functions/*.scss'
           'sass/imports/_mixinsMap.scss': 'components/_helpers/mixins/*.scss'
           'sass/imports/_helpersMap.scss': 'components/_helpers/*.scss'
-          'sass/imports/_componentsMap.scss': 'components/**/*.scss'
+          'sass/imports/_componentsMap.scss': ['components/**/*.scss', '!components/media/icons/_tableau-icons.scss']
 
     sass:
       options:
