@@ -26,6 +26,7 @@ Style guide: interactive.reveal
   top: 6px;
   width: 25px;
   height: 25px;
+  line-height: 25px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
   font-size: em(15px);
@@ -46,6 +47,7 @@ Style guide: interactive.reveal
     top: 8px;
     width: 35px;
     height: 35px;
+    line-height: 32px;
     font-size: em(20px);
   }
 }
@@ -56,6 +58,7 @@ Style guide: interactive.reveal
     top: 10px;
     width: 45px;
     height: 45px;
-    font-size: em(27px);
+    line-height: 43px;
+    font-size: em(24px);
   }
 }
