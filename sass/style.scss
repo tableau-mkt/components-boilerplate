@@ -9,5 +9,12 @@
 @import "imports/mixinsMap";
 @import "imports/helpersMap";
 
+// We want icon vars to be available to all components immediately. At this time,
+// the styles are essentially added twice because we glob them below.
+// When this issue is updated:
+// https://github.com/DennisBecker/grunt-sass-globbing/issues/19, we should look
+// at fixing this. Not a big deal at the moment.
+@import "../components/media/icons/tableau-icons";
+
 // Import components
 @import "imports/componentsMap";
