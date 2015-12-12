@@ -32,7 +32,7 @@ Tabia.contentSearch.ready = function ($) {
     // Attach reset handler.
     $this.find('.content-search__reset').click(function contentSearchReset() {
       $(search.element).removeClass('is-populated');
-      $this.find('[name="field_geofield_distance[origin]"]').val('');
+      $this.find('.content-search__input').val('');
       $this.find('.content-search__button[type="submit"]').click();
     });
   });
@@ -44,13 +44,13 @@ Tabia.contentSearch.ready = function ($) {
  * @param {Object} event
  */
 Tabia.contentSearch.keydownHandler = function (event) {
+  var $form = $(this[0]);
+
   switch (event.which) {
     case 13: // ENTER
-
-console.log('ENTER');
-console.log($(this));
-
-      $(this[0]).find('.content-search__button[type="submit"]').click();
+      if ($form.find('.content-search__input').val() !== '') {
+        $form.find('.content-search__button[type="submit"]').click();
+      }
       event.preventDefault();
       break;
   }
