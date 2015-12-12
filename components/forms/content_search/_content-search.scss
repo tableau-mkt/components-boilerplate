@@ -74,10 +74,10 @@ Style guide: forms.content-search
 
   /* when component is open */
   &.is-populated {
-    .contextual-search__reset {
+    .content-search__reset {
       display: block;
     }
-    .contextual-search__submit {
+    .content-search__button[type="submit"] {
       display: none;
     }
   }

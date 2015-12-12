@@ -27,11 +27,13 @@ Tabia.contentSearch.ready = function ($) {
         };
     // Save a reference to this element.
     search.element = this;
-    // Attach keydown handler with our data context.
-    $this.keydown($.proxy(Tabia.contentSearch.keydownHandler, $this));
+    // Attach keydown handler with context.
+    $this.find('form').keydown($.proxy(Tabia.contentSearch.keydownHandler, $this));
     // Attach reset handler.
     $this.find('.content-search__reset').click(function contentSearchReset() {
       $(search.element).removeClass('is-populated');
+      $this.find('[name="field_geofield_distance[origin]"]').val('');
+      $this.find('.content-search__button[type="submit"]').click();
     });
   });
 };
@@ -44,7 +46,11 @@ Tabia.contentSearch.ready = function ($) {
 Tabia.contentSearch.keydownHandler = function (event) {
   switch (event.which) {
     case 13: // ENTER
-      this.find('.content-search__button').click();
+
+console.log('ENTER');
+console.log($(this));
+
+      $(this[0]).find('.content-search__button[type="submit"]').click();
       event.preventDefault();
       break;
   }
