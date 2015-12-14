@@ -1,5 +1,8 @@
-// Import external libraries.
+// We want icon vars to be available to all components immediately. Plus it
+// helps to define font-faces first.
+@import "../components/media/icons/tableau-icons";
 
+// Import external libraries.
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
