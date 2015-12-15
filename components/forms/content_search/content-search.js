@@ -22,7 +22,7 @@ Tabia.contentSearch.ready = function ($) {
   $('.content-search').each(function () {
     var $this = $(this);
     // Attach keydown handler with context.
-    $this.find('form').keydown($.proxy(Tabia.contentSearch.keydownHandler, $this));
+    $this.keydown($.proxy(Tabia.contentSearch.keydownHandler, $this));
     // Attach reset handler.
     $this.find('.content-search__reset').click(function contentSearchReset() {
       $this.removeClass('is-populated');
