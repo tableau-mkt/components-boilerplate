@@ -1,10 +1,10 @@
-/** 
+/**
  * Gif Player utility.
  */
 (function($){
-  var $gifs = $('.gif-player');
-  
   $(document).ready(function(){
+    var $gifs = $('.gif-player');
+
     if ($gifs.length) {
       $gifs.each(function(index, el) {
         var $gif = $(this);
@@ -14,7 +14,7 @@
 
         // Lazy load in gifs so they start animating after brought into view.
         // Switch back to placeholder when image has exited view.
-        // 
+        //
         // @todo store gif length in a data param and indicate when the gif is
         // being animated vs static. Add a replay button once the loop ends
         var inview = new Waypoint.Inview({
@@ -26,7 +26,7 @@
             $gif.attr('src', $gif.data('static-src'));
           }
         });
-        
+
       });
     }
   });

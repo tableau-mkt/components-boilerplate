@@ -1,15 +1,15 @@
-/** 
+/**
  * Context Switcher component
  */
 (function($){
-  var $triggers = $('.context-switcher__trigger'),
-      $lists = $('.context-switcher__list'),
-      animation = {
-        duration: 500,
-        easing: "easeInOutQuart"
-      };
-  
   $(document).ready(function(){
+    var $triggers = $('.context-switcher__trigger'),
+    $lists = $('.context-switcher__list'),
+    animation = {
+      duration: 500,
+      easing: "easeInOutQuart"
+    };
+    
     if ($triggers.length && $lists.length) {
       // Run setup
       setup();
