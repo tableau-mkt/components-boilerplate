@@ -38,7 +38,7 @@ Style guide: forms.contextual-search
     position: relative;
   }
 
-  .contextual-search__reset {
+  .content-search__reset {
     display: none;
   }
 
@@ -47,10 +47,10 @@ Style guide: forms.contextual-search
     .contextual-search__ui {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     }
-    .contextual-search__reset {
+    .content-search__reset {
       display: block;
     }
-    .contextual-search__submit {
+    .content-search__submit {
       display: none;
     }
   }

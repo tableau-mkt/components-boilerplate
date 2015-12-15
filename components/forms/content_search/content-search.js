@@ -27,7 +27,7 @@ Tabia.contentSearch.ready = function ($) {
     $this.find('.content-search__reset').click(function contentSearchReset() {
       $this.removeClass('is-populated');
       $this.find('.content-search__input').val('');
-      $this.find('.contextual-search__submit').click();
+      $this.find('.content-search__submit').click();
     });
   });
 };
@@ -43,7 +43,7 @@ Tabia.contentSearch.keydownHandler = function (event) {
   switch (event.which) {
     case 13: // ENTER
       if ($form.find('.content-search__input').val() !== '') {
-        $form.find('.contextual-search__submit').click();
+        $form.find('.content-search__submit').click();
       }
       event.preventDefault();
       break;

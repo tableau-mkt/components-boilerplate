@@ -39,7 +39,7 @@ Tabia.contextualSearch.ready = function ($) {
       $(search.element).removeClass('is-open');
     });
     // Attach reset handler.
-    $this.find('.contextual-search__reset').click(function contextualSearchReset() {
+    $this.find('.content-search__reset').click(function contextualSearchReset() {
       $(search.element).removeClass('is-open');
     });
   });
