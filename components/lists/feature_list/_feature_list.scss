@@ -39,6 +39,10 @@ Style guide: lists.feature-list
         @include last;
       }
 
+      &:nth-child(even) {
+        clear: right;
+      }
+
       .feature-list__copy {
         @extend .vertical-divider--mobile;
       }
