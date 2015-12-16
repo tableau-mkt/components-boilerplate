@@ -52,6 +52,12 @@ Style guide: interactive.fullbleed-slideshow
     }
   }
 
+  // Cancel out some default slick styles
+  // @todo remove this once we're not loading slick-theme.css
+  .fullbleed-slideshow__arrow:before {
+    display: none;
+  }
+
   .large-teaser__copy {
     opacity: 0;
     transition: opacity 650ms;
