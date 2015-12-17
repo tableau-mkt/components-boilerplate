@@ -5,7 +5,7 @@
  */
 
 $types: (
-  -none
+  -none: '',
   '' : 1px solid $accent-dividers,
 );
 
@@ -52,12 +52,12 @@ body.kss .kss-example-preview .border-left-none {
   border-left: 'none';
 }
 
-body.kss .kss-example-preview .border-x-none {
+body.kss .kss-example-preview .border-horz-none {
   border-right: 'none';
   border-left: 'none';
 }
 
-body.kss .kss-example-preview .border-y-none {
+body.kss .kss-example-preview .border-vert-none {
   border-top: 'none';
   border-bottom: 'none';
 }
