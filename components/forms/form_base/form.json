@@ -1,34 +1,32 @@
 {
-  "form": {
-    "heading": "Almost there!",
-    "description": "It only takes 30 seconds to fill out the form, or <a href='#sso-login'>sign in</a>.",
-    "fields": {
-      "list": [
-        {
-          "type": "text",
-          "name": "first-name",
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        {
-          "type": "text",
-          "name": "last-name",
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        {
-          "type": "email",
-          "name": "email",
-          "label": "Business E-mail",
-          "placeholder": "E-mail address"
-        },
-        {
-          "type": "text",
-          "name": "organization",
-          "label": "Organization",
-          "placeholder": "First Name"
-        }
-      ]
-    }
+  "heading": "Almost there!",
+  "description": "It only takes 30 seconds to fill out the form, or <a href='#sso-login'>sign in</a>.",
+  "fields": {
+    "list": [
+      {
+        "type": "text",
+        "name": "first-name",
+        "label": "First Name",
+        "placeholder": "First Name"
+      },
+      {
+        "type": "text",
+        "name": "last-name",
+        "label": "Last Name",
+        "placeholder": "Last Name"
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Business E-mail",
+        "placeholder": "E-mail address"
+      },
+      {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization",
+        "placeholder": "First Name"
+      }
+    ]
   }
 }
