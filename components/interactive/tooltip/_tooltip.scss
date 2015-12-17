@@ -1,0 +1,50 @@
+/*
+Tooltip
+
+Tooltip when hovering over link.
+
+Markup: tooltip.hbs
+
+Style guide: interactive.tooltip
+*/
+
+.tooltip {
+  position: relative;
+
+  .tooltip__text {
+    @extend %vertical-centered;
+    background: $bg-dark-gray-1;
+    color: $text-negative;
+    left: 100%;
+    margin-left: 2em;
+    opacity: 0;
+    padding: 1.5em;
+    transition: all 0.3s ease-in-out;
+    vertical-align: middle;
+    visibility: hidden;
+    width: 200px;
+    z-index: $zindex-2;
+
+    &:before {
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid $bg-dark-gray-1;
+      content: '';
+      display: block;
+      height: 0;
+      left: -15px;
+      margin-top: -1em;
+      position: absolute;
+      top: 50%;
+      width: 0;
+    }
+  }
+
+  &:hover {
+    .tooltip__text {
+      opacity: 1;
+      pointer-events: visible;
+      visibility: visible;
+    }
+  }
+}
