@@ -160,7 +160,7 @@ Style Guide: teasers.card-quote
       bottom: -14.4em;
       width: 100%;
       height: 12em;
-      background-image: linear-gradient(to top, $bg-data-sources, transparent);
+      background-image: linear-gradient(to top, $bg-data-sources, rgba(255,255,255,0));
     }
   }
 
@@ -251,7 +251,7 @@ Style Guide: teasers.card-summary
       width: 100%;
       height: 10em;
       pointer-events: none;
-      background-image: linear-gradient(to top, $white, transparent);
+      background-image: linear-gradient(to top, $white, rgba(255,255,255,0));
     }
   }
 }
