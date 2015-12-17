@@ -19,6 +19,11 @@ Style Guide: teasers.summary-teaser
 .summary-teaser {
   background-color: $white;
 
+  a {
+    pointer-events: none;
+    cursor: default;
+  }
+
   &:after {
     content: "";
     display: block;
