@@ -1,5 +1,3 @@
-
-
 /*
 Formatted Text Links
 
@@ -14,7 +12,9 @@ Weight: 20
 .link--arrow - Link with an arrow icon
 .link--arrow-before - Link with a preceding arrow icon
 .link--expand - Link with an expand icon
-.link--collapse - Link with an collapse icon
+.link--collapse - Link with a collapse icon
+.link--share - Link with a share icon
+.link--download - Link with a download icon
 
 Style guide: buttons-links.link-formatted
 */
@@ -26,39 +26,47 @@ Style guide: buttons-links.link-formatted
   color: $text-link;
   text-transform: uppercase;
 
-  &.link--arrow:after {
-    content: url(../images/shame/icons/icon-arrow-orange.png);
-    padding-left: 1em;
+  &.link--arrow-before:before,
+  &.link--expand:before,
+  &.link--collapse:before,
+  &.link--share:before,
+  &.link--download:before {
+    @extend .icon;
+    text-decoration: none !important;
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    padding-bottom: 1px;
   }
 
   &.link--arrow-before:before {
-    content: url(../images/shame/icons/icon-arrow-orange-left.png);
-    padding-right: 1em;
-  }
-
-  &.link--expand:before,
-  &.link--collapse:before,
-  &.link--share:before {
-    display: inline-block;
-    vertical-align: middle;
-    padding-right: 1em;
-    line-height: 1;
+    content: $icon--arrow-left;
   }
 
   &.link--expand:before {
-    content: url(../images/shame/icons/expand.png);
+    content: $icon--view-more;
   }
 
   &.link--collapse:before {
-    content: url(../images/shame/icons/collapse.png);
+    content: $icon--view-less;
   }
 
   &.link--share:before {
-    content: url(../images/shame/icons/share.png);
+    content: $icon--share;
   }
 
-  .icon {
-    font-size: 1.5em;
+  &.link--download:before {
+    content: $icon--download;
+  }
 
+  &.link--arrow:after{
+    @extend .icon;
+    text-decoration: none !important;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    padding-bottom: 1px;
+  }
+
+  &.link--arrow:after {
+    content: $icon--arrow-right;
   }
 }
