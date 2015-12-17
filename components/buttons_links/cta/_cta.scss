@@ -13,6 +13,7 @@ Bgcolor: #F7F9FB
 .cta--dark - Dark colored CTA button for use on light backgrounds.
 .cta--arrow - CTA button with arrow icon.
 .cta--play - CTA button with play icon.
+.cta--download - CTA button with download icon.
 .cta--secondary - Secondary CTA buttons should be used when multiple page actions are present, or somewhat important page actions are required.
 .cta--secondary.cta--orange - Orange Secondary CTA
 .cta--secondary.cta--light - Light Secondary CTA button for use on dark backgrounds.
@@ -92,7 +93,7 @@ Style guide: buttons-links.cta
   // the updated download icon.
   &.cta--download:after {
     @extend .icon;
-    content:"\f109";
+    content: $icon--download;
     height: 10px;
     padding-left: 1em;
     font-size: 1.5em;
