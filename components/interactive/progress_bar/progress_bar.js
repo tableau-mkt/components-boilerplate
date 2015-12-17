@@ -17,7 +17,7 @@
     progress = (progress > 100) ? 100 : progress;
 
     $progress.removeClass (function (index, css) {
-      return (css.match (/(^|\s)progres--\S+/g) || []).join(' ');
+      return (css.match (/(^|\s)progress--\S+/g) || []).join(' ');
     }).css({
       'width': progress + '%'
     }).addClass(modifier);
