@@ -1,0 +1,94 @@
+/**
+ * Borders
+ *
+ * Add borders to a component or element with these helper classes.
+ */
+
+$types: (
+  -none
+  '' : 1px solid $accent-dividers,
+);
+
+$sides: (
+  '': '',
+  -top: -top,
+  -right: -right,
+  -bottom: -bottom,
+  -left: -left,
+  -vert: (-right, -left),
+  -horz: (-top, -bottom),
+);
+
+
+@each $typeLabel, $type in $types {
+  @each $sideLabel, $side in $sides {
+    .border#{$sideLabel}#{$typeLabel} {
+      @each $property in $side {
+        border#{$property}: $type;
+      }
+    }
+  }
+}
+
+
+/*
+body.kss .kss-example-preview .border-none {
+  border: 'none';
+}
+
+body.kss .kss-example-preview .border-top-none {
+  border-top: 'none';
+}
+
+body.kss .kss-example-preview .border-right-none {
+  border-right: 'none';
+}
+
+body.kss .kss-example-preview .border-bottom-none {
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border-left-none {
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-x-none {
+  border-right: 'none';
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-y-none {
+  border-top: 'none';
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-top {
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-right {
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-left {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-vert {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-horz {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+*/
