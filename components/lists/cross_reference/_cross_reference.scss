@@ -152,3 +152,56 @@ Style guide: lists.cross-reference-3
     }
   }
 }
+
+/*
+Vertical Cross Reference
+
+Vertical cross reference items linking to related content.
+
+Markup: cross-reference-vertical.hbs
+
+Weight: 50
+
+Bgcolor: #fafafa;
+width: 368px;
+
+Style guide: lists.cross-reference-vertical
+*/
+
+.cross-reference-vertical {
+  .cross-reference__item {
+    display: flex;
+    padding: 1em 0;
+    border-bottom: 1px solid $accent-dividers;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .cross-reference__image,
+  .cross-reference__copy {
+    float: left;
+  }
+
+  .cross-reference__image {
+    width: 140px;
+    margin-right: -140px;
+    line-height: 0;
+    text-align: right;
+  }
+
+  .cross-reference__copy {
+    margin-left: 140px;
+    padding-left: gutter();
+  }
+
+  .cross-reference__link {
+    margin: 0;
+  }
+}
