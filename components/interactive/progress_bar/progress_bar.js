@@ -3,12 +3,12 @@
     var $el = $(this),
         $progress = $el.find('.progress'),
         progress = progress || parseInt($progress.data('progress')) || 0,
-        tresholds = [5, 50, 100],
+        treshold = [5, 50, 100],
         modifier = '';
 
-    for (var treshold in tresholds) {
-      if (progress <= treshold) {
-        modifier = 'progress--' + treshold;
+    for (var i in treshold) {
+      if (progress <= treshold[i]) {
+        modifier = 'progress--' + treshold[i];
         break;
       }
     }
