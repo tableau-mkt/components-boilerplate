@@ -37,19 +37,35 @@ most common proportions for video players.
   position: absolute;
 }
 
-// Display an element as an inline-block
+// Display an element as an inline
 .display-inline {
   display: inline;
 }
 
+// Display an element as an inline block
+.display-inline-block {
+  display: inline-block;
+}
+
+// Display an element as a table
+.display-table {
+  display: table;
+  width: 100%;
+}
+
+// Display an element as a table-cell
+.display-table-cell {
+  display: table-cell;
+}
+
 // Zero out the margins of an element
 .margin-zero {
-  margin: 0;
+  margin: 0 !important;
 }
 
 // Zero out the padding of an element
 .padding-zero {
-  padding: 0;
+  padding: 0 !important;
 }
 
 // Center an element using auto margins, because using text-align: center on the
@@ -57,6 +73,11 @@ most common proportions for video players.
 .element-centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+// Vertically aligns an element to the middle. Works well with display table-cell
+.vertical-align-middle {
+  vertical-align: middle;
 }
 
 // Vertically center an element. This assumes the parent is position: relative;

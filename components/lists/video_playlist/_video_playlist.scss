@@ -1,136 +1,67 @@
 /*
 Video Playlist
 
-A playlist of related Brightcove videos.
+A playlist of Brightcove videos.
 
 Markup: video_playlist.hbs
 
-Bgcolor: #111111;
-width: 368px;
-border: 0;
-border-left: 35px solid black;
+Style guide: lists.video-playlist
 
-Style guide: media.video-playlist
+Weight: 90
 */
 
 .video-playlist {
-  background-color: $bg-light-gray-1;
-}
-
-.video-playlist__header-wrapper{
-  position: relative;
-  padding: 2.5em 2.5em 1.25em 2.5em;
-  border-top: 1px solid $accent-dividers;
-  border-bottom: 1px solid $accent-dividers;
-}
-
-.video-playlist__topic-label {
-  @extend .text--label;
-  @extend .float-left;
-}
-
-.video-playlist__all {
-  @extend .text--label;
-  @extend .float-right;
-}
-
-.video-playlist__topic {
-  margin: 0;
-}
-
-.video-playlist__list {
   // _link_list.scss
   @extend .link-list;
   @extend .link-list--plain;
   padding: 1.25em 0;
 }
 
-.video-playlist__item-wrapper {
-  padding: 0 2.5em;
-
-  &:first-child {
-    .video-playlist__item {
-      border-top: none;
-    }
-  }
-}
-
-.video-playlist__item-wrapper.is-active {
-  background-color: $bg-light-gray-2;
-  position:relative;
-
-  .video-playlist__item,
-  & + .video-playlist__item-wrapper .video-playlist__item {
-    border-color: transparent;
-  }
-
-  /* Only show arrow on desktops. */
-  @include breakpoint($desktop-only) {
-    /* SVG implementation. */
-    &:before {
-      position: absolute;
-      top: 0;
-      left: -1em;
-      content: "";
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='100%' height='100%' preserveAspectRatio='none' style='-webkit-backface-visibility: hidden;' viewBox='0 0 512 512'%3E %3Cpolygon fill='%23EBEBEB' points='512,0 0,256 512,512 '/%3E %3C/svg%3E");
-      background-size: 100% 100%;
-      width: 1em;
-      height: 100%;
-    }
-
-
-    /* Linear gradient implementation. */
-    /*&:before,
-    &:after {
-      width: 15px;
-      height: 50%;
-      position: absolute;
-      left: -15px;
-      content: "";
-    }
-
-    &:before {
-      top: 0;
-      background: linear-gradient(to left top, $bg-light-gray-2 50%, transparent 50%)
-    }
-
-    &:after {
-      top: 50%;
-      background: linear-gradient(to left bottom, $bg-light-gray-2 50%, transparent 50%)
-    }*/
-  }
-
-  .video-playlist__item {
-    @extend .icon--nic-cage;
-    position: relative;
-
-    &:before {
-      font-family: "tableau-icons";
-      position: absolute;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      left: -1.8em;
-    }
-  }
-}
-
 .video-playlist__item {
+  border-top: 1px solid $accent-dividers;
   clear: both;
   display: table;
+  position: relative;
   width: 100%;
-  padding: 0.5em 0;
-  border-top: 1px solid $accent-dividers;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover {
+    background-color: $bg-light-gray-2;
+    border-color: transparent;
+    position:relative;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    & + .video-playlist__item {
+      border-color: transparent;
+    }
+  }
 }
 
 .video-playlist__link {
+  display: table-row;
+  color: $text-medium-body;
+}
+
+.video-playlist__play {
+  display: table-cell;
+  width: 2em;
+}
+
+.video-playlist__title {
   @extend .text--body-small;
   display: table-cell;
+  padding: 0.5em 0;
 }
 
 .video-playlist__watched {
-  width: 1.5em;
   display: table-cell;
+  width: 1.5em;
   padding-left: 1.5em;
 }
 
@@ -139,8 +70,4 @@ Style guide: media.video-playlist
   @extend .text--label;
   width: 4em;
   display: table-cell;
-}
-
-.video-playlist__link a {
-  color: $text-medium-body;
 }

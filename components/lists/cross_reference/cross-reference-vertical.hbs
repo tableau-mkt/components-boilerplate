@@ -1,0 +1,23 @@
+<div class="cross-reference-vertical {{ modifier_class }}">
+  {{#each items}}
+    <div class="cross-reference__item">
+      <div class="cross-reference__image">
+        <a href="{{ link.href }}">
+          <img src="{{ image.src }}" title="{{ image.alt }}">
+        </a>
+      </div>
+
+      <div class="cross-reference__copy">
+        {{#if title}}
+          <h3 class="cross-reference__title heading--label">{{ title }}</h3>
+        {{/if}}
+
+        {{#with link}}
+          <p class="cross-reference__link">
+            {{> link-formatted}}
+          </p>
+        {{/with}}
+      </div>
+    </div>
+  {{/each}}
+</div>

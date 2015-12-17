@@ -47,6 +47,7 @@ module.exports = (grunt) ->
     sass_globbing:
       all:
         files:
+          'sass/imports/_colorsMap.scss': 'components/_colors/*.scss'
           'sass/imports/_variablesMap.scss': 'components/_helpers/variables/*.scss'
           'sass/imports/_functionsMap.scss': 'components/_helpers/functions/*.scss'
           'sass/imports/_mixinsMap.scss': 'components/_helpers/mixins/*.scss'
