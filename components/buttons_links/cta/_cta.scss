@@ -89,12 +89,11 @@ Style guide: buttons-links.cta
     vertical-align: middle;
   }
 
-  // @todo this is not the correct download icon. Update once we get the SVG for
-  // the updated download icon.
   &.cta--download:after {
     @extend .icon;
     content: $icon--download;
-    height: 10px;
+    height: 0px;
+    margin-top: -15px;
     padding-left: 1em;
     font-size: 1.5em;
     text-decoration: none !important;
