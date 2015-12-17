@@ -1,5 +1,5 @@
 {{#with form}}
-<div class="form__wrapper">
+<div class="form form--full-width">
   <div class="form__intro">
     <h3 class="form__intro__heading">{{heading}}</h3>
     <div class="form__intro__description">
@@ -8,12 +8,10 @@
   </div>
 
   {{#each fields.list}}
-    <div class="form-field__wrapper has-float-label">
-    <label class="form-field__label" for="{{name}}">{{label}}</label>
-
-      <input class="form-field" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
-
-    </div>
+  <div class="form__field-wrapper has-float-label">
+    <label class="form__label" for="{{name}}">{{label}}</label>
+    <input class="form__field" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
+  </div>
   {{/each}}
 
   <div class="form__actions">

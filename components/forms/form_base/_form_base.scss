@@ -10,23 +10,29 @@ Weight: 0
 Style guide: forms.base
 */
 
+.form--full-width {
+  .form__field {
+    width: 100%;
+  }
+}
+
 .form__intro {
   text-align: center;
   margin-bottom: 1.5em;
 }
 
-.form-field__wrapper {
+.form__field-wrapper {
   @extend %clearfix;
   position: relative;
   margin-bottom: 1em;
 }
 
-.form-field__label {
+.form__label {
   @extend .text--label;
 }
 
 .has-float-label {
-  .form-field__label {
+  .form__label {
     position: absolute;
     pointer-events: none;
     opacity: 0;
@@ -88,8 +94,6 @@ Markup: form_input.hbs
 Weight: 1
 
 Style guide: forms.input
-
-Nocode: true
 */
 input[type="text"],
 input[type="search"],
@@ -225,7 +229,7 @@ Style guide: forms.actions
 //   }
 // }
 
-.form__wrapper {
+.form {
   input[type="submit"] {
     @extend .cta;
     @extend .cta--secondary;

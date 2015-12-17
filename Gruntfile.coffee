@@ -32,11 +32,11 @@ module.exports = (grunt) ->
         ]
         tasks: ['clean:partials', 'copy:partials']
 
-      js:
+      assets:
         files: ['components/{,**/}*.{png,jpg,gif}']
         tasks: ['copy:assets', 'copy:styleguide']
 
-      assets:
+      js:
         files: ['components/{,**/}*.js']
         tasks: ['concat:scripts', 'concat:sgScripts', 'copy:styleguide']
 
