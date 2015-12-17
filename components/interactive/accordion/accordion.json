@@ -1,8 +1,17 @@
 {
-  "title": "This is an example",
-  "content": "Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.",
-  "title2": "Another Example",
-  "content2": "Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.",
-  "title3": "Testing another",
-  "content3": "Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium."
+  "class": "",
+  "items": [
+    {
+      "title": "<div class='text--label'>16 VIDEOS</div><h5>Connecting to Data</h5>",
+      "content": "<span>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</span>"
+    },
+    {
+      "title": "<div class='text--label'>16 VIDEOS</div><h5>Connecting to Data</h5>",
+      "content": "<span>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</span>"
+    },
+    {
+      "title": "<div class='text--label'>16 VIDEOS</div><h5>Connecting to Data</h5>",
+      "content": "<span>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</span>"
+    }
+  ]
 }
