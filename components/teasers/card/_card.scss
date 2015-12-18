@@ -160,6 +160,7 @@ Style Guide: teasers.card-quote
       bottom: -14.4em;
       width: 100%;
       height: 12em;
+      //@todo Needs some work in Safari
       background-image: linear-gradient(to top, $bg-data-sources, rgba(255,255,255,0));
     }
   }
