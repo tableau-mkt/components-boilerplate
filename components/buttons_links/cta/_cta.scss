@@ -46,12 +46,12 @@ Style guide: buttons-links.cta
   &:hover,
   &:focus {
     background-color: $button-orange-hover;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:active {
     background-color: $button-final;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   @each $name, $colors in $button-colors {
@@ -65,7 +65,7 @@ Style guide: buttons-links.cta
 
       &:active {
         background-color: $button-final;
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
