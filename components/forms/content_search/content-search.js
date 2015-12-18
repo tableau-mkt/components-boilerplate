@@ -19,7 +19,7 @@ Tabia.contentSearch = {};
  */
 Tabia.contentSearch.ready = function ($) {
   // Set up all the section search components on the page.
-  $('.content-search').each(function () {
+  $('.content-search').not('contextual-search').each(function () {
     var $this = $(this);
 
     // Attach keydown handler with context.
