@@ -24,6 +24,10 @@ Style guide: lists.table-list
       padding: 1em 1.91em;
       color: $text-medium-body;
     }
+
+    th.is-active {
+      text-decoration: underline;
+    }
   }
 
   td {
