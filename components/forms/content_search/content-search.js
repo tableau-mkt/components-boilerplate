@@ -21,15 +21,46 @@ Tabia.contentSearch.ready = function ($) {
   // Set up all the section search components on the page.
   $('.content-search').each(function () {
     var $this = $(this);
+
     // Attach keydown handler with context.
-    $this.keydown($.proxy(Tabia.contentSearch.keydownHandler, $this));
+    $this.find('.content-search__input').keydown(
+      $.proxy(Tabia.contentSearch.keydownHandler, $this)
+    );
+
     // Attach reset handler.
-    $this.find('.content-search__reset').click(function contentSearchReset() {
-      $this.removeClass('is-populated');
-      $this.find('.content-search__input').val('');
-      $this.find('.content-search__submit').click();
+    $this.find('.content-search__reset').click(function (event) {
+      // Allow overriding.
+      var $resetEvent = $.Event('contentSearch:reset');
+      $(document).trigger($resetEvent);
+      if (!$resetEvent.isDefaultPrevented()) {
+        // Reset/empty the form, via AJAX.
+        Tabia.contentSearch.resetForm($this);
+      }
     });
   });
+};
+
+/**
+ * Carry out the form reset.
+ *
+ * @param {jQuery Object} $search
+ */
+Tabia.contentSearch.resetForm = function($search) {
+  $search.removeClass('is-populated');
+  $search.find('.content-search__input').val('');
+  $search.find('.content-search__submit').click();
+};
+
+/**
+ * Carry out the form submit.
+ *
+ * @param {jQuery Object} $search
+ */
+Tabia.contentSearch.submitForm = function($search) {
+  if ($search.find('.content-search__input').val() !== '') {
+    $search.addClass('is-populated');
+    $search.find('.content-search__submit').click();
+  }
 };
 
 /**
@@ -38,12 +69,16 @@ Tabia.contentSearch.ready = function ($) {
  * @param {Object} event
  */
 Tabia.contentSearch.keydownHandler = function (event) {
-  var $form = $(this[0]);
+  var $search = $(this[0]),
+      $submitEvent = $.Event('contentSearch:submit');
 
   switch (event.which) {
     case 13: // ENTER
-      if ($form.find('.content-search__input').val() !== '') {
-        $form.find('.content-search__submit').click();
+      // Allow overriding.
+      $(document).trigger($submitEvent);
+      // Submit the form, via AJAX.
+      if (!$submitEvent.isDefaultPrevented()) {
+        Tabia.contentSearch.submitForm($search);
       }
       event.preventDefault();
       break;
