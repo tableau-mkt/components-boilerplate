@@ -58,7 +58,6 @@ Style Guide: navigation.topic-nav
     }
 
     @include breakpoint($mobile-only) {
-
       li {
         margin: 0 .5em;
       }

@@ -11,12 +11,12 @@ Style guide: interactive.tabs
 .tabs__tabs {
   @extend %plain-list;
   @extend %inline-list;
-  
+
   .tabs__tab-link {
     @extend .text--label;
     margin-right: 2em;
 
-    &.active {
+    &.is-active {
       font-weight: bold;
     }
   }
@@ -25,7 +25,7 @@ Style guide: interactive.tabs
 .bg--data-sources .tabs__tab-link {
   color: $text-data-sources;
 
-  &.active {
+  &.is-active {
     color: $text-negative;
   }
 }
@@ -34,7 +34,7 @@ Style guide: interactive.tabs
   display: none;
   @extend %clearfix;
 
-  &.active {
+  &.is-active {
     display: inherit;
   }
 }

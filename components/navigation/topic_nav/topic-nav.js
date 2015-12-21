@@ -7,7 +7,8 @@
   $(document).ready(function() {
     // Tabs integration
     $('.topic-nav__tabs a').tabs({
-      contents: $('.topic-nav__drawer')
+      contents: $('.topic-nav__drawer'),
+      wrapper: $('.topic-nav')
     });
 
     // contentReveal interaction
