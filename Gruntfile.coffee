@@ -47,7 +47,6 @@ module.exports = (grunt) ->
     sass_globbing:
       all:
         files:
-          'sass/imports/_colorsMap.scss': 'components/_colors/*.scss'
           'sass/imports/_variablesMap.scss': 'components/_helpers/variables/*.scss'
           'sass/imports/_functionsMap.scss': 'components/_helpers/functions/*.scss'
           'sass/imports/_mixinsMap.scss': 'components/_helpers/mixins/*.scss'
@@ -198,8 +197,11 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
     clean:
-      icons:
-        src: ["build/fonts/tableau-icons-*"]
+      built:
+        src: [
+          "build/**/*"
+          "styleguide/**/*"
+        ]
       partials:
         src: ["template/_partials/*.hbs"]
 
@@ -255,7 +257,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
-    'clean:icons'
+    'clean:built'
     'clean:partials'
     'webfont:icons'
     'sass_globbing'
