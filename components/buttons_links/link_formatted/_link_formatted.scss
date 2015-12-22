@@ -26,16 +26,20 @@ Style guide: buttons-links.link-formatted
   color: $text-link;
   text-transform: uppercase;
 
-  &.link--arrow-before:before,
-  &.link--expand:before,
-  &.link--collapse:before,
-  &.link--share:before,
-  &.link--download:before {
+  &:before,
+  &:after {
     @extend .icon;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 1.5em;
-    padding-right: 0.5em;
     padding-bottom: 1px;
+  }
+
+  &:before {
+    padding-right: 0.5em;
+  }
+
+  &:after {
+    padding-left: 0.5em;
   }
 
   &.link--arrow-before:before {
@@ -56,14 +60,6 @@ Style guide: buttons-links.link-formatted
 
   &.link--download:before {
     content: $icon--download;
-  }
-
-  &.link--arrow:after{
-    @extend .icon;
-    text-decoration: none !important;
-    font-size: 1.5em;
-    padding-left: 0.5em;
-    padding-bottom: 1px;
   }
 
   &.link--arrow:after {

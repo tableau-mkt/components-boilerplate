@@ -19,6 +19,7 @@ Style Guide: teasers.summary-teaser
 .summary-teaser {
   background-color: $white;
 
+  //@todo find IE8-9 compatible solution
   a {
     pointer-events: none;
     cursor: default;
@@ -32,7 +33,7 @@ Style Guide: teasers.summary-teaser
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-image: linear-gradient(to top, $white 4%, rgba(255,255,255,0) 40%);
+    background-image: linear-gradient(to top, $white 4%, $transparent 40%);
   }
 
   @each $name, $colors in $background-colors {
@@ -40,7 +41,7 @@ Style Guide: teasers.summary-teaser
       background-color: nth($colors, 1);
 
       &:after {
-        background-image: linear-gradient(to top, nth($colors, 1) 4%, rgba(255,255,255,0) 40%);
+        background-image: linear-gradient(to top, nth($colors, 1) 4%, $transparent 40%);
       }
     }
   }
