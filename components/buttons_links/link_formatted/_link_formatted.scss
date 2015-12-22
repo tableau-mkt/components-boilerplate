@@ -26,19 +26,27 @@ Style guide: buttons-links.link-formatted
   color: $text-link;
   text-transform: uppercase;
 
-  &:before,
-  &:after {
+  &.link--arrow-before:before,
+  &.link--expand:before,
+  &.link--collapse:before,
+  &.link--share:before,
+  &.link--download:before,
+  &.link--arrow:after {
     @extend .icon;
     text-decoration: none;
     font-size: 1.5em;
     padding-bottom: 1px;
   }
 
-  &:before {
+  &.link--arrow-before:before,
+  &.link--expand:before,
+  &.link--collapse:before,
+  &.link--share:before,
+  &.link--download:before {
     padding-right: 0.5em;
   }
 
-  &:after {
+  &.link--arrow:after {
     padding-left: 0.5em;
   }
 
