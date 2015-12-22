@@ -31,6 +31,10 @@ Style guide: forms.base
 
 .form__label {
   @extend .text--label;
+  color: $text-form-label;
+  // Due to the @extend rules getting grouped at an unknown location, any
+  // property overrides will need !important.
+  text-transform: none !important;
 }
 
 .has-float-label {
@@ -122,7 +126,7 @@ textarea,
   // }
 
   &:hover {
-    border-color: $gray;
+    border-color: $form-border-accent;
   }
 
   &.input--full-width {
@@ -135,7 +139,7 @@ textarea,
 }
 
 input::placeholder {
-  color: $text-medium-body;
+  color: $text-light-body;
 }
 
 @include breakpoint($mobile-only) {

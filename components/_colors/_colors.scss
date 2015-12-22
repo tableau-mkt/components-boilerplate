@@ -273,5 +273,6 @@ $label-colors: (
 // Misc colors
 $error: #DD1E06;
 $teal-dark: #7099a5;
-$form-border: $accent-dividers;
+$form-border: #c2c2c2;
+$form-border-accent: darken($form-border, 20%);
 $transparent: rgba(255,255,255,0);
