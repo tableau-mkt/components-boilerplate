@@ -36,17 +36,11 @@ Style guide: buttons-links.link-formatted
     text-decoration: none;
     font-size: 1.5em;
     padding-bottom: 1px;
-  }
-
-  &.link--arrow-before:before,
-  &.link--expand:before,
-  &.link--collapse:before,
-  &.link--share:before,
-  &.link--download:before {
     padding-right: 0.5em;
   }
 
   &.link--arrow:after {
+    padding-right: 0;
     padding-left: 0.5em;
   }
 
