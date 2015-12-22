@@ -85,6 +85,10 @@ most common proportions for video players.
   @extend %vertical-centered;
 }
 
+.absolute-centered {
+  @extend %absolute-centered;
+}
+
 // Float element to the right
 .float-right {
   float: right;
