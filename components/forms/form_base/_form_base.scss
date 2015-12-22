@@ -23,7 +23,6 @@ Style guide: forms.base
 
 .form-field__label {
   @extend .text--label;
-  color: $text-form-label;
 }
 
 .has-float-label {
@@ -64,7 +63,7 @@ Style guide: forms.base
   .form__select {
     padding-top: 3em;
     padding-bottom: 0.3em;
-    
+
     &:before {
       top: 20px;
     }
