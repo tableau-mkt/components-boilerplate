@@ -25,7 +25,7 @@
       $nav.find('a').click(function(e) {
         var element = $(this).attr('href'),
             offset = $('.subnav').outerHeight(true) - 1;
-        smoothScrollTop($(element), 500, offset);
+        Tabia.smoothScrollTop($(element), 500, offset);
         e.preventDefault();
       });
     }

@@ -1,5 +1,5 @@
 /**
- * Content Reveal utility
+ * Content Reveal utility.
  *
  * Set a wrapper around content as a revealable region. Assign a "trigger"
  * element as the toggle to expand and collapse the content region.
@@ -18,8 +18,12 @@
  * @TODO: Can still use some cleanup and work to be a more agnostic plugin
  */
 
-(function ( $ ) {
+(function ($) {
   $.fn.contentReveal = function(options) {
+
+
+console.log('WAT?!');
+
     // Default settings
     var settings = $.extend({
       contents: $(this),
@@ -63,6 +67,8 @@
           hideText = data.revealHideText,
           type = data.revealType,
           media = data.revealMedia,
+          scrollBehavior = data.revealScroll,
+          $scrollTarget,
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
           customAnimation = customAnimation || settings.animation;
 
@@ -87,7 +93,23 @@
       }
 
       if ($curtain.length) {
-        smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+      }
+
+      // Scroll when reveal is clicked open.
+      if (scrollBehavior) {
+        switch (scrollBehavior) {
+          case 'trigger':
+            $scrollTarget = $trigger;
+            break;
+          case 'target':
+            $scrollTarget = $target;
+            break;
+          default:
+            $scrollTarget = $('#' + scrollBehavior);
+            break;
+        }
+        Tabia.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
       }
     }
 
@@ -142,7 +164,7 @@
 
       // Add a close icon to each content continer
       if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window"></i></a>'));
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
       }
     }
 
@@ -163,4 +185,4 @@
 
     return this;
   }
-}( jQuery ));
+})(jQuery);

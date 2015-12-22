@@ -57,7 +57,7 @@
         marginLeft: '-=100%',
       }, animation);
 
-      smoothScrollTop($parent, animation.duration, offset, true);
+      Tabia.smoothScrollTop($parent, animation.duration, offset, true);
     }
 
     // Hide the target content
