@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="7.1in" height="4.7in" viewBox="0 0 511.1 336.8">
-  <title>newsletter</title>
-  <path d="M509.6,84.7H2.5a2,2,0,0,0-2,2V419.5a2,2,0,0,0,2,2h507a2.1,2.1,0,0,0,2.1-2.1V86.7A2,2,0,0,0,509.6,84.7Zm-45.5,28.6L255.9,264a2.1,2.1,0,0,1-2.5,0L47.1,113.3h417ZM26,127.1L181.2,241.8,26,369V127.1ZM39.1,393L199,257.7h0.1l54.4,39.8a2,2,0,0,0,2.4,0l55.2-39.7h0.1L471,393H39.1Zm445.1-20L329,245.8,484.2,131.1V373Z" transform="translate(-0.5 -84.7)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<title>Master_Icons</title>
+<path d="M509.603,84.698c-0.034,0-0.068,0.001-0.103,0.003H2.5c-1.105,0-2,0.895-2,2v332.8c0,1.105,0.895,2,2,2h507
+	c1.16,0,2.1-0.94,2.1-2.1V86.7C511.601,85.595,510.707,84.699,509.603,84.698z M464.1,113.3L255.9,264c-0.743,0.55-1.757,0.55-2.5,0
+	L47.1,113.3H464.1z M26,127.1l155.2,114.7L26,369V127.1z M39.1,393l160-135.3l54.4,39.8c0.743,0.55,1.757,0.55,2.5,0l55.2-39.7
+	L471,393H39.1z M484.2,373L329,245.8l155.2-114.7V373z"/>
 </svg>
