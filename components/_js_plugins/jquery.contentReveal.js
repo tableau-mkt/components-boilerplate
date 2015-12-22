@@ -20,10 +20,6 @@
 
 (function ($) {
   $.fn.contentReveal = function(options) {
-
-
-console.log('WAT?!');
-
     // Default settings
     var settings = $.extend({
       contents: $(this),
@@ -164,7 +160,7 @@ console.log('WAT?!');
 
       // Add a close icon to each content continer
       if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#">&#9587;</a>'));
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window"></i></a>'));
       }
     }
 
