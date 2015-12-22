@@ -8,3 +8,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* reset margin/padding/border from UA stylesheet */
+form,
+fieldset,
+legend {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
