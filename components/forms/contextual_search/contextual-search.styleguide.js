@@ -3,7 +3,7 @@
  */
 
 jQuery(function ready($) {
-  $('.contextual-search__input').keydown(function (event) {
+  $('.contextual-search .content-search__input').keydown(function (event) {
     var keyCode = $.ui.keyCode;
 
     switch (event.keyCode) {

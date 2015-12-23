@@ -1,10 +1,10 @@
 <div class="content-search contextual-search">
   <div class="contextual-search__ui">
     <form class="contextual-search__form" autocomplete="off">
-      <input class="content-search__input contextual-search__input" type="search" name="{{ id }}" placeholder="{{ placeholder }}">
-      <button class="content-search__button contextual-search__submit" type="submit" name="{{ id }}Submit"><i class="icon icon--search"></i></button>
+      <input class="content-search__input" type="search" name="{{ id }}" placeholder="{{ placeholder }}">
+      <button class="content-search__button content-search__submit" type="submit" name="{{ id }}Submit"><i class="icon icon--search"></i></button>
       {{!-- @todo replace nic cage with close icon --}}
-      <button class="content-search__button contextual-search__reset" type="reset" name="{{ id }}Reset"><i class="icon icon--nic-cage"></i></button>
+      <button class="content-search__button content-search__reset" type="reset" name="{{ id }}Reset"><i class="icon icon--close-window-style2"></i></button>
     </form>
     <div class="contextual-search__results">
       {{#each results}}
