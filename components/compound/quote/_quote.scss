@@ -29,7 +29,8 @@ Style Guide: compound.quote
 
   .quote__byline {
     @extend .text--label;
-    &:before {
+
+    span:first-child:before {
       content: "";
       display: inline-block;
       width: 30px;
