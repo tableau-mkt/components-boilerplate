@@ -15,6 +15,7 @@ Style guide: forms.base
 .form--full-width {
   .form__field {
     width: 100%;
+    max-width: 432px;
   }
 }
 
