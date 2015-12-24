@@ -15,17 +15,17 @@ Weight: 80
 .video-chapters {
   // _link_list.scss
   @extend .link-list--plain;
-  // _formatted_text.scss
-  @extend .text--label;
   // _reveal.scss
   @extend .reveal__content;
-  padding-left: 2em;
+  padding-left: 1em;
   margin-top: 0;
   margin-bottom: 0;
   color: $text-negative;
 }
 
 .video-chapters__chapter {
+// _formatted_text.scss
+  @extend .text--label;
   position: relative;
   cursor: pointer;
   margin-top: 0.5em;
@@ -46,13 +46,21 @@ Weight: 80
 }
 
 .video-chapters__toggle-wrapper {
-  margin-top: 1.5em;
-
   .video-chapters__toggle {
     // _link_formatted.scss
-    @extend .link;
-    @extend .link--expand;
+    @extend .text--label;
     display: inline-block;
+
+    &:before {
+      font-family: 'tableau-icons';
+      content: $icon--view-more;
+      margin-right: 0.6em;
+      font-size: 1.45em;
+    }
+
+    &.is-open:before {
+      content: $icon--view-less;
+    }
   }
 }
 
