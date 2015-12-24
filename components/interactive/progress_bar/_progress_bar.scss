@@ -1,0 +1,35 @@
+/*
+Progress bar
+
+Simple way of displaying progress.
+
+Markup: progress_bar.hbs
+
+Style guide: interactive.progress-bar
+*/
+
+.progress-bar {
+  background: $bg-light-gray-2;
+  height: 15px;
+  width: 100%;
+}
+
+.progress {
+  position: relative;
+  width: 0;
+  height: 100%;
+  background-color: $button-orange-hover;
+  transition: background-color 0.5s ease-in-out, width 1s ease-in-out;
+}
+
+.progress--5 {
+  background-color: $button-orange-hover;
+}
+
+.progress--50 {
+  background-color: $button-orange;
+}
+
+.progress--100 {
+  background-color: $button-final;
+}

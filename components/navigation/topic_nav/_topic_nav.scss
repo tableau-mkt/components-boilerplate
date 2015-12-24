@@ -48,9 +48,9 @@ Style Guide: navigation.topic-nav
         color: $text-dark-body;
       }
 
-      &.active {
+      &.is-active {
         color: $text-dark-body;
-        
+
         &:after {
           opacity: 1;
         }
@@ -58,7 +58,6 @@ Style Guide: navigation.topic-nav
     }
 
     @include breakpoint($mobile-only) {
-
       li {
         margin: 0 .5em;
       }
@@ -108,7 +107,7 @@ Style Guide: navigation.topic-nav
       page-break-inside: avoid;
       break-inside: avoid;
     }
-    
+
     a {
       color: $text-medium-body;
       font-family: $text--benton-light;

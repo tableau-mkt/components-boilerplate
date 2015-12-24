@@ -47,11 +47,12 @@ module.exports = (grunt) ->
     sass_globbing:
       all:
         files:
+          'sass/imports/_colorsMap.scss': 'components/_colors/*.scss'
           'sass/imports/_variablesMap.scss': 'components/_helpers/variables/*.scss'
           'sass/imports/_functionsMap.scss': 'components/_helpers/functions/*.scss'
           'sass/imports/_mixinsMap.scss': 'components/_helpers/mixins/*.scss'
           'sass/imports/_helpersMap.scss': 'components/_helpers/*.scss'
-          'sass/imports/_componentsMap.scss': 'components/**/*.scss'
+          'sass/imports/_componentsMap.scss': ['components/**/*.scss', '!components/media/icons/_tableau-icons.scss']
 
     sass:
       options:
@@ -185,10 +186,7 @@ module.exports = (grunt) ->
 
     webfont:
       icons:
-        src: [
-          'assets/svg/*.svg',
-          'components/{,**/}*.svg'
-        ]
+        src: 'components/media/icons/svg/{,**/}*.svg'
         dest: 'build/fonts'
         destCss: 'components/media/icons'
         options:

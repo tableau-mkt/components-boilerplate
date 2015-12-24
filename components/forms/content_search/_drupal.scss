@@ -1,0 +1,16 @@
+// Extend component to work with Drupal DOM.
+
+.content-search {
+  label,
+  .views-widget-sort-by,
+  .views-widget-sort-order,
+  .form-item-field-geofield-distance-distance,
+  .form-item-field-geofield-distance-unit,
+  .geofield-proximity-origin-from {
+    display: none;
+  }
+}
+
+.content-search .views-exposed-form .views-exposed-widget {
+  padding: 0;
+}

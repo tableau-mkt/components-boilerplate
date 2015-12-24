@@ -22,13 +22,14 @@ Style guide: interactive.reveal
 .reveal__close {
   position: absolute;
   z-index: 5;
-  right: 10px;
-  top: 10px;
-  width: 45px;
-  height: 45px;
+  right: 6px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
-  font-size: em(24px);
+  font-size: em(15px);
   color: #fff;
   text-align: center;
   font-weight: bold;
@@ -37,5 +38,27 @@ Style guide: interactive.reveal
   &:hover {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@include breakpoint($tablet-min) {
+  .reveal__close {
+    right: 8px;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    font-size: em(20px);
+  }
+}
+
+@include breakpoint($desktop-min) {
+  .reveal__close {
+    right: 10px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+    font-size: em(24px);
   }
 }
