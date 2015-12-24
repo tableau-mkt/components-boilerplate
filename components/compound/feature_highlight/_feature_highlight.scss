@@ -23,23 +23,22 @@ Style guide: compound.feature-highlight
 
     .feature-highlight__image {
       order: 2;
-      width: 70%;
+      width: 65%;
       margin-left: 5%;
-      margin-right: -10%;
       text-align: right;
       line-height: 0;
     }
 
     .feature-highlight__copy {
       order: 1;
-      width: 35%;
+      width: 30%;
     }
 
     &.feature-highlight--image-left {
       .feature-highlight__image {
-        order: 1;
-        margin-left: -10%;
         margin-right: 5%;
+        margin-left: 0;
+        order: 1;
       }
 
       .feature-highlight__copy {
@@ -51,6 +50,13 @@ Style guide: compound.feature-highlight
   @include breakpoint($desktop-only) {
     .feature-highlight__image {
       width: 80%;
+      margin-right: -10%;
+    }
+
+    &.feature-highlight--image-left {
+      .feature-highlight__image {
+        margin-left: -10%;
+      }
     }
 
     .feature-highlight__copy {
