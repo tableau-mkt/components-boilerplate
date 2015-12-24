@@ -1,15 +1,21 @@
 <div class="special-hero {{ modifier_class }}">
   <div id="{{ heroId }}">
-    {{#if video}}
+
+    {{#if brightcove_id}}
+      <div class="special-hero__video">
+        <video data-video-id="{{ brightcove_id }}" data-account="3798483592001" data-player="68382327-2210-45c8-920a-a606cbb6de49" data-embed="default" class="video-js" controls>
+          <img src="{{ background }}">
+        </video>
+        <script src="//players.brightcove.net/3798483592001/68382327-2210-45c8-920a-a606cbb6de49_default/index.min.js"></script>
+      </div>
+    {{else if video}}
       <div class="special-hero__video">
         <video autoplay="" loop="">
           <source src="{{ video }}" type="video/mp4">
           <img src="{{ background }}">
         </video>
       </div>
-    {{/if}}
-
-    {{#if background}}
+    {{else if background}}
       <div class="special-hero__background">
         <div class="special-hero__background-inner" style="background-image: url({{ background }});">
         </div>
@@ -23,6 +29,7 @@
         </div>
       </div>
     {{/if}}
+
   </div>
 
   {{#if revealContent}}
