@@ -21,7 +21,7 @@
   "drawers": [
     {
       "id": "nic",
-      "class": "active",
+      "class": "is-active",
       "topics": [
         {
           "label": "Leaving Las Vegas",

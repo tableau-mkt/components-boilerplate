@@ -1,4 +1,4 @@
-/** 
+/**
  * Topic Navigation interaction
  * Requires jquery.contentReveal.js and jquery.tabs.js
  */
@@ -7,7 +7,8 @@
   $(document).ready(function() {
     // Tabs integration
     $('.topic-nav__tabs a').tabs({
-      contents: $('.topic-nav__drawer')
+      contents: $('.topic-nav__drawer'),
+      wrapper: $('.topic-nav')
     });
 
     // contentReveal interaction
@@ -21,15 +22,16 @@
       var $parentNav = $(this).closest('.topic-nav');
 
       if ($(this).data('revealState') == 'open') {
-        $parentNav.find('.topic-nav__tabs a').eq(0).trigger('click').addClass('active');
-      } else {
-        $parentNav.find('.topic-nav__tabs a').removeClass('active');
+        $parentNav.find('.topic-nav__tabs a').eq(0).trigger('click').addClass('is-active');
+      }
+      else {
+        $parentNav.find('.topic-nav__tabs a').removeClass('is-active');
       }
     });
 
     $('.topic-nav__tabs a').on('click.topic-nav', function(e) {
       var $toggle = $(this).closest('.topic-nav').find('.topic-nav__toggle');
-      
+
       if ($toggle.data('revealState') == 'closed') {
         $toggle.trigger('click.reveal');
       }
