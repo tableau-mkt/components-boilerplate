@@ -16,7 +16,7 @@ Style guide: images.thumbnail
   overflow: hidden;
   max-width: 100%;
   line-height: 0;
-  
+
   img {
     max-width: 100%;
     @include transition(all 750ms ease);
@@ -27,11 +27,17 @@ Style guide: images.thumbnail
   }
 
   &.thumbnail--play:after {
-    content: url(../images/shame/icons/icon-play-xlarge.png);
+    content: $icon--play-button;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -36px 0 0 -36px;
+    display: block;
+    margin: -40px 0 0 -40px;
+    line-height: 1;
+    font-family:"tableau-icons";
+    font-size: 5em;
+    color: $text-negative;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     pointer-events: none;
   }
 }
