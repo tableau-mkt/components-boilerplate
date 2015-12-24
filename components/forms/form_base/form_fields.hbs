@@ -1,0 +1,66 @@
+<div class="form {{modifier_class}}">
+  <div class="form-field has-float-label">
+    <label class="form-field__label" for="text-field">Text Field:</label>
+    <input class="form-field__control" type="text" name="text-field" id="text-field" placeholder="text">
+  </div>
+
+  <div class="form-field">
+    <label class="form-field__label" for="text-field-2">Text Field (No Placeholder)</label>
+    <br>
+    <input class="form-field__control" type="text" name="text-field-2" id="text-field-2">
+  </div>
+
+  <div class="form-field has-float-label">
+    <label class="form-field__label" for="email-field">Email Field:</label>
+    <input class="form-field__control" type="email" name="email-field" id="email-field" placeholder="email">
+  </div>
+
+  <div class="form-field has-float-label">
+    <label class="form-field__label" for="password-field">Password Field:</label>
+    <input class="form-field__control" type="password" name="password-field" id="password-field" placeholder="password">
+  </div>
+
+  <div class="form-field has-float-label">
+    <label class="form-field__label" for="sample-textarea">Long text</label>
+    <textarea class="form-field__control" rows="5" name="sample-textarea" placeholder="Long text here..."></textarea>
+  </div>
+
+  <div class="form-field">
+    <label class="form-field__label" for="sample-textarea">Long text (No Placeholder)</label>
+    <br>
+    <textarea class="form-field__control" rows="5" name="sample-textarea"></textarea>
+  </div>
+
+  <div class="form-field form-field--select has-float-label">
+    <label class="form-field__label" for="sample-select">Select List</label>
+
+    <div class="form-field__pseudo-control">
+      <select name="sample-select">
+        <option class="form-field__option-none" value="_none" disabled selected>Select List</option>
+        <option value="one">Choice One</option>
+        <option value="two">Choice Two</option>
+        <option value="three">Choice Three</option>
+        <option value="four">Choice Four</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-field form-field--select">
+    <label class="form-field__label" for="sample-select">Select List (No Placeholder)</label>
+    <br>
+    <div class="form-field__pseudo-control">
+      <select name="sample-select">
+        <option selected>--</option>
+        <option value="one">Choice One</option>
+        <option value="two">Choice Two</option>
+        <option value="three">Choice Three</option>
+        <option value="four">Choice Four</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <input type="checkbox" name="example-checkbox" id="example-checkbox">
+    <label class="form-field__label" for="example-checkbox">A Great Checkbox</label>
+  </div>
+</div>

@@ -86,7 +86,7 @@
       return $(el).find('label');
     };
 
-    Plugin.prototype._onKeyUp = function (ev) {
+    Plugin.prototype._checkValue = function () {
       // On empty value, inactivate the label.
       if (this._input.val() === '') {
         this._label.removeClass(this.options.activeClass);
@@ -94,6 +94,10 @@
       else {
         this._label.addClass(this.options.activeClass);
       }
+    };
+
+    Plugin.prototype._onKeyUp = function (ev) {
+      this._checkValue();
       ev && ev.preventDefault();
     };
 
@@ -112,6 +116,9 @@
     Plugin.prototype.init = function () {
       // Mark the element as having been init'ed.
       this._element.addClass(this.options.wrapperInitClass);
+
+      // Check value for initial active class.
+      this._checkValue();
 
       // Event bindings to the input element.
       this._input.on('keyup change', $.proxy(this._onKeyUp, this));

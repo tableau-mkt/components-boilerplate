@@ -12,18 +12,12 @@ Weight: 0
 Style guide: forms.base
 */
 
-.form--full-width {
-  .form__field {
-    width: 100%;
-    max-width: 432px;
-  }
-}
-
 .form__intro {
   text-align: center;
   margin-bottom: 1.5em;
 }
 
+<<<<<<< HEAD
 .form__field-wrapper {
   @extend %clearfix;
   position: relative;
@@ -60,8 +54,16 @@ Style guide: forms.base
     &.has-focus {
       @include transition(opacity 50ms ease, transform 150ms ease);
     }
+=======
+.form--full-width {
+  .form__field {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 432px;
+>>>>>>> Wrapping up form errors and tweaks to form component.
   }
 
+  .form__control,
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -69,48 +71,116 @@ Style guide: forms.base
   input[type="number"],
   input[type="email"],
   textarea {
-    padding-top: 1.7em;
-    padding-bottom: 0.3em;
-  }
-
-  .form__select {
-    padding-top: 3em;
-    padding-bottom: 0.3em;
-
-    &:before {
-      top: 20px;
-    }
-
-    &:after {
-      top: 19px;
-    }
-
-    select {
-      padding-top: 1.1em;
-    }
+    width: 100%;
   }
 }
 
+
 /*
-Input Fields
+Form Fields
 
-Text inputs on a form. Including text fields types, textareas
+Form fields with their related controls, labels, error messaging, etc.
 
-Markup: form_input.hbs
+Markup: form_fields.hbs
 
 Weight: 1
 
-Style guide: forms.input
+Style guide: forms.fields
 */
+.form-field {
+  @extend %clearfix;
+  position: relative;
+  margin-bottom: 1em;
+
+  .form-field__label,
+  .form-field__description {
+    @extend .text--label;
+    color: $text-form-label;
+    // Due to the @extend rules getting grouped at an unknown location, any
+    // property overrides will need !important.
+    text-transform: none !important;
+  }
+
+  .form-field__description {
+    margin-top: 0.25em;
+  }
+
+  &.form-field--invalid .form-field__label,
+  &.form-field--invalid .form-field__error {
+    color: $msg-error-text;
+  }
+
+  // Floated label overrides.
+  &.has-float-label {
+    .form-field__label {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      left: 0.7em;
+      top: 0.5em;
+
+      // These are javascript activated state classes.
+      // @see jquery.floatlabel.js
+      // &.has-focus,
+      &.is-active {
+        pointer-events: all;
+        display: block;
+        transform: translateY(-0.2em);
+        opacity: 1;
+        z-index: 1;
+      }
+      &.has-focus {
+        @include transition(opacity 50ms ease, transform 150ms ease);
+      }
+    }
+
+    .form-field__control,
+    .form-field__pseudo-control,
+    input[type="text"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    textarea {
+      padding-top: 1.7em;
+      padding-bottom: 0.3em;
+    }
+  }
+
+  // Floated label select field overrides — separated out for readability.
+  &.has-float-label.form-field--select {
+    .form-field__pseudo-control {
+      padding-top: 3em;
+      padding-bottom: 0.3em;
+
+      &:before {
+        top: 24px;
+      }
+
+      &:after {
+        top: 23px;
+      }
+
+      select {
+        padding-top: 1.1em;
+      }
+    }
+
+  }
+}
+
+.form-field__control,
+.form-field__pseudo-control,
 input[type="text"],
 input[type="search"],
 input[type="tel"],
 input[type="password"],
 input[type="number"],
 input[type="email"],
-textarea,
-.form__select {
+textarea {
   @include transition(border-color 250ms);
+  display: block;
   box-sizing: border-box;
   border: 1px solid $form-border;
   border-radius: 0;
@@ -121,22 +191,22 @@ textarea,
   outline: none;
   text-align: left;
 
-  // @TODO see if we even need this.
-  // @include breakpoint($mobile-only) {
-  //   width: 100%;
-  // }
-
   &:hover {
     border-color: $form-border-accent;
   }
+}
 
-  &.input--full-width {
-    width: 100%;
-  }
-
-  .form--single-field & {
-    text-align: center;
-  }
+// Avoiding `.form-field--invalid &` sass selector, for kss compatibility.
+.form-field--invalid .form-field__control,
+.form-field--invalid .form-field__pseudo-control,
+.form-field--invalid input[type="text"],
+.form-field--invalid input[type="search"],
+.form-field--invalid input[type="tel"],
+.form-field--invalid input[type="password"],
+.form-field--invalid input[type="number"],
+.form-field--invalid input[type="email"],
+.form-field--invalid textarea {
+  border-color: $msg-error-text;
 }
 
 input::placeholder {
@@ -149,62 +219,63 @@ input::placeholder {
   }
 }
 
-.form__select {
-  position: relative;
-  padding: 2em 0.5em 0.3em;
+.form-field--select {
+  .form-field__pseudo-control {
+    position: relative;
+    padding: 2em 0.5em 0.3em;
 
-  // Select arrow through pseudo selector triangles
-  &:before,
-  &:after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom: 0;
-    pointer-events: none;
-  }
+    // Select arrow through pseudo selector triangles
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom: 0;
+      pointer-events: none;
+    }
 
-  /* Stroke */
-  &:before {
-    top: 15px;
-    right: 11px;
-    border-top-color: $form-border;
-    border-width: 8px;
-  }
+    /* Stroke */
+    &:before {
+      top: 15px;
+      right: 11px;
+      border-top-color: $form-border;
+      border-width: 8px;
+    }
 
-  /* Fill */
-  &:after {
-    top: 14px;
-    right: 12px;
-    border-top-color: $white;
-    border-width: 7px;
-  }
+    /* Fill */
+    &:after {
+      top: 14px;
+      right: 12px;
+      border-top-color: $white;
+      border-width: 7px;
+    }
 
+    select {
+      @extend %cover-absolute;
+      width: 100%;
+      left: 0.5em;
+      border: 0;
+      appearance: none;
+      outline: none;
+      background: transparent;
+      font-size: 1em;
+      color: $text-dark-body;
+    }
 
-  select {
-    @extend %cover-absolute;
-    width: 100%;
-    left: 0.5em;
-    border: 0;
-    appearance: none;
-    outline: none;
-    background: transparent;
-    font-size: 1em;
-    color: $text-dark-body;
-  }
-
-  select::-ms-expand {
-    display: none;
-  }
-}
-
-select {
-  .select-placeholder {
-    color: $text-medium-body;
+    // Separate, because IE is lame.
+    select::-ms-expand {
+      display: none;
+    }
   }
 }
+
+.form-field__option-none {
+  color: $text-medium-body;
+}
+
 
 /*
 Submit Buttons
@@ -218,25 +289,8 @@ Weight: 2
 Style guide: forms.actions
 */
 
-// .form-action--primary__wrapper {
-//   @extend .cta;
-//   @extend .cta--secondary;
-// }
-
-// input[type="submit"] {
-//   @extend %reset-box;
-//   @extend .link;
-//   font-size: 1em;
-//   background: transparent;
-
-//   &.is-submitting,
-//   &.is-submitted,
-//   &.is-errored {
-//     cursor: inherit;
-//   }
-// }
-
 .form {
+  .form__button,
   input[type="submit"] {
     @extend .cta;
     @extend .cta--secondary;
@@ -254,7 +308,6 @@ Style guide: forms.actions
       min-width: 40%;
     }
 
-
     &.is-submitting,
     &.is-submitted,
     &.is-errored {
@@ -264,21 +317,23 @@ Style guide: forms.actions
 }
 
 
-
 /*
 Validation Messages
 
-Nothing to see here yet...
+Warnings, errors, etc.
 
 Markup: form_validation.hbs
 
 Weight: 3
 
+Nodefault: true
+
+.form-field--invalid - Invalid form field
+
 Style guide: forms.validation
 */
-.form__field--invalid {
-  display: none;
-  color: $error;
+.form-field--invalid {
+  color: $msg-error-text;
 }
 
 
