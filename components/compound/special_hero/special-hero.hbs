@@ -1,25 +1,36 @@
 <div class="special-hero {{ modifier_class }}">
   <div id="{{ heroId }}">
 
-    {{#if brightcove_id}}
+    {{#if brightcoveId}}
       <div class="special-hero__video">
-        <video data-video-id="{{ brightcove_id }}" data-account="3798483592001" data-player="68382327-2210-45c8-920a-a606cbb6de49" data-embed="default" class="video-js" controls>
-          <img src="{{ background }}">
-        </video>
-        <script src="//players.brightcove.net/3798483592001/68382327-2210-45c8-920a-a606cbb6de49_default/index.min.js"></script>
-      </div>
-    {{else if video}}
-      <div class="special-hero__video">
-        <video autoplay="" loop="">
-          <source src="{{ video }}" type="video/mp4">
-          <img src="{{ background }}">
-        </video>
-      </div>
-    {{else if background}}
-      <div class="special-hero__background">
-        <div class="special-hero__background-inner" style="background-image: url({{ background }});">
+        <div class="special-hero__video-inner" style="background-image: url({{ background }});">
+          <video data-video-id="{{ brightcoveId }}" data-account="3798483592001" data-player="68382327-2210-45c8-920a-a606cbb6de49" data-embed="default" class="video-js" autoplay controls>
+            <img src="{{ background }}">
+          </video>
+          <script src="//players.brightcove.net/3798483592001/68382327-2210-45c8-920a-a606cbb6de49_default/index.min.js"></script>
         </div>
       </div>
+    {{else}}
+
+      {{#if video}}
+        <div class="special-hero__video">
+          <div class="special-hero__video-inner">
+            <video autoplay="" loop="">
+              <source src="{{ video }}" type="video/mp4">
+              <img src="{{ background }}">
+            </video>
+          </div>
+        </div>
+      {{else}}
+
+        {{#if background}}
+          <div class="special-hero__background">
+            <div class="special-hero__background-inner" style="background-image: url({{ background }});">
+            </div>
+          </div>
+        {{/if}}
+
+      {{/if}}
     {{/if}}
 
     {{#if content}}

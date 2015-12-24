@@ -1,6 +1,6 @@
 {
   "video": false,
-  "brightcove_id": "4673566717001",
+  "brightcoveId": "4673566717001",
   "background": "http://www.placecage.com/g/1366/540",
   "content": "<h1>Answer questions as fast<br class='tablet-hide'>as you can think of them<br class='tablet-hide'>with <strong>Tableau Desktop.</strong></h1><p><a class='cta cta--play reveal__trigger cta--secondary cta--light' href='#' data-reveal-target='video' data-reveal-media='video' data-reveal-curtain='hero-text'>See it in action</a></p><p>  <a href='/products/trial' class='link  link--arrow'>Try it for Free</a></p>",
   "heroId": "hero-text",
