@@ -91,9 +91,8 @@
       if ($curtain.length) {
         Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
       }
-
-      // Scroll when reveal is clicked open.
-      if (scrollBehavior) {
+      else if (scrollBehavior) {
+        // Scroll when reveal is clicked open.
         switch (scrollBehavior) {
           case 'trigger':
             $scrollTarget = $trigger;
