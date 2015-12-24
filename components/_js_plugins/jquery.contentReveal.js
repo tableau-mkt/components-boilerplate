@@ -99,7 +99,11 @@
           showText = data.revealShowText,
           media = data.revealMedia;
 
-      $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
+      $(trigger).data('revealState', 'closed').removeClass('open');
+
+      if (showText !== undefined) {
+        $(trigger).text(showText);
+      }
 
       $target.slideHeight('up', settings.animation);
 
@@ -124,7 +128,9 @@
         $target.data('revealTrigger', $(this));
 
         // Save original trigger text
-        settings.triggers.data('revealShowText', showText);
+        if ($(this).data('revealHideText') !== undefined) {
+          settings.triggers.data('revealShowText', showText);
+        }
       });
 
       // // Set initial margin on content if there is a curtain
