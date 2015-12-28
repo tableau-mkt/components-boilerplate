@@ -65,8 +65,9 @@
           media = data.revealMedia,
           scrollBehavior = data.revealScroll,
           $scrollTarget,
-          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
-          customAnimation = customAnimation || settings.animation;
+          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
+
+      customAnimation = customAnimation || settings.animation;
 
       $trigger.data('revealState', 'open').addClass('open');
       if (hideText != "") {
@@ -88,11 +89,8 @@
         }, customAnimation.duration/2);
       }
 
-      if ($curtain.length) {
-        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
-      }
-      else if (scrollBehavior) {
-        // Scroll when reveal is clicked open.
+      // Scroll when reveal is clicked open.
+      if (scrollBehavior) {
         switch (scrollBehavior) {
           case 'trigger':
             $scrollTarget = $trigger;
@@ -105,6 +103,10 @@
             break;
         }
         Tabia.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
+      }
+      else if ($curtain.length) {
+        // Use curtain for scroll.
+        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
       }
     }
 
