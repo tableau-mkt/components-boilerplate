@@ -70,6 +70,7 @@ Style guide: forms.base
   input[type="password"],
   input[type="number"],
   input[type="email"],
+  select,
   textarea {
     width: 100%;
   }
@@ -142,6 +143,7 @@ Style guide: forms.fields
     input[type="password"],
     input[type="number"],
     input[type="email"],
+    select,
     textarea {
       padding-top: 1.7em;
       padding-bottom: 0.3em;
@@ -178,6 +180,7 @@ input[type="tel"],
 input[type="password"],
 input[type="number"],
 input[type="email"],
+select,
 textarea {
   @include transition(border-color 250ms);
   display: block;
@@ -191,8 +194,13 @@ textarea {
   outline: none;
   text-align: left;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $form-border-accent;
+  }
+
+  &:focus {
+    border-color: $text-form-label;
   }
 }
 
@@ -205,6 +213,7 @@ textarea {
 .form-field--invalid input[type="password"],
 .form-field--invalid input[type="number"],
 .form-field--invalid input[type="email"],
+.form-field--invalid select,
 .form-field--invalid textarea {
   border-color: $msg-error-text;
 }
@@ -219,57 +228,53 @@ input::placeholder {
   }
 }
 
-.form-field--select {
-  .form-field__pseudo-control {
-    position: relative;
-    padding: 2em 0.5em 0.3em;
+select {
+  @extend %cover-absolute;
+  position: relative;
+  padding: 2em 0.5em 0.3em;
+  width: 100%;
+  appearance: none;
+  outline: none;
+  font-size: 1em;
+  color: $text-dark-body;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 512 512'%3E%3Cpath fill='%23787878' d='M5.2,176.9a12.5,12.5,0,0,1-2.7-17.5,12.5,12.5,0,0,1,17.5-2.7L256,326.8,492.2,156.6A12.5,12.5,0,1,1,506.7,177L256,357.8Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  background-size: 10px auto;
 
-    // Select arrow through pseudo selector triangles
-    &:before,
-    &:after {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-color: transparent;
-      border-bottom: 0;
-      pointer-events: none;
-    }
-
-    /* Stroke */
-    &:before {
-      top: 15px;
-      right: 11px;
-      border-top-color: $form-border;
-      border-width: 8px;
-    }
-
-    /* Fill */
-    &:after {
-      top: 14px;
-      right: 12px;
-      border-top-color: $white;
-      border-width: 7px;
-    }
-
-    select {
-      @extend %cover-absolute;
-      width: 100%;
-      left: 0.5em;
-      border: 0;
-      appearance: none;
-      outline: none;
-      background: transparent;
-      font-size: 1em;
-      color: $text-dark-body;
-    }
-
-    // Separate, because IE is lame.
-    select::-ms-expand {
-      display: none;
-    }
+  // Select arrow through pseudo selector triangles
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+    pointer-events: none;
   }
+
+  /* Stroke */
+  &:before {
+    top: 15px;
+    right: 11px;
+    border-top-color: $form-border;
+    border-width: 8px;
+  }
+
+  /* Fill */
+  &:after {
+    top: 14px;
+    right: 12px;
+    border-top-color: $white;
+    border-width: 7px;
+  }
+}
+
+// Separate, because IE is lame.
+select::-ms-expand {
+  display: none;
 }
 
 .form-field__option-none {
@@ -298,6 +303,7 @@ Style guide: forms.actions
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    outline: none;
 
     @include breakpoint($tablet-min) {
       width: auto;
