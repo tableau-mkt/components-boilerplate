@@ -224,11 +224,6 @@ Style guide: forms.actions
 
     @include breakpoint($tablet-min) {
       width: auto;
-      min-width: 60%;
-    }
-
-    @include breakpoint($desktop-min) {
-      min-width: 40%;
     }
 
     &.is-submitting,
