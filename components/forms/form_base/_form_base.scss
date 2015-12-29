@@ -182,6 +182,8 @@ select {
   outline: none;
   font-size: 1em;
   color: $text-dark-body;
+  // Inline SVG generator: http://codepen.io/jakob-e/pen/doMoML
+  // Note: adjusted svg[width], svg[height], path[fill] attributes.
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 512 512'%3E%3Cpath fill='%23787878' d='M5.2,176.9a12.5,12.5,0,0,1-2.7-17.5,12.5,12.5,0,0,1,17.5-2.7L256,326.8,492.2,156.6A12.5,12.5,0,1,1,506.7,177L256,357.8Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1em center;
