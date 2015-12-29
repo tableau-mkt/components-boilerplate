@@ -5,6 +5,8 @@ Markup: formatted.hbs
 
 Weight: 30
 
+Bgcolor: #F7F9FB
+
 .text--bold - Bold text for emphasis. Same as `<strong>`
 .text--light - Light text. Default for non-headings
 .text--italic - Italic text for emphasis. Same as `<em>`
@@ -14,6 +16,8 @@ Weight: 30
 .text--centered - Center justified text
 .text--justified - Justified text
 .text--lineheight-zero - Line height set to zero.
+.text--contrast-light - Text with a shadow to make light text more readable on light or busy background images
+.text--contrast-dark - Text with a shadow to make dark text more readable on dark or busy background images
 
 Style guide: typography.formatted
 */
@@ -50,6 +54,12 @@ em,
 }
 .text--lineheight-zero {
   line-height: 0;
+}
+.text--contrast-light {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.text--contrast-dark {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -94,7 +104,7 @@ Style guide: typography.colors
     h5, .heading--h5,
     h6, .heading--h6 {
       color: $color;
-      
+
       a {
         color: $color;
       }
