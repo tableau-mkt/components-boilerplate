@@ -1,5 +1,5 @@
 /**
- * Content Reveal utility
+ * Content Reveal utility.
  *
  * Set a wrapper around content as a revealable region. Assign a "trigger"
  * element as the toggle to expand and collapse the content region.
@@ -18,7 +18,7 @@
  * @TODO: Can still use some cleanup and work to be a more agnostic plugin
  */
 
-(function ( $ ) {
+(function ($) {
   $.fn.contentReveal = function(options) {
     // Default settings
     var settings = $.extend({
@@ -63,8 +63,11 @@
           hideText = data.revealHideText,
           type = data.revealType,
           media = data.revealMedia,
-          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
-          customAnimation = customAnimation || settings.animation;
+          scrollBehavior = data.revealScroll,
+          $scrollTarget,
+          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
+
+      customAnimation = customAnimation || settings.animation;
 
       $trigger.data('revealState', 'open').addClass('open');
       if (hideText != "") {
@@ -86,8 +89,24 @@
         }, customAnimation.duration/2);
       }
 
-      if ($curtain.length) {
-        smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+      // Scroll when reveal is clicked open.
+      if (scrollBehavior) {
+        switch (scrollBehavior) {
+          case 'trigger':
+            $scrollTarget = $trigger;
+            break;
+          case 'target':
+            $scrollTarget = $target;
+            break;
+          default:
+            $scrollTarget = $('#' + scrollBehavior);
+            break;
+        }
+        Tabia.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
+      }
+      else if ($curtain.length) {
+        // Use curtain for scroll.
+        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
       }
     }
 
@@ -163,4 +182,4 @@
 
     return this;
   }
-}( jQuery ));
+})(jQuery);

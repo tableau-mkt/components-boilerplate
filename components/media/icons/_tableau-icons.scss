@@ -96,7 +96,12 @@ Markup: icon.hbs
 .icon--self-suffiency - self-suffiency icon
 .icon--server-admin - server-admin icon
 .icon--share - share icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
 .icon--social-rss - social-rss icon
+.icon--social-twitter - social-twitter icon
 .icon--space - space icon
 .icon--tableau-desktop - tableau-desktop icon
 .icon--tableau-logo - tableau-logo icon
@@ -123,10 +128,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-9079d536a1d41ae766611a939fb12089.eot?9079d536a1d41ae766611a939fb12089");
-  src:url("../fonts/tableau-icons-9079d536a1d41ae766611a939fb12089.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-9079d536a1d41ae766611a939fb12089.woff?9079d536a1d41ae766611a939fb12089") format("woff"),
-		url("../fonts/tableau-icons-9079d536a1d41ae766611a939fb12089.ttf?9079d536a1d41ae766611a939fb12089") format("truetype");
+  src:url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.eot?5f94d9d2f0c98afc5acf9cfa92e89d5f");
+  src:url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.woff?5f94d9d2f0c98afc5acf9cfa92e89d5f") format("woff"),
+		url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.ttf?5f94d9d2f0c98afc5acf9cfa92e89d5f") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -654,121 +659,151 @@ $icon--server-admin: "\f153";
 $icon--share: "\f154";
 
 
-.icon--social-rss:before {
+.icon--social-facebook:before {
   content:"\f155";
 }
-$icon--social-rss: "\f155";
+$icon--social-facebook: "\f155";
+
+
+.icon--social-gplus:before {
+  content:"\f156";
+}
+$icon--social-gplus: "\f156";
+
+
+.icon--social-instagram:before {
+  content:"\f157";
+}
+$icon--social-instagram: "\f157";
+
+
+.icon--social-linkedin:before {
+  content:"\f158";
+}
+$icon--social-linkedin: "\f158";
+
+
+.icon--social-rss:before {
+  content:"\f159";
+}
+$icon--social-rss: "\f159";
+
+
+.icon--social-twitter:before {
+  content:"\f15a";
+}
+$icon--social-twitter: "\f15a";
 
 
 .icon--space:before {
-  content:"\f156";
+  content:"\f15b";
 }
-$icon--space: "\f156";
+$icon--space: "\f15b";
 
 
 .icon--tableau-desktop:before {
-  content:"\f157";
+  content:"\f15c";
 }
-$icon--tableau-desktop: "\f157";
+$icon--tableau-desktop: "\f15c";
 
 
 .icon--tableau-logo:before {
-  content:"\f158";
+  content:"\f15d";
 }
-$icon--tableau-logo: "\f158";
+$icon--tableau-logo: "\f15d";
 
 
 .icon--tableau-online:before {
-  content:"\f159";
+  content:"\f15e";
 }
-$icon--tableau-online: "\f159";
+$icon--tableau-online: "\f15e";
 
 
 .icon--tableau-public:before {
-  content:"\f15a";
+  content:"\f15f";
 }
-$icon--tableau-public: "\f15a";
+$icon--tableau-public: "\f15f";
 
 
 .icon--tableau-reader:before {
-  content:"\f15b";
+  content:"\f160";
 }
-$icon--tableau-reader: "\f15b";
+$icon--tableau-reader: "\f160";
 
 
 .icon--tableau-server:before {
-  content:"\f15c";
+  content:"\f161";
 }
-$icon--tableau-server: "\f15c";
+$icon--tableau-server: "\f161";
 
 
 .icon--tailor-content:before {
-  content:"\f15d";
+  content:"\f162";
 }
-$icon--tailor-content: "\f15d";
+$icon--tailor-content: "\f162";
 
 
 .icon--technology:before {
-  content:"\f15e";
+  content:"\f163";
 }
-$icon--technology: "\f15e";
+$icon--technology: "\f163";
 
 
 .icon--unanswered:before {
-  content:"\f15f";
+  content:"\f164";
 }
-$icon--unanswered: "\f15f";
+$icon--unanswered: "\f164";
 
 
 .icon--upload:before {
-  content:"\f160";
+  content:"\f165";
 }
-$icon--upload: "\f160";
+$icon--upload: "\f165";
 
 
 .icon--user-groups:before {
-  content:"\f161";
+  content:"\f166";
 }
-$icon--user-groups: "\f161";
+$icon--user-groups: "\f166";
 
 
 .icon--view-less:before {
-  content:"\f162";
+  content:"\f167";
 }
-$icon--view-less: "\f162";
+$icon--view-less: "\f167";
 
 
 .icon--view-more:before {
-  content:"\f163";
+  content:"\f168";
 }
-$icon--view-more: "\f163";
+$icon--view-more: "\f168";
 
 
 .icon--wikis:before {
-  content:"\f164";
+  content:"\f169";
 }
-$icon--wikis: "\f164";
+$icon--wikis: "\f169";
 
 
 .icon--windows:before {
-  content:"\f165";
+  content:"\f16a";
 }
-$icon--windows: "\f165";
+$icon--windows: "\f16a";
 
 
 .icon--workbook-library:before {
-  content:"\f166";
+  content:"\f16b";
 }
-$icon--workbook-library: "\f166";
+$icon--workbook-library: "\f16b";
 
 
 .icon--write:before {
-  content:"\f167";
+  content:"\f16c";
 }
-$icon--write: "\f167";
+$icon--write: "\f16c";
 
 
 .icon--youtube:before {
-  content:"\f168";
+  content:"\f16d";
 }
-$icon--youtube: "\f168";
+$icon--youtube: "\f16d";

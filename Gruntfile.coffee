@@ -198,8 +198,11 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
     clean:
-      icons:
-        src: ["build/fonts/tableau-icons-*"]
+      built:
+        src: [
+          "build/**/*"
+          "styleguide/**/*"
+        ]
       partials:
         src: ["template/_partials/*.hbs"]
 
@@ -255,7 +258,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
-    'clean:icons'
+    'clean:built'
     'clean:partials'
     'webfont:icons'
     'sass_globbing'
