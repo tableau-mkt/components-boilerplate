@@ -57,7 +57,7 @@ Style guide: forms.fields
   .form-field__label,
   .form-field__description {
     @extend .text--label;
-    color: $text-form-label;
+    color: $text-form-float-label;
     // Due to the @extend rules getting grouped at an unknown location, any
     // property overrides will need !important.
     text-transform: none !important;
@@ -138,8 +138,14 @@ textarea {
   }
 
   &:focus {
-    border-color: $text-form-label;
+    border-color: $text-form-float-label;
   }
+}
+
+// Un-color label on checkboxes.
+.form-field--checkbox .form-field__label,
+.form-field--checkbox label {
+  color: inherit;
 }
 
 // Avoiding `.form-field--invalid &` sass selector, for kss compatibility.
