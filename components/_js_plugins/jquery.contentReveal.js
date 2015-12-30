@@ -101,7 +101,7 @@
 
       $(trigger).data('revealState', 'closed').removeClass('is-open');
 
-      if (typeof showText === 'undefined') {
+      if (typeof showText !== 'undefined') {
         $(trigger).text(showText);
       }
 
