@@ -42,21 +42,21 @@ Style guide: layout.container
     padding-left: 22%;
     padding-right: 22%;
   }
-}
 
-// Responsive handling to set all content contaners to the same width on tablet
-// and mobile
-.content-container,
-.content-container--wide,
-.content-container--narrow,
-.content-container--text-column {
-  @include breakpoint($tablet-max) {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+  // Responsive handling to set all content contaners to the same width on tablet
+  // and mobile
+  &,
+  &.content-container--wide,
+  &.content-container--narrow,
+  &.content-container--text-column {
+    @include breakpoint($tablet-max) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
 
-  @include breakpoint($mobile-only) {
-    padding-left: 1em;
-    padding-right: 1em;
+    @include breakpoint($mobile-only) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
 }
