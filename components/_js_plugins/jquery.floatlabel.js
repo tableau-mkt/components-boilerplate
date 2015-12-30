@@ -36,6 +36,8 @@
           // Class given to label when its field has a non-null value. Toggled
           // when the value is empty / falsy.
           activeClass: 'is-active',
+          // Class given to input when it has an empty value.
+          emptyClass: 'is-empty',
           // Class given to label when its field is focused. Toggled when it
           // loses focus.
           focusClass: 'has-focus'
@@ -63,15 +65,15 @@
     }
 
     // Utility: find a input that we want to alter the label for.
-    Plugin.prototype._findInput = function(el) {
-      var $textInputs = $(el).find('input, textarea').not('[type="checkbox"], [type="radio"]');
+    Plugin.prototype._findInput = function($el) {
+      var $textInputs = $el.find('input, textarea').not('[type="checkbox"], [type="radio"]');
       // The regular text input types.
       if ($textInputs.length) {
         return $textInputs;
       }
       // Try for select elements.
       else {
-        return $(el).find('select');
+        return $el.find('select');
       }
     };
 
@@ -87,30 +89,25 @@
     };
 
     Plugin.prototype._checkValue = function () {
-      // On empty value, inactivate the label.
-      if (this._input.val() === '') {
-        this._label.removeClass(this.options.activeClass);
-      }
-      else {
-        this._label.addClass(this.options.activeClass);
-      }
+      var isEmpty = this._input.val() === '' || this._input.val() === '_none';
+
+      // On empty value, add state classes to input and label.
+      this._input.toggleClass(this.options.emptyClass, isEmpty);
+      this._label.toggleClass(this.options.activeClass, !isEmpty);
     };
 
-    Plugin.prototype._onKeyUp = function (ev) {
+    Plugin.prototype._onKeyUp = function () {
       this._checkValue();
-      ev && ev.preventDefault();
     };
 
-    Plugin.prototype._onFocus = function (ev) {
+    Plugin.prototype._onFocus = function () {
       this._label.addClass(this.options.focusClass);
       this._onKeyUp();
-      ev && ev.preventDefault();
     };
 
-    Plugin.prototype._onBlur = function (ev) {
+    Plugin.prototype._onBlur = function () {
       this._label.removeClass(this.options.focusClass);
       this._onKeyUp();
-      ev && ev.preventDefault();
     };
 
     Plugin.prototype.init = function () {
