@@ -7,8 +7,9 @@ Markup: content_container.hbs
 
 Weight: 30
 
-.content-container--narrow - A narrower content container
+.content-container--narrow - A narrow content container
 .content-container--wide - An extra wide content container
+.content-container--text-column - A narrower content container for text columns
 
 Style guide: layout.container
 */
@@ -36,19 +37,26 @@ Style guide: layout.container
     padding-left: 3%;
     padding-right: 3%;
   }
-}
 
-// Mobile padding resets.
-.content-container,
-.content-container--wide,
-.content-container--narrow {
-  @include breakpoint($tablet-max) {
-    padding-left: 2em;
-    padding-right: 2em;
+  &.content-container--text-column {
+    padding-left: 22%;
+    padding-right: 22%;
   }
 
-  @include breakpoint($mobile-only) {
-    padding-left: 1em;
-    padding-right: 1em;
+  // Responsive handling to set all content contaners to the same width on tablet
+  // and mobile
+  &,
+  &.content-container--wide,
+  &.content-container--narrow,
+  &.content-container--text-column {
+    @include breakpoint($tablet-max) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+
+    @include breakpoint($mobile-only) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
 }
