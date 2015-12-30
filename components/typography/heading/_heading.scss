@@ -117,11 +117,11 @@ Styleguide typography.heading-template
 
 
 /*
-Context-specific Headings
+Special Heading Formats
 
-These heading classes are used for specific cases and in specific contexts.
+Heading modifiers used for specific use-cases.
 
-Markup: context-headings.hbs
+Markup: special-heading.hbs
 
 Nodefault: true
 
@@ -129,46 +129,21 @@ Nocode: true
 
 Weight: 21
 
-.heading--homepage - Homepage Hero (70px) - uses `<h1>`
-.heading--product - Product Landing/Product Detail Hero (50px) - uses `<h1>`
-.heading--medium - Medium headers (36px) - uses `<h2>`
-.heading--label - HP Hero Eyebrow/News title/Demo (20px) - uses `<h5>`
+.heading--huge - Larger heading reserved for special cases (70px) - uses `<h1>`
 
-Styleguide typography.context-headings
+Styleguide typography.special-headings
 */
 
-.heading--homepage {
+.heading--huge {
   @extend h1;
   font-size: em(70px);
   line-height: 1;
-}
-
-.heading--product {
-  @extend h1;
 
   @include breakpoint($tablet-only) {
-    font-size: em(32px);
+    font-size: em(60px);
   }
 
   @include breakpoint($mobile-only) {
-    font-size: em(27px);
+    font-size: em(48px);
   }
-}
-
-.heading--medium {
-  @extend h2;
-
-  @include breakpoint($tablet-only) {
-    font-size: em(28px);
-  }
-
-  @include breakpoint($mobile-only) {
-    font-size: em(20px);
-  }
-}
-
-.heading--label {
-  @extend h5;
-  margin: 0;
-  font-size: em(20px);
 }

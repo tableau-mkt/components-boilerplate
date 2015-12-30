@@ -26,7 +26,7 @@ Styleguide: compound.detail-field
     border-bottom: 1px solid $accent-dividers;
 
     .detail-field__items {
-      @extend .heading--label;
+      @extend .heading--h5;
       font-family: $text--benton-light;
     }
 
