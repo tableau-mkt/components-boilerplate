@@ -66,7 +66,7 @@
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
           customAnimation = customAnimation || settings.animation;
 
-      $trigger.data('revealState', 'open').addClass('open');
+      $trigger.data('revealState', 'open').addClass('is-open');
       if (hideText != "") {
         $trigger.text(hideText);
       }
@@ -99,9 +99,9 @@
           showText = data.revealShowText,
           media = data.revealMedia;
 
-      $(trigger).data('revealState', 'closed').removeClass('open');
+      $(trigger).data('revealState', 'closed').removeClass('is-open');
 
-      if (showText !== undefined) {
+      if (typeof showText === 'undefined') {
         $(trigger).text(showText);
       }
 
