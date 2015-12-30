@@ -118,18 +118,23 @@
       this._checkValue();
 
       // Event bindings to the input element with floatLabels namespace.
-      this._input.on('keyup.floatLabels change.floatLabels', $.proxy(this._onKeyUp, this));
-      this._input.on('blur.floatLabels', $.proxy(this._onBlur, this));
-      this._input.on('focus.floatLabels', $.proxy(this._onFocus, this));
+      this._input
+        .off('keyup.floatLabels change.floatLabels')
+        .on('keyup.floatLabels change.floatLabels', $.proxy(this._onKeyUp, this));
+      this._input
+        .off('blur.floatLabels')
+        .on('blur.floatLabels', $.proxy(this._onBlur, this));
+      this._input
+        .off('focus.floatLabels')
+        .on('focus.floatLabels', $.proxy(this._onFocus, this));
     };
 
     // Lightweight constructor, preventing against multiple instantiations
     $.fn[pluginName] = function (options) {
       return this.each(function initPlugin() {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-          $.data(this, 'plugin_' + pluginName,
-          new Plugin(this, options));
-        }
+        // Allow the plugin to be instantiated more than once. Event handlers
+        // will be re-bound to avoid issues.
+        $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
       });
     };
 
