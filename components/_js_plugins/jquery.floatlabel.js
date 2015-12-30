@@ -120,10 +120,10 @@
       // Check value for initial active class.
       this._checkValue();
 
-      // Event bindings to the input element.
-      this._input.on('keyup change', $.proxy(this._onKeyUp, this));
-      this._input.on('blur', $.proxy(this._onBlur, this));
-      this._input.on('focus', $.proxy(this._onFocus, this));
+      // Event bindings to the input element with floatLabels namespace.
+      this._input.on('keyup.floatLabels change.floatLabels', $.proxy(this._onKeyUp, this));
+      this._input.on('blur.floatLabels', $.proxy(this._onBlur, this));
+      this._input.on('focus.floatLabels', $.proxy(this._onFocus, this));
     };
 
     // Lightweight constructor, preventing against multiple instantiations
