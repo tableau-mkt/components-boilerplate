@@ -114,6 +114,19 @@ Style guide: forms.fields
   }
 }
 
+// Avoiding `.form-field--invalid &` sass selector, for kss compatibility.
+.form-field--invalid .form-field__control,
+.form-field--invalid input[type="text"],
+.form-field--invalid input[type="search"],
+.form-field--invalid input[type="tel"],
+.form-field--invalid input[type="password"],
+.form-field--invalid input[type="number"],
+.form-field--invalid input[type="email"],
+.form-field--invalid select,
+.form-field--invalid textarea {
+  border-color: $msg-error-text;
+}
+
 .form-field__control,
 input[type="text"],
 input[type="search"],
@@ -149,19 +162,6 @@ textarea {
 .form-field--checkbox .form-field__label,
 .form-field--checkbox label {
   color: inherit;
-}
-
-// Avoiding `.form-field--invalid &` sass selector, for kss compatibility.
-.form-field--invalid .form-field__control,
-.form-field--invalid input[type="text"],
-.form-field--invalid input[type="search"],
-.form-field--invalid input[type="tel"],
-.form-field--invalid input[type="password"],
-.form-field--invalid input[type="number"],
-.form-field--invalid input[type="email"],
-.form-field--invalid select,
-.form-field--invalid textarea {
-  border-color: $msg-error-text;
 }
 
 input::placeholder {
