@@ -63,7 +63,7 @@
 }
 
 // Vertically and horizontally center an element. This assumes the parent is
-// position: relative;
+// has some kind of defined height and has position: relative;
 %absolute-centered {
   position: absolute;
   top: 50%;
