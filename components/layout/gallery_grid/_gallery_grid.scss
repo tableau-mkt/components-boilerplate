@@ -1,0 +1,61 @@
+/*
+Gallery Grid
+
+Used when a layout has a variable number of alike items that need to be
+presented in a grid. Each grid item is then aligned vertically to the top of
+its row and may be of varying height.
+
+Markup: gallery-grid.hbs
+
+Weight: 21
+
+.gallery-grid--2 - A 2 column block grid.
+.gallery-grid--3 - A 3 column block grid.
+.gallery-grid--4 - A 4 column block grid, this collapses to 2 columns on tablet.
+.gallery-grid--5 - A 5 column block grid, this collapses to 2 columns on tablet.
+
+Style guide: layout.gallery-grid
+*/
+
+.gallery-grid {
+  @extend %clearfix;
+}
+
+.gallery-grid__item {
+  margin-bottom: gutter();
+}
+
+@include breakpoint($tablet-min) {
+  .gallery-grid--2 .gallery-grid__item {
+    @include gallery(6);
+  }
+
+  .gallery-grid--3 .gallery-grid__item {
+    @include gallery(4);
+  }
+
+  // 4 and 5 item grids are a bit too much for tablet.
+  .gallery-grid--4 .gallery-grid__item,
+  .gallery-grid--5 .gallery-grid__item {
+    @include gallery(6);
+  }
+}
+
+@include breakpoint($desktop-min) {
+  .gallery-grid--2 .gallery-grid__item {
+    @include gallery(6);
+  }
+
+  .gallery-grid--3 .gallery-grid__item {
+    @include gallery(4);
+  }
+
+  .gallery-grid--4 .gallery-grid__item {
+    @include gallery(3);
+  }
+
+  .gallery-grid--5 .gallery-grid__item {
+    @include gallery(3 of 15);
+    margin-bottom: gutter(15);
+  }
+}
