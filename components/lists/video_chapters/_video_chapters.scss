@@ -48,18 +48,13 @@ Weight: 80
 .video-chapters__toggle-wrapper {
   .video-chapters__toggle {
     // _link_formatted.scss
+    @extend .link;
+    @extend .link--expand;
     @extend .text--label;
     display: inline-block;
 
-    &:before {
-      font-family: 'tableau-icons';
-      content: $icon--view-more;
-      margin-right: 0.6em;
-      font-size: 1.45em;
-    }
-
-    &.is-open:before {
-      content: $icon--view-less;
+    &.is-open {
+      @extend .link--collapse;
     }
   }
 }
