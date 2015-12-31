@@ -67,6 +67,10 @@ h3, .heading--h3 {
   a {
     color: $text-dark-body;
   }
+
+  @include breakpoint($mobile-only) {
+    font-size: em(22px);
+  }
 }
 
 h4, .heading--h4 {
