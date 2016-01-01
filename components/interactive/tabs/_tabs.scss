@@ -18,6 +18,8 @@ Style guide: interactive.tabs
 
     &.is-active {
       font-weight: bold;
+      border-bottom: 2px solid $text-link;
+      text-decoration: none;
     }
   }
 }
@@ -27,6 +29,7 @@ Style guide: interactive.tabs
 
   &.is-active {
     color: $text-negative;
+    border-bottom: 2px solid $text-negative;
   }
 }
 
