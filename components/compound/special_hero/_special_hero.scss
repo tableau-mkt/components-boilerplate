@@ -42,6 +42,11 @@ Style guide: compound.special-hero
     width: 100%;
   }
 
+  // If a video is present, hide the background image.
+  .special-hero__video + .special-hero__background {
+    display: none;
+  }
+
   @include breakpoint($tablet-min) {
     background-color: $bg-dark-gray-3;
     color: $text-negative;
