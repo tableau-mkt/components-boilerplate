@@ -13,6 +13,8 @@ Style guide: typography.caption
 */
 
 .caption {
+  @extend .text--body-small;
+  @extend .text-medium-body;
   @extend .text--italic;
 
   &.caption--image {
