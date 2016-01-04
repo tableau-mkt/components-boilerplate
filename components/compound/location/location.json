@@ -4,7 +4,7 @@
   "country": "US",
   "place": "Bellagio",
   "address": "123 Main St.",
-  "link-base": {
+  "mapLink": {
     "href": "https://www.google.com/maps/@36.1488957,-115.1411018,12.02z",
     "text": "Get Directions",
     "target": "_blank",
