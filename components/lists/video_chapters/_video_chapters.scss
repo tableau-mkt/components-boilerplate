@@ -24,7 +24,7 @@ Weight: 80
 }
 
 .video-chapters__chapter {
-// _formatted_text.scss
+  // _formatted_text.scss
   @extend .text--label;
   position: relative;
   cursor: pointer;
@@ -50,7 +50,6 @@ Weight: 80
     // _link_formatted.scss
     @extend .link;
     @extend .link--expand;
-    @extend .text--label;
     display: inline-block;
 
     &.is-open {
