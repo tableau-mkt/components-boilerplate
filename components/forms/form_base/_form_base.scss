@@ -43,6 +43,8 @@ Style guide: forms.base
   .form__intro,
   .form__control,
   .form__container,
+  .form__button,
+  input[type="submit"],
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -54,12 +56,6 @@ Style guide: forms.base
     margin-left: auto;
     margin-right: auto;
     max-width: 432px;
-  }
-
-  .form__button,
-  input[type="submit"] {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
