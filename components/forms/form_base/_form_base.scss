@@ -107,6 +107,8 @@ Style guide: forms.fields
     @extend .text--label;
     // Due to the @extend rules getting grouped at an unknown location, any
     // property overrides will need !important.
+    // @todo consider refactoring (duplicating text--label styles here, instead
+    //     of inheriting all of them)
     text-transform: none !important;
   }
 
