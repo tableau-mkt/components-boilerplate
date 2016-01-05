@@ -22,7 +22,7 @@ Style guide: forms.base
 .form--sized,
 .form--full-width {
   .form__control,
-   .form__container,
+  .form__container,
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -32,6 +32,14 @@ Style guide: forms.base
   select,
   textarea {
     width: 100%;
+  }
+
+  // Buttons should be 100% width on mobile only.
+  .form__button,
+  input[type="submit"] {
+    @include breakpoint($mobile-only) {
+      width: 100%;
+    }
   }
 }
 
@@ -55,14 +63,13 @@ Style guide: forms.base
   textarea {
     margin-left: auto;
     margin-right: auto;
-    max-width: 432px;
   }
 }
 
+.form-centered,
 .form--sized {
   .form__intro,
   .form__control,
-  .form__button,
   .form__container,
   input[type="text"],
   input[type="search"],
@@ -71,7 +78,9 @@ Style guide: forms.base
   input[type="number"],
   input[type="email"],
   select,
-  textarea {
+  textarea,
+  .form__button,
+  input[type="submit"] {
     max-width: 432px;
   }
 }
