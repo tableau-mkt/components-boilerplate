@@ -22,7 +22,7 @@ Style guide: forms.base
 .form--sized,
 .form--full-width {
   .form__control,
-  .form__container,
+  .form__field,
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -50,7 +50,7 @@ Style guide: forms.base
 
   .form__intro,
   .form__control,
-  .form__container,
+  .form__field,
   .form__button,
   input[type="submit"],
   input[type="text"],
@@ -70,7 +70,7 @@ Style guide: forms.base
 .form--sized {
   .form__intro,
   .form__control,
-  .form__container,
+  .form__field,
   input[type="text"],
   input[type="search"],
   input[type="tel"],
