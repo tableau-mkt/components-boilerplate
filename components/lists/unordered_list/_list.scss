@@ -1,4 +1,4 @@
-/* 
+/*
 Standard Unordered List
 
 A standard unordered list with bullets. Gray background applied in order to make sure light colored bullets show up.
@@ -19,7 +19,7 @@ ul {
   padding-left: 1em;
 }
 
-.list-negative {
+.list--negative {
   list-style-image: url(../images/shame/icons/bullet-white.png);
   padding-left: 1em;
 }
