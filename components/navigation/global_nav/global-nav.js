@@ -25,13 +25,13 @@
           easing: 'linear'
         };
 
-    /* Do some initial sizing. */
+    // Do some initial sizing.
     sizing();
 
-    /* Size on window resize and orientation change. */
-    $(window).on('resize orientationchange', _.debounce(sizing, 500));
+    // Size on window resize and orientation change.
+    $(window).on('resize orientationchange', _.debounce(sizing, 100));
 
-    /* Desktop stuff */
+    // Desktop stuff.
     // Drawer Expanding interaction
     $expandableLinks.each(function (){
       var $link = $(this),
@@ -56,12 +56,12 @@
       e.stopPropagation();
     });
 
-    /* Tablet/mobile stuff */
+    // Tablet/mobile stuff.
     $expandableLinks.on('click.nav', function(e) {
-      if (isMobile()) {
-        var $link = $(this),
-            $drawer = $('#' + $link.data('drawer-id'));
+      var $link = $(this),
+          $drawer = $('#' + $link.data('drawer-id'));
 
+      if (isMobile()) {
         $drawer.show().addClass('open');
 
         $drawer.add($mobileWrapper).animate({
@@ -109,12 +109,12 @@
       }, animation.duration);
     }
 
-    /* Helper function to check whether we are on a mobile/tablet viewport. */
+    // Helper function to check whether we are on a mobile/tablet viewport.
     function isMobile() {
       return matchMedia('(max-width: 960px)').matches;
     }
 
-    /* Prepare our menu for the user's viewport.*/
+    // Prepare our menu for the user's viewport.
     function sizing() {
       // Tablet/Mobile
       if (isMobile()) {
@@ -126,12 +126,12 @@
         // Remove any mobile markup, and revert to original settings.
         $hamburger.removeClass('hamburger--open');
         $hamburger.parent().removeClass('open');
-        $mobileWrapper.attr('style', '');
-        $drawers.attr('style', '').removeClass('open');
+        $mobileWrapper.removeAttr('style');
+        $drawers.removeAttr('style').removeClass('open');
       }
     }
 
-    /* Adjust the height of the mobile menu to take up the entire height. */
+    // Adjust the height of the mobile menu to take up the entire height.
     function mobileHeightAdjust() {
       // @todo this is pretty bad... Can probably figure out a clever CSS hack to
       // achieve this with vh units or something.
