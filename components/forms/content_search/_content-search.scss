@@ -7,6 +7,8 @@ Markup: content-search.hbs
 
 Weight: 10
 
+.content-search--white - White input background variant for use on color backgrounds.
+
 Style guide: forms.content-search
 */
 
@@ -18,6 +20,7 @@ Style guide: forms.content-search
   background: $bg-light-gray-1;
   border-radius: 2em;
   box-shadow: 2px 2px 3px $accent-dividers inset;
+
   @include breakpoint($mobile-only) {
     width: auto;
     margin: 2em 1em;
@@ -80,5 +83,11 @@ Style guide: forms.content-search
     .content-search__submit {
       display: none;
     }
+  }
+
+  // A variant with white search input background, when the component is placed
+  // in a section with color background.
+  &.content-search--white {
+    background: $bg-white;
   }
 }
