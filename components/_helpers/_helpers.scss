@@ -80,9 +80,14 @@ most common proportions for video players.
   vertical-align: middle;
 }
 
-// Vertically center an element. This assumes the parent is position: relative;
+// Vertically and horizontally center an element. This assumes the parent is
+// has some kind of defined height and has position: relative;
 .vertical-centered {
   @extend %vertical-centered;
+}
+
+.absolute-centered {
+  @extend %absolute-centered;
 }
 
 // Float element to the right

@@ -62,6 +62,15 @@
   transform: translateY(-50%);
 }
 
+// Vertically and horizontally center an element. This assumes the parent is
+// has some kind of defined height and has position: relative;
+%absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Apply a transsition on transform rules
 %transition-transform {
   -webkit-transition: -webkit-transform   150ms;
