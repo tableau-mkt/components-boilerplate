@@ -18,6 +18,10 @@ Style guide: lists.feature-list
     .feature-list__icon {
       @include span(1 of 6);
       text-align: center;
+
+      .icon {
+        @extend .icon--big;
+      }
     }
 
     .feature-list__copy {
@@ -33,15 +37,7 @@ Style guide: lists.feature-list
     }
 
     @include breakpoint($tablet-min) {
-      @include span(6);
-
-      &:nth-child(even) {
-        @include last;
-      }
-
-      &:nth-child(even) {
-        clear: right;
-      }
+      @include gallery(6);
 
       .feature-list__copy {
         @extend .vertical-divider--mobile;

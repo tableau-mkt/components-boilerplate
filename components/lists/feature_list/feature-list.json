@@ -1,22 +1,22 @@
 {
   "features" : [
     {
-      "icon": "database",
+      "icon": "query-without-code",
       "title": "Query without code.",
       "description": "<p>Powerful analytical tools—at your fingertips. Filter data dynamically, split trends across different categories or run an in-depth cohort analysis. Double-click geographic fields to put data on a map. All without writing a single line of code.</p>"
     },
     {
-      "icon": "statistics",
+      "icon": "deep-statistics",
       "title": "Deep statistics.",
-      "description": "<p>Go deeper into your data with new calculations on existing data. Make one-click forecasts, build box plots and see statistical summaries of your data. Run trend analyses, regressions, correlations, and much more. PhD not required.</p>"
+      "description": "<p>Labore quas pharetra dictum mus est incidunt dolorum! Accumsan. Commodo, faucibus. Odio! Labore dolores, hymenaeos? Facere aperiam, possimus! Repellat blanditiis. Erat curabitur inceptos vitae exercitationem, fugiat dicta lacinia fugit tristique, pulvinar elit reprehenderit laborum, rem tempore, orci debitis sagittis excepteur, tempus parturient, quaerat dis semper integer vitae unde.</p>"
     },
     {
-      "icon": "management",
+      "icon": "metadata",
       "title": "Metadata management.",
       "description": "<p>Make better sense of your available data — quickly and easily. Rename fields and modify number formats. Combine fields into groups. Create subsets of your data by simply selecting groups of points. Use those sets to filter other views. Build new hierarchies.</p>"
     },
     {
-      "icon": "diagram",
+      "icon": "best-practices",
       "title": "Best practices built in.",
       "description": "<p>You get the benefit of years of research on the best ways to represent data, built right into your workflow. Optimized color schemes, automatic chart types and elegant design. Communicate insight in the most effective way, automatically.</p>"
     }
