@@ -104,12 +104,14 @@ Style guide: forms.fields
 
   .form-field__label,
   .form-field__description {
-    @extend .text--label;
-    // Due to the @extend rules getting grouped at an unknown location, any
-    // property overrides will need !important.
-    // @todo consider refactoring (duplicating text--label styles here, instead
-    //     of inheriting all of them)
-    text-transform: none !important;
+    // Avoiding @extend .text--label since overriding text-transform is not
+    // straightforward.
+    font-family: $text--benton-book;
+    font-size: em(11px);
+    letter-spacing: 1px;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
   }
 
   .form-field__label {
