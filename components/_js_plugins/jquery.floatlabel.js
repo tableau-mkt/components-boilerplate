@@ -36,6 +36,8 @@
           // Class given to label when its field has a non-null value. Toggled
           // when the value is empty / falsy.
           activeClass: 'is-active',
+          // Class given to input when it has an empty value.
+          emptyClass: 'is-empty',
           // Class given to label when its field is focused. Toggled when it
           // loses focus.
           focusClass: 'has-focus'
@@ -63,15 +65,15 @@
     }
 
     // Utility: find a input that we want to alter the label for.
-    Plugin.prototype._findInput = function(el) {
-      var $textInputs = $(el).find('input, textarea').not('[type="checkbox"], [type="radio"]');
+    Plugin.prototype._findInput = function($el) {
+      var $textInputs = $el.find('input, textarea').not('[type="checkbox"], [type="radio"]');
       // The regular text input types.
       if ($textInputs.length) {
         return $textInputs;
       }
       // Try for select elements.
       else {
-        return $(el).find('select');
+        return $el.find('select');
       }
     };
 
@@ -86,46 +88,53 @@
       return $(el).find('label');
     };
 
-    Plugin.prototype._onKeyUp = function (ev) {
-      // On empty value, inactivate the label.
-      if (this._input.val() === '') {
-        this._label.removeClass(this.options.activeClass);
-      }
-      else {
-        this._label.addClass(this.options.activeClass);
-      }
-      ev && ev.preventDefault();
+    Plugin.prototype._checkValue = function () {
+      var isEmpty = this._input.val() === '' || this._input.val() === '_none';
+
+      // On empty value, add state classes to input and label.
+      this._input.toggleClass(this.options.emptyClass, isEmpty);
+      this._label.toggleClass(this.options.activeClass, !isEmpty);
     };
 
-    Plugin.prototype._onFocus = function (ev) {
+    Plugin.prototype._onKeyUp = function () {
+      this._checkValue();
+    };
+
+    Plugin.prototype._onFocus = function () {
       this._label.addClass(this.options.focusClass);
       this._onKeyUp();
-      ev && ev.preventDefault();
     };
 
-    Plugin.prototype._onBlur = function (ev) {
+    Plugin.prototype._onBlur = function () {
       this._label.removeClass(this.options.focusClass);
       this._onKeyUp();
-      ev && ev.preventDefault();
     };
 
     Plugin.prototype.init = function () {
       // Mark the element as having been init'ed.
       this._element.addClass(this.options.wrapperInitClass);
 
-      // Event bindings to the input element.
-      this._input.on('keyup change', $.proxy(this._onKeyUp, this));
-      this._input.on('blur', $.proxy(this._onBlur, this));
-      this._input.on('focus', $.proxy(this._onFocus, this));
+      // Check value for initial active class.
+      this._checkValue();
+
+      // Event bindings to the input element with floatLabels namespace.
+      this._input
+        .off('keyup.floatLabels change.floatLabels')
+        .on('keyup.floatLabels change.floatLabels', $.proxy(this._onKeyUp, this));
+      this._input
+        .off('blur.floatLabels')
+        .on('blur.floatLabels', $.proxy(this._onBlur, this));
+      this._input
+        .off('focus.floatLabels')
+        .on('focus.floatLabels', $.proxy(this._onFocus, this));
     };
 
     // Lightweight constructor, preventing against multiple instantiations
     $.fn[pluginName] = function (options) {
       return this.each(function initPlugin() {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-          $.data(this, 'plugin_' + pluginName,
-          new Plugin(this, options));
-        }
+        // Allow the plugin to be instantiated more than once. Event handlers
+        // will be re-bound to avoid issues.
+        $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
       });
     };
 

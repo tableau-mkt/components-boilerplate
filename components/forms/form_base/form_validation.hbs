@@ -1,1 +1,20 @@
-<span class="invalid">This is an error message</span>
+<div class="form">
+  <div class="form-field has-float-label {{modifier_class}}">
+    <label class="form-field__label" for="text-field">Text Field:</label>
+    <input class="form-field__control" type="text" name="text-field" id="text-field" placeholder="text">
+    <div class="form-field__description"><span class="form-field__error">This field is required.</span></div>
+  </div>
+
+  <div class="form-field {{modifier_class}}">
+    <label class="form-field__label" for="text-field-2">Text Field (No Placeholder)</label>
+    <br>
+    <input class="form-field__control" type="text" name="text-field-2" id="text-field-2">
+    <div class="form-field__description"><span class="form-field__error">This field is required.</span></div>
+  </div>
+
+  <div class="form-field has-float-label {{modifier_class}}">
+    <label class="form-field__label" for="email-field">Email Field:</label>
+    <input class="form-field__control" type="email" name="email-field" id="email-field" placeholder="email">
+    <div class="form-field__description"><span class="form-field__error">This field is required.</span></div>
+  </div>
+</div>
