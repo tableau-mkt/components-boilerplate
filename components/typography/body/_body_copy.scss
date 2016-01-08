@@ -45,4 +45,14 @@ body,
 .text--body-large {
   font-size: em(30px);
   line-height: 1.53;
+
+}
+@include breakpoint($mobile-only) {
+  .text--body-medium {
+    font-size: em(18px);
+  }
+
+  .text--body-large {
+    font-size: em(24px);
+  }
 }

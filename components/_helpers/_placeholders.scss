@@ -62,6 +62,13 @@
   transform: translateY(-50%);
 }
 
+// Vertically center an element using flexbox. Be aware this is unsupported in
+// older browsers
+%vertical-centered-flex {
+  display: flex;
+  align-items: center;
+}
+
 // Vertically and horizontally center an element. This assumes the parent is
 // has some kind of defined height and has position: relative;
 %absolute-centered {

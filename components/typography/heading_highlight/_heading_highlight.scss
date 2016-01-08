@@ -1,7 +1,7 @@
 /*
 Heading Highlight
 
-Highlight style for headings. Modifiers can be used to color the highlight 
+Highlight style for headings. Modifiers can be used to color the highlight
 related to a particular product.
 
 Markup: heading-highlight.hbs
@@ -11,25 +11,30 @@ Weight: 50
 Bgcolor: #eee
 
 .heading-highlight--negative - White colored highlight
+.heading-highlight--mission - Mission blue colored highlight
 
 Style guide: typography.heading-highlight
 */
 
 .heading-highlight {
   position: relative;
-  padding-top: 1.2em;
-  
+  padding-top: 30px;
+
   &:before {
     content: "";
     display: block;
     position: absolute;
-    width:50px;
+    width: 50px;
     height: 3px;
     top: 0;
-    background: #cdcdcd;
+    background: $heading-accent;
   }
 
   &.heading-highlight--negative:before {
     background: $text-negative;
+  }
+
+  &.heading-highlight--mission:before {
+    background: $text-mission-1;
   }
 }

@@ -37,14 +37,19 @@ most common proportions for video players.
   position: absolute;
 }
 
-// Display an element as an inline
+// Display an element as an inline element
 .display-inline {
   display: inline;
 }
 
-// Display an element as an inline block
+// Display an element as an inline block element
 .display-inline-block {
   display: inline-block;
+}
+
+// Display an element as a block element
+.display-block {
+  display: block;
 }
 
 // Display an element as a table
@@ -85,6 +90,17 @@ most common proportions for video players.
 .vertical-centered {
   @extend %vertical-centered;
 }
+
+// Vertically center an element using flexbox. Be aware this is unsupported in
+// older browsers. Apply to the parent wrapper of elements that need vertical
+// centering.
+// @see %vertical-centered-flex placeholder which can't be used here due to
+// breakpoint and @extend incompatibility.
+.vertical-centered-flex {
+  @include breakpoint($tablet-min) {
+    display: flex;
+    align-items: center;
+  }
 
 .absolute-centered {
   @extend %absolute-centered;
