@@ -14,7 +14,7 @@ Style Guide: interactive.search-highlight
   display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 30px;
   background-color: #fff;
 
@@ -23,6 +23,7 @@ Style Guide: interactive.search-highlight
     padding: 1em 3em 1em 1em;
     border: 0;
     background: none;
+    appearance: none;
 
     &:focus {
       outline: 0;

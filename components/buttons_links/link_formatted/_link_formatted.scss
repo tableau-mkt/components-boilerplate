@@ -15,6 +15,7 @@ Weight: 20
 .link--collapse - Link with a collapse icon
 .link--share - Link with a share icon
 .link--download - Link with a download icon
+.link--close - Link with a close "X" icon
 
 Style guide: buttons-links.link-formatted
 */
@@ -31,7 +32,8 @@ Style guide: buttons-links.link-formatted
   &.link--collapse:before,
   &.link--share:before,
   &.link--download:before,
-  &.link--arrow:after {
+  &.link--arrow:after,
+  &.link--close:after {
     @extend .icon;
     text-decoration: none;
     font-size: 1.5em;
@@ -39,7 +41,8 @@ Style guide: buttons-links.link-formatted
     padding-right: 0.5em;
   }
 
-  &.link--arrow:after {
+  &.link--arrow:after,
+  &.link--close:after {
     padding-right: 0;
     padding-left: 0.5em;
   }
@@ -66,5 +69,9 @@ Style guide: buttons-links.link-formatted
 
   &.link--arrow:after {
     content: $icon--arrow-right;
+  }
+
+  &.link--close:after {
+    content: $icon--close-window-style2;
   }
 }
