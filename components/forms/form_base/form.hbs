@@ -1,23 +1,19 @@
-{{#with form}}
-<div class="form__wrapper">
+<div class="form {{modifier_class}}">
   <div class="form__intro">
-    <h3 class="form__intro__heading">{{heading}}</h3>
-    <div class="form__intro__description">
+    <h3 class="form__intro-heading">{{heading}}</h3>
+    <div class="form__intro-description">
       {{{description}}}
     </div>
   </div>
 
   {{#each fields.list}}
-    <div class="form-field__wrapper has-float-label">
+  <div class="form__field form-field has-float-label">
     <label class="form-field__label" for="{{name}}">{{label}}</label>
-
-      <input class="form-field" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
-
-    </div>
+    <input class="form__control form-field__control" type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
+  </div>
   {{/each}}
 
   <div class="form__actions">
-    {{> form_button}}
+    <input class="form__button" type="submit" value="Submit">
   </div>
 </div>
-{{/with}}

@@ -10,7 +10,9 @@ Style guide: forms.fancy-radios
 Weight: 100
 */
 
-.fancy-radios {
+// Added specificity required here to ensure override of default .form-field
+// styles.
+.form-field.fancy-radios {
   label,
   .form-field__label {
     @extend .text--label;

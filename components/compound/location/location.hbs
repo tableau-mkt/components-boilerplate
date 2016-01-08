@@ -19,6 +19,10 @@
         <p>{{#if city}}{{ city }}{{/if}}{{#if state}}, {{ state }}{{/if}}{{#if zip}}{{ zip }}{{/if}}</p>
       {{/if}}
     {{/if}}
-    {{!-- <p>{{> link-base}}</p> --}}
+    <p>
+      {{#with mapLink}}
+        {{> link-base}}
+      {{/with}}
+    </p>
   </div>
 </div>

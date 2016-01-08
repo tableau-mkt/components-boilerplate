@@ -175,6 +175,7 @@ $gradient-orange-red: #ff9824, #c71f35; // Color Gradient
 $nav-drawer-gray-1: #f0f0f0;            // Gray for Nav Drawer - rgb(240, 240, 240)
 $nav-drawer-gray-2: #ddd;               // Gray 2 for Nav Drawer - rgb(221, 221, 221)
 $heading-accent: #cdcdcd;               // Accent gray for heading highlights - rgb(205, 205, 205)
+$form-border-accent: #8f8f8f;
 
 
 /*
@@ -274,5 +275,5 @@ $label-colors: (
 // Misc colors
 $error: #DD1E06;
 $teal-dark: #7099a5;
-$form-border: $accent-dividers;
+$form-border: #c2c2c2;
 $transparent: rgba(255,255,255,0);

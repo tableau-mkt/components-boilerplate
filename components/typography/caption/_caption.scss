@@ -1,0 +1,23 @@
+/*
+Caption
+
+Formatted title or brief explanation appended to an article, image...
+
+Markup: caption.hbs
+
+Weight: 10
+
+.caption--image - Image caption
+
+Style guide: typography.caption
+*/
+
+.caption {
+  @extend .text--body-small;
+  @extend .text-medium-body;
+  @extend .text--italic;
+
+  &.caption--image {
+
+  }
+}
