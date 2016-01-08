@@ -27,7 +27,7 @@ Style guide: typography.heading-highlight
     width: 50px;
     height: 3px;
     top: 0;
-    background: #cdcdcd;
+    background: $heading-accent;
   }
 
   &.heading-highlight--negative:before {
