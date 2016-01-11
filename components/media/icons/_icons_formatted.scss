@@ -25,6 +25,7 @@ Style guide: media.icon-formatted
   line-height: 180px;
   font-size: 7em;
   text-decoration: none;
+  text-align: center;
 
   @include breakpoint($tablet-only) {
     zoom: 0.7;
