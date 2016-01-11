@@ -1,0 +1,44 @@
+// Drupal-specific fixes.
+
+.content-search {
+  position: relative;
+
+  h2.element-invisible {
+    width: 0;
+  }
+
+  input[type='search'] {
+    background-image: none;
+  }
+
+  #autocomplete {
+    position: absolute;
+    top: 4em !important;
+    left: 0;
+    right: 0;
+    z-index: $zindex-dropdown;
+    background: $bg-light-gray-1;
+    border-radius: 0 0 2em 2em;
+    box-shadow: 2px 2px 3px $accent-dividers inset;
+    text-align: left;
+
+    li {
+      @include transition(background .25s ease-in-out);
+      @include break;
+      @extend %clearfix;
+      display: block;
+      padding: em(18px) em(32px);
+      border-bottom: 1px solid $accent-dividers;
+      color: inherit;
+      background: rgba($bg-light-gray-2, 0.5);
+      text-decoration: none;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &.selected,
+      &:hover {
+        background: $bg-light-gray-2;
+      }
+    }
+  }
+}

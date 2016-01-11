@@ -21,6 +21,10 @@ Style guide: forms.content-search
   border-radius: 2em;
   box-shadow: 2px 2px 3px $accent-dividers inset;
 
+  &.has-suggestion {
+    border-radius: 2em 2em 0 0;
+  }
+
   @include breakpoint($mobile-only) {
     width: auto;
     margin: 2em 1em;
