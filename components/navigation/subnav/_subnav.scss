@@ -11,6 +11,7 @@ Style guide: navigation.subnav
 */
 
 .subnav {
+  @extend .bg--dark-gray-1;
   padding: .5em 0;
   position: relative;
 
@@ -18,25 +19,8 @@ Style guide: navigation.subnav
     position: fixed;
   }
 
-  .subnav__title,
-  .subnav__links {
-    float: left;
-  }
-
-  .subnav__cta {
-    opacity: 0;
-    height: 0;
-    float: right;
-    transition: opacity .5s;
-
-    .cta {
-      margin: 0;
-    }
-  }
-
-  &.stuck .subnav__cta {
-    opacity: 1;
-    height: auto;
+  .subnav__cta .cta {
+    margin: 0 0 0 2em;
   }
 
   .subnav__title {
@@ -44,8 +28,12 @@ Style guide: navigation.subnav
   }
 
   .subnav__links {
-    margin: 0.8em 0 0 2em;
-    padding: 0;
+    background: $bg-dark-gray-1;
+
+    ul {
+      float: left;
+      margin: 0.8em 0 0 2em;
+    }
 
     li {
       padding: 0 10px;
@@ -71,25 +59,32 @@ Style guide: navigation.subnav
     }
   }
 
-  @include breakpoint($tablet-max) {
-    .subnav__links {
-      margin: 0.8em 0 0 1em;
-      padding: 0;
+  @include breakpoint($desktop-only) {
+    .subnav__title {
+      float: left;
+    }
 
-      li {
-        padding: 0 6px;
-      }
+    .subnav__links ul {
+      float: left;
+      margin: 0.8em 0 0 2em;
+    }
+
+    .subnav__cta {
+      opacity: 0;
+      height: 0;
+      float: right;
+      transition: opacity .5s;
+    }
+
+    &.stuck .subnav__cta {
+      opacity: 1;
+      height: auto;
     }
   }
 
-  @include breakpoint($mobile-only) {
-    padding: 1px 0 0;
 
-    .subnav__title,
-    .subnav__links,
-    .subnav__cta {
-      float: none;
-    }
+  @include breakpoint($tablet-max) {
+    padding: 1px 0 0;
 
     .subnav__links {
       position: relative;
@@ -97,33 +92,48 @@ Style guide: navigation.subnav
       box-sizing: border-box;
       border-top: 1px solid $text-medium-body;
 
-      &.stuck {
-        position: fixed;
-        left: 0;
-        padding-left: 1em;
-        padding-right: 1em;
-      }
-
+      &:after,
       &:before {
         content: '';
         display: block;
         position: absolute;
         width: 80px;
-        height: 40px;
+        height: 54px;
         top: 0;
-        right: 0;
         z-index: 1;
         pointer-events: none;
+      }
+
+      &.fade-right:after {
+        right: 0;
         background-image: linear-gradient(to right, rgba(70, 70, 70, 0), $bg-dark-gray-1);
+      }
+
+      &.fade-left:before {
+        background-image: linear-gradient(to left, rgba(70, 70, 70, 0), $bg-dark-gray-1);
+        left: 0;
+      }
+
+      &.stuck {
+        position: fixed;
+        left: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        &:after,
+        &:before {
+          right: 2em;
+        }
       }
 
       .subnav__links__wrapper {
         width: 100%;
         overflow-x: auto;
+        white-space: nowrap;
         padding: 0.25em 0;
 
-        ul.link-list {
-          white-space: nowrap;
+        ul {
+          margin: 0;
         }
 
         li {
@@ -131,18 +141,25 @@ Style guide: navigation.subnav
         }
       }
 
+      .subnav__cta {
+        text-align: right;
+      }
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    .subnav__links.stuck {
+      padding-left: 1em;
+      padding-right: 1em;
+
+      &:after,
+      &:before {
+        right: 1em;
+      }
     }
 
-    .subnav__cta {
-      position: absolute;
-      opacity: 1;
-      top: 5px;
-      right: 1em;
-
-      .cta {
-        padding-top: 12px;
-        padding-bottom: 12px;
-      }
+    .subnav__cta .cta {
+      display: inline-block;
     }
   }
 }

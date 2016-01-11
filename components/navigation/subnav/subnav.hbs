@@ -1,19 +1,18 @@
-<div class="subnav bg--dark-gray-1 sticky--desktop sticky--tablet">
+<div class="subnav sticky--desktop">
   <div class="content-container content-container--wide">
     <h5 class="subnav__title">{{ title }}</h5>
 
-    {{#with anchors}}
-      <div class="subnav__links bg--dark-gray-1 sticky--mobile">
+      <div class="subnav__links sticky--mobile sticky--tablet">
         <div class="subnav__links__wrapper">
-          {{> link-list}}
+          {{#with anchors}}
+            {{> link-list}}
+          {{/with}}
+          {{#with cta}}
+            <div class="subnav__cta">
+              <a class="cta cta--arrow" href="{{ url }}">{{ text }}</a>
+            </div>
+          {{/with}}
         </div>
       </div>
-    {{/with}}
-
-    {{#with cta}}
-      <div class="subnav__cta">
-        <a class="cta cta--arrow" href="{{ url }}">{{ text }}</a>
-      </div>
-    {{/with}}
   </div>
 </div>
