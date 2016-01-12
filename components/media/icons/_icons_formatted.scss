@@ -28,6 +28,10 @@ Style guide: media.icon-formatted
   text-align: center;
 
   @include breakpoint($tablet-only) {
-    zoom: 0.7;
+    width: 130px;
+    height: 130px;
+    line-height:130px;
+    border-width: 3px;
+    font-size: 5em;
   }
 }

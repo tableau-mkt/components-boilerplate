@@ -166,7 +166,7 @@
         }
 
         // Save original trigger text
-        if ($trigger.data('revealHideText') !== undefined) {
+        if (typeof $trigger.data('revealHideText') !== undefined) {
           settings.triggers.data('revealShowText', showText);
         }
       });

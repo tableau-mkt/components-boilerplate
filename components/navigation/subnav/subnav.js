@@ -6,7 +6,7 @@
   $(document).ready(function(){
     var $subnav = $('.subnav'),
         $links = $subnav.find('.subnav__links'),
-        $linksWrapper = $links.find('.subnav__links__wrapper'),
+        $linksWrapper = $links.find('.subnav__links-wrapper'),
         $anchors = $('.anchor-link');
 
     if ($links.length && $anchors.length) {
@@ -14,9 +14,9 @@
         handler: function(direction) {
           var id = this.element.id;
           if (direction === 'down') {
-            $links.find('a[href=#' + id + ']').parent().addClass('active').siblings().removeClass('active');
+            $links.find('a[href="#' + id + '"]').parent().addClass('is-active').siblings().removeClass('is-active');
           } else if (direction === 'up') {
-            $links.find('a[href=#' + id + ']').parent().prev().addClass('active').siblings().removeClass('active');
+            $links.find('a[href="#' + id + '"]').parent().prev().addClass('is-active').siblings().removeClass('is-active');
           }
         },
         offset: $subnav.outerHeight(true)
@@ -44,25 +44,25 @@
 
     // Manage scroll fading on mobile if there's overflow.
     function mobileScroll() {
-      if ($linksWrapper[0].offsetWidth < $linksWrapper[0].scrollWidth) {
-        var width = $linksWrapper[0].offsetWidth,
-            scrollWidth = $linksWrapper[0].scrollWidth;
+      var width = $linksWrapper[0].offsetWidth,
+          scrollWidth = $linksWrapper[0].scrollWidth;
 
-        // Aff right fade right away since we always start on the left.
+      if (width < scrollWidth) {
+        // Add right fade right away since we always start on the left.
         $links.addClass('fade-right');
 
-        $linksWrapper.scroll( function () {
+        $linksWrapper.scroll(function () {
           var scrollPos = $linksWrapper.scrollLeft();
 
           // Add both fades and then remove below if needed.
           $links.addClass('fade-right fade-left');
 
           // Remove right fade when scrolled all the way to the right
-          if (scrollPos == (scrollWidth - width)) {
+          if (scrollPos === (scrollWidth - width)) {
             $links.removeClass('fade-right');
           }
           // Remove left fade when scrolled all the way to the left
-          if (scrollPos == 0) {
+          if (scrollPos === 0) {
             $links.removeClass('fade-left');
           }
         });

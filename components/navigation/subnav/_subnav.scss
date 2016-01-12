@@ -53,7 +53,7 @@ Style guide: navigation.subnav
       }
     }
 
-    li.active a {
+    li.is-active a {
       border-bottom: 2px solid $text-negative;
       color: $text-negative;
     }
@@ -126,7 +126,7 @@ Style guide: navigation.subnav
         }
       }
 
-      .subnav__links__wrapper {
+      .subnav__links-wrapper {
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
