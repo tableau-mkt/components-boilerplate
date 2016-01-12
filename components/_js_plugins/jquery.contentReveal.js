@@ -65,7 +65,8 @@
           media = data.revealMedia,
           scrollBehavior = data.revealScroll,
           $scrollTarget,
-          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
+          scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+          expandToggle = data.revealExpandToggle;
 
       customAnimation = customAnimation || settings.animation;
 
@@ -108,20 +109,27 @@
         // Use curtain for scroll.
         Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
       }
+
+      // Special expand icon handling
+      if (expandToggle) {
+        $trigger.addClass('link--collapse').removeClass('link--expand');
+      }
     }
 
     // Hide the target content
     function hideContent(trigger) {
-      var data = $(trigger).data(),
+      var $trigger = $(trigger),
+          data = $trigger.data(),
           $target = $('#' + data.revealTarget),
           $curtain = $('#' + data.revealCurtain),
           showText = data.revealShowText,
-          media = data.revealMedia;
+          media = data.revealMedia,
+          expandToggle = data.revealExpandToggle;
 
-      $(trigger).data('revealState', 'closed').removeClass('is-open');
+      $trigger.data('revealState', 'closed').removeClass('is-open');
 
       if (typeof showText !== 'undefined') {
-        $(trigger).text(showText);
+        $trigger.text(showText);
       }
 
       $target.slideHeight('up', settings.animation);
@@ -132,6 +140,11 @@
         var player = videojs($target.find('.reveal-video--brightcove')[0]);
         player.pause();
       }
+
+      // Special expand icon handling
+      if (expandToggle) {
+        $trigger.addClass('link--expand').removeClass('link--collapse');
+      }
     }
 
     // Hand-full of setup tasks
@@ -140,14 +153,20 @@
       settings.triggers.data('revealState', 'closed');
 
       settings.triggers.each(function(index, el) {
-        var $target = $('#' + $(this).data('revealTarget')),
-            showText = $(this).text();
+        var $trigger = $(this),
+            $target = $('#' + $trigger.data('revealTarget')),
+            showText = $trigger.text();
 
         // Link content back to it's corresponding trigger
-        $target.data('revealTrigger', $(this));
+        $target.data('revealTrigger', $trigger);
+
+        // Special handling for links with an expand icon.
+        if ($trigger.hasClass('link--expand')) {
+          $trigger.data('revealExpandToggle', true);
+        }
 
         // Save original trigger text
-        if ($(this).data('revealHideText') !== undefined) {
+        if ($trigger.data('revealHideText') !== undefined) {
           settings.triggers.data('revealShowText', showText);
         }
       });
