@@ -33,12 +33,16 @@ Style guide: compound.special-hero
     padding-bottom: 33%;
     background-size: cover;
   }
+  .special-hero__video-inner {
+    height: 0;
+    padding-bottom: 33.30%;
+  }
 
   .special-hero__video video {
     width: 100%;
   }
 
-  // If a  video is present, hide the background image.
+  // If a video is present, hide the background image.
   .special-hero__video + .special-hero__background {
     display: none;
   }

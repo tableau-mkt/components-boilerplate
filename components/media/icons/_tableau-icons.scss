@@ -12,9 +12,12 @@ Nodefault: true
 
 Markup: icon.hbs
 
+.icon--access-big-data - access-big-data icon
 .icon--adobe-pdf - adobe-pdf icon
 .icon--alliance - alliance icon
 .icon--answered - answered icon
+.icon--any-data-anywhere - any-data-anywhere icon
+.icon--any-platforms - any-platforms icon
 .icon--apple - apple icon
 .icon--arrow-down-style2 - arrow-down-style2 icon
 .icon--arrow-down-style3 - arrow-down-style3 icon
@@ -30,12 +33,15 @@ Markup: icon.hbs
 .icon--arrow-up-style2 - arrow-up-style2 icon
 .icon--arrow-up-style3 - arrow-up-style3 icon
 .icon--arrow-up - arrow-up icon
+.icon--author-view-anywhere - author-view-anywhere icon
+.icon--auto-updates - auto-updates icon
+.icon--best-practices-built-in - best-practices-built-in icon
 .icon--best-practices - best-practices icon
 .icon--blog-post - blog-post icon
 .icon--bookmark - bookmark icon
 .icon--calculations-library - calculations-library icon
 .icon--calendar - calendar icon
-.icon--certification-program - certification-program icon
+.icon--certification - certification icon
 .icon--chevron-down-style2 - chevron-down-style2 icon
 .icon--chevron-down - chevron-down icon
 .icon--chevron-left-style2 - chevron-left-style2 icon
@@ -48,19 +54,19 @@ Markup: icon.hbs
 .icon--clock - clock icon
 .icon--close-window-style2 - close-window-style2 icon
 .icon--close-window - close-window icon
-.icon--community-canvas - community-canvas icon
+.icon--collaborate - collaborate icon
+.icon--community - community icon
 .icon--contact-us - contact-us icon
 .icon--dashboard - dashboard icon
+.icon--data-governance - data-governance icon
 .icon--deep-statistics - deep-statistics icon
-.icon--developer-corner - developer-corner icon
 .icon--discussion - discussion icon
 .icon--download - download icon
 .icon--email - email icon
-.icon--exercise-solutions - exercise-solutions icon
-.icon--experts-ondemand - experts-ondemand icon
+.icon--embedded-analytics - embedded-analytics icon
 .icon--export - export icon
-.icon--faster-adoption - faster-adoption icon
-.icon--featured-vizz - featured-vizz icon
+.icon--fast - fast icon
+.icon--featured-viz - featured-viz icon
 .icon--find-training - find-training icon
 .icon--folder - folder icon
 .icon--forums - forums icon
@@ -72,12 +78,13 @@ Markup: icon.hbs
 .icon--link - link icon
 .icon--location-style2 - location-style2 icon
 .icon--location - location icon
-.icon--matadata-management - matadata-management icon
+.icon--metadata - metadata icon
 .icon--mobile-menu - mobile-menu icon
 .icon--mobile - mobile icon
 .icon--newsletter - newsletter icon
 .icon--nic-cage - nic-cage icon
 .icon--oem - oem icon
+.icon--offline-snapshots - offline-snapshots icon
 .icon--online-classes - online-classes icon
 .icon--people - people icon
 .icon--play-button - play-button icon
@@ -90,11 +97,15 @@ Markup: icon.hbs
 .icon--quotes-open - quotes-open icon
 .icon--report-abuse - report-abuse icon
 .icon--reseller - reseller icon
-.icon--restart - restart icon
 .icon--results-up - results-up icon
+.icon--scalable - scalable icon
 .icon--search - search icon
+.icon--security - security icon
 .icon--self-suffiency - self-suffiency icon
 .icon--server-admin - server-admin icon
+.icon--settings - settings icon
+.icon--share-secure - share-secure icon
+.icon--share-style2 - share-style2 icon
 .icon--share - share icon
 .icon--social-facebook - social-facebook icon
 .icon--social-gplus - social-gplus icon
@@ -102,7 +113,9 @@ Markup: icon.hbs
 .icon--social-linkedin - social-linkedin icon
 .icon--social-rss - social-rss icon
 .icon--social-twitter - social-twitter icon
+.icon--solutions - solutions icon
 .icon--space - space icon
+.icon--subscriptions - subscriptions icon
 .icon--tableau-desktop - tableau-desktop icon
 .icon--tableau-logo - tableau-logo icon
 .icon--tableau-online - tableau-online icon
@@ -110,8 +123,10 @@ Markup: icon.hbs
 .icon--tableau-reader - tableau-reader icon
 .icon--tableau-server - tableau-server icon
 .icon--tailor-content - tailor-content icon
+.icon--talk-bubble - talk-bubble icon
 .icon--technology - technology icon
 .icon--unanswered - unanswered icon
+.icon--up-to-date - up-to-date icon
 .icon--upload - upload icon
 .icon--user-groups - user-groups icon
 .icon--view-less - view-less icon
@@ -128,10 +143,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.eot?5f94d9d2f0c98afc5acf9cfa92e89d5f");
-  src:url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.woff?5f94d9d2f0c98afc5acf9cfa92e89d5f") format("woff"),
-		url("../fonts/tableau-icons-5f94d9d2f0c98afc5acf9cfa92e89d5f.ttf?5f94d9d2f0c98afc5acf9cfa92e89d5f") format("truetype");
+  src:url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.eot?3a7a83cd1dbe6df9912bb35c21212ffe");
+  src:url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.woff?3a7a83cd1dbe6df9912bb35c21212ffe") format("woff"),
+		url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.ttf?3a7a83cd1dbe6df9912bb35c21212ffe") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -155,655 +170,745 @@ Style Guide: media.icons
 // Icons
 
 
-.icon--adobe-pdf:before {
+.icon--access-big-data:before {
   content:"\f101";
 }
-$icon--adobe-pdf: "\f101";
+$icon--access-big-data: "\f101";
+
+
+.icon--adobe-pdf:before {
+  content:"\f102";
+}
+$icon--adobe-pdf: "\f102";
 
 
 .icon--alliance:before {
-  content:"\f102";
+  content:"\f103";
 }
-$icon--alliance: "\f102";
+$icon--alliance: "\f103";
 
 
 .icon--answered:before {
-  content:"\f103";
+  content:"\f104";
 }
-$icon--answered: "\f103";
+$icon--answered: "\f104";
+
+
+.icon--any-data-anywhere:before {
+  content:"\f105";
+}
+$icon--any-data-anywhere: "\f105";
+
+
+.icon--any-platforms:before {
+  content:"\f106";
+}
+$icon--any-platforms: "\f106";
 
 
 .icon--apple:before {
-  content:"\f104";
+  content:"\f107";
 }
-$icon--apple: "\f104";
+$icon--apple: "\f107";
 
 
 .icon--arrow-down-style2:before {
-  content:"\f105";
+  content:"\f108";
 }
-$icon--arrow-down-style2: "\f105";
+$icon--arrow-down-style2: "\f108";
 
 
 .icon--arrow-down-style3:before {
-  content:"\f106";
+  content:"\f109";
 }
-$icon--arrow-down-style3: "\f106";
+$icon--arrow-down-style3: "\f109";
 
 
 .icon--arrow-down:before {
-  content:"\f107";
+  content:"\f10a";
 }
-$icon--arrow-down: "\f107";
+$icon--arrow-down: "\f10a";
 
 
 .icon--arrow-left-style2:before {
-  content:"\f108";
+  content:"\f10b";
 }
-$icon--arrow-left-style2: "\f108";
+$icon--arrow-left-style2: "\f10b";
 
 
 .icon--arrow-left-style3:before {
-  content:"\f109";
+  content:"\f10c";
 }
-$icon--arrow-left-style3: "\f109";
+$icon--arrow-left-style3: "\f10c";
 
 
 .icon--arrow-left-style4:before {
-  content:"\f10a";
+  content:"\f10d";
 }
-$icon--arrow-left-style4: "\f10a";
+$icon--arrow-left-style4: "\f10d";
 
 
 .icon--arrow-left:before {
-  content:"\f10b";
+  content:"\f10e";
 }
-$icon--arrow-left: "\f10b";
+$icon--arrow-left: "\f10e";
 
 
 .icon--arrow-right-style2:before {
-  content:"\f10c";
+  content:"\f10f";
 }
-$icon--arrow-right-style2: "\f10c";
+$icon--arrow-right-style2: "\f10f";
 
 
 .icon--arrow-right-style3:before {
-  content:"\f10d";
+  content:"\f110";
 }
-$icon--arrow-right-style3: "\f10d";
+$icon--arrow-right-style3: "\f110";
 
 
 .icon--arrow-right-style4:before {
-  content:"\f10e";
+  content:"\f111";
 }
-$icon--arrow-right-style4: "\f10e";
+$icon--arrow-right-style4: "\f111";
 
 
 .icon--arrow-right:before {
-  content:"\f10f";
+  content:"\f112";
 }
-$icon--arrow-right: "\f10f";
+$icon--arrow-right: "\f112";
 
 
 .icon--arrow-up-style2:before {
-  content:"\f110";
+  content:"\f113";
 }
-$icon--arrow-up-style2: "\f110";
+$icon--arrow-up-style2: "\f113";
 
 
 .icon--arrow-up-style3:before {
-  content:"\f111";
+  content:"\f114";
 }
-$icon--arrow-up-style3: "\f111";
+$icon--arrow-up-style3: "\f114";
 
 
 .icon--arrow-up:before {
-  content:"\f112";
+  content:"\f115";
 }
-$icon--arrow-up: "\f112";
+$icon--arrow-up: "\f115";
+
+
+.icon--author-view-anywhere:before {
+  content:"\f116";
+}
+$icon--author-view-anywhere: "\f116";
+
+
+.icon--auto-updates:before {
+  content:"\f117";
+}
+$icon--auto-updates: "\f117";
+
+
+.icon--best-practices-built-in:before {
+  content:"\f118";
+}
+$icon--best-practices-built-in: "\f118";
 
 
 .icon--best-practices:before {
-  content:"\f113";
+  content:"\f119";
 }
-$icon--best-practices: "\f113";
+$icon--best-practices: "\f119";
 
 
 .icon--blog-post:before {
-  content:"\f114";
+  content:"\f11a";
 }
-$icon--blog-post: "\f114";
+$icon--blog-post: "\f11a";
 
 
 .icon--bookmark:before {
-  content:"\f115";
+  content:"\f11b";
 }
-$icon--bookmark: "\f115";
+$icon--bookmark: "\f11b";
 
 
 .icon--calculations-library:before {
-  content:"\f116";
+  content:"\f11c";
 }
-$icon--calculations-library: "\f116";
+$icon--calculations-library: "\f11c";
 
 
 .icon--calendar:before {
-  content:"\f117";
+  content:"\f11d";
 }
-$icon--calendar: "\f117";
+$icon--calendar: "\f11d";
 
 
-.icon--certification-program:before {
-  content:"\f118";
+.icon--certification:before {
+  content:"\f11e";
 }
-$icon--certification-program: "\f118";
+$icon--certification: "\f11e";
 
 
 .icon--chevron-down-style2:before {
-  content:"\f119";
+  content:"\f11f";
 }
-$icon--chevron-down-style2: "\f119";
+$icon--chevron-down-style2: "\f11f";
 
 
 .icon--chevron-down:before {
-  content:"\f11a";
+  content:"\f120";
 }
-$icon--chevron-down: "\f11a";
+$icon--chevron-down: "\f120";
 
 
 .icon--chevron-left-style2:before {
-  content:"\f11b";
+  content:"\f121";
 }
-$icon--chevron-left-style2: "\f11b";
+$icon--chevron-left-style2: "\f121";
 
 
 .icon--chevron-left:before {
-  content:"\f11c";
+  content:"\f122";
 }
-$icon--chevron-left: "\f11c";
+$icon--chevron-left: "\f122";
 
 
 .icon--chevron-right-style2:before {
-  content:"\f11d";
+  content:"\f123";
 }
-$icon--chevron-right-style2: "\f11d";
+$icon--chevron-right-style2: "\f123";
 
 
 .icon--chevron-right:before {
-  content:"\f11e";
+  content:"\f124";
 }
-$icon--chevron-right: "\f11e";
+$icon--chevron-right: "\f124";
 
 
 .icon--chevron-up-style2:before {
-  content:"\f11f";
+  content:"\f125";
 }
-$icon--chevron-up-style2: "\f11f";
+$icon--chevron-up-style2: "\f125";
 
 
 .icon--chevron-up:before {
-  content:"\f120";
+  content:"\f126";
 }
-$icon--chevron-up: "\f120";
+$icon--chevron-up: "\f126";
 
 
 .icon--classroom:before {
-  content:"\f121";
+  content:"\f127";
 }
-$icon--classroom: "\f121";
+$icon--classroom: "\f127";
 
 
 .icon--clock:before {
-  content:"\f122";
+  content:"\f128";
 }
-$icon--clock: "\f122";
+$icon--clock: "\f128";
 
 
 .icon--close-window-style2:before {
-  content:"\f123";
+  content:"\f129";
 }
-$icon--close-window-style2: "\f123";
+$icon--close-window-style2: "\f129";
 
 
 .icon--close-window:before {
-  content:"\f124";
+  content:"\f12a";
 }
-$icon--close-window: "\f124";
+$icon--close-window: "\f12a";
 
 
-.icon--community-canvas:before {
-  content:"\f125";
+.icon--collaborate:before {
+  content:"\f12b";
 }
-$icon--community-canvas: "\f125";
+$icon--collaborate: "\f12b";
+
+
+.icon--community:before {
+  content:"\f12c";
+}
+$icon--community: "\f12c";
 
 
 .icon--contact-us:before {
-  content:"\f126";
+  content:"\f12d";
 }
-$icon--contact-us: "\f126";
+$icon--contact-us: "\f12d";
 
 
 .icon--dashboard:before {
-  content:"\f127";
+  content:"\f12e";
 }
-$icon--dashboard: "\f127";
+$icon--dashboard: "\f12e";
+
+
+.icon--data-governance:before {
+  content:"\f12f";
+}
+$icon--data-governance: "\f12f";
 
 
 .icon--deep-statistics:before {
-  content:"\f128";
+  content:"\f130";
 }
-$icon--deep-statistics: "\f128";
-
-
-.icon--developer-corner:before {
-  content:"\f129";
-}
-$icon--developer-corner: "\f129";
+$icon--deep-statistics: "\f130";
 
 
 .icon--discussion:before {
-  content:"\f12a";
+  content:"\f131";
 }
-$icon--discussion: "\f12a";
+$icon--discussion: "\f131";
 
 
 .icon--download:before {
-  content:"\f12b";
+  content:"\f132";
 }
-$icon--download: "\f12b";
+$icon--download: "\f132";
 
 
 .icon--email:before {
-  content:"\f12c";
+  content:"\f133";
 }
-$icon--email: "\f12c";
+$icon--email: "\f133";
 
 
-.icon--exercise-solutions:before {
-  content:"\f12d";
+.icon--embedded-analytics:before {
+  content:"\f134";
 }
-$icon--exercise-solutions: "\f12d";
-
-
-.icon--experts-ondemand:before {
-  content:"\f12e";
-}
-$icon--experts-ondemand: "\f12e";
+$icon--embedded-analytics: "\f134";
 
 
 .icon--export:before {
-  content:"\f12f";
+  content:"\f135";
 }
-$icon--export: "\f12f";
+$icon--export: "\f135";
 
 
-.icon--faster-adoption:before {
-  content:"\f130";
+.icon--fast:before {
+  content:"\f136";
 }
-$icon--faster-adoption: "\f130";
+$icon--fast: "\f136";
 
 
-.icon--featured-vizz:before {
-  content:"\f131";
+.icon--featured-viz:before {
+  content:"\f137";
 }
-$icon--featured-vizz: "\f131";
+$icon--featured-viz: "\f137";
 
 
 .icon--find-training:before {
-  content:"\f132";
+  content:"\f138";
 }
-$icon--find-training: "\f132";
+$icon--find-training: "\f138";
 
 
 .icon--folder:before {
-  content:"\f133";
+  content:"\f139";
 }
-$icon--folder: "\f133";
+$icon--folder: "\f139";
 
 
 .icon--forums:before {
-  content:"\f134";
+  content:"\f13a";
 }
-$icon--forums: "\f134";
+$icon--forums: "\f13a";
 
 
 .icon--globe:before {
-  content:"\f135";
+  content:"\f13b";
 }
-$icon--globe: "\f135";
+$icon--globe: "\f13b";
 
 
 .icon--ideas:before {
-  content:"\f136";
+  content:"\f13c";
 }
-$icon--ideas: "\f136";
+$icon--ideas: "\f13c";
 
 
 .icon--invite-people:before {
-  content:"\f137";
+  content:"\f13d";
 }
-$icon--invite-people: "\f137";
+$icon--invite-people: "\f13d";
 
 
 .icon--knowledge-base:before {
-  content:"\f138";
+  content:"\f13e";
 }
-$icon--knowledge-base: "\f138";
+$icon--knowledge-base: "\f13e";
 
 
 .icon--like:before {
-  content:"\f139";
+  content:"\f13f";
 }
-$icon--like: "\f139";
+$icon--like: "\f13f";
 
 
 .icon--link:before {
-  content:"\f13a";
+  content:"\f140";
 }
-$icon--link: "\f13a";
+$icon--link: "\f140";
 
 
 .icon--location-style2:before {
-  content:"\f13b";
+  content:"\f141";
 }
-$icon--location-style2: "\f13b";
+$icon--location-style2: "\f141";
 
 
 .icon--location:before {
-  content:"\f13c";
+  content:"\f142";
 }
-$icon--location: "\f13c";
+$icon--location: "\f142";
 
 
-.icon--matadata-management:before {
-  content:"\f13d";
+.icon--metadata:before {
+  content:"\f143";
 }
-$icon--matadata-management: "\f13d";
+$icon--metadata: "\f143";
 
 
 .icon--mobile-menu:before {
-  content:"\f13e";
+  content:"\f144";
 }
-$icon--mobile-menu: "\f13e";
+$icon--mobile-menu: "\f144";
 
 
 .icon--mobile:before {
-  content:"\f13f";
+  content:"\f145";
 }
-$icon--mobile: "\f13f";
+$icon--mobile: "\f145";
 
 
 .icon--newsletter:before {
-  content:"\f140";
+  content:"\f146";
 }
-$icon--newsletter: "\f140";
+$icon--newsletter: "\f146";
 
 
 .icon--nic-cage:before {
-  content:"\f141";
+  content:"\f147";
 }
-$icon--nic-cage: "\f141";
+$icon--nic-cage: "\f147";
 
 
 .icon--oem:before {
-  content:"\f142";
+  content:"\f148";
 }
-$icon--oem: "\f142";
+$icon--oem: "\f148";
+
+
+.icon--offline-snapshots:before {
+  content:"\f149";
+}
+$icon--offline-snapshots: "\f149";
 
 
 .icon--online-classes:before {
-  content:"\f143";
+  content:"\f14a";
 }
-$icon--online-classes: "\f143";
+$icon--online-classes: "\f14a";
 
 
 .icon--people:before {
-  content:"\f144";
+  content:"\f14b";
 }
-$icon--people: "\f144";
+$icon--people: "\f14b";
 
 
 .icon--play-button:before {
-  content:"\f145";
+  content:"\f14c";
 }
-$icon--play-button: "\f145";
+$icon--play-button: "\f14c";
 
 
 .icon--poll:before {
-  content:"\f146";
+  content:"\f14d";
 }
-$icon--poll: "\f146";
+$icon--poll: "\f14d";
 
 
 .icon--query-without-code:before {
-  content:"\f147";
+  content:"\f14e";
 }
-$icon--query-without-code: "\f147";
+$icon--query-without-code: "\f14e";
 
 
 .icon--quickstart-guide:before {
-  content:"\f148";
+  content:"\f14f";
 }
-$icon--quickstart-guide: "\f148";
+$icon--quickstart-guide: "\f14f";
 
 
 .icon--quotes-closed-style2:before {
-  content:"\f149";
+  content:"\f150";
 }
-$icon--quotes-closed-style2: "\f149";
+$icon--quotes-closed-style2: "\f150";
 
 
 .icon--quotes-closed:before {
-  content:"\f14a";
+  content:"\f151";
 }
-$icon--quotes-closed: "\f14a";
+$icon--quotes-closed: "\f151";
 
 
 .icon--quotes-open-style2:before {
-  content:"\f14b";
+  content:"\f152";
 }
-$icon--quotes-open-style2: "\f14b";
+$icon--quotes-open-style2: "\f152";
 
 
 .icon--quotes-open:before {
-  content:"\f14c";
+  content:"\f153";
 }
-$icon--quotes-open: "\f14c";
+$icon--quotes-open: "\f153";
 
 
 .icon--report-abuse:before {
-  content:"\f14d";
+  content:"\f154";
 }
-$icon--report-abuse: "\f14d";
+$icon--report-abuse: "\f154";
 
 
 .icon--reseller:before {
-  content:"\f14e";
+  content:"\f155";
 }
-$icon--reseller: "\f14e";
-
-
-.icon--restart:before {
-  content:"\f14f";
-}
-$icon--restart: "\f14f";
+$icon--reseller: "\f155";
 
 
 .icon--results-up:before {
-  content:"\f150";
+  content:"\f156";
 }
-$icon--results-up: "\f150";
+$icon--results-up: "\f156";
+
+
+.icon--scalable:before {
+  content:"\f157";
+}
+$icon--scalable: "\f157";
 
 
 .icon--search:before {
-  content:"\f151";
+  content:"\f158";
 }
-$icon--search: "\f151";
+$icon--search: "\f158";
+
+
+.icon--security:before {
+  content:"\f159";
+}
+$icon--security: "\f159";
 
 
 .icon--self-suffiency:before {
-  content:"\f152";
+  content:"\f15a";
 }
-$icon--self-suffiency: "\f152";
+$icon--self-suffiency: "\f15a";
 
 
 .icon--server-admin:before {
-  content:"\f153";
+  content:"\f15b";
 }
-$icon--server-admin: "\f153";
+$icon--server-admin: "\f15b";
+
+
+.icon--settings:before {
+  content:"\f15c";
+}
+$icon--settings: "\f15c";
+
+
+.icon--share-secure:before {
+  content:"\f15d";
+}
+$icon--share-secure: "\f15d";
+
+
+.icon--share-style2:before {
+  content:"\f15e";
+}
+$icon--share-style2: "\f15e";
 
 
 .icon--share:before {
-  content:"\f154";
+  content:"\f15f";
 }
-$icon--share: "\f154";
+$icon--share: "\f15f";
 
 
 .icon--social-facebook:before {
-  content:"\f155";
+  content:"\f160";
 }
-$icon--social-facebook: "\f155";
+$icon--social-facebook: "\f160";
 
 
 .icon--social-gplus:before {
-  content:"\f156";
+  content:"\f161";
 }
-$icon--social-gplus: "\f156";
+$icon--social-gplus: "\f161";
 
 
 .icon--social-instagram:before {
-  content:"\f157";
+  content:"\f162";
 }
-$icon--social-instagram: "\f157";
+$icon--social-instagram: "\f162";
 
 
 .icon--social-linkedin:before {
-  content:"\f158";
+  content:"\f163";
 }
-$icon--social-linkedin: "\f158";
+$icon--social-linkedin: "\f163";
 
 
 .icon--social-rss:before {
-  content:"\f159";
+  content:"\f164";
 }
-$icon--social-rss: "\f159";
+$icon--social-rss: "\f164";
 
 
 .icon--social-twitter:before {
-  content:"\f15a";
+  content:"\f165";
 }
-$icon--social-twitter: "\f15a";
+$icon--social-twitter: "\f165";
+
+
+.icon--solutions:before {
+  content:"\f166";
+}
+$icon--solutions: "\f166";
 
 
 .icon--space:before {
-  content:"\f15b";
+  content:"\f167";
 }
-$icon--space: "\f15b";
+$icon--space: "\f167";
+
+
+.icon--subscriptions:before {
+  content:"\f168";
+}
+$icon--subscriptions: "\f168";
 
 
 .icon--tableau-desktop:before {
-  content:"\f15c";
+  content:"\f169";
 }
-$icon--tableau-desktop: "\f15c";
+$icon--tableau-desktop: "\f169";
 
 
 .icon--tableau-logo:before {
-  content:"\f15d";
+  content:"\f16a";
 }
-$icon--tableau-logo: "\f15d";
+$icon--tableau-logo: "\f16a";
 
 
 .icon--tableau-online:before {
-  content:"\f15e";
+  content:"\f16b";
 }
-$icon--tableau-online: "\f15e";
+$icon--tableau-online: "\f16b";
 
 
 .icon--tableau-public:before {
-  content:"\f15f";
+  content:"\f16c";
 }
-$icon--tableau-public: "\f15f";
+$icon--tableau-public: "\f16c";
 
 
 .icon--tableau-reader:before {
-  content:"\f160";
+  content:"\f16d";
 }
-$icon--tableau-reader: "\f160";
+$icon--tableau-reader: "\f16d";
 
 
 .icon--tableau-server:before {
-  content:"\f161";
+  content:"\f16e";
 }
-$icon--tableau-server: "\f161";
+$icon--tableau-server: "\f16e";
 
 
 .icon--tailor-content:before {
-  content:"\f162";
+  content:"\f16f";
 }
-$icon--tailor-content: "\f162";
+$icon--tailor-content: "\f16f";
+
+
+.icon--talk-bubble:before {
+  content:"\f170";
+}
+$icon--talk-bubble: "\f170";
 
 
 .icon--technology:before {
-  content:"\f163";
+  content:"\f171";
 }
-$icon--technology: "\f163";
+$icon--technology: "\f171";
 
 
 .icon--unanswered:before {
-  content:"\f164";
+  content:"\f172";
 }
-$icon--unanswered: "\f164";
+$icon--unanswered: "\f172";
+
+
+.icon--up-to-date:before {
+  content:"\f173";
+}
+$icon--up-to-date: "\f173";
 
 
 .icon--upload:before {
-  content:"\f165";
+  content:"\f174";
 }
-$icon--upload: "\f165";
+$icon--upload: "\f174";
 
 
 .icon--user-groups:before {
-  content:"\f166";
+  content:"\f175";
 }
-$icon--user-groups: "\f166";
+$icon--user-groups: "\f175";
 
 
 .icon--view-less:before {
-  content:"\f167";
+  content:"\f176";
 }
-$icon--view-less: "\f167";
+$icon--view-less: "\f176";
 
 
 .icon--view-more:before {
-  content:"\f168";
+  content:"\f177";
 }
-$icon--view-more: "\f168";
+$icon--view-more: "\f177";
 
 
 .icon--wikis:before {
-  content:"\f169";
+  content:"\f178";
 }
-$icon--wikis: "\f169";
+$icon--wikis: "\f178";
 
 
 .icon--windows:before {
-  content:"\f16a";
+  content:"\f179";
 }
-$icon--windows: "\f16a";
+$icon--windows: "\f179";
 
 
 .icon--workbook-library:before {
-  content:"\f16b";
+  content:"\f17a";
 }
-$icon--workbook-library: "\f16b";
+$icon--workbook-library: "\f17a";
 
 
 .icon--write:before {
-  content:"\f16c";
+  content:"\f17b";
 }
-$icon--write: "\f16c";
+$icon--write: "\f17b";
 
 
 .icon--youtube:before {
-  content:"\f16d";
+  content:"\f17c";
 }
-$icon--youtube: "\f16d";
+$icon--youtube: "\f17c";
