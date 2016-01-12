@@ -21,6 +21,8 @@ Style guide: forms.content-search
   border-radius: 2em;
   box-shadow: 2px 2px 3px $accent-dividers inset;
 
+  // JS state that changes the bottom corners to straight edge to be compatible
+  // with the dropdown.
   &.has-suggestion {
     border-radius: 2em 2em 0 0;
   }

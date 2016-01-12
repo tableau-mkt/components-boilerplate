@@ -3,13 +3,16 @@ Fancy Radios
 
 Radio option groups, with a custom <code>:checked</code> state.
 
-Markup: fancy-radios.hbs
+Markup: fancy-filters.hbs
 
-Style guide: forms.fancy-radios
+Style guide: forms.fancy-filters
 
 Weight: 100
 */
 
+// Added specificity required here to ensure override of default .form-field
+// styles.
+.form-field.fancy-filters,
 .fancy-filters {
   .fancy-filters__filter {
     @extend .text--label;
