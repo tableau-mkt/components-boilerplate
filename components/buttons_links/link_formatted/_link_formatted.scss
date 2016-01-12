@@ -26,8 +26,6 @@ Style guide: buttons-links.link-formatted
   color: $text-link;
   text-transform: uppercase;
 
-  &.link--icon-before:before,
-  &.link--icon-after:after,
   &.link--arrow-before:before,
   &.link--expand:before,
   &.link--collapse:before,
@@ -68,22 +66,5 @@ Style guide: buttons-links.link-formatted
 
   &.link--arrow:after {
     content: $icon--arrow-right;
-  }
-
-  // Create links for all the icons.
-  @each $name, $icon in $icons {
-    &.link--icon-before {
-      &.link--#{$name}:before {
-        content: $icon;
-      }
-    }
-
-    &.link--icon-after {
-      &.link--#{$name}:after {
-        content: $icon;
-        padding-right: 0;
-        padding-left: 0.5em;
-      }
-    }
   }
 }

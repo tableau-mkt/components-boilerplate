@@ -23,3 +23,19 @@
 .sidebar--right .block__title {
   @extend .text--label;
 }
+
+.field--name-field-sponsors,
+.field--name-field-hashtag {
+  // NOTE: Uses a breakpoint.
+  @extend .mobile-center;
+}
+
+@include breakpoint($mobile-max) {
+
+  .field--name-field-datetime-range,
+  .field--name-dynamic-field-time {
+    background: $bg-light-gray-1;
+    float: left;
+    width: 50%;
+  }
+}

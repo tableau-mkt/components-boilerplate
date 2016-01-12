@@ -50,9 +50,7 @@ Style Guide: media.icons
 }
 <% } %>
 
-<% if (iconsStyles) { %>/* Icons */
-$icons: ();
-<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+<% if (iconsStyles) { %>/* Icons */<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
 <% if (stylesheet === 'less') { %>
 .<%= mixinPrefix %><%= glyphs[glyphIdx] %>() {
   &:before {
@@ -72,6 +70,4 @@ $icons: ();
 .<%= classPrefix %><%= glyphs[glyphIdx] %>:before {
   content:"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
 }
-$<%= classPrefix %><%= glyphs[glyphIdx] %>: "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
-$icons: append($icons, ("<%= classPrefix %><%= glyphs[glyphIdx] %>", "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>"));
-<% } } } %>
+$<%= classPrefix %><%= glyphs[glyphIdx] %>: "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";<% } } } %>
