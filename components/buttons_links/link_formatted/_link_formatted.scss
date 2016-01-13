@@ -15,6 +15,7 @@ Weight: 20
 .link--collapse - Link with a collapse icon
 .link--share - Link with a share icon
 .link--download - Link with a download icon
+.link--close - Link with a close "X" icon
 .link--social-twitter - Link with social twitter icon
 .link--people - Link with people icon
 
@@ -28,6 +29,7 @@ $icons: (
   expand: ($icon--view-more, before),
   collapse: ($icon--view-less, before),
   share: ($icon--share, before),
+  close: ($icon--close-window-style2, after),
   download: ($icon--download, before),
   social-twitter: ($icon--social-twitter, before),
   people: ($icon--people, before),

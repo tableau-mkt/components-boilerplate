@@ -21,17 +21,13 @@ Style guide: interactive.flyout
 }
 
 .flyout__close-wrapper {
-  position: absolute;
-  width: 100%;
-  padding-top: 3em;
-  @extend .content-container;
 
   .flyout__close-link {
     position: relative;
     z-index: 5;
     float: right;
 
-    
+
     &:hover {
     }
   }

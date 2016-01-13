@@ -6,10 +6,32 @@ Different formatting/style options for icons
 Markup: icon-formatted.hbs
 
 .icon--big - A big icon.
+.icon--circled - A large icon with a circle around it.
 
 Style guide: media.icon-formatted
 */
 
 .icon--big {
   font-size: 2em;
+}
+
+.icon--circled {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid $accent-dividers;
+  background: $bg-light-gray-2;
+  line-height: 180px;
+  font-size: 7em;
+  text-decoration: none;
+  text-align: center;
+
+  @include breakpoint($tablet-only) {
+    width: 130px;
+    height: 130px;
+    line-height:130px;
+    border-width: 3px;
+    font-size: 5em;
+  }
 }
