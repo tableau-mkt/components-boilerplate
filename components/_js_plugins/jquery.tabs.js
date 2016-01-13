@@ -81,7 +81,7 @@
               $content = $('#' + $(this).data('tab-content'));
 
           // Manage active class
-          settings.tabLinks.add($wrapper.find(settings.contents)).removeClass('is-active');
+          settings.tabLinks.add(settings.wrapper.find(settings.contents)).removeClass('is-active');
           $link.add($content).addClass('is-active');
         });
       }

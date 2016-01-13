@@ -1,7 +1,11 @@
 <div class="quote {{ modifier_class }}">
   <p class="quote__text">{{ quoteText }}</p>
   <p class="quote__byline">
-    <span class="quote__byline-name">{{ bylineName }},</span>
-    <span class="quote__byline-detail">{{ bylineDetail }}</span>
+    {{#if bylineName}}
+      <span class="quote__byline-name">{{ bylineName }}{{#if bylineDetail}},{{/if}}</span>
+    {{/if}}
+    {{#if bylineDetail}}
+      <span class="quote__byline-detail">{{ bylineDetail }}</span>
+    {{/if}}
   </p>
 </div>

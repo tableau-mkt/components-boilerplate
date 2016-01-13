@@ -1,5 +1,5 @@
 /**
- * Content Reveal utility
+ * Content Reveal utility.
  *
  * Set a wrapper around content as a revealable region. Assign a "trigger"
  * element as the toggle to expand and collapse the content region.
@@ -18,7 +18,7 @@
  * @TODO: Can still use some cleanup and work to be a more agnostic plugin
  */
 
-(function ( $ ) {
+(function ($) {
   $.fn.contentReveal = function(options) {
     // Default settings
     var settings = $.extend({
@@ -63,10 +63,14 @@
           hideText = data.revealHideText,
           type = data.revealType,
           media = data.revealMedia,
+          scrollBehavior = data.revealScroll,
+          $scrollTarget,
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
-          customAnimation = customAnimation || settings.animation;
+          expandToggle = data.revealExpandToggle;
 
-      $trigger.data('revealState', 'open').addClass('open');
+      customAnimation = customAnimation || settings.animation;
+
+      $trigger.data('revealState', 'open').addClass('is-open');
       if (hideText != "") {
         $trigger.text(hideText);
       }
@@ -86,20 +90,47 @@
         }, customAnimation.duration/2);
       }
 
-      if ($curtain.length) {
-        smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+      // Scroll when reveal is clicked open.
+      if (scrollBehavior) {
+        switch (scrollBehavior) {
+          case 'trigger':
+            $scrollTarget = $trigger;
+            break;
+          case 'target':
+            $scrollTarget = $target;
+            break;
+          default:
+            $scrollTarget = $('#' + scrollBehavior);
+            break;
+        }
+        Tabia.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
+      }
+      else if ($curtain.length) {
+        // Use curtain for scroll.
+        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+      }
+
+      // Special expand icon handling
+      if (expandToggle) {
+        $trigger.addClass('link--collapse').removeClass('link--expand');
       }
     }
 
     // Hide the target content
     function hideContent(trigger) {
-      var data = $(trigger).data(),
+      var $trigger = $(trigger),
+          data = $trigger.data(),
           $target = $('#' + data.revealTarget),
           $curtain = $('#' + data.revealCurtain),
           showText = data.revealShowText,
-          media = data.revealMedia;
+          media = data.revealMedia,
+          expandToggle = data.revealExpandToggle;
 
-      $(trigger).data('revealState', 'closed').text(showText).removeClass('open');
+      $trigger.data('revealState', 'closed').removeClass('is-open');
+
+      if (typeof showText !== 'undefined') {
+        $trigger.text(showText);
+      }
 
       $target.slideHeight('up', settings.animation);
 
@@ -109,6 +140,11 @@
         var player = videojs($target.find('.reveal-video--brightcove')[0]);
         player.pause();
       }
+
+      // Special expand icon handling
+      if (expandToggle) {
+        $trigger.addClass('link--expand').removeClass('link--collapse');
+      }
     }
 
     // Hand-full of setup tasks
@@ -117,14 +153,22 @@
       settings.triggers.data('revealState', 'closed');
 
       settings.triggers.each(function(index, el) {
-        var $target = $('#' + $(this).data('revealTarget')),
-            showText = $(this).text();
+        var $trigger = $(this),
+            $target = $('#' + $trigger.data('revealTarget')),
+            showText = $trigger.text();
 
         // Link content back to it's corresponding trigger
-        $target.data('revealTrigger', $(this));
+        $target.data('revealTrigger', $trigger);
+
+        // Special handling for links with an expand icon.
+        if ($trigger.hasClass('link--expand')) {
+          $trigger.data('revealExpandToggle', true);
+        }
 
         // Save original trigger text
-        settings.triggers.data('revealShowText', showText);
+        if (typeof $trigger.data('revealHideText') !== undefined) {
+          settings.triggers.data('revealShowText', showText);
+        }
       });
 
       // // Set initial margin on content if there is a curtain
@@ -142,7 +186,7 @@
 
       // Add a close icon to each content continer
       if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window"></i></a>'));
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
       }
     }
 
@@ -163,4 +207,4 @@
 
     return this;
   }
-}( jQuery ));
+})(jQuery);

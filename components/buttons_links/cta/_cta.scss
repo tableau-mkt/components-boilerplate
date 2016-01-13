@@ -8,7 +8,7 @@ Markup: cta.hbs
 
 Bgcolor: #F7F9FB
 
-.cta--orange - Orange colored CTA button used for Free Trial.
+.cta--orange - Orange colored CTA button used for Free Trial. [Default]
 .cta--light - Light colored CTA button for use on dark backgrounds.
 .cta--dark - Dark colored CTA button for use on light backgrounds.
 .cta--arrow - CTA button with arrow icon.
@@ -18,6 +18,7 @@ Bgcolor: #F7F9FB
 .cta--secondary.cta--orange - Orange Secondary CTA
 .cta--secondary.cta--light - Light Secondary CTA button for use on dark backgrounds.
 .cta--secondary.cta--dark - Dark Secondary CTA button for use on light backgrounds.
+.cta--secondary.cta--arrow - Secondary CTA with arrow icon.
 .cta--full-width - Full width CTA that fills the width of it's container.
 
 Style guide: buttons-links.cta
@@ -75,30 +76,6 @@ Style guide: buttons-links.cta
     color: $text-dark-body;
   }
 
-  &.cta--arrow:after {
-    content: url(../images/shame/icons/icon-arrow.png);
-    padding-left: .5em;
-  }
-
-  &.cta--play:after {
-    content: url(../images/shame/icons/icon-play.png);
-    display: inline-block;
-    height: 0px;
-    margin-top: -23px;
-    padding-left: 1em;
-    vertical-align: middle;
-  }
-
-  &.cta--download:after {
-    @extend .icon;
-    content: $icon--download;
-    height: 0px;
-    margin-top: -15px;
-    padding-left: 1em;
-    font-size: 1.5em;
-    text-decoration: none !important;
-  }
-
   &.cta--secondary {
     border: 2px solid $button-orange;
     padding: 15px 23px;
@@ -116,10 +93,6 @@ Style guide: buttons-links.cta
       border-color: $button-final;
       background: transparent;
       color: $button-final;
-    }
-
-    &.cta--arrow:after {
-      content: url(../images/shame/icons/icon-arrow-orange.png);
     }
 
     @each $name, $colors in $button-colors {
@@ -142,6 +115,7 @@ Style guide: buttons-links.cta
     }
   }
 
+
   &.cta--full-width {
     display: block;
     width: 100%;
@@ -151,6 +125,32 @@ Style guide: buttons-links.cta
     text-align: center;
   }
 
+  // Icons
+  &.cta--arrow:after,
+  &.cta--play:after,
+  &.cta--download:after {
+    @extend .icon;
+    padding-left: 10px;
+    line-height: 0px;
+    font-size: 2em;
+    text-decoration: none;
+  }
+
+  &.cta--arrow:after {
+    @extend .icon;
+    content: $icon--arrow-right;
+  }
+
+  &.cta--play:after {
+    @extend .icon;
+    content: $icon--play-button;
+  }
+
+  &.cta--download:after {
+    @extend .icon;
+    content: $icon--download;
+    font-size: 1.5em;
+  }
 }
 
 // Mobile-only tweaks

@@ -40,6 +40,10 @@
         return;
       }
 
+      $readyChapters.next('.video-chapters__toggle-wrapper').find('.video-chapters__toggle').on('click.toggle', function(e) {
+        $(this).toggleClass('is-open');
+      });
+
       $readyChapters.find('.video-chapters__chapter').on('click.chapter', function triggerVideoChapter (e) {
         var $this = $(this),
             timestamp = $this.data('timestamp');
@@ -50,7 +54,7 @@
         BCPlayer.currentTime(timestamp);
 
         // Scroll.
-        smoothScrollTop($videoElement);
+        Tabia.smoothScrollTop($videoElement);
 
         // Play the video if it ain't playing.
         if (BCPlayer.paused()) {

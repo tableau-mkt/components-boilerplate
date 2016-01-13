@@ -15,9 +15,25 @@ Weight: 20
 .link--collapse - Link with a collapse icon
 .link--share - Link with a share icon
 .link--download - Link with a download icon
+.link--close - Link with a close "X" icon
+.link--social-twitter - Link with social twitter icon
+.link--people - Link with people icon
 
 Style guide: buttons-links.link-formatted
 */
+
+// Map of icons in the form of: modifier-name: ($icon--variable, position)
+$icons: (
+  arrow: ($icon--arrow-right, after),
+  arrow-before: ($icon--arrow-left, before),
+  expand: ($icon--view-more, before),
+  collapse: ($icon--view-less, before),
+  share: ($icon--share, before),
+  close: ($icon--close-window-style2, after),
+  download: ($icon--download, before),
+  social-twitter: ($icon--social-twitter, before),
+  people: ($icon--people, before),
+);
 
 .link {
   @extend .text--benton-book;
@@ -26,12 +42,8 @@ Style guide: buttons-links.link-formatted
   color: $text-link;
   text-transform: uppercase;
 
-  &.link--arrow-before:before,
-  &.link--expand:before,
-  &.link--collapse:before,
-  &.link--share:before,
-  &.link--download:before,
-  &.link--arrow:after {
+  &:before,
+  &:after {
     @extend .icon;
     text-decoration: none;
     font-size: 1.5em;
@@ -39,32 +51,15 @@ Style guide: buttons-links.link-formatted
     padding-right: 0.5em;
   }
 
-  &.link--arrow:after {
+  &:after {
     padding-right: 0;
     padding-left: 0.5em;
   }
 
-  &.link--arrow-before:before {
-    content: $icon--arrow-left;
-  }
-
-  &.link--expand:before {
-    content: $icon--view-more;
-  }
-
-  &.link--collapse:before {
-    content: $icon--view-less;
-  }
-
-  &.link--share:before {
-    content: $icon--share;
-  }
-
-  &.link--download:before {
-    content: $icon--download;
-  }
-
-  &.link--arrow:after {
-    content: $icon--arrow-right;
+  // Create links for all the icons.
+  @each $name, $details in $icons {
+    &.link--#{$name}:#{nth($details, 2)} {
+      content: nth($details, 1);
+    }
   }
 }

@@ -1,4 +1,3 @@
-
 <div class="responsive-filter">
 
   <label class="responsive-filter__heading">{{ heading }}</label>
@@ -6,7 +5,7 @@
 
   <div class="responsive-filter__radios">
     {{#each inputs}}
-      <div class="form-field__wrapper">
+      <div class="form-field">
         <input class="form-field" type="radio" id="radio-{{id}}" name="{{../group}}" value="{{value}}" {{#if checked}}checked{{/if}}>
         <label class="form-field__label" for="radio-{{id}}">{{label}}</label>
       </div>

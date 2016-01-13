@@ -1,14 +1,14 @@
 <div class="teaser-item {{ modifier_class}} grid--{{ width }}">
   {{#if icon}}
-    <div class="teaser-item__icon"> 
+    <div class="teaser-item__icon">
       <a href="{{ url }}">
         <span class="icon--{{ icon }}"></span>
       </a>
-    </div> 
+    </div>
   {{/if}}
-  
+
   {{#if thumbnail}}
-    <div class="teaser-item__thumbnail"> 
+    <div class="teaser-item__thumbnail">
       <a href="{{ url }}">
       {{#with thumbnail}}
         {{> thumbnail }}
@@ -23,11 +23,11 @@
         <span class="text--label">{{{ eyebrow }}}</span>
       </div>
     {{/if}}
-    
+
     {{#if title}}
-      <h3 class="teaser-item__title heading--label">
+      <h5 class="teaser-item__title">
         <a href="{{ url }}">{{{ title }}}</a>
-      </h3>
+      </h5>
     {{/if}}
 
     {{#if label}}

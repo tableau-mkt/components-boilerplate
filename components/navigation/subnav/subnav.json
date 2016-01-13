@@ -9,7 +9,7 @@
           "href": "#overview",
           "text": "Overview"
         },
-        "class": "active"
+        "class": "is-active"
       },
       {
         "link": {

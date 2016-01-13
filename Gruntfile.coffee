@@ -32,11 +32,11 @@ module.exports = (grunt) ->
         ]
         tasks: ['clean:partials', 'copy:partials']
 
-      js:
+      assets:
         files: ['components/{,**/}*.{png,jpg,gif}']
         tasks: ['copy:assets', 'copy:styleguide']
 
-      assets:
+      js:
         files: ['components/{,**/}*.js']
         tasks: ['concat:scripts', 'concat:sgScripts', 'copy:styleguide']
 
@@ -104,12 +104,12 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require('autoprefixer-core')({
+          require('autoprefixer')({
             browsers: ['ie >= 8', 'last 2 iOS versions', 'last 2 Opera versions', 'last 2 Firefox versions']
           })
         ]
       dist:
-        src: 'build/css/*.css'
+        src: ['build/css/*.css', 'styleguide/build/css/*.css']
 
     cssmin:
       dist:
@@ -198,8 +198,11 @@ module.exports = (grunt) ->
           fontFilename: 'tableau-icons-{hash}'
 
     clean:
-      icons:
-        src: ["build/fonts/tableau-icons-*"]
+      built:
+        src: [
+          "build/**/*"
+          "styleguide/**/*"
+        ]
       partials:
         src: ["template/_partials/*.hbs"]
 
@@ -255,7 +258,7 @@ module.exports = (grunt) ->
     'watch'
   ]
   grunt.registerTask 'build', [
-    'clean:icons'
+    'clean:built'
     'clean:partials'
     'webfont:icons'
     'sass_globbing'
