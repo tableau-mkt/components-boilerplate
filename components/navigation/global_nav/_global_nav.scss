@@ -497,19 +497,27 @@ Style guide: navigation.global
 
 @include breakpoint($tablet-only) {
   .global-nav__drawers .sub-nav__item {
+    @extend %clearfix;
+
     .sub-nav__item-title {
-      display: inline-block;
-      width: 250px;
+      @include span(4);
+    }
+
+    .sub-nav__item-title--tablet-full {
+      @include span(full);
     }
 
     .sub-nav__item-description {
-      display: inline-block;
+      @include span(last 8);
     }
 
-    .global-nav__drawer-link-list ul {
-      -webkit-column-count: 2;
-      -moz-column-count:    2;
-      column-count:         2;
+    .global-nav__drawer-link-list ul,
+    .global-nav__drawer-link-list ol {
+      column-count: 2;
+      // Using css columns causes the 2nd column bullets to disappear. This
+      // adjusts them back to being visible.
+      list-style-position: inside;
+      margin-left: -1em;
     }
   }
 }

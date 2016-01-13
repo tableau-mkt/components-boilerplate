@@ -8,7 +8,7 @@ Markup: divider.hbs
 
 Weight: 0
 
-.divider--gradient - A divider that fades out to transparent on either end. 
+.divider--gradient - A divider that fades out to transparent on either end.
 .divider--dashed - A dashed divider.
 .divider--dark - A darker divider used for darker backgrounds
 
@@ -32,7 +32,7 @@ Style guide: layout.divider
 
   &.divider--dashed {
     border-top-style: dotted;
-  }  
+  }
 
   &.divider--dark {
     border-color: $bg-dark-gray-1;
@@ -68,15 +68,15 @@ Style guide: layout.divider-vertical
 
   &.vertical-divider--dashed {
     border-left-style: dotted;
-  } 
+  }
   &.vertical-divider--right {
     border-left: 0;
     border-right: 1px solid $accent-dividers;
     padding-left: inherit;
-    
+
     &.vertical-divider--dashed {
       border-right-style: dotted;
-    } 
+    }
   }
 
   p:first-child,
@@ -95,7 +95,7 @@ Style guide: layout.divider-vertical
 
   // @TODO make this work. Example in ecosystem section of Products Family
   &.vertical-divider--or {
-    
+
   }
 
   @include breakpoint ($tablet-min) {
@@ -109,6 +109,10 @@ Style guide: layout.divider-vertical
 
   @include breakpoint ($mobile-only) {
     border: 0;
+
+    &.vertical-divider--right {
+      border: 0;
+    }
 
     &.vertical-divider--mobile {
       border-left: 1px solid $accent-dividers;

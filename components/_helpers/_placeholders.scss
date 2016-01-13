@@ -16,7 +16,7 @@
   padding: 0;
   list-style: none;
 
-  li {
+  > li {
     list-style: none;
   }
 }
@@ -25,7 +25,7 @@
 %inline-list {
   @extend %plain-list;
 
-  li {
+  > li {
     display: inline-block;
   }
 }

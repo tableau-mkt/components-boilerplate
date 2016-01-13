@@ -31,7 +31,7 @@ Tabia.contentSearch.ready = function ($) {
     $this.find('.content-search__reset').click(function (event) {
       // Allow overriding.
       var $resetEvent = $.Event('contentSearch:reset');
-      $(document).trigger($resetEvent);
+      $this.trigger($resetEvent);
       if (!$resetEvent.isDefaultPrevented()) {
         // Reset/empty the form, via AJAX.
         Tabia.contentSearch.resetForm($this);
