@@ -82,7 +82,7 @@ Style guide: forms.content-search
   }
 
   /* when component is open */
-  &.is-populated {
+  &.has-suggestion {
     .content-search__reset {
       display: block;
     }

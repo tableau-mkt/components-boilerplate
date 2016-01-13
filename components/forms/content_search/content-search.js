@@ -46,9 +46,8 @@ Tabia.contentSearch.ready = function ($) {
  * @param {jQuery Object} $search
  */
 Tabia.contentSearch.resetForm = function($search) {
-  $search.removeClass('is-populated');
+  $search.removeClass('has-suggestion');
   $search.find('.content-search__input').val('');
-  $search.find('.content-search__submit').click();
 };
 
 /**
@@ -58,8 +57,7 @@ Tabia.contentSearch.resetForm = function($search) {
  */
 Tabia.contentSearch.submitForm = function($search) {
   if ($search.find('.content-search__input').val() !== '') {
-    $search.removeClass('has-suggestion')
-      .addClass('is-populated')
+    $search.removeClass('has-suggestion');
     $search.find('.content-search__submit').click();
   }
 };
