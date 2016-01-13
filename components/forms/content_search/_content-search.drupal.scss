@@ -8,7 +8,8 @@
   }
 
   input[type='search'] {
-    background-image: none;
+    // Override Drupal's form-autocomplete throbber.
+    background-image: none !important;
   }
 
   #autocomplete {
