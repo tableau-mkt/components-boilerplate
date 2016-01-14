@@ -302,19 +302,55 @@ input[type="submit"] {
   }
 }
 
+/*
+Form on Dark Backgrounds
+
+Nodefault: true
+
+Markup: form_fields.hbs
+
+Weight: 1
+
+Bgcolor: #333
+
+.form--negative - Negative default text color and heavier font weight for readability on dark backgrounds.
+
+Style guide: forms.fields-dark
+*/
+
+.form--negative {
+  color: $text-negative;
+
+  .form__legend {
+    color: $text-negative;
+  }
+
+  // Use a bolder font for labels and description text.
+  .form-field__label,
+  .form-field__description {
+    font-family: $text--benton-medium;
+  }
+
+  // But, float labels should be benton-book.
+  .form-field.has-float-label {
+    .form-field__label {
+      font-family: $text--benton-book;
+    }
+  }
+}
 
 /*
-Validation Messages
+Invalid Form Fields
 
-Warnings, errors, etc.
+For missing/invalid form element submissions.
+
+Nodefault: true
 
 Markup: form_validation.hbs
 
 Weight: 2
 
-Nodefault: true
-
-.form-field--invalid - Invalid form field
+.form-field--invalid - Invalid form field.
 
 Style guide: forms.validation
 */
@@ -322,8 +358,6 @@ Style guide: forms.validation
 .form-field--invalid {
   color: $msg-error-text;
 }
-
-
 
 /*
 Confirmation Messages
