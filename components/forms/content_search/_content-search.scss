@@ -36,6 +36,7 @@ Style guide: forms.content-search
     font-size: em($base);
     color: $text-medium-body;
     font-family: $text--merriweather-light;
+    appearance: none;
 
     &::placeholder {
       color: $text-light-body;
