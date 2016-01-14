@@ -174,8 +174,13 @@ Style guide: forms.fields
       padding-bottom: 0.3em;
     }
 
+    // The first "non-option" in a select should look like a placeholder.
     select.is-empty {
-      color: $text-light-body;
+      color: $gray;
+
+      option {
+        color: $text-dark-body;
+      }
     }
   }
 }
@@ -256,7 +261,7 @@ textarea {
 }
 
 input::placeholder {
-  color: $text-light-body;
+  color: $gray;
 }
 
 @include breakpoint($mobile-only) {
@@ -284,10 +289,6 @@ select {
 // Separate, because IE is lame.
 select::-ms-expand {
   display: none;
-}
-
-.form-field__option-none {
-  color: $text-medium-body;
 }
 
 .form__button,
