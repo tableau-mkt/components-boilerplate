@@ -14,8 +14,15 @@ Weight: 0
 Style guide: forms.base
 */
 
-.form__intro {
+.form__intro,
+.form__fieldset {
   margin-bottom: 1.5em;
+}
+
+.form__legend {
+  @extend .heading--h3;
+  @extend .heading-highlight;
+  padding-bottom: 1em;
 }
 
 .form--centered,
@@ -107,8 +114,8 @@ Style guide: forms.fields
     // Avoiding @extend .text--label since overriding text-transform is not
     // straightforward.
     font-family: $text--benton-book;
-    font-size: em(11px);
     letter-spacing: 1px;
+    line-height: 1.5;
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
       -webkit-font-smoothing: subpixel-antialiased;
     }
@@ -116,10 +123,12 @@ Style guide: forms.fields
 
   .form-field__label {
     color: $text-form-float-label;
+    font-size: em(13px);
   }
 
   .form-field__description {
     margin-top: 0.25em;
+    font-size: em(12px);
   }
 
   &.form-field--invalid .form-field__label,
@@ -131,6 +140,7 @@ Style guide: forms.fields
   &.has-float-label {
     .form-field__label {
       position: absolute;
+      font-size: em(11px);
       pointer-events: none;
       opacity: 0;
       left: 0.7em;
@@ -216,9 +226,32 @@ textarea {
   }
 }
 
-// Un-color label on checkboxes.
+// Allow inline modifier on form fields.
+.form-field--inline {
+  .form-field__control,
+  input[type="text"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    display: inline-block;
+  }
+}
+
+// Reduce margins checkbox, radio form items.
+.form-field--checkbox,
+.form-field--radio {
+  margin-bottom: 0;
+}
+
+// Un-color labels on checkbox, radio form items.
 .form-field--checkbox .form-field__label,
-.form-field--checkbox label {
+.form-field--checkbox label,
+.form-field--radio .form-field__label,
+.form-field--radio label {
   color: inherit;
 }
 
@@ -235,7 +268,7 @@ input::placeholder {
 select {
   @extend %cover-absolute;
   position: relative;
-  width: 100%;
+  padding-right: 2.5em;
   appearance: none;
   outline: none;
   font-size: 1em;
