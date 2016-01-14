@@ -53,9 +53,9 @@
       </div>
 
       <div class="form-field form-field--select">
-        <label class="form-field__label" for="sample-select">Select List (No Placeholder)</label>
+        <label class="form-field__label" for="sample-select-2">Select List (No Placeholder)</label>
         <br>
-        <select name="sample-select">
+        <select name="sample-select-2">
           <option selected>--</option>
           <option value="one">Choice One</option>
           <option value="two">Choice Two</option>
@@ -112,5 +112,83 @@
         <label class="form-field__label" for="email-field">Email Field:</label>
         <input class="form-field__control" type="email" name="email-field" id="email-field" placeholder="email">
       </div>
+    </div>
+
+    <div class="form__fieldset">
+      <div class="form__legend">Inline Form Fields</div>
+
+        <div class="form-field">
+          <label class="form-field__label" for="text-field">Enter a date</label>
+          <br>
+
+          <div class="form-field form-field--inline has-float-label">
+            <label class="form-field__label" for="select-month">Month</label>
+            <select id="select-month" name="select-month">
+              <option value="" selected="selected">Month</option>
+              <option value="1">Jan</option>
+              <option value="2">Feb</option>
+              <option value="3">Mar</option>
+              <option value="4">Apr</option>
+              <option value="5">May</option>
+              <option value="6">Jun</option>
+              <option value="7">Jul</option>
+              <option value="8">Aug</option>
+              <option value="9">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+          </div>
+
+          <div class="form-field form-field--inline has-float-label">
+            <label class="form-field__label" for="select-day">Day</label>
+            <select id="select-day" name="select-day">
+              <option value="" selected="selected">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+
+          <div class="form-field form-field--inline has-float-label">
+            <label class="form-field__label" for="select-year">Year</label>
+            <select id="select-year" name="select-year">
+              <option value="" selected="selected">Year</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+            </select>
+          </div>
+        </div>
     </div>
   </div>

@@ -228,6 +228,8 @@ textarea {
 
 // Allow inline modifier on form fields.
 .form-field--inline {
+  display: inline-block;
+
   .form-field__control,
   input[type="text"],
   input[type="search"],
