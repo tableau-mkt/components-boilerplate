@@ -1,0 +1,9 @@
+<div class="fancy-filters form-field">
+  <label class="form-field__label fancy-filters__group-label">{{ label }}</label>
+{{#each inputs}}
+  <div>
+    <input class="form-field fancy-filters__radio" type="radio" id="radio-{{id}}" name="{{../group}}" value="{{value}}" {{#if checked}}checked{{/if}}>
+    <label class="form-field__label" for="radio-{{id}}">{{label}}</label>
+  </div>
+{{/each}}
+</div>
