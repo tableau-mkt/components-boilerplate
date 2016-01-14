@@ -1,0 +1,72 @@
+/*
+Teaser Slideshow
+
+A slideshow of three teaser items
+
+Markup: teaser-slideshow.hbs
+
+Style guide: interactive.teaser-slideshow
+*/
+
+.teaser-slideshow {
+  position: relative;
+  padding-left: 26px;
+  padding-right: 26px;
+
+  .teaser-item {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+
+  // Arrow Controls
+  .teaser-slideshow__arrow {
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 26px;
+    top: 42%;
+    z-index: 5;
+    margin-top: -13px;
+    padding: 0;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+
+    .icon:before {
+      vertical-align: middle;
+      color: $text-dark-body;
+      font-size: $base-font-size * 1.5;
+    }
+
+    &.teaser-slideshow__arrow--prev {
+      left: 0;
+    }
+
+    &.teaser-slideshow__arrow--next {
+      right: 0;
+    }
+  }
+
+  // Cancel out some default slick styles
+  // @todo remove this once we're not loading slick-theme.css
+  .teaser-slideshow__arrow:before {
+    display: none;
+  }
+
+  @include breakpoint($tablet-only) {
+    .teaser-item {
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+  }
+
+  @include breakpoint($mobile-max) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
