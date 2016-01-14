@@ -16,30 +16,6 @@ Style guide: interactive.hero-slideshow
     position: relative;
   }
 
-
-  // Slick dots
-  .slick-dots {
-    height: 20px;
-    bottom: 0;
-
-    li {
-      margin: 0;
-
-      &.slick-active button:before {
-        opacity: .75;
-        color: #666;
-      }
-
-      button:before {
-        color: $white;
-        font-size: 9px;
-        opacity: 1;
-        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
-        transition: color .25s;
-      }
-    }
-  }
-
   @include breakpoint($tablet-only) {
     .content-container {
       padding-left: 10%;
@@ -48,15 +24,8 @@ Style guide: interactive.hero-slideshow
   }
 
   @include breakpoint($mobile-only) {
-    .slick-dots {
-      bottom: auto;
-      top: 0;
-      margin-top: 40%;
-    }
-
     .hero-slideshow__arrow {
       display: none;
     }
   }
-
 }

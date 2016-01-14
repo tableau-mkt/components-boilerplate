@@ -1,7 +1,6 @@
 {
   "css": [
     "build/vendor/slick.js/slick/slick.css",
-    "build/vendor/slick.js/slick/slick-theme.css",
     "public/style.css",
     "build/css/styleguide.css"
   ],
@@ -25,4 +24,3 @@
   "destination": "../styleguide",
   "template": "../template"
 }
-
