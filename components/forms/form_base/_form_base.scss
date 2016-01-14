@@ -42,8 +42,7 @@ Style guide: forms.base
   }
 
   // Buttons should be 100% width on mobile only.
-  .form__button,
-  input[type="submit"] {
+  .form__button {
     @include breakpoint($mobile-only) {
       width: 100%;
     }
@@ -59,7 +58,6 @@ Style guide: forms.base
   .form__control,
   .form__field,
   .form__button,
-  input[type="submit"],
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -86,8 +84,7 @@ Style guide: forms.base
   input[type="email"],
   select,
   textarea,
-  .form__button,
-  input[type="submit"] {
+  .form__button {
     max-width: 432px;
   }
 }
@@ -291,10 +288,7 @@ select::-ms-expand {
   display: none;
 }
 
-.form__button,
-input[type="submit"] {
-  @extend .cta;
-  @extend .cta--secondary;
+.form__button {
   display: block;
   outline: none;
 
