@@ -249,9 +249,7 @@ textarea {
 
 // Un-color labels on checkbox, radio form items.
 .form-field--checkbox .form-field__label,
-.form-field--checkbox label,
-.form-field--radio .form-field__label,
-.form-field--radio label {
+.form-field--radio .form-field__label {
   color: inherit;
 }
 
