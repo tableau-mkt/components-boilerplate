@@ -103,11 +103,11 @@
             $scrollTarget = $('#' + scrollBehavior);
             break;
         }
-        Tabia.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
+        Components.utils.smoothScrollTop($scrollTarget, customAnimation.duration, scrollOffset, false);
       }
       else if ($curtain.length) {
         // Use curtain for scroll.
-        Tabia.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
+        Components.utils.smoothScrollTop($curtain, customAnimation.duration, scrollOffset, true);
       }
 
       // Special expand icon handling

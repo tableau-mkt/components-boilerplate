@@ -54,7 +54,7 @@
         BCPlayer.currentTime(timestamp);
 
         // Scroll.
-        Tabia.smoothScrollTop($videoElement);
+        Components.utils.smoothScrollTop($videoElement);
 
         // Play the video if it ain't playing.
         if (BCPlayer.paused()) {
