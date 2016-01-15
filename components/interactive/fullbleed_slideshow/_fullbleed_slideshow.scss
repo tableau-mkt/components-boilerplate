@@ -18,46 +18,6 @@ Style guide: interactive.fullbleed-slideshow
     margin-right: 50px;
   }
 
-
-  // Arrow Controls
-  .fullbleed-slideshow__arrow {
-    position: absolute;
-    display: block;
-    height: 26px;
-    width: 26px;
-    top: 42%;
-    z-index: 5;
-    margin-top: -13px;
-    padding: 0;
-    line-height: 0px;
-    font-size: 0px;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-    border: none;
-    outline: none;
-
-    .icon:before {
-      vertical-align: middle;
-      color: $text-dark-body;
-      font-size: $base-font-size * 1.5;
-    }
-
-    &.fullbleed-slideshow__arrow--prev {
-      left: 187px;
-    }
-
-    &.fullbleed-slideshow__arrow--next {
-      right: 187px;
-    }
-  }
-
-  // Cancel out some default slick styles
-  // @todo remove this once we're not loading slick-theme.css
-  .fullbleed-slideshow__arrow:before {
-    display: none;
-  }
-
   .large-teaser__copy {
     opacity: 0;
     transition: opacity 650ms;
@@ -65,6 +25,15 @@ Style guide: interactive.fullbleed-slideshow
 
   .slick-active .large-teaser__copy {
     opacity: 1;
+  }
+
+  // Arrow Control tweaks
+  .slick-prev {
+    left: 187px;
+  }
+
+  .slick-next {
+    right: 187px;
   }
 
   @include breakpoint($desktop-only) {
@@ -99,11 +68,11 @@ Style guide: interactive.fullbleed-slideshow
       margin-right: 1.5em;
     }
 
-    .fullbleed-slideshow__arrow.fullbleed-slideshow__arrow--prev {
+    .slick-prev {
       left: 37px;
     }
 
-    .fullbleed-slideshow__arrow.fullbleed-slideshow__arrow--next {
+    .slick-next {
       right: 37px;
     }
   }
