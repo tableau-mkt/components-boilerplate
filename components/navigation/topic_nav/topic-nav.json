@@ -13,7 +13,7 @@
       "id": "adam"
     },
     {
-      "label": "<i class='icon--magnifying-glass'></i>",
+      "label": "<i class='icon icon--search'></i>",
       "id": "search"
     }
   ],
@@ -169,6 +169,7 @@
     },
     {
       "id": "search",
+      "class": "topic-nav__search",
       "search": {
         "id": "topicSearch",
         "placeholder": "Search best actors"
