@@ -123,6 +123,7 @@ Style guide: navigation.global
       right: 0;
       width: 45px;
       height: 100%;
+      cursor: pointer;
       transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
 
       &:before {
@@ -139,18 +140,19 @@ Style guide: navigation.global
         text-align: center;
       }
 
-      input[type='text'],
       input[type='search'] {
+        @extend .text--large-copy;
         position: absolute;
         right: 0;
-        width: 45px;
+        width: 0;
         height: 100%;
+        padding: 0;
+        opacity: 0;
         border: none;
         cursor: pointer;
-        padding: 0 0 0 45px;
         text-align: left;
-        @extend .text--large-copy;
         transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
+        appearance: none;
 
         &:focus {
           outline: none;
@@ -198,8 +200,9 @@ Style guide: navigation.global
 
       input[type='search'] {
         width: 100%;
+        opacity: 1;
         padding-left: 2em;
-        cursor: inherit;
+        cursor: initial;
       }
 
       .global-nav__search-close {
