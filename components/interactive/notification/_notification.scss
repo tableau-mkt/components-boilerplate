@@ -1,0 +1,35 @@
+/*
+Notification
+
+Display global notification.
+
+Markup: notification.hbs
+
+Weight: 10
+
+Style guide: interactive.notification
+*/
+
+.notification {
+  .notification__message {
+    padding-right: 3em;
+  }
+
+  .notification__close:after {
+    position: absolute;
+    top: 0;
+    font-family: "tableau-icons";
+    display: inline-block;
+    right: 1.25em;
+    content: $icon--close-window-style2;
+    font-size: 2em;
+    color: $white;
+    cursor: pointer;
+  }
+
+  @include breakpoint($tablet-max) {
+    .notification__close:after {
+      right: 0.5em;
+    }
+  }
+}

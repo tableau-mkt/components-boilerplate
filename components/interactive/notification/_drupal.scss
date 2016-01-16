@@ -1,0 +1,5 @@
+
+// Apply the notification close button style to our language dropdown reminder
+#langdropdown-reminder-close {
+  @extend .notification__close;
+}
