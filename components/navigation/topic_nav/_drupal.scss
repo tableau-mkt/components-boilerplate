@@ -1,0 +1,21 @@
+// Specific overrides for stories section search. overflow: hidden rules
+// conflict heavily with contextual search results
+
+.topic-nav--stories-overview .topic-nav {
+  .topic-nav__drawers {
+    overflow: initial;
+  }
+
+  .topic-nav__search {
+    &.is-active .content-container {
+    // Avoids a bad margin spacing error.
+      padding-top: 0.1px;
+      overflow: initial;
+    }
+  }
+
+  .contextual-search {
+    // Place above the topic-nav toggle
+    z-index: 6;
+  }
+}
