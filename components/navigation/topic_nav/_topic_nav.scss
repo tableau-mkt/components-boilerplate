@@ -140,7 +140,7 @@ Style Guide: navigation.topic-nav
       line-height: 40px;
       transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
 
-      &.open {
+      &.is-open {
         transform: rotate(180deg);
       }
     }
