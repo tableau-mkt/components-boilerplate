@@ -1,8 +1,8 @@
 {
-  "image": "http://www.placecage.com/c/400/400",
+  "image": "<img src=\"http://www.placecage.com/c/400/400\">",
   "name": "Drew Paul Doritos",
-  "jobTitle": "Executive Vice President of Biological Research",
-  "bio": "When you get lost in your imaginatory vagueness, your foresight will become a nimble vagrant. It's good for everyone to understand that they are to love their enemies, simply because your enemies show you things about yourself you need to change. So in actuality enemies are friends in reverse.",
+  "jobTitle": "VP of Biological Research",
+  "bio": "<p>When you get lost in your imaginatory vagueness, your foresight will become a nimble vagrant. It's good for everyone to understand that they are to love their enemies, simply because your enemies show you things about yourself you need to change. So in actuality enemies are friends in reverse.</p>",
   "social": [
     {
       "name": "linkedin",
