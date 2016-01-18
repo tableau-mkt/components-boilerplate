@@ -44,7 +44,11 @@ Style guide: teasers.person-teaser
     color: $text-dark-body;
   }
 
-  .person-teaser__description {
+  .person-teaser__job-title {
+    @extend .text--label;
+  }
+
+  .person-teaser__bio {
     @extend .text--body-small;
   }
 
