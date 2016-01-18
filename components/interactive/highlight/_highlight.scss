@@ -1,0 +1,23 @@
+/*
+Highlight
+
+Highlight an element.
+
+Markup: highlight.hbs
+
+Weight: 10
+
+Style guide: interactive.highlight
+*/
+
+.highlight {
+  transition: box-shadow 1s linear;
+
+  &.highlight--normal {
+    box-shadow: 0 0 10px $text-form-float-label;
+  }
+
+  &.highlight--negative {
+    box-shadow: 0 0 10px $text-light-body;
+  }
+}
