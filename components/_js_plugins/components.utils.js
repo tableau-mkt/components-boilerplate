@@ -9,6 +9,16 @@ var Components = Components || {};
 // Declare this component's namespace.
 Components.utils = {};
 
+// Breakpoint values.
+Components.utils.breakpoints = {
+  'mobileMax': 639,
+  'tabletMin': 640,
+  'tabletMax': 960,
+  'desktopMin': 961,
+  'contentMax': 1550,
+  'layoutMax': 1920
+};
+
 /**
  * Smooth Scroll to top of an element
  * @param  {jQuery Object} $element - Element to scroll to the top of
@@ -68,4 +78,22 @@ Components.utils.parseUrlParams = function () {
   }
 
   return result;
+};
+
+
+/**
+ * Helpers to identify which breakpoint the browser is in.
+ *
+ * @return {Boolean} whether viewport is within specified breakpoint
+ */
+Components.utils.isMobile = function () {
+  return matchMedia('(max-width: ' + Components.utils.breakpoints.mobileMax + 'px)').matches;
+};
+
+Components.utils.isTablet = function () {
+  return matchMedia('(min-width:' + Components.utils.breakpoints.tabletMin + 'px) and (max-width: ' + Components.utils.breakpoints.tabletMax + 'px)').matches;
+};
+
+Components.utils.isDesktop = function () {
+  return matchMedia('(min-width: ' + Components.utils.breakpoints.desktopMin + 'px)').matches;
 };

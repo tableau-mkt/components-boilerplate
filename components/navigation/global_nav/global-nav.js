@@ -61,7 +61,7 @@
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
-      if (isMobile()) {
+      if (Components.utils.isMobile()) {
         $drawer.show().addClass('open');
 
         $drawer.add($mobileWrapper).animate({
@@ -109,15 +109,10 @@
       }, animation.duration);
     }
 
-    // Helper function to check whether we are on a mobile/tablet viewport.
-    function isMobile() {
-      return matchMedia('(max-width: 960px)').matches;
-    }
-
     // Prepare our menu for the user's viewport.
     function sizing() {
       // Tablet/Mobile
-      if (isMobile()) {
+      if (Components.utils.isMobile()) {
         // Adjust the height of the mobile menu
         mobileHeightAdjust();
       }

@@ -8,19 +8,19 @@
       stickIt(this);
     });
 
-    if (matchMedia('(min-width: 961px)').matches) {
+    if (Components.utils.isDesktop()) {
       $('.sticky--desktop').each(function(i) {
         stickIt(this);
       });
     }
 
-    if (matchMedia('(max-width: 960px) and (min-width: 640px)').matches) {
+    if (Components.utils.isTablet()) {
       $('.sticky--tablet').each(function(i) {
         stickIt(this);
       });
     }
 
-    if (matchMedia('(max-width: 639px)').matches) {
+    if (Components.utils.isMobile()) {
       $('.sticky--mobile').each(function(i) {
         stickIt(this);
       });
