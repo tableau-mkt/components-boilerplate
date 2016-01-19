@@ -1,8 +1,8 @@
 (function($) {
   $.fn.highlightSonar = function () {
     var $el = $(this),
-        sonar = "highlight--sonar",
-        $sonar = $('<div class="' + sonar + '"></div>');
+        sonar = ".highlight--sonar",
+        $sonar = $('<div class="highlight--sonar"></div>');
 
     $el.remove(sonar).prepend($sonar);
 
