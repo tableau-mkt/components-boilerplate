@@ -1,7 +1,7 @@
 /*
 Highlight
 
-Highlight an element.
+Highlight an element with a sonar pulse.
 
 Markup: highlight.hbs
 
@@ -9,15 +9,39 @@ Weight: 10
 
 Style guide: interactive.highlight
 */
+.highlight--sonar {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $text-form-float-label;
+  vertical-align: middle;
+  z-index: 0;
 
-.highlight {
-  transition: box-shadow 1s linear;
-
-  &.highlight--normal {
-    box-shadow: 0 0 10px $text-form-float-label;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    background-color: $text-form-float-label;
+    animation: sonarPulse 1s linear infinite;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
   }
+}
 
-  &.highlight--negative {
-    box-shadow: 0 0 10px $text-light-body;
+@keyframes sonarPulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(10);
+    opacity: 0;
   }
 }

@@ -1,13 +1,15 @@
 (function($) {
-  $.fn.highlightShadow = function (modifierClass) {
+  $.fn.highlightSonar = function () {
     var $el = $(this),
-        modifierClass = modifierClass || 'highlight--normal';
+        sonar = "highlight--sonar",
+        $sonar = $('<div class="' + sonar + '"></div>');
 
-    $el.addClass('highlight').addClass(modifierClass)
-      .one('transitionend webkitTransitionEnd oTransitionEnd',
-        function (e) {
-          $el.removeClass(modifierClass);
-        }
-      );
+    $el.remove(sonar).prepend($sonar);
+
+    // Remove our sonar pulse after 5 seconds.
+    setTimeout(function()
+    {
+      $el.find(sonar).remove();
+    }, 5000);
   };
 }( jQuery ));
