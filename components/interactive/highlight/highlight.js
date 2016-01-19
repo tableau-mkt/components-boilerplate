@@ -12,4 +12,4 @@
       $el.find(sonar).remove();
     }, 5000);
   };
-}( jQuery ));
+}(jQuery));

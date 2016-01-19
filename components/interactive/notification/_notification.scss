@@ -16,15 +16,15 @@ Style guide: interactive.notification
   }
 
   .notification__close:after {
+    display: inline-block;
     position: absolute;
     top: 0;
-    font-family: "tableau-icons";
-    display: inline-block;
     right: 1.25em;
+    cursor: pointer;
     content: $icon--close-window-style2;
+    font-family: "tableau-icons";
     font-size: 2em;
     color: $white;
-    cursor: pointer;
   }
 
   @include breakpoint($tablet-max) {
