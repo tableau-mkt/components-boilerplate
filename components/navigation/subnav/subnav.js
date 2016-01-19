@@ -23,7 +23,9 @@
       });
 
       // Handle scrolling of links on mobile
-      mobileScroll();
+      if ($linksWrapper.length) {
+        mobileScroll();
+      }
       $(window).on('resize orientationchange', _.debounce(mobileScroll, 100));
 
       // Smooth Scroll for anchor links
