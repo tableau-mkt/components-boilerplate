@@ -37,7 +37,7 @@
           offset = $subnav.find(".sticky-wrapper").outerHeight(true) - 1;
         }
 
-        Tabia.smoothScrollTop($(element), 500, offset);
+        Components.utils.smoothScrollTop($(element), 500, offset);
         e.preventDefault();
       });
     }

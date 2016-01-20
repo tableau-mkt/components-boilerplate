@@ -384,12 +384,14 @@ If you are encountering issues styles not obeying a breakpoint you have set,
 this is likely the issue and you might need to rework your SASS to not include 
 an `@extend`.
 
-### JS Plugins/helpers
-Several useful Javascript helpers are available in [helpers.js](/components/_helpers/helpers.js)
-that can be utilized within any component-specific `.js` file. We also have 
-custom plugins available in [_js_plugins](/components/_js_plugins) for generic 
-functionality that needs to be available to multiple components. These plugins
-are written as jQuery plugins. See [jQuery's documentation](https://learn.jquery.com/plugins/basic-plugin-creation/) for a guide on writing new plugins.
+### JS Plugins & Utilities
+We have custom plugins available in [_js_plugins](/components/_js_plugins) for
+generic functionality that needs to be available to multiple components. These
+plugins are primarily written as jQuery plugins. See [jQuery's
+documentation](https://learn.jquery.com/plugins/basic-plugin-creation/) for a
+guide on writing new plugins. 
+
+Utility JS is in [components.utils.js](/components/_js_plugins/components.utils.js) and should include generic, useful functions that are miscellaneous and not quite worthy of being a full plugin.
 
 
 ## Scaffold a component

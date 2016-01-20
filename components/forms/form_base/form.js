@@ -1,10 +1,10 @@
-// Loose augmentation pattern. Creates top-level Tabia variable if it doesn't
-// already exist.
-var Tabia = Tabia || {};
+// Loose augmentation pattern. Creates top-level Components variable if it
+// doesn't already exist.
+var Components = Components || {};
 
-Tabia.form = {};
+Components.form = {};
 
-Tabia.form.initFloatLabels = function ($elements) {
+Components.form.initFloatLabels = function ($elements) {
   $elements.find('input, select, textarea')
     .not('[type="checkbox"], [type="radio"]')
     .closest('.form-field')
@@ -14,9 +14,9 @@ Tabia.form.initFloatLabels = function ($elements) {
 };
 
 $(document).ready(function () {
-  Tabia.form.initFloatLabels($('.has-float-label'));
+  Components.form.initFloatLabels($('.has-float-label'));
 });
 
 $(document).on('initFloatLabels', function (e) {
-  Tabia.form.initFloatLabels($(e.target));
+  Components.form.initFloatLabels($(e.target));
 });
