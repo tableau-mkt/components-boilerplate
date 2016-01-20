@@ -14,11 +14,13 @@ Weight: 0
 Style guide: forms.base
 */
 
+fieldset,
 .form__intro,
 .form__fieldset {
   margin-bottom: 1.5em;
 }
 
+legend,
 .form__legend {
   @extend .heading--h3;
   @extend .heading-highlight;
