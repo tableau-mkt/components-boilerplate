@@ -19,7 +19,7 @@
     {{#each rows}}
       <tr>
         {{#each cells}}
-          <td{{#if class}} class="{{ class }}"{{/if}}>
+          <td class="{{#if @first}}comparison-list__feature-description {{/if}}{{#if class}}{{ class }}{{/if}}">
             {{{ content }}}
           </td>
         {{/each}}
