@@ -1,0 +1,45 @@
+/*
+Global Notification
+
+Display global notification messages.
+
+Markup: global-notification.hbs
+
+Weight: 10
+
+Style guide: interactive.global-notification
+*/
+
+.global-notification {
+  padding: 1em 0;
+  color: $light-gray;
+  background-color: $bg-dark-gray-3;
+
+  .global-notification__message {
+    padding-right: 3em;
+  }
+
+  .global-notification__close:after {
+    display: inline-block;
+    position: absolute;
+    top: 0.4em;
+    right: 1.25em;
+    cursor: pointer;
+    content: $icon--close-window-style2;
+    font-family: "tableau-icons";
+    font-size: 1.5em;
+    color: $white;
+  }
+
+  @include breakpoint($tablet-max) {
+    .global-notification__close:after {
+      right: 1em;
+    }
+  }
+
+  @include breakpoint($mobile-max) {
+    .global-notification__close:after {
+      right: 0.5em;
+    }
+  }
+}
