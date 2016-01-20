@@ -18,7 +18,7 @@ Style guide: lists.feature-list
     .feature-list__icon {
       @include span(1 of 6);
       text-align: center;
-      color: $icon-color-body-highlight;
+      color: $accent-dark-blue;
 
       .icon {
         @extend .icon--big;

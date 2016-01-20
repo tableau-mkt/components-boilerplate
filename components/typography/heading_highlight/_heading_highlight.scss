@@ -37,4 +37,8 @@ Style guide: typography.heading-highlight
   &.heading-highlight--mission:before {
     background: $text-mission-1;
   }
+
+  &.heading-highlight--accent:before {
+    background: $accent-dark-blue;
+  }
 }
