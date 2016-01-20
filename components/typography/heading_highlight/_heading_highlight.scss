@@ -12,6 +12,7 @@ Bgcolor: #eee
 
 .heading-highlight--negative - White colored highlight
 .heading-highlight--mission - Mission blue colored highlight
+.heading-highlight--gray - Mission blue colored highlight
 
 Style guide: typography.heading-highlight
 */
@@ -27,7 +28,7 @@ Style guide: typography.heading-highlight
     width: 50px;
     height: 3px;
     top: 0;
-    background: $heading-accent;
+    background: $accent-dark-blue;
   }
 
   &.heading-highlight--negative:before {
@@ -38,7 +39,7 @@ Style guide: typography.heading-highlight
     background: $text-mission-1;
   }
 
-  &.heading-highlight--accent:before {
-    background: $accent-dark-blue;
+  &.heading-highlight--gray:before {
+    background: $heading-accent;
   }
 }
