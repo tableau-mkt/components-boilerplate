@@ -122,12 +122,12 @@ Style guide: forms.fields
 
   .form-field__label {
     color: $text-form-float-label;
-    font-size: em(13px);
+    font-size: em(14px); // Same size as .text--body-small
   }
 
   .form-field__description {
     margin-top: 0.25em;
-    font-size: em(12px);
+    font-size: em(14px); // Same size as .text--body-small
   }
 
   &.form-field--invalid .form-field__label,
