@@ -30,3 +30,9 @@
     }
   }
 }
+
+.global-nav__top.global-nav--search-shown {
+  .form-field {
+    position: static;
+  }
+}

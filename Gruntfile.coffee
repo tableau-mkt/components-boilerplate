@@ -159,7 +159,6 @@ module.exports = (grunt) ->
           'jquery/dist/jquery.min.js'
           'jquery-ui/jquery-ui.min.js'
           'slick.js/slick/slick.css'
-          'slick.js/slick/slick-theme.css'
           'slick.js/slick/ajax-loader.gif'
           'slick.js/slick/fonts/**'
         ]

@@ -1,0 +1,81 @@
+// Default Slick Styles
+
+.slick-dots {
+  position: absolute;
+  height: 25px;
+  width: 100%;
+  bottom: 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+
+    button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+      padding: 0;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: $bg-white;
+      border-radius: 50%;
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
+      transition: color .25s;
+    }
+
+    &.slick-active  button {
+      opacity: .75;
+      background: $bg-dark-gray-1;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    bottom: auto;
+    top: 0;
+    margin-top: 40%;
+  }
+}
+
+
+// Default arrows
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 26px;
+  z-index: $zindex-2;
+  top: 0;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
+
+  .icon:before {
+    @extend %absolute-centered;
+    cursor: pointer;
+    color: $text-dark-body;
+    font-size: 3em;
+  }
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}

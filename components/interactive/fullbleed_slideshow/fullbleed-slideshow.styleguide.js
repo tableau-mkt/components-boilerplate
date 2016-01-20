@@ -11,8 +11,8 @@
         speed: 650,
         easing: 'easeInOutQuart',
         slide: '.large-teaser',
-        prevArrow: '<button class="fullbleed-slideshow__arrow fullbleed-slideshow__arrow--prev"><i class="icon icon--chevron-left">Previous</i></button>',
-        nextArrow: '<button class="fullbleed-slideshow__arrow fullbleed-slideshow__arrow--next"><i class="icon icon--chevron-right">Next</i></button>',
+        prevArrow: '<button class="slick-prev fullbleed-slideshow__arrow fullbleed-slideshow__arrow--prev"><i class="icon icon--chevron-left">Previous</i></button>',
+        nextArrow: '<button class="slick-next fullbleed-slideshow__arrow fullbleed-slideshow__arrow--next"><i class="icon icon--chevron-right">Next</i></button>',
         responsive: [
           {
             breakpoint: 940,
