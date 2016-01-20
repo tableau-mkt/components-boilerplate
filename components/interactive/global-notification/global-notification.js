@@ -4,10 +4,10 @@
     /**
      * Handles closing the notification.
      */
-    $('.notification .notification__close').click(function (e) {
+    $('.global-notification .global-notification__close').click(function (e) {
       e.preventDefault();
 
-      $('.notification').slideUp();
+      $('.global-notification').slideUp();
     });
   });
 })(jQuery);

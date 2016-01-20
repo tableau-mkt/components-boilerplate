@@ -1,25 +1,25 @@
 /*
-Notification
+Global Notification
 
-Display global notification.
+Display global notification messages.
 
-Markup: notification.hbs
+Markup: global-notification.hbs
 
 Weight: 10
 
-Style guide: interactive.notification
+Style guide: interactive.global-notification
 */
 
-.notification {
+.global-notification {
   padding: 1em 0;
   color: $light-gray;
   background-color: $bg-dark-gray-3;
 
-  .notification__message {
+  .global-notification__message {
     padding-right: 3em;
   }
 
-  .notification__close:after {
+  .global-notification__close:after {
     display: inline-block;
     position: absolute;
     top: 0.4em;
@@ -32,13 +32,13 @@ Style guide: interactive.notification
   }
 
   @include breakpoint($tablet-max) {
-    .notification__close:after {
+    .global-notification__close:after {
       right: 1em;
     }
   }
 
   @include breakpoint($mobile-max) {
-    .notification__close:after {
+    .global-notification__close:after {
       right: 0.5em;
     }
   }
