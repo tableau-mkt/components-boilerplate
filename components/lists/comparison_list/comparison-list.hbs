@@ -1,0 +1,29 @@
+<table class="comparison-list {{ modifier_class }}">
+  <thead>
+    <tr>
+      {{#each headings}}
+        <th width="{{ width }}" class="{{ class }}">{{{ content }}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="mobile-hide comparison-list__subhead">
+      {{#each subhead-row.cells}}
+        <td{{#if class}} class="{{ class }}"{{/if}}>
+          {{{ content }}}
+        </td>
+      {{/each}}
+    </tr>
+
+    {{#each rows}}
+      <tr>
+        {{#each cells}}
+          <td class="{{#if @first}}comparison-list__feature-description{{/if}}{{#if class}} {{ class }}{{/if}}">
+            {{{ content }}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

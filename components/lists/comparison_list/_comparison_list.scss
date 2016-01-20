@@ -1,0 +1,80 @@
+/*
+Comparison List
+
+A table list for comparing aspects of different things.
+
+Markup: comparison-list.hbs
+
+Weight: 70
+
+Style guide: lists.comparison-list
+*/
+
+.comparison-list {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    font-weight: normal;
+
+    th {
+      font-family: $text--benton-light;
+      padding: 1em;
+      color: $text-medium-body;
+      vertical-align: top;
+      border-right: 1px solid $accent-dividers;
+
+      &:first-child,
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  td {
+    padding: 0.5em;
+    border-top: 1px solid $accent-dividers;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .comparison-list__subhead + tr td {
+    border-top: 0;
+  }
+
+  .comparison-list__subhead td {
+    @extend .text--label;
+    vertical-align: top;
+    text-align: center;
+    border-top: 0;
+  }
+
+  .comparison-list__feature-description {
+    font-size: em(14px);
+    line-height: 1.4;
+    text-align: right;
+  }
+
+  .comparison-list__indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $bg-dark-gray-3;
+
+    &--lack {
+      background: $bg-light-gray-2;
+    }
+  }
+
+  @include breakpoint($mobile-only) {
+    thead th {
+      padding: 0.5em;
+    }
+
+    .comparison-list__feature-description {
+      // Force the longest possible width for descriptions.
+      width: 100%;
+    }
+  }
+}
