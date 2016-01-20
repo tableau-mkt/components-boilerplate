@@ -1,24 +1,21 @@
 /*
-Highlight
+Sonar indicator
 
-Highlight an element with a sonar pulse.
+Highlight an element with a sonar indicator.
 
-Markup: highlight.hbs
+Markup: sonar-indicator.hbs
 
 Weight: 10
 
-Style guide: interactive.highlight
+Style guide: interactive.sonar-indicator
 */
-.highlight--sonar {
-  display: inline-block;
-  position: relative;
+.sonar-indicator {
+  position: absolute;
+  @extend %vertical-centered;
   width: 10px;
   height: 10px;
-  margin-right: 10px;
   border-radius: 50%;
   background-color: $text-form-float-label;
-  vertical-align: middle;
-  z-index: 0;
 
   &:after {
     position: absolute;

@@ -11,6 +11,10 @@ Style guide: interactive.notification
 */
 
 .notification {
+  padding: 1em 0;
+  color: $light-gray;
+  background-color: $bg-dark-gray-3;
+
   .notification__message {
     padding-right: 3em;
   }
@@ -18,16 +22,22 @@ Style guide: interactive.notification
   .notification__close:after {
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: 0.4em;
     right: 1.25em;
     cursor: pointer;
     content: $icon--close-window-style2;
     font-family: "tableau-icons";
-    font-size: 2em;
+    font-size: 1.5em;
     color: $white;
   }
 
   @include breakpoint($tablet-max) {
+    .notification__close:after {
+      right: 1em;
+    }
+  }
+
+  @include breakpoint($mobile-max) {
     .notification__close:after {
       right: 0.5em;
     }

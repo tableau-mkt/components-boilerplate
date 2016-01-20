@@ -4,7 +4,9 @@
     /**
      * Handles closing the notification.
      */
-    $('.notification .notification__close').click(function () {
+    $('.notification .notification__close').click(function (e) {
+      e.preventDefault();
+
       $('.notification').slideUp();
     });
   });

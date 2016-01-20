@@ -1,7 +1,7 @@
 (function($) {
   $(document).ready(function(){
     $('#highlighter').click(function () {
-      $(this).highlightSonar();
+      $(this).sonarPulse();
     });
   });
-}( jQuery ));
+}(jQuery));
