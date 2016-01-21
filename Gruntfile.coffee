@@ -141,6 +141,7 @@ module.exports = (grunt) ->
         dest: 'styleguide/build/js/styleguide.js'
       vendor:
         src: [
+          'bower_components/matchMedia/matchMedia.js'
           'bower_components/slick.js/slick/slick.min.js'
           'bower_components/hoverintent/jquery.hoverIntent.js'
           'bower_components/waypoints/lib/jquery.waypoints.min.js'
