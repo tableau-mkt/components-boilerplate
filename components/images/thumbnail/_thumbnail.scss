@@ -19,6 +19,7 @@ Style guide: images.thumbnail
 
   img {
     max-width: 100%;
+    width: inherit;
     @include transition(all 750ms ease);
   }
 
