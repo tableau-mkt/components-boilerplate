@@ -15,7 +15,6 @@ Style guide: navigation.global
 // Global styles shared by Desktop/Tablet/Mobile
 .global-nav__top {
   position: relative;
-  height: 100px;
   padding: em(28px) 0;
   background: $bg-white;
 
@@ -118,11 +117,16 @@ Style guide: navigation.global
       transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
     }
 
+    .global-nav__logo {
+      margin-right: 3em;
+    }
+
     .global-nav__primary-menu {
       @extend .text--body-small;
+      margin-right: 1em;
 
       ul {
-        margin: 0.8em 0 0 3em;
+        margin: 0.8em 0 0;
         padding: 0;
         list-style: none;
 
@@ -147,7 +151,7 @@ Style guide: navigation.global
               opacity: 0;
               width: 0;
               height: 0;
-              top: 47px;
+              top: 48px;
               left: 50%;
               margin-left: -20px;
               border-left: 20px solid transparent;
@@ -171,6 +175,7 @@ Style guide: navigation.global
     }
 
     .global-nav__secondary-menu {
+      position: relative;
       float: right;
       padding-right: 45px;
       text-align: right;
@@ -217,7 +222,7 @@ Style guide: navigation.global
         @extend .text--large-copy;
         position: absolute;
         right: 0;
-        height: 100%;
+        height: 45px;
         padding: 0 0 0 45px;
       }
 
@@ -369,11 +374,26 @@ Style guide: navigation.global
 
     .global-nav__mobile-wrapper {
       position: absolute;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
       top: 64px;
       left: 0;
       width: 100%;
+      flex-flow: column;
       z-index: $zindex-nav;
       background: $nav-drawer-gray-1;
+
+      &.is-mobile {
+        transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.5s;
+
+        &.is-open {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+      }
+
     }
 
     .global-nav__hamburger {
@@ -391,6 +411,7 @@ Style guide: navigation.global
     }
 
     .global-nav__primary-menu {
+      order: 1;
       padding-top: 1.5em;
 
       li {
@@ -420,6 +441,7 @@ Style guide: navigation.global
     }
 
     .global-nav__secondary-menu {
+      order: 2;
       text-align: center;
       padding: 24px;
 
@@ -470,10 +492,6 @@ Style guide: navigation.global
     &.global-nav--search-shown .global-nav__search {
       pointer-events: inherit;
     }
-  }
-
-  .global-nav__mobile-wrapper {
-    display: none;
   }
 
   .global-nav__drawers {

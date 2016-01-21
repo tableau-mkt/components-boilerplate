@@ -10,6 +10,12 @@
       {{/with}}
 
       <div class="global-nav__mobile-wrapper">
+        <nav class="global-nav__secondary-menu">
+          {{#with secondary}}
+          {{> link-list}}
+          {{/with}}
+        </nav>
+
         <nav class="global-nav__primary-menu">
           {{#with primary}}
             <ul>
@@ -23,14 +29,6 @@
                 </li>
               {{/each}}
             </ul>
-          {{/with}}
-
-            {{> link-list}}
-        </nav>
-
-        <nav class="global-nav__secondary-menu">
-          {{#with secondary}}
-            {{> link-list}}
           {{/with}}
         </nav>
 

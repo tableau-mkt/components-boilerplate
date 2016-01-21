@@ -61,7 +61,7 @@
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
-      if (Components.utils.isMobile()) {
+      if (Components.utils.isTablet() || Components.utils.isMobile()) {
         $drawer.show().addClass('open');
 
         $drawer.add($mobileWrapper).animate({
@@ -94,7 +94,7 @@
         $openDrawer.slideUp(drawerOptions).removeClass('open');
       }
 
-      $mobileWrapper.slideToggle(animation);
+      $mobileWrapper.toggleClass('is-open');
       $hamburger.parent().toggleClass('open');
       e.preventDefault();
     });
@@ -112,16 +112,22 @@
     // Prepare our menu for the user's viewport.
     function sizing() {
       // Tablet/Mobile
-      if (Components.utils.isMobile()) {
+      if (Components.utils.isTablet() || Components.utils.isMobile()) {
         // Adjust the height of the mobile menu
         mobileHeightAdjust();
+
+        // Delay adding this class to prevent CSS transitions from firing when
+        // switching from desktop to tablet/mobile.
+        setTimeout(function() {
+          $mobileWrapper.addClass('is-mobile');
+        }, 500);
       }
       // Desktop
       else {
         // Remove any mobile markup, and revert to original settings.
         $hamburger.removeClass('hamburger--open');
         $hamburger.parent().removeClass('open');
-        $mobileWrapper.removeAttr('style');
+        $mobileWrapper.removeAttr('style').removeClass('is-mobile is-open');
         $drawers.removeAttr('style').removeClass('open');
       }
     }
@@ -146,7 +152,6 @@
         }
       });
     }
-
   });
 
 })(jQuery);
