@@ -111,6 +111,9 @@
 
     // Helper function to check whether we are on a mobile/tablet viewport.
     function isMobile() {
+      if (typeof window.matchMedia !== 'function') {
+        return;
+      }
       return matchMedia('(max-width: 960px)').matches;
     }
 

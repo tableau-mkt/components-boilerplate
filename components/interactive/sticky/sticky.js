@@ -1,5 +1,5 @@
-(function($){
-  $(document).ready(function(){
+(function($) {
+  $(document).ready(function() {
 
     /**
      * Allows making an element sticky on the page with just a 'sticky' class.
@@ -7,6 +7,10 @@
     $('.sticky').each(function(i) {
       stickIt(this);
     });
+
+    if (!window.matchMedia) {
+      return;
+    }
 
     if (matchMedia('(min-width: 961px)').matches) {
       $('.sticky--desktop').each(function(i) {
@@ -25,7 +29,6 @@
         stickIt(this);
       });
     }
-
   });
 
   function stickIt(el) {
