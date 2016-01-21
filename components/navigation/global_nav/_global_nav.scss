@@ -119,6 +119,7 @@ Style guide: navigation.global
 
     .global-nav__logo {
       margin-right: 3em;
+      min-height: 39px;
     }
 
     .global-nav__primary-menu {
@@ -496,8 +497,16 @@ Style guide: navigation.global
 
   .global-nav__drawers {
     position: absolute;
+    z-index: $zindex-nav;
     width: 100%;
+    opacity: 0;
     overflow: hidden;
+    transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.is-open {
+      opacity: 1;
+      transition: none;
+    }
 
     .global-nav__drawer {
       display: none;

@@ -16,13 +16,14 @@
     var $globalNav = $('.global-nav__top'),
         $menu = $globalNav.find('.global-nav__primary-menu'),
         $expandableLinks = $menu.find('li a.expandable'),
+        $drawersWrapper = $('.global-nav__drawers'),
         $drawers = $('.global-nav__drawer'),
         $hamburger = $globalNav.find('.hamburger'),
         $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
         $mobileDrawerClose = $('.global-nav__drawer-close'),
         animation = {
-          duration: 150,
-          easing: 'linear'
+          duration: 500,
+          easing: "easeInOutQuart"
         };
 
     // Do some initial sizing.
@@ -62,7 +63,8 @@
           $drawer = $('#' + $link.data('drawer-id'));
 
       if (Components.utils.isTablet() || Components.utils.isMobile()) {
-        $drawer.show().addClass('open');
+        $drawersWrapper.addClass('is-open');
+        $drawer.show().addClass('mobile-open');
 
         $drawer.add($mobileWrapper).animate({
           marginLeft: '-=100%'
@@ -82,16 +84,14 @@
 
     // Mobile menu
     $hamburger.on('click.global-nav', function(e) {
-      var $openDrawer = $drawers.filter('.open'),
-          drawerOptions = $.extend({}, animation);
+      var $openDrawer = $drawers.filter('.mobile-open');
 
       if ($openDrawer.length) {
-        drawerOptions.done = function() {
-          $openDrawer.css('margin-left', '100%');
+        $drawersWrapper.removeClass('is-open');
+        setTimeout(function() {
+          $openDrawer.css('margin-left', '100%').hide().removeClass('mobile-open');
           $mobileWrapper.css('margin-left', '0%');
-        };
-
-        $openDrawer.slideUp(drawerOptions).removeClass('open');
+        }, 500);
       }
 
       $mobileWrapper.toggleClass('is-open');
@@ -104,8 +104,10 @@
         marginLeft: '+=100%'
       }, animation);
 
+
       setTimeout(function() {
-        $drawer.hide().removeClass('open');
+        $drawersWrapper.removeClass('is-open');
+        $drawer.hide().removeClass('mobile-open');
       }, animation.duration);
     }
 
