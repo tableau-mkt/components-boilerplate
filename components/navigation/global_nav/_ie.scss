@@ -1,7 +1,7 @@
 // Target via:
 // - IE conditional class.
 // - modernizr.js detection class.
-.ie8 .global-nav__top,
+.lt-ie9 .global-nav__top,
 .no-opacity .global-nav__top {
   .global-nav__primary-menu {
     ul li a {
