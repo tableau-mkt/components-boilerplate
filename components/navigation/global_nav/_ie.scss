@@ -1,0 +1,28 @@
+// Target via:
+// - IE conditional class.
+// - modernizr.js detection class.
+.ie8 .global-nav__top,
+.no-opacity .global-nav__top {
+  .global-nav__primary-menu {
+    ul li a {
+      &:after {
+        display: none;
+      }
+
+      &.is-open {
+        &:after {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.lt-ie11,
+.no-flexbox {
+  .global-nav__drawer-primary {
+    .sub-nav__item {
+      margin-top: 3em;
+    }
+  }
+}

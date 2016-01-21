@@ -1,0 +1,21 @@
+// Target via:
+// - IE conditional class.
+// - modernizr.js detection class.
+.lt-ie11,
+.no-flexbox {
+  .special-hero {
+    .special-hero__content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      // Emulate flexbox alignment with table display.
+      display: table;
+    }
+
+    .special-hero__content-inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
