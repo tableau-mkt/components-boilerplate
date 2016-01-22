@@ -1,0 +1,8 @@
+// Target via:
+// - IE conditional class.
+.lt-ie9 {
+  .form__button,
+  input[type="submit"] {
+    display: inline-block;
+  }
+}
