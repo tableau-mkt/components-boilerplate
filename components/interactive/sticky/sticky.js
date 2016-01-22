@@ -8,7 +8,11 @@
       stickIt(this);
     });
 
-    if (!window.matchMedia) {
+    // For less capable browsers, only execute sticky on desktop.
+    if (!window.matchMedia || $('.lt-ie9').length) {
+      $('.sticky--desktop').each(function(i) {
+        stickIt(this);
+      });
       return;
     }
 
