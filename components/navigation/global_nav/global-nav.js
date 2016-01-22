@@ -16,13 +16,14 @@
     var $globalNav = $('.global-nav__top'),
         $menu = $globalNav.find('.global-nav__primary-menu'),
         $expandableLinks = $menu.find('li a.expandable'),
+        $drawersWrapper = $('.global-nav__drawers'),
         $drawers = $('.global-nav__drawer'),
         $hamburger = $globalNav.find('.hamburger'),
         $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
         $mobileDrawerClose = $('.global-nav__drawer-close'),
         animation = {
-          duration: 150,
-          easing: 'linear'
+          duration: 500,
+          easing: "easeInOutQuart"
         };
 
     // Do some initial sizing.
@@ -61,8 +62,9 @@
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
-      if (isMobile()) {
-        $drawer.show().addClass('open');
+      if (Components.utils.breakpoint('tablet') || Components.utils.breakpoint('mobile')) {
+        $drawersWrapper.addClass('is-open');
+        $drawer.show().addClass('mobile-open');
 
         $drawer.add($mobileWrapper).animate({
           marginLeft: '-=100%'
@@ -82,19 +84,17 @@
 
     // Mobile menu
     $hamburger.on('click.global-nav', function(e) {
-      var $openDrawer = $drawers.filter('.open'),
-          drawerOptions = $.extend({}, animation);
+      var $openDrawer = $drawers.filter('.mobile-open');
 
       if ($openDrawer.length) {
-        drawerOptions.done = function() {
-          $openDrawer.css('margin-left', '100%');
+        $drawersWrapper.removeClass('is-open');
+        setTimeout(function() {
+          $openDrawer.css('margin-left', '100%').hide().removeClass('mobile-open');
           $mobileWrapper.css('margin-left', '0%');
-        };
-
-        $openDrawer.slideUp(drawerOptions).removeClass('open');
+        }, 500);
       }
 
-      $mobileWrapper.slideToggle(animation);
+      $mobileWrapper.toggleClass('is-open');
       $hamburger.parent().toggleClass('open');
       e.preventDefault();
     });
@@ -104,29 +104,32 @@
         marginLeft: '+=100%'
       }, animation);
 
-      setTimeout(function() {
-        $drawer.hide().removeClass('open');
-      }, animation.duration);
-    }
 
-    // Helper function to check whether we are on a mobile/tablet viewport.
-    function isMobile() {
-      return matchMedia('(max-width: 960px)').matches;
+      setTimeout(function() {
+        $drawersWrapper.removeClass('is-open');
+        $drawer.hide().removeClass('mobile-open');
+      }, animation.duration);
     }
 
     // Prepare our menu for the user's viewport.
     function sizing() {
       // Tablet/Mobile
-      if (isMobile()) {
+      if (Components.utils.breakpoint('tablet') || Components.utils.breakpoint('mobile')) {
         // Adjust the height of the mobile menu
         mobileHeightAdjust();
+
+        // Delay adding this class to prevent CSS transitions from firing when
+        // switching from desktop to tablet/mobile.
+        setTimeout(function() {
+          $mobileWrapper.addClass('is-mobile');
+        }, animation.duration);
       }
       // Desktop
       else {
         // Remove any mobile markup, and revert to original settings.
         $hamburger.removeClass('hamburger--open');
         $hamburger.parent().removeClass('open');
-        $mobileWrapper.removeAttr('style');
+        $mobileWrapper.removeAttr('style').removeClass('is-mobile is-open');
         $drawers.removeAttr('style').removeClass('open');
       }
     }
@@ -151,7 +154,6 @@
         }
       });
     }
-
   });
 
 })(jQuery);

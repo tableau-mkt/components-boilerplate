@@ -9,6 +9,16 @@ var Components = Components || {};
 // Declare this component's namespace.
 Components.utils = {};
 
+// Breakpoint values.
+Components.utils.breakpoints = {
+  mobileMax: 639,
+  tabletMin: 640,
+  tabletMax: 960,
+  desktopMin: 961,
+  contentMax: 1550,
+  layoutMax: 1920
+};
+
 /**
  * Smooth Scroll to top of an element
  * @param  {jQuery Object} $element - Element to scroll to the top of
@@ -68,4 +78,32 @@ Components.utils.parseUrlParams = function () {
   }
 
   return result;
+};
+
+
+/**
+ * Helper to identify which breakpoint the browser is in.
+ * @param  {string} layout - the layout mode to check for.
+ * @return {Boolean} whether viewport is within specified breakpoint
+ * @example Components.utils.breakpoint('mobile') - true if in mobile layout
+ */
+Components.utils.breakpoint = function (layout) {
+  // Fail fast if matchMedia isn't present.
+  if (typeof window.matchMedia !== 'function') {
+    return false;
+  }
+
+  switch (layout) {
+    case 'mobile':
+      return matchMedia('(max-width: ' + Components.utils.breakpoints.mobileMax + 'px)').matches;
+      break;
+    case 'tablet':
+      return matchMedia('(min-width:' + Components.utils.breakpoints.tabletMin + 'px) and (max-width: ' + Components.utils.breakpoints.tabletMax + 'px)').matches;
+      break;
+    case 'desktop':
+      return matchMedia('(min-width: ' + Components.utils.breakpoints.desktopMin + 'px)').matches;
+      break;
+    default:
+      return false;
+  }
 };

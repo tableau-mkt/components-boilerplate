@@ -3,19 +3,28 @@
  */
 (function($) {
   $(document).ready(function() {
-    var $search = $('.global-nav__search'),
-        $closeSearch = $search.find('.global-nav__search-close');
+    var $searchWrapper = $('.global-nav__search'),
+        $searchToggle = $('.global-nav__search-toggle'),
+        $closeSearch = $('.global-nav__search-close'),
+        animation = {
+          duration: 500,
+          easing: "easeInOutQuart"
+        };
 
-    $search.on('click', function(e) {
+    $searchToggle.on('click', function(e) {
       e.preventDefault();
       $(this).parents('.global-nav__top').addClass('global-nav--search-shown');
-      $(this).find('input[type="search"]').focus();
+      $searchWrapper.fadeIn(animation);
+
+      // Make sure to focus the search field
+      $searchWrapper.find('input[type="search"]').focus();
     });
 
     $closeSearch.on('click', function(e) {
       e.stopPropagation();
       e.preventDefault();
-      $search.parents('.global-nav__top').removeClass('global-nav--search-shown');
+      $searchToggle.parents('.global-nav__top').removeClass('global-nav--search-shown');
+      $searchWrapper.fadeOut(animation);
     });
   });
 })(jQuery);
