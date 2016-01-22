@@ -106,6 +106,29 @@ Style guide: navigation.global
   }
 }
 
+// Search autocomplete
+.global-nav .ui-autocomplete {
+  @extend .text--large-copy;
+  display: block;
+  position: absolute;
+  z-index: $zindex-nav + 2;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  list-style: none;
+  background: $nav-drawer-gray-1;
+  outline: none;
+
+  li {
+    padding: 10px 45px;
+  }
+
+  .ui-state-focus {
+    background: $bg-dark-gray-2;
+    color: $text-negative;
+  }
+}
+
 // Desktop-specific Styles
 @include breakpoint($desktop-only) {
   .global-nav__top {
@@ -114,7 +137,7 @@ Style guide: navigation.global
     .global-nav__secondary-menu {
       float: left;
       opacity: 1;
-      transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: opacity .5s $ease-in-out;
     }
 
     .global-nav__logo {
@@ -345,21 +368,6 @@ Style guide: navigation.global
       }
     }
   }
-
-  // Autocomplete
-  .ui-autocomplete {
-    display: block;
-    position: absolute;
-    z-index: $zindex-nav;
-    padding: 10px 45px;
-    list-style: none;
-
-    // @todo this is a dirty hack to push the autocomplete list down. Find better fix.
-    border-top: 27px solid #fff;
-    background: #fefefe;
-    outline: none;
-    @extend .text--large-copy;
-  }
 }
 
 // Tablet and Mobile Styles
@@ -386,12 +394,12 @@ Style guide: navigation.global
       background: $nav-drawer-gray-1;
 
       &.is-mobile {
-        transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.5s;
+        transition: opacity .5s $ease-in-out, visibility 0s 0.5s;
 
         &.is-open {
           opacity: 1;
           visibility: visible;
-          transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: opacity .5s $ease-in-out;
         }
       }
 
@@ -404,7 +412,7 @@ Style guide: navigation.global
       width: 36px;
       height: 36px;
       padding: 14px;
-      transition: background .5s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: background .5s $ease-in-out;
 
       &.open {
         background: $nav-drawer-gray-1;
@@ -501,7 +509,7 @@ Style guide: navigation.global
     width: 100%;
     opacity: 0;
     overflow: hidden;
-    transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: opacity .5s $ease-in-out;
 
     &.is-open {
       opacity: 1;

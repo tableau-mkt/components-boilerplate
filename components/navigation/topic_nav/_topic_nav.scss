@@ -41,7 +41,7 @@ Style Guide: navigation.topic-nav
         border-right: 20px solid transparent;
         border-bottom: 20px solid $bg-light-gray-2;
         pointer-events: none;
-        transition: opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: opacity .5s $ease-in-out;
       }
 
       &:hover {
@@ -138,7 +138,7 @@ Style Guide: navigation.topic-nav
       border: 1px solid $accent-dividers;
       border-radius: 50%;
       line-height: 40px;
-      transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: transform 1s $ease-in-out;
 
       &.is-open {
         transform: rotate(180deg);

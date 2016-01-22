@@ -11,12 +11,12 @@ Components.utils = {};
 
 // Breakpoint values.
 Components.utils.breakpoints = {
-  'mobileMax': 639,
-  'tabletMin': 640,
-  'tabletMax': 960,
-  'desktopMin': 961,
-  'contentMax': 1550,
-  'layoutMax': 1920
+  mobileMax: 639,
+  tabletMin: 640,
+  tabletMax: 960,
+  desktopMin: 961,
+  contentMax: 1550,
+  layoutMax: 1920
 };
 
 /**

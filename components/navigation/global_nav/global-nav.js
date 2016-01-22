@@ -122,7 +122,7 @@
         // switching from desktop to tablet/mobile.
         setTimeout(function() {
           $mobileWrapper.addClass('is-mobile');
-        }, 500);
+        }, animation.duration);
       }
       // Desktop
       else {
