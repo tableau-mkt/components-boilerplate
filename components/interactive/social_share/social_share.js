@@ -5,15 +5,13 @@
  */
 (function ($) {
   $(document).ready(function () {
-    var $socialShare = $('.social-share__wrapper');
+    var $socialShare = $('.social-share__toggle');
 
-    // Bail early if there aren't even any element.
+    // Bail early if there aren't even any elements.
     if (!$socialShare.length) {
       return;
     }
 
-    // Utilize the slideHeight custom animation.
-    // @TODO change this out to contentReveal, would likely involve refactor.
     $socialShare.each(function initSocialShare() {
       var $this = $(this),
           $widgets = $('.social-share__widgets'),
@@ -22,14 +20,12 @@
             easing: "easeInOutQuart"
           };
 
-      $this.hoverIntent(
-        function socialHoverOn() {
-          $widgets.slideHeight('down', animation);
-        },
-        function socialHoverOff() {
-          $widgets.slideHeight('up', animation);
-        }
-      );
+      $this.click(function(e) {
+        e.preventDefault();
+
+        $socialShare.toggleClass('is-active');
+        $widgets.toggleClass('is-open');
+      });
     });
 
   });
