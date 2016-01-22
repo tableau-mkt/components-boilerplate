@@ -43,7 +43,6 @@ Style guide: navigation.global
     &:before {
       content: $icon--search;
       cursor: pointer;
-      font-size: 1.25em;
       font-size: $base-font-size * 1.25;
     }
   }
@@ -438,9 +437,12 @@ Style guide: navigation.global
         }
 
         a.expandable:after {
-          content: url('../images/shame/icons/expand-right.png');
+          @extend .icon;
+          content: $icon--chevron-right;
           float: right;
-          margin-top: -2px;
+          margin-top: 0.7em;
+          font-size: 0.75em;
+          text-decoration: none;
         }
 
         &:last-child a {

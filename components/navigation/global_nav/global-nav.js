@@ -62,7 +62,7 @@
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
-      if (Components.utils.isTablet() || Components.utils.isMobile()) {
+      if (Components.utils.breakpoint('tablet') || Components.utils.breakpoint('mobile')) {
         $drawersWrapper.addClass('is-open');
         $drawer.show().addClass('mobile-open');
 
@@ -114,7 +114,7 @@
     // Prepare our menu for the user's viewport.
     function sizing() {
       // Tablet/Mobile
-      if (Components.utils.isTablet() || Components.utils.isMobile()) {
+      if (Components.utils.breakpoint('tablet') || Components.utils.breakpoint('mobile')) {
         // Adjust the height of the mobile menu
         mobileHeightAdjust();
 

@@ -82,18 +82,28 @@ Components.utils.parseUrlParams = function () {
 
 
 /**
- * Helpers to identify which breakpoint the browser is in.
- *
+ * Helper to identify which breakpoint the browser is in.
+ * @param  {string} layout - the layout mode to check for.
  * @return {Boolean} whether viewport is within specified breakpoint
+ * @example Components.utils.breakpoint('mobile') - true if in mobile layout
  */
-Components.utils.isMobile = function () {
-  return matchMedia('(max-width: ' + Components.utils.breakpoints.mobileMax + 'px)').matches;
-};
+Components.utils.breakpoint = function (layout) {
+  // Fail fast if matchMedia isn't present.
+  if (typeof window.matchMedia !== 'function') {
+    return false;
+  }
 
-Components.utils.isTablet = function () {
-  return matchMedia('(min-width:' + Components.utils.breakpoints.tabletMin + 'px) and (max-width: ' + Components.utils.breakpoints.tabletMax + 'px)').matches;
-};
-
-Components.utils.isDesktop = function () {
-  return matchMedia('(min-width: ' + Components.utils.breakpoints.desktopMin + 'px)').matches;
+  switch (layout) {
+    case 'mobile':
+      return matchMedia('(max-width: ' + Components.utils.breakpoints.mobileMax + 'px)').matches;
+      break;
+    case 'tablet':
+      return matchMedia('(min-width:' + Components.utils.breakpoints.tabletMin + 'px) and (max-width: ' + Components.utils.breakpoints.tabletMax + 'px)').matches;
+      break;
+    case 'desktop':
+      return matchMedia('(min-width: ' + Components.utils.breakpoints.desktopMin + 'px)').matches;
+      break;
+    default:
+      return false;
+  }
 };

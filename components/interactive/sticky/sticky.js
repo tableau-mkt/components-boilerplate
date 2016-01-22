@@ -8,19 +8,19 @@
       stickIt(this);
     });
 
-    if (Components.utils.isDesktop()) {
+    if (Components.utils.breakpoint('desktop')) {
       $('.sticky--desktop').each(function(i) {
         stickIt(this);
       });
     }
 
-    if (Components.utils.isTablet()) {
+    if (Components.utils.breakpoint('tablet')) {
       $('.sticky--tablet').each(function(i) {
         stickIt(this);
       });
     }
 
-    if (Components.utils.isMobile()) {
+    if (Components.utils.breakpoint('mobile')) {
       $('.sticky--mobile').each(function(i) {
         stickIt(this);
       });
