@@ -226,7 +226,7 @@ most common proportions for video players.
 }
 
 .overlay-dark {
-  &::before {
+  &:before {
     content: ' ';
     position: absolute;
     top: 0;
