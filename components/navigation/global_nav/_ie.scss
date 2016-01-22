@@ -3,6 +3,7 @@
 // - modernizr.js detection class.
 .lt-ie9 .global-nav__top,
 .no-opacity .global-nav__top {
+  // Account for lack of opacity support to handle indicator arrows.
   .global-nav__primary-menu {
     ul li a {
       &:after {
@@ -20,6 +21,8 @@
 
 .lt-ie11,
 .no-flexbox {
+  // There's not a good way to add vertical center align here, so fake it for
+  // legacy desktop.
   .global-nav__drawer-primary {
     .sub-nav__item {
       margin-top: 3em;

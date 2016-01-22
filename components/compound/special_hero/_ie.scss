@@ -23,7 +23,9 @@
 .lt-ie9,
 .no-backgroundsize {
   // Instead of using the actual background css property, use the fallback
-  // image and pretend it's a background.
+  // image and pretend it's a background. This image is only shown for legacy
+  // browsers through an IE conditional statement.
+  // @see special-hero.hbs
   .special-hero__background-inner {
     background-image: none !important;
   }
