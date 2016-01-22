@@ -91,6 +91,7 @@ legend,
   }
 }
 
+
 /*
 Form Fields
 
@@ -357,13 +358,41 @@ Style guide: forms.validation
 }
 
 /*
+Inline form elements.
+
+Sits within text content.
+
+Weight 3
+
+Style guide: forms.inline
+*/
+.form-field--inline {
+  display: inline-block;
+  margin: 0;
+
+  select {
+    padding: 0;
+    padding-right: 1.5em;
+    border: none;
+    color: $text-learning;
+  }
+  select:hover {
+    font-size: 0.5em;
+  }
+
+  .form-field {
+    margin: 0;
+  }
+}
+
+/*
 Confirmation Messages
 
 Nothing to see here yet...
 
 Markup: form_confirmation.hbs
 
-Weight: 3
+Weight: 4
 
 Style guide: forms.confirmation
 */
