@@ -7,24 +7,22 @@
   $(document).ready(function () {
     var $socialShare = $('.social-share__toggle');
 
-    // Bail early if there aren't even any elements.
-    if (!$socialShare.length) {
-      return;
-    }
-
     $socialShare.each(function initSocialShare() {
-      var $this = $(this),
-          $widgets = $('.social-share__widgets'),
-          animation = {
-            duration: 500,
-            easing: "easeInOutQuart"
-          };
+      var $widgets = $(this).next('.social-share__widgets'),
+          $both = $(this).add($widgets);
 
-      $this.click(function(e) {
+      $both.hover(function () {
+        $both.doTimeout('open', 200, function() {
+          $both.addClass('is-open');
+        });
+      }, function () {
+        $both.doTimeout('open', 200, function() {
+          $both.removeClass('is-open');
+        });
+      });
+
+      $both.click(function (e) {
         e.preventDefault();
-
-        $socialShare.toggleClass('is-active');
-        $widgets.toggleClass('is-open');
       });
     });
 

@@ -4,11 +4,11 @@
 
   <div class="social-share__widgets">
     {{#each widgets}}
-      <div class="social-share__widget social-share__widget--{{type}}" data-social="{{type}}">
+      <div class="social-share__widget social-share__widget-{{type}}" data-social="{{type}}">
         {{#if counter}}
         <div class="social-share__counter">{{{ counter }}}</div>
         {{/if}}
-        <a href="#" class="social-share__link social-share__link--{{type}}">
+        <a href="#" class="social-share__link social-share__link-{{type}}">
           <i class="icon icon--social-{{type}}"></i>
         </a>
       </div>
