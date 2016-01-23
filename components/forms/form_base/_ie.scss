@@ -1,0 +1,10 @@
+// Target via:
+// - IE conditional class.
+.lt-ie9 {
+  // TLDR:
+  // @link http://stackoverflow.com/questions/662341/using-margin-0-auto-in-internet-explorer-8
+  .form__button,
+  input[type="submit"] {
+    display: inline-block;
+  }
+}
