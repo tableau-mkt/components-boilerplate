@@ -12,8 +12,13 @@
 //   }
 // }
 
-.field__label {
+.field__label,
+.detail-field .field-label {
   @extend .detail-field__label;
+}
+
+.detail-field--secondary .field-label {
+  @extend .text--label;
 }
 
 .field__items {
