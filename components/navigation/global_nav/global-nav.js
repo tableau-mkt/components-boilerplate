@@ -21,7 +21,6 @@
         $hamburger = $globalNav.find('.hamburger'),
         $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
         $mobileDrawerClose = $('.global-nav__drawer-close'),
-        hasHover = Components.utils.hasHover(),
         animation = {
           duration: 500,
           easing: "easeInOutQuart"
@@ -40,7 +39,7 @@
           $drawer = $drawers.filter('#' + $link.data('drawer-id')),
           $both = $link.add($drawer);
 
-      if (hasHover) {
+      if (Components.utils.hasHover()) {
         // Handling for hover interaction of drawers. Uses the doTimeout jquery
         // utility to handle throttling and waiting on a small delay before
         // showing the drawer (essentially hoverintent)
