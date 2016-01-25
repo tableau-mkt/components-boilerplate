@@ -81,7 +81,7 @@ Components.contentSearch.keydownHandler = function (event) {
         // Prevent any further events from occurring on the input.
         $search.find('.content-search__input').prop('readonly', true)
           .off('keyup keydown blur');
-        Tabia.contentSearch.submitForm($search);
+        Components.contentSearch.submitForm($search);
       }
       event.preventDefault();
       break;
