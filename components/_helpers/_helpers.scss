@@ -224,3 +224,21 @@ most common proportions for video players.
     text-align: center;
   }
 }
+
+.overlay-dark {
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-color: #333;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

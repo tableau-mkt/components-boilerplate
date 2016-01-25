@@ -1,0 +1,33 @@
+// Target via:
+// - IE conditional class.
+// - modernizr.js detection class.
+.lt-ie11,
+.no-flexbox {
+  .feature-highlight {
+    @extend %clearfix;
+    display: block;
+
+    .feature-highlight__image {
+      display: block;
+      float: right;
+      width: 80%;
+      margin-right: -10%;
+    }
+
+    .feature-highlight__copy {
+      display: block;
+      float: left;
+      width: 25%;
+    }
+
+    &.feature-highlight--image-left {
+      .feature-highlight__image {
+        float: left;
+        margin-left: -10%;
+      }
+      .feature-highlight__copy {
+        float: right;
+      }
+    }
+  }
+}

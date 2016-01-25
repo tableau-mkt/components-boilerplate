@@ -14,8 +14,17 @@ Weight: 0
 Style guide: forms.base
 */
 
-.form__intro {
+fieldset,
+.form__intro,
+.form__fieldset {
   margin-bottom: 1.5em;
+}
+
+legend,
+.form__legend {
+  @extend .heading--h3;
+  @extend .heading-highlight;
+  padding-bottom: 1em;
 }
 
 .form--centered,
@@ -35,8 +44,7 @@ Style guide: forms.base
   }
 
   // Buttons should be 100% width on mobile only.
-  .form__button,
-  input[type="submit"] {
+  .form__button {
     @include breakpoint($mobile-only) {
       width: 100%;
     }
@@ -52,7 +60,6 @@ Style guide: forms.base
   .form__control,
   .form__field,
   .form__button,
-  input[type="submit"],
   input[type="text"],
   input[type="search"],
   input[type="tel"],
@@ -79,8 +86,7 @@ Style guide: forms.base
   input[type="email"],
   select,
   textarea,
-  .form__button,
-  input[type="submit"] {
+  .form__button {
     max-width: 432px;
   }
 }
@@ -107,8 +113,8 @@ Style guide: forms.fields
     // Avoiding @extend .text--label since overriding text-transform is not
     // straightforward.
     font-family: $text--benton-book;
-    font-size: em(11px);
     letter-spacing: 1px;
+    line-height: 1.5;
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
       -webkit-font-smoothing: subpixel-antialiased;
     }
@@ -116,10 +122,12 @@ Style guide: forms.fields
 
   .form-field__label {
     color: $text-form-float-label;
+    font-size: em(14px); // Same size as .text--body-small
   }
 
   .form-field__description {
     margin-top: 0.25em;
+    font-size: em(14px); // Same size as .text--body-small
   }
 
   &.form-field--invalid .form-field__label,
@@ -131,6 +139,7 @@ Style guide: forms.fields
   &.has-float-label {
     .form-field__label {
       position: absolute;
+      font-size: em(11px);
       pointer-events: none;
       opacity: 0;
       left: 0.7em;
@@ -164,8 +173,13 @@ Style guide: forms.fields
       padding-bottom: 0.3em;
     }
 
+    // The first "non-option" in a select should look like a placeholder.
     select.is-empty {
-      color: $text-light-body;
+      color: $gray;
+
+      option {
+        color: $text-dark-body;
+      }
     }
   }
 }
@@ -216,14 +230,37 @@ textarea {
   }
 }
 
-// Un-color label on checkboxes.
+// Allow inline modifier on form fields.
+.form-field--inline {
+  display: inline-block;
+
+  .form-field__control,
+  input[type="text"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    display: inline-block;
+  }
+}
+
+// Reduce margins checkbox, radio form items.
+.form-field--checkbox,
+.form-field--radio {
+  margin-bottom: 0;
+}
+
+// Un-color labels on checkbox, radio form items.
 .form-field--checkbox .form-field__label,
-.form-field--checkbox label {
+.form-field--radio .form-field__label {
   color: inherit;
 }
 
 input::placeholder {
-  color: $text-light-body;
+  color: $gray;
 }
 
 @include breakpoint($mobile-only) {
@@ -235,7 +272,7 @@ input::placeholder {
 select {
   @extend %cover-absolute;
   position: relative;
-  width: 100%;
+  padding-right: 2.5em;
   appearance: none;
   outline: none;
   font-size: 1em;
@@ -253,14 +290,7 @@ select::-ms-expand {
   display: none;
 }
 
-.form-field__option-none {
-  color: $text-medium-body;
-}
-
-.form__button,
-input[type="submit"] {
-  @extend .cta;
-  @extend .cta--secondary;
+.form__button {
   display: block;
   outline: none;
 
@@ -269,19 +299,55 @@ input[type="submit"] {
   }
 }
 
+/*
+Form on Dark Backgrounds
+
+Nodefault: true
+
+Markup: form_fields.hbs
+
+Weight: 1
+
+Bgcolor: #333
+
+.form--negative - Negative default text color and heavier font weight for readability on dark backgrounds.
+
+Style guide: forms.fields-dark
+*/
+
+.form--negative {
+  color: $text-negative;
+
+  .form__legend {
+    color: $text-negative;
+  }
+
+  // Use a bolder font for labels and description text.
+  .form-field__label,
+  .form-field__description {
+    font-family: $text--benton-medium;
+  }
+
+  // But, float labels should be benton-book.
+  .form-field.has-float-label {
+    .form-field__label {
+      font-family: $text--benton-book;
+    }
+  }
+}
 
 /*
-Validation Messages
+Invalid Form Fields
 
-Warnings, errors, etc.
+For missing/invalid form element submissions.
+
+Nodefault: true
 
 Markup: form_validation.hbs
 
 Weight: 2
 
-Nodefault: true
-
-.form-field--invalid - Invalid form field
+.form-field--invalid - Invalid form field.
 
 Style guide: forms.validation
 */
@@ -289,8 +355,6 @@ Style guide: forms.validation
 .form-field--invalid {
   color: $msg-error-text;
 }
-
-
 
 /*
 Confirmation Messages

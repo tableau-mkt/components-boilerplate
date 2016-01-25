@@ -3,18 +3,18 @@ Fancy Radios
 
 Radio option groups, with a custom <code>:checked</code> state.
 
-Markup: fancy-radios.hbs
+Markup: fancy-filters.hbs
 
-Style guide: forms.fancy-radios
+Style guide: forms.fancy-filters
 
 Weight: 100
 */
 
 // Added specificity required here to ensure override of default .form-field
 // styles.
-.form-field.fancy-radios {
-  label,
-  .form-field__label {
+.form-field.fancy-filters,
+.fancy-filters {
+  .fancy-filters__filter {
     @extend .text--label;
     position: relative;
     display: inline-block;
@@ -23,14 +23,40 @@ Weight: 100
     line-height: 1.3;
     color: $text-light-body;
 
-    &.fancy-radios__group-label {
-      margin-bottom: 1em;
+    &.is-active {
       color: $text-dark-body;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -7px;
+        width: 3px;
+        height: 90%;
+        background: $text-link;
+      }
     }
   }
 
+  // Specifically for form radio elements.
+  label,
+  .form-field__label,
+  .fancy-filters__group-label {
+    @extend .text--label;
+    position: relative;
+    display: inline-block;
+    margin: 0.5em 0;
+    cursor: pointer;
+    line-height: 1.3;
+    color: $text-light-body;
+  }
+
+  .fancy-filters__group-label {
+    margin-bottom: 1em;
+    color: $text-dark-body;
+  }
+
   input[type="radio"],
-  .fancy-radios__radio {
+  .fancy-filters__radio {
     display: none;
 
     &:checked + label,

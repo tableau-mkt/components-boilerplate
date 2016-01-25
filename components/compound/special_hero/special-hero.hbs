@@ -27,6 +27,9 @@
     {{#if background}}
       <div class="special-hero__background">
         <div class="special-hero__background-inner" style="background-image: url({{ background }});">
+        <!--[if lt IE 9]>
+          <img class="special-hero__background-fallback" src="{{ background }}">
+        <![endif]-->
         </div>
       </div>
     {{/if}}

@@ -18,7 +18,7 @@
     list-style: none;
     outline: none;
     border: none;
-    background: $bg-light-gray-1;
+    background: $nav-drawer-gray-1;
 
     li {
       padding: 10px 45px;
@@ -28,5 +28,11 @@
       background: $bg-dark-gray-2;
       color: $text-negative;
     }
+  }
+}
+
+.global-nav__top.global-nav--search-shown {
+  .form-field {
+    position: static;
   }
 }

@@ -12,9 +12,9 @@ Markup: global-nav.hbs
 Style guide: navigation.global
 */
 
+// Global styles shared by Desktop/Tablet/Mobile
 .global-nav__top {
   position: relative;
-  height: 100px;
   padding: em(28px) 0;
   background: $bg-white;
 
@@ -33,24 +33,123 @@ Style guide: navigation.global
     }
   }
 
-  @include breakpoint($desktop-only) {
+  .global-nav__search-toggle {
+    @extend .icon;
+    text-indent: -999em;
+    overflow: hidden;
+    font-size: 0;
+    color: $text-dark-body;
+
+    &:before {
+      content: $icon--search;
+      cursor: pointer;
+      font-size: $base-font-size * 1.25;
+    }
+  }
+
+  // Global Search Bar Styles
+  .global-nav__search {
+    display: none;
+    position: absolute;
+    z-index: $zindex-nav + 1;
+
+    &:before {
+      @extend .icon;
+      content: $icon--search;
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      font-size: 1.25em;
+      text-align: center;
+    }
+
+    input[type='text'],
+    input[type='search'] {
+      @extend .text--large-copy;
+      width: 100%;
+      padding-left: 2em;
+      border: none;
+      text-align: left;
+      background: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $text-medium-body;
+      }
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+
+      // This must be separate to work. Go figure.
+      &::-ms-clear {
+        display: none;
+      }
+    }
+
+    .global-nav__search-close {
+      @extend .icon;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      font-size: 1.6em;
+      color: $text-dark-body;
+
+      &:after {
+        content: $icon--close-window-style2;
+      }
+    }
+  }
+}
+
+// Search autocomplete
+.global-nav .ui-autocomplete {
+  @extend .text--large-copy;
+  display: block;
+  position: absolute;
+  z-index: $zindex-nav + 2;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  list-style: none;
+  background: $nav-drawer-gray-1;
+  outline: none;
+
+  li {
+    padding: 10px 45px;
+  }
+
+  .ui-state-focus {
+    background: $bg-dark-gray-2;
+    color: $text-negative;
+  }
+}
+
+// Desktop-specific Styles
+@include breakpoint($desktop-only) {
+  .global-nav__top {
     .global-nav__logo,
     .global-nav__primary-menu,
     .global-nav__secondary-menu {
       float: left;
       opacity: 1;
-      transition: opacity .75s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: opacity .5s $ease-in-out;
     }
 
-    .global-nav__secondary-menu {
-      float: right;
+    .global-nav__logo {
+      margin-right: 3em;
+      min-height: 39px;
     }
 
     .global-nav__primary-menu {
       @extend .text--body-small;
+      margin-right: 1em;
 
       ul {
-        margin: 0.8em 0 0 3em;
+        margin: 0.8em 0 0;
         padding: 0;
         list-style: none;
 
@@ -75,7 +174,7 @@ Style guide: navigation.global
               opacity: 0;
               width: 0;
               height: 0;
-              top: 47px;
+              top: 48px;
               left: 50%;
               margin-left: -20px;
               border-left: 20px solid transparent;
@@ -99,6 +198,8 @@ Style guide: navigation.global
     }
 
     .global-nav__secondary-menu {
+      position: relative;
+      float: right;
       padding-right: 45px;
       text-align: right;
 
@@ -111,6 +212,17 @@ Style guide: navigation.global
         }
       }
 
+      .global-nav__search-toggle {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+      }
+
       li a.cta {
         margin: 0 0 0 10px;
       }
@@ -118,70 +230,43 @@ Style guide: navigation.global
 
     // Global Search Bar Styles
     .global-nav__search {
-      position: absolute;
-      z-index: $zindex-nav + 1;
       right: 0;
-      width: 45px;
+      width: 100%;
       height: 100%;
-      transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
 
       &:before {
-        @extend .icon;
-        @extend .icon--search;
-        position: absolute;
-        display: block;
         height: 45px;
         width: 45px;
-        z-index: 1;
-        cursor: pointer;
-        font-size: 1.5;
         line-height: 45px;
-        text-align: center;
       }
 
       input[type='text'],
       input[type='search'] {
+        @extend .text--large-copy;
         position: absolute;
         right: 0;
-        width: 45px;
-        height: 100%;
-        border: none;
-        cursor: pointer;
+        height: 45px;
         padding: 0 0 0 45px;
-        text-align: left;
-        @extend .text--large-copy;
-        transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
-
-        &:focus {
-          outline: none;
-        }
-
-        ::-webkit-input-placeholder,
-        :-moz-placeholder,
-        ::-moz-placeholder,
-        :-ms-input-placeholder {
-          color: $text-medium-body;
-        }
-
-        &::-webkit-search-decoration,
-        &::-webkit-search-cancel-button,
-        &::-webkit-search-results-button,
-        &::-webkit-search-results-decoration {
-          display: none;
-        }
       }
 
       .global-nav__search-close {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        background-image: url('../images/shame/icons/x-close-nav.png');
-        background-repeat: no-repeat;
-        background-size: 18px;
-        background-position: center center;
+        @extend .icon;
+        width: 45px;
+        height: 45px;
         top: 0;
-        right: 0;
-        transition: all .75s cubic-bezier(0.77, 0, 0.175, 1);
+
+        &:after {
+          line-height: 45px;
+        }
+      }
+    }
+
+    // Tweaks for when the search bar is shown
+    &.global-nav--search-shown {
+      .global-nav__logo,
+      .global-nav__primary-menu,
+      .global-nav__secondary-menu {
+        opacity: 0;
       }
     }
 
@@ -190,145 +275,6 @@ Style guide: navigation.global
     }
   }
 
-  // Tweaks for when the search bar is shown
-  &.global-nav--search-shown {
-
-    .global-nav__search {
-      width: 100%;
-
-      input[type='search'] {
-        width: 100%;
-        padding-left: 2em;
-        cursor: inherit;
-      }
-
-      .global-nav__search-close {
-        opacity: 1;
-        width: 45px;
-        height: 45px;
-      }
-    }
-
-    .global-nav__logo,
-    .global-nav__primary-menu,
-    .global-nav__secondary-menu {
-      opacity: 0;
-    }
-  }
-
-  // Mobile nav
-  @include breakpoint($tablet-max) {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    height: 64px;
-
-    .relative {
-      position: initial;
-    }
-
-    .global-nav__mobile-wrapper {
-      position: absolute;
-      top: 64px;
-      left: 0;
-      width: 100%;
-      z-index: $zindex-nav;
-      background: $nav-drawer-gray-1;
-    }
-
-    .global-nav__hamburger {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 36px;
-      height: 36px;
-      padding: 14px;
-      transition: background .75s;
-
-      &.open {
-        background: $nav-drawer-gray-1;
-      }
-    }
-
-    .global-nav__primary-menu {
-      padding-top: 1.5em;
-
-      li {
-        display: block;
-        padding: 0 1em;
-
-        a {
-          display: block;
-          padding: 6px 0.5em;
-          border-bottom: 1px solid $nav-drawer-gray-2;
-          color: $text-nav-items;
-          font-family: $text--benton-light;
-          font-size: em(24px);
-          color: $text-dark-body;
-        }
-
-        a.expandable:after {
-          content: url('../images/shame/icons/expand-right.png');
-          float: right;
-          margin-top: -2px;
-        }
-
-        &:last-child a {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    .global-nav__secondary-menu {
-      text-align: center;
-      padding: 24px;
-
-      li:last-child {
-        display: block;
-      }
-
-      a.link,
-      a.search {
-        padding: 12px;
-        color: $text-headlines;
-      }
-
-      a.search {
-        // @todo remove all this grossness once we have a proper icon font.
-        zoom: .7;
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-
-    }
-  }
-
-  @include breakpoint($tablet-only) {
-    .global-nav__primary-menu li {
-      padding: 0 2em;
-
-      a {
-        padding: 6px 0;
-      }
-    }
-
-    .global-nav__secondary-menu {
-      a.cta {
-        display: inline-block;
-        width: 100%;
-        max-width: 550px;
-        margin-left: 0;
-        margin-right: 0;
-        box-sizing: border-box;
-        text-align: center;
-      }
-    }
-  }
-
-}
-
-
-@include breakpoint($desktop-only) {
   .global-nav__drawers {
     position: relative;
     z-index: $zindex-nav;
@@ -422,16 +368,154 @@ Style guide: navigation.global
   }
 }
 
+// Tablet and Mobile Styles
 @include breakpoint($tablet-max) {
-  .global-nav__mobile-wrapper,
-  .global-nav__search {
-    display: none;
+  .global-nav__top {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 64px;
+
+    .relative {
+      position: initial;
+    }
+
+    .global-nav__mobile-wrapper {
+      position: absolute;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      flex-flow: column;
+      z-index: $zindex-nav;
+      background: $nav-drawer-gray-1;
+
+      &.is-mobile {
+        transition: opacity .5s $ease-in-out, visibility 0s 0.5s;
+
+        &.is-open {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity .5s $ease-in-out;
+        }
+      }
+
+    }
+
+    .global-nav__hamburger {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      padding: 14px;
+      transition: background .5s $ease-in-out;
+
+      &.open {
+        background: $nav-drawer-gray-1;
+      }
+    }
+
+    .global-nav__primary-menu {
+      order: 1;
+      padding-top: 1.5em;
+
+      li {
+        display: block;
+        padding: 0 1em;
+
+        a {
+          display: block;
+          padding: 6px 0.5em;
+          border-bottom: 1px solid $nav-drawer-gray-2;
+          color: $text-nav-items;
+          font-family: $text--benton-light;
+          font-size: em(24px);
+          color: $text-dark-body;
+        }
+
+        a.expandable:after {
+          @extend .icon;
+          content: $icon--chevron-right;
+          float: right;
+          margin-top: 0.7em;
+          font-size: 0.75em;
+          text-decoration: none;
+        }
+
+        &:last-child a {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .global-nav__secondary-menu {
+      order: 2;
+      text-align: center;
+      padding: 24px;
+
+      li:last-child {
+        display: block;
+      }
+
+      a.link,
+      a.search {
+        padding: 12px;
+        color: $text-headlines;
+      }
+    }
+
+    .global-nav__search {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      padding: 1em 2em;
+      box-sizing: border-box;
+      pointer-events: none;
+      background: $nav-drawer-gray-2;
+
+      &:before {
+        margin-top: 1.5em;
+      }
+
+      input[type='text'],
+      input[type='search'] {
+        width: 100%;
+        padding: 1em 0 1em 1.5em;
+        border-bottom: 1px solid $form-border-accent;
+      }
+
+      .global-nav__search-close {
+        @extend .icon;
+        width: 64px;
+        height: 64px;
+        top: -64px;
+        background: $nav-drawer-gray-2;
+
+        &:after {
+          line-height: 64px;
+        }
+      }
+    }
+
+    &.global-nav--search-shown .global-nav__search {
+      pointer-events: inherit;
+    }
   }
 
   .global-nav__drawers {
     position: absolute;
+    z-index: $zindex-nav;
     width: 100%;
+    opacity: 0;
     overflow: hidden;
+    transition: opacity .5s $ease-in-out;
+
+    &.is-open {
+      opacity: 1;
+      transition: none;
+    }
 
     .global-nav__drawer {
       display: none;
@@ -494,7 +578,32 @@ Style guide: navigation.global
   }
 }
 
+
+
+// Tablet-specific Styles
 @include breakpoint($tablet-only) {
+  .global-nav__top {
+    .global-nav__primary-menu li {
+      padding: 0 2em;
+
+      a {
+        padding: 6px 0;
+      }
+    }
+
+    .global-nav__secondary-menu {
+      a.cta {
+        display: inline-block;
+        width: 100%;
+        max-width: 550px;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  }
+
   .global-nav__drawers .sub-nav__item {
     @extend %clearfix;
 
@@ -519,20 +628,4 @@ Style guide: navigation.global
       margin-left: -1em;
     }
   }
-}
-
-
-// Autocomplete
-.ui-autocomplete {
-  display: block;
-  position: absolute;
-  z-index: $zindex-nav;
-  padding: 10px 45px;
-  list-style: none;
-
-  // @todo this is a dirty hack to push the autocomplete list down. Find better fix.
-  border-top: 27px solid #fff;
-  background: #fefefe;
-  outline: none;
-  @extend .text--large-copy;
 }

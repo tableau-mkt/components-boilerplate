@@ -78,8 +78,8 @@
       {
         "link": {
           "href":"#",
-          "text": "<i class='icon--magnifying-glass'></i>",
-          "class": "search tablet-show"
+          "text": "Search",
+          "class": "global-nav__search-toggle"
         }
       },
       {

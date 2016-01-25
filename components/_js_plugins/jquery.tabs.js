@@ -68,7 +68,7 @@
 
             // Adjust height of parent
             $parent.animate({
-              height: flyoutHeight - parentPadding + heightChange,
+              height: flyoutHeight - parentPadding + heightChange
             }, settings.animation);
           }
         }

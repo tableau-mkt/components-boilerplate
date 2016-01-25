@@ -1,0 +1,40 @@
+// Target via:
+// - IE conditional class.
+// - modernizr.js detection class.
+.lt-ie11,
+.no-flexbox {
+  .special-hero {
+    .special-hero__content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      // Emulate flexbox alignment with table display.
+      display: table;
+    }
+
+    .special-hero__content-inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.lt-ie9,
+.no-backgroundsize {
+  // Instead of using the actual background css property, use the fallback
+  // image and pretend it's a background. This image is only shown for legacy
+  // browsers through an IE conditional statement.
+  // @see special-hero.hbs
+  .special-hero__background-inner {
+    background-image: none !important;
+  }
+
+  .special-hero__background-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+}

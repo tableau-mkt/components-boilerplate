@@ -132,10 +132,6 @@ Style guide: lists.cross-reference-3
 */
 
 .cross-reference-3 {
-  .cross-reference-3__title {
-    margin-top: 0;
-  }
-
   @include breakpoint($tablet-only) {
     .cross-reference-3__title {
       text-align: center;

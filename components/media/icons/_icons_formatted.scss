@@ -9,6 +9,7 @@ Markup: icon-formatted.hbs
 .icon--bigger - A bigger icon.
 .icon--biggest - A very big icon.
 .icon--circled - A very big icon with a circle around it.
+.icon--accent - Special highlighted icons, like product/support pages.
 
 Style guide: media.icon-formatted
 */
@@ -44,4 +45,8 @@ Style guide: media.icon-formatted
     border-width: 3px;
     font-size: 5em;
   }
+}
+
+.icon--accent {
+  color: $accent-dark-blue;
 }
