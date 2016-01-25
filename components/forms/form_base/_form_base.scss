@@ -383,6 +383,16 @@ Style guide: forms.text-inline
   }
 }
 
+@include breakpoint($mobile-only) {
+  .form-field--text-inline select {
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 1.25em;
+  }
+}
+
+
 /*
 Confirmation Messages
 
