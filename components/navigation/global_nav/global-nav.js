@@ -45,11 +45,11 @@
         // utility to handle throttling and waiting on a small delay before
         // showing the drawer (essentially hoverintent)
         $both.hover(function () {
-          $both.doTimeout( 'open', 200, function() {
+          $both.doTimeout('open', 200, function() {
             $both.addClass('is-open');
           });
         }, function () {
-          $both.doTimeout( 'open', 200, function() {
+          $both.doTimeout('open', 200, function() {
             $both.removeClass('is-open');
           });
         });
@@ -58,7 +58,7 @@
         // Touch-only device interaction: first click (tap) opens the drawers.
         // Subsequent clicks follows UA default behavior (i.e. follows the top-
         // level link)
-        $link.click(function (e) {
+        $link.on('click.global-nav', function (e) {
           // If not already open, prevent following the link.
           if (!$link.hasClass('is-open')) {
             e.preventDefault();
@@ -69,12 +69,12 @@
       }
     });
 
-    $drawers.click(function(e) {
+    $drawers.on('click.global-nav', function(e) {
       e.stopPropagation();
     });
 
     // Tablet/mobile stuff.
-    $expandableLinks.on('click.nav', function(e) {
+    $expandableLinks.on('click.global-nav', function(e) {
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
@@ -90,7 +90,7 @@
       }
     });
 
-    $mobileDrawerClose.on('click.nav', function(e) {
+    $mobileDrawerClose.on('click.global-nav', function(e) {
       var $drawer = $(this).closest('.global-nav__drawer');
 
       closeDrawerMobile($drawer);
