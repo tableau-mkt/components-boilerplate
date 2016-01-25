@@ -111,6 +111,9 @@ Components.utils.breakpoint = function (layout) {
 /**
  * Determines if the user's device has hover ability (i.e. has pointer/mouse).
  *
+ * For non iOS devices, requires the hover media feature in Media Queries Level 4.
+ * @see https://www.w3.org/TR/mediaqueries-4/#hover
+ *
  * @return {Boolean}
  */
 Components.utils.hasHover = function () {
