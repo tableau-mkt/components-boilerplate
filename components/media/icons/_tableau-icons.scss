@@ -143,10 +143,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.eot?3a7a83cd1dbe6df9912bb35c21212ffe");
-  src:url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.woff?3a7a83cd1dbe6df9912bb35c21212ffe") format("woff"),
-		url("../fonts/tableau-icons-3a7a83cd1dbe6df9912bb35c21212ffe.ttf?3a7a83cd1dbe6df9912bb35c21212ffe") format("truetype");
+  src:url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.eot?01b2bf680b0fc5ebcca63ae4cad29b85");
+  src:url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.woff?01b2bf680b0fc5ebcca63ae4cad29b85") format("woff"),
+		url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.ttf?01b2bf680b0fc5ebcca63ae4cad29b85") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -170,10 +170,12 @@ Style Guide: media.icons
 // Icons
 
 
+
 .icon--access-big-data:before {
   content:"\f101";
 }
 $icon--access-big-data: "\f101";
+
 
 
 .icon--adobe-pdf:before {
@@ -182,10 +184,12 @@ $icon--access-big-data: "\f101";
 $icon--adobe-pdf: "\f102";
 
 
+
 .icon--alliance:before {
   content:"\f103";
 }
 $icon--alliance: "\f103";
+
 
 
 .icon--answered:before {
@@ -194,10 +198,12 @@ $icon--alliance: "\f103";
 $icon--answered: "\f104";
 
 
+
 .icon--any-data-anywhere:before {
   content:"\f105";
 }
 $icon--any-data-anywhere: "\f105";
+
 
 
 .icon--any-platforms:before {
@@ -206,10 +212,12 @@ $icon--any-data-anywhere: "\f105";
 $icon--any-platforms: "\f106";
 
 
+
 .icon--apple:before {
   content:"\f107";
 }
 $icon--apple: "\f107";
+
 
 
 .icon--arrow-down-style2:before {
@@ -218,10 +226,12 @@ $icon--apple: "\f107";
 $icon--arrow-down-style2: "\f108";
 
 
+
 .icon--arrow-down-style3:before {
   content:"\f109";
 }
 $icon--arrow-down-style3: "\f109";
+
 
 
 .icon--arrow-down:before {
@@ -230,10 +240,12 @@ $icon--arrow-down-style3: "\f109";
 $icon--arrow-down: "\f10a";
 
 
+
 .icon--arrow-left-style2:before {
   content:"\f10b";
 }
 $icon--arrow-left-style2: "\f10b";
+
 
 
 .icon--arrow-left-style3:before {
@@ -242,10 +254,12 @@ $icon--arrow-left-style2: "\f10b";
 $icon--arrow-left-style3: "\f10c";
 
 
+
 .icon--arrow-left-style4:before {
   content:"\f10d";
 }
 $icon--arrow-left-style4: "\f10d";
+
 
 
 .icon--arrow-left:before {
@@ -254,10 +268,12 @@ $icon--arrow-left-style4: "\f10d";
 $icon--arrow-left: "\f10e";
 
 
+
 .icon--arrow-right-style2:before {
   content:"\f10f";
 }
 $icon--arrow-right-style2: "\f10f";
+
 
 
 .icon--arrow-right-style3:before {
@@ -266,10 +282,12 @@ $icon--arrow-right-style2: "\f10f";
 $icon--arrow-right-style3: "\f110";
 
 
+
 .icon--arrow-right-style4:before {
   content:"\f111";
 }
 $icon--arrow-right-style4: "\f111";
+
 
 
 .icon--arrow-right:before {
@@ -278,10 +296,12 @@ $icon--arrow-right-style4: "\f111";
 $icon--arrow-right: "\f112";
 
 
+
 .icon--arrow-up-style2:before {
   content:"\f113";
 }
 $icon--arrow-up-style2: "\f113";
+
 
 
 .icon--arrow-up-style3:before {
@@ -290,10 +310,12 @@ $icon--arrow-up-style2: "\f113";
 $icon--arrow-up-style3: "\f114";
 
 
+
 .icon--arrow-up:before {
   content:"\f115";
 }
 $icon--arrow-up: "\f115";
+
 
 
 .icon--author-view-anywhere:before {
@@ -302,10 +324,12 @@ $icon--arrow-up: "\f115";
 $icon--author-view-anywhere: "\f116";
 
 
+
 .icon--auto-updates:before {
   content:"\f117";
 }
 $icon--auto-updates: "\f117";
+
 
 
 .icon--best-practices-built-in:before {
@@ -314,10 +338,12 @@ $icon--auto-updates: "\f117";
 $icon--best-practices-built-in: "\f118";
 
 
+
 .icon--best-practices:before {
   content:"\f119";
 }
 $icon--best-practices: "\f119";
+
 
 
 .icon--blog-post:before {
@@ -326,10 +352,12 @@ $icon--best-practices: "\f119";
 $icon--blog-post: "\f11a";
 
 
+
 .icon--bookmark:before {
   content:"\f11b";
 }
 $icon--bookmark: "\f11b";
+
 
 
 .icon--calculations-library:before {
@@ -338,10 +366,12 @@ $icon--bookmark: "\f11b";
 $icon--calculations-library: "\f11c";
 
 
+
 .icon--calendar:before {
   content:"\f11d";
 }
 $icon--calendar: "\f11d";
+
 
 
 .icon--certification:before {
@@ -350,10 +380,12 @@ $icon--calendar: "\f11d";
 $icon--certification: "\f11e";
 
 
+
 .icon--chevron-down-style2:before {
   content:"\f11f";
 }
 $icon--chevron-down-style2: "\f11f";
+
 
 
 .icon--chevron-down:before {
@@ -362,10 +394,12 @@ $icon--chevron-down-style2: "\f11f";
 $icon--chevron-down: "\f120";
 
 
+
 .icon--chevron-left-style2:before {
   content:"\f121";
 }
 $icon--chevron-left-style2: "\f121";
+
 
 
 .icon--chevron-left:before {
@@ -374,10 +408,12 @@ $icon--chevron-left-style2: "\f121";
 $icon--chevron-left: "\f122";
 
 
+
 .icon--chevron-right-style2:before {
   content:"\f123";
 }
 $icon--chevron-right-style2: "\f123";
+
 
 
 .icon--chevron-right:before {
@@ -386,10 +422,12 @@ $icon--chevron-right-style2: "\f123";
 $icon--chevron-right: "\f124";
 
 
+
 .icon--chevron-up-style2:before {
   content:"\f125";
 }
 $icon--chevron-up-style2: "\f125";
+
 
 
 .icon--chevron-up:before {
@@ -398,10 +436,12 @@ $icon--chevron-up-style2: "\f125";
 $icon--chevron-up: "\f126";
 
 
+
 .icon--classroom:before {
   content:"\f127";
 }
 $icon--classroom: "\f127";
+
 
 
 .icon--clock:before {
@@ -410,10 +450,12 @@ $icon--classroom: "\f127";
 $icon--clock: "\f128";
 
 
+
 .icon--close-window-style2:before {
   content:"\f129";
 }
 $icon--close-window-style2: "\f129";
+
 
 
 .icon--close-window:before {
@@ -422,10 +464,12 @@ $icon--close-window-style2: "\f129";
 $icon--close-window: "\f12a";
 
 
+
 .icon--collaborate:before {
   content:"\f12b";
 }
 $icon--collaborate: "\f12b";
+
 
 
 .icon--community:before {
@@ -434,10 +478,12 @@ $icon--collaborate: "\f12b";
 $icon--community: "\f12c";
 
 
+
 .icon--contact-us:before {
   content:"\f12d";
 }
 $icon--contact-us: "\f12d";
+
 
 
 .icon--dashboard:before {
@@ -446,10 +492,12 @@ $icon--contact-us: "\f12d";
 $icon--dashboard: "\f12e";
 
 
+
 .icon--data-governance:before {
   content:"\f12f";
 }
 $icon--data-governance: "\f12f";
+
 
 
 .icon--deep-statistics:before {
@@ -458,10 +506,12 @@ $icon--data-governance: "\f12f";
 $icon--deep-statistics: "\f130";
 
 
+
 .icon--discussion:before {
   content:"\f131";
 }
 $icon--discussion: "\f131";
+
 
 
 .icon--download:before {
@@ -470,10 +520,12 @@ $icon--discussion: "\f131";
 $icon--download: "\f132";
 
 
+
 .icon--email:before {
   content:"\f133";
 }
 $icon--email: "\f133";
+
 
 
 .icon--embedded-analytics:before {
@@ -482,10 +534,12 @@ $icon--email: "\f133";
 $icon--embedded-analytics: "\f134";
 
 
+
 .icon--export:before {
   content:"\f135";
 }
 $icon--export: "\f135";
+
 
 
 .icon--fast:before {
@@ -494,10 +548,12 @@ $icon--export: "\f135";
 $icon--fast: "\f136";
 
 
+
 .icon--featured-viz:before {
   content:"\f137";
 }
 $icon--featured-viz: "\f137";
+
 
 
 .icon--find-training:before {
@@ -506,10 +562,12 @@ $icon--featured-viz: "\f137";
 $icon--find-training: "\f138";
 
 
+
 .icon--folder:before {
   content:"\f139";
 }
 $icon--folder: "\f139";
+
 
 
 .icon--forums:before {
@@ -518,10 +576,12 @@ $icon--folder: "\f139";
 $icon--forums: "\f13a";
 
 
+
 .icon--globe:before {
   content:"\f13b";
 }
 $icon--globe: "\f13b";
+
 
 
 .icon--ideas:before {
@@ -530,10 +590,12 @@ $icon--globe: "\f13b";
 $icon--ideas: "\f13c";
 
 
+
 .icon--invite-people:before {
   content:"\f13d";
 }
 $icon--invite-people: "\f13d";
+
 
 
 .icon--knowledge-base:before {
@@ -542,10 +604,12 @@ $icon--invite-people: "\f13d";
 $icon--knowledge-base: "\f13e";
 
 
+
 .icon--like:before {
   content:"\f13f";
 }
 $icon--like: "\f13f";
+
 
 
 .icon--link:before {
@@ -554,10 +618,12 @@ $icon--like: "\f13f";
 $icon--link: "\f140";
 
 
+
 .icon--location-style2:before {
   content:"\f141";
 }
 $icon--location-style2: "\f141";
+
 
 
 .icon--location:before {
@@ -566,10 +632,12 @@ $icon--location-style2: "\f141";
 $icon--location: "\f142";
 
 
+
 .icon--metadata:before {
   content:"\f143";
 }
 $icon--metadata: "\f143";
+
 
 
 .icon--mobile-menu:before {
@@ -578,10 +646,12 @@ $icon--metadata: "\f143";
 $icon--mobile-menu: "\f144";
 
 
+
 .icon--mobile:before {
   content:"\f145";
 }
 $icon--mobile: "\f145";
+
 
 
 .icon--newsletter:before {
@@ -590,10 +660,12 @@ $icon--mobile: "\f145";
 $icon--newsletter: "\f146";
 
 
+
 .icon--nic-cage:before {
   content:"\f147";
 }
 $icon--nic-cage: "\f147";
+
 
 
 .icon--oem:before {
@@ -602,10 +674,12 @@ $icon--nic-cage: "\f147";
 $icon--oem: "\f148";
 
 
+
 .icon--offline-snapshots:before {
   content:"\f149";
 }
 $icon--offline-snapshots: "\f149";
+
 
 
 .icon--online-classes:before {
@@ -614,10 +688,12 @@ $icon--offline-snapshots: "\f149";
 $icon--online-classes: "\f14a";
 
 
+
 .icon--people:before {
   content:"\f14b";
 }
 $icon--people: "\f14b";
+
 
 
 .icon--play-button:before {
@@ -626,10 +702,12 @@ $icon--people: "\f14b";
 $icon--play-button: "\f14c";
 
 
+
 .icon--poll:before {
   content:"\f14d";
 }
 $icon--poll: "\f14d";
+
 
 
 .icon--query-without-code:before {
@@ -638,10 +716,12 @@ $icon--poll: "\f14d";
 $icon--query-without-code: "\f14e";
 
 
+
 .icon--quickstart-guide:before {
   content:"\f14f";
 }
 $icon--quickstart-guide: "\f14f";
+
 
 
 .icon--quotes-closed-style2:before {
@@ -650,10 +730,12 @@ $icon--quickstart-guide: "\f14f";
 $icon--quotes-closed-style2: "\f150";
 
 
+
 .icon--quotes-closed:before {
   content:"\f151";
 }
 $icon--quotes-closed: "\f151";
+
 
 
 .icon--quotes-open-style2:before {
@@ -662,10 +744,12 @@ $icon--quotes-closed: "\f151";
 $icon--quotes-open-style2: "\f152";
 
 
+
 .icon--quotes-open:before {
   content:"\f153";
 }
 $icon--quotes-open: "\f153";
+
 
 
 .icon--report-abuse:before {
@@ -674,10 +758,12 @@ $icon--quotes-open: "\f153";
 $icon--report-abuse: "\f154";
 
 
+
 .icon--reseller:before {
   content:"\f155";
 }
 $icon--reseller: "\f155";
+
 
 
 .icon--results-up:before {
@@ -686,10 +772,12 @@ $icon--reseller: "\f155";
 $icon--results-up: "\f156";
 
 
+
 .icon--scalable:before {
   content:"\f157";
 }
 $icon--scalable: "\f157";
+
 
 
 .icon--search:before {
@@ -698,10 +786,12 @@ $icon--scalable: "\f157";
 $icon--search: "\f158";
 
 
+
 .icon--security:before {
   content:"\f159";
 }
 $icon--security: "\f159";
+
 
 
 .icon--self-suffiency:before {
@@ -710,10 +800,12 @@ $icon--security: "\f159";
 $icon--self-suffiency: "\f15a";
 
 
+
 .icon--server-admin:before {
   content:"\f15b";
 }
 $icon--server-admin: "\f15b";
+
 
 
 .icon--settings:before {
@@ -722,10 +814,12 @@ $icon--server-admin: "\f15b";
 $icon--settings: "\f15c";
 
 
+
 .icon--share-secure:before {
   content:"\f15d";
 }
 $icon--share-secure: "\f15d";
+
 
 
 .icon--share-style2:before {
@@ -734,10 +828,12 @@ $icon--share-secure: "\f15d";
 $icon--share-style2: "\f15e";
 
 
+
 .icon--share:before {
   content:"\f15f";
 }
 $icon--share: "\f15f";
+
 
 
 .icon--social-facebook:before {
@@ -746,10 +842,12 @@ $icon--share: "\f15f";
 $icon--social-facebook: "\f160";
 
 
+
 .icon--social-gplus:before {
   content:"\f161";
 }
 $icon--social-gplus: "\f161";
+
 
 
 .icon--social-instagram:before {
@@ -758,10 +856,12 @@ $icon--social-gplus: "\f161";
 $icon--social-instagram: "\f162";
 
 
+
 .icon--social-linkedin:before {
   content:"\f163";
 }
 $icon--social-linkedin: "\f163";
+
 
 
 .icon--social-rss:before {
@@ -770,10 +870,12 @@ $icon--social-linkedin: "\f163";
 $icon--social-rss: "\f164";
 
 
+
 .icon--social-twitter:before {
   content:"\f165";
 }
 $icon--social-twitter: "\f165";
+
 
 
 .icon--solutions:before {
@@ -782,10 +884,12 @@ $icon--social-twitter: "\f165";
 $icon--solutions: "\f166";
 
 
+
 .icon--space:before {
   content:"\f167";
 }
 $icon--space: "\f167";
+
 
 
 .icon--subscriptions:before {
@@ -794,10 +898,12 @@ $icon--space: "\f167";
 $icon--subscriptions: "\f168";
 
 
+
 .icon--tableau-desktop:before {
   content:"\f169";
 }
 $icon--tableau-desktop: "\f169";
+
 
 
 .icon--tableau-logo:before {
@@ -806,10 +912,12 @@ $icon--tableau-desktop: "\f169";
 $icon--tableau-logo: "\f16a";
 
 
+
 .icon--tableau-online:before {
   content:"\f16b";
 }
 $icon--tableau-online: "\f16b";
+
 
 
 .icon--tableau-public:before {
@@ -818,10 +926,12 @@ $icon--tableau-online: "\f16b";
 $icon--tableau-public: "\f16c";
 
 
+
 .icon--tableau-reader:before {
   content:"\f16d";
 }
 $icon--tableau-reader: "\f16d";
+
 
 
 .icon--tableau-server:before {
@@ -830,10 +940,12 @@ $icon--tableau-reader: "\f16d";
 $icon--tableau-server: "\f16e";
 
 
+
 .icon--tailor-content:before {
   content:"\f16f";
 }
 $icon--tailor-content: "\f16f";
+
 
 
 .icon--talk-bubble:before {
@@ -842,10 +954,12 @@ $icon--tailor-content: "\f16f";
 $icon--talk-bubble: "\f170";
 
 
+
 .icon--technology:before {
   content:"\f171";
 }
 $icon--technology: "\f171";
+
 
 
 .icon--unanswered:before {
@@ -854,10 +968,12 @@ $icon--technology: "\f171";
 $icon--unanswered: "\f172";
 
 
+
 .icon--up-to-date:before {
   content:"\f173";
 }
 $icon--up-to-date: "\f173";
+
 
 
 .icon--upload:before {
@@ -866,10 +982,12 @@ $icon--up-to-date: "\f173";
 $icon--upload: "\f174";
 
 
+
 .icon--user-groups:before {
   content:"\f175";
 }
 $icon--user-groups: "\f175";
+
 
 
 .icon--view-less:before {
@@ -878,10 +996,12 @@ $icon--user-groups: "\f175";
 $icon--view-less: "\f176";
 
 
+
 .icon--view-more:before {
   content:"\f177";
 }
 $icon--view-more: "\f177";
+
 
 
 .icon--wikis:before {
@@ -890,10 +1010,12 @@ $icon--view-more: "\f177";
 $icon--wikis: "\f178";
 
 
+
 .icon--windows:before {
   content:"\f179";
 }
 $icon--windows: "\f179";
+
 
 
 .icon--workbook-library:before {
@@ -902,13 +1024,16 @@ $icon--windows: "\f179";
 $icon--workbook-library: "\f17a";
 
 
+
 .icon--write:before {
   content:"\f17b";
 }
 $icon--write: "\f17b";
 
 
+
 .icon--youtube:before {
   content:"\f17c";
 }
 $icon--youtube: "\f17c";
+

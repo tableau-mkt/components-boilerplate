@@ -11,6 +11,10 @@ Style guide: lists.cross-reference-1
 */
 
 .cross-reference-1 {
+  .cross-reference-1__title {
+    margin-top: 0;
+  }
+
   @include breakpoint($tablet-min) {
     @include span(10);
     @include pre(1);
@@ -56,6 +60,10 @@ Style guide: lists.cross-reference-2
 */
 
 .cross-reference-2 {
+  .cross-reference-2__title {
+    margin-top: 0;
+  }
+
   @include breakpoint($desktop-only) {
 
     .cross-reference-2__image,
@@ -124,7 +132,6 @@ Style guide: lists.cross-reference-3
 */
 
 .cross-reference-3 {
-
   @include breakpoint($tablet-only) {
     .cross-reference-3__title {
       text-align: center;

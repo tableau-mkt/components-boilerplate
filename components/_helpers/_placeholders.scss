@@ -17,6 +17,8 @@
   list-style: none;
 
   > li {
+    margin: 0;
+    line-height: inherit;
     list-style: none;
   }
 }

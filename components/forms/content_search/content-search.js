@@ -4,12 +4,12 @@
  * - Handle down/up arrow keys on pick list
  */
 
-// Loose augmentation pattern. Creates top-level Tabia variable if it doesn't
-// already exist.
-var Tabia = Tabia || {};
+// Loose augmentation pattern. Creates top-level Components variable if it
+// doesn't already exist.
+var Components = Components || {};
 
 // Create a base for this module's data and functions.
-Tabia.contentSearch = {};
+Components.contentSearch = {};
 
 /**
  * DOM-ready callback.
@@ -17,14 +17,14 @@ Tabia.contentSearch = {};
  * @param {Object} $
  *   jQuery
  */
-Tabia.contentSearch.ready = function ($) {
+Components.contentSearch.ready = function ($) {
   // Set up all the section search components on the page.
   $('.content-search').not('.contextual-search').each(function () {
     var $this = $(this);
 
     // Attach keydown handler with context.
     $this.find('.content-search__input').keydown(
-      $.proxy(Tabia.contentSearch.keydownHandler, $this)
+      $.proxy(Components.contentSearch.keydownHandler, $this)
     );
 
     // Attach reset handler.
@@ -34,7 +34,7 @@ Tabia.contentSearch.ready = function ($) {
       $this.trigger($resetEvent);
       if (!$resetEvent.isDefaultPrevented()) {
         // Reset/empty the form, via AJAX.
-        Tabia.contentSearch.resetForm($this);
+        Components.contentSearch.resetForm($this);
       }
     });
   });
@@ -45,10 +45,9 @@ Tabia.contentSearch.ready = function ($) {
  *
  * @param {jQuery Object} $search
  */
-Tabia.contentSearch.resetForm = function($search) {
-  $search.removeClass('is-populated');
+Components.contentSearch.resetForm = function($search) {
+  $search.removeClass('has-suggestion');
   $search.find('.content-search__input').val('');
-  $search.find('.content-search__submit').click();
 };
 
 /**
@@ -56,9 +55,9 @@ Tabia.contentSearch.resetForm = function($search) {
  *
  * @param {jQuery Object} $search
  */
-Tabia.contentSearch.submitForm = function($search) {
+Components.contentSearch.submitForm = function($search) {
   if ($search.find('.content-search__input').val() !== '') {
-    $search.addClass('is-populated');
+    $search.removeClass('has-suggestion');
     $search.find('.content-search__submit').click();
   }
 };
@@ -68,16 +67,20 @@ Tabia.contentSearch.submitForm = function($search) {
  *
  * @param {Object} event
  */
-Tabia.contentSearch.keydownHandler = function (event) {
+Components.contentSearch.keydownHandler = function (event) {
   var $search = $(this[0]),
       $submitEvent = $.Event('contentSearch:submit');
 
   switch (event.which) {
     case 13: // ENTER
+      $search.removeClass('has-suggestion');
       // Allow overriding.
       $(document).trigger($submitEvent);
       // Submit the form, via AJAX.
       if (!$submitEvent.isDefaultPrevented()) {
+        // Prevent any further events from occurring on the input.
+        $search.find('.content-search__input').prop('readonly', true)
+          .off('keyup keydown blur');
         Tabia.contentSearch.submitForm($search);
       }
       event.preventDefault();
@@ -86,4 +89,4 @@ Tabia.contentSearch.keydownHandler = function (event) {
 };
 
 // Attach our DOM-ready callback.
-jQuery(Tabia.contentSearch.ready);
+jQuery(Components.contentSearch.ready);

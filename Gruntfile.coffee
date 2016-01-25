@@ -141,6 +141,7 @@ module.exports = (grunt) ->
         dest: 'styleguide/build/js/styleguide.js'
       vendor:
         src: [
+          'bower_components/matchMedia/matchMedia.js'
           'bower_components/slick.js/slick/slick.min.js'
           'bower_components/hoverintent/jquery.hoverIntent.js'
           'bower_components/waypoints/lib/jquery.waypoints.min.js'
@@ -159,7 +160,6 @@ module.exports = (grunt) ->
           'jquery/dist/jquery.min.js'
           'jquery-ui/jquery-ui.min.js'
           'slick.js/slick/slick.css'
-          'slick.js/slick/slick-theme.css'
           'slick.js/slick/ajax-loader.gif'
           'slick.js/slick/fonts/**'
         ]

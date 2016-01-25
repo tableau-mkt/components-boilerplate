@@ -22,10 +22,10 @@ Style guide: navigation.pager
       padding: 0.5em 1em;
     }
 
+    // Hide pager links if they would unnecessarily navigate to the
+    // current page.
     &.pager__endcap--current a {
-      color: $text-light-body;
-      cursor: default;
-      pointer-events: none;
+      display: none;
     }
 
     &.pager__endcap--first a:before,
@@ -36,7 +36,7 @@ Style guide: navigation.pager
       height: 1.3em;
       text-decoration: none;
     }
-    
+
     &.pager__endcap--first a:before {
       content: $icon--arrow-left;
       padding-right: 0.5em;

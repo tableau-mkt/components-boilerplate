@@ -11,6 +11,7 @@ Weight: 0
 .divider--gradient - A divider that fades out to transparent on either end.
 .divider--dashed - A dashed divider.
 .divider--dark - A darker divider used for darker backgrounds
+.divider--short - A fixed width divider that expands to full width for smaller screen sizes.
 
 Style guide: layout.divider
 */
@@ -40,6 +41,16 @@ Style guide: layout.divider
     &.divider--gradient {
       background: $bg-dark-gray-1;
       background: linear-gradient(to right, transparent, $bg-dark-gray-1, transparent);
+    }
+  }
+
+  &.divider--short {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+
+    @include breakpoint($mobile-only) {
+      width: 100%;
     }
   }
 }

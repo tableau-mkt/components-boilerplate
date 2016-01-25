@@ -34,7 +34,6 @@ Style guide: teasers.person-teaser
 
     @include breakpoint($tablet-min) {
       @include span(4);
-      padding-top: 1.5em;
     }
   }
 
@@ -43,6 +42,14 @@ Style guide: teasers.person-teaser
     margin-bottom: 0;
     margin-top: 0;
     color: $text-dark-body;
+  }
+
+  .person-teaser__job-title {
+    @extend .text--label;
+  }
+
+  .person-teaser__bio {
+    @extend .text--body-small;
   }
 
   .person-teaser__social {
