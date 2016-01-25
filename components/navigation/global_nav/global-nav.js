@@ -21,6 +21,7 @@
         $hamburger = $globalNav.find('.hamburger'),
         $mobileWrapper = $globalNav.find('.global-nav__mobile-wrapper'),
         $mobileDrawerClose = $('.global-nav__drawer-close'),
+        hasHover = Components.utils.hasHover(),
         animation = {
           duration: 500,
           easing: "easeInOutQuart"
@@ -39,18 +40,33 @@
           $drawer = $drawers.filter('#' + $link.data('drawer-id')),
           $both = $link.add($drawer);
 
-      // Handling for hover interaction of drawers. Uses the doTimeout jquery
-      // utility to handle throttling and waiting on a small delay before
-      // showing the drawer (essentially hoverintent)
-      $both.hover(function () {
-        $both.doTimeout( 'open', 200, function() {
+      if (hasHover) {
+        // Handling for hover interaction of drawers. Uses the doTimeout jquery
+        // utility to handle throttling and waiting on a small delay before
+        // showing the drawer (essentially hoverintent)
+        $both.hover(function () {
+          $both.doTimeout( 'open', 200, function() {
+            $both.addClass('is-open');
+          });
+        }, function () {
+          $both.doTimeout( 'open', 200, function() {
+            $both.removeClass('is-open');
+          });
+        });
+      }
+      else {
+        // Touch-only device interaction: first click (tap) opens the drawers.
+        // Subsequent clicks follows UA default behavior (i.e. follows the top-
+        // level link)
+        $link.click(function (e) {
+          // If not already open, prevent following the link.
+          if (!$link.hasClass('is-open')) {
+            e.preventDefault();
+          }
+          $expandableLinks.add($drawers).removeClass('is-open');
           $both.addClass('is-open');
         });
-      }, function () {
-        $both.doTimeout( 'open', 200, function() {
-          $both.removeClass('is-open');
-        });
-      });
+      }
     });
 
     $drawers.click(function(e) {
