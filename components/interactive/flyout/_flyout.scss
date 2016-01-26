@@ -10,7 +10,7 @@ Style guide: interactive.flyout
 
 .flyout__slideout {
   width: 100%;
-  overflow: auto;
+  overflow: inherit;
 }
 .flyout__content {
   display: none;
