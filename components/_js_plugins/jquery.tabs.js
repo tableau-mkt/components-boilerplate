@@ -41,6 +41,7 @@
           var $link = $(this),
               $content = $('#' + $link.data('tab-content')),
               $wrapper = $link.closest(settings.wrapper),
+              $tabLinks = $wrapper.find(settings.tabLinks),
               $previousLink = $link.closest("ul").find('a.is-active'),
               $previousContent = $('#' + $previousLink.data('tab-content')),
               previousContentHeight = $previousContent.outerHeight(true),
@@ -51,7 +52,7 @@
           $contentClone.remove();
 
           // Manage active class
-          settings.tabLinks.add($wrapper.find(settings.contents)).removeClass('is-active');
+          $tabLinks.add($wrapper.find(settings.contents)).removeClass('is-active');
           $link.add($content).addClass('is-active');
 
           // Animate the height transition between tabs
@@ -78,10 +79,12 @@
       if (settings.triggers) {
         settings.triggers.on('click.tabs-trigger', function(e) {
           var $link = settings.tabLinks.filter('[data-tab-content="' + $(this).data('tab-content') + '"]'),
-              $content = $('#' + $(this).data('tab-content'));
+              $content = $('#' + $(this).data('tab-content')),
+              $wrapper = $link.closest(settings.wrapper),
+              $tabLinks = $wrapper.find(settings.tabLinks);
 
           // Manage active class
-          settings.tabLinks.add(settings.wrapper.find(settings.contents)).removeClass('is-active');
+          $tabLinks.add($wrapper.find(settings.contents)).removeClass('is-active');
           $link.add($content).addClass('is-active');
         });
       }
