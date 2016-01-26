@@ -40,13 +40,13 @@ Style guide: interactive.social-share
       border-right: 10px solid transparent;
       border-bottom: 10px solid $nav-drawer-gray-2;
       pointer-events: none;
-      transition: opacity 250ms ease-in-out;
+      transition: opacity 250ms linear;
     }
 
     &.is-open {
       &:after {
         opacity: 1;
-        transition: opacity 150ms ease-in-out;
+        transition: opacity 150ms linear;
       }
     }
   }
@@ -59,13 +59,13 @@ Style guide: interactive.social-share
     background: $nav-drawer-gray-2;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 250ms linear;
+    transition: visibility 250ms linear, opacity 250ms linear;
     z-index: $zindex-2;
 
     &.is-open {
       visibility: visible;
       opacity: 1;
-      transition: opacity 150ms ease-in-out;
+      transition: visibility 150ms linear, opacity 150ms linear;
     }
   }
 
