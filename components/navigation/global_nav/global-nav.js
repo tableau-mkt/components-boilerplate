@@ -57,10 +57,13 @@
         // Touch-only device interaction: first click (tap) opens the drawers.
         // Subsequent clicks follows UA default behavior (i.e. follows the top-
         // level link)
-        $link.on('click.global-nav', function (e) {
-          // If not already open, prevent following the link.
+        $link.on('touchstart.global-nav', function (e) {
+          // If not already open, prevent following the link, and stop
+          // propagation so that our sister document touch handler doesn't close
+          // the drawers immediately.
           if (!$link.hasClass('is-open')) {
             e.preventDefault();
+            e.stopPropagation();
           }
           $expandableLinks.add($drawers).removeClass('is-open');
           $both.addClass('is-open');
@@ -68,7 +71,16 @@
       }
     });
 
-    $drawers.on('click.global-nav', function(e) {
+    // Catch touch events bubbling "all the way up" as a trigger for closing the
+    // drawers (on mobile specifically).
+    $(document).on('touchstart.global-nav', function () {
+      $expandableLinks.add($drawers).removeClass('is-open');
+    });
+
+    // Don't bubble up events beyond drawers.
+    // This prevents touch events inside the drawers from closing the drawers.
+    // @todo document why stopping click propagation is necessary.
+    $drawers.on('touchstart.global-nav click.global-nav', function(e) {
       e.stopPropagation();
     });
 
