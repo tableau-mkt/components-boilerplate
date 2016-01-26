@@ -45,7 +45,7 @@ Style guide: compound.special-hero
 
   // If a video is present, hide the background image.
   .special-hero__video + .special-hero__background {
-    display: none;
+    height: 0;
   }
 
   @include breakpoint($tablet-min) {

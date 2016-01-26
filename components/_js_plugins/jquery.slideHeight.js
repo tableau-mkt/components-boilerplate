@@ -29,7 +29,7 @@
         },
         options.duration,
         options.easing,
-        function() {
+        function () {
           // Reset the height to auto to ensure the height remains accurate on viewport resizing
           $el.css('height', 'auto');
         }
@@ -37,6 +37,10 @@
     }
 
     if (direction === "up") {
+      options.complete = function () {
+        // Enforce height zero.
+        $el.css('overflow', 'hidden');
+      };
       $el.animate({
         height: 0
       }, options);
