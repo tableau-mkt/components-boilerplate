@@ -62,4 +62,10 @@ $icons: (
       content: nth($details, 1);
     }
   }
+
+  .icon {
+    position: relative;
+    top: -2px;
+    font-size: 1.5em;
+  }
 }
