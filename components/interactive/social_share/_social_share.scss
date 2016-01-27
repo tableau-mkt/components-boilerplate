@@ -121,9 +121,15 @@ Style guide: interactive.social-share
   }
 }
 
+.text--centered {
+  .social-share__widgets {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
 // Mobile-specific Styles
 @include breakpoint($mobile-only) {
-  .text--centered,
   .mobile-center {
     .social-share__widgets {
       left: 50%;
