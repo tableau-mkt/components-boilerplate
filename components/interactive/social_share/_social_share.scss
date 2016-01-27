@@ -13,9 +13,9 @@ Style guide: interactive.social-share
     @extend .text--label;
     position: relative;
     display: inline-block;
-    cursor: pointer;
     color: $text-link;
     padding: 1.5em 0.5em;
+    cursor: pointer;
 
     &:hover {
       text-decoration: none;
@@ -42,13 +42,6 @@ Style guide: interactive.social-share
       pointer-events: none;
       transition: opacity 250ms linear;
     }
-
-    &.is-open {
-      &:after {
-        opacity: 1;
-        transition: opacity 150ms linear;
-      }
-    }
   }
 
   .social-share__widgets {
@@ -61,19 +54,13 @@ Style guide: interactive.social-share
     opacity: 0;
     transition: visibility 250ms linear, opacity 250ms linear;
     z-index: $zindex-2;
-
-    &.is-open {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 150ms linear, opacity 150ms linear;
-    }
   }
 
   .social-share__widget {
-    @extend .text--centered;
     display: inline-block;
     margin-left: 0.5em;
     text-decoration: none;
+    text-align: center;
     min-width: 41px;
 
     &:first-child {
@@ -99,7 +86,7 @@ Style guide: interactive.social-share
     @extend .text--label;
     @extend .text--bold;
     position: relative;
-    width: 30px;
+    min-width: 30px;
     height: 15px;
     padding: 0.5em;
     background: $white;
@@ -114,16 +101,33 @@ Style guide: interactive.social-share
       content: '';
       width: 0;
       bottom: -5px;
-      left: 18px;
+      left: 50%;
+      margin-left: -5px;
       z-index: 1;
+    }
+  }
+
+  &:hover {
+    .social-share__toggle:after {
+      opacity: 1;
+      transition: opacity 150ms linear;
+    }
+
+    .social-share__widgets {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 150ms linear, opacity 150ms linear;
     }
   }
 }
 
-.text--centered,
-.mobile-center {
-  .social-share__widgets {
-    left: 50%;
-    transform: translate(-50%, 0%);
+// Mobile-specific Styles
+@include breakpoint($mobile-only) {
+  .text--centered,
+  .mobile-center {
+    .social-share__widgets {
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
   }
 }
