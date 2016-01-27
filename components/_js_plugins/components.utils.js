@@ -107,22 +107,3 @@ Components.utils.breakpoint = function (layout) {
       return false;
   }
 };
-
-/**
- * Determines if the user's device has hover ability (i.e. has pointer/mouse).
- *
- * For non iOS devices, requires the hover media feature in Media Queries Level 4.
- * @see https://www.w3.org/TR/mediaqueries-4/#hover
- *
- * @return {Boolean}
- */
-Components.utils.hasHover = function () {
-  var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
-  // Fail fast if matchMedia isn't present.
-  if (typeof window.matchMedia !== 'function') {
-    return false;
-  }
-
-  return !(iOS || window.matchMedia('(hover: none)').matches);
-};
