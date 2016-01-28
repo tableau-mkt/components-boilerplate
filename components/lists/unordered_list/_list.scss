@@ -15,7 +15,7 @@ Style guide: lists.standard
 */
 
 ul {
-  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='4' height='8'%3E %3Ccircle cx='2.5' cy='2' r='2'/%3E %3C/svg%3E");
+  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='5' height='10'%3E %3Ccircle cx='3' cy='5' r='1.5'/%3E %3C/svg%3E");
   padding-left: 1em;
 }
 
@@ -25,5 +25,5 @@ li {
 }
 
 .list--negative {
-  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='4' height='8'%3E %3Ccircle fill='%23ffffff' cx='2.5' cy='2' r='2'/%3E %3C/svg%3E");
+  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='5' height='10'%3E %3Ccircle fill='%23ffffff' cx='3' cy='5' r='1.5'/%3E %3C/svg%3E");
 }
