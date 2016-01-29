@@ -33,6 +33,7 @@ Style guide: compound.special-hero
     padding-bottom: 33%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .special-hero__video-inner {
     height: 0;
@@ -127,7 +128,8 @@ Style guide: compound.special-hero
     }
 
     .special-hero__content {
-      padding: 2em 0;
+      padding: 0 0 2em 0;
+      text-align: center;
 
       h1.heading--huge {
         margin-top: .2em;
@@ -141,19 +143,14 @@ Style guide: compound.special-hero
         text-shadow: none;
       }
 
-      .cta {
-        display: block;
-        text-align: center;
+      .cta.cta--light {
+        background-color: $text-dark-body;
+        color: $text-negative;
 
-        &.cta--light {
-          background-color: $text-dark-body;
-          color: $text-negative;
-
-          &.cta--secondary {
-            background-color: transparent;
-            border-color: $text-dark-body;
-            color: $text-dark-body;
-          }
+        &.cta--secondary {
+          background-color: transparent;
+          border-color: $text-dark-body;
+          color: $text-dark-body;
         }
       }
     }
