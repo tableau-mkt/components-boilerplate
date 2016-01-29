@@ -9,44 +9,134 @@ Style guide: interactive.social-share
 */
 
 .social-share {
-  @extend .text--label;
-  position: relative;
   display: inline-block;
   cursor: pointer;
-  color: $text-link;
 
-  &:hover {
-    text-decoration: none;
-  }
-
-  .icon {
-    font-size: 16px;
-    vertical-align: top;
-  }
-}
-
-.social-share__widgets {
-  position: relative;
-  overflow: hidden;
-  height: 0;
-}
-
-.social-share__wrapper {
-  margin-top: 1em;
-
-  .social-share__widget  {
+  .social-share__toggle {
+    @extend .text--label;
+    position: relative;
     display: inline-block;
-    margin-left: 1em;
     color: $text-link;
+    padding: 1.5em 0.5em;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .icon {
+      font-size: 16px;
+      vertical-align: top;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      left: 50%;
+      top: 100%;
+      margin-top: -10px;
+      margin-left: -10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $nav-drawer-gray-2;
+      pointer-events: none;
+      transition: opacity 250ms linear;
+    }
+  }
+
+  .social-share__widgets {
+    display: block;
+    position: absolute;
+    padding: 1em 1em 0.5em 1em;
+    cursor: auto;
+    white-space: nowrap;
+    background: $nav-drawer-gray-2;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 250ms linear, opacity 250ms linear;
+    z-index: $zindex-2;
+  }
+
+  .social-share__widget {
+    display: inline-block;
+    margin-left: 0.5em;
     text-decoration: none;
-    cursor: pointer;
+    text-align: center;
+    min-width: 41px;
 
     &:first-child {
       margin-left: 0;
     }
   }
+
+  .social-share__link {
+    color: $text-dark-body;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .icon--social-gplus {
+    font-size: 24px;
+  }
+
+  .social-share__counter {
+    @extend .text--label;
+    @extend .text--bold;
+    position: relative;
+    min-width: 30px;
+    height: 15px;
+    padding: 0.5em;
+    background: $white;
+    color: $text-dark-body;
+
+    &:after {
+      display: block;
+      position: absolute;
+      border-style: solid;
+      border-width: 5px 5px 0;
+      border-color: $white transparent;
+      content: '';
+      width: 0;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -5px;
+      z-index: 1;
+    }
+  }
+
+  &:hover {
+    .social-share__toggle:after {
+      opacity: 1;
+      transition: opacity 150ms linear;
+    }
+
+    .social-share__widgets {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 150ms linear, opacity 150ms linear;
+    }
+  }
 }
 
-.text--negative .social-share {
-  color: $text-negative;
+.text--centered {
+  .social-share__widgets {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+// Mobile-specific Styles
+@include breakpoint($mobile-only) {
+  .mobile-center {
+    .social-share__widgets {
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  }
 }
