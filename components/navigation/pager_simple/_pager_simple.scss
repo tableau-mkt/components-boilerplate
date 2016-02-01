@@ -15,6 +15,7 @@ Style guide: navigation.pager-simple
   .pager-simple__next {
     @extend %vertical-centered;
     @extend %underline-none;
+    z-index: $zindex-1;
     left: 0;
   }
 
