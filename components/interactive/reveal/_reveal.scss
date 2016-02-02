@@ -1,10 +1,17 @@
 /*
 Content Reveal
 
-Simple tool to make content hidden and revealed when a trigger is clicked. It
-doesn't matter where on the page the trigger and target content are, but the
-trigger element must target the content via a <code>data-reveal-target="target-id"</code>
-attribute. The <code>.reveal__content</code> container must have an <code>id</code>
+Simple tool to make content hidden and revealed when a trigger is clicked. The
+trigger element can be abywhere on the page and can have the following options
+set as data attributes:
+
+**Trigger Options:**
+* `data-reveal-target="[CONTENT ID]"` - (required) - The ID of the container around the content to be revealed
+* `data-reveal-hide-text="[REVEAL HIDE TEXT]"` - (optional) - Text to swap into the trigger link while the reveal is in the open state.
+* `data-reveal-close-link="false"` - (optional) - Set this to disable the default close link within the reveal content container
+* `data-reveal-scroll="[trigger|target]"` - (optional) - Smooth-scroll to either the top of the trigger or the target element when the content is revealed.
+
+The <code>.reveal__content</code> container must have an <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.
 
 Markup: reveal.hbs

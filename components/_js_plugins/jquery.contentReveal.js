@@ -169,6 +169,11 @@
         if (typeof $trigger.data('revealHideText') !== 'undefined') {
           settings.triggers.data('revealShowText', showText);
         }
+
+        // Disable close link if the data attribute is set to false.
+        if (typeof $trigger.data('revealCloseLink') !== 'undefined' && $trigger.data('revealCloseLink') == false) {
+          settings.closeLink = false;
+        }
       });
 
       // // Set initial margin on content if there is a curtain
