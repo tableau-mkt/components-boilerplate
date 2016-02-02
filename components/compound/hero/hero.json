@@ -1,20 +1,7 @@
 {
-  "img": {
-    "src": "http://www.placecage.com/1366/540"
-  },
-  "text": {
-    "sub_title": {
-      "text": "Sub Title",
-      "level": "4"
-    },
-    "headline": {
-      "text": "Big Headline String",
-      "level": "1"
-    },
-    "cta": {
-      "url": "http://www/tableau.com",
-      "text": "Call to Action",
-      "icon": "play"
-    }
-  }
+  "background": false,
+  "eyebrow": "An Eyebrow",
+  "title": "Here is a Page Title",
+  "subtitle": "This is a bit more lengthy subtitle that explains a bit about the contnet below.",
+  "extraContent": false
 }
