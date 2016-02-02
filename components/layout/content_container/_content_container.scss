@@ -60,3 +60,26 @@ Style guide: layout.container
     }
   }
 }
+
+// Prevent width from shrinking once the viewport exceeds the $content-max.
+@include breakpoint (min-width $content-max) {
+  .content-container {
+    padding-left: $content-max * 0.11;
+    padding-right: $content-max * 0.11;
+
+    &.content-container--narrow {
+      padding-left: $content-max * 0.16;
+      padding-right: $content-max * 0.16;
+    }
+
+    &.content-container--wide {
+      padding-left: $content-max * 0.03;
+      padding-right: $content-max * 0.03;
+    }
+
+    &.content-container--text-column {
+      padding-left: $content-max * 0.22;
+      padding-right: $content-max * 0.22;
+    }
+  }
+}

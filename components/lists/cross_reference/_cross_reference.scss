@@ -76,6 +76,11 @@ Style guide: lists.cross-reference-2
       margin-right: -140px;
       line-height: 0;
       text-align: right;
+
+      .icon {
+        font-size: 3.5em;
+        color: $text-light-body;
+      }
     }
 
     .cross-reference-2__copy {

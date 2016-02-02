@@ -157,6 +157,7 @@ Style guide: buttons-links.cta
 @include breakpoint($mobile-only) {
   .cta {
     display: block;
+    text-align: center;
 
     &:nth-child(n+2) {
       margin-left: 0;
