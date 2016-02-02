@@ -1,0 +1,40 @@
+/*
+Loading overlay
+
+Loading animation with overlay
+
+Markup: loading-overlay.hbs
+
+Style Guide: interactive.loading-overlay
+*/
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $zindex-3;
+  background: rgba(27,27,27,0.7);
+
+  .loader {
+    @extend %absolute-centered;
+    color: $white;
+    text-align: center;
+  }
+
+  .loader__animation {
+    background: url('../images/interactive/loader/loader.gif') no-repeat center center;
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .loader__message {
+    display: block;
+    @extend .text--label;
+    font-size: em(32px);
+    font-weight: bold;
+    margin: 0;
+  }
+}

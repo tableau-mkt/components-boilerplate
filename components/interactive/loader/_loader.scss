@@ -1,0 +1,31 @@
+/*
+Loader
+
+Loading animation
+
+Markup: loader.hbs
+
+Bgcolor: #fff
+
+Style Guide: interactive.loader
+*/
+
+.loader {
+  .loader__animation {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url('../images/interactive/loader/loader.gif') no-repeat center center;
+    background-size: 24px;
+  }
+
+  .loader__message {
+    @extend .text--label;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
