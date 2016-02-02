@@ -5,9 +5,7 @@
  *  Helpful when needing to hide a video player while maintaining control via an
  *  API.
  *
- *  The element must have "overflow: hidden;" set in CSS for this to work properly.
- *  In order to have the element hidden by default, you mist also set "height: 0;"
- *  in CSS as well.
+ *  This function enforces "overflow: hidden" in order to work properly.
  */
 
 (function ($) {
@@ -16,6 +14,9 @@
     var $el = $(this);
 
     options = options || {duration: 400, easing: "swing"};
+
+    // Enforce height zero.
+    $el.css('overflow', 'hidden');
 
     if (direction === "down") {
       var $elClone = $el.clone().show().css({"height":"auto"}).appendTo($el.parent()),
@@ -37,10 +38,6 @@
     }
 
     if (direction === "up") {
-      options.complete = function () {
-        // Enforce height zero.
-        $el.css('overflow', 'hidden');
-      };
       $el.animate({
         height: 0
       }, options);
