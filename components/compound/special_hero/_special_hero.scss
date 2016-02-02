@@ -49,6 +49,10 @@ Style guide: compound.special-hero
     display: none;
   }
 
+  .special-hero__content {
+    text-align: center;
+  }
+
   @include breakpoint($tablet-min) {
     background-color: $bg-dark-gray-3;
     color: $text-negative;
