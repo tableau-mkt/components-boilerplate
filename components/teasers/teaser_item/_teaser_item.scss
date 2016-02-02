@@ -71,4 +71,10 @@ Style guide: teasers.teaser-item
   @include breakpoint($mobile-only) {
     margin-bottom: 2em;
   }
+
+  @include breakpoint($tablet-only) {
+    &.grid--tablet-half {
+      margin-bottom: 2em;
+    }
+  }
 }
