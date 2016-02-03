@@ -7,7 +7,6 @@
  * Options:
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
- *   closeLink - Optional - [boolean] - whether a close link should be added
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
  * Usage:
@@ -23,7 +22,6 @@
     // Default settings
     var settings = $.extend({
       contents: $(this),
-      closeLink: true,
       animation: {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -171,8 +169,8 @@
         }
 
         // Disable close link if the data attribute is set to false.
-        if (typeof $trigger.data('revealCloseLink') !== 'undefined' && $trigger.data('revealCloseLink') == false) {
-          settings.closeLink = false;
+        if ($trigger.data('revealCloseLink') !== false) {
+          $target.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
         }
       });
 
@@ -188,11 +186,6 @@
       //     $(this).css('margin-top', -$curtain.outerHeight(true));
       //   }
       // });
-
-      // Add a close icon to each content continer
-      if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
-      }
     }
 
     function autoReveal() {
