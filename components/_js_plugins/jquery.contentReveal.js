@@ -7,7 +7,6 @@
  * Options:
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
- *   closeLink - Optional - [boolean] - whether a close link should be added
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
  * Usage:
@@ -23,7 +22,6 @@
     // Default settings
     var settings = $.extend({
       contents: $(this),
-      closeLink: true,
       animation: {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -81,7 +79,7 @@
       $target.slideHeight('down', customAnimation);
 
       if (media == "video") {
-        var videoObj = $target.find('.reveal-video--brightcove')[0],
+        var videoObj = $target.find('.video-js')[0],
             player = videojs(videoObj);
 
         setTimeout(function() {
@@ -136,7 +134,7 @@
       $curtain.slideHeight('down', settings.animation);
 
       if (media == "video") {
-        var player = videojs($target.find('.reveal-video--brightcove')[0]);
+        var player = videojs($target.find('.video-js')[0]);
         player.pause();
       }
 
@@ -168,6 +166,11 @@
         if (typeof $trigger.data('revealHideText') !== 'undefined') {
           settings.triggers.data('revealShowText', showText);
         }
+
+        // Disable close link if the data attribute is set to false.
+        if ($trigger.data('revealCloseLink') !== false) {
+          $target.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
+        }
       });
 
       // // Set initial margin on content if there is a curtain
@@ -182,11 +185,6 @@
       //     $(this).css('margin-top', -$curtain.outerHeight(true));
       //   }
       // });
-
-      // Add a close icon to each content continer
-      if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
-      }
     }
 
     function autoReveal() {

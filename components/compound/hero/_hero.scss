@@ -1,14 +1,9 @@
 /*
-Page Hero
+Basic Hero
 
-**DEPRECATED**
-
-Heroes on need to accomplish two main tasks. First, they need to convey a
-specific story as simply and beautifully as they can in order to drive traffic.
-Secondly, they need to set the tone for the page they are setting up.
-
-Very simple type and imagery treatments can create different feels for pages
-that need to stand on their own.
+A simple hero to be displayed at the top of the page containing the page title
+and any other information about the page content such as an eyebrow or a
+subtitle.
 
 Markup: hero.hbs
 
@@ -18,164 +13,30 @@ Style guide: compound.hero
 */
 
 .hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding: 3em 0;
+  background-color: $bg-light-gray-1;
+  text-align: center;
 
-  .hero__background {
-    position: relative;
-    max-width: $layout-max;
-    margin: 0 auto;
-
-    .hero__background__inner {
-      height: 0;
-      padding-bottom: 33%;
-      background-size: cover;
-    }
-
-    img {
-      position: absolute;
-      width: 100%;
-    }
+  .hero__eyebrow {
+    @extend .text--label;
+    margin: 0 0 2em 0;
   }
 
-  .hero__video {
-    position: relative;
-    line-height: 0;
-    max-width: $layout-max;
-    margin: 0 auto;
-
-    video {
-      width: 100%;
-    }
+  h1,
+  .hero__title {
+    margin: 0;
   }
 
-  .hero__video + .hero__background {
-    display: none;
+  .hero__subtitle {
+    margin-bottom: 0;
   }
 
-  @include breakpoint($tablet-min) {
-    .hero__content {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      // @todo add fallback for older browsers
-      display: flex;
-      align-items: center;
-      color: $text-negative;
-
-      .hero__content__inner {
-        width: 100%;
-      }
-
-      h1 {
-        margin: 0;
-      }
-
-      h4 + .hero__content__headline {
-        margin-top: .5em;
-      }
-
-      .hero__content__cta {
-        margin-top: 1em;
-      }
-    }
+  .hero__extra-content {
+    margin-top: 2em;
+    // Reset text alignment in case more complex markup/layout is used.
+    text-align: left;
   }
 
-  @include breakpoint($desktop-only) {
-    // Gradients to transition hero image to dark background on wider screens
-    .hero__background:before,
-    .hero__background:after,
-    .hero__video:before,
-    .hero__video:after {
-      display: none;
-      content: " ";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 200px;
-      height: 100%;
-      background-image: linear-gradient(to right, $bg-dark-gray-3, transparent);
-
-      @include breakpoint($layout-max) {
-        display: block;
-      }
-    }
-
-    .hero__background:after,
-    .hero__video:after {
-      background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
-      left: auto;
-      right: 0;
-    }
-  }
-}
-
-// Set up the gradient fades for wide screens for each background color.
-@each $name, $colors in $background-colors {
-  .bg--#{"" + $name} {
-    .hero__background:before,
-    .hero__video:before {
-      background-image: linear-gradient(to right, nth($colors, 1), transparent);
-    }
-
-    .hero__background:after,
-    .hero__video:after {
-      background-image: linear-gradient(to left, nth($colors, 1), transparent);
-    }
-  }
-}
-
-@include breakpoint($tablet-max) {
-  .hero {
-    .hero__video {
-      display: none;
-    }
-
-    .hero__video + .hero__background {
-      display: block;
-    }
-
-    .hero__background .hero__background__inner {
-      padding-bottom: 50%;
-    }
-
-    .hero__content h1.heading--homepage br {
-      display: none;
-    }
-  }
-}
-
-@include breakpoint($mobile-only) {
-  .hero {
-    h1, h4.heading--label {
-      color: $text-dark-body;
-    }
-
-    .hero__content {
-      padding: 2em 0;
-
-      h1.heading--homepage {
-        margin-top: .2em;
-
-        br {
-          display: none;
-        }
-      }
-
-      .cta {
-        display: block;
-        text-align: center;
-      }
-    }
-  }
-
-  .bg--dark-gray-1 .hero,
-  .bg--dark-gray-2 .hero,
-  .bg--dark-gray-3 .hero {
-    background: #fff;
-    color: $text-dark-body;
-  }
 }

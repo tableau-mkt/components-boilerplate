@@ -1,51 +1,24 @@
-<div class="hero {{ modifier_class }}{{#if classes}} {{ classes }}{{/if}}">
-  {{# video }}
-    <div class="hero__video">
-      <video autoplay="" loop="">
-        <source src="{{ src }}" type="video/mp4">
-        <img src="{{ ../img.src }}">
-      </video>
-    </div>
-  {{/ video }}
-
-  {{# img }}
-    <div class="hero__background">
-      <div class="hero__background__inner" style="background-image: url({{ src }});">
+<section class="hero {{ modifier_class }}" {{#if background}}style="background-image: url({{ background }});"{{/if}}>
+  <div class="content-container">
+    {{#if eyebrow}}
+      <p class="hero__eyebrow">
+        {{{ eyebrow }}}
+      </p>
+    {{/if}}
+    {{#if title}}
+      <h1 class="hero__title">
+        {{{ title }}}
+      </h1>
+    {{/if}}
+    {{#if subtitle}}
+      <h5 class="hero__subtitle">
+        {{{ subtitle }}}
+      </h5>
+    {{/if}}
+    {{#if extraContent}}
+      <div class="hero__extra-content">
+        {{{ extraContent }}}
       </div>
-    </div>
-  {{/ img }}
-
-  {{#with text}}
-    <div class="hero__content">
-      <div class="hero__content__inner content-container">
-        {{#with sub_title}}
-          {{> heading }}
-        {{/with}}
-
-        {{#with headline}}
-          <div class="hero__content__headline clearfix">
-            {{> heading }}
-          </div>
-        {{/with}}
-
-        {{#with copy}}
-          <div class="hero__content__copy clearfix">
-            <p{{#if class}} class="{{ class}}"{{/if}}>
-              {{ text }}
-            </p>
-          </div>
-        {{/with}}
-
-        {{#with cta}}
-          <div class="hero__content__cta clearfix">
-            {{> cta }}
-          </div>
-        {{/with}}
-
-        {{#with link}}
-          {{> link-formatted}}
-        {{/with}}
-      </div>
-    </div>
-  {{/with}}
-</div>
+    {{/if}}
+  </div>
+</section>

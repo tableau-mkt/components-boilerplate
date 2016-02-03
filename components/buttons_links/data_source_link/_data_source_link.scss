@@ -1,10 +1,13 @@
-/* 
+/*
 Data Source Link
+
+DEPRECATED
 
 A large CTA-style link specifically for linking to data sources.
 
 Markup: data-source-link.hbs
 
+Hidden: true
 
 .data-source-link--desktop - Desktop colored Data Source Link.
 .data-source-link--server - Server colored Data Source Link.
@@ -35,7 +38,7 @@ Style guide: buttons-links.data-source
     background: transparent;
     text-decoration: none;
   }
-  
+
   .data-source-link__number {
     font-family: $text--benton-thin;
     font-weight: 100;

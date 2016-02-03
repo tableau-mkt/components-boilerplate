@@ -1,5 +1,11 @@
 // Default Slick Styles
 
+.slick-slider {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .slick-dots {
   position: absolute;
   height: 25px;
@@ -54,7 +60,7 @@
   position: absolute;
   display: block;
   height: 100%;
-  width: 26px;
+  width: 40px;
   z-index: $zindex-2;
   top: 0;
   padding: 0;
