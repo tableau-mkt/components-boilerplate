@@ -75,11 +75,10 @@
         $trigger.text(hideText);
       }
 
-      // Video players break when we display none so using a custom reimplementation
-      // of slideDown. See helpers.js.
+      // Swap content.
+      // NOTE: Video players break via display:none, thus custom function.
+      $curtain.slideHeight('up', customAnimation);
       $target.slideHeight('down', customAnimation);
-
-      $curtain.slideUp(customAnimation);
 
       if (media == "video") {
         var videoObj = $target.find('.reveal-video--brightcove')[0],
@@ -132,9 +131,9 @@
         $trigger.text(showText);
       }
 
+      // Swap content.
       $target.slideHeight('up', settings.animation);
-
-      $curtain.slideDown(settings.animation);
+      $curtain.slideHeight('down', settings.animation);
 
       if (media == "video") {
         var player = videojs($target.find('.reveal-video--brightcove')[0]);
