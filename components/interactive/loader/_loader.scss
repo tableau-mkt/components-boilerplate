@@ -12,9 +12,7 @@ Style Guide: interactive.loader
 
 .loader {
   .loader__animation {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
+    @extend .inline-centered;
     width: 24px;
     height: 24px;
     background: url('../images/interactive/loader/loader.gif') no-repeat center center;
@@ -22,10 +20,8 @@ Style Guide: interactive.loader
   }
 
   .loader__message {
+    @extend .inline-centered;
     @extend .text--label;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
     margin-left: 5px;
   }
 }

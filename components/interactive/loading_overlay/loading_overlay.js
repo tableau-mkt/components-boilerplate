@@ -25,15 +25,14 @@ Components.loadingOverlay = {};
   component.show = function ($element, message) {
     var message = message || 'Loading...',
         $overlay = $('<div class="loading-overlay">' +
-                   '<div class="loader">' +
-                   '<div class="loader__animation"></div>' +
-                   '<div class="loader__message">' + message + '</div>' +
-                   '</div>' +
-                   '</div>'),
-        $loader = $overlay.children('.loader'),
+          '<div class="loader">' +
+          '<div class="loader__animation"></div>' +
+          '<div class="loader__message">' + message + '</div>' +
+          '</div>' +
+          '</div>'),
         offsetY = getElementViewPortCenter($element);
 
-    $loader.css('top', offsetY);
+    $overlay.find('.loader').css('top', offsetY);
     $overlay.prependTo($element)
   };
 

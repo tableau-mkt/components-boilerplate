@@ -80,6 +80,13 @@ most common proportions for video players.
   margin-right: auto;
 }
 
+// Center an inline element.
+.inline-centered {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
 // Vertically aligns an element to the middle. Works well with display table-cell
 .vertical-align-middle {
   vertical-align: middle;
