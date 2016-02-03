@@ -10,6 +10,7 @@ set as data attributes:
 * `data-reveal-hide-text="[REVEAL HIDE TEXT]"` - (optional) - Text to swap into the trigger link while the reveal is in the open state.
 * `data-reveal-close-link="false"` - (optional) - Set this to disable the default close link within the reveal content container
 * `data-reveal-scroll="[trigger|target]"` - (optional) - Smooth-scroll to either the top of the trigger or the target element when the content is revealed.
+* `data-reveal-media="video"` - (optional) - Enable play/pause controle when opening/closing reveal content that contains a brightcove video.
 
 The <code>.reveal__content</code> container must have an <code>id</code>
 attribute that matches the <code>data-reveal-target</code>.

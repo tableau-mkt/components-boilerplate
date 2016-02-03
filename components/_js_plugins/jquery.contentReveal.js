@@ -82,7 +82,7 @@
       $curtain.slideUp(customAnimation);
 
       if (media == "video") {
-        var videoObj = $target.find('.reveal-video--brightcove')[0],
+        var videoObj = $target.find('.video-js')[0],
             player = videojs(videoObj);
 
         setTimeout(function() {
@@ -137,7 +137,7 @@
       $curtain.slideDown(settings.animation);
 
       if (media == "video") {
-        var player = videojs($target.find('.reveal-video--brightcove')[0]);
+        var player = videojs($target.find('.video-js')[0]);
         player.pause();
       }
 
