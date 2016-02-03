@@ -6,6 +6,7 @@
  *  API.
  *
  *  This function enforces "overflow: hidden" in order to work properly.
+ *  To hide the element by default, set "height: 0" in CSS as well.
  */
 
 (function ($) {
