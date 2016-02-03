@@ -30,7 +30,7 @@ Components.loadingOverlay = {};
                    '<div class="loader__message">' + message + '</div>' +
                    '</div>' +
                    '</div>'),
-        $loader = $('.loader'),
+        $loader = $overlay.children('.loader'),
         offsetY = getElementViewPortCenter($element);
 
     $loader.css('top', offsetY);
@@ -55,7 +55,7 @@ Components.loadingOverlay = {};
    *  y position
    */
   function getElementViewPortCenter($element) {
-    var scrollTop = $(this).scrollTop(),
+    var scrollTop = $(window).scrollTop(),
         scrollBot = scrollTop + $(window).height(),
         elHeight = $element.outerHeight(),
         elTop = $element.offset().top,
