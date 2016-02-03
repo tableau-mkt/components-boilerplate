@@ -13,17 +13,30 @@ Style guide: compound.hero
 */
 
 .hero {
-  @extend .bg-cover;
-  padding: 4em 0;
+  background-size: cover;
+  background-position: center;
+  padding: 3em 0;
   background-color: $bg-light-gray-1;
   text-align: center;
 
   .hero__eyebrow {
     @extend .text--label;
+    margin: 0 0 2em 0;
+  }
+
+  h1,
+  .hero__title {
     margin: 0;
   }
 
-  @include breakpoint($mobile-only) {
-    padding: 2em 0;
+  .hero__subtitle {
+    margin-bottom: 0;
   }
+
+  .hero__extra-content {
+    margin-top: 2em;
+    // Reset text alignment in case more complex markup/layout is used.
+    text-align: left;
+  }
+
 }

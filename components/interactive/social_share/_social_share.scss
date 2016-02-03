@@ -76,7 +76,7 @@ Style guide: interactive.social-share
     color: $text-dark-body;
     cursor: pointer;
     font-size: 1.2em;
-    
+
     &:hover {
       text-decoration: none;
     }
@@ -125,7 +125,8 @@ Style guide: interactive.social-share
   }
 }
 
-.text--centered {
+.text--centered,
+.hero {
   .social-share__widgets {
     left: 50%;
     transform: translate(-50%, 0%);
