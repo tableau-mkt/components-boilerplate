@@ -22,8 +22,8 @@
       "description": "Default Dark Body"
     },{
       "name": "$text-link",
-      "hex": "#eb912c",
-      "rgb": "rgb(235, 145, 44)",
+      "hex": "#e8762c",
+      "rgb": "rgb(232, 118, 44)",
       "description": "Link Orange"
     },{
       "name": "$text-headlines",
