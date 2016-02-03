@@ -107,3 +107,27 @@ Components.utils.breakpoint = function (layout) {
       return false;
   }
 };
+
+/**
+ * Helper function to get the element's viewport center.
+ * @param $element
+ *
+ * @returns string
+ *  y position
+ */
+Components.utils.getElementViewPortCenter = function ($element) {
+  var scrollTop = $(window).scrollTop(),
+    scrollBot = scrollTop + $(window).height(),
+    elHeight = $element.outerHeight(),
+    elTop = $element.offset().top,
+    elBottom = elTop + elHeight,
+    elTopOffset = elTop < scrollTop ? scrollTop - elTop : 0,
+    elBottomOffset = elBottom > scrollBot ? scrollBot - elTop : elHeight;
+
+  // Return 50% if entire element is visible.
+  if (elTopOffset === 0 && elBottomOffset === elHeight) {
+    return '50%';
+  }
+
+  return Math.round(elTopOffset + ((elBottomOffset - elTopOffset) / 2)) + 'px';
+}

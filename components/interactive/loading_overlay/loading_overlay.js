@@ -30,7 +30,7 @@ Components.loadingOverlay = {};
           '<div class="loader__message">' + message + '</div>' +
           '</div>' +
           '</div>'),
-        offsetY = getElementViewPortCenter($element);
+        offsetY = Components.utils.getElementViewPortCenter($element);
 
     $overlay.find('.loader').css('top', offsetY);
     $overlay.prependTo($element)
@@ -45,29 +45,5 @@ Components.loadingOverlay = {};
   component.hide = function ($element) {
     $element.find('.loading-overlay').remove();
   };
-
-  /**
-   * Helper function to get the element's viewport center.
-   * @param $element
-   *
-   * @returns string
-   *  y position
-   */
-  function getElementViewPortCenter($element) {
-    var scrollTop = $(window).scrollTop(),
-        scrollBot = scrollTop + $(window).height(),
-        elHeight = $element.outerHeight(),
-        elTop = $element.offset().top,
-        elBottom = elTop + elHeight,
-        elTopOffset = elTop < scrollTop ? scrollTop - elTop : 0,
-        elBottomOffset = elBottom > scrollBot ? scrollBot - elTop : elHeight;
-
-    // Return 50% if entire element is visible.
-    if (elTopOffset === 0 && elBottomOffset === elHeight) {
-      return '50%';
-    }
-
-    return Math.round(elTopOffset + ((elBottomOffset - elTopOffset) / 2)) + 'px';
-  }
 
 }(Components.loadingOverlay, jQuery));

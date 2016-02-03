@@ -35,8 +35,6 @@ Style Guide: interactive.loading-overlay
   .loader__message {
     @extend .text--label;
     display: block;
-    font-size: em(32px);
-    font-weight: bold;
     margin-top: 0.5em;
     margin-left: 0;
   }
