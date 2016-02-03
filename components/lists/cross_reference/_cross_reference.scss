@@ -60,8 +60,11 @@ Style guide: lists.cross-reference-2
 */
 
 .cross-reference-2 {
-  .cross-reference-2__title {
-    margin-top: 0;
+
+  .cross-reference-2__image .icon {
+    font-size: 4em;
+    color: $text-light-body;
+    text-decoration: none;
   }
 
   @include breakpoint($desktop-only) {
@@ -72,20 +75,19 @@ Style guide: lists.cross-reference-2
     }
 
     .cross-reference-2__image {
-      width: 140px;
-      margin-right: -140px;
+      width: 80px;
+      margin-right: -80px;
       line-height: 0;
-      text-align: right;
-
-      .icon {
-        font-size: 3.5em;
-        color: $text-light-body;
-      }
+      text-align: center;
     }
 
     .cross-reference-2__copy {
-      margin-left: 140px;
+      margin-left: 80px;
       padding-left: gutter() * 2;
+    }
+
+    .cross-reference-2__title {
+      margin-top: 0;
     }
 
     .cross-reference-2__link {
@@ -94,15 +96,9 @@ Style guide: lists.cross-reference-2
   }
 
   @include breakpoint($tablet-min) {
-    .cross-reference-2__item {
-      &:first-child {
-        padding-right: gutter();
-        border-right: 1px solid $accent-dividers;
-      }
-
-      &:last-child {
-        padding-left: gutter();
-      }
+    .cross-reference-2__item:last-child {
+      border-left: 1px solid $accent-dividers;
+      padding-left: gutter();
     }
   }
 
