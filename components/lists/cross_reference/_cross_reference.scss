@@ -15,6 +15,12 @@ Style guide: lists.cross-reference-1
     margin-top: 0;
   }
 
+  .cross-reference-1__image .icon {
+    font-size: 4em;
+    color: $text-light-body;
+    text-decoration: none;
+  }
+
   @include breakpoint($tablet-min) {
     @include span(10);
     @include pre(1);
@@ -133,6 +139,12 @@ Style guide: lists.cross-reference-3
 */
 
 .cross-reference-3 {
+  @include breakpoint($desktop-only) {
+    .cross-reference-3__items {
+      margin-top: 2.7em;
+    }
+  }
+
   @include breakpoint($tablet-only) {
     .cross-reference-3__title {
       text-align: center;
@@ -148,6 +160,7 @@ Style guide: lists.cross-reference-3
       width: 100%;
       margin-left: 0;
     }
+
   }
 
   @include breakpoint($tablet-max) {
