@@ -29,3 +29,12 @@ Style Guide: interactive.loader
     margin-left: 5px;
   }
 }
+
+.loader--search-ajax {
+  .loader__animation {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 20px;
+  }
+}
