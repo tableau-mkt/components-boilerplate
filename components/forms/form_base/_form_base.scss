@@ -129,6 +129,11 @@ Style guide: forms.fields
   .form-field__description {
     margin-top: 0.25em;
     font-size: em(14px); // Same size as .text--body-small
+
+    // Remove margin-top when empty.
+    &:empty {
+      margin-top: 0;
+    }
   }
 
   &.form-field--invalid .form-field__label,

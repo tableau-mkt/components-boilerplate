@@ -114,4 +114,19 @@ Style guide: forms.contextual-search
       text-decoration: none;
     }
   }
+
+  .contextual-search__loader {
+    display: none;
+  }
+
+  &.is-ajaxing {
+    .contextual-search__loader {
+      display: block;
+    }
+
+    .content-search__submit,
+    .content-search__reset {
+      display: none;
+    }
+  }
 }
