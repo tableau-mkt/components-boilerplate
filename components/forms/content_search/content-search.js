@@ -19,7 +19,7 @@ Components.contentSearch = {};
    *   jQuery
    */
   component.ready = function ($) {
-    // Set up all the section search components on the page.
+    // Initialize content search components, excluding contextual search.
     $('.content-search').not('.contextual-search').each(function () {
       component.initialize($(this));
     });
