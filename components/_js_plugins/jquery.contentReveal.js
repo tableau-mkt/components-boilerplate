@@ -7,6 +7,7 @@
  * Options:
  *   triggers - Required - [jQuery Ojbect] - element(s) to be used as a trigger
  *   contents - Optional - [jQuery Object] - element(s) to use as content wrapper
+ *   closeLink - Optional - [boolean] - whether a close link should be added
  *   animation - Optional - [object] - animation settings for expanding/collapsing
  *
  * Usage:
@@ -22,6 +23,7 @@
     // Default settings
     var settings = $.extend({
       contents: $(this),
+      closeLink: true,
       animation: {
         duration: 1000,
         easing: "easeInOutQuart"
@@ -149,6 +151,11 @@
       // Add reveal-state data
       settings.triggers.data('revealState', 'closed');
 
+      // Add a close icon to each content continer
+      if (settings.closeLink) {
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
+      }
+
       settings.triggers.each(function(index, el) {
         var $trigger = $(this),
             $target = $('#' + $trigger.data('revealTarget')),
@@ -167,9 +174,9 @@
           settings.triggers.data('revealShowText', showText);
         }
 
-        // Disable close link if the data attribute is set to false.
-        if ($trigger.data('revealCloseLink') !== false) {
-          $target.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
+        // Remove close link if the data attribute is set to false.
+        if (settings.closeLink && $trigger.data('revealCloseLink') === false) {
+          $target.find('.reveal__close').remove();
         }
       });
 
