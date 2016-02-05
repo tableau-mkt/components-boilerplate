@@ -44,11 +44,6 @@ Style guide: compound.special-hero
     width: 100%;
   }
 
-  // If a video is present, hide the background image.
-  .special-hero__video + .special-hero__background {
-    height: 0;
-  }
-
   .special-hero__content {
     text-align: center;
   }
@@ -106,6 +101,11 @@ Style guide: compound.special-hero
       background-image: linear-gradient(to left, $bg-dark-gray-3, transparent);
       left: auto;
       right: 0;
+    }
+
+    // If a video is present, hide the background image.
+    .special-hero__video + .special-hero__background {
+      height: 0;
     }
   }
 

@@ -29,7 +29,7 @@
     // Auto-scroll and expand accordions when linked to with a hash
     var hash = window.location.hash;
     if ($(hash).length && $(hash).closest('.accordion__item').length) {
-      $(hash).siblings('.accordion__title').trigger('click');
+      $(hash).parents('.accordion__title-wrapper').trigger('click');
     }
   });
 })(jQuery);
