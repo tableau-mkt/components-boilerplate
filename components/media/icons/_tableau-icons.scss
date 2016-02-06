@@ -42,6 +42,7 @@ Markup: icon.hbs
 .icon--calculations-library - calculations-library icon
 .icon--calendar - calendar icon
 .icon--certification - certification icon
+.icon--change-management - change-management icon
 .icon--chevron-down-style2 - chevron-down-style2 icon
 .icon--chevron-down - chevron-down icon
 .icon--chevron-left-style2 - chevron-left-style2 icon
@@ -57,16 +58,18 @@ Markup: icon.hbs
 .icon--collaborate - collaborate icon
 .icon--community - community icon
 .icon--contact-us - contact-us icon
+.icon--customer-success - customer-success icon
 .icon--dashboard - dashboard icon
+.icon--data-blending - data-blending icon
 .icon--data-governance - data-governance icon
 .icon--deep-statistics - deep-statistics icon
 .icon--discussion - discussion icon
 .icon--download - download icon
+.icon--elite-account-management - elite-account-management icon
 .icon--email - email icon
 .icon--embedded-analytics - embedded-analytics icon
 .icon--export - export icon
 .icon--fast - fast icon
-.icon--featured-viz - featured-viz icon
 .icon--find-training - find-training icon
 .icon--folder - folder icon
 .icon--forums - forums icon
@@ -78,6 +81,7 @@ Markup: icon.hbs
 .icon--link - link icon
 .icon--location-style2 - location-style2 icon
 .icon--location - location icon
+.icon--lower-risk - lower-risk icon
 .icon--metadata - metadata icon
 .icon--mobile-menu - mobile-menu icon
 .icon--mobile - mobile icon
@@ -89,6 +93,7 @@ Markup: icon.hbs
 .icon--people - people icon
 .icon--play-button - play-button icon
 .icon--poll - poll icon
+.icon--proven-roadmap - proven-roadmap icon
 .icon--query-without-code - query-without-code icon
 .icon--quickstart-guide - quickstart-guide icon
 .icon--quotes-closed-style2 - quotes-closed-style2 icon
@@ -116,6 +121,8 @@ Markup: icon.hbs
 .icon--solutions - solutions icon
 .icon--space - space icon
 .icon--subscriptions - subscriptions icon
+.icon--support-faq - support-faq icon
+.icon--support-services - support-services icon
 .icon--tableau-desktop - tableau-desktop icon
 .icon--tableau-logo - tableau-logo icon
 .icon--tableau-online - tableau-online icon
@@ -131,6 +138,7 @@ Markup: icon.hbs
 .icon--user-groups - user-groups icon
 .icon--view-less - view-less icon
 .icon--view-more - view-more icon
+.icon--whitepaper - whitepaper icon
 .icon--wikis - wikis icon
 .icon--windows - windows icon
 .icon--workbook-library - workbook-library icon
@@ -143,10 +151,10 @@ Style Guide: media.icons
 
 @font-face {
   font-family:"tableau-icons";
-  src:url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.eot?01b2bf680b0fc5ebcca63ae4cad29b85");
-  src:url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.woff?01b2bf680b0fc5ebcca63ae4cad29b85") format("woff"),
-		url("../fonts/tableau-icons-01b2bf680b0fc5ebcca63ae4cad29b85.ttf?01b2bf680b0fc5ebcca63ae4cad29b85") format("truetype");
+  src:url("../fonts/tableau-icons-4b8a36793ed5088f11c6f0a5a7ffbcc8.eot?4b8a36793ed5088f11c6f0a5a7ffbcc8");
+  src:url("../fonts/tableau-icons-4b8a36793ed5088f11c6f0a5a7ffbcc8.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tableau-icons-4b8a36793ed5088f11c6f0a5a7ffbcc8.woff?4b8a36793ed5088f11c6f0a5a7ffbcc8") format("woff"),
+		url("../fonts/tableau-icons-4b8a36793ed5088f11c6f0a5a7ffbcc8.ttf?4b8a36793ed5088f11c6f0a5a7ffbcc8") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -381,659 +389,715 @@ $icon--certification: "\f11e";
 
 
 
-.icon--chevron-down-style2:before {
+.icon--change-management:before {
   content:"\f11f";
 }
-$icon--chevron-down-style2: "\f11f";
+$icon--change-management: "\f11f";
+
+
+
+.icon--chevron-down-style2:before {
+  content:"\f120";
+}
+$icon--chevron-down-style2: "\f120";
 
 
 
 .icon--chevron-down:before {
-  content:"\f120";
+  content:"\f121";
 }
-$icon--chevron-down: "\f120";
+$icon--chevron-down: "\f121";
 
 
 
 .icon--chevron-left-style2:before {
-  content:"\f121";
+  content:"\f122";
 }
-$icon--chevron-left-style2: "\f121";
+$icon--chevron-left-style2: "\f122";
 
 
 
 .icon--chevron-left:before {
-  content:"\f122";
+  content:"\f123";
 }
-$icon--chevron-left: "\f122";
+$icon--chevron-left: "\f123";
 
 
 
 .icon--chevron-right-style2:before {
-  content:"\f123";
+  content:"\f124";
 }
-$icon--chevron-right-style2: "\f123";
+$icon--chevron-right-style2: "\f124";
 
 
 
 .icon--chevron-right:before {
-  content:"\f124";
+  content:"\f125";
 }
-$icon--chevron-right: "\f124";
+$icon--chevron-right: "\f125";
 
 
 
 .icon--chevron-up-style2:before {
-  content:"\f125";
+  content:"\f126";
 }
-$icon--chevron-up-style2: "\f125";
+$icon--chevron-up-style2: "\f126";
 
 
 
 .icon--chevron-up:before {
-  content:"\f126";
+  content:"\f127";
 }
-$icon--chevron-up: "\f126";
+$icon--chevron-up: "\f127";
 
 
 
 .icon--classroom:before {
-  content:"\f127";
+  content:"\f128";
 }
-$icon--classroom: "\f127";
+$icon--classroom: "\f128";
 
 
 
 .icon--clock:before {
-  content:"\f128";
+  content:"\f129";
 }
-$icon--clock: "\f128";
+$icon--clock: "\f129";
 
 
 
 .icon--close-window-style2:before {
-  content:"\f129";
+  content:"\f12a";
 }
-$icon--close-window-style2: "\f129";
+$icon--close-window-style2: "\f12a";
 
 
 
 .icon--close-window:before {
-  content:"\f12a";
+  content:"\f12b";
 }
-$icon--close-window: "\f12a";
+$icon--close-window: "\f12b";
 
 
 
 .icon--collaborate:before {
-  content:"\f12b";
+  content:"\f12c";
 }
-$icon--collaborate: "\f12b";
+$icon--collaborate: "\f12c";
 
 
 
 .icon--community:before {
-  content:"\f12c";
+  content:"\f12d";
 }
-$icon--community: "\f12c";
+$icon--community: "\f12d";
 
 
 
 .icon--contact-us:before {
-  content:"\f12d";
+  content:"\f12e";
 }
-$icon--contact-us: "\f12d";
+$icon--contact-us: "\f12e";
+
+
+
+.icon--customer-success:before {
+  content:"\f12f";
+}
+$icon--customer-success: "\f12f";
 
 
 
 .icon--dashboard:before {
-  content:"\f12e";
+  content:"\f130";
 }
-$icon--dashboard: "\f12e";
+$icon--dashboard: "\f130";
+
+
+
+.icon--data-blending:before {
+  content:"\f131";
+}
+$icon--data-blending: "\f131";
 
 
 
 .icon--data-governance:before {
-  content:"\f12f";
+  content:"\f132";
 }
-$icon--data-governance: "\f12f";
+$icon--data-governance: "\f132";
 
 
 
 .icon--deep-statistics:before {
-  content:"\f130";
+  content:"\f133";
 }
-$icon--deep-statistics: "\f130";
+$icon--deep-statistics: "\f133";
 
 
 
 .icon--discussion:before {
-  content:"\f131";
+  content:"\f134";
 }
-$icon--discussion: "\f131";
+$icon--discussion: "\f134";
 
 
 
 .icon--download:before {
-  content:"\f132";
+  content:"\f135";
 }
-$icon--download: "\f132";
+$icon--download: "\f135";
+
+
+
+.icon--elite-account-management:before {
+  content:"\f136";
+}
+$icon--elite-account-management: "\f136";
 
 
 
 .icon--email:before {
-  content:"\f133";
+  content:"\f137";
 }
-$icon--email: "\f133";
+$icon--email: "\f137";
 
 
 
 .icon--embedded-analytics:before {
-  content:"\f134";
+  content:"\f138";
 }
-$icon--embedded-analytics: "\f134";
+$icon--embedded-analytics: "\f138";
 
 
 
 .icon--export:before {
-  content:"\f135";
+  content:"\f139";
 }
-$icon--export: "\f135";
+$icon--export: "\f139";
 
 
 
 .icon--fast:before {
-  content:"\f136";
+  content:"\f13a";
 }
-$icon--fast: "\f136";
-
-
-
-.icon--featured-viz:before {
-  content:"\f137";
-}
-$icon--featured-viz: "\f137";
+$icon--fast: "\f13a";
 
 
 
 .icon--find-training:before {
-  content:"\f138";
+  content:"\f13b";
 }
-$icon--find-training: "\f138";
+$icon--find-training: "\f13b";
 
 
 
 .icon--folder:before {
-  content:"\f139";
+  content:"\f13c";
 }
-$icon--folder: "\f139";
+$icon--folder: "\f13c";
 
 
 
 .icon--forums:before {
-  content:"\f13a";
+  content:"\f13d";
 }
-$icon--forums: "\f13a";
+$icon--forums: "\f13d";
 
 
 
 .icon--globe:before {
-  content:"\f13b";
+  content:"\f13e";
 }
-$icon--globe: "\f13b";
+$icon--globe: "\f13e";
 
 
 
 .icon--ideas:before {
-  content:"\f13c";
+  content:"\f13f";
 }
-$icon--ideas: "\f13c";
+$icon--ideas: "\f13f";
 
 
 
 .icon--invite-people:before {
-  content:"\f13d";
+  content:"\f140";
 }
-$icon--invite-people: "\f13d";
+$icon--invite-people: "\f140";
 
 
 
 .icon--knowledge-base:before {
-  content:"\f13e";
+  content:"\f141";
 }
-$icon--knowledge-base: "\f13e";
+$icon--knowledge-base: "\f141";
 
 
 
 .icon--like:before {
-  content:"\f13f";
+  content:"\f142";
 }
-$icon--like: "\f13f";
+$icon--like: "\f142";
 
 
 
 .icon--link:before {
-  content:"\f140";
+  content:"\f143";
 }
-$icon--link: "\f140";
+$icon--link: "\f143";
 
 
 
 .icon--location-style2:before {
-  content:"\f141";
+  content:"\f144";
 }
-$icon--location-style2: "\f141";
+$icon--location-style2: "\f144";
 
 
 
 .icon--location:before {
-  content:"\f142";
+  content:"\f145";
 }
-$icon--location: "\f142";
+$icon--location: "\f145";
+
+
+
+.icon--lower-risk:before {
+  content:"\f146";
+}
+$icon--lower-risk: "\f146";
 
 
 
 .icon--metadata:before {
-  content:"\f143";
+  content:"\f147";
 }
-$icon--metadata: "\f143";
+$icon--metadata: "\f147";
 
 
 
 .icon--mobile-menu:before {
-  content:"\f144";
+  content:"\f148";
 }
-$icon--mobile-menu: "\f144";
+$icon--mobile-menu: "\f148";
 
 
 
 .icon--mobile:before {
-  content:"\f145";
+  content:"\f149";
 }
-$icon--mobile: "\f145";
+$icon--mobile: "\f149";
 
 
 
 .icon--newsletter:before {
-  content:"\f146";
+  content:"\f14a";
 }
-$icon--newsletter: "\f146";
+$icon--newsletter: "\f14a";
 
 
 
 .icon--nic-cage:before {
-  content:"\f147";
+  content:"\f14b";
 }
-$icon--nic-cage: "\f147";
+$icon--nic-cage: "\f14b";
 
 
 
 .icon--oem:before {
-  content:"\f148";
+  content:"\f14c";
 }
-$icon--oem: "\f148";
+$icon--oem: "\f14c";
 
 
 
 .icon--offline-snapshots:before {
-  content:"\f149";
+  content:"\f14d";
 }
-$icon--offline-snapshots: "\f149";
+$icon--offline-snapshots: "\f14d";
 
 
 
 .icon--online-classes:before {
-  content:"\f14a";
+  content:"\f14e";
 }
-$icon--online-classes: "\f14a";
+$icon--online-classes: "\f14e";
 
 
 
 .icon--people:before {
-  content:"\f14b";
+  content:"\f14f";
 }
-$icon--people: "\f14b";
+$icon--people: "\f14f";
 
 
 
 .icon--play-button:before {
-  content:"\f14c";
+  content:"\f150";
 }
-$icon--play-button: "\f14c";
+$icon--play-button: "\f150";
 
 
 
 .icon--poll:before {
-  content:"\f14d";
+  content:"\f151";
 }
-$icon--poll: "\f14d";
+$icon--poll: "\f151";
+
+
+
+.icon--proven-roadmap:before {
+  content:"\f152";
+}
+$icon--proven-roadmap: "\f152";
 
 
 
 .icon--query-without-code:before {
-  content:"\f14e";
+  content:"\f153";
 }
-$icon--query-without-code: "\f14e";
+$icon--query-without-code: "\f153";
 
 
 
 .icon--quickstart-guide:before {
-  content:"\f14f";
+  content:"\f154";
 }
-$icon--quickstart-guide: "\f14f";
+$icon--quickstart-guide: "\f154";
 
 
 
 .icon--quotes-closed-style2:before {
-  content:"\f150";
+  content:"\f155";
 }
-$icon--quotes-closed-style2: "\f150";
+$icon--quotes-closed-style2: "\f155";
 
 
 
 .icon--quotes-closed:before {
-  content:"\f151";
+  content:"\f156";
 }
-$icon--quotes-closed: "\f151";
+$icon--quotes-closed: "\f156";
 
 
 
 .icon--quotes-open-style2:before {
-  content:"\f152";
+  content:"\f157";
 }
-$icon--quotes-open-style2: "\f152";
+$icon--quotes-open-style2: "\f157";
 
 
 
 .icon--quotes-open:before {
-  content:"\f153";
+  content:"\f158";
 }
-$icon--quotes-open: "\f153";
+$icon--quotes-open: "\f158";
 
 
 
 .icon--report-abuse:before {
-  content:"\f154";
+  content:"\f159";
 }
-$icon--report-abuse: "\f154";
+$icon--report-abuse: "\f159";
 
 
 
 .icon--reseller:before {
-  content:"\f155";
+  content:"\f15a";
 }
-$icon--reseller: "\f155";
+$icon--reseller: "\f15a";
 
 
 
 .icon--results-up:before {
-  content:"\f156";
+  content:"\f15b";
 }
-$icon--results-up: "\f156";
+$icon--results-up: "\f15b";
 
 
 
 .icon--scalable:before {
-  content:"\f157";
+  content:"\f15c";
 }
-$icon--scalable: "\f157";
+$icon--scalable: "\f15c";
 
 
 
 .icon--search:before {
-  content:"\f158";
+  content:"\f15d";
 }
-$icon--search: "\f158";
+$icon--search: "\f15d";
 
 
 
 .icon--security:before {
-  content:"\f159";
+  content:"\f15e";
 }
-$icon--security: "\f159";
+$icon--security: "\f15e";
 
 
 
 .icon--self-suffiency:before {
-  content:"\f15a";
+  content:"\f15f";
 }
-$icon--self-suffiency: "\f15a";
+$icon--self-suffiency: "\f15f";
 
 
 
 .icon--server-admin:before {
-  content:"\f15b";
+  content:"\f160";
 }
-$icon--server-admin: "\f15b";
+$icon--server-admin: "\f160";
 
 
 
 .icon--settings:before {
-  content:"\f15c";
+  content:"\f161";
 }
-$icon--settings: "\f15c";
+$icon--settings: "\f161";
 
 
 
 .icon--share-secure:before {
-  content:"\f15d";
+  content:"\f162";
 }
-$icon--share-secure: "\f15d";
+$icon--share-secure: "\f162";
 
 
 
 .icon--share-style2:before {
-  content:"\f15e";
+  content:"\f163";
 }
-$icon--share-style2: "\f15e";
+$icon--share-style2: "\f163";
 
 
 
 .icon--share:before {
-  content:"\f15f";
+  content:"\f164";
 }
-$icon--share: "\f15f";
+$icon--share: "\f164";
 
 
 
 .icon--social-facebook:before {
-  content:"\f160";
+  content:"\f165";
 }
-$icon--social-facebook: "\f160";
+$icon--social-facebook: "\f165";
 
 
 
 .icon--social-gplus:before {
-  content:"\f161";
+  content:"\f166";
 }
-$icon--social-gplus: "\f161";
+$icon--social-gplus: "\f166";
 
 
 
 .icon--social-instagram:before {
-  content:"\f162";
+  content:"\f167";
 }
-$icon--social-instagram: "\f162";
+$icon--social-instagram: "\f167";
 
 
 
 .icon--social-linkedin:before {
-  content:"\f163";
+  content:"\f168";
 }
-$icon--social-linkedin: "\f163";
+$icon--social-linkedin: "\f168";
 
 
 
 .icon--social-rss:before {
-  content:"\f164";
+  content:"\f169";
 }
-$icon--social-rss: "\f164";
+$icon--social-rss: "\f169";
 
 
 
 .icon--social-twitter:before {
-  content:"\f165";
+  content:"\f16a";
 }
-$icon--social-twitter: "\f165";
+$icon--social-twitter: "\f16a";
 
 
 
 .icon--solutions:before {
-  content:"\f166";
+  content:"\f16b";
 }
-$icon--solutions: "\f166";
+$icon--solutions: "\f16b";
 
 
 
 .icon--space:before {
-  content:"\f167";
+  content:"\f16c";
 }
-$icon--space: "\f167";
+$icon--space: "\f16c";
 
 
 
 .icon--subscriptions:before {
-  content:"\f168";
+  content:"\f16d";
 }
-$icon--subscriptions: "\f168";
+$icon--subscriptions: "\f16d";
+
+
+
+.icon--support-faq:before {
+  content:"\f16e";
+}
+$icon--support-faq: "\f16e";
+
+
+
+.icon--support-services:before {
+  content:"\f16f";
+}
+$icon--support-services: "\f16f";
 
 
 
 .icon--tableau-desktop:before {
-  content:"\f169";
+  content:"\f170";
 }
-$icon--tableau-desktop: "\f169";
+$icon--tableau-desktop: "\f170";
 
 
 
 .icon--tableau-logo:before {
-  content:"\f16a";
+  content:"\f171";
 }
-$icon--tableau-logo: "\f16a";
+$icon--tableau-logo: "\f171";
 
 
 
 .icon--tableau-online:before {
-  content:"\f16b";
+  content:"\f172";
 }
-$icon--tableau-online: "\f16b";
+$icon--tableau-online: "\f172";
 
 
 
 .icon--tableau-public:before {
-  content:"\f16c";
+  content:"\f173";
 }
-$icon--tableau-public: "\f16c";
+$icon--tableau-public: "\f173";
 
 
 
 .icon--tableau-reader:before {
-  content:"\f16d";
+  content:"\f174";
 }
-$icon--tableau-reader: "\f16d";
+$icon--tableau-reader: "\f174";
 
 
 
 .icon--tableau-server:before {
-  content:"\f16e";
+  content:"\f175";
 }
-$icon--tableau-server: "\f16e";
+$icon--tableau-server: "\f175";
 
 
 
 .icon--tailor-content:before {
-  content:"\f16f";
+  content:"\f176";
 }
-$icon--tailor-content: "\f16f";
+$icon--tailor-content: "\f176";
 
 
 
 .icon--talk-bubble:before {
-  content:"\f170";
+  content:"\f177";
 }
-$icon--talk-bubble: "\f170";
+$icon--talk-bubble: "\f177";
 
 
 
 .icon--technology:before {
-  content:"\f171";
+  content:"\f178";
 }
-$icon--technology: "\f171";
+$icon--technology: "\f178";
 
 
 
 .icon--unanswered:before {
-  content:"\f172";
+  content:"\f179";
 }
-$icon--unanswered: "\f172";
+$icon--unanswered: "\f179";
 
 
 
 .icon--up-to-date:before {
-  content:"\f173";
+  content:"\f17a";
 }
-$icon--up-to-date: "\f173";
+$icon--up-to-date: "\f17a";
 
 
 
 .icon--upload:before {
-  content:"\f174";
+  content:"\f17b";
 }
-$icon--upload: "\f174";
+$icon--upload: "\f17b";
 
 
 
 .icon--user-groups:before {
-  content:"\f175";
+  content:"\f17c";
 }
-$icon--user-groups: "\f175";
+$icon--user-groups: "\f17c";
 
 
 
 .icon--view-less:before {
-  content:"\f176";
+  content:"\f17d";
 }
-$icon--view-less: "\f176";
+$icon--view-less: "\f17d";
 
 
 
 .icon--view-more:before {
-  content:"\f177";
+  content:"\f17e";
 }
-$icon--view-more: "\f177";
+$icon--view-more: "\f17e";
+
+
+
+.icon--whitepaper:before {
+  content:"\f17f";
+}
+$icon--whitepaper: "\f17f";
 
 
 
 .icon--wikis:before {
-  content:"\f178";
+  content:"\f180";
 }
-$icon--wikis: "\f178";
+$icon--wikis: "\f180";
 
 
 
 .icon--windows:before {
-  content:"\f179";
+  content:"\f181";
 }
-$icon--windows: "\f179";
+$icon--windows: "\f181";
 
 
 
 .icon--workbook-library:before {
-  content:"\f17a";
+  content:"\f182";
 }
-$icon--workbook-library: "\f17a";
+$icon--workbook-library: "\f182";
 
 
 
 .icon--write:before {
-  content:"\f17b";
+  content:"\f183";
 }
-$icon--write: "\f17b";
+$icon--write: "\f183";
 
 
 
 .icon--youtube:before {
-  content:"\f17c";
+  content:"\f184";
 }
-$icon--youtube: "\f17c";
+$icon--youtube: "\f184";
 
