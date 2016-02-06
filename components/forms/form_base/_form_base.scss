@@ -324,8 +324,30 @@ Style guide: forms.fields-dark
 .form--negative {
   color: $text-negative;
 
+  // Reduces the contrast on dark backgrounds.
+  .form-field__control,
+  input[type="text"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    background: $bg-light-gray-2;
+  }
+
+  input::placeholder {
+    color: $medium-gray;
+  }
+
   .form__legend {
     color: $text-negative;
+
+    // Tweak color of the eyebrow.
+    &:before {
+      background: $gray;
+    }
   }
 
   // Use a bolder font for labels and description text.
