@@ -57,8 +57,8 @@
       // level link). But not on mobile displays since there's a different
       // interaction.
       $link.on('touchstart.global-nav', function (e) {
-        // Ignore if mobile breakpoint.
-        if (Components.utils.breakpoint('mobile')) {
+        // Ignore if not desktop breakpoint.
+        if (!Components.utils.breakpoint('desktop')) {
           return;
         }
         // If not already open, prevent following the link, and stop
