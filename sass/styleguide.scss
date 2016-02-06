@@ -1,5 +1,5 @@
-// Specifically for the styleguide, unwrap the tableau-icon font-face declaration,
-// because it doesn't work otherwise.
+// font-face first.
+@import "../components/fonts/fonts";
 @import "../components/media/icons/tableau-icons";
 
 // Otherwise, keep the component styles isolated to the preview container.
