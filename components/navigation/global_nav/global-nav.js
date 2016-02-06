@@ -54,8 +54,7 @@
 
       // Touch-only device interaction: first click (tap) opens the drawers.
       // Subsequent clicks follows UA default behavior (i.e. follows the top-
-      // level link). But not on mobile displays since there's a different
-      // interaction.
+      // level link). But, only on desktop menu style!
       $link.on('touchstart.global-nav', function (e) {
         // Ignore if not desktop breakpoint.
         if (!Components.utils.breakpoint('desktop')) {
