@@ -40,9 +40,7 @@ relative to the renamed folder rather than `/build/`.
 &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
 &lt;!-- Tableau Sparkle favicon --&gt;
 &lt;link rel="icon" href="/build/images/favicon.ico" type="image/x-icon" /&gt;
-&lt;!-- Web Fonts - New domains will need to be requested to be whitelisted --&gt;
-&lt;link href="//cloud.webtype.com/css/22656ecb-3391-46f0-80ba-dce1b9624199.css" rel="stylesheet" type="text/css" /&gt;
-&lt;link href='//fonts.googleapis.com/css?family=Merriweather:300italic,300,700,700italic' rel='stylesheet' type='text/css'&gt;</code></pre>
+</code></pre>
 </div>
 
 
