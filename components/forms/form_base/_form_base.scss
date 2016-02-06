@@ -322,7 +322,7 @@ Style guide: forms.fields-dark
 */
 
 .form--negative {
-  color: $text-negative;
+  color: $bg-light-gray-2;
 
   // Reduces the contrast on dark backgrounds.
   .form-field__control,
