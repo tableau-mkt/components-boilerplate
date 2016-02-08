@@ -55,7 +55,7 @@ module.exports = (grunt) ->
           'sass/imports/_componentsMap.scss': [
             'components/**/*.scss',
             '!components/media/icons/_tableau-icons.scss',
-            '!components/fonts/*.scss'
+            '!components/typography/fonts/_font-face.scss'
           ]
 
     sass:
