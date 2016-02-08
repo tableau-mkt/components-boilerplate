@@ -34,6 +34,7 @@ Components.topicNav.init = function ($) {
     if ($(this).data('revealState') === 'open') {
       $parentNav.find('.topic-nav__tabs a').eq(0).trigger('click').addClass('is-active');
 
+      // @todo Change out the setTimeout
       // Wrapped in a setTimeout because an instant toggle means drawer content can show up and
       // overlap content on lower z-index before the animation completes.
       setTimeout(function () {
@@ -53,6 +54,7 @@ Components.topicNav.init = function ($) {
     if ($toggle.data('revealState') === 'closed') {
       $toggle.trigger('click.reveal');
 
+      // @todo Change out the setTimeout
       setTimeout(function () {
         $drawersContainer.addClass('is-open');
       }, 1000);
