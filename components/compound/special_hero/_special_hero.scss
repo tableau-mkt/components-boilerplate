@@ -52,7 +52,13 @@ Style guide: compound.special-hero
     background-color: $bg-dark-gray-3;
     color: $text-negative;
 
-    h1, h4.heading--label {
+    // @todo could be better — perhaps a class could be used,
+    // like special-hero__copy.
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       color: $text-negative;
     }
 
