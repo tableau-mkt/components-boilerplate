@@ -20,15 +20,16 @@
 
 (function ($) {
   $.fn.contentReveal = function(options) {
-    // Default settings
-    var settings = $.extend({
-      contents: $(this),
-      closeLink: true,
-      animation: {
-        duration: 1000,
-        easing: "easeInOutQuart"
-      }
-    }, options);
+    var hasVideoJs = typeof window.videojs === 'function',
+        // Default settings
+        settings = $.extend({
+          contents: $(this),
+          closeLink: true,
+          animation: {
+            duration: 1000,
+            easing: "easeInOutQuart"
+          }
+        }, options);
 
     if (settings.triggers) {
       // Run setup
@@ -66,7 +67,8 @@
           scrollBehavior = data.revealScroll,
           $scrollTarget,
           scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
-          expandToggle = data.revealExpandToggle;
+          expandToggle = data.revealExpandToggle,
+          $videoJs = $target.find('.video-js');
 
       customAnimation = customAnimation || settings.animation;
 
@@ -80,12 +82,15 @@
       $curtain.slideHeight('up', customAnimation);
       $target.slideHeight('down', customAnimation);
 
-      if (media == "video") {
-        var videoObj = $target.find('.video-js')[0],
-            player = videojs(videoObj);
+      if (media === 'video') {
+        // Bail unless videojs is available and this is a videojs embedded video.
+        if (!hasVideoJs || !$videoJs.length) {
+          return;
+        }
 
-        setTimeout(function() {
-          player.play();
+        setTimeout(function () {
+          // Get videojs instance and play the video.
+          videojs($videoJs[0]).play();
         }, customAnimation.duration/2);
       }
 
@@ -123,7 +128,9 @@
           $curtain = $('#' + data.revealCurtain),
           showText = data.revealShowText,
           media = data.revealMedia,
-          expandToggle = data.revealExpandToggle;
+          expandToggle = data.revealExpandToggle,
+          $videoJs = $target.find('.video-js'),
+          player;
 
       $trigger.data('revealState', 'closed').removeClass('is-open');
 
@@ -135,9 +142,14 @@
       $target.slideHeight('up', settings.animation);
       $curtain.slideHeight('down', settings.animation);
 
-      if (media == "video") {
-        var player = videojs($target.find('.video-js')[0]);
-        player.pause();
+      if (media === 'video') {
+        // Bail unless videojs is available and this is a videojs embedded video.
+        if (!hasVideoJs || !$videoJs.length) {
+          return;
+        }
+
+        // Get videojs instance and pause the video.
+        videojs($videoJs[0]).pause();
       }
 
       // Special expand icon handling
