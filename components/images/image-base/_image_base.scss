@@ -1,0 +1,27 @@
+/*
+Image base styles
+
+Basic styles for images.
+
+**@TODO** Rework the current "Image" component to be more specific to image
+captions and handle basic image styles here.
+
+Markup: image-base.hbs
+
+.image--accent - Image accented with a keyline and glow.
+
+Style guide: images.image-base
+*/
+
+img,
+.image {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+
+  &.image--accent {
+    border: 1px solid $accent-dividers;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+}
