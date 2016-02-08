@@ -22,11 +22,11 @@
         offset: $subnav.outerHeight(true)
       });
 
-      // Handle scrolling of links on mobile
+      // Handle scrolling of links on mobile if they are present.
       if ($linksWrapper.length) {
         mobileScroll();
+        $(window).on('resize orientationchange', _.debounce(mobileScroll, 100));
       }
-      $(window).on('resize orientationchange', _.debounce(mobileScroll, 100));
 
       // Smooth Scroll for anchor links
       // @TODO generalize and separate from this component

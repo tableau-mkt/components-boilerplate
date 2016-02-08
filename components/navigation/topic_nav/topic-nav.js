@@ -28,21 +28,36 @@ Components.topicNav.init = function ($) {
 
   // Custom tweaks
   $('.topic-nav__toggle').on('click.topic-nav', function (e) {
-    var $parentNav = $(this).closest('.topic-nav');
+    var $parentNav = $(this).closest('.topic-nav'),
+        $drawersContainer = $(this).closest('.topic-nav').find('.topic-nav__drawers');
 
     if ($(this).data('revealState') === 'open') {
       $parentNav.find('.topic-nav__tabs a').eq(0).trigger('click').addClass('is-active');
+
+      // @todo Change out the setTimeout
+      // Wrapped in a setTimeout because an instant toggle means drawer content can show up and
+      // overlap content on lower z-index before the animation completes.
+      setTimeout(function () {
+        $drawersContainer.addClass('is-open');
+      }, 1000);
     }
     else {
       $parentNav.find('.topic-nav__tabs a').removeClass('is-active');
+      $drawersContainer.removeClass('is-open');
     }
   });
 
   $('.topic-nav__tabs a').on('click.topic-nav', function (e) {
-    var $toggle = $(this).closest('.topic-nav').find('.topic-nav__toggle');
+    var $toggle = $(this).closest('.topic-nav').find('.topic-nav__toggle'),
+        $drawersContainer = $(this).closest('.topic-nav').find('.topic-nav__drawers');
 
     if ($toggle.data('revealState') === 'closed') {
       $toggle.trigger('click.reveal');
+
+      // @todo Change out the setTimeout
+      setTimeout(function () {
+        $drawersContainer.addClass('is-open');
+      }, 1000);
     }
   });
 
