@@ -19,7 +19,6 @@ Bgcolor: #F7F9FB
 .cta--secondary.cta--light - Light Secondary CTA button for use on dark backgrounds.
 .cta--secondary.cta--dark - Dark Secondary CTA button for use on light backgrounds.
 .cta--secondary.cta--arrow - Secondary CTA with arrow icon.
-.cta--disabled - Disabled CTA with lowered opacity.
 .cta--full-width - Full width CTA that fills the width of it's container.
 
 Style guide: buttons-links.cta
@@ -151,10 +150,6 @@ Style guide: buttons-links.cta
     @extend .icon;
     content: $icon--download;
     font-size: 1.5em;
-  }
-
-  &.cta--disabled {
-    @extend .disabled;
   }
 }
 
