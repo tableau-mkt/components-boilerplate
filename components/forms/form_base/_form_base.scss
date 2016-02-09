@@ -253,6 +253,14 @@ textarea {
   }
 }
 
+// Disabled fields.
+input[disabled="disabled"],
+button[disabled="disabled"],
+select[disabled="disabled"],
+textarea[disabled="disabled"] {
+  @extend .disabled;
+}
+
 // Reduce margins checkbox, radio form items.
 .form-field--checkbox,
 .form-field--radio {

@@ -173,6 +173,12 @@ most common proportions for video players.
   display: none;
 }
 
+// Fade opacity of disabled elements
+.disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
 // Set an element to an initially hidden state but to be revealed later.
 .reveal-hidden {
   @extend %reveal-hidden;
