@@ -93,8 +93,7 @@ Style guide: forms.content-search
     }
   }
 
-  // A variant with white search input background, when the component is placed
-  // in a section with color background.
+  // Variant for white input when placed in section with background.
   &.content-search--white {
     background: $bg-white;
   }
