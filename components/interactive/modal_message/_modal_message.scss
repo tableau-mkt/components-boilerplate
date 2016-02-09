@@ -46,7 +46,7 @@ Style guide: interactive.modal-message
     @extend .text--body-small;
     width: auto;
     overflow: hidden;
-    margin-top: 2em;
+    margin: 1em;
   }
 
   .modal-message__close:after {
@@ -67,6 +67,7 @@ Style guide: interactive.modal-message
       background-size: 32px;
       width: 32px;
       height: 32px;
+      margin-top: 1em;
     }
 
     .modal-message__content {
