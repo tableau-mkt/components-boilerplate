@@ -254,7 +254,8 @@ textarea {
 }
 
 // Disabled fields.
-input[disabled="disabled"],
+input[type="submit"][disabled="disabled"],
+input[type="button"][disabled="disabled"],
 button[disabled="disabled"] {
   @extend .disabled;
 }
