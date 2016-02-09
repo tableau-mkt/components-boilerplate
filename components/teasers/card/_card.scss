@@ -20,17 +20,9 @@ Style Guide: teasers.card
   .card__thumbnail {
     display: block;
     border-radius: 2px;
-    background: $bg-about-featured;
 
     img {
       width: 100%;
-      opacity: 0.6;
-      filter: grayscale(1);
-    }
-
-    &:hover img {
-      opacity: 1;
-      filter: grayscale(0);
     }
   }
 
