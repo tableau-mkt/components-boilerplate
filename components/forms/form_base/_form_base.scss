@@ -91,6 +91,7 @@ legend,
   }
 }
 
+
 /*
 Form Fields
 
@@ -128,6 +129,11 @@ Style guide: forms.fields
   .form-field__description {
     margin-top: 0.25em;
     font-size: em(14px); // Same size as .text--body-small
+
+    // Remove margin-top when empty.
+    &:empty {
+      margin-top: 0;
+    }
   }
 
   &.form-field--invalid .form-field__label,
@@ -247,6 +253,14 @@ textarea {
   }
 }
 
+// Disabled fields.
+input[disabled="disabled"],
+button[disabled="disabled"],
+select[disabled="disabled"],
+textarea[disabled="disabled"] {
+  @extend .disabled;
+}
+
 // Reduce margins checkbox, radio form items.
 .form-field--checkbox,
 .form-field--radio {
@@ -316,10 +330,32 @@ Style guide: forms.fields-dark
 */
 
 .form--negative {
-  color: $text-negative;
+  color: $bg-light-gray-2;
+
+  // Reduces the contrast on dark backgrounds.
+  .form-field__control,
+  input[type="text"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea {
+    background: $bg-light-gray-2;
+  }
+
+  input::placeholder {
+    color: $medium-gray;
+  }
 
   .form__legend {
     color: $text-negative;
+
+    // Tweak color of the eyebrow.
+    &:before {
+      background: $gray;
+    }
   }
 
   // Use a bolder font for labels and description text.
@@ -357,13 +393,49 @@ Style guide: forms.validation
 }
 
 /*
+Inline form elements.
+
+Form element that sits within lines of text content, currently only `<select>` elements.
+
+Weight: 3
+
+Style guide: forms.text-inline
+*/
+.form-field--text-inline {
+  display: inline-block;
+  margin: 0;
+
+  select {
+    display: inline-block;
+    margin: 0 0.25em;
+    padding: 0.25em 2em 0.25em 0.5em;
+    font-size: 1.5em;
+    color: $text-learning;
+  }
+
+  .form-field {
+    margin: 0;
+  }
+}
+
+@include breakpoint($mobile-only) {
+  .form-field--text-inline select {
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 1.25em;
+  }
+}
+
+
+/*
 Confirmation Messages
 
 Nothing to see here yet...
 
 Markup: form_confirmation.hbs
 
-Weight: 3
+Weight: 4
 
 Style guide: forms.confirmation
 */

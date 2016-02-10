@@ -75,14 +75,13 @@
         $trigger.text(hideText);
       }
 
-      // Video players break when we display none so using a custom reimplementation
-      // of slideDown. See helpers.js.
+      // Swap content.
+      // NOTE: Video players break via display:none, thus custom function.
+      $curtain.slideHeight('up', customAnimation);
       $target.slideHeight('down', customAnimation);
 
-      $curtain.slideUp(customAnimation);
-
       if (media == "video") {
-        var videoObj = $target.find('.reveal-video--brightcove')[0],
+        var videoObj = $target.find('.video-js')[0],
             player = videojs(videoObj);
 
         setTimeout(function() {
@@ -132,12 +131,12 @@
         $trigger.text(showText);
       }
 
+      // Swap content.
       $target.slideHeight('up', settings.animation);
-
-      $curtain.slideDown(settings.animation);
+      $curtain.slideHeight('down', settings.animation);
 
       if (media == "video") {
-        var player = videojs($target.find('.reveal-video--brightcove')[0]);
+        var player = videojs($target.find('.video-js')[0]);
         player.pause();
       }
 
@@ -151,6 +150,11 @@
     function setup() {
       // Add reveal-state data
       settings.triggers.data('revealState', 'closed');
+
+      // Add a close icon to each content continer
+      if (settings.closeLink) {
+        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
+      }
 
       settings.triggers.each(function(index, el) {
         var $trigger = $(this),
@@ -166,8 +170,13 @@
         }
 
         // Save original trigger text
-        if (typeof $trigger.data('revealHideText') !== undefined) {
+        if (typeof $trigger.data('revealHideText') !== 'undefined') {
           settings.triggers.data('revealShowText', showText);
+        }
+
+        // Remove close link if the data attribute is set to false.
+        if (settings.closeLink && $trigger.data('revealCloseLink') === false) {
+          $target.find('.reveal__close').remove();
         }
       });
 
@@ -183,11 +192,6 @@
       //     $(this).css('margin-top', -$curtain.outerHeight(true));
       //   }
       // });
-
-      // Add a close icon to each content continer
-      if (settings.closeLink) {
-        settings.contents.prepend($('<a href="#" class="reveal__close" href="#"><i class="icon icon--close-window-style2"></i></a>'));
-      }
     }
 
     function autoReveal() {

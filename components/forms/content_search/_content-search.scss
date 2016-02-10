@@ -83,6 +83,7 @@ Style guide: forms.content-search
   }
 
   /* when component is open */
+  &.is-populated,
   &.has-suggestion {
     .content-search__reset {
       display: block;
@@ -92,9 +93,12 @@ Style guide: forms.content-search
     }
   }
 
-  // A variant with white search input background, when the component is placed
-  // in a section with color background.
+  // Variant for white input when placed in section with background.
   &.content-search--white {
     background: $bg-white;
   }
+}
+
+.bg--light-gray-1 .content-search {
+  background: $bg-white;
 }

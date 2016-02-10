@@ -17,6 +17,8 @@ Markup: contextual-search.hbs
 
 Weight: 15
 
+.contextual-search--white - White input background variant for use on color backgrounds.
+
 Style guide: forms.contextual-search
 */
 
@@ -114,4 +116,30 @@ Style guide: forms.contextual-search
       text-decoration: none;
     }
   }
+
+  .contextual-search__loader {
+    display: none;
+  }
+
+  &.is-ajaxing {
+    .contextual-search__loader {
+      display: block;
+    }
+
+    .content-search__submit,
+    .content-search__reset {
+      display: none;
+    }
+  }
+
+  // Variant for white input when placed in section with background.
+  &.contextual-search--white {
+    .contextual-search__ui {
+      background: $bg-white;
+    }
+  }
+}
+
+.bg--light-gray-1 .contextual-search__ui {
+  background: $bg-white;
 }

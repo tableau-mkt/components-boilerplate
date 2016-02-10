@@ -15,6 +15,12 @@ Style guide: lists.cross-reference-1
     margin-top: 0;
   }
 
+  .cross-reference-1__image .icon {
+    font-size: 4em;
+    color: $text-light-body;
+    text-decoration: none;
+  }
+
   @include breakpoint($tablet-min) {
     @include span(10);
     @include pre(1);
@@ -60,8 +66,11 @@ Style guide: lists.cross-reference-2
 */
 
 .cross-reference-2 {
-  .cross-reference-2__title {
-    margin-top: 0;
+
+  .cross-reference-2__image .icon {
+    font-size: 4em;
+    color: $text-light-body;
+    text-decoration: none;
   }
 
   @include breakpoint($desktop-only) {
@@ -72,15 +81,19 @@ Style guide: lists.cross-reference-2
     }
 
     .cross-reference-2__image {
-      width: 140px;
-      margin-right: -140px;
+      width: 80px;
+      margin-right: -80px;
       line-height: 0;
-      text-align: right;
+      text-align: center;
     }
 
     .cross-reference-2__copy {
-      margin-left: 140px;
+      margin-left: 80px;
       padding-left: gutter() * 2;
+    }
+
+    .cross-reference-2__title {
+      margin-top: 0;
     }
 
     .cross-reference-2__link {
@@ -89,15 +102,9 @@ Style guide: lists.cross-reference-2
   }
 
   @include breakpoint($tablet-min) {
-    .cross-reference-2__item {
-      &:first-child {
-        padding-right: gutter();
-        border-right: 1px solid $accent-dividers;
-      }
-
-      &:last-child {
-        padding-left: gutter();
-      }
+    .cross-reference-2__item:last-child {
+      border-left: 1px solid $accent-dividers;
+      padding-left: gutter();
     }
   }
 
@@ -132,6 +139,12 @@ Style guide: lists.cross-reference-3
 */
 
 .cross-reference-3 {
+  @include breakpoint($desktop-only) {
+    .cross-reference-3__items {
+      margin-top: 2.7em;
+    }
+  }
+
   @include breakpoint($tablet-only) {
     .cross-reference-3__title {
       text-align: center;
@@ -147,6 +160,7 @@ Style guide: lists.cross-reference-3
       width: 100%;
       margin-left: 0;
     }
+
   }
 
   @include breakpoint($tablet-max) {

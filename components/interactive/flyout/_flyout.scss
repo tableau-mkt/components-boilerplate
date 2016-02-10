@@ -3,6 +3,10 @@ Content Flyout
 
 Simple tool to make content hidden and flyout when a trigger is clicked.
 
+**Trigger Options:**
+* `data-flyout-target="[CONTENT ID]"` - (required) - The ID of the container around the flyout content
+* `data-flyout-scroll-down="true"` - (optional) - Whether or not clicking this trigger should scroll down to the top of the flyout content container. Useful when the trigger referencing a flyout section lower down on the page
+
 Markup: flyout.hbs
 
 Style guide: interactive.flyout
@@ -10,7 +14,7 @@ Style guide: interactive.flyout
 
 .flyout__slideout {
   width: 100%;
-  overflow: auto;
+  overflow: inherit;
 }
 .flyout__content {
   display: none;

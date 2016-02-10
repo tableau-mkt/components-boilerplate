@@ -12,6 +12,13 @@ Style guide: interactive.hero-slideshow
   margin: 0 auto;
   overflow: hidden;
 
+  // DOM order can vary with these wrappers so have to cover two cases.
+  &.slick-slider,
+  .slick-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .hero-slideshow__slide {
     position: relative;
   }

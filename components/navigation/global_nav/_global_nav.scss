@@ -71,6 +71,7 @@ Style guide: navigation.global
       border: none;
       text-align: left;
       background: transparent;
+      appearance: none;
 
       &:focus {
         outline: none;
@@ -179,7 +180,7 @@ Style guide: navigation.global
               margin-left: -20px;
               border-left: 20px solid transparent;
               border-right: 20px solid transparent;
-              border-bottom: 20px solid $bg-light-gray-2;
+              border-bottom: 20px solid $nav-drawer-gray-1;
               pointer-events: none;
               transition: opacity 250ms linear;
             }
@@ -279,18 +280,17 @@ Style guide: navigation.global
     position: relative;
     z-index: $zindex-nav;
     width: 100%;
-    background: $bg-light-gray-2;
+    background: $nav-drawer-gray-1;
 
     .global-nav__drawer-controls {
       display: none;
     }
 
     .global-nav__drawer {
-      // display: none;
       position: absolute;
       overflow: hidden;
       width: 100%;
-      background: $bg-light-gray-2;
+      background: $nav-drawer-gray-1;
       visibility: hidden;
       opacity: 0;
       transition: visibility 250ms linear, opacity 250ms linear;
@@ -524,7 +524,7 @@ Style guide: navigation.global
       margin-left: 100%;
       position: relative;
       z-index: 15;
-      background: $bg-light-gray-2;
+      background: $nav-drawer-gray-2;
 
     }
 

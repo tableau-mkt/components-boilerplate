@@ -33,6 +33,7 @@ Style guide: compound.special-hero
     padding-bottom: 33%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .special-hero__video-inner {
     height: 0;
@@ -43,16 +44,21 @@ Style guide: compound.special-hero
     width: 100%;
   }
 
-  // If a video is present, hide the background image.
-  .special-hero__video + .special-hero__background {
-    display: none;
+  .special-hero__content {
+    text-align: center;
   }
 
   @include breakpoint($tablet-min) {
     background-color: $bg-dark-gray-3;
     color: $text-negative;
 
-    h1, h4.heading--label {
+    // @todo could be better — perhaps a class could be used,
+    // like special-hero__copy.
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       color: $text-negative;
     }
 
@@ -102,6 +108,11 @@ Style guide: compound.special-hero
       left: auto;
       right: 0;
     }
+
+    // If a video is present, hide the background image.
+    .special-hero__video + .special-hero__background {
+      height: 0;
+    }
   }
 
   @include breakpoint($tablet-max) {
@@ -127,7 +138,8 @@ Style guide: compound.special-hero
     }
 
     .special-hero__content {
-      padding: 2em 0;
+      padding: 0 0 2em 0;
+      text-align: center;
 
       h1.heading--huge {
         margin-top: .2em;
@@ -141,19 +153,14 @@ Style guide: compound.special-hero
         text-shadow: none;
       }
 
-      .cta {
-        display: block;
-        text-align: center;
+      .cta.cta--light {
+        background-color: $text-dark-body;
+        color: $text-negative;
 
-        &.cta--light {
-          background-color: $text-dark-body;
-          color: $text-negative;
-
-          &.cta--secondary {
-            background-color: transparent;
-            border-color: $text-dark-body;
-            color: $text-dark-body;
-          }
+        &.cta--secondary {
+          background-color: transparent;
+          border-color: $text-dark-body;
+          color: $text-dark-body;
         }
       }
     }

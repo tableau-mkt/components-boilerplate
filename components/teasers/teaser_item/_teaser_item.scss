@@ -8,6 +8,8 @@ Weight: 30
 
 Markup: teaser-item.hbs
 
+.teaser-item--no-border - Remove the border around the thumbnail image. Useful when a teaser appears on a darker background and a border is unnecessary.
+
 Style guide: teasers.teaser-item
 */
 .teaser-item {
@@ -28,6 +30,14 @@ Style guide: teasers.teaser-item
 
   .teaser-item__thumbnail {
     line-height: 0;
+
+    .thumbnail {
+      border: 1px solid $accent-dividers;
+    }
+  }
+
+  &.teaser-item--no-border .teaser-item__thumbnail .thumbnail {
+    border: 0;
   }
 
   .teaser-item__eyebrow {
@@ -46,6 +56,7 @@ Style guide: teasers.teaser-item
 
   .teaser-item__description {
     @extend .text--body-small;
+    line-height: 1.7;
   }
 
   .teaser-item__label {
@@ -59,5 +70,11 @@ Style guide: teasers.teaser-item
 
   @include breakpoint($mobile-only) {
     margin-bottom: 2em;
+  }
+
+  @include breakpoint($tablet-only) {
+    &.grid--tablet-half {
+      margin-bottom: 2em;
+    }
   }
 }

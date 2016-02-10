@@ -4,19 +4,23 @@
     "widgets": [
       {
         "type": "linkedin",
-        "name": "LinkedIn"
+        "name": "LinkedIn",
+        "counter": "210"
       },
       {
         "type": "facebook",
-        "name": "Facebook"
+        "name": "Facebook",
+        "counter": "1.3K"
       },
       {
         "type": "twitter",
-        "name": "Twitter"
+        "name": "Twitter",
+        "counter": "553"
       },
       {
         "type": "gplus",
-        "name": "Google+"
+        "name": "Google+",
+        "counter": "10"
       }
     ]
   }

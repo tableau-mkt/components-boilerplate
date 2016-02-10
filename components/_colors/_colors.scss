@@ -41,7 +41,7 @@ $text-negative: #fff;         // Negative Text - rgb(255, 255, 255)
 $text-light-body: #bbb;       // Negative/light Body - rgb(187, 187, 187)
 $text-medium-body: #787878;   // Default Med. Body - rgb(120, 120, 120)
 $text-dark-body: #333;        // Default Dark Body - rgb(51, 51, 51)
-$text-link: #eb912c;          // Link Orange - rgb(235, 145, 44)
+$text-link: #e8762c;          // Link Orange - rgb(232, 118, 44)
 $text-headlines: #000;        // Headlines - rgb(0, 0, 0)
 $text-nav-items: #212535;     // Nav Items - rgb(33, 37, 53)
 $text-data-sources: #a3b9cb;  // Data Sources - rgb(163, 185, 203)
@@ -86,7 +86,7 @@ Message colors
 
 Colors used for message backgrounds.
 
-Markup: colors-background.hbs
+Markup: colors-messages.hbs
 
 Nocode: true
 
@@ -94,13 +94,13 @@ Bgcolor: #F7F9FB
 
 Weight: 2
 
-Style guide: colors.background
+Style guide: colors.messages
 */
 $msg-default-bg: #E8F7F1;    // Green background - rgb(232, 247, 241)
 $msg-default-text: #47B282;  // Green text - rgb(71, 178, 128)
-$msg-warning-bg: #fff6b6;    // Yellow background, TEMPORARY
-$msg-warning-text: #8f8017;  // Yellow text, TEMPORARY
-$msg-error-bg: #f9e4e4;      // Red background - rgb()
+$msg-warning-bg: #fff6b6;    // Yellow background, rgb(255, 246, 182)
+$msg-warning-text: #8f8017;  // Yellow text, rgb(143, 128, 23)
+$msg-error-bg: #f9e4e4;      // Red background - rgb(249, 227, 227)
 $msg-error-text: #c92434;    // Red text - rgb(201, 36, 52)
 
 
@@ -187,6 +187,7 @@ Some basic colors
 */
 
 $gray: #999;
+$medium-gray: #777;
 $light-gray: #f2f2f2;
 $dark-gray: #333;
 $white: #fff;

@@ -1,65 +1,17 @@
 {
   "slides": [
     {
-      "id": "slide-0",
-      "img": {
-        "src": "http://www.placecage.com/300/200"
-      },
-      "text": {
-        "sub_title": {
-          "text": "Sub Title",
-          "level": "4"
-        },
-        "headline": {
-          "text": "Big Headline String",
-          "level": "1"
-        },
-        "cta": {
-          "url": "http://www/tableau.com",
-          "text": "Call to Action",
-          "icon": "play"
-        }
-      }
+      "heroId": "hero-one",
+      "background": "http://www.placecage.com/1366/540",
+      "content": "<h1>This is Slide One of a Hero Slidehsow</h1><p><a class='cta cta--play cta--secondary cta--light' href='#'>Call to Action!</a></p>"
     },{
-      "id": "slide-0",
-      "img": {
-        "src": "http://www.placecage.com/300/200"
-      },
-      "text": {
-        "sub_title": {
-          "text": "Sub Title",
-          "level": "4"
-        },
-        "headline": {
-          "text": "Big Headline String",
-          "level": "1"
-        },
-        "cta": {
-          "url": "http://www/tableau.com",
-          "text": "Call to Action",
-          "icon": "play"
-        }
-      }
+      "heroId": "hero-two",
+      "background": "http://www.placecage.com/1366/541",
+      "content": "<h1>This is Slide One of a Hero Slidehsow</h1><p><a class='cta cta--play cta--secondary cta--light' href='#'>Call to Action!</a></p>"
     },{
-      "id": "slide-0",
-      "img": {
-        "src": "http://www.placecage.com/300/200"
-      },
-      "text": {
-        "sub_title": {
-          "text": "Sub Title",
-          "level": "4"
-        },
-        "headline": {
-          "text": "Big Headline String",
-          "level": "1"
-        },
-        "cta": {
-          "url": "http://www/tableau.com",
-          "text": "Call to Action",
-          "icon": "play"
-        }
-      }
+      "heroId": "hero-two",
+      "background": "http://www.placecage.com/1366/542",
+      "content": "<h1>This is Slide One of a Hero Slidehsow</h1><p><a class='cta cta--play cta--secondary cta--light' href='#'>Call to Action!</a></p>"
     }
   ]
 }

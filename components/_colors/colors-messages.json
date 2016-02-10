@@ -1,0 +1,35 @@
+{
+  "colors": [
+    {
+      "name": "$msg-default-bg",
+      "hex": "#E8F7F1",
+      "rgb": " rgb(232, 247, 241)",
+      "description": "Green background"
+    },{
+      "name": "$msg-default-text",
+      "hex": "#47B282",
+      "rgb": " rgb(71, 178, 128)",
+      "description": "Green text"
+    },{
+      "name": "$msg-warning-bg",
+      "hex": "#fff6b6",
+      "rgb": "rgb(255, 246, 182)",
+      "description": "Yellow background"
+    },{
+      "name": "$msg-warning-text",
+      "hex": "#8f8017",
+      "rgb": "rgb(143, 128, 23)",
+      "description": "Yellow text"
+    },{
+      "name": "$msg-error-bg",
+      "hex": "#f9e4e4",
+      "rgb": "rgb(249, 227, 227)",
+      "description": "Red background"
+    },{
+      "name": "$msg-error-text",
+      "hex": "#c92434",
+      "rgb": "rgb(201, 36, 52)",
+      "description": "Red text"
+    }
+  ]
+}

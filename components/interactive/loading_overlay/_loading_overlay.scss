@@ -1,0 +1,49 @@
+/*
+Loading overlay
+
+Loading animation with overlay
+
+Markup: loading-overlay.hbs
+
+.loading-overlay--negative: Inversed overlay
+
+Style Guide: interactive.loading-overlay
+*/
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $zindex-3;
+  background: rgba(255, 255, 255, 0.7);
+
+  .loader {
+    @extend %absolute-centered;
+    color: $text-dark-body;
+    text-align: center;
+  }
+
+  .loader__animation {
+    background: url('../images/interactive/loader/loader.gif') no-repeat center center;
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .loader__message {
+    @extend .text--label;
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+
+  &.loading-overlay--negative {
+    background: rgba(27, 27, 27, 0.7);
+
+    .loader {
+      color: $white;
+    }
+  }
+}

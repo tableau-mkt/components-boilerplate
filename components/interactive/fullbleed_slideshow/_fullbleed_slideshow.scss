@@ -13,6 +13,13 @@ Style guide: interactive.fullbleed-slideshow
   margin: 0 auto;
   max-width: $content-max;
 
+  // DOM order can vary with these wrappers so have to cover two cases.
+  &.slick-slider,
+  .slick-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .large-teaser {
     margin-left: 50px;
     margin-right: 50px;

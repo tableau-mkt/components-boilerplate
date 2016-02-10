@@ -43,22 +43,50 @@
       // utility to handle throttling and waiting on a small delay before
       // showing the drawer (essentially hoverintent)
       $both.hover(function () {
-        $both.doTimeout( 'open', 200, function() {
+        $both.doTimeout('open', 200, function() {
           $both.addClass('is-open');
         });
       }, function () {
-        $both.doTimeout( 'open', 200, function() {
+        $both.doTimeout('open', 200, function() {
           $both.removeClass('is-open');
         });
       });
+
+      // Touch-only device interaction: first click (tap) opens the drawers.
+      // Subsequent clicks follows UA default behavior (i.e. follows the top-
+      // level link). But, only on desktop menu style!
+      $link.on('touchstart.global-nav', function (e) {
+        // Ignore if not desktop breakpoint.
+        if (!Components.utils.breakpoint('desktop')) {
+          return;
+        }
+        // If not already open, prevent following the link, and stop
+        // propagation so that our sister document touch handler doesn't close
+        // the drawers immediately.
+        if (!$link.hasClass('is-open')) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        $expandableLinks.add($drawers).removeClass('is-open');
+        $both.addClass('is-open');
+      });
     });
 
-    $drawers.click(function(e) {
+    // Catch touch events bubbling "all the way up" as a trigger for closing the
+    // drawers (on mobile specifically).
+    $(document).on('touchstart.global-nav', function () {
+      $expandableLinks.add($drawers).removeClass('is-open');
+    });
+
+    // Don't bubble up events beyond drawers.
+    // This prevents touch events inside the drawers from closing the drawers.
+    // @todo document why stopping click propagation is necessary.
+    $drawers.on('touchstart.global-nav click.global-nav', function(e) {
       e.stopPropagation();
     });
 
     // Tablet/mobile stuff.
-    $expandableLinks.on('click.nav', function(e) {
+    $expandableLinks.on('click.global-nav', function(e) {
       var $link = $(this),
           $drawer = $('#' + $link.data('drawer-id'));
 
@@ -74,7 +102,7 @@
       }
     });
 
-    $mobileDrawerClose.on('click.nav', function(e) {
+    $mobileDrawerClose.on('click.global-nav', function(e) {
       var $drawer = $(this).closest('.global-nav__drawer');
 
       closeDrawerMobile($drawer);

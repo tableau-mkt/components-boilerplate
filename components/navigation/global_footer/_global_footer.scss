@@ -103,6 +103,7 @@ Style Guide: navigation.footer
     color: $text-light-body;
     font-size: 1.2em;
     padding-left: 1em;
+    text-decoration: none;
   }
 
   @include breakpoint($tablet-max) {
@@ -146,5 +147,38 @@ Style Guide: navigation.footer
       padding: .5em;
     }
 
+  }
+}
+
+/**
+ * Make sure the footer sticks to the bottom of the page on desktop and tablet
+ * where the height of the footer is static
+ */
+@include breakpoint($tablet-min) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    margin-bottom: 150px; /* Outer height of the footer */
+  }
+
+  .global-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 118px;
+    width: 100%;
+  }
+}
+
+@include breakpoint($desktop-only) {
+  body {
+    margin: 0 0 110px; /* Outer height of the footer */
+  }
+
+  .global-footer {
+    height: 78px;
   }
 }
