@@ -1,8 +1,0 @@
-{{#items}}
-  <div class="text-teaser-item recommended__item {{ modifier_class }}">
-    {{#bundle}}<p class="text-teaser-item__type">{{ bundle }}</p>{{/bundle}}
-    <h4 class="text-teaser-item__title">
-      <a href="{{ url }}">{{ title }}</a>
-    </h4>
-  </div>
-{{/items}}
