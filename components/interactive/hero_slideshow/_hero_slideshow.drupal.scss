@@ -1,0 +1,10 @@
+// Hide all but the first slide until slick has set itself up. Prevents other
+// slides from being shown stacked up before slick has hidden them.
+.hero-slideshow .slick__slide {
+  display: none;
+
+  &.slide--0,
+  &.slick-slide {
+    display: inherit;
+  }
+}
