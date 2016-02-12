@@ -12,7 +12,6 @@ Markup: image.hbs
 Style guide: images.image
 */
 .image {
-  display: table;
   clear:both;
 
   &.image--left {
@@ -26,10 +25,5 @@ Style guide: images.image
 
   &.image--right {
     float: right;
-  }
-
-  .caption--image {
-    display: table-caption;
-    caption-side: bottom;
   }
 }
