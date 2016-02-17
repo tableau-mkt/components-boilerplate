@@ -17,3 +17,19 @@
     }
   }
 }
+
+.user-register-form,
+.tableau-premium-access-button-form {
+  .form__legend {
+    @extend .heading--h5;
+    padding: 0.5em 0;
+  }
+}
+
+.user-register-form,
+.tableau-premium-access-button-form {
+  .form-field--checkbox,
+  .form-field--radio {
+    margin-bottom: 1em;
+  }
+}
