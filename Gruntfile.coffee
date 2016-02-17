@@ -173,7 +173,7 @@ module.exports = (grunt) ->
         expand: true
         flatten: true
         src: '**/*.hbs'
-        dest: 'template/_partials'
+        dest: 'build/_partials'
       assets:
         expand: true
         cwd: 'components'
@@ -208,7 +208,7 @@ module.exports = (grunt) ->
           "styleguide/**/*"
         ]
       partials:
-        src: ["template/_partials/*.hbs"]
+        src: ["build/_partials/*.hbs"]
 
     ###
     Start a connect web server.

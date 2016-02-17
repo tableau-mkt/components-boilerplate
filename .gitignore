@@ -49,7 +49,3 @@ template/node_modules/
 styleguide/
 build/
 components/media/icons/_tableau-icons.scss
-
-# Utilities #
-#############
-template/_partials
