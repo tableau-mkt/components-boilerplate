@@ -1,0 +1,35 @@
+// Ensure Drupal webforms input elements get full width to override size="[number]" attr causing
+// scrollbars on small viewports.
+.webform-client-form {
+  .form__control,
+  .form__field,
+  input[type="text"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  textarea,
+  .form__button {
+    @include breakpoint($mobile-only) {
+      width: 100%;
+    }
+  }
+}
+
+.user-register-form,
+.tableau-premium-access-button-form {
+  .form__legend {
+    @extend .heading--h5;
+    padding: 0.5em 0;
+  }
+}
+
+.user-register-form,
+.tableau-premium-access-button-form {
+  .form-field--checkbox,
+  .form-field--radio {
+    margin-bottom: 1em;
+  }
+}

@@ -23,7 +23,7 @@ Style guide: teasers.person-teaser
   .person-teaser__image {
     @include span(1 of 4);
 
-    @include breakpoint($tablet-min) {
+    @include breakpoint($tablet-max) {
       @include span(2);
     }
   }
@@ -32,7 +32,7 @@ Style guide: teasers.person-teaser
     // Isolated to keep the text wrap at the isolation column.
     @include span(isolate last 3 of 4 at 1);
 
-    @include breakpoint($tablet-min) {
+    @include breakpoint($tablet-max) {
       @include span(4);
     }
   }
