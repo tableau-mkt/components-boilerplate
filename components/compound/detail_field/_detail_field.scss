@@ -27,6 +27,7 @@ Styleguide: compound.detail-field
     .detail-field__items {
       @extend .heading--h5;
       font-family: $text--benton-light;
+      color: inherit;
     }
 
     .detail-field__label {
