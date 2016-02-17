@@ -143,7 +143,7 @@ Style guide: buttons-links.cta
 
   &.cta--play:after {
     @extend .icon;
-    content: $icon--play-button;
+    content: $icon--play;
   }
 
   &.cta--download:after {
