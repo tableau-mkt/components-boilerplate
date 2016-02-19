@@ -20,6 +20,11 @@ h6, .heading--h6 {
   font-family: $text--benton-thin;
   font-weight: 100;
   line-height: 1.2;
+
+  b,
+  strong {
+    font-family: $text--benton-light;
+  }
 }
 
 h1, .heading--h1 {
@@ -68,6 +73,11 @@ h3, .heading--h3 {
     color: $text-dark-body;
   }
 
+  b,
+  strong {
+    font-family: $text--benton-book;
+  }
+
   @include breakpoint($mobile-only) {
     font-size: em(22px);
   }
@@ -80,6 +90,11 @@ h4, .heading--h4 {
 
   a {
     color: $text-dark-body;
+  }
+
+  b,
+  strong {
+    font-family: $text--benton-medium;
   }
 
   @include breakpoint($tablet-only) {
