@@ -359,7 +359,7 @@ Style guide: forms.fields-dark
   .has-float-label {
     // Hide placeholder attribute in IE to prevent a double label display.
     input.is-msie::placeholder {
-      color: $bg-light-gray-2;
+      color: transparent;
     }
   }
 
