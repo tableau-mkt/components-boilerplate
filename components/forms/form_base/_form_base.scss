@@ -153,7 +153,8 @@ Style guide: forms.fields
       // These are javascript activated state classes.
       // @see jquery.floatlabel.js
       // &.has-focus,
-      &.is-active {
+      &.is-active,
+      &.is-msie {
         pointer-events: all;
         display: block;
         transform: translateY(-0.2em);
@@ -276,6 +277,13 @@ input::placeholder {
   color: $gray;
 }
 
+.has-float-label {
+  // Hide placeholder attribute in IE to prevent a double label display.
+  input.is-msie::placeholder {
+    color: transparent;
+  }
+}
+
 @include breakpoint($mobile-only) {
   input {
     text-align: center;
@@ -346,6 +354,13 @@ Style guide: forms.fields-dark
 
   input::placeholder {
     color: $medium-gray;
+  }
+
+  .has-float-label {
+    // Hide placeholder attribute in IE to prevent a double label display.
+    input.is-msie::placeholder {
+      color: $bg-light-gray-2;
+    }
   }
 
   .form__legend {
