@@ -1,7 +1,11 @@
 /*
 Content Tabs
 
-Tabbed content sections where one section is visible at a time.
+Tabbed content sections where one section is visible at a time. The following
+options can be set via data attributes on the wrapper element:
+
+**Wrapper Options:**
+* `data-tabs-scroll="[wrapper|content]"` - (optional) - Smooth-scroll to either the top of the tabs wrapper or the target content when tabs are clicked.
 
 Markup: tabs.hbs
 

@@ -47,7 +47,10 @@
               previousContentHeight = $previousContent.outerHeight(true),
               $flyoutContainer = $content.closest('.flyout__content'),
               $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
-              contentHeight = $contentClone.outerHeight(true);
+              contentHeight = $contentClone.outerHeight(true),
+              scrollBehavior = $wrapper.data('tabs-scroll'),
+              scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+              $scrollTarget;
 
           $contentClone.remove();
 
@@ -71,6 +74,22 @@
             $parent.animate({
               height: flyoutHeight - parentPadding + heightChange
             }, settings.animation);
+          }
+
+          // Handling scrolling behaviors
+          if (scrollBehavior) {
+            switch (scrollBehavior) {
+              case 'wrapper':
+                $scrollTarget = $wrapper;
+                break;
+              case 'content':
+                $scrollTarget = $content;
+                break;
+              default:
+                $scrollTarget = $('#' + scrollBehavior);
+                break;
+            }
+            Components.utils.smoothScrollTop($scrollTarget, settings.animation.duration, scrollOffset, false);
           }
         }
         e.preventDefault();
