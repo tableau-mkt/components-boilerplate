@@ -24,6 +24,7 @@ h6, .heading--h6 {
   b,
   strong {
     font-family: $text--benton-light;
+    font-weight: 400;
   }
 }
 
@@ -76,6 +77,7 @@ h3, .heading--h3 {
   b,
   strong {
     font-family: $text--benton-book;
+    font-weight: 400;
   }
 
   @include breakpoint($mobile-only) {
@@ -95,6 +97,7 @@ h4, .heading--h4 {
   b,
   strong {
     font-family: $text--benton-medium;
+    font-weight: 400;
   }
 
   @include breakpoint($tablet-only) {
