@@ -49,8 +49,8 @@
               $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
               contentHeight = $contentClone.outerHeight(true),
               scrollBehavior = $wrapper.data('tabs-scroll'),
-              $scrollTarget,
-              scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true);
+              scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+              $scrollTarget;
 
           $contentClone.remove();
 
