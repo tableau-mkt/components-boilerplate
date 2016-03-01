@@ -23,8 +23,7 @@ fieldset,
 legend,
 .form__legend {
   @extend .heading--h3;
-  @extend .heading-highlight;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .form--centered,
