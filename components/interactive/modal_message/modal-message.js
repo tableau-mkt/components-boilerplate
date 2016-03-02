@@ -29,10 +29,9 @@ Components.modalMessage = {};
    */
   component.ready = function () {
     $('.modal-message, .modal-message__close').click(function (e) {
-      e.preventDefault();
-
       if (e.target === this) {
         $('.modal-message').removeClass('is-open');
+        e.preventDefault();
       }
     });
   };
