@@ -85,8 +85,11 @@
             player = videojs(videoObj);
 
         setTimeout(function() {
-          player.play();
-        }, customAnimation.duration/2);
+          // Ensure player is ready before calling .play()
+          player.ready(function () {
+            player.play();
+          });
+        }, customAnimation.duration / 2);
       }
 
       // Scroll when reveal is clicked open.
