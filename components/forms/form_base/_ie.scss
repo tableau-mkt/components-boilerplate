@@ -8,3 +8,10 @@
     display: inline-block;
   }
 }
+
+.lt-ie11 {
+  input.placeholder,
+  textarea.placeholder {
+    color: #999;
+  }
+}

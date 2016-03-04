@@ -350,11 +350,6 @@ Style guide: forms.fields-dark
 
   .form__legend {
     color: $text-negative;
-
-    // Tweak color of the eyebrow.
-    &:before {
-      background: $gray;
-    }
   }
 
   // Use a bolder font for labels and description text.
