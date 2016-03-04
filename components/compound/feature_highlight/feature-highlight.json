@@ -2,8 +2,8 @@
   "heading": "Get insight fast. It's easy.",
   "copy": "<p>Use your natural ability to see patterns and trends. Follow your train of thought as you shift between views with drag and drop technology. Get more results with less effort.</p><p><a href='#' class='link  link--arrow'>Start a free trial</a></p>",
   "image": {
-    "preview": "/build/images/interactive/gif_player/test-static.png",
-    "gif": "/build/images/interactive/gif_player/test.gif",
+    "preview": "build/images/images/gif_player/test-static.png",
+    "gif": "build/images/images/gif_player/test.gif",
     "alt": "Gif Player Test"
   }
 }
