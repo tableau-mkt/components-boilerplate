@@ -23,8 +23,7 @@ fieldset,
 legend,
 .form__legend {
   @extend .heading--h3;
-  @extend .heading-highlight;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .form--centered,
@@ -351,11 +350,6 @@ Style guide: forms.fields-dark
 
   .form__legend {
     color: $text-negative;
-
-    // Tweak color of the eyebrow.
-    &:before {
-      background: $gray;
-    }
   }
 
   // Use a bolder font for labels and description text.

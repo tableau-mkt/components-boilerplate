@@ -37,20 +37,23 @@
 
     if (settings.tabLinks.length && settings.contents.length) {
       settings.tabLinks.on('click.tabs', function(e) {
+        var $link = $(this),
+            $content = $('#' + $link.data('tab-content')),
+            $wrapper = $link.closest(settings.wrapper),
+            $tabLinks = $wrapper.find(settings.tabLinks),
+            $previousLink = $link.closest("ul").find('a.is-active'),
+            $previousContent = $('#' + $previousLink.data('tab-content')),
+            previousContentHeight = $previousContent.outerHeight(true),
+            $flyoutContainer = $content.closest('.flyout__content'),
+            $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
+            contentHeight = $contentClone.outerHeight(true),
+            scrollBehavior = $wrapper.data('tabs-scroll'),
+            scrollOffset = $('.sticky-wrapper .stuck').outerHeight(true),
+            $scrollTarget;
+
+        $contentClone.remove();
+
         if (!$(this).hasClass('is-active')) {
-          var $link = $(this),
-              $content = $('#' + $link.data('tab-content')),
-              $wrapper = $link.closest(settings.wrapper),
-              $tabLinks = $wrapper.find(settings.tabLinks),
-              $previousLink = $link.closest("ul").find('a.is-active'),
-              $previousContent = $('#' + $previousLink.data('tab-content')),
-              previousContentHeight = $previousContent.outerHeight(true),
-              $flyoutContainer = $content.closest('.flyout__content'),
-              $contentClone = $content.clone().show().css({"height":"auto"}).appendTo($content.parent()),
-              contentHeight = $contentClone.outerHeight(true);
-
-          $contentClone.remove();
-
           // Manage active class
           $tabLinks.add($wrapper.find(settings.contents)).removeClass('is-active');
           $link.add($content).addClass('is-active');
@@ -73,6 +76,23 @@
             }, settings.animation);
           }
         }
+
+        // Handling scrolling behaviors
+        if (scrollBehavior) {
+          switch (scrollBehavior) {
+            case 'wrapper':
+              $scrollTarget = $wrapper;
+              break;
+            case 'content':
+              $scrollTarget = $content;
+              break;
+            default:
+              $scrollTarget = $('#' + scrollBehavior);
+              break;
+          }
+          Components.utils.smoothScrollTop($scrollTarget, settings.animation.duration, scrollOffset, false);
+        }
+
         e.preventDefault();
       });
 

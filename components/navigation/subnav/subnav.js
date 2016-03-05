@@ -30,7 +30,7 @@
 
       // Smooth Scroll for anchor links
       // @TODO generalize and separate from this component
-      $links.find('a').not('.subnav__cta').click(function(e) {
+      $links.find('a').not('.subnav__cta a').click(function(e) {
         var element = $(this).attr('href'),
             offset = $subnav.outerHeight(true) - 1;
 

@@ -85,8 +85,11 @@
             player = videojs(videoObj);
 
         setTimeout(function() {
-          player.play();
-        }, customAnimation.duration/2);
+          // Ensure player is ready before calling .play()
+          player.ready(function () {
+            player.play();
+          });
+        }, customAnimation.duration / 2);
       }
 
       // Scroll when reveal is clicked open.
@@ -197,7 +200,8 @@
     function autoReveal() {
       var hash = window.location.hash;
 
-      if (hash.length && settings.contents.is(hash)) {
+      // If the hash exists (e.g. #something) and it matches using jQuery selection.
+      if (hash.length > 1 && settings.contents.is(hash)) {
         var $trigger = $(hash).data('revealTrigger');
 
         // Prevent scrolling to the anchor...
