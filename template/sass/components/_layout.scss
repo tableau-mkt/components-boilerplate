@@ -6,7 +6,7 @@ body.kss {
   a {
     text-decoration: none;
     color: #59879B;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -16,6 +16,10 @@ body.kss {
     max-width: 100%;
     height: auto;
   }
+}
+
+.is-focused .kss-main {
+  display: none;
 }
 
 .kss-header {
