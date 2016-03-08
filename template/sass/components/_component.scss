@@ -24,7 +24,54 @@
   .kss-example-preview {
     position: relative;
     margin-bottom: 2em;
-    border: 1.5em solid #F7F9FB; 
+    border: 1.5em solid #F7F9FB;
+    background: #ffffff;
     @extend .kss-clearfix;
+    .icon-expand {
+      position: absolute;
+      top: -1.25em;
+      right: -1.25em;
+      width: 1.125em;
+      height: 1.125em;
+      background: url(images/expand.png) no-repeat;
+      background-size: 100%;
+      content: '';
+      cursor: pointer;
+    }
+
+    &.is-focused {
+      position: fixed;
+      top: 2em;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      border: 0;
+      z-index: 1000;
+      overflow: auto;
+    }
+  }
+
+  .kss-focus-ui {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background: #888;
+    text-align: center;
+    color: #fff;
+    content: '';
+
+    .is-focused & {
+      display: block;
+    }
+
+    .kss-focus-ui__close {
+      width: 100%;
+      line-height: 2em;
+      cursor: pointer;
+    }
   }
 }

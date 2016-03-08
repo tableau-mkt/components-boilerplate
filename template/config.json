@@ -11,7 +11,8 @@
     "build/js/vendor.js",
     "build/js/scripts.js",
     "build/js/styleguide.js",
-    "//localhost:1234/livereload.js"
+    "//localhost:1234/livereload.js",
+    "public/focus.js"
   ],
   "custom": [
     "bgcolor",

@@ -216,6 +216,54 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   position: relative;
   margin-bottom: 2em;
   border: 1.5em solid #F7F9FB;
+  background: #ffffff;
+}
+/* line 30, ../sass/components/_component.scss */
+.kss-examples .kss-example-preview .icon-expand {
+  position: absolute;
+  top: -1.25em;
+  right: -1.25em;
+  width: 1.125em;
+  height: 1.125em;
+  background: url(images/expand.png) no-repeat;
+  background-size: 100%;
+  content: '';
+  cursor: pointer;
+}
+/* line 42, ../sass/components/_component.scss */
+.kss-examples .kss-example-preview.is-focused {
+  position: fixed;
+  top: 2em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  border: 0;
+  z-index: 1000;
+  overflow: auto;
+}
+/* line 55, ../sass/components/_component.scss */
+.kss-examples .kss-focus-ui {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background: #888;
+  text-align: center;
+  color: #fff;
+  content: '';
+}
+/* line 67, ../sass/components/_component.scss */
+.is-focused .kss-examples .kss-focus-ui {
+  display: block;
+}
+/* line 71, ../sass/components/_component.scss */
+.kss-examples .kss-focus-ui .kss-focus-ui__close {
+  width: 100%;
+  line-height: 2em;
+  cursor: pointer;
 }
 
 /* line 1, ../sass/components/_layout.scss */
@@ -240,16 +288,21 @@ body.kss img {
 }
 
 /* line 21, ../sass/components/_layout.scss */
+.is-focused .kss-main {
+  display: none;
+}
+
+/* line 25, ../sass/components/_layout.scss */
 .kss-header {
   background: #eee;
   border-bottom: 1px solid #ddd;
 }
-/* line 25, ../sass/components/_layout.scss */
+/* line 29, ../sass/components/_layout.scss */
 .kss-header .kss-logo {
   padding: 1em 2em;
 }
 
-/* line 30, ../sass/components/_layout.scss */
+/* line 34, ../sass/components/_layout.scss */
 .kss-footer {
   background: #eee;
   border-top: 1px solid #ddd;
@@ -257,7 +310,7 @@ body.kss img {
   text-align: center;
 }
 
-/* line 37, ../sass/components/_layout.scss */
+/* line 41, ../sass/components/_layout.scss */
 .kss-left,
 .kss-right {
   float: left;
@@ -265,28 +318,28 @@ body.kss img {
   padding: 0 1em;
 }
 
-/* line 43, ../sass/components/_layout.scss */
+/* line 47, ../sass/components/_layout.scss */
 .kss-left {
   width: 24%;
 }
 
-/* line 46, ../sass/components/_layout.scss */
+/* line 50, ../sass/components/_layout.scss */
 .kss-right {
   width: 76%;
 }
 
-/* line 50, ../sass/components/_layout.scss */
+/* line 54, ../sass/components/_layout.scss */
 .kss-content {
   padding: 1em;
 }
 
-/* line 54, ../sass/components/_layout.scss */
+/* line 58, ../sass/components/_layout.scss */
 .kss-style,
 .kss-markup {
   max-width: 54em;
 }
 
-/* line 60, ../sass/components/_layout.scss */
+/* line 64, ../sass/components/_layout.scss */
 .kss-clearfix:after, .kss-examples .kss-example-details:after, .kss-examples .kss-example-preview:after {
   content: "";
   display: table;
