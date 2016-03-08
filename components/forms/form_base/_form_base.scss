@@ -277,9 +277,9 @@ input::placeholder {
   color: $gray;
 }
 
+// Hide extraneous placeholder in IE 10-11.
 .has-float-label {
-  // Hide placeholder attribute in IE to prevent a double label display.
-  input.is-msie::placeholder {
+  input.has-duplicate-placeholder:-ms-input-placeholder {
     color: transparent;
   }
 }
@@ -349,17 +349,26 @@ Style guide: forms.fields-dark
   input[type="email"],
   select,
   textarea {
-    background: $bg-light-gray-2;
+    background-color: $bg-light-gray-2;
   }
 
   input::placeholder {
     color: $medium-gray;
   }
 
+  // Hide extraneous placeholder in IE 10-11.
   .has-float-label {
-    // Hide placeholder attribute in IE to prevent a double label display.
-    input.is-msie::placeholder {
+    input.has-duplicate-placeholder:-ms-input-placeholder {
       color: transparent;
+    }
+
+    // The first "non-option" in a select should look like a placeholder.
+    select.is-empty {
+      color: $medium-gray;
+
+      option {
+        color: $text-dark-body;
+      }
     }
   }
 
