@@ -4,34 +4,44 @@ jQuery(function ($) {
       $examplePreview = $('.kss-focus-preview'),
       $closePreview = $('.kss-focus-ui__close'),
       originalScrollOffset,
-      togglePreview;
+      togglePreview,
+      $lastPreviewedComponent;
 
-  togglePreview = function (element) {
+  togglePreview = function ($element) {
     isFocused = !isFocused;
     if (isFocused) {
       originalScrollOffset = window.pageYOffset;
-      $originalParent = $(element).parent();
-      $examplePreview.append(element);
+      $originalParent = $element.parent();
+      $examplePreview.append($element);
       setTimeout(function () {
         $(window).resize();
       }, 0);
+      // Save the id/index to localStorage.
+      if (localStorage) {
+        localStorage.setItem('previewComponentId', $originalParent.parents('.kss-section').attr('id'));
+        localStorage.setItem('previewComponentIndex', $originalParent.index());
+      }
     }
     else {
-      $originalParent.append(element);
+      $originalParent.append($element);
       setTimeout(function () {
         window.scrollTo(0, originalScrollOffset);
         $(window).resize();
       }, 0);
+      if (localStorage) {
+        localStorage.removeItem('previewComponentId');
+        localStorage.removeItem('previewComponentIndex');
+      }
     }
     $('body').toggleClass('is-focused', isFocused);
-    $(element).toggleClass('is-focused', isFocused);
+    $element.toggleClass('is-focused', isFocused);
   };
 
   $('.kss-example-preview')
     .append($('<i class="icon-expand">'))
     .on('click', function (e) {
       if (e.metaKey) {
-        togglePreview(this);
+        togglePreview($(this));
         e.preventDefault();
       }
     });
@@ -41,7 +51,18 @@ jQuery(function ($) {
   });
 
   $closePreview.on('click', function () {
-    togglePreview($examplePreview.children());
+    togglePreview($examplePreview.find('.kss-example-preview'));
   });
 
+  // If we were previewing a component, re-open it.
+  if (localStorage) {
+    $lastPreviewedComponent = $('#' + localStorage.getItem('previewComponentId'))
+      .find('.kss-example')
+      .eq(localStorage.getItem('previewComponentIndex'))
+      .find('.kss-example-preview');
+
+    if ($lastPreviewedComponent.length) {
+      togglePreview($lastPreviewedComponent);
+    }
+  }
 });
