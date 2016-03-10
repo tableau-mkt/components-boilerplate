@@ -18,14 +18,14 @@ Style Guide: navigation.footer
 
   .global-footer__language,
   .global-footer__menu {
+    @extend .text--body-small;
     float: left;
+    margin-bottom: 1em;
   }
 
   .global-footer__first {
     float: left;
     width: 60%;
-    padding-top: 22px;
-    @extend .text--body-small;
   }
 
   .global-footer__second {
@@ -85,9 +85,7 @@ Style Guide: navigation.footer
         max-height: 240px
       }
     }
-
   }
-
 
   .global-footer__menu li {
     padding: 0 1em;
@@ -99,11 +97,46 @@ Style Guide: navigation.footer
     }
   }
 
-  .global-footer__social li a {
-    color: $text-light-body;
-    font-size: 1.2em;
-    padding-left: 1em;
-    text-decoration: none;
+  .global-footer__links {
+    @include break;
+    @extend .text--label;
+    @extend .text--medium-body;
+
+    li {
+      padding: 0 2em 0 0;
+      line-height: 30px;
+    }
+
+    a {
+      color: $text-medium-body;
+    }
+  }
+
+  .global-footer__social {
+    margin-bottom: 1em;
+
+    li {
+      line-height: 30px;
+    }
+
+    a {
+      color: $text-light-body;
+      font-size: 1.2em;
+      padding-left: 1em;
+      text-decoration: none;
+    }
+  }
+
+  // Provide backward compatibility with old markup (.copy-right p)
+  .global-footer__copyright,
+  .copy-right {
+    @extend .text--label;
+    @extend .text--medium-body;
+    padding-top: 3px; // Top alignment with left-aligned links (different line-height)
+
+    p {
+      margin: 0;
+    }
   }
 
   @include breakpoint($tablet-max) {
@@ -119,6 +152,9 @@ Style Guide: navigation.footer
       padding: 0 .5em;
     }
 
+    .global-footer__links li {
+      padding: 0 1em 0 0;
+    }
   }
 
   @include breakpoint($mobile-only) {
@@ -140,45 +176,15 @@ Style Guide: navigation.footer
 
     .global-footer__menu {
       float: none;
-      margin: 2em 0 1em;
+      margin: 1em 0 0;
+    }
+
+    .global-footer__links {
+      margin-bottom: 1em;
     }
 
     .global-footer__social li a {
       padding: .5em;
     }
-
-  }
-}
-
-/**
- * Make sure the footer sticks to the bottom of the page on desktop and tablet
- * where the height of the footer is static
- */
-@include breakpoint($tablet-min) {
-  html {
-    position: relative;
-    min-height: 100%;
-  }
-
-  body {
-    margin-bottom: 150px; /* Outer height of the footer */
-  }
-
-  .global-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 118px;
-    width: 100%;
-  }
-}
-
-@include breakpoint($desktop-only) {
-  body {
-    margin: 0 0 110px; /* Outer height of the footer */
-  }
-
-  .global-footer {
-    height: 78px;
   }
 }
