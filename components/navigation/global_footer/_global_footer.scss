@@ -127,16 +127,16 @@ Style Guide: navigation.footer
     }
   }
 
-  // Provide backward compatibility with old markup (.copy-right p)
-  .global-footer__copyright,
-  .copy-right {
+  .global-footer__copyright {
     @extend .text--label;
     @extend .text--medium-body;
     padding-top: 3px; // Top alignment with left-aligned links (different line-height)
 
-    p {
-      margin: 0;
-    }
+  }
+
+  // Provide backward compatibility with old markup (<p class="copy-right" ...>)
+  p.copy-right {
+    margin: 0;
   }
 
   @include breakpoint($tablet-max) {
