@@ -15,6 +15,8 @@ Style Guide: navigation.footer
 */
 
 .global-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   .global-footer__language,
   .global-footer__menu {
@@ -158,6 +160,9 @@ Style Guide: navigation.footer
   }
 
   @include breakpoint($mobile-only) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
     .global-footer__first,
     .global-footer__second {
       float: none;
