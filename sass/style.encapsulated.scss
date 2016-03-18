@@ -1,0 +1,9 @@
+// font-face first.
+@import "../components/typography/fonts/font-face";
+@import "../components/media/icons/tableau-icons";
+
+// Encapsulate all styles within a special class to be used more selectively on
+// specific regions of a page.
+.tableau-styles {
+  @import 'style';
+}
