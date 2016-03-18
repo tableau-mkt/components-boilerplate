@@ -1,4 +1,4 @@
-<footer class="global-footer section section--padded-one bg--dark-gray-3">
+<footer class="global-footer section section--padded-two bg--dark-gray-3">
   <nav class="content-container content-container--wide">
     <div class="global-footer__first clearfix">
       {{#if languages}}
@@ -13,20 +13,26 @@
       {{/if}}
 
       <div class="global-footer__menu">
-        {{# menu}}
+        {{#with menu}}
           {{> link-list}}
-        {{/ menu}}
+        {{/with}}
+      </div>
+
+      <div class="global-footer__links">
+        {{#with links}}
+          {{> link-list}}
+        {{/with}}
       </div>
     </div>
 
     <div class="global-footer__second clearfix">
       <div class="global-footer__social">
-        {{# social}}
+        {{#with social}}
           {{> link-list}}
-        {{/ social}}
+        {{/with}}
       </div>
-      <div class="copy-right text--label text--medium-body">
-        <p>{{{ copyright }}}</p>
+      <div class="global-footer__copyright">
+        {{{ copyright }}}
       </div>
     </div>
 

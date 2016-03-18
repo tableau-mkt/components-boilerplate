@@ -5,6 +5,10 @@
 
   <hr class="divider divider--gradient">
 
+  {{#with hero}}
+    {{> hero}}
+  {{/with}}
+
   <section class="section">
     <div class="content-container">
       <h2>{{{ section1.title }}}</h2>
@@ -32,7 +36,7 @@
       </div>
     </div>
   </section>
-  
+
   {{#with global-footer}}
     {{> global-footer}}
   {{/with}}

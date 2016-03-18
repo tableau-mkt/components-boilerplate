@@ -40,8 +40,12 @@
           emptyClass: 'is-empty',
           // Class given to label when its field is focused. Toggled when it
           // loses focus.
-          focusClass: 'has-focus'
-        };
+          focusClass: 'has-focus',
+          // Class for lack of proper placeholder support.
+          badSupportClass: 'is-msie'
+        },
+        // Detect misbehaved user agents.
+        hasBadPlaceholderSupport = Boolean(window.navigator.userAgent.match(/(MSIE |Trident\/)/));
 
     // plugin constructor
     function Plugin (element, options) {
@@ -91,9 +95,13 @@
     Plugin.prototype._checkValue = function () {
       var isEmpty = this._input.val() === '' || this._input.val() === '_none';
 
-      // On empty value, add state classes to input and label.
+      // Apply the correct classes based on value emptiness.
       this._input.toggleClass(this.options.emptyClass, isEmpty);
       this._label.toggleClass(this.options.activeClass, !isEmpty);
+
+      // Apply the bad placeholder support classes if needed.
+      this._label.add(this._input)
+        .toggleClass(this.options.badSupportClass, hasBadPlaceholderSupport);
     };
 
     Plugin.prototype._onKeyUp = function () {
