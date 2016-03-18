@@ -85,6 +85,11 @@ of the page use components from the style guide, the included
 regions of the site such as the global navigation area where style guide styles
 are applied rather than including the styles globally on the site.
 
+We strongly encourage integrating the full style guide as described above in
+order to guarantee more consistency between platforms. This encapsulated version
+should only be used when absolutely required in order not to break existing
+styles that are still necessary.
+
 ### Usage
 * Include the encapsulated stylesheet rather than the base style.css
 <div class="kss-markup">
