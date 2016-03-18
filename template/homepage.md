@@ -28,7 +28,7 @@ relative to the renamed folder rather than `/build/`.
 
 <div class="kss-markup">
 <pre class="prettyprint lang-html"><code>&lt;link rel="stylesheet" href="/build/vendor/slick.js/slick/slick.css" media="all" /&gt;
-&lt;link rel="stylesheet" href="/build/css/style.css" media="all" /&gt;
+&lt;link rel="stylesheet" href="/build/css/style.min.css" media="all" /&gt;
 </code></pre>
 </div>
 
@@ -74,7 +74,38 @@ Alternatively, if the system being integrated doesn't easily allow for inserting
 classes where needed or doesn't allow for manipulation of HTML output, there's
 some more involved options that involve customizing the component library. For
 more information on this, see the Development section below and the linked
-developemnt documentation.
+development documentation.
+
+## Encapsulated styles
+
+If, for some reason, the style guide styles interfere with existing base styles
+on the platform the style guide is being integrated on and only certain regions
+of the page use components from the style guide, the included
+`styles.encapsulated.css` can be used. This will allow you to specify particular
+regions of the site such as the global navigation area where style guide styles
+are applied rather than including the styles globally on the site.
+
+### Usage
+* Include the encapsulated stylesheet rather than the base style.css
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;link rel="stylesheet" href="/build/css/style.encapsulated.min.css" media="all" /&gt;
+</code></pre>
+</div>
+* If the components being used have a javascript component (such as global
+navigation), include the javascript files above as well.
+* In order to specify a region of the page that inherits style guide styles,
+wrap the region in a div with a `tableau-styles` class. Example:
+<div class="kss-markup">
+<pre class="prettyprint lang-html"><code>&lt;div class="tableau-styles"&gt;
+    &lt;div class="global-nav"&gt;
+      &lt;!-- Global Nav Component markup here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+**Note:** The `tableau-styles` wrapper must be a *wrapper around* any components
+rather than a class added to a component itself.
 
 ## Release Notes & Bug Reports
 
