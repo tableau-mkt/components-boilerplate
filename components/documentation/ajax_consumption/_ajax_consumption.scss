@@ -27,7 +27,7 @@ the new website goes live.) **
 ```
 $(document).ready(function() {
     // Declare some variables.
-    var domain = 'redesign-tableau.gotpantheon.com',//replace with cdn.tableau.com when live.
+    var domain = 'cdns.tblsft.com',
         lang = $('html').attr('lang') || 'en',
         lang_map = {
           'en' : '',
