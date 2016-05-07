@@ -1,0 +1,42 @@
+/*
+Basic Hero
+
+A simple hero to be displayed at the top of the page containing the page title
+and any other information about the page content such as an eyebrow or a
+subtitle.
+
+Markup: hero.hbs
+
+Weight: 20
+
+Style guide: layout.hero
+*/
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 3em 0;
+  background-color: $bg-light-gray-1;
+  text-align: center;
+
+  .hero__eyebrow {
+    @extend .text--label;
+    margin: 0 0 2em 0;
+  }
+
+  h1,
+  .hero__title {
+    margin: 0;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 0;
+  }
+
+  .hero__extra-content {
+    margin-top: 2em;
+    // Reset text alignment in case more complex markup/layout is used.
+    text-align: left;
+  }
+
+}

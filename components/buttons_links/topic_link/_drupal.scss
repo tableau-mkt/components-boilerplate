@@ -1,9 +1,0 @@
-// Extend component to work with Drupal DOM.
-
-.topic-link > a {
-  color: $text-dark-body;
-
-  &:hover {
-    border-color: $accent-dividers;
-  }
-}

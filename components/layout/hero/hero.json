@@ -1,0 +1,7 @@
+{
+  "background": false,
+  "eyebrow": "An Eyebrow",
+  "title": "Here is a Page Title",
+  "subtitle": "This is a bit more lengthy subtitle that explains a bit about the contnet below.",
+  "extraContent": "<p class='text--centered'>Extra content can go here such as a search bar or longer description</p>"
+}

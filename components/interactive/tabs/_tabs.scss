@@ -28,15 +28,6 @@ Style guide: interactive.tabs
   }
 }
 
-.bg--data-sources .tabs__tab-link {
-  color: $text-data-sources;
-
-  &.is-active {
-    color: $text-negative;
-    border-bottom: 2px solid $text-negative;
-  }
-}
-
 .tabs__tab-content {
   display: none;
   @extend %clearfix;

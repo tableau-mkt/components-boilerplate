@@ -52,5 +52,5 @@ Style guide: layout.colored
 .bg--media-shade {
   @extend .bg--dark-gray-3;
   background: linear-gradient(to bottom, $bg-dark-gray-1, $bg-dark-gray-3);
-  color: $text-negative;
+  color: $text-white;
 }

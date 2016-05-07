@@ -29,6 +29,6 @@ module.exports.options = {
     string: true,
     multiple: false,
     describe: 'Title of the style guide',
-    default: 'Tableau Components'
+    default: 'Style Guide'
   }
 };

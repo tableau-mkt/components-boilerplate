@@ -253,7 +253,7 @@ module.exports = (grunt) ->
     compress:
       build:
         options:
-          archive: 'styleguide/tableau-components.zip'
+          archive: 'styleguide/styleguide.zip'
         expand: true
         src: 'build/**/*'
 

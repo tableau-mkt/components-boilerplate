@@ -16,7 +16,7 @@ Style guide: teasers.teaser-item
   & > a {
     display: block;
     color: $text-dark-body;
-    @include transition(color .25s);
+    transition: color .25s;
 
     &:hover {
       color: $text-link;

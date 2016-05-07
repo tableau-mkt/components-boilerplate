@@ -1,0 +1,24 @@
+<section class="hero {{ modifier_class }}" {{#if background}}style="background-image: url({{ background }});"{{/if}}>
+  <div class="content-container">
+    {{#if eyebrow}}
+      <p class="hero__eyebrow">
+        {{{ eyebrow }}}
+      </p>
+    {{/if}}
+    {{#if title}}
+      <h1 class="hero__title">
+        {{{ title }}}
+      </h1>
+    {{/if}}
+    {{#if subtitle}}
+      <h5 class="hero__subtitle">
+        {{{ subtitle }}}
+      </h5>
+    {{/if}}
+    {{#if extraContent}}
+      <div class="hero__extra-content">
+        {{{ extraContent }}}
+      </div>
+    {{/if}}
+  </div>
+</section>

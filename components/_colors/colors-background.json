@@ -30,16 +30,6 @@
       "hex": "#1b1b1b",
       "rgb": "rgb(27, 27, 27)",
       "description": "Dk Gray 3"
-    },{
-      "name": "$bg-about-featured",
-      "hex": "#457387",
-      "rgb": "rgb(69, 115, 135)",
-      "description": "About/Feat"
-    },{
-      "name": "$bg-data-sources",
-      "hex": "#2e4c65",
-      "rgb": "rgb(46, 76, 101)",
-      "description": "Data Sources"
     }
   ]
 }

@@ -20,11 +20,11 @@ Style guide: images.thumbnail
   img {
     max-width: 100%;
     width: inherit;
-    @include transition(all 750ms ease);
+    transition: all 750ms ease;
   }
 
   img:hover {
-    @include transform(scale(1.04));
+    transform: scale(1.04);
   }
 
   &.thumbnail--play:after {
@@ -37,7 +37,7 @@ Style guide: images.thumbnail
     line-height: 1;
     font-family:"tableau-icons";
     font-size: 5em;
-    color: $text-negative;
+    color: $text-white;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     pointer-events: none;
   }

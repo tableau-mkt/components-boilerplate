@@ -16,8 +16,8 @@ Style guide navigation.hamburger
   width: 36px;
   height: 36px;
 
-  .hamburger__patty, 
-  .hamburger__patty:before, 
+  .hamburger__patty,
+  .hamburger__patty:before,
   .hamburger__patty:after {
     position: absolute;
     display: block;
@@ -26,19 +26,19 @@ Style guide navigation.hamburger
     background: #000;
     font-size: 0;
     text-indent: -999em;
-    @include transition(all .5s);
+    transition: all .5s;
 
   }
 
-  .hamburger__patty:before, 
+  .hamburger__patty:before,
   .hamburger__patty:after {
-    content: '';  
+    content: '';
   }
   .hamburger__patty {
     top: 18px
   }
   .hamburger__patty:before {
-    top: -4px; 
+    top: -4px;
   }
   .hamburger__patty:after {
     top: 4px;
@@ -47,7 +47,7 @@ Style guide navigation.hamburger
   &.hamburger--open .hamburger__patty {
     background-color: transparent;
   }
-  &.hamburger--open .hamburger__patty:before, 
+  &.hamburger--open .hamburger__patty:before,
   &.hamburger--open .hamburger__patty:after {
     top: 0;
   }

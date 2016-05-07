@@ -125,7 +125,7 @@ Style guide: navigation.global
 
   .ui-state-focus {
     background: $bg-dark-gray-2;
-    color: $text-negative;
+    color: $text-white;
   }
 }
 
@@ -162,7 +162,6 @@ Style guide: navigation.global
           a {
             position: relative;
             padding: 10px 12px;
-            color: $text-nav-items;
             font-family: $text--benton-book;
 
             @include breakpoint(max-width $content-max) {
@@ -430,7 +429,6 @@ Style guide: navigation.global
           display: block;
           padding: 6px 0.5em;
           border-bottom: 1px solid $nav-drawer-gray-2;
-          color: $text-nav-items;
           font-family: $text--benton-light;
           font-size: em(24px);
           color: $text-dark-body;

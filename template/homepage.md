@@ -1,13 +1,9 @@
 ## Overview
 
-Welcome to the the Tableau Style Guide! This style guide is a curated collection
-of components used to build websites and pages with the Tableau corporate brand.
+Welcome to the the Style Guide! This style guide is a curated collection
+of components used to build websites and pages with the a unified style and brand.
 Explore the style guide with the navigation on the left to find working examples
 of components as well as any variations (modifiers) and markup examples.
-
-Please note that this is a living style guide which automatically reflects
-the latest updates and additions. Components will occasionally be updated,
-added, and possibly even removed.
 
 ![](https://media.giphy.com/media/xTiTnHMbep19cuNnoY/giphy.gif)
 
@@ -21,7 +17,7 @@ adding it to your environment, make sure to update all paths below to be
 relative to the renamed folder rather than `/build/`.
 
 <p class="kss-example-preview">
-  <a href="tableau-components.zip" class="cta">Download</a>
+  <a href="styleguide.zip" class="cta">Download</a>
 </p>
 
 #### Include CSS in &lt;head&gt;
@@ -38,7 +34,7 @@ relative to the renamed folder rather than `/build/`.
 <pre class="prettyprint lang-html"><code>&lt;meta charset="UTF-8"&gt;
 &lt;!-- Ensures proper page width and zoom level on mobile devices --&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-&lt;!-- Tableau Sparkle favicon --&gt;
+&lt;!-- favicon --&gt;
 &lt;link rel="icon" href="/build/images/favicon.ico" type="image/x-icon" /&gt;
 </code></pre>
 </div>
@@ -99,9 +95,9 @@ styles that are still necessary.
 * If the components being used have a javascript component (such as global
 navigation), include the javascript files above as well.
 * In order to specify a region of the page that inherits style guide styles,
-wrap the region in a div with a `tableau-styles` class. Example:
+wrap the region in a div with a `encapsulated-styles` class. Example:
 <div class="kss-markup">
-<pre class="prettyprint lang-html"><code>&lt;div class="tableau-styles"&gt;
+<pre class="prettyprint lang-html"><code>&lt;div class="encapsulated-styles"&gt;
     &lt;div class="global-nav"&gt;
       &lt;!-- Global Nav Component markup here --&gt;
     &lt;/div&gt;
@@ -109,26 +105,5 @@ wrap the region in a div with a `tableau-styles` class. Example:
 </code></pre>
 </div>
 
-**Note:** The `tableau-styles` wrapper must be a *wrapper around* any components
+**Note:** The `encapsulated-styles` wrapper must be a *wrapper around* any components
 rather than a class added to a component itself.
-
-## Release Notes & Bug Reports
-
-When we release new features, bug fixes, or any other changes to this project,
-we provide notes detailing all changes made. Use these to inform your testing
-as you update to the latest version.  Release notes live in the [Release Notes]
-(https://github.com/tableau-mkt/components/releases) section on GitHub.
-
-All bug reports, feature requests, and issue tracking are handled through the
-[Issue Queue](https://github.com/tableau-mkt/components/issues) on GitHub.
-Please feel free to submit anything you find to the issue queue; we will
-monitor and provide fixes where needed.
-
-If you don't have access to the GitHub repo yet, request it from
-[marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).
-
-## Development
-
-See the project [README](https://github.com/tableau-mkt/components#tableau-components)
-for development guidelines for working with the style guide. If you don't have
-access, please request it from [marketing-webteam@tableau.com](mailto:marketing-webteam@tableau.com?subject=COmponent%20Library%20Access).

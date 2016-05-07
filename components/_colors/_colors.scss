@@ -37,22 +37,13 @@ Weight: 1
 Style guide: colors.text
 */
 
-$text-negative: #fff;         // Negative Text - rgb(255, 255, 255)
-$text-light-body: #bbb;       // Negative/light Body - rgb(187, 187, 187)
+$text-white: #fff;            // White Text - rgb(255, 255, 255)
+$text-light-body: #bbb;       // light Body - rgb(187, 187, 187)
 $text-medium-body: #787878;   // Default Med. Body - rgb(120, 120, 120)
 $text-dark-body: #333;        // Default Dark Body - rgb(51, 51, 51)
-$text-link: #e8762c;          // Link Orange - rgb(232, 118, 44)
+$text-link: #2c2ee8;          // Link color - rgb(44, 46, 232)
 $text-headlines: #000;        // Headlines - rgb(0, 0, 0)
-$text-nav-items: #212535;     // Nav Items - rgb(33, 37, 53)
-$text-data-sources: #a3b9cb;  // Data Sources - rgb(163, 185, 203)
-$text-stories: #847094;       // Stories - rgb(132, 112, 148)
-$text-learning: #6f99a5;      // Learning - rgb(111, 153, 165)
-$text-highlight: #53bd92;     // Highlight Text - rgb(83, 189, 146)
-$text-mission-1: #316cc8;     // Mission - rgb(13, 129, 190)
-$text-mission-2: #7dcdf1;     // Mission - rgb(125, 205, 241)
-$text-mission-3: #5facce;     // Mission - rgb(95, 172, 206)
-$text-form-float-label: #0076A3;    // Form label
-$text-form-error: #c72035;    // Form error state
+$text-form-error: #c72035;    // Form error - rgb(199, 32, 53)
 
 
 /*
@@ -77,31 +68,6 @@ $bg-light-gray-2: #ebebeb;    // Light Gray 2 - rgb(235, 235, 235)
 $bg-dark-gray-1: #464646;     // Dk Gray 1 - rgb(70, 70, 70)
 $bg-dark-gray-2: #333;        // Dk Gray 2 - rgb(51, 51, 51)
 $bg-dark-gray-3: #1b1b1b;     // Dk Gray 3 - rgb(27, 27, 27)
-$bg-about-featured: #457387;  // About/Feat - rgb(69, 115, 135)
-$bg-data-sources: #2e4c65;    // Data Sources - rgb(46, 76, 101)
-
-
-/*
-Message colors
-
-Colors used for message backgrounds.
-
-Markup: colors-messages.hbs
-
-Nocode: true
-
-Bgcolor: #F7F9FB
-
-Weight: 2
-
-Style guide: colors.messages
-*/
-$msg-default-bg: #E8F7F1;    // Green background - rgb(232, 247, 241)
-$msg-default-text: #47B282;  // Green text - rgb(71, 178, 128)
-$msg-warning-bg: #fff6b6;    // Yellow background, rgb(255, 246, 182)
-$msg-warning-text: #8f8017;  // Yellow text, rgb(143, 128, 23)
-$msg-error-bg: #f9e4e4;      // Red background - rgb(249, 227, 227)
-$msg-error-text: #c92434;    // Red text - rgb(201, 36, 52)
 
 
 /*
@@ -123,35 +89,9 @@ Style guide: colors.buttons
 $button-orange: #e8762c;        // Button Orange - rgb(232, 118, 44)
 $button-orange-hover: #ea8442;  // Button  Hover - rgb(234, 132, 66)
 $button-final: #c92434;         // Final Progress - rgb(201, 36, 52)
-$button-light: $text-negative;  // Light Button - rgb(255, 255, 255)
+$button-light: $text-white;  // Light Button - rgb(255, 255, 255)
 $button-dark: $text-dark-body;  // Dark Button - rgb(51, 51, 51)
 $button-dark-hover: #444;  // Dark Button Hover - rgb(68, 68, 68)
-
-
-/*
-Product Colors
-
-Specific brand colors for Tableau products.
-
-Note: These colors have been deprecated and removed from the style guide.
-
-Markup: colors-product.hbs
-
-Nocode: true
-
-Bgcolor: #F7F9FB
-
-Weight: 4
-
-// Style guide: colors.product
-*/
-
-// $product-desktop: #23529c;    // Desktop - rgb(35, 82, 156)
-// $product-server: #7fa9bb;     // Server - rgb(127, 169, 187)
-// $product-online: #58a3b9;     // Online - rgb(88, 163, 185)
-// $product-public: #324E7A;     // Public - rgb(37, 88, 133)
-// $product-reader: #B28CCF;     // Reader - rgb(178, 140, 207)
-// $product-mobile: #DB8E6A;     // Mobile - rgb(219, 142, 106)
 
 
 /*
@@ -200,20 +140,13 @@ Text colors mapping in form of:
 */
 
 $text-colors: (
-  negative: $text-negative,
+  negative: $text-white,
   light-body: $text-light-body,
   medium-body: $text-medium-body,
   dark-body: $text-dark-body,
   link: $text-link,
   headlines: $text-headlines,
-  nav-items: $text-nav-items,
-  data-sources: $text-data-sources,
-  stories: $text-stories,
-  learning: $text-learning,
-  highlight: $text-highlight,
-  mission-1: $text-mission-1,
-  mission-2: $text-mission-2,
-  mission-3: $text-mission-3
+  form-error: $text-form-error,
 );
 
 
@@ -238,40 +171,11 @@ $background-colors: (
   white: ($bg-white, $text-dark-body, $text-headlines),
   light-gray-1: ($bg-light-gray-1, $text-dark-body, $text-headlines),
   light-gray-2: ($bg-light-gray-2, $text-dark-body, $text-headlines),
-  dark-gray-1: ($bg-dark-gray-1, $text-light-body, $text-negative),
-  dark-gray-2: ($bg-dark-gray-2, $text-light-body, $text-negative),
-  dark-gray-3: ($bg-dark-gray-3, $text-light-body, $text-negative),
-  about-featured: ($bg-about-featured, $text-negative, $text-negative),
-  data-sources: ($bg-data-sources, $text-negative, $text-negative),
-  nav-drawer-gray-1: ($nav-drawer-gray-1, $text-dark-body, $text-headlines),
-  nav-drawer-gray-2: ($nav-drawer-gray-2, $text-dark-body, $text-headlines),
+  dark-gray-1: ($bg-dark-gray-1, $text-light-body, $text-white),
+  dark-gray-2: ($bg-dark-gray-2, $text-light-body, $text-white),
+  dark-gray-3: ($bg-dark-gray-3, $text-light-body, $text-white),
 );
 
-
-/*
-Product colors mapping in the form of:
-  mdifier-name: $color
-
-Note: Deprecated color set.
-*/
-
-// $product-colors: (
-//   desktop: $product-desktop,
-//   server: $product-server,
-//   online: $product-online,
-//   public: $product-public,
-//   reader: $product-reader,
-//   mobile: $product-mobile,
-// );
-
-
-/**
- * Label colors
- */
-
-$label-colors: (
-  purple: ($text-stories, $text-negative)
-);
 
 // Misc colors
 $error: #DD1E06;

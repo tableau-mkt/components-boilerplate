@@ -121,8 +121,7 @@ Style guide: forms.fields
   }
 
   .form-field__label {
-    color: $text-form-float-label;
-    font-size: em(14px); // Same size as .text--body-small
+
   }
 
   .form-field__description {
@@ -137,7 +136,7 @@ Style guide: forms.fields
 
   &.form-field--invalid .form-field__label,
   &.form-field--invalid .form-field__error {
-    color: $msg-error-text;
+    color: $text-form-error;
   }
 
   // Floated label overrides.
@@ -162,7 +161,7 @@ Style guide: forms.fields
         z-index: 1;
       }
       &.has-focus {
-        @include transition(opacity 50ms ease, transform 150ms ease);
+        transition: opacity 50ms ease, transform 150ms ease;
       }
     }
 
@@ -201,7 +200,7 @@ Style guide: forms.fields
   input[type="email"],
   select,
   textarea {
-    border-color: $msg-error-text;
+    border-color: $text-form-error;
   }
 }
 
@@ -214,7 +213,7 @@ input[type="number"],
 input[type="email"],
 select,
 textarea {
-  @include transition(border-color 250ms);
+  transition: border-color 250ms;
   display: block;
   box-sizing: border-box;
   border: 1px solid $form-border;
@@ -232,7 +231,7 @@ textarea {
   }
 
   &:focus {
-    border-color: $text-form-float-label;
+
   }
 }
 
@@ -373,7 +372,7 @@ Style guide: forms.fields-dark
   }
 
   .form__legend {
-    color: $text-negative;
+    color: $text-white;
   }
 
   // Use a bolder font for labels and description text.
@@ -407,7 +406,7 @@ Style guide: forms.validation
 */
 
 .form-field--invalid {
-  color: $msg-error-text;
+  color: $text-form-error;
 }
 
 /*
@@ -428,7 +427,6 @@ Style guide: forms.text-inline
     margin: 0 0.25em;
     padding: 0.25em 2em 0.25em 0.5em;
     font-size: 1.5em;
-    color: $text-learning;
   }
 
   .form-field {
