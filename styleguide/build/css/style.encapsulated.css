@@ -1232,6 +1232,8 @@ Formatting for code examples
 
 Markup: code.hbs
 
+Weight: 50
+
 Style guide: typography.code
 */
   /*
@@ -3376,14 +3378,14 @@ Styleguide typography.heading-template
     .encapsulated-styles .text--body-large {
       font-size: 1.5em; } }
   .encapsulated-styles code {
+    padding: 0px 2px;
     font-family: Courier, "Courier New", Monaco, Tahoma;
-    background: #e9e9e9;
-    color: #333;
-    padding: 0px 2px; }
+    background: #333;
+    color: #cf7777; }
   .encapsulated-styles pre {
-    background: #e9e9e9;
-    padding: 20px;
+    padding: 1em;
     margin-bottom: 1em;
+    background: #333;
     overflow: auto; }
   .encapsulated-styles .text--open-sans-light {
     font-family: "Open Sans", sans-serif;
