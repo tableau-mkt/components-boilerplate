@@ -1,117 +1,33 @@
 <header class="global-nav">
-  <div class="global-nav__top content-container content-container--wide">
-    <div class="relative clearfix">
-      {{#with logo}}
-        <div class="global-nav__logo">
-          <a href="{{ link }}">
-            <img src="{{ src }}" alt="Tableau Software" />
-          </a>
-        </div>
-      {{/with}}
-
-      <div class="global-nav__mobile-wrapper">
-        <nav class="global-nav__secondary-menu">
-          {{#with secondary}}
-          {{> link-list}}
-          {{/with}}
-        </nav>
-
-        <nav class="global-nav__primary-menu">
-          {{#with primary}}
-            <ul>
-              {{#each items}}
-                <li{{#if class}} class="{{ class }}"{{/if}}>
-                  {{#with link}}
-                    <a href="{{ href }}" {{#if target}}target="{{ target }}"{{/if}} class="{{ modifier_class }}{{#if class }} {{ class }}{{/if}}" {{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}>
-                      {{ text }}
-                    </a>
-                  {{/with}}
-                </li>
-              {{/each}}
-            </ul>
-          {{/with}}
-        </nav>
-
-        <div class="global-nav__search">
-          <input type="search" placeholder="Search" name="q" autocomplete="off">
-          <a href="#" class="global-nav__search-close"></a>
-          <div id="predictive-container">
-            <ul id="predictive-terms"></ul>
-          </div>
-        </div>
+  <div class="content-container content-container--wide">
+    {{#with logo}}
+      <div class="global-nav__logo">
+        <a href="{{ link }}">
+          <img src="{{ src }}" alt="{{ alt }}" />
+        </a>
       </div>
+    {{/with}}
 
-      <div class="global-nav__hamburger">
-        {{> hamburger }}
-      </div>
+    <div class="global-nav__mobile-wrapper">
+      <nav class="global-nav__menu">
+        {{#with primary}}
+          <ul>
+            {{#each items}}
+              <li{{#if class}} class="{{ class }}"{{/if}}>
+                {{#with link}}
+                  <a href="{{ href }}" {{#if target}}target="{{ target }}"{{/if}} class="{{ modifier_class }}{{#if class }} {{ class }}{{/if}}" {{#if drawerId}} data-drawer-id="{{ drawerId }}"{{/if}}>
+                    {{ text }}
+                  </a>
+                {{/with}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/with}}
+      </nav>
+    </div>
+
+    <div class="global-nav__hamburger">
+      {{> hamburger }}
     </div>
   </div>
-
-  <div class="global-nav__drawers">
-    {{#each drawers}}
-      <div class="global-nav__drawer" id="{{ drawerId }}">
-        <div class="global-nav__drawer-controls">
-          <span>
-            <a class="link link--arrow-left global-nav__drawer-close" href="#">Back</a>
-          </span>
-          <span class="float-right">
-            <a class="link" href="/{{ drawerId }}">View All</a>
-          </span>
-        </div>
-        <div class="global-nav__drawer-inner content-container content-container--wide">
-          <div class="global-nav__drawer-primary {{#if secondaryItems}}grid--8{{/if}}">
-            {{#each primaryItems}}
-              <div class="sub-nav__item {{ classes }}">
-                {{#with title}}
-                  <h3 class="sub-nav__item-title {{ classes }}">
-                    <a href="{{ ../url }}" class="text--{{ color  }}">{{ text }}</a>
-                  </h3>
-                {{/with}}
-
-                {{#if description }}
-                  <p class="sub-nav__item-description mobile-hide">{{ description }}</p>
-                {{/if}}
-
-                {{#if items}}
-                  <div class="global-nav__drawer-link-list">
-                    {{> link-list}}
-                  </div>
-                {{/if}}
-                <p class="sub-nav__item-link tablet-hide">
-                  <a class="link link--arrow" href="{{ url }}">{{ linkText }}</a>
-                </p>
-              </div>
-            {{/each}}
-          </div>
-
-          {{#with secondaryItems}}
-          <div class="global-nav__drawer-secondary">
-            {{#if title }}
-              <h3 class="text--label">{{ title }}</h3>
-            {{/if}}
-            <ul class="plain-list">
-              {{#each items}}
-                <li class="sub-nav__item">
-                  {{#if thumbnail}}
-                    <div class="thumbnail">
-                      <a href="{{ url }}">
-                        <img src="{{ thumbnail }}" title="{{ title }}"/>
-                      </a>
-                    </div>
-                  {{/if}}
-                  <h5 class="sub-nav__item-title text--dropdown text--bold">
-                    <a class="text--dark-body" href="{{ url }}">{{ title }}</a>
-                  </h5>
-                  <p class="sub-nav__item-description mobile-hide">{{ description }}</p>
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-          {{/with}}
-
-        </div>
-      </div>
-    {{/each}}
-  </div>
-  <hr class="divider divider--gradient tablet-show">
 </header>

@@ -2,10 +2,8 @@
 Global Footer
 
 The global footer that is displayed at the bottom of each page. Contains several
-navigation links, the language selector, social buttons, and a copyright line.
+navigation links, social buttons, and a copyright line.
 
-Check out [the documentation](section-documentation.html#kssref-documentation-global-nav-ajax)
-for consuming the content for the global footer via ajax.
 
 Markup: global-footer.hbs
 
@@ -17,13 +15,8 @@ Style Guide: navigation.footer
 .global-footer {
   padding-top: 2em;
   padding-bottom: 2em;
+  background: $bg-dark-gray-3;
 
-  .global-footer__language,
-  .global-footer__menu {
-    @extend .text--body-small;
-    float: left;
-    margin-bottom: 1em;
-  }
 
   .global-footer__first {
     float: left;
@@ -36,81 +29,18 @@ Style Guide: navigation.footer
     text-align: right;
   }
 
-  .global-footer__language {
-    position: relative;
-    margin-right: 1em;
-    padding: 2px 16px;
-    cursor: pointer;
-    background: $bg-dark-gray-2;
-    @extend .text--benton-book;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: 5px;
-      border-top: 5px solid $white;
-      border-left: 3px solid transparent;
-      border-right: 3px solid transparent;
-      transition: transform 0.5s;
-    }
-
-    .global-footer__language__options {
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      max-height: 0;
-      overflow: hidden;
-      background: $bg-dark-gray-2;
-      transition: max-height 0.5s ease-out;
-
-      .selected {
-        display: none;
-      }
-
-      a {
-        display: inline-block;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 2px 16px;
-        color: $text-light-body;
-      }
-    }
-
-    &:hover {
-      &:after {
-        transform: rotate(180deg);
-      }
-
-      .global-footer__language__options {
-        max-height: 240px
-      }
-    }
-  }
-
-  .global-footer__menu li {
-    padding: 0 1em;
-    line-height: 30px;
-
-    a {
-      color: $text-light-body;
-      font-family: $text--benton-book;
-    }
-  }
-
-  .global-footer__links {
-    @include break;
-    @extend .text--label;
-    @extend .text--medium-body;
+  .global-footer__menu {
+    float: left;
+    margin-bottom: 1em;
 
     li {
-      padding: 0 2em 0 0;
+      padding: 0 1em;
       line-height: 30px;
-    }
 
-    a {
-      color: $text-medium-body;
+      a {
+        color: $text-light-body;
+        font-family: $text--benton-book;
+      }
     }
   }
 
@@ -132,13 +62,6 @@ Style Guide: navigation.footer
   .global-footer__copyright {
     @extend .text--label;
     @extend .text--medium-body;
-    padding-top: 3px; // Top alignment with left-aligned links (different line-height)
-
-  }
-
-  // Provide backward compatibility with old markup (<p class="copy-right" ...>)
-  p.copy-right {
-    margin: 0;
   }
 
   @include breakpoint($tablet-max) {
@@ -153,10 +76,6 @@ Style Guide: navigation.footer
     .global-footer__menu li {
       padding: 0 .5em;
     }
-
-    .global-footer__links li {
-      padding: 0 1em 0 0;
-    }
   }
 
   @include breakpoint($mobile-only) {
@@ -170,22 +89,9 @@ Style Guide: navigation.footer
       text-align: center;
     }
 
-    .global-footer__language {
-      float: none;
-      margin-right: 0;
-
-      .global-footer__language__options {
-        width: 100%;
-      }
-    }
-
     .global-footer__menu {
       float: none;
       margin: 1em 0 0;
-    }
-
-    .global-footer__links {
-      margin-bottom: 1em;
     }
 
     .global-footer__social li a {

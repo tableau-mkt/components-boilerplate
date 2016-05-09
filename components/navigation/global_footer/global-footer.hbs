@@ -1,25 +1,8 @@
-<footer class="global-footer section section--padded-two bg--dark-gray-3">
+<footer class="global-footer">
   <nav class="content-container content-container--wide">
     <div class="global-footer__first clearfix">
-      {{#if languages}}
-      <div class="global-footer__language">
-        <span class="selected">English</span>
-        <ul class="global-footer__language__options plain-list">
-          {{#each languages}}
-            <li{{#if selected}} class="selected"{{/if}}><a href="#">{{ language }}</a></li>
-          {{/each}}
-        </ul>
-      </div>
-      {{/if}}
-
       <div class="global-footer__menu">
         {{#with menu}}
-          {{> link-list}}
-        {{/with}}
-      </div>
-
-      <div class="global-footer__links">
-        {{#with links}}
           {{> link-list}}
         {{/with}}
       </div>
@@ -35,6 +18,5 @@
         {{{ copyright }}}
       </div>
     </div>
-
   </nav>
 </footer>

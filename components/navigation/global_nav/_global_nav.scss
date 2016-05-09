@@ -1,11 +1,7 @@
 /*
 Global Navigation
 
-The global navigation bar that sits at the top of each page. Contains primary,
-secondary, and sub navigation as well as the global search bar.
-
-Check out [the documentation](section-documentation.html#kssref-documentation-global-nav-ajax)
-for consuming the content for the global nav via ajax.
+The global navigation bar that sits at the top of each page.
 
 Markup: global-nav.hbs
 
@@ -13,7 +9,7 @@ Style guide: navigation.global
 */
 
 // Global styles shared by Desktop/Tablet/Mobile
-.global-nav__top {
+.global-nav {
   position: relative;
   padding: em(28px) 0;
   background: $bg-white;
@@ -32,109 +28,13 @@ Style guide: navigation.global
       line-height: 0;
     }
   }
-
-  .global-nav__search-toggle {
-    @extend .icon;
-    text-indent: -999em;
-    overflow: hidden;
-    font-size: 0;
-    color: $text-dark-body;
-
-    &:before {
-      content: $icon--search;
-      cursor: pointer;
-      font-size: $base-font-size * 1.25;
-    }
-  }
-
-  // Global Search Bar Styles
-  .global-nav__search {
-    display: none;
-    position: absolute;
-    z-index: $zindex-nav + 1;
-
-    &:before {
-      @extend .icon;
-      content: $icon--search;
-      position: absolute;
-      display: block;
-      cursor: pointer;
-      font-size: 1.25em;
-      text-align: center;
-    }
-
-    input[type='text'],
-    input[type='search'] {
-      @extend .text--large-copy;
-      width: 100%;
-      padding-left: 2em;
-      border: none;
-      text-align: left;
-      background: transparent;
-      appearance: none;
-
-      &:focus {
-        outline: none;
-      }
-
-      &::placeholder {
-        color: $text-medium-body;
-      }
-
-      &::-webkit-search-cancel-button {
-        display: none;
-      }
-
-      // This must be separate to work. Go figure.
-      &::-ms-clear {
-        display: none;
-      }
-    }
-
-    .global-nav__search-close {
-      @extend .icon;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      font-size: 1.6em;
-      color: $text-dark-body;
-
-      &:after {
-        content: $icon--close-window-style2;
-      }
-    }
-  }
-}
-
-// Search autocomplete
-.global-nav .ui-autocomplete {
-  @extend .text--large-copy;
-  display: block;
-  position: absolute;
-  z-index: $zindex-nav + 2;
-  box-sizing: border-box;
-  padding: 0;
-  border: none;
-  list-style: none;
-  background: $nav-drawer-gray-1;
-  outline: none;
-
-  li {
-    padding: 10px 45px;
-  }
-
-  .ui-state-focus {
-    background: $bg-dark-gray-2;
-    color: $text-white;
-  }
 }
 
 // Desktop-specific Styles
 @include breakpoint($desktop-only) {
-  .global-nav__top {
+  .global-nav {
     .global-nav__logo,
-    .global-nav__primary-menu,
-    .global-nav__secondary-menu {
+    .global-nav__menu {
       float: left;
       opacity: 1;
       transition: opacity .5s $ease-in-out;
@@ -145,7 +45,7 @@ Style guide: navigation.global
       min-height: 39px;
     }
 
-    .global-nav__primary-menu {
+    .global-nav__menu {
       @extend .text--body-small;
       margin-right: 1em;
 
@@ -167,106 +67,8 @@ Style guide: navigation.global
             @include breakpoint(max-width $content-max) {
               padding: 10px 8px;
             }
-
-            &:after {
-              content: "";
-              position: absolute;
-              opacity: 0;
-              width: 0;
-              height: 0;
-              top: 48px;
-              left: 50%;
-              margin-left: -20px;
-              border-left: 20px solid transparent;
-              border-right: 20px solid transparent;
-              border-bottom: 20px solid $nav-drawer-gray-1;
-              pointer-events: none;
-              transition: opacity 250ms linear;
-            }
-
-            &.is-open {
-              padding-bottom: 40px;
-
-              &:after {
-                opacity: 1;
-                transition: opacity 150ms linear;
-              }
-            }
           }
         }
-      }
-    }
-
-    .global-nav__secondary-menu {
-      position: relative;
-      float: right;
-      padding-right: 45px;
-      text-align: right;
-
-      li a.link {
-        padding: 10px;
-        color: $text-headlines;
-
-        @include breakpoint(max-width 1300px) {
-          padding: 10px 8px;
-        }
-      }
-
-      .global-nav__search-toggle {
-        position: absolute;
-        display: block;
-        top: 0;
-        right: 0;
-        width: 45px;
-        height: 45px;
-        text-align: center;
-        line-height: 45px;
-      }
-
-      li a.cta {
-        margin: 0 0 0 10px;
-      }
-    }
-
-    // Global Search Bar Styles
-    .global-nav__search {
-      right: 0;
-      width: 100%;
-      height: 100%;
-
-      &:before {
-        height: 45px;
-        width: 45px;
-        line-height: 45px;
-      }
-
-      input[type='text'],
-      input[type='search'] {
-        @extend .text--large-copy;
-        position: absolute;
-        right: 0;
-        height: 45px;
-        padding: 0 0 0 45px;
-      }
-
-      .global-nav__search-close {
-        @extend .icon;
-        width: 45px;
-        height: 45px;
-        top: 0;
-
-        &:after {
-          line-height: 45px;
-        }
-      }
-    }
-
-    // Tweaks for when the search bar is shown
-    &.global-nav--search-shown {
-      .global-nav__logo,
-      .global-nav__primary-menu,
-      .global-nav__secondary-menu {
-        opacity: 0;
       }
     }
 
@@ -274,103 +76,11 @@ Style guide: navigation.global
       display: none;
     }
   }
-
-  .global-nav__drawers {
-    position: relative;
-    z-index: $zindex-nav;
-    width: 100%;
-    background: $nav-drawer-gray-1;
-
-    .global-nav__drawer-controls {
-      display: none;
-    }
-
-    .global-nav__drawer {
-      position: absolute;
-      overflow: hidden;
-      width: 100%;
-      background: $nav-drawer-gray-1;
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 250ms linear, opacity 250ms linear;
-
-      &.is-open {
-        visibility: visible;
-        opacity: 1;
-        z-index: $zindex-nav + 1;
-        transition: visibility 150ms linear, opacity 150ms linear;
-      }
-    }
-
-    .global-nav__drawer-inner {
-      display: flex;
-      align-items: center;
-    }
-
-    .global-nav__drawer-inner,
-    .global-nav__drawer-secondary {
-      min-height: 275px;
-      box-sizing: border-box;
-    }
-
-    .sub-nav__item-description,
-    .global-nav__drawer-link-list {
-      @extend .text--body-small;
-    }
-
-    .sub-nav__item-link {
-      margin-bottom: 0;
-    }
-
-    .global-nav__drawer-link-list ul {
-      // @TODO provide support for IE <10 - https://github.com/BetleyWhitehorne/CSS3MultiColumn
-      -webkit-column-count: 3;
-      -moz-column-count:    3;
-      column-count:         3;
-      -webkit-column-gap:   4em;
-      -moz-column-gap:      4em;
-      column-gap:           4em;
-    }
-
-    .global-nav__drawer-secondary {
-      @include span(4 last);
-      position: relative;
-      padding: 2em;
-      background: $nav-drawer-gray-2;
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200%;
-        height: 100%;
-        z-index: 1;
-        background: $nav-drawer-gray-2;
-      }
-
-      & > * {
-        z-index: 2;
-        position: relative;
-      }
-
-      .sub-nav__item-title,
-      .sub-nav__item-description {
-        margin: 0;
-        line-height: 1.5;
-      }
-
-      .sub-nav__item {
-        margin-top: .75em;
-      }
-    }
-  }
 }
 
 // Tablet and Mobile Styles
 @include breakpoint($tablet-max) {
-  .global-nav__top {
+  .global-nav {
     padding-top: 1em;
     padding-bottom: 1em;
     height: 64px;
@@ -400,7 +110,6 @@ Style guide: navigation.global
           transition: opacity .5s $ease-in-out;
         }
       }
-
     }
 
     .global-nav__hamburger {
@@ -417,7 +126,7 @@ Style guide: navigation.global
       }
     }
 
-    .global-nav__primary-menu {
+    .global-nav__menu {
       order: 1;
       padding-top: 1.5em;
 
@@ -433,198 +142,18 @@ Style guide: navigation.global
           font-size: em(24px);
           color: $text-dark-body;
         }
-
-        a.expandable:after {
-          @extend .icon;
-          content: $icon--chevron-right;
-          float: right;
-          margin-top: 0.7em;
-          font-size: 0.75em;
-          text-decoration: none;
-        }
-
-        &:last-child a {
-          border-bottom: 0;
-        }
       }
     }
-
-    .global-nav__secondary-menu {
-      order: 2;
-      text-align: center;
-      padding: 24px;
-
-      li:last-child {
-        display: block;
-      }
-
-      a.link,
-      a.search {
-        padding: 12px;
-        color: $text-headlines;
-      }
-    }
-
-    .global-nav__search {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      padding: 1em 2em;
-      box-sizing: border-box;
-      pointer-events: none;
-      background: $nav-drawer-gray-2;
-
-      &:before {
-        margin-top: 1.5em;
-      }
-
-      input[type='text'],
-      input[type='search'] {
-        width: 100%;
-        padding: 1em 0 1em 1.5em;
-        border-bottom: 1px solid $form-border-accent;
-      }
-
-      .global-nav__search-close {
-        @extend .icon;
-        width: 64px;
-        height: 64px;
-        top: -64px;
-        background: $nav-drawer-gray-2;
-
-        &:after {
-          line-height: 64px;
-        }
-      }
-    }
-
-    &.global-nav--search-shown .global-nav__search {
-      pointer-events: inherit;
-    }
-  }
-
-  .global-nav__drawers {
-    position: absolute;
-    z-index: $zindex-nav;
-    width: 100%;
-    opacity: 0;
-    overflow: hidden;
-    transition: opacity .5s $ease-in-out;
-
-    &.is-open {
-      opacity: 1;
-      transition: none;
-    }
-
-    .global-nav__drawer {
-      display: none;
-      width: 100%;
-      margin-left: 100%;
-      position: relative;
-      z-index: 15;
-      background: $nav-drawer-gray-2;
-
-    }
-
-    .content-container {
-      padding: 0;
-    }
-
-    .global-nav__drawer-controls {
-      padding:1em 2em 0;
-    }
-
-    .global-nav__drawer-primary,
-    .global-nav__drawer-secondary {
-      padding: 2em;
-    }
-
-    .global-nav__drawer-primary {
-      padding-top: 1em;
-    }
-
-    .global-nav__drawer-primary,
-    .global-nav__drawer-secondary,
-    .sub-nav__item {
-      width: auto;
-      float: none;
-      clear: both;
-      margin: 0;
-    }
-
-
-    .sub-nav__item {
-      border-bottom: 1px solid $nav-drawer-gray-2;
-
-      &:last-child {
-        border-bottom: 0;
-      }
-
-      .sub-nav__item-title {
-        margin: .5em 0;
-        padding: 0;
-
-        &:before {
-          display: none;
-        }
-      }
-    }
-
-    .global-nav__drawer-secondary .sub-nav__item {
-      border-bottom-color: $text-light-body;
-    }
-
   }
 }
 
-
-
 // Tablet-specific Styles
 @include breakpoint($tablet-only) {
-  .global-nav__top {
-    .global-nav__primary-menu li {
-      padding: 0 2em;
+  .global-nav__top .global-nav__menu li {
+    padding: 0 2em;
 
-      a {
-        padding: 6px 0;
-      }
-    }
-
-    .global-nav__secondary-menu {
-      a.cta {
-        display: inline-block;
-        width: 100%;
-        max-width: 550px;
-        margin-left: 0;
-        margin-right: 0;
-        box-sizing: border-box;
-        text-align: center;
-      }
-    }
-  }
-
-  .global-nav__drawers .sub-nav__item {
-    @extend %clearfix;
-
-    .sub-nav__item-title {
-      @include span(4);
-    }
-
-    .sub-nav__item-title--tablet-full {
-      @include span(full);
-    }
-
-    .sub-nav__item-description {
-      @include span(last 8);
-    }
-
-    .global-nav__drawer-link-list ul,
-    .global-nav__drawer-link-list ol {
-      column-count: 2;
-      // Using css columns causes the 2nd column bullets to disappear. This
-      // adjusts them back to being visible.
-      list-style-position: inside;
-      margin-left: -1em;
+    a {
+      padding: 6px 0;
     }
   }
 }

@@ -1,88 +1,28 @@
 {
-  "languages": [
-    {
-      "language": "English",
-      "code": false,
-      "selected": true
-    },
-    {
-      "language": "Español",
-      "code": "es-es"
-    },
-    {
-      "language": "Português",
-      "code": "pt-br"
-    },
-    {
-      "language": "日本語",
-      "code": "zh-cn"
-    },
-    {
-      "language": "Deutsch",
-      "code": "de-de"
-    },
-    {
-      "language": "Français",
-      "code": "fr-fr"
-    },
-    {
-      "language": "简体中文",
-      "code": "ja-jp"
-    },
-    {
-      "language": "한국어",
-      "code": "ko-kr"
-    }
-  ],
-
   "menu": {
     "modifier_class": "link-list--inline",
     "items": [
       {
         "link": {
-          "text": "Blog",
+          "text": "Section 1",
           "url": "#"
         }
       },
       {
         "link": {
-          "text": "Academic",
+          "text": "Section 2",
           "url": "#"
         }
       },
       {
         "link": {
-          "text": "Careers",
+          "text": "Section 3",
           "url": "#"
         }
       },
       {
         "link": {
-          "text": "Contact Us",
-          "url": "#"
-        }
-      }
-    ]
-  },
-
-  "links": {
-    "modifier_class": "link-list--inline",
-    "items": [
-      {
-        "link": {
-          "text": "Legal",
-          "url": "#"
-        }
-      },
-      {
-        "link": {
-          "text": "Privacy",
-          "url": "#"
-        }
-      },
-      {
-        "link": {
-          "text": "Uninstall",
+          "text": "Section 4",
           "url": "#"
         }
       }
@@ -95,23 +35,23 @@
       {
         "link": {
           "text": "<i class=\"icon icon--social-linkedin\"></i>",
-          "url": "http://www.linkedin.com/company/tableau-software"
+          "url": "http://www.linkedin.com/"
         }
       },
       {
         "link": {
           "text": "<i class=\"icon icon--social-facebook\"></i>",
-          "url": "http://www.facebook.com/tableausw"
+          "url": "http://www.facebook.com/"
         }
       },
       {
         "link": {
           "text": "<i class=\"icon icon--social-twitter\"></i>",
-          "url": "http://www.twitter.com/tableau"
+          "url": "http://www.twitter.com/"
         }
       }
     ]
   },
 
-  "copyright": "© 2003-2016 Tableau Software. All Rights Reserved"
+  "copyright": "© 2016 company Name. All Rights Reserved"
 }
