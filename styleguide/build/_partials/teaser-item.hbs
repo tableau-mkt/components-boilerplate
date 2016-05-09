@@ -1,0 +1,55 @@
+<div class="teaser-item {{ modifier_class}} grid--{{ width }}">
+  {{#if icon}}
+    <div class="teaser-item__icon">
+      <a href="{{ url }}">
+        <span class="icon--{{ icon }}"></span>
+      </a>
+    </div>
+  {{/if}}
+
+  {{#if thumbnail}}
+    <div class="teaser-item__thumbnail">
+      <a href="{{ url }}">
+      {{#with thumbnail}}
+        {{> thumbnail }}
+      {{/with}}
+      </a>
+    </div>
+  {{/if}}
+
+  <div class="teaser-item__info">
+    {{#if eyebrow}}
+      <div class="teaser-item__eyebrow">
+        <span class="text--label">{{{ eyebrow }}}</span>
+      </div>
+    {{/if}}
+
+    {{#if title}}
+      <h5 class="teaser-item__title">
+        <a href="{{ url }}">{{{ title }}}</a>
+      </h5>
+    {{/if}}
+
+    {{#if label}}
+      <p class="teaser-item__label">
+        {{{ label }}}
+      </p>
+    {{/if}}
+
+    {{#if description}}
+      <p class="teaser-item__description">
+        {{{ description }}}
+      </p>
+    {{/if}}
+
+    {{#with tags}}
+      {{> tags-list}}
+    {{/with}}
+
+    {{#with link}}
+      <p class="teaser-item__link">
+        {{> link-base}}
+      </p>
+    {{/with}}
+  </div>
+</div>

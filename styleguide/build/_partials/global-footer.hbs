@@ -1,0 +1,22 @@
+<footer class="global-footer">
+  <nav class="content-container content-container--wide">
+    <div class="global-footer__first clearfix">
+      <div class="global-footer__menu">
+        {{#with menu}}
+          {{> link-list}}
+        {{/with}}
+      </div>
+    </div>
+
+    <div class="global-footer__second clearfix">
+      <div class="global-footer__social">
+        {{#with social}}
+          {{> link-list}}
+        {{/with}}
+      </div>
+      <div class="global-footer__copyright">
+        {{{ copyright }}}
+      </div>
+    </div>
+  </nav>
+</footer>

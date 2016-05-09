@@ -1,0 +1,11 @@
+<div id="{{ curtainId }}">
+  <p>
+    {{# trigger}}
+      <a href="#" class="reveal__trigger {{ classes }}" data-reveal-target="{{ ../contentId }}" data-reveal-media="{{ ../media }}" data-reveal-type="{{ ../type }}" data-reveal-hide-text="{{ hideText }}" data-reveal-curtain="{{ ../curtainId }}">{{ text }}</a>
+    {{/ trigger}}
+  </p>
+</div>
+
+<div class="reveal__content" id="{{ contentId }}">
+  {{{ revealContent }}}
+</div>

@@ -1,0 +1,17 @@
+<div class="flyout__slideout">
+  <p>
+    {{# trigger}}
+      <a href="#" class="flyout__trigger {{ classes }}" data-flyout-target="{{ ../contentId }}">{{ text }}</a>
+    {{/ trigger}}
+  </p>
+</div>
+
+<div class="flyout__content bg--data-sources" id="{{ contentId }}">
+  <div class="flyout__close-wrapper">
+    <a href="#" class="link flyout__close-link" href="#">Close &#9587;</a>
+  </div>
+  <div class="content-container">
+    <div class="clearfix"></div>
+    {{{ flyoutContent }}}
+  </div>
+</div>

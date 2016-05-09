@@ -1,0 +1,17 @@
+<div class="tabs__wrapper">
+  <ul class="tabs__tabs">
+    {{#each tabs}}
+      <li>
+        <a href="#" class="tabs__tab-link {{ classes }}{{#if active}} is-active{{/if}}" data-tab-content="{{ id }}">{{ label }}</a>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{#each tabs}}
+    <div class="tabs__tab-content{{#if active}} is-active{{/if}}" id="{{ id }}">
+      <div class="clearfix{{#if contentClass}} {{ contentClass }}{{/if}}">
+        {{{ content }}}
+      </div>
+    </div>
+  {{/each}}
+</div>

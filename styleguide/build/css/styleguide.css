@@ -1,0 +1,5117 @@
+@charset "UTF-8";
+/*
+DO NOT EDIT _icons.scss. This is a generated file.
+@see icons.template.css
+*/
+/*
+Icons
+
+Custom icons to be used in content. The example markup demonstrates using each
+of the different size modifiers so that they're easier to see in the style guide.
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon--adobe-pdf - adobe-pdf icon
+.icon--apple - apple icon
+.icon--arrow-down - arrow-down icon
+.icon--arrow-left - arrow-left icon
+.icon--arrow-right - arrow-right icon
+.icon--arrow-up - arrow-up icon
+.icon--bookmark - bookmark icon
+.icon--calendar - calendar icon
+.icon--chevron-down - chevron-down icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
+.icon--chevron-up - chevron-up icon
+.icon--clock - clock icon
+.icon--close-window - close-window icon
+.icon--download - download icon
+.icon--email - email icon
+.icon--export - export icon
+.icon--folder - folder icon
+.icon--like - like icon
+.icon--link - link icon
+.icon--play - play icon
+.icon--refresh - refresh icon
+.icon--reminder - reminder icon
+.icon--search - search icon
+.icon--share - share icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-rss - social-rss icon
+.icon--social-twitter - social-twitter icon
+.icon--social-youtube - social-youtube icon
+.icon--upload - upload icon
+.icon--view-less - view-less icon
+.icon--view-more - view-more icon
+.icon--windows - windows icon
+
+Style Guide: media.icons
+*/
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.eot?01a5fccfb5a717f5ebb1b480f35a13d5");
+  src: url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.eot?#iefix") format("embedded-opentype"), url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.woff?01a5fccfb5a717f5ebb1b480f35a13d5") format("woff"), url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.ttf?01a5fccfb5a717f5ebb1b480f35a13d5") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--first a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--last a:after {
+  font-family: "icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--adobe-pdf:before {
+  content: "\f101";
+}
+
+.icon--apple:before {
+  content: "\f102";
+}
+
+.icon--arrow-down:before {
+  content: "\f103";
+}
+
+.icon--arrow-left:before {
+  content: "\f104";
+}
+
+.icon--arrow-right:before {
+  content: "\f105";
+}
+
+.icon--arrow-up:before {
+  content: "\f106";
+}
+
+.icon--bookmark:before {
+  content: "\f107";
+}
+
+.icon--calendar:before {
+  content: "\f108";
+}
+
+.icon--chevron-down:before {
+  content: "\f109";
+}
+
+.icon--chevron-left:before {
+  content: "\f10a";
+}
+
+.icon--chevron-right:before {
+  content: "\f10b";
+}
+
+.icon--chevron-up:before {
+  content: "\f10c";
+}
+
+.icon--clock:before {
+  content: "\f10d";
+}
+
+.icon--close-window:before {
+  content: "\f10e";
+}
+
+.icon--download:before {
+  content: "\f10f";
+}
+
+.icon--email:before {
+  content: "\f110";
+}
+
+.icon--export:before {
+  content: "\f111";
+}
+
+.icon--folder:before {
+  content: "\f112";
+}
+
+.icon--like:before {
+  content: "\f113";
+}
+
+.icon--link:before {
+  content: "\f114";
+}
+
+.icon--play:before {
+  content: "\f115";
+}
+
+.icon--refresh:before {
+  content: "\f116";
+}
+
+.icon--reminder:before {
+  content: "\f117";
+}
+
+.icon--search:before {
+  content: "\f118";
+}
+
+.icon--share:before {
+  content: "\f119";
+}
+
+.icon--social-facebook:before {
+  content: "\f11a";
+}
+
+.icon--social-gplus:before {
+  content: "\f11b";
+}
+
+.icon--social-instagram:before {
+  content: "\f11c";
+}
+
+.icon--social-linkedin:before {
+  content: "\f11d";
+}
+
+.icon--social-rss:before {
+  content: "\f11e";
+}
+
+.icon--social-twitter:before {
+  content: "\f11f";
+}
+
+.icon--social-youtube:before {
+  content: "\f120";
+}
+
+.icon--upload:before {
+  content: "\f121";
+}
+
+.icon--view-less:before {
+  content: "\f122";
+}
+
+.icon--view-more:before {
+  content: "\f123";
+}
+
+.icon--windows:before {
+  content: "\f124";
+}
+
+body.kss .kss-example-preview {
+  /*
+DO NOT EDIT _icons.scss. This is a generated file.
+@see icons.template.css
+*/
+  /*
+Icons
+
+Custom icons to be used in content. The example markup demonstrates using each
+of the different size modifiers so that they're easier to see in the style guide.
+
+Nodefault: true
+
+Markup: icon.hbs
+
+.icon--adobe-pdf - adobe-pdf icon
+.icon--apple - apple icon
+.icon--arrow-down - arrow-down icon
+.icon--arrow-left - arrow-left icon
+.icon--arrow-right - arrow-right icon
+.icon--arrow-up - arrow-up icon
+.icon--bookmark - bookmark icon
+.icon--calendar - calendar icon
+.icon--chevron-down - chevron-down icon
+.icon--chevron-left - chevron-left icon
+.icon--chevron-right - chevron-right icon
+.icon--chevron-up - chevron-up icon
+.icon--clock - clock icon
+.icon--close-window - close-window icon
+.icon--download - download icon
+.icon--email - email icon
+.icon--export - export icon
+.icon--folder - folder icon
+.icon--like - like icon
+.icon--link - link icon
+.icon--play - play icon
+.icon--refresh - refresh icon
+.icon--reminder - reminder icon
+.icon--search - search icon
+.icon--share - share icon
+.icon--social-facebook - social-facebook icon
+.icon--social-gplus - social-gplus icon
+.icon--social-instagram - social-instagram icon
+.icon--social-linkedin - social-linkedin icon
+.icon--social-rss - social-rss icon
+.icon--social-twitter - social-twitter icon
+.icon--social-youtube - social-youtube icon
+.icon--upload - upload icon
+.icon--view-less - view-less icon
+.icon--view-more - view-more icon
+.icon--windows - windows icon
+
+Style Guide: media.icons
+*/
+  /* generated with grunt-sass-globbing */
+  /*
+Colors
+
+The global color pallete used to style all components.
+
+Style guide: colors
+*/
+  /*
+Colors template
+
+Just loading the template as a partial
+
+Markup: colors.hbs
+
+Hidden: true
+
+Style guide: colors.template
+*/
+  /*
+Text Colors
+
+Colors used for typography.
+
+Markup: colors-text.hbs
+
+Nocode:
+true
+
+Bgcolor: #F7F9FB
+
+Weight: 1
+
+Style guide: colors.text
+*/
+  /*
+Background Colors
+
+Colors used for backgrounds of elements or whole sections of a page.
+
+Markup: colors-background.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 2
+
+Style guide: colors.background
+*/
+  /*
+Button Colors
+
+Colors used for buttons.
+
+Markup: colors-buttons.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 3
+
+Style guide: colors.buttons
+*/
+  /*
+Accent Colors
+
+Colors used for accents.
+
+Markup: colors-accent.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 5
+
+Style guide: colors.accent
+*/
+  /*
+Basic Colors
+
+Some basic colors
+
+#Style guide: colors.basic
+*/
+  /*
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+  /*
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+  /*
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+  /* generated with grunt-sass-globbing */
+  /* generated with grunt-sass-globbing */
+  /*
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+*/
+  /* generated with grunt-sass-globbing */
+  /*
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
+  /* generated with grunt-sass-globbing */
+  /* Base styles for general page setup */
+  /* reset margin/padding/border from UA stylesheet */
+  /**
+ * Borders
+ *
+ * Add borders to a component or element with these helper classes.
+ */
+  /*
+body.kss .kss-example-preview .border-none {
+  border: 'none';
+}
+
+body.kss .kss-example-preview .border-top-none {
+  border-top: 'none';
+}
+
+body.kss .kss-example-preview .border-right-none {
+  border-right: 'none';
+}
+
+body.kss .kss-example-preview .border-bottom-none {
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border-left-none {
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-horz-none {
+  border-right: 'none';
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-vert-none {
+  border-top: 'none';
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-top {
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-right {
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-left {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-vert {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-horz {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+*/
+  /**
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
+  /*
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
+  /**
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
+  /**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+  /**
+ * Spacing
+ *
+ * Add margin/padding to a component or element with shorthand classes.
+ */
+  /*
+.margin-none { margin: 0em !important; }
+.margin-top-none { margin-top: 0em !important; }
+.margin-right-none { margin-right: 0em !important; }
+
+.margin-bottom-one { margin-bottom: 1em !important; }
+.margin-left-one { margin-left: 1em !important; }
+
+.margin-horz-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
+}
+.margin-vert-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+.padding-none { padding: 0em !important; }
+
+.padding-top-two { padding-top: 2em !important; }
+
+.padding-vert-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+*/
+  /* generated with grunt-sass-globbing */
+  /*
+Colors
+
+The global color pallete used to style all components.
+
+Style guide: colors
+*/
+  /*
+Colors template
+
+Just loading the template as a partial
+
+Markup: colors.hbs
+
+Hidden: true
+
+Style guide: colors.template
+*/
+  /*
+Text Colors
+
+Colors used for typography.
+
+Markup: colors-text.hbs
+
+Nocode:
+true
+
+Bgcolor: #F7F9FB
+
+Weight: 1
+
+Style guide: colors.text
+*/
+  /*
+Background Colors
+
+Colors used for backgrounds of elements or whole sections of a page.
+
+Markup: colors-background.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 2
+
+Style guide: colors.background
+*/
+  /*
+Button Colors
+
+Colors used for buttons.
+
+Markup: colors-buttons.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 3
+
+Style guide: colors.buttons
+*/
+  /*
+Accent Colors
+
+Colors used for accents.
+
+Markup: colors-accent.hbs
+
+Nocode: true
+
+Bgcolor: #F7F9FB
+
+Weight: 5
+
+Style guide: colors.accent
+*/
+  /*
+Basic Colors
+
+Some basic colors
+
+#Style guide: colors.basic
+*/
+  /*
+Text colors mapping in form of:
+  modifier-name: $text-color
+*/
+  /*
+Button colors mapping in the form of:
+  modifier-name: ($base-color, $hover-color)
+*/
+  /*
+Background colors mapping in the form of:
+  mdifier-name: ($bg-color, $copy-color, $heading-color)
+*/
+  /* Base styles for general page setup */
+  /* reset margin/padding/border from UA stylesheet */
+  /**
+ * Borders
+ *
+ * Add borders to a component or element with these helper classes.
+ */
+  /*
+body.kss .kss-example-preview .border-none {
+  border: 'none';
+}
+
+body.kss .kss-example-preview .border-top-none {
+  border-top: 'none';
+}
+
+body.kss .kss-example-preview .border-right-none {
+  border-right: 'none';
+}
+
+body.kss .kss-example-preview .border-bottom-none {
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border-left-none {
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-horz-none {
+  border-right: 'none';
+  border-left: 'none';
+}
+
+body.kss .kss-example-preview .border-vert-none {
+  border-top: 'none';
+  border-bottom: 'none';
+}
+
+body.kss .kss-example-preview .border {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-top {
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-right {
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-left {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-vert {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-horz {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+*/
+  /**
+ * Helpers
+ *
+ * General helper styles that can be used to overcome various common issues.
+ */
+  /*
+Proportionately resize iframes. Add class to a wrapper around the iframe. See
+also the responsive-placeholder mixin for custom sizes. These are just the two
+most common proportions for video players.
+*/
+  /**
+ * Placeholders
+ *
+ * Using placeholders results in CSS rule combining for selectors.
+ */
+  /**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+  /**
+ * Spacing
+ *
+ * Add margin/padding to a component or element with shorthand classes.
+ */
+  /*
+.margin-none { margin: 0em !important; }
+.margin-top-none { margin-top: 0em !important; }
+.margin-right-none { margin-right: 0em !important; }
+
+.margin-bottom-one { margin-bottom: 1em !important; }
+.margin-left-one { margin-left: 1em !important; }
+
+.margin-horz-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
+}
+.margin-vert-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+.padding-none { padding: 0em !important; }
+
+.padding-top-two { padding-top: 2em !important; }
+
+.padding-vert-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+*/
+  /*
+em($target)
+
+Converts a unit to ems based on either the base font-size or a given context.
+For example, <code>em(32px)</code> would result in <code>2em</code> assuning a
+base font-size of 16px.
+*/
+  /*
+Responsive iframe
+
+Proportionately scales an iframe when the container is resized (via viewport).
+Apply this to a wrapper element around the iframe.
+
+Parameters:
+  $width - The default width of the iframe (or reduced aspect ratio)
+  $height - The default height of the iframe (or reduced aspect ratio)
+
+Returns:
+  Styles to proportionately scale an iframe
+*/
+  /*
+Typography
+
+Weight: 10
+
+Style guide: typography
+*/
+  /*
+Buttons & Links
+
+Buttons and text links used to link to different pages ro trigger on-page interactions.
+
+Weight: 20
+
+Style guide: buttons-links
+*/
+  /*
+Images
+
+Image assets displayed as thumbnails or within the content of a page.
+
+Weight: 35
+
+Style guide: images
+*/
+  /*
+Media
+
+Media assets that are more complicated than images. E.g. Videos, Vizzes.
+
+Weight: 36
+
+Style guide: media
+*/
+  /*
+Lists
+
+Lists of content that generally have a title, thumbnail and/or a description and
+link through to the full version of the content.
+
+Weight: 40
+
+Style guide: lists
+*/
+  /*
+Teasers
+
+Breif teasers of content used individually or in lists to link to the full
+view of the content.
+
+Weight: 50
+
+Style guide: teasers
+*/
+  /*
+Forms
+
+Form elements such as text fields and submit buttons used to make forms that the
+user can submit information through. Here's an example form:
+
+Weight: 70
+
+Style guide: forms
+*/
+  /*
+Navigation
+
+Navigational tools used across the site
+
+Weight: 80
+
+Style guide: navigation
+*/
+  /*
+Interactive
+
+This section displays examples of components that have interactivity. Most
+Interactivity is defined via Javascript.
+
+Weight: 90
+
+Style guide: interactive
+*/
+  /*
+Layout
+
+Components used for page layout
+
+Weight: 100
+
+Style guide layout
+*/
+  /*
+CTA
+
+CTA buttons should be used when a single or important page action is required.
+
+Markup: cta.hbs
+
+Weight: 20
+
+Bgcolor: #F7F9FB
+
+.cta--orange - Orange colored CTA button.
+.cta--light - Light colored CTA button.
+.cta--dark - Dark colored CTA button.
+
+Style guide: buttons-links.cta
+*/
+  /*
+Base Text Link
+
+The base styles common to all text links across the site
+
+Markup: link-base.hbs
+
+Weight: 10
+
+Style guide: buttons-links.link-base
+*/
+  /*
+Image base styles
+
+Basic styles for images.
+
+Markup: image-base.hbs
+
+Style guide: images.image-base
+*/
+  /*
+Thumbnail Image
+
+A small image that shows a preview of the content that it is linking to.
+
+Markup: thumbnail.hbs
+
+.thumbnail--play - A play button superimposed over the middle of the thumbnail
+
+Style guide: images.thumbnail
+*/
+  /*
+Accordion
+
+An accordion of content that allows you to expand and collapse sections of
+content.
+
+Markup: accordion.hbs
+
+Style guide: interactive.accordion
+*/
+  /*
+Content Flyout
+
+Simple tool to make content hidden and flyout when a trigger is clicked.
+
+**Trigger Options:**
+* `data-flyout-target="[CONTENT ID]"` - (required) - The ID of the container around the flyout content
+* `data-flyout-scroll-down="true"` - (optional) - Whether or not clicking this trigger should scroll down to the top of the flyout content container. Useful when the trigger referencing a flyout section lower down on the page
+
+Markup: flyout.hbs
+
+Style guide: interactive.flyout
+*/
+  /*
+Global Notification
+
+Display global notification messages.
+
+Markup: global-notification.hbs
+
+Weight: 10
+
+Style guide: interactive.global-notification
+*/
+  /*
+Content Reveal
+
+Simple tool to make content hidden and revealed when a trigger is clicked. The
+trigger element can be abywhere on the page and can have the following options
+set as data attributes:
+
+**Trigger Options:**
+* `data-reveal-target="[CONTENT ID]"` - (required) - The ID of the container around the content to be revealed
+* `data-reveal-hide-text="[REVEAL HIDE TEXT]"` - (optional) - Text to swap into the trigger link while the reveal is in the open state.
+* `data-reveal-close-link="false"` - (optional) - Set this to disable the default close link within the reveal content container
+* `data-reveal-scroll="[trigger|target]"` - (optional) - Smooth-scroll to either the top of the trigger or the target element when the content is revealed.
+* `data-reveal-media="video"` - (optional) - Enable play/pause controle when opening/closing reveal content that contains a brightcove video.
+
+The <code>.reveal__content</code> container must have an <code>id</code>
+attribute that matches the <code>data-reveal-target</code>.
+
+Markup: reveal.hbs
+
+Style guide: interactive.reveal
+*/
+  /*
+Content Tabs
+
+Tabbed content sections where one section is visible at a time. The following
+options can be set via data attributes on the wrapper element:
+
+**Wrapper Options:**
+* `data-tabs-scroll="[wrapper|content]"` - (optional) - Smooth-scroll to either the top of the tabs wrapper or the target content when tabs are clicked.
+
+Markup: tabs.hbs
+
+Style guide: interactive.tabs
+*/
+  /*
+Basic Page Layout
+
+This component is just for demonstration purposes and combines several of the 
+components in this section to show how a basic page should be laid out.
+
+Markup: basic_page.hbs
+
+Style guide: layout.basic-page
+*/
+  /*
+Background Colors
+
+These classes will apply a background to any container div. It does not apply
+any other styles, except the background-color and a text color if needed for
+legibility.
+
+Markup: bg_color.hbs
+
+Nodefault: true
+
+Nocode: true
+
+Weight: 2
+
+.bg--white - White background color. - (#fff)
+.bg--light-gray-1 - Light Gray 1 background color - (#fafafa)
+.bg--light-gray-2 - Light Gray 2 background color - (#ebebeb)
+.bg--dark-gray-1 - Dk Gray 1 background color - (#464646)
+.bg--dark-gray-2 - Dk Gray 2 background color - (#333)
+.bg--dark-gray-3 - Dk Gray 3 background color - (#1b1b1b)
+
+Style guide: layout.bg-color
+*/
+  /* Create a class for each background color */
+  /*
+Content Container
+
+A wrapper element around content to keep it in a centered column on the page.
+
+Markup: content_container.hbs
+
+Weight: 30
+
+.content-container--narrow - A narrow content container
+.content-container--wide - An extra wide content container
+.content-container--text-column - A narrower content container for text columns
+
+Style guide: layout.container
+*/
+  /*
+Horizontal Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider.hbs
+
+Weight: 0
+
+.divider--dark - A darker divider used for darker backgrounds
+.divider--short - A fixed width divider that expands to full width for smaller screen sizes.
+
+Style guide: layout.divider
+*/
+  /*
+Vertical Dividers
+
+Hairline divider used to separate sections of content. Dividers are used when a
+page needs to be broken up vertically or horizontally.
+
+Markup: divider-vertical.hbs
+
+Weight: 10
+
+.vertical-divider--right - A divider on the right side of the element.
+.vertical-divider--dark - A darker divider for darker backgrounds.
+
+Style guide: layout.divider-vertical
+*/
+  /*
+Gallery Grid
+
+Used when a layout has a variable number of alike items that need to be
+presented in a grid. Each grid item is then aligned vertically to the top of
+its row and may be of varying height.
+
+Markup: gallery-grid.hbs
+
+Weight: 21
+
+.gallery-grid--2 - A 2 column block grid.
+.gallery-grid--3 - A 3 column block grid.
+.gallery-grid--4 - A 4 column block grid, this collapses to 2 columns on tablet.
+.gallery-grid--5 - A 5 column block grid, this collapses to 2 columns on tablet.
+
+Style guide: layout.gallery-grid
+*/
+  /*
+Grids
+
+Used for creating a columned layout. To use these classes, just pick the number
+of columns wide you want your element to be relative to the total number of
+columns. The default is 12 columns. For example, you can use `.grid--4` to make
+an element 4 columns wide followed by an element with `.grid--8` to take up the
+remaining eight columns of the container's width.
+
+Markup: grid.hbs
+
+Weight: 20
+
+Style guide: layout.grids
+*/
+  /*
+Half-column Push/Pull
+
+This is just a utility to allow for pushing and pulling by half-column units
+rather than needing to push by a full unit. This should only be used if you need
+to center content in an uneven number of columns
+ */
+  /*
+Basic Hero
+
+A simple hero to be displayed at the top of the page containing the page title
+and any other information about the page content such as an eyebrow or a
+subtitle.
+
+Markup: hero.hbs
+
+Weight: 20
+
+Style guide: layout.hero
+*/
+  /*
+Content Section
+
+Used to wrap a section of content and apply vertical padding between wrappers 
+and content.
+
+Markup: section-kss.hbs
+
+Weight: 40
+
+.section--padded-one - Section with 1em of vertical padding
+.section--padded-two - Section with 2em of vertical padding (1em on mobile)
+.section--padded-three - Section with 3em of vertical padding (1em on mobile)
+.section--padded-four - Section with 4em of vertical padding (2em on mobile)
+.section--padded-six - Section with 6em of vertical padding (3em on mobile)
+.section--padding-top-none - Cancels out all top padding
+.section--padding-bottom-none - Cancels all bottom padding
+
+Style guide layout.section
+*/
+  /*
+Vertical Spacer
+
+Used to create vertical spacing between sections of content without just a stack
+of <code>&lt;br&gt;</code> tags. Vertical spacers are made with horizontal rules
+(<code>&lt;hr&gt;</code>). These examples put a spacer between two divs to
+dempnstrate the amount of space that will be added with each modifier.
+
+Markup: spacer.hbs
+
+.spacer--one - Spacer with 1em of space.
+.spacer--two - <strong>[Default]</strong> Spacer with 2em of space.
+.spacer--three - Spacer with 3em of space.
+.spacer--four - Spacer with 4em of space.
+.spacer--five - Spacer with 5em of space.
+.spacer--six - Spacer with 6em of space.
+
+Style guide: layout.spacer
+*/
+  /* 
+Link List
+
+A simple unordered list of links. Several helper modifiers provided.
+
+Weight: 20
+
+Markup: link-list.hbs
+
+.link-list--plain - Plain list (no bullets)
+.link-list--inline - Inline list items
+
+Style guide: lists.link
+*/
+  /*
+Standard Unordered List
+
+A standard unordered list with bullets. Gray background applied in order to make sure light colored bullets show up.
+
+Weight: 10
+
+Markup: list.hbs
+
+Bgcolor: #ccc
+
+.list--negative - Light colored bullets.
+
+Style guide: lists.standard
+*/
+  /*
+Formatted Icons
+
+Different formatting/style options for icons
+
+Markup: icon-formatted.hbs
+
+.icon--big - A big icon.
+.icon--bigger - A bigger icon.
+.icon--biggest - A very big icon.
+
+Style guide: media.icon-formatted
+*/
+  /*
+Global Footer
+
+The global footer that is displayed at the bottom of each page. Contains several
+navigation links, social buttons, and a copyright line.
+
+
+Markup: global-footer.hbs
+
+Weight: 50
+
+Style Guide: navigation.footer
+*/
+  /*
+Global Navigation
+
+The global navigation bar that sits at the top of each page.
+
+Markup: global-nav.hbs
+
+Style guide: navigation.global
+*/
+  /*
+Hamburger
+
+Hamburger icon for mobile navigation.
+
+Markup: hamburger.hbs
+
+.hamburger--open - Open state of hamburger icon.
+
+Style guide navigation.hamburger
+*/
+  /*
+Pager
+
+Used to navigate between the different pages of content that uses pagination.
+
+Markup: pager.hbs
+
+Style guide: navigation.pager
+*/
+  /*
+Basic Teaser Item
+
+A basic teaser item, used for displaying a list of teasers to content that
+link to the full version of the content.
+
+Weight: 30
+
+Markup: teaser-item.hbs
+
+.teaser-item--no-border - Remove the border around the thumbnail image. Useful when a teaser appears on a darker background and a border is unnecessary.
+
+Style guide: teasers.teaser-item
+*/
+  /*
+Body Copy
+
+Default copy formatting for body copy and other areas with longer chunks of
+copy.
+
+Markup: body-copy.hbs
+
+Nodefault: true
+
+Weight: 10
+
+.text--body-base - Default base body copy (16px/30)
+.text--body-small - Small body copy (14px/26)
+.text--body-medium - Medium body copy (20px/35)
+.text--body-large - Large body copy (30px/46)
+
+Style guide: typography.body-copy
+ */
+  /*
+Code Snippet
+
+Formatting for code examples
+
+Markup: code.hbs
+
+Weight: 50
+
+Style guide: typography.code
+*/
+  /*
+Font Families
+
+**OpenSans** is primarily used for section headers and titling.
+
+**Merriweather** is used mainly for body copy.
+
+Markup: fonts.hbs
+
+Nodefault: true
+
+Nocode: true
+
+Weight: 0
+
+.text--open-sans-light - Open Sans Light
+.text--open-sans-normal - Open Sans Normal
+.text--merriweather - Merriweather Light
+
+Style guide: typography.fonts
+*/
+  /*
+Formatted Text
+
+Markup: formatted.hbs
+
+Weight: 30
+
+Bgcolor: #F7F9FB
+
+.text--bold - Bold text for emphasis. Same as `<strong>`
+.text--light - Light text. Default for non-headings
+.text--italic - Italic text for emphasis. Same as `<em>`
+.text--caps - All caps text
+.text--right - Right justified text
+.text--left - Left justified text
+.text--centered - Center justified text
+.text--justified - Justified text
+.text--lineheight-zero - Line height set to zero.
+
+Style guide: typography.formatted
+*/
+  /*
+Text Colors
+
+Colors to be used in the text palette.
+
+Markup: colored-text.hbs
+
+Bgcolor: #F7F9FB
+
+Weight: 32
+
+.text--white - White Text colored text. `#fff;`
+.text--light-body - Light Body colored text. `#bbb`
+.text--medium-body - Default Med. Body colored text. `#787878`
+.text--dark-body - Default Dark Body colored text. `#333`
+.text--link - Link Orange colored text. `#eb912c`
+.text--headlines - Headlines colored text. `#000`
+.text--form-error  - Headlines colored text. `#c72035`
+
+Style guide: typography.colors
+*/
+  /* Create a class for each text color */
+  /*
+Default Headings
+
+Used for title and prominent labels of content.
+
+Markup: headings-kss.hbs
+
+Weight: 20
+
+Styleguide typography.headings
+*/
+  /*
+Headings Template
+
+Just registering this template as a partial
+
+Markup: heading.hbs
+
+Hidden: true
+
+Styleguide typography.heading-template
+*/
+}
+
+@font-face {
+  body.kss .kss-example-preview {
+    font-family: "icons";
+    src: url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.eot?01a5fccfb5a717f5ebb1b480f35a13d5");
+    src: url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.eot?#iefix") format("embedded-opentype"), url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.woff?01a5fccfb5a717f5ebb1b480f35a13d5") format("woff"), url("../fonts/icons-01a5fccfb5a717f5ebb1b480f35a13d5.ttf?01a5fccfb5a717f5ebb1b480f35a13d5") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+body.kss .kss-example-preview .icon, body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--first a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--last a:after {
+  font-family: "icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.kss .kss-example-preview .icon--adobe-pdf:before {
+  content: "\f101";
+}
+
+body.kss .kss-example-preview .icon--apple:before {
+  content: "\f102";
+}
+
+body.kss .kss-example-preview .icon--arrow-down:before {
+  content: "\f103";
+}
+
+body.kss .kss-example-preview .icon--arrow-left:before {
+  content: "\f104";
+}
+
+body.kss .kss-example-preview .icon--arrow-right:before {
+  content: "\f105";
+}
+
+body.kss .kss-example-preview .icon--arrow-up:before {
+  content: "\f106";
+}
+
+body.kss .kss-example-preview .icon--bookmark:before {
+  content: "\f107";
+}
+
+body.kss .kss-example-preview .icon--calendar:before {
+  content: "\f108";
+}
+
+body.kss .kss-example-preview .icon--chevron-down:before {
+  content: "\f109";
+}
+
+body.kss .kss-example-preview .icon--chevron-left:before {
+  content: "\f10a";
+}
+
+body.kss .kss-example-preview .icon--chevron-right:before {
+  content: "\f10b";
+}
+
+body.kss .kss-example-preview .icon--chevron-up:before {
+  content: "\f10c";
+}
+
+body.kss .kss-example-preview .icon--clock:before {
+  content: "\f10d";
+}
+
+body.kss .kss-example-preview .icon--close-window:before {
+  content: "\f10e";
+}
+
+body.kss .kss-example-preview .icon--download:before {
+  content: "\f10f";
+}
+
+body.kss .kss-example-preview .icon--email:before {
+  content: "\f110";
+}
+
+body.kss .kss-example-preview .icon--export:before {
+  content: "\f111";
+}
+
+body.kss .kss-example-preview .icon--folder:before {
+  content: "\f112";
+}
+
+body.kss .kss-example-preview .icon--like:before {
+  content: "\f113";
+}
+
+body.kss .kss-example-preview .icon--link:before {
+  content: "\f114";
+}
+
+body.kss .kss-example-preview .icon--play:before {
+  content: "\f115";
+}
+
+body.kss .kss-example-preview .icon--refresh:before {
+  content: "\f116";
+}
+
+body.kss .kss-example-preview .icon--reminder:before {
+  content: "\f117";
+}
+
+body.kss .kss-example-preview .icon--search:before {
+  content: "\f118";
+}
+
+body.kss .kss-example-preview .icon--share:before {
+  content: "\f119";
+}
+
+body.kss .kss-example-preview .icon--social-facebook:before {
+  content: "\f11a";
+}
+
+body.kss .kss-example-preview .icon--social-gplus:before {
+  content: "\f11b";
+}
+
+body.kss .kss-example-preview .icon--social-instagram:before {
+  content: "\f11c";
+}
+
+body.kss .kss-example-preview .icon--social-linkedin:before {
+  content: "\f11d";
+}
+
+body.kss .kss-example-preview .icon--social-rss:before {
+  content: "\f11e";
+}
+
+body.kss .kss-example-preview .icon--social-twitter:before {
+  content: "\f11f";
+}
+
+body.kss .kss-example-preview .icon--social-youtube:before {
+  content: "\f120";
+}
+
+body.kss .kss-example-preview .icon--upload:before {
+  content: "\f121";
+}
+
+body.kss .kss-example-preview .icon--view-less:before {
+  content: "\f122";
+}
+
+body.kss .kss-example-preview .icon--view-more:before {
+  content: "\f123";
+}
+
+body.kss .kss-example-preview .icon--windows:before {
+  content: "\f124";
+}
+
+body.kss .kss-example-preview body {
+  margin: 0;
+}
+
+body.kss .kss-example-preview form,
+body.kss .kss-example-preview fieldset,
+body.kss .kss-example-preview legend {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body.kss .kss-example-preview .border-none {
+  border: "";
+}
+
+body.kss .kss-example-preview .border-top-none {
+  border-top: "";
+}
+
+body.kss .kss-example-preview .border-right-none {
+  border-right: "";
+}
+
+body.kss .kss-example-preview .border-bottom-none {
+  border-bottom: "";
+}
+
+body.kss .kss-example-preview .border-left-none {
+  border-left: "";
+}
+
+body.kss .kss-example-preview .border-vert-none {
+  border-right: "";
+  border-left: "";
+}
+
+body.kss .kss-example-preview .border-horz-none {
+  border-top: "";
+  border-bottom: "";
+}
+
+body.kss .kss-example-preview .border {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-top {
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-right {
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-left {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-vert {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-horz {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .iframe-4-3,
+body.kss .kss-example-preview .iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:3 */
+  height: 0;
+}
+
+body.kss .kss-example-preview .iframe-4-3 iframe,
+body.kss .kss-example-preview .iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.kss .kss-example-preview .iframe-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+}
+
+body.kss .kss-example-preview .relative {
+  position: relative;
+}
+
+body.kss .kss-example-preview .absolute {
+  position: absolute;
+}
+
+body.kss .kss-example-preview .display-inline {
+  display: inline;
+}
+
+body.kss .kss-example-preview .display-inline-block {
+  display: inline-block;
+}
+
+body.kss .kss-example-preview .display-block {
+  display: block;
+}
+
+body.kss .kss-example-preview .display-table {
+  display: table;
+  width: 100%;
+}
+
+body.kss .kss-example-preview .display-table-cell {
+  display: table-cell;
+}
+
+body.kss .kss-example-preview .margin-zero {
+  margin: 0 !important;
+}
+
+body.kss .kss-example-preview .padding-zero {
+  padding: 0 !important;
+}
+
+body.kss .kss-example-preview .element-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.kss .kss-example-preview .inline-centered {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+body.kss .kss-example-preview .vertical-align-middle {
+  vertical-align: middle;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .vertical-centered-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body.kss .kss-example-preview .float-right {
+  float: right;
+}
+
+body.kss .kss-example-preview .float-left {
+  float: left;
+}
+
+body.kss .kss-example-preview .line-height-zero {
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .overflow-hidden {
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .overflow-touch-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.kss .kss-example-preview .hide {
+  display: none;
+}
+
+body.kss .kss-example-preview .disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+body.kss .kss-example-preview .bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .mobile-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .mobile-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .mobile-show {
+    display: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .tablet-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .desktop-show {
+    display: none !important;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .desktop-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .tablet-show {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .desktop-center {
+    text-align: center;
+  }
+}
+
+body.kss .kss-example-preview .overlay-dark:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  background-color: #333;
+}
+
+body.kss .kss-example-preview .overlay-dark img {
+  display: block;
+  margin: 0 auto;
+}
+
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .pager, body.kss .kss-example-preview .link-list.link-list--plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.kss .kss-example-preview .plain-list > li, body.kss .kss-example-preview .inline-list > li, body.kss .kss-example-preview .tabs__tabs > li, body.kss .kss-example-preview .link-list.link-list--inline > li, body.kss .kss-example-preview .pager > li, body.kss .kss-example-preview .link-list.link-list--plain > li {
+  margin: 0;
+  line-height: inherit;
+  list-style: none;
+}
+
+body.kss .kss-example-preview .inline-list > li, body.kss .kss-example-preview .tabs__tabs > li, body.kss .kss-example-preview .link-list.link-list--inline > li, body.kss .kss-example-preview .pager > li {
+  display: inline-block;
+}
+
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .gallery-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body.kss .kss-example-preview .vertical-centered {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body.kss .kss-example-preview .absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body.kss .kss-example-preview .underline-none {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .underline-none:hover {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+body.kss .kss-example-preview .reveal-hidden, body.kss .kss-example-preview .reveal__content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .margin-none {
+  margin: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-top-none {
+  margin-top: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-right-none {
+  margin-right: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-none {
+  margin-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-left-none {
+  margin-left: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-none {
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-none {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-one {
+  margin: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-top-one {
+  margin-top: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-right-one {
+  margin-right: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-one {
+  margin-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-left-one {
+  margin-left: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-one {
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-one {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-two {
+  margin: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-top-two {
+  margin-top: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-right-two {
+  margin-right: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-two {
+  margin-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-left-two {
+  margin-left: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-three {
+  margin: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-top-three {
+  margin-top: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-right-three {
+  margin-right: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-three {
+  margin-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-left-three {
+  margin-left: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-three {
+  margin-right: 3em !important;
+  margin-left: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-three {
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-four {
+  margin: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-top-four {
+  margin-top: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-right-four {
+  margin-right: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-four {
+  margin-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-left-four {
+  margin-left: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-four {
+  margin-right: 4em !important;
+  margin-left: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-four {
+  margin-top: 4em !important;
+  margin-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-none {
+  padding: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-top-none {
+  padding-top: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-right-none {
+  padding-right: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-none {
+  padding-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-left-none {
+  padding-left: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-none {
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-none {
+  padding-top: 0em !important;
+  padding-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-one {
+  padding: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-top-one {
+  padding-top: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-right-one {
+  padding-right: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-one {
+  padding-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-left-one {
+  padding-left: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-one {
+  padding-right: 1em !important;
+  padding-left: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-one {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-two {
+  padding: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-top-two {
+  padding-top: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-right-two {
+  padding-right: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-two {
+  padding-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-left-two {
+  padding-left: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-two {
+  padding-right: 2em !important;
+  padding-left: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-two {
+  padding-top: 2em !important;
+  padding-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-three {
+  padding: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-top-three {
+  padding-top: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-right-three {
+  padding-right: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-three {
+  padding-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-left-three {
+  padding-left: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-three {
+  padding-right: 3em !important;
+  padding-left: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-four {
+  padding: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-top-four {
+  padding-top: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-right-four {
+  padding-right: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-four {
+  padding-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-left-four {
+  padding-left: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-four {
+  padding-right: 4em !important;
+  padding-left: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-four {
+  padding-top: 4em !important;
+  padding-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview body {
+  margin: 0;
+}
+
+body.kss .kss-example-preview form,
+body.kss .kss-example-preview fieldset,
+body.kss .kss-example-preview legend {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body.kss .kss-example-preview .border-none {
+  border: "";
+}
+
+body.kss .kss-example-preview .border-top-none {
+  border-top: "";
+}
+
+body.kss .kss-example-preview .border-right-none {
+  border-right: "";
+}
+
+body.kss .kss-example-preview .border-bottom-none {
+  border-bottom: "";
+}
+
+body.kss .kss-example-preview .border-left-none {
+  border-left: "";
+}
+
+body.kss .kss-example-preview .border-vert-none {
+  border-right: "";
+  border-left: "";
+}
+
+body.kss .kss-example-preview .border-horz-none {
+  border-top: "";
+  border-bottom: "";
+}
+
+body.kss .kss-example-preview .border {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-top {
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-right {
+  border-right: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-left {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-vert {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .border-horz {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .iframe-4-3,
+body.kss .kss-example-preview .iframe-16-9 {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:3 */
+  height: 0;
+}
+
+body.kss .kss-example-preview .iframe-4-3 iframe,
+body.kss .kss-example-preview .iframe-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.kss .kss-example-preview .iframe-16-9 {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+}
+
+body.kss .kss-example-preview .relative {
+  position: relative;
+}
+
+body.kss .kss-example-preview .absolute {
+  position: absolute;
+}
+
+body.kss .kss-example-preview .display-inline {
+  display: inline;
+}
+
+body.kss .kss-example-preview .display-inline-block {
+  display: inline-block;
+}
+
+body.kss .kss-example-preview .display-block {
+  display: block;
+}
+
+body.kss .kss-example-preview .display-table {
+  display: table;
+  width: 100%;
+}
+
+body.kss .kss-example-preview .display-table-cell {
+  display: table-cell;
+}
+
+body.kss .kss-example-preview .margin-zero {
+  margin: 0 !important;
+}
+
+body.kss .kss-example-preview .padding-zero {
+  padding: 0 !important;
+}
+
+body.kss .kss-example-preview .element-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.kss .kss-example-preview .inline-centered {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+body.kss .kss-example-preview .vertical-align-middle {
+  vertical-align: middle;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .vertical-centered-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body.kss .kss-example-preview .float-right {
+  float: right;
+}
+
+body.kss .kss-example-preview .float-left {
+  float: left;
+}
+
+body.kss .kss-example-preview .line-height-zero {
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .overflow-hidden {
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .overflow-touch-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.kss .kss-example-preview .hide {
+  display: none;
+}
+
+body.kss .kss-example-preview .disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+body.kss .kss-example-preview .bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .mobile-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .mobile-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .mobile-show {
+    display: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .tablet-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .desktop-show {
+    display: none !important;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .desktop-hide {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .tablet-show {
+    display: none !important;
+  }
+  body.kss .kss-example-preview .desktop-center {
+    text-align: center;
+  }
+}
+
+body.kss .kss-example-preview .overlay-dark:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  background-color: #333;
+}
+
+body.kss .kss-example-preview .overlay-dark img {
+  display: block;
+  margin: 0 auto;
+}
+
+body.kss .kss-example-preview .plain-list, body.kss .kss-example-preview .inline-list, body.kss .kss-example-preview .tabs__tabs, body.kss .kss-example-preview .link-list.link-list--inline, body.kss .kss-example-preview .pager, body.kss .kss-example-preview .link-list.link-list--plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.kss .kss-example-preview .plain-list > li, body.kss .kss-example-preview .inline-list > li, body.kss .kss-example-preview .tabs__tabs > li, body.kss .kss-example-preview .link-list.link-list--inline > li, body.kss .kss-example-preview .pager > li, body.kss .kss-example-preview .link-list.link-list--plain > li {
+  margin: 0;
+  line-height: inherit;
+  list-style: none;
+}
+
+body.kss .kss-example-preview .inline-list > li, body.kss .kss-example-preview .tabs__tabs > li, body.kss .kss-example-preview .link-list.link-list--inline > li, body.kss .kss-example-preview .pager > li {
+  display: inline-block;
+}
+
+body.kss .kss-example-preview .clearfix:after, body.kss .kss-example-preview .tabs__tab-content:after, body.kss .kss-example-preview .content-container:after, body.kss .kss-example-preview .gallery-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body.kss .kss-example-preview .vertical-centered {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body.kss .kss-example-preview .absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body.kss .kss-example-preview .underline-none {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .underline-none:hover {
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+body.kss .kss-example-preview .reveal-hidden, body.kss .kss-example-preview .reveal__content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+body.kss .kss-example-preview .margin-none {
+  margin: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-top-none {
+  margin-top: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-right-none {
+  margin-right: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-none {
+  margin-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-left-none {
+  margin-left: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-none {
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-none {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .margin-one {
+  margin: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-top-one {
+  margin-top: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-right-one {
+  margin-right: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-one {
+  margin-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-left-one {
+  margin-left: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-one {
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-one {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .margin-two {
+  margin: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-top-two {
+  margin-top: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-right-two {
+  margin-right: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-two {
+  margin-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-left-two {
+  margin-left: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-two {
+  margin-right: 2em !important;
+  margin-left: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-two {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .margin-three {
+  margin: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-top-three {
+  margin-top: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-right-three {
+  margin-right: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-three {
+  margin-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-left-three {
+  margin-left: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-three {
+  margin-right: 3em !important;
+  margin-left: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-three {
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .margin-four {
+  margin: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-top-four {
+  margin-top: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-right-four {
+  margin-right: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-bottom-four {
+  margin-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-left-four {
+  margin-left: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-horz-four {
+  margin-right: 4em !important;
+  margin-left: 4em !important;
+}
+
+body.kss .kss-example-preview .margin-vert-four {
+  margin-top: 4em !important;
+  margin-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-none {
+  padding: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-top-none {
+  padding-top: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-right-none {
+  padding-right: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-none {
+  padding-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-left-none {
+  padding-left: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-none {
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-none {
+  padding-top: 0em !important;
+  padding-bottom: 0em !important;
+}
+
+body.kss .kss-example-preview .padding-one {
+  padding: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-top-one {
+  padding-top: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-right-one {
+  padding-right: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-one {
+  padding-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-left-one {
+  padding-left: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-one {
+  padding-right: 1em !important;
+  padding-left: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-one {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+body.kss .kss-example-preview .padding-two {
+  padding: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-top-two {
+  padding-top: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-right-two {
+  padding-right: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-two {
+  padding-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-left-two {
+  padding-left: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-two {
+  padding-right: 2em !important;
+  padding-left: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-two {
+  padding-top: 2em !important;
+  padding-bottom: 2em !important;
+}
+
+body.kss .kss-example-preview .padding-three {
+  padding: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-top-three {
+  padding-top: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-right-three {
+  padding-right: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-three {
+  padding-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-left-three {
+  padding-left: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-three {
+  padding-right: 3em !important;
+  padding-left: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-three {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+body.kss .kss-example-preview .padding-four {
+  padding: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-top-four {
+  padding-top: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-right-four {
+  padding-right: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-bottom-four {
+  padding-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-left-four {
+  padding-left: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-horz-four {
+  padding-right: 4em !important;
+  padding-left: 4em !important;
+}
+
+body.kss .kss-example-preview .padding-vert-four {
+  padding-top: 4em !important;
+  padding-bottom: 4em !important;
+}
+
+body.kss .kss-example-preview .cta {
+  display: inline-block;
+  margin: .5em 0;
+  padding: 17px 25px;
+  background-color: #e8762c;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: auto;
+  transition: background-color 0.25s, color 0.35s;
+}
+
+body.kss .kss-example-preview .cta:nth-child(n+2) {
+  margin-left: 1em;
+}
+
+body.kss .kss-example-preview .cta:hover, body.kss .kss-example-preview .cta:focus {
+  background-color: #ea8442;
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .cta:active {
+  background-color: #c92434;
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .cta.cta--orange {
+  background-color: #e8762c;
+}
+
+body.kss .kss-example-preview .cta.cta--orange:hover, body.kss .kss-example-preview .cta.cta--orange:focus {
+  background-color: #ea8442;
+}
+
+body.kss .kss-example-preview .cta.cta--orange:active {
+  background-color: #c92434;
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .cta.cta--light {
+  background-color: #fff;
+}
+
+body.kss .kss-example-preview .cta.cta--light:hover, body.kss .kss-example-preview .cta.cta--light:focus {
+  background-color: #fff;
+}
+
+body.kss .kss-example-preview .cta.cta--light:active {
+  background-color: #c92434;
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .cta.cta--dark {
+  background-color: #333;
+}
+
+body.kss .kss-example-preview .cta.cta--dark:hover, body.kss .kss-example-preview .cta.cta--dark:focus {
+  background-color: #444;
+}
+
+body.kss .kss-example-preview .cta.cta--dark:active {
+  background-color: #c92434;
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview .cta.cta--light {
+  color: #333;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .cta {
+    display: block;
+    text-align: center;
+  }
+  body.kss .kss-example-preview .cta:nth-child(n+2) {
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview button.cta {
+    width: 100%;
+  }
+}
+
+body.kss .kss-example-preview a {
+  text-decoration: none;
+  color: #2c2ee8;
+}
+
+body.kss .kss-example-preview a:hover {
+  text-decoration: underline;
+}
+
+body.kss .kss-example-preview img,
+body.kss .kss-example-preview .image {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+body.kss .kss-example-preview .thumbnail {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .thumbnail img {
+  max-width: 100%;
+  width: inherit;
+  transition: all 750ms ease;
+}
+
+body.kss .kss-example-preview .thumbnail img:hover {
+  -webkit-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body.kss .kss-example-preview .thumbnail.thumbnail--play:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: -40px 0 0 -40px;
+  line-height: 1;
+  font-family: "icons";
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+body.kss .kss-example-preview .accordion__item {
+  position: relative;
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .accordion__item:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .accordion__title {
+  position: relative;
+  cursor: pointer;
+  padding: 1em;
+}
+
+body.kss .kss-example-preview .accordion__title h5 {
+  margin: 0;
+}
+
+body.kss .kss-example-preview .accordion__title:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  right: 1em;
+  top: 50%;
+  font-family: "icons";
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .accordion__item.open .accordion__title:after {
+  content: "";
+}
+
+body.kss .kss-example-preview .accordion__content {
+  padding: 0 1em;
+}
+
+body.kss .kss-example-preview .flyout__slideout {
+  width: 100%;
+  overflow: inherit;
+}
+
+body.kss .kss-example-preview .flyout__content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+body.kss .kss-example-preview .flyout__close-wrapper .flyout__close-link {
+  position: relative;
+  z-index: 5;
+  float: right;
+}
+
+body.kss .kss-example-preview .global-notification {
+  padding: 1em 0;
+  color: #f2f2f2;
+  background-color: #1b1b1b;
+}
+
+body.kss .kss-example-preview .global-notification .global-notification__message {
+  padding-right: 3em;
+}
+
+body.kss .kss-example-preview .global-notification .global-notification__close:after {
+  display: inline-block;
+  position: absolute;
+  top: 0.4em;
+  right: 1.25em;
+  cursor: pointer;
+  content: "";
+  font-family: "icons";
+  font-size: 1.5em;
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .global-notification .global-notification__close:after {
+    right: 1em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .global-notification .global-notification__close:after {
+    right: 0.5em;
+  }
+}
+
+body.kss .kss-example-preview .reveal__content video {
+  width: 100%;
+}
+
+body.kss .kss-example-preview .reveal__close {
+  position: absolute;
+  z-index: 5;
+  right: 6px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background: #ebebeb;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9375em;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  transition: background .25s;
+}
+
+body.kss .kss-example-preview .reveal__close:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .reveal__close {
+    right: 8px;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .reveal__close {
+    right: 10px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+    font-size: 1.5em;
+  }
+}
+
+body.kss .kss-example-preview .tabs__tabs .tabs__tab-link {
+  margin-right: 2em;
+}
+
+body.kss .kss-example-preview .tabs__tabs .tabs__tab-link.is-active {
+  font-weight: bold;
+  border-bottom: 2px solid #2c2ee8;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .tabs__tab-content {
+  display: none;
+}
+
+body.kss .kss-example-preview .tabs__tab-content.is-active {
+  display: inherit;
+}
+
+body.kss .kss-example-preview .bg--white {
+  background-color: #fff;
+  color: #333;
+}
+
+body.kss .kss-example-preview .bg--white h1, body.kss .kss-example-preview .bg--white .heading--h1,
+body.kss .kss-example-preview .bg--white h2, body.kss .kss-example-preview .bg--white .heading--h2,
+body.kss .kss-example-preview .bg--white h3, body.kss .kss-example-preview .bg--white .heading--h3,
+body.kss .kss-example-preview .bg--white h4, body.kss .kss-example-preview .bg--white .heading--h4,
+body.kss .kss-example-preview .bg--white h5, body.kss .kss-example-preview .bg--white .heading--h5,
+body.kss .kss-example-preview .bg--white h6, body.kss .kss-example-preview .bg--white .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--white h1 a, body.kss .kss-example-preview .bg--white .heading--h1 a,
+body.kss .kss-example-preview .bg--white h2 a, body.kss .kss-example-preview .bg--white .heading--h2 a,
+body.kss .kss-example-preview .bg--white h3 a, body.kss .kss-example-preview .bg--white .heading--h3 a,
+body.kss .kss-example-preview .bg--white h4 a, body.kss .kss-example-preview .bg--white .heading--h4 a,
+body.kss .kss-example-preview .bg--white h5 a, body.kss .kss-example-preview .bg--white .heading--h5 a,
+body.kss .kss-example-preview .bg--white h6 a, body.kss .kss-example-preview .bg--white .heading--h6 a {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--light-gray-1 {
+  background-color: #fafafa;
+  color: #333;
+}
+
+body.kss .kss-example-preview .bg--light-gray-1 h1, body.kss .kss-example-preview .bg--light-gray-1 .heading--h1,
+body.kss .kss-example-preview .bg--light-gray-1 h2, body.kss .kss-example-preview .bg--light-gray-1 .heading--h2,
+body.kss .kss-example-preview .bg--light-gray-1 h3, body.kss .kss-example-preview .bg--light-gray-1 .heading--h3,
+body.kss .kss-example-preview .bg--light-gray-1 h4, body.kss .kss-example-preview .bg--light-gray-1 .heading--h4,
+body.kss .kss-example-preview .bg--light-gray-1 h5, body.kss .kss-example-preview .bg--light-gray-1 .heading--h5,
+body.kss .kss-example-preview .bg--light-gray-1 h6, body.kss .kss-example-preview .bg--light-gray-1 .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--light-gray-1 h1 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h1 a,
+body.kss .kss-example-preview .bg--light-gray-1 h2 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h2 a,
+body.kss .kss-example-preview .bg--light-gray-1 h3 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h3 a,
+body.kss .kss-example-preview .bg--light-gray-1 h4 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h4 a,
+body.kss .kss-example-preview .bg--light-gray-1 h5 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h5 a,
+body.kss .kss-example-preview .bg--light-gray-1 h6 a, body.kss .kss-example-preview .bg--light-gray-1 .heading--h6 a {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--light-gray-2 {
+  background-color: #ebebeb;
+  color: #333;
+}
+
+body.kss .kss-example-preview .bg--light-gray-2 h1, body.kss .kss-example-preview .bg--light-gray-2 .heading--h1,
+body.kss .kss-example-preview .bg--light-gray-2 h2, body.kss .kss-example-preview .bg--light-gray-2 .heading--h2,
+body.kss .kss-example-preview .bg--light-gray-2 h3, body.kss .kss-example-preview .bg--light-gray-2 .heading--h3,
+body.kss .kss-example-preview .bg--light-gray-2 h4, body.kss .kss-example-preview .bg--light-gray-2 .heading--h4,
+body.kss .kss-example-preview .bg--light-gray-2 h5, body.kss .kss-example-preview .bg--light-gray-2 .heading--h5,
+body.kss .kss-example-preview .bg--light-gray-2 h6, body.kss .kss-example-preview .bg--light-gray-2 .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--light-gray-2 h1 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h1 a,
+body.kss .kss-example-preview .bg--light-gray-2 h2 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h2 a,
+body.kss .kss-example-preview .bg--light-gray-2 h3 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h3 a,
+body.kss .kss-example-preview .bg--light-gray-2 h4 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h4 a,
+body.kss .kss-example-preview .bg--light-gray-2 h5 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h5 a,
+body.kss .kss-example-preview .bg--light-gray-2 h6 a, body.kss .kss-example-preview .bg--light-gray-2 .heading--h6 a {
+  color: #000;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-1 {
+  background-color: #464646;
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-1 h1, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h1,
+body.kss .kss-example-preview .bg--dark-gray-1 h2, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h2,
+body.kss .kss-example-preview .bg--dark-gray-1 h3, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h3,
+body.kss .kss-example-preview .bg--dark-gray-1 h4, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h4,
+body.kss .kss-example-preview .bg--dark-gray-1 h5, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h5,
+body.kss .kss-example-preview .bg--dark-gray-1 h6, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-1 h1 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h1 a,
+body.kss .kss-example-preview .bg--dark-gray-1 h2 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h2 a,
+body.kss .kss-example-preview .bg--dark-gray-1 h3 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h3 a,
+body.kss .kss-example-preview .bg--dark-gray-1 h4 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h4 a,
+body.kss .kss-example-preview .bg--dark-gray-1 h5 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h5 a,
+body.kss .kss-example-preview .bg--dark-gray-1 h6 a, body.kss .kss-example-preview .bg--dark-gray-1 .heading--h6 a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-2 {
+  background-color: #333;
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-2 h1, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h1,
+body.kss .kss-example-preview .bg--dark-gray-2 h2, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h2,
+body.kss .kss-example-preview .bg--dark-gray-2 h3, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h3,
+body.kss .kss-example-preview .bg--dark-gray-2 h4, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h4,
+body.kss .kss-example-preview .bg--dark-gray-2 h5, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h5,
+body.kss .kss-example-preview .bg--dark-gray-2 h6, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-2 h1 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h1 a,
+body.kss .kss-example-preview .bg--dark-gray-2 h2 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h2 a,
+body.kss .kss-example-preview .bg--dark-gray-2 h3 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h3 a,
+body.kss .kss-example-preview .bg--dark-gray-2 h4 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h4 a,
+body.kss .kss-example-preview .bg--dark-gray-2 h5 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h5 a,
+body.kss .kss-example-preview .bg--dark-gray-2 h6 a, body.kss .kss-example-preview .bg--dark-gray-2 .heading--h6 a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-3 {
+  background-color: #1b1b1b;
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-3 h1, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1,
+body.kss .kss-example-preview .bg--dark-gray-3 h2, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2,
+body.kss .kss-example-preview .bg--dark-gray-3 h3, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3,
+body.kss .kss-example-preview .bg--dark-gray-3 h4, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4,
+body.kss .kss-example-preview .bg--dark-gray-3 h5, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5,
+body.kss .kss-example-preview .bg--dark-gray-3 h6, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .bg--dark-gray-3 h1 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h1 a,
+body.kss .kss-example-preview .bg--dark-gray-3 h2 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h2 a,
+body.kss .kss-example-preview .bg--dark-gray-3 h3 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h3 a,
+body.kss .kss-example-preview .bg--dark-gray-3 h4 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h4 a,
+body.kss .kss-example-preview .bg--dark-gray-3 h5 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h5 a,
+body.kss .kss-example-preview .bg--dark-gray-3 h6 a, body.kss .kss-example-preview .bg--dark-gray-3 .heading--h6 a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .content-container {
+  box-sizing: border-box;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+body.kss .kss-example-preview .content-container h2:first-child {
+  margin-top: 0;
+  margin-bottom: .75em;
+}
+
+body.kss .kss-example-preview .content-container.content-container--narrow {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+body.kss .kss-example-preview .content-container.content-container--wide {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+body.kss .kss-example-preview .content-container.content-container--text-column {
+  padding-left: 22%;
+  padding-right: 22%;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container.content-container--narrow, body.kss .kss-example-preview .content-container.content-container--text-column {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .content-container, body.kss .kss-example-preview .content-container.content-container--wide, body.kss .kss-example-preview .content-container.content-container--narrow, body.kss .kss-example-preview .content-container.content-container--text-column {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (min-width: 1550px) {
+  body.kss .kss-example-preview .content-container {
+    padding-left: 170.5px;
+    padding-right: 170.5px;
+  }
+  body.kss .kss-example-preview .content-container.content-container--narrow {
+    padding-left: 248px;
+    padding-right: 248px;
+  }
+  body.kss .kss-example-preview .content-container.content-container--wide {
+    padding-left: 46.5px;
+    padding-right: 46.5px;
+  }
+  body.kss .kss-example-preview .content-container.content-container--text-column {
+    padding-left: 341px;
+    padding-right: 341px;
+  }
+}
+
+body.kss .kss-example-preview .divider {
+  width: 100%;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .divider.divider--dark {
+  border-color: #464646;
+}
+
+body.kss .kss-example-preview .divider.divider--short {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .divider.divider--short {
+    width: 100%;
+  }
+}
+
+body.kss .kss-example-preview .vertical-divider {
+  border-left: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
+  border-left: 0;
+  border-right: 1px solid #dedede;
+  padding-left: inherit;
+}
+
+body.kss .kss-example-preview .vertical-divider p:first-child,
+body.kss .kss-example-preview .vertical-divider h2:first-child,
+body.kss .kss-example-preview .vertical-divider h3:first-child {
+  margin-top: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider p:last-child {
+  margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .vertical-divider.vertical-divider--dark {
+  border-color: #464646;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .vertical-divider {
+    min-height: 50px;
+    padding-left: 2em;
+  }
+  body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
+    padding-right: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .vertical-divider {
+    border: 0;
+  }
+  body.kss .kss-example-preview .vertical-divider.vertical-divider--right {
+    border: 0;
+  }
+  body.kss .kss-example-preview .vertical-divider.vertical-divider--mobile {
+    border-left: 1px solid #dedede;
+    padding-left: 2em;
+  }
+}
+
+body.kss .kss-example-preview .gallery-grid__item {
+  margin-bottom: 2.12766%;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item {
+    width: 48.93617%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item:nth-child(2n + 2) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item {
+    width: 31.91489%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 2) {
+    margin-left: 34.04255%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 3) {
+    margin-left: 68.08511%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item,
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item {
+    width: 48.93617%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(2n + 1),
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(2n + 2),
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(2n + 2) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item {
+    width: 48.93617%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--2 .gallery-grid__item:nth-child(2n + 2) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item {
+    width: 31.91489%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 2) {
+    margin-left: 34.04255%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--3 .gallery-grid__item:nth-child(3n + 3) {
+    margin-left: 68.08511%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item {
+    width: 23.40426%;
+    float: left;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(4n + 2) {
+    margin-left: 25.53191%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(4n + 3) {
+    margin-left: 51.06383%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--4 .gallery-grid__item:nth-child(4n + 4) {
+    margin-left: 76.59574%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item {
+    width: 18.64407%;
+    float: left;
+    margin-bottom: 1.69492%;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(5n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(5n + 2) {
+    margin-left: 20.33898%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(5n + 3) {
+    margin-left: 40.67797%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(5n + 4) {
+    margin-left: 61.01695%;
+    margin-right: -100%;
+    clear: none;
+  }
+  body.kss .kss-example-preview .gallery-grid--5 .gallery-grid__item:nth-child(5n + 5) {
+    margin-left: 81.35593%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
+body.kss .kss-example-preview .grid--1 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--1 {
+    width: 6.38298%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--1.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--1:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--1 {
+    margin-left: 8.51064%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--1 {
+    margin-left: -8.51064%;
+  }
+}
+
+body.kss .kss-example-preview .grid--2 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--2 {
+    width: 14.89362%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--2.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--2:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--2 {
+    margin-left: 17.02128%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--2 {
+    margin-left: -17.02128%;
+  }
+}
+
+body.kss .kss-example-preview .grid--3 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--3 {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--3.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--3:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--3 {
+    margin-left: 25.53191%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--3 {
+    margin-left: -25.53191%;
+  }
+}
+
+body.kss .kss-example-preview .grid--4 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--4 {
+    width: 31.91489%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--4.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--4:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--4 {
+    margin-left: 34.04255%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--4 {
+    margin-left: -34.04255%;
+  }
+}
+
+body.kss .kss-example-preview .grid--5 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--5 {
+    width: 40.42553%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--5.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--5:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--5 {
+    margin-left: 42.55319%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--5 {
+    margin-left: -42.55319%;
+  }
+}
+
+body.kss .kss-example-preview .grid--6 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--6 {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--6.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--6:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--6 {
+    margin-left: 51.06383%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--6 {
+    margin-left: -51.06383%;
+  }
+}
+
+body.kss .kss-example-preview .grid--7 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--7 {
+    width: 57.44681%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--7.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--7:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--7 {
+    margin-left: 59.57447%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--7 {
+    margin-left: -59.57447%;
+  }
+}
+
+body.kss .kss-example-preview .grid--8 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--8 {
+    width: 65.95745%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--8.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--8:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--8 {
+    margin-left: 68.08511%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--8 {
+    margin-left: -68.08511%;
+  }
+}
+
+body.kss .kss-example-preview .grid--9 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--9 {
+    width: 74.46809%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--9.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--9:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--9 {
+    margin-left: 76.59574%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--9 {
+    margin-left: -76.59574%;
+  }
+}
+
+body.kss .kss-example-preview .grid--10 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--10 {
+    width: 82.97872%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--10.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--10:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--10 {
+    margin-left: 85.10638%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--10 {
+    margin-left: -85.10638%;
+  }
+}
+
+body.kss .kss-example-preview .grid--11 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--11 {
+    width: 91.48936%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--11.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--11:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--11 {
+    margin-left: 93.61702%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--11 {
+    margin-left: -93.61702%;
+  }
+}
+
+body.kss .kss-example-preview .grid--12 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .grid--12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--12.grid--last {
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--12:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push--12 {
+    margin-left: 102.12766%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull--12 {
+    margin-left: -102.12766%;
+  }
+}
+
+@media (max-width: 799.5px) and (min-width: 426px) {
+  body.kss .kss-example-preview .grid--tablet-mobile-split .grid--3 {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--tablet-mobile-split .grid--3:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .grid--tablet-full {
+    width: 100%;
+    margin-right: 0;
+  }
+  body.kss .kss-example-preview .grid--tablet-half {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+  body.kss .kss-example-preview .grid--tablet-half:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--1 {
+    margin-left: 4.23729%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--1 {
+    margin-left: -4.23729%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--2 {
+    margin-left: 8.47458%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--2 {
+    margin-left: -8.47458%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--3 {
+    margin-left: 12.71186%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--3 {
+    margin-left: -12.71186%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--4 {
+    margin-left: 16.94915%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--4 {
+    margin-left: -16.94915%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--5 {
+    margin-left: 21.18644%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--5 {
+    margin-left: -21.18644%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--6 {
+    margin-left: 25.42373%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--6 {
+    margin-left: -25.42373%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--7 {
+    margin-left: 29.66102%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--7 {
+    margin-left: -29.66102%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--8 {
+    margin-left: 33.89831%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--8 {
+    margin-left: -33.89831%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--9 {
+    margin-left: 38.13559%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--9 {
+    margin-left: -38.13559%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--10 {
+    margin-left: 42.37288%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--10 {
+    margin-left: -42.37288%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--11 {
+    margin-left: 46.61017%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--11 {
+    margin-left: -46.61017%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--12 {
+    margin-left: 50.84746%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--12 {
+    margin-left: -50.84746%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--13 {
+    margin-left: 55.08475%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--13 {
+    margin-left: -55.08475%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--14 {
+    margin-left: 59.32203%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--14 {
+    margin-left: -59.32203%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--15 {
+    margin-left: 63.55932%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--15 {
+    margin-left: -63.55932%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--16 {
+    margin-left: 67.79661%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--16 {
+    margin-left: -67.79661%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--17 {
+    margin-left: 72.0339%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--17 {
+    margin-left: -72.0339%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--18 {
+    margin-left: 76.27119%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--18 {
+    margin-left: -76.27119%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--19 {
+    margin-left: 80.50847%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--19 {
+    margin-left: -80.50847%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--20 {
+    margin-left: 84.74576%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--20 {
+    margin-left: -84.74576%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--21 {
+    margin-left: 88.98305%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--21 {
+    margin-left: -88.98305%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--22 {
+    margin-left: 93.22034%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--22 {
+    margin-left: -93.22034%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--23 {
+    margin-left: 97.45763%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--23 {
+    margin-left: -97.45763%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .push-half--24 {
+    margin-left: 101.69492%;
+  }
+}
+
+@media (min-width: 640px) {
+  body.kss .kss-example-preview .pull-half--24 {
+    margin-left: -101.69492%;
+  }
+}
+
+body.kss .kss-example-preview .hero {
+  background-size: cover;
+  background-position: center;
+  padding: 3em 0;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+body.kss .kss-example-preview .hero .hero__eyebrow {
+  margin: 0 0 2em 0;
+}
+
+body.kss .kss-example-preview .hero h1,
+body.kss .kss-example-preview .hero .hero__title {
+  margin: 0;
+}
+
+body.kss .kss-example-preview .hero .hero__subtitle {
+  margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .hero .hero__extra-content {
+  margin-top: 2em;
+  text-align: left;
+}
+
+body.kss .kss-example-preview .section {
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+body.kss .kss-example-preview .section.section--padded-one {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+body.kss .kss-example-preview .section.section--padded-two {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+body.kss .kss-example-preview .section.section--padded-three {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+body.kss .kss-example-preview .section.section--padded-four {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+body.kss .kss-example-preview .section.section--padded-six {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+body.kss .kss-example-preview .section.section--background-image {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  body.kss .kss-example-preview .section.section--padded-one {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  body.kss .kss-example-preview .section.section--padded-two {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  body.kss .kss-example-preview .section.section--padded-four {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  body.kss .kss-example-preview .section.section--padded-six {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
+body.kss .kss-example-preview .section.section--padding-top-none {
+  padding-top: 0;
+}
+
+body.kss .kss-example-preview .section.section--padding-bottom-none {
+  padding-bottom: 0;
+}
+
+body.kss .kss-example-preview .spacer {
+  clear: both;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body.kss .kss-example-preview .spacer.spacer--one {
+  height: 1em;
+}
+
+body.kss .kss-example-preview .spacer.spacer--two {
+  height: 2em;
+}
+
+body.kss .kss-example-preview .spacer.spacer--three {
+  height: 3em;
+}
+
+body.kss .kss-example-preview .spacer.spacer--four {
+  height: 4em;
+}
+
+body.kss .kss-example-preview .spacer.spacer--five {
+  height: 5em;
+}
+
+body.kss .kss-example-preview .spacer.spacer--six {
+  height: 6em;
+}
+
+body.kss .kss-example-preview ul {
+  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='5' height='10'%3E %3Ccircle cx='3' cy='5' r='1.5'/%3E %3C/svg%3E");
+  padding-left: 1em;
+}
+
+body.kss .kss-example-preview li {
+  margin-bottom: 0.7em;
+  line-height: 1.5;
+}
+
+body.kss .kss-example-preview .list--negative {
+  list-style-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 5 10' xml:space='preserve' width='5' height='10'%3E %3Ccircle fill='%23ffffff' cx='3' cy='5' r='1.5'/%3E %3C/svg%3E");
+}
+
+body.kss .kss-example-preview .icon--big {
+  font-size: 2.5em;
+}
+
+body.kss .kss-example-preview .icon--bigger {
+  font-size: 5em;
+}
+
+body.kss .kss-example-preview .icon--biggest {
+  font-size: 7em;
+}
+
+body.kss .kss-example-preview .global-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #1b1b1b;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__first {
+  float: left;
+  width: 60%;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__second {
+  float: right;
+  width: 40%;
+  text-align: right;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__menu {
+  float: left;
+  margin-bottom: 1em;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__menu li {
+  padding: 0 1em;
+  line-height: 30px;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__menu li a {
+  color: #bbb;
+  font-family: "Open Sans", sans-serif;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__social {
+  margin-bottom: 1em;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__social li {
+  line-height: 30px;
+}
+
+body.kss .kss-example-preview .global-footer .global-footer__social a {
+  color: #bbb;
+  font-size: 1.2em;
+  padding-left: 1em;
+  text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .global-footer .global-footer__first {
+    width: 65%;
+  }
+  body.kss .kss-example-preview .global-footer .global-footer__second {
+    width: 35%;
+  }
+  body.kss .kss-example-preview .global-footer .global-footer__menu li {
+    padding: 0 .5em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .global-footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  body.kss .kss-example-preview .global-footer .global-footer__first,
+  body.kss .kss-example-preview .global-footer .global-footer__second {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+  body.kss .kss-example-preview .global-footer .global-footer__menu {
+    float: none;
+    margin: 1em 0 0;
+  }
+  body.kss .kss-example-preview .global-footer .global-footer__social li a {
+    padding: .5em;
+  }
+}
+
+body.kss .kss-example-preview .global-nav {
+  position: relative;
+  padding: 1.75em 0;
+  background: #fff;
+}
+
+body.kss .kss-example-preview .global-nav .global-nav__logo {
+  max-width: 200px;
+  float: left;
+}
+
+@media (max-width: 1550px) {
+  body.kss .kss-example-preview .global-nav .global-nav__logo {
+    max-width: 140px;
+    margin-top: 6px;
+  }
+}
+
+body.kss .kss-example-preview .global-nav .global-nav__logo a {
+  display: block;
+  line-height: 0;
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .global-nav .global-nav__logo,
+  body.kss .kss-example-preview .global-nav .global-nav__menu {
+    float: left;
+    opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__logo {
+    margin-right: 3em;
+    min-height: 39px;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu {
+    margin-right: 1em;
+    float: right;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu ul {
+    margin: 0.8em 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu ul li {
+    display: inline-block;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu ul li a {
+    position: relative;
+    padding: 10px 12px;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1550px) {
+  body.kss .kss-example-preview .global-nav .global-nav__menu ul li a {
+    padding: 10px 8px;
+  }
+}
+
+@media (min-width: 961px) {
+  body.kss .kss-example-preview .global-nav .global-nav__hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .global-nav {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 64px;
+  }
+  body.kss .kss-example-preview .global-nav .relative {
+    position: initial;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__mobile-wrapper {
+    position: absolute;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    z-index: 10000;
+    background: #f0f0f0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__mobile-wrapper.is-mobile {
+    transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.5s;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__mobile-wrapper.is-mobile.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    padding: 14px;
+    transition: background 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__hamburger.open {
+    background: #f0f0f0;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-top: 1.5em;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu li {
+    display: block;
+    padding: 0 1em;
+  }
+  body.kss .kss-example-preview .global-nav .global-nav__menu li a {
+    display: block;
+    padding: 6px 0.5em;
+    border-bottom: 1px solid #ddd;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    color: #333;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .global-nav__top .global-nav__menu li {
+    padding: 0 2em;
+  }
+  body.kss .kss-example-preview .global-nav__top .global-nav__menu li a {
+    padding: 6px 0;
+  }
+}
+
+body.kss .kss-example-preview .hamburger {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty,
+body.kss .kss-example-preview .hamburger .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 36px;
+  background: #000;
+  font-size: 0;
+  text-indent: -999em;
+  transition: all .5s;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  content: '';
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty {
+  top: 18px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:before {
+  top: -4px;
+}
+
+body.kss .kss-example-preview .hamburger .hamburger__patty:after {
+  top: 4px;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty {
+  background-color: transparent;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:before,
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after {
+  top: 0;
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body.kss .kss-example-preview .hamburger.hamburger--open .hamburger__patty:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body.kss .kss-example-preview .pager {
+  margin: 1em 0;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap a {
+  color: #787878;
+  padding: 0.5em 1em;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--current a {
+  display: none;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--first a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after,
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--last a:after {
+  height: 1.3em;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--first a:before {
+  content: "";
+  padding-right: 0.5em;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--previous a:before {
+  content: "";
+  padding-right: 0.5em;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--next a:after {
+  content: "";
+  padding-left: 0.5em;
+}
+
+body.kss .kss-example-preview .pager .pager__endcap.pager__endcap--last a:after {
+  content: "";
+  padding-left: 0.5em;
+}
+
+body.kss .kss-example-preview .pager .pager__page {
+  margin: 0 .1em;
+}
+
+body.kss .kss-example-preview .pager .pager__page a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #787878;
+  font-size: 0.75em;
+  transition: color .25s;
+}
+
+body.kss .kss-example-preview .pager .pager__page a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .pager .pager__page.pager__page--current a {
+  color: #333;
+  border: 1px solid #333;
+}
+
+@media (max-width: 960px) {
+  body.kss .kss-example-preview .pager {
+    line-height: 2.25em;
+  }
+  body.kss .kss-example-preview .pager .pager__endcap a {
+    padding: 1em 1em;
+  }
+  body.kss .kss-example-preview .pager .pager__page a {
+    width: 2.25em;
+    height: 2.25em;
+    font-size: 1em;
+  }
+}
+
+body.kss .kss-example-preview .teaser-item > a {
+  display: block;
+  color: #333;
+  transition: color .25s;
+}
+
+body.kss .kss-example-preview .teaser-item > a:hover {
+  color: #2c2ee8;
+  text-decoration: none;
+}
+
+body.kss .kss-example-preview .teaser-item > a:hover img {
+  opacity: 0.85;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__thumbnail {
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__thumbnail .thumbnail {
+  border: 1px solid #dedede;
+}
+
+body.kss .kss-example-preview .teaser-item.teaser-item--no-border .teaser-item__thumbnail .thumbnail {
+  border: 0;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__eyebrow {
+  margin-top: 1.5em;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__title {
+  margin-top: 0.7em;
+  margin-bottom: 0;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__eyebrow + .teaser-item__title,
+body.kss .kss-example-preview .teaser-item .teaser-item__info:first-child .teaser-item__title:first-child {
+  margin-top: 0;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__description {
+  line-height: 1.7;
+}
+
+body.kss .kss-example-preview .teaser-item .teaser-item__link {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .teaser-item {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview .teaser-item.grid--tablet-half {
+    margin-bottom: 2em;
+  }
+}
+
+body.kss .kss-example-preview body,
+body.kss .kss-example-preview .text--body-base,
+body.kss .kss-example-preview .kss-example-preview-wrapper {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.88;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.kss .kss-example-preview .text--body-small, body.kss .kss-example-preview .teaser-item .teaser-item__description {
+  font-size: 0.875em;
+  line-height: 1.86;
+}
+
+body.kss .kss-example-preview .text--body-medium {
+  font-size: 1.25em;
+  line-height: 1.75;
+}
+
+body.kss .kss-example-preview .text--body-large {
+  font-size: 1.875em;
+  line-height: 1.53;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .text--body-medium {
+    font-size: 1.125em;
+  }
+  body.kss .kss-example-preview .text--body-large {
+    font-size: 1.5em;
+  }
+}
+
+body.kss .kss-example-preview code {
+  padding: 0px 2px;
+  font-family: Courier, "Courier New", Monaco, Tahoma;
+  background: #333;
+  color: #cf7777;
+}
+
+body.kss .kss-example-preview pre {
+  padding: 1em;
+  margin-bottom: 1em;
+  background: #333;
+  overflow: auto;
+}
+
+body.kss .kss-example-preview .text--open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+}
+
+body.kss .kss-example-preview .text--open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+}
+
+body.kss .kss-example-preview .text--merriweather {
+  font-family: "Merriweather", serif;
+}
+
+body.kss .kss-example-preview strong,
+body.kss .kss-example-preview .text--bold {
+  font-weight: bold;
+}
+
+body.kss .kss-example-preview .text--light {
+  font-weight: 100;
+}
+
+body.kss .kss-example-preview em,
+body.kss .kss-example-preview .text--italic {
+  font-style: italic;
+}
+
+body.kss .kss-example-preview .text--caps {
+  text-transform: uppercase;
+}
+
+body.kss .kss-example-preview .text--left {
+  text-align: left;
+}
+
+body.kss .kss-example-preview .text--right {
+  text-align: right;
+}
+
+body.kss .kss-example-preview .text--centered {
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview .mobile-text--centered {
+    text-align: center;
+  }
+}
+
+body.kss .kss-example-preview .text--justified {
+  text-align: justified;
+}
+
+body.kss .kss-example-preview .text--lineheight-zero {
+  line-height: 0;
+}
+
+body.kss .kss-example-preview .text--white {
+  color: #fff !important;
+}
+
+body.kss .kss-example-preview .text--white h1, body.kss .kss-example-preview .text--white .heading--h1,
+body.kss .kss-example-preview .text--white h2, body.kss .kss-example-preview .text--white .heading--h2,
+body.kss .kss-example-preview .text--white h3, body.kss .kss-example-preview .text--white .heading--h3,
+body.kss .kss-example-preview .text--white h4, body.kss .kss-example-preview .text--white .heading--h4,
+body.kss .kss-example-preview .text--white h5, body.kss .kss-example-preview .text--white .heading--h5,
+body.kss .kss-example-preview .text--white h6, body.kss .kss-example-preview .text--white .heading--h6 {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .text--white h1 a, body.kss .kss-example-preview .text--white .heading--h1 a,
+body.kss .kss-example-preview .text--white h2 a, body.kss .kss-example-preview .text--white .heading--h2 a,
+body.kss .kss-example-preview .text--white h3 a, body.kss .kss-example-preview .text--white .heading--h3 a,
+body.kss .kss-example-preview .text--white h4 a, body.kss .kss-example-preview .text--white .heading--h4 a,
+body.kss .kss-example-preview .text--white h5 a, body.kss .kss-example-preview .text--white .heading--h5 a,
+body.kss .kss-example-preview .text--white h6 a, body.kss .kss-example-preview .text--white .heading--h6 a {
+  color: #fff;
+}
+
+body.kss .kss-example-preview .text--light-body {
+  color: #bbb !important;
+}
+
+body.kss .kss-example-preview .text--light-body h1, body.kss .kss-example-preview .text--light-body .heading--h1,
+body.kss .kss-example-preview .text--light-body h2, body.kss .kss-example-preview .text--light-body .heading--h2,
+body.kss .kss-example-preview .text--light-body h3, body.kss .kss-example-preview .text--light-body .heading--h3,
+body.kss .kss-example-preview .text--light-body h4, body.kss .kss-example-preview .text--light-body .heading--h4,
+body.kss .kss-example-preview .text--light-body h5, body.kss .kss-example-preview .text--light-body .heading--h5,
+body.kss .kss-example-preview .text--light-body h6, body.kss .kss-example-preview .text--light-body .heading--h6 {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .text--light-body h1 a, body.kss .kss-example-preview .text--light-body .heading--h1 a,
+body.kss .kss-example-preview .text--light-body h2 a, body.kss .kss-example-preview .text--light-body .heading--h2 a,
+body.kss .kss-example-preview .text--light-body h3 a, body.kss .kss-example-preview .text--light-body .heading--h3 a,
+body.kss .kss-example-preview .text--light-body h4 a, body.kss .kss-example-preview .text--light-body .heading--h4 a,
+body.kss .kss-example-preview .text--light-body h5 a, body.kss .kss-example-preview .text--light-body .heading--h5 a,
+body.kss .kss-example-preview .text--light-body h6 a, body.kss .kss-example-preview .text--light-body .heading--h6 a {
+  color: #bbb;
+}
+
+body.kss .kss-example-preview .text--medium-body, body.kss .kss-example-preview .global-footer .global-footer__copyright {
+  color: #787878 !important;
+}
+
+body.kss .kss-example-preview .text--medium-body h1, body.kss .kss-example-preview .global-footer .global-footer__copyright h1, body.kss .kss-example-preview .text--medium-body .heading--h1, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h1,
+body.kss .kss-example-preview .text--medium-body h2, body.kss .kss-example-preview .global-footer .global-footer__copyright h2, body.kss .kss-example-preview .text--medium-body .heading--h2, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h2,
+body.kss .kss-example-preview .text--medium-body h3, body.kss .kss-example-preview .global-footer .global-footer__copyright h3, body.kss .kss-example-preview .text--medium-body .heading--h3, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h3,
+body.kss .kss-example-preview .text--medium-body h4, body.kss .kss-example-preview .global-footer .global-footer__copyright h4, body.kss .kss-example-preview .text--medium-body .heading--h4, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h4,
+body.kss .kss-example-preview .text--medium-body h5, body.kss .kss-example-preview .global-footer .global-footer__copyright h5, body.kss .kss-example-preview .text--medium-body .heading--h5, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h5,
+body.kss .kss-example-preview .text--medium-body h6, body.kss .kss-example-preview .global-footer .global-footer__copyright h6, body.kss .kss-example-preview .text--medium-body .heading--h6, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h6 {
+  color: #787878;
+}
+
+body.kss .kss-example-preview .text--medium-body h1 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h1 a, body.kss .kss-example-preview .text--medium-body .heading--h1 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h1 a,
+body.kss .kss-example-preview .text--medium-body h2 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h2 a, body.kss .kss-example-preview .text--medium-body .heading--h2 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h2 a,
+body.kss .kss-example-preview .text--medium-body h3 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h3 a, body.kss .kss-example-preview .text--medium-body .heading--h3 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h3 a,
+body.kss .kss-example-preview .text--medium-body h4 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h4 a, body.kss .kss-example-preview .text--medium-body .heading--h4 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h4 a,
+body.kss .kss-example-preview .text--medium-body h5 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h5 a, body.kss .kss-example-preview .text--medium-body .heading--h5 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h5 a,
+body.kss .kss-example-preview .text--medium-body h6 a, body.kss .kss-example-preview .global-footer .global-footer__copyright h6 a, body.kss .kss-example-preview .text--medium-body .heading--h6 a, body.kss .kss-example-preview .global-footer .global-footer__copyright .heading--h6 a {
+  color: #787878;
+}
+
+body.kss .kss-example-preview .text--dark-body {
+  color: #333 !important;
+}
+
+body.kss .kss-example-preview .text--dark-body h1, body.kss .kss-example-preview .text--dark-body .heading--h1,
+body.kss .kss-example-preview .text--dark-body h2, body.kss .kss-example-preview .text--dark-body .heading--h2,
+body.kss .kss-example-preview .text--dark-body h3, body.kss .kss-example-preview .text--dark-body .heading--h3,
+body.kss .kss-example-preview .text--dark-body h4, body.kss .kss-example-preview .text--dark-body .heading--h4,
+body.kss .kss-example-preview .text--dark-body h5, body.kss .kss-example-preview .text--dark-body .heading--h5,
+body.kss .kss-example-preview .text--dark-body h6, body.kss .kss-example-preview .text--dark-body .heading--h6 {
+  color: #333;
+}
+
+body.kss .kss-example-preview .text--dark-body h1 a, body.kss .kss-example-preview .text--dark-body .heading--h1 a,
+body.kss .kss-example-preview .text--dark-body h2 a, body.kss .kss-example-preview .text--dark-body .heading--h2 a,
+body.kss .kss-example-preview .text--dark-body h3 a, body.kss .kss-example-preview .text--dark-body .heading--h3 a,
+body.kss .kss-example-preview .text--dark-body h4 a, body.kss .kss-example-preview .text--dark-body .heading--h4 a,
+body.kss .kss-example-preview .text--dark-body h5 a, body.kss .kss-example-preview .text--dark-body .heading--h5 a,
+body.kss .kss-example-preview .text--dark-body h6 a, body.kss .kss-example-preview .text--dark-body .heading--h6 a {
+  color: #333;
+}
+
+body.kss .kss-example-preview .text--link {
+  color: #2c2ee8 !important;
+}
+
+body.kss .kss-example-preview .text--link h1, body.kss .kss-example-preview .text--link .heading--h1,
+body.kss .kss-example-preview .text--link h2, body.kss .kss-example-preview .text--link .heading--h2,
+body.kss .kss-example-preview .text--link h3, body.kss .kss-example-preview .text--link .heading--h3,
+body.kss .kss-example-preview .text--link h4, body.kss .kss-example-preview .text--link .heading--h4,
+body.kss .kss-example-preview .text--link h5, body.kss .kss-example-preview .text--link .heading--h5,
+body.kss .kss-example-preview .text--link h6, body.kss .kss-example-preview .text--link .heading--h6 {
+  color: #2c2ee8;
+}
+
+body.kss .kss-example-preview .text--link h1 a, body.kss .kss-example-preview .text--link .heading--h1 a,
+body.kss .kss-example-preview .text--link h2 a, body.kss .kss-example-preview .text--link .heading--h2 a,
+body.kss .kss-example-preview .text--link h3 a, body.kss .kss-example-preview .text--link .heading--h3 a,
+body.kss .kss-example-preview .text--link h4 a, body.kss .kss-example-preview .text--link .heading--h4 a,
+body.kss .kss-example-preview .text--link h5 a, body.kss .kss-example-preview .text--link .heading--h5 a,
+body.kss .kss-example-preview .text--link h6 a, body.kss .kss-example-preview .text--link .heading--h6 a {
+  color: #2c2ee8;
+}
+
+body.kss .kss-example-preview .text--headlines {
+  color: #000 !important;
+}
+
+body.kss .kss-example-preview .text--headlines h1, body.kss .kss-example-preview .text--headlines .heading--h1,
+body.kss .kss-example-preview .text--headlines h2, body.kss .kss-example-preview .text--headlines .heading--h2,
+body.kss .kss-example-preview .text--headlines h3, body.kss .kss-example-preview .text--headlines .heading--h3,
+body.kss .kss-example-preview .text--headlines h4, body.kss .kss-example-preview .text--headlines .heading--h4,
+body.kss .kss-example-preview .text--headlines h5, body.kss .kss-example-preview .text--headlines .heading--h5,
+body.kss .kss-example-preview .text--headlines h6, body.kss .kss-example-preview .text--headlines .heading--h6 {
+  color: #000;
+}
+
+body.kss .kss-example-preview .text--headlines h1 a, body.kss .kss-example-preview .text--headlines .heading--h1 a,
+body.kss .kss-example-preview .text--headlines h2 a, body.kss .kss-example-preview .text--headlines .heading--h2 a,
+body.kss .kss-example-preview .text--headlines h3 a, body.kss .kss-example-preview .text--headlines .heading--h3 a,
+body.kss .kss-example-preview .text--headlines h4 a, body.kss .kss-example-preview .text--headlines .heading--h4 a,
+body.kss .kss-example-preview .text--headlines h5 a, body.kss .kss-example-preview .text--headlines .heading--h5 a,
+body.kss .kss-example-preview .text--headlines h6 a, body.kss .kss-example-preview .text--headlines .heading--h6 a {
+  color: #000;
+}
+
+body.kss .kss-example-preview .text--form-error {
+  color: #c72035 !important;
+}
+
+body.kss .kss-example-preview .text--form-error h1, body.kss .kss-example-preview .text--form-error .heading--h1,
+body.kss .kss-example-preview .text--form-error h2, body.kss .kss-example-preview .text--form-error .heading--h2,
+body.kss .kss-example-preview .text--form-error h3, body.kss .kss-example-preview .text--form-error .heading--h3,
+body.kss .kss-example-preview .text--form-error h4, body.kss .kss-example-preview .text--form-error .heading--h4,
+body.kss .kss-example-preview .text--form-error h5, body.kss .kss-example-preview .text--form-error .heading--h5,
+body.kss .kss-example-preview .text--form-error h6, body.kss .kss-example-preview .text--form-error .heading--h6 {
+  color: #c72035;
+}
+
+body.kss .kss-example-preview .text--form-error h1 a, body.kss .kss-example-preview .text--form-error .heading--h1 a,
+body.kss .kss-example-preview .text--form-error h2 a, body.kss .kss-example-preview .text--form-error .heading--h2 a,
+body.kss .kss-example-preview .text--form-error h3 a, body.kss .kss-example-preview .text--form-error .heading--h3 a,
+body.kss .kss-example-preview .text--form-error h4 a, body.kss .kss-example-preview .text--form-error .heading--h4 a,
+body.kss .kss-example-preview .text--form-error h5 a, body.kss .kss-example-preview .text--form-error .heading--h5 a,
+body.kss .kss-example-preview .text--form-error h6 a, body.kss .kss-example-preview .text--form-error .heading--h6 a {
+  color: #c72035;
+}
+
+body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--h1,
+body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--h2,
+body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--h3,
+body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--h4,
+body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--h5,
+body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
+  margin: .5em 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+body.kss .kss-example-preview h1 b,
+body.kss .kss-example-preview h1 strong, body.kss .kss-example-preview .heading--h1 b,
+body.kss .kss-example-preview .heading--h1 strong,
+body.kss .kss-example-preview h2 b,
+body.kss .kss-example-preview h2 strong, body.kss .kss-example-preview .heading--h2 b,
+body.kss .kss-example-preview .heading--h2 strong,
+body.kss .kss-example-preview h3 b,
+body.kss .kss-example-preview h3 strong, body.kss .kss-example-preview .heading--h3 b,
+body.kss .kss-example-preview .heading--h3 strong,
+body.kss .kss-example-preview h4 b,
+body.kss .kss-example-preview h4 strong, body.kss .kss-example-preview .heading--h4 b,
+body.kss .kss-example-preview .heading--h4 strong,
+body.kss .kss-example-preview h5 b,
+body.kss .kss-example-preview h5 strong, body.kss .kss-example-preview .heading--h5 b,
+body.kss .kss-example-preview .heading--h5 strong,
+body.kss .kss-example-preview h6 b,
+body.kss .kss-example-preview h6 strong, body.kss .kss-example-preview .heading--h6 b,
+body.kss .kss-example-preview .heading--h6 strong {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--h1 {
+  font-size: 3em;
+  line-height: 1.25;
+  color: #000;
+}
+
+body.kss .kss-example-preview h1 a, body.kss .kss-example-preview .heading--h1 a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--h1 {
+    font-size: 2.8125em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h1, body.kss .kss-example-preview .heading--h1 {
+    font-size: 2em;
+  }
+}
+
+body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--h2 {
+  font-size: 2.25em;
+  line-height: 1.39;
+  color: #000;
+}
+
+body.kss .kss-example-preview h2 a, body.kss .kss-example-preview .heading--h2 a {
+  color: #000;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h2, body.kss .kss-example-preview .heading--h2 {
+    font-size: 1.75em;
+  }
+}
+
+body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--h3 {
+  font-size: 1.625em;
+  color: #333;
+  -webkit-font-smoothing: auto;
+}
+
+body.kss .kss-example-preview h3 a, body.kss .kss-example-preview .heading--h3 a {
+  color: #333;
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h3, body.kss .kss-example-preview .heading--h3 {
+    font-size: 1.375em;
+  }
+}
+
+body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--h4 {
+  font-size: 1.4375em;
+  color: #333;
+}
+
+body.kss .kss-example-preview h4 a, body.kss .kss-example-preview .heading--h4 a {
+  color: #333;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--h4 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 639px) {
+  body.kss .kss-example-preview h4, body.kss .kss-example-preview .heading--h4 {
+    font-size: 1.125em;
+  }
+}
+
+body.kss .kss-example-preview h5, body.kss .kss-example-preview .heading--h5 {
+  font-size: 1.25em;
+  color: #333;
+  line-height: 1.5;
+  -webkit-font-smoothing: auto;
+}
+
+body.kss .kss-example-preview h5 a, body.kss .kss-example-preview .heading--h5 a {
+  color: #333;
+}
+
+body.kss .kss-example-preview h6, body.kss .kss-example-preview .heading--h6 {
+  font-size: 1em;
+}

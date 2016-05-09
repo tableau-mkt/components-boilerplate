@@ -1,0 +1,43 @@
+<div class="wrapper">
+  {{#with global-nav}}
+    {{> global-nav}}
+  {{/with}}
+
+  <hr class="divider divider--gradient">
+
+  {{#with hero}}
+    {{> hero}}
+  {{/with}}
+
+  <section class="section">
+    <div class="content-container">
+      <h2>{{{ section1.title }}}</h2>
+      <div class="clearfix">
+        <div class="grid--7">
+          {{{ section1.column1 }}}
+        </div>
+        <div class="grid--5 grid--last">
+          {{{ section1.column2 }}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg--light-gray-1">
+    <div class="content-container">
+      <h2>{{{ section2.title }}}</h2>
+      <div class="clearfix">
+        <div class="grid--4 vertical-divider vertical-divider--right">
+          {{{ section2.column1 }}}
+        </div>
+        <div class="grid--8 grid--last">
+          {{{ section2.column2 }}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{#with global-footer}}
+    {{> global-footer}}
+  {{/with}}
+</div>

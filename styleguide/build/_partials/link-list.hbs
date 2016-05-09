@@ -1,0 +1,9 @@
+<ul class="link-list {{ modifier_class }} {{#if classes}}{{ classes }}{{/if}}">
+  {{#each items}}
+    <li{{#if class}} class="{{ class }}"{{/if}}>
+      {{# link}}
+        {{> link-base}}
+      {{/ link}}
+    </li>
+  {{/each}}
+</ul>
