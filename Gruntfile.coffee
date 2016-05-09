@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           'sass/imports/_helpersMap.scss': 'components/_helpers/*.scss'
           'sass/imports/_componentsMap.scss': [
             'components/**/*.scss',
-            '!components/media/icons/_tableau-icons.scss',
+            '!components/media/icons/_icons.scss',
             '!components/typography/fonts/_font-face.scss'
           ]
 
@@ -196,12 +196,12 @@ module.exports = (grunt) ->
         dest: 'build/fonts'
         destCss: 'components/media/icons'
         options:
-          font: 'tableau-icons'
+          font: 'icons'
           htmlDemo: false
           stylesheet: 'scss'
-          template: 'components/media/icons/tableau-icons.template.css'
+          template: 'components/media/icons/icons.template.css'
           relativeFontPath: '../fonts'
-          fontFilename: 'tableau-icons-{hash}'
+          fontFilename: 'icons-{hash}'
 
     clean:
       built:
