@@ -223,29 +223,6 @@ module.exports = (grunt) ->
         options:
           keepalive: true
 
-    'gh-pages':
-      options:
-        base: 'styleguide'
-      src: ['**']
-      qaDeploy:
-        options:
-          user:
-            name: 'Travis Deployment'
-            email: 'visualanalysis@tableau.com'
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/components.git'
-          message: 'Auto-deploy via Travis CI'
-          silent: true
-        src: ['**']
-      prodDeploy:
-        options:
-          user:
-            name: 'Travis Deployment'
-            email: 'visualanalysis@tableau.com'
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/tableau-mkt/styleguide.git'
-          message: 'Auto-deploy via Travis CI'
-          silent: true
-        src: ['**']
-
     compress:
       build:
         options:
@@ -277,25 +254,13 @@ module.exports = (grunt) ->
     'copy:assets'
     'copy:styleguide'
     'copy:favicon'
+    'compress:build'
   ]
   grunt.registerTask 'styleguide', [
     'shell:kss'
   ]
-
   grunt.registerTask 'style', [
     'sass_globbing'
     'sass:dev'
-  ]
-
-  grunt.registerTask 'deployQA', [
-    'build'
-    'compress:build'
-    'gh-pages:qaDeploy'
-  ]
-
-  grunt.registerTask 'deployProd', [
-    'build'
-    'compress:build'
-    'gh-pages:prodDeploy'
   ]
   return
