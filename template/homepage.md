@@ -23,7 +23,7 @@ relative to the renamed folder rather than `/build/`.
 #### Include CSS in &lt;head&gt;
 
 <div class="kss-markup">
-<pre class="prettyprint lang-html"><code>&lt;link rel="stylesheet" href="/build/vendor/slick.js/slick/slick.css" media="all" /&gt;
+<pre class="prettyprint lang-html"><code>
 &lt;link rel="stylesheet" href="/build/css/style.min.css" media="all" /&gt;
 </code></pre>
 </div>

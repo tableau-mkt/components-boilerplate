@@ -46,8 +46,8 @@ Style guide: navigation.global
     }
 
     .global-nav__menu {
-      @extend .text--body-small;
       margin-right: 1em;
+      float: right;
 
       ul {
         margin: 0.8em 0 0;
@@ -56,8 +56,6 @@ Style guide: navigation.global
 
         li {
           display: inline-block;
-          // Remove the spacing between items due to letter spacing.
-          margin-right: -4px;
 
           a {
             position: relative;

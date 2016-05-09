@@ -4,7 +4,7 @@
       "class": "active",
       "link": {
         "text": "See it in Action",
-        "href": "http://www.tableau.com",
+        "href": "#",
         "classes": false,
         "target": false
       }
@@ -13,7 +13,7 @@
       "class": "download",
       "link": {
         "text": "Get Free Trial",
-        "href": "http://www.google.com",
+        "href": "#",
         "link_class": false,
         "target": "_blank"
       }

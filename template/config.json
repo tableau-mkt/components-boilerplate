@@ -1,6 +1,5 @@
 {
   "css": [
-    "build/vendor/slick.js/slick/slick.css",
     "public/style.css",
     "build/css/styleguide.css"
   ],

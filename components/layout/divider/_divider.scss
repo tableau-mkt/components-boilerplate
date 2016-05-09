@@ -8,8 +8,6 @@ Markup: divider.hbs
 
 Weight: 0
 
-.divider--gradient - A divider that fades out to transparent on either end.
-.divider--dashed - A dashed divider.
 .divider--dark - A darker divider used for darker backgrounds
 .divider--short - A fixed width divider that expands to full width for smaller screen sizes.
 
@@ -24,24 +22,8 @@ Style guide: layout.divider
   padding: 0;
   border-top: 1px solid $accent-dividers;
 
-  &.divider--gradient {
-    border-top: 0;
-    height: 1px;
-    background: $accent-dividers;
-    background: linear-gradient(to right, transparent, $accent-dividers, transparent);
-  }
-
-  &.divider--dashed {
-    border-top-style: dotted;
-  }
-
   &.divider--dark {
     border-color: $bg-dark-gray-1;
-
-    &.divider--gradient {
-      background: $bg-dark-gray-1;
-      background: linear-gradient(to right, transparent, $bg-dark-gray-1, transparent);
-    }
   }
 
   &.divider--short {
@@ -66,10 +48,7 @@ Markup: divider-vertical.hbs
 
 Weight: 10
 
-.vertical-divider--dashed - A dashed divider.
 .vertical-divider--right - A divider on the right side of the element.
-.vertical-divider--right.vertical-divider--dashed - A dashed divider on the right.
-.vertical-divider--or - A divider with the word "Or" in the middle.
 .vertical-divider--dark - A darker divider for darker backgrounds.
 
 Style guide: layout.divider-vertical
@@ -77,17 +56,10 @@ Style guide: layout.divider-vertical
 .vertical-divider {
   border-left: 1px solid $accent-dividers;
 
-  &.vertical-divider--dashed {
-    border-left-style: dotted;
-  }
   &.vertical-divider--right {
     border-left: 0;
     border-right: 1px solid $accent-dividers;
     padding-left: inherit;
-
-    &.vertical-divider--dashed {
-      border-right-style: dotted;
-    }
   }
 
   p:first-child,
@@ -102,11 +74,6 @@ Style guide: layout.divider-vertical
 
   &.vertical-divider--dark {
     border-color: $bg-dark-gray-1;
-  }
-
-  // @TODO make this work. Example in ecosystem section of Products Family
-  &.vertical-divider--or {
-
   }
 
   @include breakpoint ($tablet-min) {

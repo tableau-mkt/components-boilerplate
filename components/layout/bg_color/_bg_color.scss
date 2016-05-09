@@ -19,13 +19,8 @@ Weight: 2
 .bg--dark-gray-1 - Dk Gray 1 background color - (#464646)
 .bg--dark-gray-2 - Dk Gray 2 background color - (#333)
 .bg--dark-gray-3 - Dk Gray 3 background color - (#1b1b1b)
-.bg--about-featured - About/Feat background color - (#457387)
-.bg--data-sources - Data Sources background color - (#2e4c65)
-.bg--nav-drawer-gray-1 - Global nav drawer primary background color - (#f0f0f0)
-.bg--nav-drawer-gray-2 - Global nav drawer secondary background color - (#ddd)
-.bg--media-shade - Dark gradient background for sections of content containing media (vizzes, videos) - (#464646 - #1b1b1b)
 
-Style guide: layout.colored
+Style guide: layout.bg-color
 */
 
 /* Create a class for each background color */
@@ -47,10 +42,4 @@ Style guide: layout.colored
       }
     }
   }
-}
-
-.bg--media-shade {
-  @extend .bg--dark-gray-3;
-  background: linear-gradient(to bottom, $bg-dark-gray-1, $bg-dark-gray-3);
-  color: $text-white;
 }

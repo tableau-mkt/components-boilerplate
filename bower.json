@@ -1,12 +1,11 @@
 {
-  "name": "Tableau Corp Components",
+  "name": "Components Boilerplate",
   "version": "0.0.1",
-  "homepage": "https://github.com/tableau-mkt/components",
+  "homepage": "https://github.com/tableau-mkt/components-boilerplate",
   "authors": [
     "marketing-webteam@tableau.com"
   ],
-  "description": "Tableau Web Components",
-  "license": "All Rights Reserved.",
+  "description": "A boilerplate for a components library with a KSS style guide",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "slick.js": "~1.5.5",
     "jquery": "~1.11.3",
     "hoverintent": "briancherne/jquery-hoverIntent",
     "jquery-ui": "~1.11.4",
