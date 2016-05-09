@@ -1,0 +1,25 @@
+/*
+Code Snippet
+
+Formatting for code examples
+
+Markup: code.hbs
+
+Weight: 50
+
+Style guide: typography.code
+*/
+
+code {
+  padding: 0px 2px;
+	font-family: Courier, "Courier New", Monaco, Tahoma;
+	background: #333;
+	color: #cf7777;
+}
+
+pre {
+	padding: 1em;
+  margin-bottom: 1em;
+  background: #333;
+	overflow: auto;
+}
