@@ -1,12 +1,11 @@
-# Tableau Components
+# Components Boilerplate
 
-A component library and automated style guide based on the Tableau corporate
-brand. This README focuses on development within the component library to create
-new and modify existing components. See the overview page of the generated style
-guide (demo below) for usage instructions and guidelines.
+A component library and automated style guide. This README focuses on
+development within the component library to create new and modify existing
+components. See the overview page of the generated style guide (demo below) for
+usage instructions and guidelines.
 
-### [Production Style Guide](http://tableau-mkt.github.io/styleguide/)
-### [QA/Integration Style Guide](http://tableau-mkt.github.io/components/)
+### [Style Guide Demo](http://tableau-mkt.github.io/components-boilerplate/styleguide/)
 
 ## Getting started
 
@@ -414,24 +413,5 @@ in IE version history.
   <!--[if !IE]><!--><html class="no-js" lang=""><!--<![endif]-->
 ```
 
-
-## Scaffold a component
-We've built a tool to help scaffold out new components using [grunt-init](http://gruntjs.com/project-scaffolding)
-See the [spawn-component](https://github.com/tableau-mkt/spawn-component) repo
-to use this tool.
-
-## Release Notes & Bug Reports
-
-When we release new features, bug fixes, or any other changes to this project,
-we provide notes detailing all changes made. Use these to inform your testing
-as you update to the latest version.  Release notes live in the [Release Notes]
-(https://github.com/tableau-mkt/components/releases) section on GitHub.
-
-All bug reports, feature requests, and issue tracking are handled through the
-[Issue Queue](https://github.com/tableau-mkt/components/issues) on GitHub.
-Please feel free to submit anything you find to the issue queue; we will
-monitor and provide fixes where needed.
-
 ## Other info
 * The style guide generator used in this project is [kss-node](https://github.com/kss-node/kss-node).
-* The template used for kss-node is our custom-built [kss-template](https://github.com/tableau-mkt/kss-template).
