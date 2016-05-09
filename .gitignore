@@ -48,4 +48,4 @@ template/node_modules/
 ################
 styleguide/
 build/
-components/media/icons/_tableau-icons.scss
+components/media/icons/_icons.scss
