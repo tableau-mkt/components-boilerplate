@@ -112,7 +112,7 @@ Style guide: forms.fields
   .form-field__description {
     // Avoiding @extend .text--label since overriding text-transform is not
     // straightforward.
-    font-family: $text--benton-book;
+    font-family: $text-open-sans;
     letter-spacing: 1px;
     line-height: 1.5;
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -227,7 +227,7 @@ textarea {
 
   &:hover,
   &:focus {
-    border-color: $form-border-accent;
+    border-color: $accent-dividers;
   }
 
   &:focus {
@@ -378,13 +378,13 @@ Style guide: forms.fields-dark
   // Use a bolder font for labels and description text.
   .form-field__label,
   .form-field__description {
-    font-family: $text--benton-medium;
+    font-family: $text-open-sans;
   }
 
   // But, float labels should be benton-book.
   .form-field.has-float-label {
     .form-field__label {
-      font-family: $text--benton-book;
+      font-family: $text-open-sans;
     }
   }
 }

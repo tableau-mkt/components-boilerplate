@@ -17,13 +17,13 @@ h4, .heading--h4,
 h5, .heading--h5,
 h6, .heading--h6 {
   margin: .5em 0;
-  font-family: $text--benton-thin;
+  font-family: $text-open-sans;
   font-weight: 100;
   line-height: 1.2;
 
   b,
   strong {
-    font-family: $text--benton-light;
+    font-family: $text-open-sans;
     font-weight: 400;
   }
 }
@@ -66,18 +66,11 @@ h2, .heading--h2 {
 
 h3, .heading--h3 {
   font-size: em(26px);
-  font-family: $text--benton-light;
   color: $text-dark-body;
   -webkit-font-smoothing: auto;
 
   a {
     color: $text-dark-body;
-  }
-
-  b,
-  strong {
-    font-family: $text--benton-book;
-    font-weight: 400;
   }
 
   @include breakpoint($mobile-only) {
@@ -87,17 +80,10 @@ h3, .heading--h3 {
 
 h4, .heading--h4 {
   font-size: em(23px);
-  font-family: $text--benton-book;
   color: $text-dark-body;
 
   a {
     color: $text-dark-body;
-  }
-
-  b,
-  strong {
-    font-family: $text--benton-medium;
-    font-weight: 400;
   }
 
   @include breakpoint($tablet-only) {
@@ -111,7 +97,6 @@ h4, .heading--h4 {
 
 h5, .heading--h5 {
   font-size: 1.25em;
-  font-family: $text--benton-light;
   color: $text-dark-body;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
@@ -136,36 +121,3 @@ Hidden: true
 
 Styleguide typography.heading-template
 */
-
-
-/*
-Special Heading Formats
-
-Heading modifiers used for specific use-cases.
-
-Markup: special-heading.hbs
-
-Nodefault: true
-
-Nocode: true
-
-Weight: 21
-
-.heading--huge - Larger heading reserved for special cases (70px) - uses `<h1>`
-
-Styleguide typography.special-headings
-*/
-
-.heading--huge {
-  @extend h1;
-  font-size: em(70px);
-  line-height: 1;
-
-  @include breakpoint($tablet-only) {
-    font-size: em(60px);
-  }
-
-  @include breakpoint($mobile-only) {
-    font-size: em(48px);
-  }
-}

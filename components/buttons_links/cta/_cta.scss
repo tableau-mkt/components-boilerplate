@@ -1,30 +1,21 @@
 /*
-Primary CTA
+CTA
 
-Primary CTA buttons (Solid) should be used when a single or important page
-action is required.
+CTA buttons should be used when a single or important page action is required.
 
 Markup: cta.hbs
 
+Weight: 20
+
 Bgcolor: #F7F9FB
 
-.cta--orange - Orange colored CTA button used for Free Trial. [Default]
-.cta--light - Light colored CTA button for use on dark backgrounds.
-.cta--dark - Dark colored CTA button for use on light backgrounds.
-.cta--arrow - CTA button with arrow icon.
-.cta--play - CTA button with play icon.
-.cta--download - CTA button with download icon.
-.cta--secondary - Secondary CTA buttons should be used when multiple page actions are present, or somewhat important page actions are required.
-.cta--secondary.cta--orange - Orange Secondary CTA
-.cta--secondary.cta--light - Light Secondary CTA button for use on dark backgrounds.
-.cta--secondary.cta--dark - Dark Secondary CTA button for use on light backgrounds.
-.cta--secondary.cta--arrow - Secondary CTA with arrow icon.
-.cta--full-width - Full width CTA that fills the width of it's container.
+.cta--orange - Orange colored CTA button.
+.cta--light - Light colored CTA button.
+.cta--dark - Dark colored CTA button.
 
 Style guide: buttons-links.cta
 */
 .cta {
-  @extend .text--benton-book;
   display: inline-block;
   margin: .5em 0;
   padding: 17px 25px;
@@ -34,6 +25,7 @@ Style guide: buttons-links.cta
   cursor: pointer;
   letter-spacing: 1px;
   line-height: 1;
+  font-family: $text-open-sans;
   font-size: 11px;
   color: $text-white;
   text-transform: uppercase;
@@ -74,82 +66,6 @@ Style guide: buttons-links.cta
 
   &.cta--light {
     color: $text-dark-body;
-  }
-
-  &.cta--secondary {
-    border: 2px solid $button-orange;
-    padding: 15px 23px;
-    background: transparent;
-    color: $button-orange;
-
-    &:hover,
-    &:focus {
-      border-color: $button-orange-hover;
-      background: transparent;
-      color: $button-orange-hover;
-    }
-
-    &:active {
-      border-color: $button-final;
-      background: transparent;
-      color: $button-final;
-    }
-
-    @each $name, $colors in $button-colors {
-      &.cta--#{"" + $name} {
-        border-color: nth($colors, 1);
-        color: nth($colors, 1);
-
-        &:hover,
-        &:focus {
-          border-color: nth($colors, 2);
-          color: nth($colors, 2);
-        }
-
-        &:active {
-          border-color: $button-final;
-          background: transparent;
-          color: $button-final;
-        }
-      }
-    }
-  }
-
-
-  &.cta--full-width {
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  // Icons
-  &.cta--arrow:after,
-  &.cta--play:after,
-  &.cta--download:after {
-    @extend .icon;
-    padding-left: 10px;
-    line-height: 0px;
-    font-size: 2em;
-    text-decoration: none;
-  }
-
-  &.cta--arrow:after {
-    @extend .icon;
-    content: $icon--arrow-right;
-  }
-
-  &.cta--play:after {
-    @extend .icon;
-    content: $icon--play;
-  }
-
-  &.cta--download:after {
-    @extend .icon;
-    content: $icon--download;
-    font-size: 1.5em;
   }
 }
 

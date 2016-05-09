@@ -16,8 +16,6 @@ Bgcolor: #F7F9FB
 .text--centered - Center justified text
 .text--justified - Justified text
 .text--lineheight-zero - Line height set to zero.
-.text--contrast-light - Text with a shadow to make light text more readable on light or busy background images
-.text--contrast-dark - Text with a shadow to make dark text more readable on dark or busy background images
 
 Style guide: typography.formatted
 */
@@ -55,12 +53,6 @@ em,
 .text--lineheight-zero {
   line-height: 0;
 }
-.text--contrast-light {
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.text--contrast-dark {
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
 
 
 /*
@@ -74,20 +66,13 @@ Bgcolor: #F7F9FB
 
 Weight: 32
 
-.text--negative - Negative Text colored text. `#fff;`
-.text--light-body - Negative/light Body colored text. `#bbb`
+.text--white - White Text colored text. `#fff;`
+.text--light-body - Light Body colored text. `#bbb`
 .text--medium-body - Default Med. Body colored text. `#787878`
 .text--dark-body - Default Dark Body colored text. `#333`
 .text--link - Link Orange colored text. `#eb912c`
 .text--headlines - Headlines colored text. `#000`
-.text--nav-items - Nav Items colored text. `#212535`
-.text--data-sources - Data Sources colored text. `#a3b9cb`
-.text--stories - Stories colored text. `#847094`
-.text--learning - Learning colored text. `#6f99a5`
-.text--highlight - Highlight Text colored text. `#53bd92`
-.text--mission-1 - Mission 1 colored text. `#316cc8`
-.text--mission-2 - Mission 2 colored text. `#7dcdf1`
-.text--mission-3 - Mission 3 colored text. `#5facce`
+.text--form-error  - Headlines colored text. `#c72035`
 
 Style guide: typography.colors
 */
@@ -110,61 +95,4 @@ Style guide: typography.colors
       }
     }
   }
-}
-
-
-/*
-Other Type Treatments
-
-Other treatments used for text throughout the site
-
-Markup: special-heading.hbs
-
-Nodefault: true
-
-Weight: 31
-
-.text--large-copy - Large Copy
-.text--sub-nav - Sub Nav Mission
-.text--dropdown - Dropdown Copy
-.text--label - Label/Nav item
-.text--border - Text with border underline
-
-Style guide: typography.other
-*/
-
-.text--large-copy {
-  font-family: $text--benton-light;
-  font-size: em(24px);
-  color: $text-dark-body;
-}
-
-.text--sub-nav {
-  font-family: $text--benton-light;
-  font-size: em(22px);
-  color: $text-headlines;
-}
-
-.text--dropdown {
-  font-family: $text--benton-light;
-  font-size: em(16px);
-  color: $text-medium-body;
-  line-height: 1.875;
-}
-
-.text--label {
-  font-family: $text--benton-book;
-  font-size: em(11px);
-  letter-spacing: 1px;
-  // color: $text-dark-body;
-  text-transform: uppercase;
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-}
-
-.text--border {
-  border-bottom: 1px dotted $accent-dividers;
-  padding-top: 0.5em;
-  margin-bottom: 0.75em;
 }

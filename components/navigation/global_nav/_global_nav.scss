@@ -62,7 +62,7 @@ Style guide: navigation.global
           a {
             position: relative;
             padding: 10px 12px;
-            font-family: $text--benton-book;
+            font-family: $text-open-sans;
 
             @include breakpoint(max-width $content-max) {
               padding: 10px 8px;
@@ -138,7 +138,7 @@ Style guide: navigation.global
           display: block;
           padding: 6px 0.5em;
           border-bottom: 1px solid $nav-drawer-gray-2;
-          font-family: $text--benton-light;
+          font-family: $text-open-sans;
           font-size: em(24px);
           color: $text-dark-body;
         }

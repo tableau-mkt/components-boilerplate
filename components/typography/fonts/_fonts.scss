@@ -1,15 +1,9 @@
 /*
 Font Families
 
-All text is set in either Benton Sans or Merriweather. This includes body copy 
-as well as page and section headers.
+**OpenSans** is primarily used for section headers and titling.
 
-**BentonSans** is primarily used for section headers and titling in its Thin
-case, but it is also used in its Book case in buttons and other scenarios.
-Occasionally BentonSans Medium is used in article templates.
-
-**Merriweather** is used in its Light case mainly for body copy and in the
-Stories and Articles sections.
+**Merriweather** is used mainly for body copy.
 
 Markup: fonts.hbs
 
@@ -19,32 +13,22 @@ Nocode: true
 
 Weight: 0
 
-.text--benton-thin - Benton Sans Thin
-.text--benton-light - Benton Sans Light
-.text--benton-book - Benton Sans Book
-.text--benton-medium - Benton Sans Medium
-.text--merriweather-light - Merriweather Light
+.text--open-sans-light - Open Sans Light
+.text--open-sans-normal - Open Sans Normal
+.text--merriweather - Merriweather Light
 
 Style guide: typography.fonts
 */
 
-.text--benton-thin {
-  font-family: $text--benton-thin;
+.text--open-sans-light {
+  font-family: $text-open-sans;
   font-weight: 100;
 }
 
-.text--benton-light {
-  font-family: $text--benton-light;
+.text--open-sans-normal {
+  font-family: $text-open-sans;
 }
 
-.text--benton-book {
-  font-family: $text--benton-book;
-}
-
-.text--benton-medium {
-  font-family: $text--benton-medium;
-}
-
-.text--merriweather-light {
-  font-family: $text--merriweather-light;
+.text--merriweather {
+  font-family: $text-merriweather;
 }
