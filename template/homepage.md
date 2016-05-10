@@ -23,8 +23,7 @@ relative to the renamed folder rather than `/build/`.
 #### Include CSS in &lt;head&gt;
 
 <div class="kss-markup">
-<pre class="prettyprint lang-html"><code>
-&lt;link rel="stylesheet" href="/build/css/style.min.css" media="all" /&gt;
+<pre class="prettyprint lang-html"><code>&lt;link rel="stylesheet" href="/build/css/style.min.css" media="all" /&gt;
 </code></pre>
 </div>
 
@@ -34,11 +33,8 @@ relative to the renamed folder rather than `/build/`.
 <pre class="prettyprint lang-html"><code>&lt;meta charset="UTF-8"&gt;
 &lt;!-- Ensures proper page width and zoom level on mobile devices --&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-&lt;!-- favicon --&gt;
-&lt;link rel="icon" href="/build/images/favicon.ico" type="image/x-icon" /&gt;
 </code></pre>
 </div>
-
 
 #### Scripts at Bottom of HTML
 
