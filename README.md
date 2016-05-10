@@ -7,6 +7,14 @@ usage instructions and guidelines.
 
 ### [Style Guide Demo](http://tableau-mkt.github.io/components-boilerplate/styleguide/)
 
+## Resources
+* [Knyle Style Sheets (KSS)](http://warpspire.com/kss/)
+  * A documentation syntax and guidelines for CSS.
+* [kss-node](https://github.com/kss-node/kss-node)
+  * Node.js implementation of KSS which helps generate a style guide
+* [Drupal Componentize module](https://www.drupal.org/project/componentize)
+  * A Drupal module to integrate component templates and styles with Drupal
+
 ## Getting started
 
 Clone this repo (or a fork of it) to your local machine for development. Once
